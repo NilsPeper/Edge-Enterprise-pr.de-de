@@ -1,0 +1,165 @@
+# last revised 08/21/2020
+- name: Dokumentation für Microsoft Edge Enterprise
+  href: index.yml
+- name: Dokumentation für Microsoft Edge
+  href: 'https://docs.microsoft.com/microsoft-edge/'
+- name: Aktualisierungen für Microsoft Edge-Inhalte
+  href: microsoft-edge-content-updates.md
+- name: Erste Schritte mit Microsoft Edge
+  items:
+    - name: Informationen zu Microsoft Edge-Kanälen
+      href: microsoft-edge-channels.md
+    - name: Neue Funktionen
+      href: 'https://www.microsoftedgeinsider.com/whats-new'
+    - name: Material für die Einführung bei Kunden
+      href: microsoft-edge-customer-adoption-kit.md
+    - name: Entdecken Sie die Dokumentationsressourcen
+      href: 'https://docs.microsoft.com/microsoft-edge/'
+    - name: Praktisches Bereitstellungslabor für Microsoft Edge
+      href: deploy-edge-hands-on-lab.md
+    - name: Windows Blogs – Microsoft Edge-Entwickler
+      href: 'https://blogs.windows.com/msedgedev/'
+- name: Planen für Microsoft Edge
+  items:
+    - name: Microsoft Edge Enterprise-Roadmap
+      href: microsoft-edge-roadmap.md
+    - name: Planen Ihrer Bereitstellung von Microsoft Edge
+      href: deploy-edge-plan-deployment.md
+    - name: Versionsinformationen
+      items:
+        - name: Veröffentlichungszeitplan
+          href: microsoft-edge-release-schedule.md
+        - name: Anmerkungen zur Beta-Kanal-Version
+          href: microsoft-edge-relnote-beta-channel.md
+        - name: Anmerkungen zur Stable-Kanal-Version
+          href: microsoft-edge-relnote-stable-channel.md
+        - name: Sicherheitsupdates
+          href: microsoft-edge-relnotes-security.md
+    - name: Microsoft Edge-Richtlinienzuordnung
+      items:
+        - name: Richtlinienzuordnung – Übersicht
+          href: microsoft-edge-policy-map-overview.md
+        - name: Zuordnung von Richtlinien von Microsoft Edge-Vorgängerversionen zu Microsoft Edge
+          href: microsoft-edge-policy-map-legacy-to-newedge.md
+        - name: Zuordnung von Richtlinien von Google Chrome zu Microsoft Edge
+          href: microsoft-edge-policy-map-chrome-to-newedge.md
+    - name: Unterstützte Betriebssysteme
+      href: microsoft-edge-supported-operating-systems.md
+    - name: Lifecycle-Richtlinie
+      href: microsoft-edge-support-lifecycle.md
+    - name: Unterstützte Sprachen
+      href: microsoft-edge-supported-languages.md
+    - name: Systemupdates für Microsoft Edge
+      items:
+        - name: Blocker-Toolkit für Microsoft Edge Updates
+          href: microsoft-edge-blocker-toolkit.md
+        - name: Zugreifen auf die alte Version von Microsoft Edge
+          href: microsoft-edge-sysupdate-access-old-edge.md
+        - name: Windows-Updates zur Unterstützung von Microsoft Edge
+          href: microsoft-edge-sysupdate-windows-updates.md
+- name: Bereitstellen von Microsoft Edge
+  items:
+    - name: Video – Bereitstellen von Microsoft Edge
+      href: microsoft-edge-video-deploy.md
+    - name: Bereitstellen unter Windows mit Konfigurations-Manager
+      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Bereitstellen unter Windows mit Intune
+      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Bereitstellen unter macOS mit JAMF
+      href: deploy-edge-mac-jamf.md
+    - name: Bereitstellen unter macOS mit Intune
+      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+- name: Konfigurieren von Microsoft Edge
+  items:
+    - name: Konfigurieren für Windows
+      href: configure-microsoft-edge.md
+    - name: Konfigurieren für Windows mit Intune
+      href: configure-edge-with-intune.md
+    - name: Konfigurieren für Windows mit mobiler Geräteverwaltung
+      href: configure-edge-with-mdm.md
+    - name: Konfigurieren für macOS mithilfe einer .plist
+      href: configure-microsoft-edge-on-mac.md
+    - name: Konfigurieren für macOS mit Jamf
+      href: configure-microsoft-edge-on-mac-jamf.md
+- name: Verwenden von Microsoft Edge-Enterprise-Features
+  items:
+    - name: Video – Microsoft Edge und Microsoft Search
+      href: microsoft-edge-video-search.md
+    - name: Konfigurationen und Experimente
+      href: edge-configuration-and-experiments.md
+    - name: Identitätsunterstützung und Konfiguration
+      href: microsoft-edge-security-identity.md
+    - name: Microsoft Edge und Enterprise State Roaming
+      href: microsoft-edge-enterprise-state-roaming.md
+    - name: Microsoft Edge-Kioskmodus
+      href: microsoft-edge-kiosk-mode.md
+    - name: Microsoft Edge-Synchronisierung
+      href: microsoft-edge-enterprise-sync.md
+    - name: Lokale Synchronisierung für Active Directory-Benutzer
+      href: microsoft-edge-on-premises-sync.md
+    - name: Der PDF-Reader in Microsoft Edge
+      href: microsoft-edge-pdf.md
+    - name: Festlegen von Microsoft Edge als Standardbrowser
+      href: edge-default-browser.md
+    - name: Verwenden von Microsoft Edge im IE-Modus
+      items:
+        - name: Informationen zum IE-Modus
+          href: edge-ie-mode.md
+        - name: Konfigurieren von Websites in der Enterprise Mode Site List
+          href: edge-ie-mode-sitelist.md
+        - name: Konfigurieren von Richtlinien für den IE-Modus
+          href: edge-ie-mode-policies.md
+        - name: Schrittweise Anleitung für Enterprise Site Discovery
+          href: edge-ie-mode-site-discovery.md
+        - name: FAQ zum IE-Modus
+          href: edge-ie-mode-faq.md
+- name: Sicherheit in Microsoft Edge
+  items:
+    - name: 'Video – Sicherheit, Kompatibilität und Verwaltbarkeit'
+      href: microsoft-edge-video-security-compatibility-manageability.md
+    - name: Sicherheitsübersicht
+      href: security-overview.md
+    - name: Zulassungsliste für Microsoft Edge-Endpunkte
+      href: microsoft-edge-security-endpoints.md
+    - name: Schutz vor potenziell unerwünschten Anwendungen
+      href: microsoft-edge-potentially-unwanted-apps.md
+    - name: Unterstützung für Application Guard
+      href: microsoft-edge-security-windows-defender-application-guard.md
+    - name: Unterstützung für Microsoft Defender SmartScreen
+      href: microsoft-edge-security-smartscreen.md
+    - name: Unterstützung für Windows Information Protection
+      href: microsoft-edge-security-windows-information-protection.md
+- name: Datenschutz in Microsoft Edge
+  items:
+    - name: Konfigurieren der Datenschutzeinstellungen
+      href: microsoft-edge-enterprise-privacy-settings.md
+    - name: Whitepaper zum Microsoft Edge-Datenschutz
+      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+- name: Referenz für Microsoft Edge
+  items:
+    - name: Referenz für Browserrichtlinien
+      href: microsoft-edge-policies.md
+    - name: Referenz für Updaterichtlinien
+      href: microsoft-edge-update-policies.md
+    - name: Weitere Referenzen ansehen
+      items:
+        - name: ClickOnce und DirectInvoke
+          href: edge-learn-more-co-di.md
+        - name: Befehlszeilenoptionen zum Konfigurieren von Proxyeinstellungen
+          href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: Konfigurierbare Sites im IE-Modus
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: Filterformat für URL-listenbasierte Richtlinien
+          href: edge-learnmmore-url-list-filter format.md
+        - name: Beibehaltung der seiteninternen Navigation im IE-Modus
+          href: edge-learnmore-inpage-nav.md
+        - name: Downloads gemischter Inhalte
+          href: edge-learnmore-mixed-content-downloads.md
+        - name: Progressive Rollouts für Stable-Kanal-Updates
+          href: microsoft-edge-update-progressive-rollout.md
+        - name: 'Regulärer Ausdruck 2 (re2.h), Syntax'
+          href: edge-learnmore-regex.md
+        - name: Benutzerdatenverzeichnis-Variablen
+          href: edge-learnmore-create-user-directory-vars.md
+- name: Häufig gestellte Fragen
+  href: faqs-edge-in-the-enterprise.md
