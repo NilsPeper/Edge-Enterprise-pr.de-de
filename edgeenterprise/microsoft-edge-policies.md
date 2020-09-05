@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 8b514b1c1cbcaf64e8c44497522c368f71e7a0a0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9320d7e7b161e6d92421b05262391642b0fe1c2d
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980075"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993725"
 ---
 # Microsoft Edge-Richtlinien
 Die neueste Version von Microsoft Edge umfasst die folgenden Richtlinien. Sie können diese Richtlinien verwenden, um zu konfigurieren, wie Microsoft Edge in Ihrer Organisation ausgeführt wird.
@@ -82,6 +82,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Popupfenster auf bestimmten Websites zulassen|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Popupfenster auf bestimmten Websites blockieren|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrieren von Protokollhandlern|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Wählen Sie aus, ob Benutzer personalisierte Hintergrundbilder und Text, Vorschläge, Benachrichtigungen
+und Tipps für Microsoft-Dienste erhalten können.|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Bestimmten Websites die Herstellung einer Verbindung zu bestimmten USB-Geräten gewähren.|
 |[WebUsbAskForUrls](#webusbaskforurls)|Erlauben von WebUSB auf bestimmten Websites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Blockieren von WebUSB auf bestimmten Websites|
@@ -224,6 +226,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS-Interception-Prüfungen aktiviert|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Festlegen von Microsoft Edge als Standardbrowser|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Zugriff auf das Kontextmenü des Standardsuchanbieters zulassen|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Standardeinstellung für Sensoren|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Steuerung der Verwendung der Serial-API|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Voraussetzen, dass die Enterprise Mode Site List vor der Registerkartennavigation verfügbar ist|
 |[DeleteDataOnMigration](#deletedataonmigration)|Löschen alter Browserdaten bei der Migration|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Steuern, wo Entwicklertools verwendet werden können|
@@ -256,6 +260,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google SafeSearch erzwingen|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Verwenden Sie die standardmäßige Verweiserrichtlinie „kein Verweiser beim Downgrade“ (veraltet)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Erzwingen der Ausführung des Netzwerkcodes im Browserprozess (veraltet)|
+|[ForceSync](#forcesync)|Synchronisierung von Browserdaten erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Erzwingen des minimal eingeschränkten Modus für YouTube|
 |[FullscreenAllowed](#fullscreenallowed)|Vollbild-Modus zulassen|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Aktivieren von globalem HTTP-Authentifizierungscache|
@@ -276,11 +281,13 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[ImportSearchEngine](#importsearchengine)|Import von Suchmaschinen-Einstellungen zulassen|
 |[ImportShortcuts](#importshortcuts)|Lassen Sie den Import von Verknüpfungen zu|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Konfigurieren der InPrivate-Modus-Verfügbarkeit|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Aktivieren von Warnungen für unsichere Formulare|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Regulierung des IntensiveWakeUpThrottlingEnabled-Features|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Konfigurieren der Ermittlung von Anwendungsstillständen für Internet Explorer-Modus|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Konfigurieren der Internet Explorer-Integration|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Enterprise Mode Site List konfigurieren|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Angeben, wie sich „seiteninterne“ Navigationen zu nicht konfigurierten Websites verhalten, wenn sie von Seiten im Internet Explorer-Modus gestartet werden|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer-Modus-Tests zulassen|
 |[IsolateOrigins](#isolateorigins)|Aktivieren der Website-Isolation für bestimmte Ursprünge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Vorschläge von lokalen Anbietern zulassen|
 |[ManagedFavorites](#managedfavorites)|Favoriten konfigurieren|
@@ -319,6 +326,10 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites oder Domänen, für die keine Berechtigung zur Verwendung der direkten Sicherheitsschlüssel-Bestätigung erforderlich ist|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Senden aller Intranet-Seiten an Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Senden von Siteinformationen, um die Microsoft-Dienste zu verbessern (veraltet).|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Zugriff auf Sensoren auf bestimmten Websites zulassen|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Zugriff auf Sensoren auf bestimmten Websites blockieren|
+|[SerialAskForUrls](#serialaskforurls)|Die Serial-API auf bestimmten Websites zulassen|
+|[SerialBlockedForUrls](#serialblockedforurls)|Die Serial-API auf bestimmten Websites blockieren|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung für Signed HTTP Exchange (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Aktivieren der Website-Isolation für alle Websites|
@@ -340,6 +351,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[URLBlocklist](#urlblocklist)|Blockieren des Zugriffs auf eine Liste von URLs|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Aktivieren des Features User-Agent Client Hints (veraltet)|
 |[UserDataDir](#userdatadir)|Festlegen des Benutzerdatenverzeichnisses|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Schränkt die Anzahl der Benutzerdaten-Momentaufnahmen ein, die zur Verwendung für Notfall-Rollbacks aufbewahrt werden.|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Benutzerfeedback zulassen|
 |[VideoCaptureAllowed](#videocaptureallowed)|Video-Aufnahme zulassen oder blockieren|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Websites, die auf Video-Aufnahmegeräte zugreifen können, ohne eine Berechtigung anfordern zu müssen|
@@ -568,7 +580,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird die automatische Auswahl fü
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}
+SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
@@ -631,8 +643,8 @@ Konfigurieren Sie die [SaveCookiesOnExit](#savecookiesonexit)-Richtlinie, um das
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -694,8 +706,8 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -761,8 +773,8 @@ Wenn Sie die [RestoreOnStartup](#restoreonstartup) Richtlinie so festlegen, dass
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1134,13 +1146,13 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  Bestimmt, ob Websites, die nicht durch [PluginsAllowedForUrls](#pluginsallowedforurls) oder [PluginsBlockedForUrls](#pluginsblockedforurls) abgedeckt werden, das Adobe Flash-Plug-in automatisch ausführen können. Sie können „BlockPlugins“ auswählen, um Adobe Flash auf allen Websites zu blockieren, oder Sie können „ClickToPlay“ auswählen, damit Adobe Flash ausgeführt werden kann, der Benutzer jedoch erst auf den Platzhalter klicken muss, um es zu starten. In jedem Fall haben die Richtlinien [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) Vorrang vor "DefaultPluginsSetting".
+  [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
 
-Die automatische Wiedergabe ist nur für Domänen zulässig, die in der Richtlinie [PluginsAllowedForUrls](#pluginsallowedforurls) explizit aufgelistet sind. Wenn Sie die automatische Wiedergabe für alle Websites aktivieren möchten, können Sie dieser Liste http://* und https://* hinzufügen.
+                                                                                                                                                                                                                                            
 
-Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellung manuell ändern.
+Wenn Sie diese Richtlinie nicht festlegen, verwendet sie "BlockPlugins", und Benutzer können diese Einstellung ändern.
 
-Die ehemalige Option "1" hat „immer erlauben“ eingestellt, aber diese Funktionalität wird jetzt nur durch die Richtlinie [PluginsAllowedForUrls](#pluginsallowedforurls) verarbeitet.  Vorhandene Richtlinien, die „1“ verwenden, werden im Modus „ClickToPlay“ ausgeführt.
+Hinweis: Die automatische Wiedergabe gilt nur für Domänen, die in der Richtlinie [PluginsAllowedForUrls](#pluginsallowedforurls) explizit aufgelistet sind. Wenn Sie die automatische Wiedergabe für alle Websites aktivieren möchten, fügen Sie "http://*" und "https://*" zur Liste der zulässigen URLs hinzu.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -1390,8 +1402,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird für alle Websites der glob
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1443,8 +1455,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert au
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1496,8 +1508,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden blockierbare Mischinhalte 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1549,8 +1561,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden blockierbare Mischinhalte 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1602,8 +1614,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert au
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1655,8 +1667,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert au
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1770,8 +1782,8 @@ Beachten Sie, dass die von Ihnen in dieser Richtlinie aufgelisteten Muster als D
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = www.example.com
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
 
 ```
 
@@ -1823,8 +1835,8 @@ Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale S
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1876,8 +1888,8 @@ Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale S
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1931,8 +1943,8 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -1986,8 +1998,8 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -2039,8 +2051,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert au
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2092,8 +2104,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert au
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2176,6 +2188,51 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SpotlightExperiencesAndRecommendationsEnabled
+  #### Wählen Sie aus, ob Benutzer personalisierte Hintergrundbilder und Text, Vorschläge, Benachrichtigungen
+und Tipps für Microsoft-Dienste erhalten können.
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows 86 oder später
+
+  #### Beschreibung
+  Wählen Sie aus, ob Benutzer personalisierte Hintergrundbilder und Text, Vorschläge, Benachrichtigungen und Tipps für Microsoft-Dienste erhalten können.
+
+Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, sind Blickpunkt-Erlebnisse und -Empfehlungen aktiviert.
+
+Wenn Sie diese Einstellung deaktivieren, sind Blickpunkt-Erlebnisse und -Empfehlungen deaktiviert.
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: SpotlightExperiencesAndRecommendationsEnabled
+  - GP-Name: Wählen Sie aus, ob Benutzer personalisierte Hintergrundbilder und Text, Vorschläge, Benachrichtigungen und Tipps für Microsoft-Dienste erhalten können.
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Content settings
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: SpotlightExperiencesAndRecommendationsEnabled
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000001
+```
+
+
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -2299,8 +2356,8 @@ Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit den in der [We
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2354,8 +2411,8 @@ URL-Muster in dieser Richtlinie dürfen nicht mit denen in Konflikt stehen, die 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2475,10 +2532,10 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = UTF-8
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = UTF-16
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = GB2312
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
@@ -2542,7 +2599,7 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://search.contoso.com/searchbyimage/upload
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
@@ -2596,7 +2653,7 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
@@ -2648,7 +2705,7 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-mis
+"mis"
 ```
 
 
@@ -2702,7 +2759,7 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-My Intranet Search
+"My Intranet Search"
 ```
 
 
@@ -2758,7 +2815,7 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://search.contoso.com/search?q={searchTerms}
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
@@ -2816,7 +2873,7 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://search.contoso.com/suggest?q={searchTerms}
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
@@ -2852,7 +2909,7 @@ Wenn Sie diese Richtlinie aktivieren und folgende Einstellungen festlegen:
 - "Adressleiste" ("Umleitung"), das neue Suchfeld der Registerkarte verwendet die Adressleiste, um auf neuen Registerkarten zu suchen.
 
 Zuordnung von Richtlinienoptionen:
-        
+  
 
 * Bing (Bing) = Suchfeld (empfohlen)
 
@@ -2882,7 +2939,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-bing
+"bing"
 ```
 
 
@@ -2940,7 +2997,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden keine Einschränkungen fü
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
+SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
@@ -2989,8 +3046,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
@@ -3044,8 +3101,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer beliebige Erweit
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
@@ -3075,7 +3132,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
 
 Diese Richtlinie hat Vorrang vor einer potenziell widersprüchlichen [ExtensionInstallBlocklist](#extensioninstallblocklist) Richtlinie. Wenn Sie eine Erweiterung aus der Liste erzwungen-installierter Erweiterungen entfernen, wird diese von Microsoft Edge automatisch deinstalliert.
 
-Für Windows-Geräte, die nicht zu einer Microsoft Active Directory-Domäne hinzugefügt wurden, ist die erzwungene Installation auf im Microsoft-Store verfügbare Erweiterungen beschränkt.
+Die erzwungene Installation ist auf Apps und Erweiterungen beschränkt, die auf der Website der Microsoft Edge-Add-Ons aufgeführt sind, und zwar für Instanzen, die nicht zu den folgenden gehören: Windows-Instanzen, die in eine Microsoft Active Directory-Domäne eingebunden sind, oder Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, sowie macOS-Instanzen, die über MDM verwaltet werden oder über MCX in eine Domäne eingebunden sind.
 
 Beachten Sie, dass Benutzer den Quellcode beliebiger Erweiterungen mithilfe von Entwicklungstools ändern können, wodurch die Erweiterung potenziell unbrauchbar wird. Falls dies ein Problem darstellt, konfigurieren Sie die Richtlinie [DeveloperToolsAvailability](#developertoolsavailability).
 
@@ -3115,8 +3172,8 @@ Beachten Sie, dass diese Richtlinie nicht für den InPrivate-Modus gilt.
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopabcdefghijklmnop
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
 
 ```
 
@@ -3172,7 +3229,7 @@ Die Richtlinie [ExtensionInstallBlocklist](#extensioninstallblocklist) hat Vorra
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = https://corp.contoso.com/*
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
@@ -3483,7 +3540,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, delegiert Microsoft Edge keine Be
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-contoso.com
+"contoso.com"
 ```
 
 
@@ -3533,7 +3590,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden alle vier Schemas verwende
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-basic,digest,ntlm,negotiate
+"basic,digest,ntlm,negotiate"
 ```
 
 
@@ -3583,7 +3640,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, versucht Microsoft Edge zu erkenn
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-*contoso.com,contoso.com
+"*contoso.com,contoso.com"
 ```
 
 
@@ -3769,8 +3826,8 @@ Standardmäßig sind alle systemeigenen Messaginghosts zulässig. Wenn Sie die [
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -3824,8 +3881,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, lädt Microsoft Edge alle install
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -4055,7 +4112,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://contoso.com/change_password.html
+"https://contoso.com/change_password.html"
 ```
 
 
@@ -4107,8 +4164,8 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = https://contoso.com/login.html
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
 
@@ -4234,7 +4291,7 @@ Wenn ein Feld ausgelassen wird, bedeutet dies, dass alle Werte übereinstimmen. 
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-{ "idPattern": ".*public", "namePattern": ".*Color" }
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
@@ -4494,7 +4551,7 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://www.contoso.com, https://www.fabrikam.com
+"https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
@@ -4570,7 +4627,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-direct
+"direct"
 ```
 
 
@@ -4624,7 +4681,7 @@ Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linki
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://internal.contoso.com/example.pac
+"https://internal.contoso.com/example.pac"
 ```
 
 
@@ -4678,7 +4735,7 @@ Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microso
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-123.123.123.123:8080
+"123.123.123.123:8080"
 ```
 
 
@@ -4930,8 +4987,8 @@ Beachten Sie auch, dass diese Richtlinie nicht zutrifft, wenn Ihre Organisation 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.edu
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
 
@@ -5203,7 +5260,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://www.contoso.com
+"https://www.contoso.com"
 ```
 
 
@@ -5222,18 +5279,18 @@ https://www.contoso.com
   
   
   #### Unterstützte Versionen:
-  - Auf Windows und MacOS ab 85 oder später
+  - Unter Windows und macOS ab 86 oder höher
 
   #### Beschreibung
   Sie können festlegen, welche Arten von Hintergrundbildern im neuen Registerkartenseiten-Layout in Microsoft Edge zulässig sind.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, werden alle Hintergrundbildtypen auf der neuen Registerkarte aktiviert.
 
-                                           
+             
 
-                                            
+           
 
-                                          
+            
 
 Zuordnung von Richtlinienoptionen:
 
@@ -5460,7 +5517,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://www.fabrikam.com
+"https://www.fabrikam.com"
 ```
 
 
@@ -5772,8 +5829,8 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = https://contoso.com
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.com
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
 
@@ -6245,9 +6302,9 @@ Ab Microsoft Edge 86 unterstützt diese Richtlinie keine dynamische Aktualisieru
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = [*.]mydomain2.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.com"
 
 ```
 
@@ -6292,8 +6349,8 @@ Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert au
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -6570,7 +6627,7 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, verwendet Micr
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-en
+"en"
 ```
 
 
@@ -6662,8 +6719,8 @@ Diese Richtlinie wirkt sich auf alle Arten von Audio-Eingabegeräten aus, nicht 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -6748,17 +6805,17 @@ Diese Richtlinie soll Unternehmen Flexibilität beim Deaktivieren der Audio-Sand
 
  
 
-                                                
+            
 
-                       
+        
 
-                        
+      
 
-                       
+        
 
-                   
+       
 
-                         
+       
 
 Die Browserdaten aus Microsoft Edge Legacy werden bei der ersten Ausführung unabhängig vom Wert dieser Richtlinie immer automatisch migriert.
 
@@ -6999,11 +7056,11 @@ Ein URL-Muster muss gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](ht
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = example.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com"
 
 ```
 
@@ -7042,7 +7099,7 @@ Die Dateitypen, die ein Benutzer bereits für das automatische öffnen angegeben
 
 Wenn Sie diese Richtlinie nicht festlegen, werden nur die Dateitypen, die ein Benutzer bereits für das automatische öffnen angegeben hat, beim Herunterladen verwendet.
 
-                                                                                                                                                                                                           
+                                                     
 
 Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Microsoft Active Directory-Domäne verknüpft sind, Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, oder MacOS-Instanzen, die über MDM verwaltet oder über MCX einer Domäne beigetreten sind.
 
@@ -7068,8 +7125,8 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = exe
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
@@ -7799,8 +7856,8 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird jedes Zert
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7858,8 +7915,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird jedes Zertifikat, für das e
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7915,8 +7972,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird jedes Zertifikat, das über 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = .contoso.com
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
 
@@ -8106,7 +8163,7 @@ Wenn Sie diese Richtlinie aktivieren, werden Dienste und Exportziele, die mit de
 
 Wenn Sie diese Richtlinie nicht konfigurieren, werden keine Beschränkungen für die zulässigen Dienstleistungen und Exportziele erzwungen.
 
-                                                     
+              
 
 Zuordnung von Richtlinienoptionen:
 
@@ -8136,7 +8193,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pinterest_suggestions
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
@@ -8501,7 +8558,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://go.microsoft.com/fwlink/?linkid=2080734
+"https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
@@ -8575,7 +8632,7 @@ Wenn Sie diese Richtlinie deaktivieren, werden DNS-Abfangprüfungen nicht ausgef
   - Auf Windows 7 und macOS ab 77 oder höher
 
   #### Beschreibung
-      
+   
 
   Wenn Sie diese Richtlinie auf "wahr" festlegen, überprüft Microsoft Edge beim Start immer, ob es als Standardbrowser eingestellt ist und registriert sich, wenn möglich, automatisch.
 
@@ -8668,6 +8725,127 @@ Der Wert für die Richtlinie wird nur dann angewendet, wenn die Richtlinie „[D
   - Beispielwert:
 ``` xml
 <true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### DefaultSensorsSetting
+  #### Standardeinstellung für Sensoren
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Legen Sie fest, ob Websites auf Sensoren wie Bewegungs- und Lichtsensoren zugreifen und diese verwenden dürfen. Sie können den Zugriff auf Sensoren für Websites vollständig zulassen oder blockieren.
+
+Wenn Sie die Richtlinie auf "1" festlegen, können Websites auf Sensoren zugreifen und diese verwenden. Wenn Sie die Richtlinie auf "2" festlegen, wird der Zugriff auf Sensoren verweigert.
+
+Sie können diese Richtlinie für bestimmte URL-Muster außer Kraft setzen, indem Sie die [SensorsAllowedForUrls](#sensorsallowedforurls)- und [SensorsBlockedForUrls](#sensorsblockedforurls)-Richtlinien verwenden.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, können Websites auf Sensoren zugreifen und diese verwenden, und der Benutzer kann diese Einstellung ändern. Hierbei handelt es sich um die globale Standardeinstellung für [SensorsAllowedForUrls](#sensorsallowedforurls) und [SensorsBlockedForUrls](#sensorsblockedforurls).
+
+Zuordnung von Richtlinienoptionen:
+
+* AllowSensors (1) = Websites dürfen auf Sensoren zugreifen
+
+* BlockSensors (2) = Websites dürfen nicht auf Sensoren zugreifen
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Ganze Zahl
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: DefaultSensorsSetting
+  - GP-Name: Standardeinstellung für Sensoren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: DefaultSensorsSetting
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000002
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: DefaultSensorsSetting
+  - Beispielwert:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### DefaultSerialGuardSetting
+  #### Steuerung der Verwendung der Serial-API
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  
+Legen Sie fest, ob Websites auf serielle Anschlüsse zugreifen dürfen. Sie können den Zugriff vollständig blockieren oder festlegen, dass der Benutzer jedes Mal gefragt wird, wenn eine Website auf einen seriellen Anschluss zugreifen möchte.
+
+Wenn Sie die Richtlinie auf "3" festlegen, können Websites Zugriff auf serielle Anschlüsse anfordern. Wenn Sie die Richtlinie auf "2" festlegen, wird der Zugriff auf serielle Anschlüsse verweigert.
+
+Sie können diese Richtlinie für bestimmte URL-Muster außer Kraft setzen, indem Sie die [SerialAskForUrls](#serialaskforurls)- und [SerialBlockedForUrls](#serialblockedforurls)-Richtlinien verwenden.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, können Websites Benutzer standardmäßig fragen, ob sie auf serielle Anschlüsse zugreifen können, und die Benutzer können diese Einstellung ändern.
+
+Zuordnung von Richtlinienoptionen:
+
+* BlockSerial (2) = nicht zulassen, dass eine Website Zugriff auf serielle Anschlüsse über die Serial API anfordert
+
+* AskSerial (3) = Websites gestatten, Benutzerberechtigungen für den Zugriff auf einen seriellen Anschluss anzufordern
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Ganze Zahl
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: DefaultSerialGuardSetting
+  - GP-Name: Steuern der Verwendung der Serial-API
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: DefaultSerialGuardSetting
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000002
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: DefaultSerialGuardSetting
+  - Beispielwert:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -9097,7 +9275,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird das standardmäßige Cacheve
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-${user_home}/Edge_cache
+"${user_home}/Edge_cache"
 ```
 
 
@@ -9213,7 +9391,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-off
+"off"
 ```
 
 
@@ -9267,7 +9445,7 @@ Falsch formatierte Vorlagen werden ignoriert.
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://dns.example.net/dns-query{?dns}
+"https://dns.example.net/dns-query{?dns}"
 ```
 
 
@@ -9322,8 +9500,8 @@ Wenn der Ordner, der vom Pfad angegeben wird, nicht vorhanden ist, wird beim Her
   ##### Beispielwert:
 ```
 
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+                                              
 ```
 
 
@@ -9553,7 +9731,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = ExampleDeprecatedFeature_EffectiveUntil20080902
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
@@ -9572,8 +9750,8 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = Example
 
   ### EnableDomainActionsDownload
   #### Herunterladen aktivieren von Domänenaktionen von Microsoft (veraltet)
-                       
         
+  
   
   
   >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 84 nicht mehr.
@@ -9874,8 +10052,8 @@ Beachten Sie, dass, während im vorstehenden Beispiel die Unterdrückung von Dow
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {'domains': ['*'], 'file_extension': 'swf'}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -10393,8 +10571,8 @@ Diese Unternehmensrichtlinie ist standardmäßig deaktiviert.
 
   ### ForceNetworkInProcess
   #### Erzwingen der Ausführung des Netzwerkcodes im Browserprozess (veraltet)
-                       
         
+  
   
   
   
@@ -10439,6 +10617,60 @@ Diese Richtlinie ist standardmäßig deaktiviert. Wenn sie aktiviert ist, sind B
 ```
 
 
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### ForceSync
+  #### Synchronisierung von Browserdaten erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Erzwingt die Datensynchronisierung in Microsoft Edge. Diese Richtlinie hindert den Benutzer außerdem daran, die Synchronisierung zu deaktivieren.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer die Synchronisierung aktivieren oder deaktivieren. Wenn Sie diese Richtlinie aktivieren, können die Benutzer die Synchronisierung nicht deaktivieren.
+
+Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#browsersignin)-Richtlinie nicht konfiguriert oder aktiviert sein. Wenn [ForceSync](#forcesync) auf "Deaktiviert" festgelegt ist, ist [BrowserSignin](#browsersignin) nicht wirksam.
+
+[SyncDisabled](#syncdisabled) darf nicht konfiguriert sein oder muss auf "False" festgelegt sein. Wenn sie auf "True" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
+
+0 = Synchronisierung nicht automatisch starten und Zustimmungsaufforderung für die Synchronisierung anzeigen (Standardeinstellung) 1 = Aktivierung der Synchronisierung für Azure AD-/Azure AD-herabgesetztes Benutzerprofil erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: ForceSync
+  - GP-Name: Synchronisierung von Browserdaten erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: ForceSync
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000001
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: ForceSync
+  - Beispielwert:
+``` xml
+<true/>
+```
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -10693,7 +10925,7 @@ Beliebte Einzelwort-Suchbegriffe benötigen eine manuelle Auswahl von Suchvorsch
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
+SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
@@ -11558,6 +11790,54 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### InsecureFormsWarningsEnabled
+  #### Aktivieren von Warnungen für unsichere Formulare
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Mit dieser Richtlinie wird der Umgang mit unsicheren Formulare (Formulare, die über HTTP übermittelt werden) gesteuert, die in sichere (HTTPS) Websites im Browser eingebettet sind.
+Wenn Sie diese Richtlinie aktivieren oder nicht festlegen, wird eine ganzseitige Warnung angezeigt, wenn ein unsicheres Formular gesendet wird. Außerdem wird neben den Formularfeldern, in denen der Fokus liegt, eine Warnmeldung angezeigt, und das automatische Ausfüllen wird für diese Formulare deaktiviert.
+Wenn Sie diese Richtlinie deaktivieren, werden für unsichere Formulare keine Warnungen angezeigt, und das automatische Ausfüllen funktioniert normal.
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: InsecureFormsWarningsEnabled
+  - GP-Name: Warnungen für unsichere Formulare aktivieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: InsecureFormsWarningsEnabled
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000001
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: InsecureFormsWarningsEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### IntensiveWakeUpThrottlingEnabled
   #### Regulierung des IntensiveWakeUpThrottlingEnabled-Features
   
@@ -11753,7 +12033,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://internal.contoso.com/sitelist.xml
+"https://internal.contoso.com/sitelist.xml"
 ```
 
 
@@ -11826,6 +12106,54 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Internet Explorer-Modus-Tests zulassen
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows 86 oder später
+
+  #### Beschreibung
+  Diese Richtlinie ersetzt die Kennzeichnungsrichtlinie für IE-Modus-Tests. Sie ermöglicht es Benutzern, einen IE-Modus-Tab über die Menüoption für die Benutzeroberfläche zu öffnen.
+
+       Diese Einstellung funktioniert in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ist auf "IEMode" festgelegt    und    Richtlinie [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), wenn die Liste mindestens einen Eintrag aufweist.
+
+       Wenn Sie diese Richtlinie aktivieren, können Benutzer einen IE-Modus-Tab über die Benutzeroberflächenoption öffnen und von der aktuellen Website zu einer IE-Modus-Website wechseln.
+
+       Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Benutzeroberflächenoption im Menü nicht direkt anzeigen.
+
+       Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung für IE-Modus-Tests manuell einrichten.
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: InternetExplorerIntegrationTestingAllowed
+  - GP-Name: Internet Explorer-Modus-Tests zulassen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: InternetExplorerIntegrationTestingAllowed
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000000
+```
+
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### IsolateOrigins
   #### Aktivieren der Website-Isolation für bestimmte Ursprünge
   
@@ -11862,7 +12190,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellun
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-https://contoso.com/,https://fabrikam.com/
+"https://contoso.com/,https://fabrikam.com/"
 ```
 
 
@@ -12314,7 +12642,7 @@ Wenn Sie diese Richtlinie unter Windows 10 nicht konfigurieren, verwendet Micros
 Unter Windows 7, Windows 8 und macOS steuert diese Richtlinie das Senden von Nutzungs- und Absturzdaten. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Präferenz des Benutzers.
 
 Um diese Richtlinie zu aktivieren, muss [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) auf Aktiviert gesetzt sein. Wenn [MetricsReportingEnabled](#metricsreportingenabled) oder [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) nicht konfiguriert oder deaktiviert ist, werden diese Daten nicht an Microsoft gesendet.
-                                                                                                                                                                                
+                                            
 
 Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Microsoft Active Directory-Domäne verknüpft sind, Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, oder MacOS-Instanzen, die über MDM verwaltet oder über MCX einer Domäne beigetreten sind.
 
@@ -12642,8 +12970,8 @@ Weitere Informationen zu sicheren Kontexten finden Sie unter https://www.w3.org/
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = http://testserver.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = *.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
 
@@ -13300,7 +13628,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder sie leer lassen, können Benu
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-.*@contoso.com
+".*@contoso.com"
 ```
 
 
@@ -13352,15 +13680,15 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Standardpfad für den Se
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-${roaming_app_data}\edge-profile
+"${roaming_app_data}\\edge-profile"
 ```
 
 
-           
-              
-      
+     
+     
+   
+ 
     
-             
    
   
 
@@ -13408,11 +13736,11 @@ Weitere Informationen zur Verwendung von Server gespeicherten Benutzerprofilen f
 ```
 
 
-           
-              
-      
-    
-    
+     
+     
+   
+ 
+ 
    
   
 
@@ -13562,7 +13890,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-tls1
+"tls1"
 ```
 
 
@@ -13619,8 +13947,8 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird die persö
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
@@ -13871,7 +14199,7 @@ Websites (wie https://contoso.com/some/path) stimmen nur als U2F appIDs überein
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contoso.com
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
@@ -13950,7 +14278,7 @@ Wenn Sie diese Richtlinie unter Windows 10 nicht konfigurieren, verwendet Micros
 Unter Windows 7, Windows 8 und MacOS steuert diese Richtlinie das Senden von Informationen zu besuchten Websites. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Präferenz des Benutzers.
 
 Um diese Richtlinie zu aktivieren, muss [MetricsReportingEnabled](#metricsreportingenabled) auf Aktiviert gesetzt sein. Wenn [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) oder [MetricsReportingEnabled](#metricsreportingenabled) nicht konfiguriert oder deaktiviert ist, werden diese Daten nicht an Microsoft gesendet.
-                                                                                                                                                                            
+                                           
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -13983,6 +14311,242 @@ Um diese Richtlinie zu aktivieren, muss [MetricsReportingEnabled](#metricsreport
   - Beispielwert:
 ``` xml
 <false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SensorsAllowedForUrls
+  #### Zugriff auf Sensoren auf bestimmten Websites zulassen
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die auf Sensoren wie Bewegungs- und Lichtsensoren zugreifen und diese verwenden dürfen.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultSensorsSetting](#defaultsensorssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
+
+Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prioritätsreihenfolge verwendet: die [SensorsBlockedForUrls](#sensorsblockedforurls)-Richtlinie (wenn es eine Übereinstimmung gibt), die [DefaultSensorsSetting](#defaultsensorssetting)-Richtlinie (sofern festgelegt) oder die persönlichen Einstellungen des Benutzers.
+
+Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit jenen in der [SensorsBlockedForUrls](#sensorsblockedforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: SensorsAllowedForUrls
+  - GP-Name: Zugriff auf Sensoren auf bestimmten Websites zulassen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: SensorsAllowedForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SensorsBlockedForUrls
+  #### Zugriff auf Sensoren auf bestimmten Websites blockieren
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die nicht auf Sensoren wie Bewegungs- und Lichtsensoren zugreifen dürfen.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultSensorsSetting](#defaultsensorssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
+
+Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prioritätsreihenfolge verwendet: die [SensorsAllowedForUrls](#sensorsallowedforurls)-Richtlinie (wenn es eine Übereinstimmung gibt), die [DefaultSensorsSetting](#defaultsensorssetting)-Richtlinie (sofern festgelegt) oder die persönlichen Einstellungen des Benutzers.
+
+Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit jenen in der [SensorsAllowedForUrls](#sensorsallowedforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: SensorsBlockedForUrls
+  - GP-Name: Zugriff auf Sensoren auf bestimmten Websites blockieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: SensorsBlockedForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SerialAskForUrls
+  #### Die Serial-API auf bestimmten Websites zulassen
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die vom Benutzer Zugriff auf einen seriellen Anschluss anfordern dürfen.
+
+Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultSerialGuardSetting](#defaultserialguardsetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
+
+Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prioritätsreihenfolge verwendet: die [SerialBlockedForUrls](#serialblockedforurls)-Richtlinie (wenn es eine Übereinstimmung gibt), die [DefaultSerialGuardSetting](#defaultserialguardsetting)-Richtlinie (sofern festgelegt) oder die persönlichen Einstellungen des Benutzers.
+
+Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit jenen in der [SerialBlockedForUrls](#serialblockedforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: SerialAskForUrls
+  - GP-Name: Die Serial-API auf bestimmten Websites zulassen.
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfade (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: SerialAskForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SerialBlockedForUrls
+  #### Die Serial-API auf bestimmten Websites blockieren
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows und macOS ab 86 oder höher
+
+  #### Beschreibung
+  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die vom Benutzer keinen Zugriff auf einen seriellen Anschluss anfordern dürfen.
+
+Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultSerialGuardSetting](#defaultserialguardsetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
+
+Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prioritätsreihenfolge verwendet: die [SerialAskForUrls](#serialaskforurls)-Richtlinie (wenn es eine Übereinstimmung gibt), die [DefaultSerialGuardSetting](#defaultserialguardsetting)-Richtlinie (sofern festgelegt) oder die persönlichen Einstellungen des Benutzers.
+
+Die URL-Muster in dieser Richtlinie dürfen nicht mit jenen in der [SerialAskForUrls](#serialaskforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: SerialBlockedForUrls
+  - GP-Name: Die Serial-API auf bestimmten Websites blockieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Einstellung Schlüsselname: SerialBlockedForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -14228,8 +14792,8 @@ Die unterstützten Sprachen sind: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, 
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
@@ -14280,8 +14844,8 @@ Die derzeit unterstützten Sprachen sind: af, bg, ca, cs, da, de, el, en-AU, en-
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
@@ -14480,7 +15044,7 @@ Benutzer sind nicht dazu in der Lage, die Deaktivierung von Datentypen außer Kr
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
+SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
@@ -14514,9 +15078,9 @@ Wenn Sie diese Richtlinie aktivieren oder nicht festlegen, aktiviert Microsoft E
 
 Wenn Sie diese Richtlinie deaktivieren, deaktiviert Microsoft Edge diese Sicherheitsmaßnahmen für Verbindungen, die mit lokal installierten CA-Zertifikaten authentifiziert sind. Diese Schutzfunktionen sind für Verbindungen, die mit öffentlich vertrauenswürdigen CA-Zertifikaten authentifiziert sind, immer aktiviert.
 
-                                                                                                                                                                                                                                                      
+                                                               
 
-                                                                                                                                                                                                             
+                                                    
 
 Diese Richtlinie kann verwendet werden, um auf betroffene Proxys zu testen und diese zu aktualisieren. Bei betroffenen Proxies wird erwartet, dass Verbindungen mit dem Fehlercode ERR_TLS13_DOWNGRADE_DETECTED fehlschlagen.
 
@@ -14598,9 +15162,9 @@ Diese Richtlinie hat keine Auswirkungen auf QUIC-basierte Verbindungen. QUIC kan
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = 0x1303
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = 0xcca8
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
@@ -14925,11 +15489,11 @@ Wenn Sie diese Richtlinie nicht konfigurieren, gibt es keine Ausnahmen zur Sperr
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
@@ -14992,14 +15556,14 @@ Wenn Sie diese Richtlinie nicht konfigurieren, sind keine URLs blockiert.
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = hosting.com/bad_path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = .exact.hostname.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = file://*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = custom_scheme:*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
@@ -15115,7 +15679,7 @@ Eine Liste der Variablen, die verwendet werden können, finden Sie unter [https:
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-${users}/${user_name}/Edge
+"${users}/${user_name}/Edge"
 ```
 
 
@@ -15125,6 +15689,50 @@ ${users}/${user_name}/Edge
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### UserDataSnapshotRetentionLimit
+  #### Schränkt die Anzahl der Benutzerdaten-Momentaufnahmen ein, die zur Verwendung für Notfall-Rollbacks aufbewahrt werden.
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows 86 oder später
+
+  #### Beschreibung
+  Nach jedem größeren Versionsupdate erstellt Microsoft Edge eine Momentaufnahme von Teilen der Browserdaten des Benutzers, die für einen etwaigen späteren Notfall verwendet werden können, der ein vorübergehendes Versions-Rollback erfordert. Wenn ein vorübergehendes Rollback zu einer Version durchgeführt wird, für die ein Benutzer über eine entsprechende Momentaufnahme verfügt, werden die Daten in der Momentaufnahme wiederhergestellt. Auf diese Weise werden Benutzereinstellungen wie Textmarken und Daten für das automatische Ausfüllen beibehalten.
+
+Wenn Sie diese Richtlinie nicht festlegen, wird der Standardwert von 3 Momentaufnahmen verwendet.
+
+Wenn Sie diese Richtlinie festlegen, werden alte Momentaufnahmen nach Bedarf gelöscht, um dem von Ihnen festgelegten Wert zu entsprechen. Wenn Sie diese Richtlinie auf "0" festlegen, werden keine Momentaufnahmen erstellt.
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+  - Ganze Zahl
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: UserDataSnapshotRetentionLimit
+  - GP-Name: Schränkt die Anzahl der Benutzerdaten-Momentaufnahmen ein, die zur Verwendung für Notfall-Rollbacks aufbewahrt werden.
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: UserDataSnapshotRetentionLimit
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000003
+```
+
+
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -15263,8 +15871,8 @@ Diese Richtlinie wirkt sich auf alle Arten von Video-Eingaben aus, nicht nur auf
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -15417,8 +16025,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### Erneut aktivieren der Web Components v0 API bis M84 (veraltet)
-                       
         
+  
   
   
   >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 84 nicht mehr.
@@ -15470,8 +16078,8 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Zulassen, dass WebDriver inkompatible Richtlinien außer Kraft setzt (veraltet)
-                       
         
+  
   
   
   >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 84 nicht mehr.
@@ -15566,8 +16174,8 @@ Bitte beachten Sie, dass diese Richtlinie den Schutz lokaler IP-Adressen, der f�
   - Werttyp: REG_SZ-Liste
   ##### Beispielwert:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
@@ -15635,7 +16243,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-default
+"default"
 ```
 
 
@@ -15685,7 +16293,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
   - Werttyp: REG_SZ
   ##### Beispielwert:
 ```
-10000-11999
+"10000-11999"
 ```
 
 
@@ -15707,7 +16315,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
   - Unter Windows seit 84 oder später
 
   #### Beschreibung
-  Diese Richtlinie wird nicht mehr unterstützt, da Sie von einem ähnlichen Feature in einer zukünftigen Version abgelöst wird, erfahren Sie mehr unter https://crbug.com/1032820. Es wird in Microsoft Edge ab Version 87 nicht funktionieren.
+  Diese Richtlinie wird nicht mehr unterstützt, da sie von einem ähnlichen Feature in einer zukünftigen Version abgelöst wird. Erfahren Sie mehr unter https://crbug.com/1032820.
 
 Verwenden Sie Windows, um Proxys für alle Browser-Netzwerke zu beheben, anstelle des in Microsoft Edge integrierten Proxy-Konfliktlösers. Der Windows Proxy-Konfliktlöser ermöglicht Windows Proxy-Features wie DirectAccess/NRPT.
 
