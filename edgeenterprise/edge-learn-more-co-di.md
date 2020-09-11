@@ -3,19 +3,19 @@ title: ClickOnce und DirectInvoke in Microsoft Edge
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über ClickOnce und DirectInvoke in Microsoft Edge.
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979995"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012795"
 ---
 # Grundlegendes zu den ClickOnce- und DirectInvoke-Features in Microsoft Edge
 
@@ -55,13 +55,12 @@ DirectInvoke-Anwendungsfälle hängen von der Absicht der Website ab, die Direct
 
 Unterstützung für ClickOnce und DirectInvoke:
 
-- DirectInvoke wird standardmäßig für alle Windows-Benutzer unterstützt, ClickOnce ist jedoch für alle Windows-Benutzer deaktiviert.
+- ClickOnce und DirectInvoke werden standardmäßig für alle Windows-Benutzer unterstützt.
 
   > [!NOTE]
-  > Benutzer, die ClickOnce-Unterstützung benötigen, können zu "edge://flags/#edge-click-once" wechseln und **Aktivieren** aus der Dropdownliste auswählen. Anschließend müssen Sie den Browser **neu starten**.
+  > Benutzer, die ClickOnce-Unterstützung deaktivieren möchten, können zu *edge://flags/#edge-click-once* wechseln und **Deaktiviert** aus der Dropdownliste auswählen. Anschließend müssen Sie den Browser **neu starten**.
 
 - ClickOnce und DirectInvoke werden auf anderen Plattformen als Windows nicht unterstützt.
-- Da ClickOnce ein unternehmensorientiertes Feature ist, das von einer bestimmten Gruppe von Hauptbenutzern verwendet wird und nicht für die allgemeine Verwendung vorgesehen ist, ist ClickOnce standardmäßig deaktiviert.
 
 ## Sicherheit beim Umgang mit ClickOnce- und DirectInvoke-Dateien
 

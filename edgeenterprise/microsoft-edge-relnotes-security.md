@@ -3,23 +3,27 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 08/27/2020
+ms.date: 09/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: 258a2bf52d38c95d92c76f3c588a3c199aa2d55b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: dfa422a1a0a20271c99891590c16777f8f774b8b
+ms.sourcegitcommit: d1e7d83b2e4acaaf0cde995eb0f644036a1f976b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980027"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11005781"
 ---
 # Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitsupdates, die in Updates für den Microsoft Edge Stable-Kanal enthalten sind.
+
+## 9. September 2020
+
+Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 85.0.564.51)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 27.August 2020
 
@@ -121,4 +125,4 @@ Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal
 
 ## Weitere Informationen
 
-- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
