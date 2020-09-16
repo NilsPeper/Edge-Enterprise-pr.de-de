@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise-Synchronisierung
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/03/2020
+ms.date: 09/15/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise-Synchronisierung
-ms.openlocfilehash: a6d01356db478871a7c6b386bbb731b32dc4739a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
+ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980047"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "11016344"
 ---
 # Microsoft Edge Enterprise-Synchronisierung
 
@@ -33,6 +33,8 @@ Dank der Microsoft Edge-Synchronisierung können Benutzer auf ihre Browserdaten 
 - Adressen und mehr (Formulareinträge)
 - Sammlungen
 - Einstellungen
+- Browserverlauf
+- Offene Registerkarten
 
 Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und dieser kann die Synchronisierung für jeden der oben aufgeführten Datentypen aktivieren oder deaktivieren.
 
@@ -41,38 +43,22 @@ Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und 
 
 ## Voraussetzungen
 
-Derzeit ist die Synchronisierung von Microsoft Edge für Azure Active Directory (Azure AD)-Konten für die folgenden Abonnements verfügbar:
+Die Synchronisierung von Microsoft Edge für Azure Active Directory (Azure AD)-Konten ist für jedes der folgenden Abonnements verfügbar:
 
 - Azure AD Premium (P1 und P2)
 - M365 Business Premium
 - Office 365 E3 und höher
 - Azure Information Protection (AIP) (P1 & P2)
-- Alle EDU-Abonnements (O365 A1 oder höher, M365 A1 oder höher oder Azure Information Protection P1 oder P2 für Studenten oder Dozenten)
+- Alle EDU-Abonnements (Microsoft Apps für Studenten oder Dozenten, Exchange Online für Studenten oder Dozenten, O365 A1 oder höher, M365 A1 oder höher oder Azure Information Protection P1 oder P2 für Studenten oder Dozenten)
 
-> [!NOTE]
-> Die Synchronisierung ist abhängig von dem Schutzdienst, der von Azure Information Protection (AIP) zum Schutz der Synchronisationsdaten angeboten wird. Dieser Dienst ist derzeit für die zuvor genannten Abonnements verfügbar. Eine vollständige Liste der AIP-SKUs finden Sie unter [Preis für den Informationsschutz](https://azure.microsoft.com/pricing/details/information-protection/).
+## Konfigurieren der Microsoft Edge-Synchronisierung
 
-## Konfigurationsoptionen für die Microsoft Edge-Synchronisierung
+Konfigurationsoptionen für die Microsoft Edge-Synchronisierung stehen über den Azure Information Protection (AIP)-Dienst zur Verfügung. Wenn AIP für einen Mandanten aktiviert ist, können alle Benutzer Microsoft Edge-Daten unabhängig von der Lizenzierung synchronisieren. Anweisungen zum Aktivieren von AIP finden Sie [hier](https://docs.microsoft.com/azure/information-protection/activate-office365).
 
-Die folgenden Konfigurationsoptionen stehen zur Aktivierung der Microsoft Edge-Synchronisierung zur Verfügung:
-
-- Azure Information Protection (AIP)
-- Azure AD Enterprise State Roaming (ESR)
-
-Wenn sowohl AIP als auch ESR deaktiviert sind, wird Benutzern eine Fehlermeldung angezeigt, die besagt, dass die Synchronisierung für Ihr Konto nicht verfügbar ist.
-
-### Azure Information Protection (AIP)
-
-Wenn der Azure Information Protection (AIP)-Dienst für einen Mandanten aktiviert ist, können alle Benutzer Microsoft Edge-Daten unabhängig von der Lizenzierung synchronisieren. Anweisungen zum Aktivieren von AIP finden Sie [hier](https://docs.microsoft.com/azure/information-protection/activate-office365).
-
-Um die Synchronisierung auf eine bestimmte Benutzergruppe zu beschränken, können Sie die [AADRM-Richtlinie zur Onboarding-Steuerung](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) für diese Benutzer aktivieren. Wenn die Synchronisierung immer noch nicht verfügbar ist, nachdem Sie sich vergewissert haben, dass das Onboarding für alle erforderlichen Benutzer erfolgt ist, Stellen Sie mithilfe des PowerShell-Cmdlets [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/Get-AipServiceIPCv3?view=azureipps) sicher, dass IPCv3Service aktiviert ist.
+Um die Synchronisierung auf eine bestimmte Benutzergruppe zu beschränken, können Sie die [AIP-Richtlinie zur Onboarding-Steuerung](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) für diese Benutzer aktivieren. Wenn die Synchronisierung immer noch nicht verfügbar ist, nachdem Sie sich vergewissert haben, dass das Onboarding für alle erforderlichen Benutzer erfolgt ist, stellen Sie mithilfe des PowerShell-Cmdlets [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps)  sicher, dass IPCv3Service aktiviert ist.
 
 > [!CAUTION]
-> Die Aktivierung von Azure Information Protection schränkt auch den Zugriff für andere Anwendungen mit AIP ein, wie z.B. Microsoft Word oder Microsoft Outlook.
-
-### Azure AD Enterprise State Roaming (ESR)
-
-Wenn das Feature Azure Active Directory [Enterprise State Roaming](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview) (ESR) für jeden Benutzer oder Mandanten aktiviert ist, können diese die Microsoft Edge-Synchronisierungsfunktion unabhängig von der Einstellung der Onboarding-Steuerrichtlinie verwenden.
+> Die Aktivierung von Azure Information Protection erlaubt auch anderen Anwendungen, wie z.B. Microsoft Word oder Microsoft Outlook, Inhalte mit AIP zu schützen. Darüber hinaus wird jede Onboarding-Kontrollrichtlinie, die zur Einschränkung der Edge-Synchronisierung verwendet wird, auch andere Anwendungen daran hindern, Inhalte mithilfe von AIP zu schützen.
 
 ## Microsoft Edge und Enterprise State Roaming
 
@@ -85,6 +71,8 @@ Die folgenden Gruppenrichtlinien wirken sich auf die Microsoft Edge-Synchronisie
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): Deaktiviert die Synchronisierung vollständig.
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): Deaktiviert das Speichern des Browserverlaufs und die Synchronisierung. Die Synchronisierung geöffneter Registerkarten wird durch diese Richtlinie ebenfalls deaktiviert.
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): Konfigurieren Sie die Liste der Typen, die von der Synchronisierung ausgeschlossen werden.
+- [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): Zulassen, dass Active Directory (AD)-Profile lokalen Speicher verwenden. Weitere Informationen finden Sie unter [Lokale Synchronisierung für Active Directory (AD)-Benutzende](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync).
+- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): Aktivieren Sie die Synchronisierung standardmäßig, und fordern Sie keine Benutzerzustimmung zur Synchronisierung an.  
 
 ## Häufig gestellte Fragen
 
@@ -92,7 +80,7 @@ Die folgenden Gruppenrichtlinien wirken sich auf die Microsoft Edge-Synchronisie
 
 #### Werden die synchronisierten Daten verschlüsselt? 
 
-Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt und zusätzlich im Ruhezustand im Microsoft-Dienst mithilfe von AES256.
+Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Die meisten Datentypen werden zusätzlich im Microsoft-Dienst mithilfe von AES256 zusätzlich verschlüsselt, mit Ausnahme des Browserverlaufs und der geöffneten Registerkarten-Datentypen. Um zu verhindern, dass diese Datentypen synchronisiert werden, können Sie die Richtlinie [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) anwenden.
 
 #### Wo werden Microsoft Edge-Synchronisierungsdaten für gespeichert?
 
