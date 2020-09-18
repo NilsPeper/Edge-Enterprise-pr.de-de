@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 2bcd18cd18c9b5be1f4b3b39137aea09889bbc2f
-ms.sourcegitcommit: db44b524973df8ac811b09e6b71c25be9ba92bbc
+ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
+ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015361"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11026895"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -35,7 +35,6 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 * **Internet Explorer-Modus:**
 
    * Ermöglichen Sie Benutzern, die Microsoft Edge-Benutzeroberfläche zum Testen von Websites im Internet Explorer-Modus zu verwenden. Beginnend mit der Microsoft Edge-Version 86 können Administratoren eine Benutzeroberflächenoption für Ihre Benutzer aktivieren, um eine Registerkarte im Internet Explorer-Modus zu Testzwecken oder als Notlösung zu laden, bis Websites zur XML-Websiteliste hinzugefügt werden.
-   * Ermöglichen Sie Benutzern Feedback zu Websites zu geben, die den IE-Modus erfordern. Benutzer können mit einer Microsoft Edge-Benutzeroberflächenoption Feedback an Sie senden. Sie können diese Benutzeroberflächenoption so konfigurieren, dass Sie über eine Gruppenrichtlinie angezeigt wird, und auswählen, wie Sie diese Informationen erhalten möchten (per E-Mail oder mit einem benutzerdefinierten Formular).
 
 * **Löschen von Downloads von der Festplatte mithilfe des Download-Managers.** Benutzer sind jetzt in der Lage, die heruntergeladenen Dateien von Ihrer Festplatte zu löschen, ohne den Browser verlassen zu müssen. Die neue Funktion zum Löschen von Downloads befindet sich im Kontextmenü des Downloadverzeichnisses oder der Downloadseite.
 
@@ -526,4 +525,4 @@ Die folgenden Richtlinien greifen in dieser Version weiterhin. Sie veralten in e
 
 ## Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
