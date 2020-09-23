@@ -3,25 +3,25 @@ title: Microsoft Edge – Material für die Einführung bei Kunden
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge – Material für die Einführung bei Kunden
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980061"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072632"
 ---
 # Material für die Einführung von Kunden für Microsoft Edge
 
-Um die Bereitstellung und Einführung des neuen Microsoft Edge zu unterstützen, sehen Sie sich das folgende gesammelte Material und die Ressourcen unten an.
+Um die Bereitstellung und Einführung des neuen Microsoft Edge zu unterstützen, sehen Sie sich bitte das gesammelte Material und die Ressourcen unten an. Sie können eine komprimierte ZIP-Datei herunterladen.
 
-Informieren Sie sich über zusätzliches Material, sobald es verfügbar ist.
+Bitte Informieren Sie sich über zusätzliches Material, sobald es verfügbar ist.
 
 ## Paket für die Einführung bei Kunden
 
@@ -29,31 +29,40 @@ Das Paket für die Einführung bei Kunden enthält das folgende Material:
 
 - IT-Bereitstellungshandbuch
 - Benutzerhandbuch – Erste Schritte
+- Ankündigungsmail
+- E-Mail mit Tipps und Tricks
 - Digitale Anmeldung
 
-## IT-Bereitstellungshandbuch
+[Customer Adoption Kit herunterladen](https://www.microsoft.com/download/details.aspx?id=102119)
+
+### IT-Bereitstellungshandbuch
 
 Verwenden Sie dieses Benutzerhandbuch, um mit der Planung der Bereitstellung zu beginnen und zu erfahren, wie Sie mit der Bereitstellung von Microsoft Edge in Ihrer Umgebung beginnen können.
 
-[IT-Bereitstellungshandbuch abrufen](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
-## Benutzerhandbuch – Erste Schritte
+### Benutzerhandbuch – Erste Schritte
 
 Verwenden Sie dieses Benutzerhandbuch, um Benutzer über das neue Microsoft Edge zu informieren. Das Benutzerhandbuch enthält Übersichten über die Benutzeroberfläche, Menüs und Funktionen. Wir haben auch Tipps für die ersten Schritte der Benutzer hinzugefügt.
 
-[Abrufen von Benutzerhandbuch – Erste Schritte](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Benutzerhandbuch – Erste Schritte":::
 
-## Digitale Anmeldung
+### E-Mail-Vorlagen
 
-Verwenden Sie die folgende digitale Anmeldung, um Benutzer über den neuen Microsoft Edge zu informieren.
+Verwenden Sie diese E-Mail-Vorlagen, um anzukündigen, dass das neue Microsoft Edge jetzt für Benutzer verfügbar ist, und um Tipps und Tricks bereitzustellen, wie Benutzer das Beste aus dem Browser herausholen.
 
-[Microsoft Edge – Enterprise neue Registerkarte](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="E-Mail-Vorlage für Tipps und Tricks":::
 
-[Microsoft Edge – mehrere Profile und plattformübergreifend](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+### Digitale Anmeldung
 
-[Microsoft Edge – Microsoft Search in Bing](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+Verwenden Sie die folgende digitale Anmeldung, um Benutzer über den neuen Microsoft Edge zu informieren:
 
-[Microsoft Edge – Sicherheit](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+- Enterprise-Seite „Neue Registerkarte”
+- Mehrere Profile und plattformübergreifend
+- Microsoft Search in Bing
+- Sicherheit
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text=""Neuer Tab"-Seite":::
 
 ## Andere Lernressourcen
 
@@ -61,4 +70,4 @@ Wenn Sie daran interessiert sind, mehr über die Vorteile von Microsoft Edge zu 
 
 ## Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
