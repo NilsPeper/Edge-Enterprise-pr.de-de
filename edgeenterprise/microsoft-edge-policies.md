@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/10/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: d19d12dbda0e4b40b4b91b94ca92c58f2a469105
-ms.sourcegitcommit: 1f9149bf2e7c751520b68ef96e18e1f959975fb9
+ms.openlocfilehash: 0561f403bb385792767c3666be18bb6cf680edaf
+ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11005818"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "11078123"
 ---
 # Microsoft Edge-Richtlinien
 Die neueste Version von Microsoft Edge umfasst die folgenden Richtlinien. Sie können diese Richtlinien verwenden, um zu konfigurieren, wie Microsoft Edge in Ihrer Organisation ausgeführt wird.
@@ -337,7 +337,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Zugriff auf Sensoren auf bestimmten Websites blockieren|
 |[SerialAskForUrls](#serialaskforurls)|Die Serial-API auf bestimmten Websites zulassen|
 |[SerialBlockedForUrls](#serialblockedforurls)|Die Serial-API auf bestimmten Websites blockieren|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung für Signed HTTP Exchange (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Aktivieren der Website-Isolation für alle Websites|
 |[SpellcheckEnabled](#spellcheckenabled)|Rechtschreibprüfung aktivieren|
@@ -1267,9 +1267,9 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   #### Beschreibung
   [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
 
-                                                                                                                                                                                                                                                    
+Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellung manuell ändern.
 
-Wenn Sie diese Richtlinie nicht festlegen, verwendet sie "BlockPlugins", und Benutzer können diese Einstellung ändern.
+                                                                                     
 
 Hinweis: Die automatische Wiedergabe gilt nur für Domänen, die in der Richtlinie [PluginsAllowedForUrls](#pluginsallowedforurls) explizit aufgelistet sind. Wenn Sie die automatische Wiedergabe für alle Websites aktivieren möchten, fügen Sie "http://*" und "https://*" zur Liste der zulässigen URLs hinzu.
 
@@ -12531,13 +12531,13 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   #### Beschreibung
   Diese Richtlinie ersetzt die Kennzeichnungsrichtlinie für IE-Modus-Tests. Sie ermöglicht es Benutzern, einen IE-Modus-Tab über die Menüoption für die Benutzeroberfläche zu öffnen.
 
-       Diese Einstellung funktioniert in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ist auf "IEMode" festgelegt    und    Richtlinie [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), wenn die Liste mindestens einen Eintrag aufweist.
+  Diese Einstellung funktioniert in Verbindung mit Folgendem: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ist auf „IEMode“ festgelegt und der   [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)-Richtlinie, wenn die Liste mindestens einen Eintrag aufweist.
 
-       Wenn Sie diese Richtlinie aktivieren, können Benutzer einen IE-Modus-Tab über die Benutzeroberflächenoption öffnen und von der aktuellen Website zu einer IE-Modus-Website wechseln.
+  Wenn Sie diese Richtlinie aktivieren, können Benutzer einen IE-Modus-Tab über die Benutzeroberflächenoption öffnen und von der aktuellen Website zu einer IE-Modus-Website wechseln.
 
-       Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Benutzeroberflächenoption im Menü nicht direkt anzeigen.
-
-       Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung für IE-Modus-Tests manuell einrichten.
+  Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Benutzeroberflächenoption im Menü nicht direkt anzeigen. 
+  
+  Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung für IE-Modus-Tests manuell einrichten.
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -14968,18 +14968,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Zurück zum Anfang](#microsoft-edge---policies)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen
-  
+  #### Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  Gibt an, ob eine Verknüpfung mit Office.com in die Favoritenleiste einbezogen werden soll. Benutzer, die bei Microsoft Edge angemeldet sind, gelangen durch diese Verknüpfung zu ihren Microsoft Office Apps und Dokumenten.
+  Diese Richtlinie hat aufgrund veränderter betrieblicher Anforderungen nicht erwartungsgemäß funktioniert. Deshalb ist sie veraltet und sollte nicht verwendet werden.
 
-Wenn diese Richtlinie aktiviert oder nicht konfiguriert ist, können Benutzer auswählen, ob die Verknüpfung angezeigt werden soll, indem sie die Umschaltfläche im Kontextmenü der Favoritenleiste ändern.
+Gibt an, ob eine Verknüpfung mit Office.com in die Favoritenleiste einbezogen werden soll. Benutzer, die bei Microsoft Edge angemeldet sind, gelangen durch diese Verknüpfung zu ihren Microsoft Office Apps und Dokumenten. Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer auswählen, ob die Verknüpfung angezeigt werden soll, indem Sie die Umschaltfläche im Kontextmenü der Favoritenleiste umschalten.
+Wenn Sie diese Richtlinie deaktivieren, wird die Verknüpfung nicht angezeigt.
 
-Wenn die Richtlinie deaktiviert ist, wird die Verknüpfung nicht angezeigt.
+                                                       
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -14992,7 +14993,7 @@ Wenn die Richtlinie deaktiviert ist, wird die Verknüpfung nicht angezeigt.
   #### Windows-Informationen und -Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - GP eindeutiger Name: ShowOfficeShortcutInFavoritesBar
-  - GP-Name: Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen
+  - GP-Name: Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
