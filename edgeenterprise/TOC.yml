@@ -1,4 +1,4 @@
-# last revised 09/21/2020
+# last revised 09/29/2020
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -155,6 +155,8 @@
           href: edge-learnmore-mixed-content-downloads.md
         - name: Progressive Rollouts für Stable-Kanal-Updates
           href: microsoft-edge-update-progressive-rollout.md
+        - name: Bereitstellen von Favoriten für Microsoft Edge
+          href: edge-learnmore-provision-favorites.md
         - name: 'Regulärer Ausdruck 2 (re2.h), Syntax'
           href: edge-learnmore-regex.md
         - name: Benutzerdatenverzeichnis-Variablen
