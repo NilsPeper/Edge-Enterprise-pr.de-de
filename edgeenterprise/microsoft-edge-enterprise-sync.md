@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise-Synchronisierung
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise-Synchronisierung
-ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
-ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
+ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
+ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016344"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091947"
 ---
 # Microsoft Edge Enterprise-Synchronisierung
 
@@ -33,8 +33,6 @@ Dank der Microsoft Edge-Synchronisierung können Benutzer auf ihre Browserdaten 
 - Adressen und mehr (Formulareinträge)
 - Sammlungen
 - Einstellungen
-- Browserverlauf
-- Offene Registerkarten
 
 Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und dieser kann die Synchronisierung für jeden der oben aufgeführten Datentypen aktivieren oder deaktivieren.
 
@@ -80,7 +78,7 @@ Die folgenden Gruppenrichtlinien wirken sich auf die Microsoft Edge-Synchronisie
 
 #### Werden die synchronisierten Daten verschlüsselt? 
 
-Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Die meisten Datentypen werden zusätzlich im Microsoft-Dienst mithilfe von AES256 zusätzlich verschlüsselt, mit Ausnahme des Browserverlaufs und der geöffneten Registerkarten-Datentypen. Um zu verhindern, dass diese Datentypen synchronisiert werden, können Sie die Richtlinie [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) anwenden.
+Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Die meisten Datentypen werden im Ruhezustand im Microsoft-Dienst zusätzlich mit AES256 verschlüsselt. 
 
 #### Wo werden Microsoft Edge-Synchronisierungsdaten für gespeichert?
 
