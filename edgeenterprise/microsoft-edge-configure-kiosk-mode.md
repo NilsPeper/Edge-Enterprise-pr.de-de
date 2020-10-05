@@ -131,7 +131,7 @@ Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ei
 11. Klicken Sie auf  **Weiter**.
 12. Schließen Sie das Fenster  **Einstellungen** , um Ihre Auswahl zu speichern und anzuwenden.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Einrichten eines Kiosks mit zugewiesenem Zugriff" und "Laut vorlesen").
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Einrichten eines Kiosks mit zugewiesenem Zugriff und Laut vorlesen").":::
   - Sperrung weiterer *edge://*-Seiten (z. B. *Edge://Settings*)
   - Konfigurieren der Druckoptionen-Benutzeroberfläche
   - Einschränken des Datei-Explorers auf den Downloadordner
