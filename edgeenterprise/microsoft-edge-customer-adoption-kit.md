@@ -62,7 +62,7 @@ Verwenden Sie die folgende digitale Anmeldung, um Benutzer über den neuen Micro
 - Microsoft Search in Bing
 - Sicherheit
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text=""Neuer Tab"-Seite":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Neuer Tab-Seite":::
 
 ## Andere Lernressourcen
 
