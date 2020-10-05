@@ -3,19 +3,19 @@ title: Sicherheit in Microsoft Edge für Ihr Unternehmen
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/30/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sicherheit in Microsoft Edge für Ihr Unternehmen
-ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
-ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
+ms.openlocfilehash: 018353c4f85bc380d85554d058d029dfde959257
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091684"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094739"
 ---
 # Sicherheit in Microsoft Edge für Ihr Unternehmen
 
@@ -46,7 +46,7 @@ Für Chrome ist eine Erweiterung für die Nutzung der Hardwareisolierung unter W
 
 Neben dem Schutz vor externen Bedrohungen müssen IT-Administratoren auch für den Schutz vor internen Risiken sorgen. Der zuverlässige und anpassbare Schutz vertraulicher Unternehmensdaten hat für IT-Administratoren hohe Priorität, insbesondere, wenn die Mitarbeiter dezentral arbeiten. Microsoft Edge ist der einzige Browser mit systemeigener Unterstützung für das Azure AD-Feature für bedingten Zugriff, Windows Information Protection und das neue Microsoft-Feature zur Verhinderung von Datenverlust am Endpunkt (Data Loss Prevention, DLP), ohne dass zusätzliche Software erforderlich ist.
 
-**Microsoft Edge ist der einzige Browser, der den bedingten Zugriff nativ unterstützt**. [Die Unterstützung des bedingten Zugriffs durch Microsoft Edge](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access) erleichtert es Organisationen, Identitätssignale im Rahmen ihrer Maßnahmen zur Zugriffssteuerung zu nutzen. [Der bedingte Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) ist das von Azure Active Directory genutzte Tool, um Signale zusammenzuführen, Entscheidungen zu treffen und Organisationsrichtlinien durchzusetzen. Der bedingte Zugriff ist das Herzstück der neuen identitätsorientierten Steuerungsebene. Damit der bedingte Zugriff in Chrome unterstützt wird, ist ein zusätzliches Plug-In erforderlich.
+**Microsoft Edge ist der einzige Browser, der den bedingten Zugriff nativ unterstützt**. [Die Unterstützung des bedingten Zugriffs durch Microsoft Edge](ms-edge-security-conditional-access.md) erleichtert es Organisationen, Identitätssignale im Rahmen ihrer Maßnahmen zur Zugriffssteuerung zu nutzen. [Der bedingte Zugriff](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) ist das von Azure Active Directory genutzte Tool, um Signale zusammenzuführen, Entscheidungen zu treffen und Organisationsrichtlinien durchzusetzen. Der bedingte Zugriff ist das Herzstück der neuen identitätsorientierten Steuerungsebene. Damit der bedingte Zugriff in Chrome unterstützt wird, ist ein zusätzliches Plug-In erforderlich.
 
 > [!NOTE]
 > Für das Azure AD-Feature für bedingten Zugriff ist ein Microsoft 365 E3-Abonnement oder höher erforderlich.
