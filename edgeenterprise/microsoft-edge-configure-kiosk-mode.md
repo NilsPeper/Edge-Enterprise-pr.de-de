@@ -3,19 +3,19 @@ title: Konfigurieren des Microsoft Edge-Kioskmodus
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren des Microsoft Edge-Kioskmodus
-ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
-ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
+ms.openlocfilehash: 799b3dd4b7fc96f0b8e5cb718bca98fd4f38ec15
+ms.sourcegitcommit: 78905f66f4a6590a57c8f2bf808af92106b62996
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078665"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094862"
 ---
 # Konfigurieren des Microsoft Edge-Kioskmodus
 
@@ -23,8 +23,6 @@ In diesem Artikel wird beschrieben, wie Sie die Optionen für den Microsoft Edge
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.
-
-Informationen zum Kioskmodus von Microsoft Edge Legacy (Version 45 und früher) finden Sie unter [Bereitstellen des Microsoft Edge-Kioskmodus](https://aka.ms/edgekioskmode).
 
 ## Übersicht
 
@@ -35,7 +33,7 @@ Im Microsoft Edge-Kiosk-Modus sind zwei gesperrte Browserumgebungen verfügbar, 
 
 In beiden Fällen wird eine Microsoft Edge-InPrivate-Sitzung ausgeführt, wodurch die Benutzerdaten geschützt sind.
 
-## Einrichten des Microsoft Edge-Kioskmodus  
+## Einrichten des Microsoft Edge-Kioskmodus
 
 Jetzt können Sie mit Microsoft Edge Canary, Version 87, eine erste Sammlung von Kioskmodus-Features testen. Sie können Microsoft Edge Canary über die Seite [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download) herunterladen.
 
@@ -43,10 +41,10 @@ Jetzt können Sie mit Microsoft Edge Canary, Version 87, eine erste Sammlung von
 
 Die folgenden Features sind verfügbar:
 
-- InPrivate-Navigation. Schützt Benutzerdaten durch das Löschen von Browserdaten und Downloads, wenn die Sitzung beendet wird.
-- Richtlinie zum Konfigurieren des Löschens von Downloads beim Beenden.
-- Zurücksetzen der Benutzersitzung nach einer bestimmten Zeit der Inaktivität.
-- Erste verfügbare Sperrfunktionen. Die folgenden Funktionen sind verfügbar:
+- Die InPrivate-Navigation schützt Benutzerdaten durch das Löschen von Browserdaten und Downloads, wenn die Sitzung beendet wird.
+- Eine Richtlinie zum Konfigurieren des Löschens von Downloads beim Beenden.
+- Die Option zum Zurücksetzen der Benutzersitzung nach einer bestimmten Zeit der Inaktivität.
+- Eine erste Reihe verfügbarer Sperrfunktionen. Die folgenden Funktionen sind verfügbar:
 
   - Maus-Kontextmenü
   - F12 Entwicklertools
@@ -56,14 +54,14 @@ Die folgenden Features sind verfügbar:
 > [!NOTE]
 > Im Laufe der Weiterentwicklung des Kioskmodus werden auch weitere Features verfügbar sein.
 
-### Verwenden der Kioskmodus-Features
+## Verwenden der Kioskmodus-Features
 
 Die Microsoft Edge-Kioskmodus-Features können mit den folgenden Windows 10-Befehlszeilenoptionen aufgerufen werden:
 
 - Kioskmodus "Digitale/interaktive Beschilderung": `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - Kioskmodus "Öffentliches Surfen": `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
 
-#### Zusätzliche Befehlszeilenoptionen
+### Zusätzliche Befehlszeilenoptionen
 
 - `--no-first-run` : Deaktivieren Sie die erste Ausführung von Microsoft Edge.
 - `--kiosk-idle-timeout-minutes` : Ändern Sie den Zeitraum (in Minuten) nach der letzten Benutzeraktivität, nach dem der Microsoft Edge-Kioskmodus die Benutzersitzung zurücksetzt. Die folgenden Werte werden unterstützt:
@@ -75,13 +73,23 @@ Die Microsoft Edge-Kioskmodus-Features können mit den folgenden Windows 10-Befe
     - 0 – deaktiviert den Timer
     - 1-1440 Minuten für das Zurücksetzen für den Leerlaufzeit-Zeitgeber
 
-## Einrichten des Kioskmodus mit zugewiesenem Zugriff
+## Microsoft Edge mit zugewiesenem Zugriff
 
-Der Microsoft Edge-Kioskmodus mit zugewiesenem Zugriff ist derzeit für Tests mit dem neuesten [Windows 10 Insider Preview-Build](https://insider.windows.com/), Version 20215 oder höher, und mit dem [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), Version 87.0.644.4 oder höher, verfügbar.
+### Einzel-App-Kiosk
+
+Microsoft Edge unterstützt derzeit eine Teilmenge der gleichen Vorgängerversionen der Microsoft Edge-Kioskmodustypen für den zugewiesenen Zugriff mit einer App mit den folgenden Sperrmoduserfahrungen, digitaler/interaktiver Beschilderung und Public-Browsing.  
+
+Der Kioskmodus mit zugewiesenem Zugriff ist derzeit für Tests mit dem neuesten  [Windows10 Insider Preview-Build](https://insider.windows.com/), Version 20215 oder höher, und mit dem  [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), Version 87.0.644.4 oder höher, verfügbar.
 
 **Wie erhalte ich den Windows Insider Preview-Build?**
 
-Wenn Sie einen Windows 10 Insider Preview-Build auf einem PC installieren möchten, folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](https://docs.microsoft.com/windows-insider/get-started).
+Wenn Sie einen Windows10 Insider Preview-Build auf einem PC installieren möchten, folgen Sie den Anweisungen unter  [Erste Schritte mit Windows10 Insider Preview-Builds](https://docs.microsoft.com/windows-insider/get-started).
+
+### Multi-App-Kiosk
+
+Microsoft Edge kann unter Windows10 mit [zugewiesenem Multi-App-Zugriff](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Zum Konfigurieren von Microsoft Edge mit zugewiesenem Multi-App-Zugriff folgen Sie den Anweisungen unter [Einrichten eines Multi-App-Kiosks](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (Die AUMID für den Stable-Kanal von Microsoft Edge ist **MSEdge**.)
+
+Für das Konfigurieren von Microsoft Edge mit zugewiesenem Multi-App-Zugriff können Sie die [Microsoft Edge-Browserrichtlinien](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies) verwenden, um das Browsingerlebnis Ihren individuellen Anforderungen entsprechend zu konfigurieren.
 
 ### Konfigurieren mithilfe der Windows-Einstellungen
 
@@ -131,7 +139,7 @@ Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ei
 11. Klicken Sie auf  **Weiter**.
 12. Schließen Sie das Fenster  **Einstellungen** , um Ihre Auswahl zu speichern und anzuwenden.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Einrichten eines Kiosks mit zugewiesenem Zugriff und Laut vorlesen").":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Einrichten eines Kiosks mit zugewiesenem Zugriff" und "Laut vorlesen").
   - Sperrung weiterer *edge://*-Seiten (z. B. *Edge://Settings*)
   - Konfigurieren der Druckoptionen-Benutzeroberfläche
   - Einschränken des Datei-Explorers auf den Downloadordner
