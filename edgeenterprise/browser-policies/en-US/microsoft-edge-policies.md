@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
-ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
+ms.openlocfilehash: dc780166f05afd7d667f901a1198ce125831d01b
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078229"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094609"
 ---
 # Microsoft Edge-Richtlinien
 Die neueste Version von Microsoft Edge umfasst die folgenden Richtlinien. Sie können diese Richtlinien verwenden, um zu konfigurieren, wie Microsoft Edge in Ihrer Organisation ausgeführt wird.
@@ -26,7 +26,7 @@ Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wi
 Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) für die empfohlenen grundlegenden Sicherheitskonfigurations-Einstellungen für Microsoft Edge herunterladen. Weitere Informationen finden Sie unter [Microsoft Sicherheitsbaselines-Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
 ## Verfügbare Richtlinien
 In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Browser-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
@@ -36,10 +36,11 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Application Guard-Einstellungen](#application-guard-settings)|[Cast](#cast)|
 |[Einstellungen für den Inhalt](#content-settings)|[Standardmäßiger Suchdienstanbieter](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP-Authentifizierung](#http-authentication)|
-|[Systemeigenes Messaging](#native-messaging)|[Kennwort-Manager und Schutz](#password-manager-and-protection)|
-|[Drucken](#printing)|[Proxyserver](#proxy-server)|
-|[SmartScreen-Einstellungen](#smartscreen-settings)|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|
-|[Sonstiges](#additional)|
+|[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Systemeigenes Messaging](#native-messaging)|
+|[Kennwort-Manager und Schutz](#password-manager-and-protection)|[Drucken](#printing)|
+|[Proxyserver](#proxy-server)|[SmartScreen-Einstellungen](#smartscreen-settings)|
+|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|[Sonstiges](#additional)|
+
 
 ### [*Application Guard-Einstellungen*](#application-guard-settings-policies)
 |Richtlinienname|Beschriftung|
@@ -117,13 +118,17 @@ und Tipps für Microsoft-Dienste erhalten können.|
 ### [*HTTP-Authentifizierung*](#http-authentication-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Zulassen von „Cross-Origin“-HTTP-Aufforderungen zur einfachen Authorisierung|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Zulassen ursprungsübergreifender HTTP-Authentifizierungsaufforderungen|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Gibt eine Liste der Server an, an die Microsoft Edge Benutzeranmeldeinformationen delegieren kann|
 |[AuthSchemes](#authschemes)|Unterstützte Authentifizierungsschemas|
 |[AuthServerAllowlist](#authserverallowlist)|Konfigurieren der Liste der zulässigen Authentifizierungsserver|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Deaktivieren des CNAME-Lookup beim Verhandeln der Kerberos-Authentifizierung|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Einschließen eines nicht standardmäßigen Ports in Kerberos-SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Steuern, ob die NTLMv2-Authentifizierung aktiviert ist|
+### [*Einstellungen für den Kioskmodus*](#kiosk-mode-settings-policies)
+|Richtlinienname|Beschriftung|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Löschen von Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, wenn Microsoft Edge geschlossen wird|
 ### [*Systemeigenes Messaging*](#native-messaging-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -559,11 +564,21 @@ Falls Sie die Richtlinie [EnableMediaRouter](#enablemediarouter) auch auf „Fal
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  Geben Sie eine Liste von Websites basierend auf URL-Mustern an, für die Microsoft Edge automatisch ein Clientzertifikat auswählen soll, sofern die Website ein solches anfordert.
+  Wenn Sie die Richtlinie festlegen, können Sie eine Liste von URL-Mustern erstellen, die Websites angeben, für die Microsoft Edge ein Clientzertifikat automatisch auswählen kann. Der Wert ist ein Array aus in Zeichenfolgen konvertierten JSON-Wörterbüchern, die jeweils die folgende Form aufweisen: { "pattern": "$URL_PATTERN", "filter" : $FILTER }, wobei "$URL _PATTERN" ein Inhaltseinstellungsmuster ist. "$FILTER" schränkt die Clientzertifikate ein, aus denen der Browser automatisch auswählen kann. Unabhängig vom Filter werden nur Zertifikate ausgewählt, die die Zertifikatanforderungen des Servers erfüllen.
 
-Der Wert muss ein Array aus in Zeichenfolgen konvertierten JSON-Wörterbüchern sein. Jedes Wörterbuch muss die Form { "pattern": "$URL_PATTERN", "filter" : $FILTER } besitzen, wobei $URL_PATTERN ein Inhaltseinstellungsmuster ist. $FILTER schränkt die Clientzertifikate ein, aus denen der Browser automatisch auswählt. Unabhängig vom Filter werden nur Zertifikate ausgewählt, die der Zertifikatanforderung des Servers entsprechen. Falls $FILTER beispielsweise die Form { "ISSUER": { "CN": "$ISSUER_CN" } } besitzt, werden zusätzlich nur Clientzertifikate ausgewählt, die von einem Zertifikat mit dem CommonName $ISSUER_CN ausgegeben wurden. Falls $FILTER einen "ISSUER" und einen "SUBJECT"-Bereich enthält, muss das Clientzertifikat beiden Bedingungen entsprechen, um ausgewählt zu werden. Falls $FILTER eine Organisation ("O") spezifiziert, muss ein Zertifikat über mindestens eine übereinstimmende Organisation verfügen, um ausgewählt zu werden. Falls $FILTER eine Organisationseinheit ("OU") spezifiziert, muss ein Zertifikat über mindestens eine übereinstimmende Organisationseinheit verfügen, um ausgewählt zu werden. Falls $FILTER das leere Wörterbuch {} ist, wird die Auswahl der Clientzertifikate nicht weiter eingeschränkt.
+Beispiele für die Verwendung des Abschnitts "$FILTER":
 
-Wenn Sie diese Richtlinie nicht konfigurieren, wird die automatische Auswahl für keine Website ausgeführt.
+* Wenn "$FILTER" beispielsweise auf { "ISSUER": { "CN": "$ISSUER_CN" } } festgelegt ist, werden nur Clientzertifikate ausgewählt, die von einem Zertifikat mit dem CommonName "$ISSUER_CN" ausgegeben wurden.
+
+* Wenn "$Filter" sowohl den Abschnitt "ISSUER" als auch den Abschnitt "SUBJECT" enthält, werden nur Clientzertifikate ausgewählt, die beide Bedingungen erfüllen.
+
+* Wenn "$Filter" einen Abschnitt "SUBJECT" mit dem Wert "O" enthält, muss für ein Zertifikat mindestens eine Organisation mit dem angegebenen Wert übereinstimmen, damit es ausgewählt werden kann.
+
+* Wenn "$Filter" einen Abschnitt "SUBJECT" mit einem "OU"-Wert enthält, muss für ein Zertifikat mindestens eine Organisationseinheit mit dem angegebenen Wert übereinstimmen, damit es ausgewählt werden kann.
+
+* Wenn "$Filter" auf {} festgelegt ist, wird die Auswahl der Clientzertifikate nicht weiter eingeschränkt. Beachten Sie, dass vom Webserver eingerichtete Filter weiterhin gelten.
+
+Wenn Sie die Richtlinie nicht einrichten, ist die automatische Auswahl für keine Seite möglich.
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -2039,9 +2054,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Auf Windows und macOS ab 80 oder höher
 
   #### Beschreibung
-  Hiermit können Sie alle Cookies auf das alte SameSite-Verhalten zurücksetzen. Wenn Sie zum alten Verhalten zurückkehren, werden Cookies, die kein SameSite-Attribut angeben, so behandelt, als wären Sie "SameSite = None", und die Anforderung an "SameSite = None"-Cookies wird entfernt, das "Secure"-Attribut zu tragen.
+  Hiermit können Sie alle Cookies auf das alte SameSite-Verhalten zurücksetzen. Durch das Zurückkehren zum alten Verhalten werden Cookies, die kein SameSite-Attribut angeben, so behandelt, als wären sie "SameSite = None", und die Anforderung an "SameSite = None"-Cookies, das "Secure"-Attribut zu übermitteln, wird entfernt. Darüber hinaus wird der Schemavergleich beim Überprüfen, ob zwei Websites der gleichen Seite angehören, übersprungen.
 
-Wenn Sie diese Richtlinie nicht festlegen, ist das Standardverhalten für Cookies, die kein SameSite-Attribut angeben, von anderen Konfigurationsquellen für das Feature „standardmäßig SameSite“ abhängig. Dieses Feature wird möglicherweise durch einen Feldversuch oder durch Aktivierung der Kennzeichnung für standardmäßig-SameSite-Cookies in Edge://Flags festgelegt.
+Wenn Sie diese Richtlinie nicht festlegen, ist das standardmäßige SameSite-Verhalten für Cookies von anderen Konfigurationsquellen für das "SameSite-by-default"-Feature, das "Cookies-without-SameSite-must-be-secure"-Feature und das "Schemeful Same-Site"-Feature abhängig. Diese Funktionen können auch durch eine Feldprüfung oder durch das "same-site-by-default-cookies"-Flag, das "cookies-without-same-site-must-be-secure"-Flag oder das "schemeful-same-site"-Flag unter edge://flags konfiguriert werden.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -2097,7 +2112,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   #### Beschreibung
   Cookies, die für Domänen mit den angegebenen Mustern gesetzt wurden, werden auf das alte SameSite-Verhalten zurückfallen.
 
-Wenn Sie zum alten Verhalten zurückkehren, werden Cookies, die kein SameSite-Attribut angeben, so behandelt, als wären Sie "SameSite = None", und die Anforderung an "SameSite = None"-Cookies wird entfernt, das "Secure"-Attribut zu tragen.
+Durch das Zurückkehren zum alten Verhalten werden Cookies, die kein SameSite-Attribut angeben, so behandelt, als wären sie "SameSite = None", und die Anforderung an "SameSite = None"-Cookies, das "Secure"-Attribut zu übermitteln, wird entfernt. Darüber hinaus wird der Schemavergleich beim Überprüfen, ob zwei Websites der gleichen Seite angehören, übersprungen.
 
 Wenn Sie diese Richtlinie nicht festlegen, wird der globale Standardwert verwendet. Der globale Standardwert wird auch für Cookies in Domänen verwendet, die nicht unter die von Ihnen angegebenen Muster fallen.
 
@@ -3801,16 +3816,16 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [Zurück zum Anfang](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
-  #### Zulassen von „Cross-Origin“-HTTP-Aufforderungen zur einfachen Authorisierung
+  #### Zulassen ursprungsübergreifender HTTP-Authentifizierungsaufforderungen
   
   
   #### Unterstützte Versionen:
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  Steuert, ob der Unterinhalt von Drittanbietern auf einer Seite ein Dialogfeld zur HTTP-Standardauthentifizierung öffnen kann.
+  Steuert, ob Bilder von Drittanbietern auf einer Seite eine Authentifizierungsaufforderung anzeigen dürfen.
 
-Normalerweise ist dies als Phishing-Abwehr deaktiviert. Wenn Sie diese Richtlinie nicht konfigurieren, ist sie deaktiviert, und Unterinhalte von Drittanbietern können kein Dialogfeld zur HTTP-Standardauthentifizierung öffnen.
+Normalerweise ist dies als Phishing-Abwehr deaktiviert. Wenn Sie diese Richtlinie nicht konfigurieren, ist sie deaktiviert, und Bilder von Drittanbietern können keine Authentifizierungsaufforderung anzeigen.
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -3823,7 +3838,7 @@ Normalerweise ist dies als Phishing-Abwehr deaktiviert. Wenn Sie diese Richtlini
   #### Windows-Informationen und -Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - GP eindeutiger Name: AllowCrossOriginAuthPrompt
-  - GP-Name: Zulassen von „Cross-Origin“-HTTP-Aufforderungen zur einfachen Authorisierung
+  - GP-Name: Zulassen ursprungsübergreifender HTTP-Authentifizierungsaufforderungen
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -4128,6 +4143,56 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist NTLMv2 standardmäßig aktivi
 ``` xml
 <true/>
 ```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ## Richtlinien für Einstellungen für den Kioskmodus
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Löschen von Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, wenn Microsoft Edge geschlossen wird
+  
+  
+  #### Unterstützte Versionen:
+  - Unter Windows seit 87 oder später
+
+  #### Beschreibung
+  Hinweis: Diese Richtlinie wird nur unterstützt, wenn Edge mit dem Befehlszeilenparameter "--edge-kiosk-type" gestartet wird.
+
+Wenn Sie diese Richtlinie aktivieren, werden Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, jedes Mal gelöscht, wenn Microsoft Edge geschlossen wird.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, nicht gelöscht, wenn Microsoft Edge geschlossen wird.
+
+Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger GP-Name: KioskDeleteDownloadsOnExit
+  - GP-Name: Löschen von Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, wenn Microsoft Edge geschlossen wird
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Kiosk Mode settings
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: KioskDeleteDownloadsOnExit
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000001
+```
+
+
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -9170,8 +9235,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Unter Windows und macOS ab 86 oder höher
 
   #### Beschreibung
-  
-Legen Sie fest, ob Websites auf serielle Anschlüsse zugreifen dürfen. Sie können den Zugriff vollständig blockieren oder festlegen, dass der Benutzer jedes Mal gefragt wird, wenn eine Website auf einen seriellen Anschluss zugreifen möchte.
+  Legen Sie fest, ob Websites auf serielle Anschlüsse zugreifen dürfen. Sie können den Zugriff vollständig blockieren oder festlegen, dass der Benutzer jedes Mal gefragt wird, wenn eine Website auf einen seriellen Anschluss zugreifen möchte.
 
 Wenn Sie die Richtlinie auf "3" festlegen, können Websites Zugriff auf serielle Anschlüsse anfordern. Wenn Sie die Richtlinie auf "2" festlegen, wird der Zugriff auf serielle Anschlüsse verweigert.
 
@@ -10892,7 +10956,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird SafeSearch
   - Auf Windows und macOS ab 81 oder höher
 
   #### Beschreibung
-  Diese Richtlinie ist veraltet, weil sie nur als kurzfristiger Mechanismus vorgesehen ist, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu verschaffen, falls diese mit der aktuellen Standard-Referrer-Richtlinie inkompatibel sind. Es wird in Microsoft Edge ab Version 86 nicht mehr funktionieren.
+  Diese Richtlinie ist veraltet, weil sie nur als kurzfristiger Mechanismus vorgesehen ist, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu verschaffen, falls diese mit der aktuellen Standard-Referrer-Richtlinie inkompatibel sind. Es wird in Microsoft Edge ab Version 88 nicht mehr funktionieren.
 
 Die standardmäßige Referrer-Richtlinie von Microsoft Edge wird vom aktuellen Wert von "no-referrer-when-downgrade" auf den sichereren „strict-origin-when-cross-origin“ durch ein schrittweises Rollout gestärkt.
 
@@ -10992,7 +11056,7 @@ Diese Richtlinie ist standardmäßig deaktiviert. Wenn sie aktiviert ist, sind B
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer die Synchronisierung aktivieren oder deaktivieren. Wenn Sie diese Richtlinie aktivieren, können die Benutzer die Synchronisierung nicht deaktivieren.
 
-Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#browsersignin)-Richtlinie nicht konfiguriert oder aktiviert sein. Wenn [ForceSync](#forcesync) auf "Deaktiviert" festgelegt ist, ist [BrowserSignin](#browsersignin) nicht wirksam.
+Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#browsersignin)-Richtlinie nicht konfiguriert oder aktiviert sein. Wenn [BrowserSignin](#browsersignin) auf "Deaktiviert" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
 
 [SyncDisabled](#syncdisabled) darf nicht konfiguriert sein oder muss auf "False" festgelegt sein. Wenn sie auf "True" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
 
@@ -11365,7 +11429,7 @@ Bei den Konfigurationsoptionen, die in der Erstausführungsumgebung dargestellt 
 
 – Der Benutzer wird weiterhin automatisch bei Microsoft Edge angemeldet, wenn es sich bei dem Windows-Konto um den Azure AD- oder MSA-Typ handelt.
 
-– Die Synchronisierung wird standardmäßig nicht aktiviert, und die Benutzer können die Synchronisierung über die Synchronisierungseinstellungen aktivieren.
+- Die Synchronisierung wird nicht standardmäßig aktiviert sein, und die Benutzer werden aufgefordert, auszuwählen, ob beim Starten des Browsers synchronisiert werden soll. Sie können die Richtlinie [ForceSync](#forcesync) oder [SyncDisabled](#syncdisabled) verwenden, um die Synchronisierung und den Zustimmungsdialog für die Synchronisierung zu konfigurieren.
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Erstausführungsumgebung und der Begrüßungsbildschirm angezeigt.
 
@@ -11376,6 +11440,8 @@ Hinweis: die spezifischen Konfigurationsoptionen, die dem Benutzer in der Erstau
 -[NewTabPageLocation](#newtabpagelocation)
 
 -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
@@ -12474,13 +12540,13 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   #### Beschreibung
   Diese Richtlinie ersetzt die Kennzeichnungsrichtlinie für IE-Modus-Tests. Sie ermöglicht es Benutzern, einen IE-Modus-Tab über die Menüoption für die Benutzeroberfläche zu öffnen.
 
-       Diese Einstellung funktioniert in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ist auf "IEMode" festgelegt    und    Richtlinie [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), wenn die Liste mindestens einen Eintrag aufweist.
+Diese Einstellung funktioniert in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) auf „IEMode“ und der Richtlinie „[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)“, wenn die Liste mindestens einen Eintrag hat.
 
-       Wenn Sie diese Richtlinie aktivieren, können Benutzer einen IE-Modus-Tab über die Benutzeroberflächenoption öffnen und von der aktuellen Website zu einer IE-Modus-Website wechseln.
+Wenn Sie diese Richtlinie aktivieren, können Benutzer einen IE-Modus-Tab über die Benutzeroberflächenoption öffnen und von der aktuellen Website zu einer IE-Modus-Website wechseln.
 
-       Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Benutzeroberflächenoption im Menü nicht direkt anzeigen.
+Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Benutzeroberflächenoption im Menü nicht direkt anzeigen.
 
-       Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung für IE-Modus-Tests manuell einrichten.
+Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung für IE-Modus-Tests manuell einrichten.
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -12521,9 +12587,13 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### Beschreibung
   Legt Ursprünge fest, die in Ihrem eigenen Prozess isoliert ausgeführt werden sollen.
+
 Diese Richtlinie isoliert außerdem die von Unterdomänen benannten Ursprünge. so wird beispielsweisedurch die Angabe von https://contoso.com/ https://foo.contoso.com/ als Bestandteil der https://contoso.com/-Website isoliert.
+
 Wenn die Richtlinie aktiviert ist, wird jeder der in einer durch Trennzeichen getrennten Liste benannten Ursprünge in einem eigenen Prozess ausgeführt.
+
 Wenn Sie diese Richtlinie deaktivieren, werden die Funktionen "IsolateOrigins" und "SitePerProcess" deaktiviert. Benutzer können die Richtlinie für "IsolateOrigins" weiterhin manuell über Befehlszeilenkennzeichnungen aktivieren.
+
 Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellung ändern.
 
   #### Unterstützte Funktionen:
@@ -14149,9 +14219,9 @@ Wenn Sie diese Richtlinie deaktivieren, werden die Benutzer daran gehindert, jeg
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  Bestimmt die mindestens unterstützte Version von SSL. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge eine Standard-Minimalversion, TLS 1.0.
+  Bestimmt die unterstützte Mindestversion von TLS. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge eine Standard-Minimalversion, TLS 1.0.
 
-Wenn Sie diese Richtlinie aktivieren, können Sie die Mindestversion auf einen der folgenden Werte festlegen: „TLSv1“, „TLSv1.1“ oder „TLSv1.2“. Wenn diese Option festgelegt ist, verwendet Microsoft Edge keine SSL/TLS-Versionen, die niedriger als die angegebene Version sind. Jeder nicht erkannte Wert wird ignoriert.
+Wenn Sie diese Richtlinie festlegen, verwendet Microsoft Edge keine SSL/TLS-Versionen, die niedriger als die angegebene Version sind. Jeder nicht erkannte Wert wird ignoriert.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -14851,9 +14921,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  Diese Richtlinie hat aufgrund veränderter betrieblicher Anforderungen nicht erwartungsgemäß funktioniert. Deshalb ist sie veraltet und sollte nicht verwendet werden.
+  Diese Richtlinie hat aufgrund veränderter betrieblicher Anforderungen nicht erwartungsgemäß funktioniert. Therefore it's deprecated and should not be used.
 
-Gibt an, ob eine Verknüpfung mit Office.com in die Favoritenleiste einbezogen werden soll. Benutzer, die bei Microsoft Edge angemeldet sind, gelangen durch diese Verknüpfung zu ihren Microsoft Office Apps und Dokumenten. Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer auswählen, ob die Verknüpfung angezeigt werden soll, indem Sie die Umschaltfläche im Kontextmenü der Favoritenleiste umschalten.
+Gibt an, ob eine Verknüpfung mit Office.com in die Favoritenleiste einbezogen werden soll. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
 Wenn Sie diese Richtlinie deaktivieren, wird die Verknüpfung nicht angezeigt.
 
   #### Unterstützte Funktionen:
@@ -14950,9 +15020,10 @@ Wenn diese Richtlinie auf deaktiviert festgelegt ist, können signierte HTTP-Aus
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-  
-Die "SitePerProcess"-Richtlinie kann verwendet werden, um zu verhindern, dass Benutzer das Standardverhalten für das Isolieren aller Websites deaktivieren. Beachten Sie, dass Sie auch die [IsolateOrigins](#isolateorigins)-Richtlinie verwenden können, um zusätzliche, feiner definierte Ursprünge zu isolieren.
+  Die "SitePerProcess"-Richtlinie kann verwendet werden, um zu verhindern, dass Benutzer das Standardverhalten für das Isolieren aller Websites deaktivieren. Beachten Sie, dass Sie auch die [IsolateOrigins](#isolateorigins)-Richtlinie verwenden können, um zusätzliche, feiner definierte Ursprünge zu isolieren.
+
 Wenn Sie diese Richtlinie aktivieren, können die Benutzer das Standardverhalten nicht deaktivieren, in dem jede Website in Ihrem eigenen Prozess ausgeführt wird.
+
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutzer die Website-Isolation deaktivieren.  (z.B. mithilfe des Eintrags "Website-Isolation deaktivieren" in edge://flags.) Wenn Sie die Richtlinie deaktivieren oder die Richtlinie nicht konfigurieren, wird die Website-Isolation nicht deaktiviert.
 
 
@@ -16229,16 +16300,9 @@ Unabhängig davon, ob und wie diese Richtlinie aktiviert ist, kann die WPAD-Opti
   - Auf Windows und macOS ab 80 oder höher
 
   #### Beschreibung
-  Gibt eine Liste der Websites an, die im Hintergrund installiert werden, ohne Benutzerinteraktionen, und die vom Benutzer nicht deinstalliert oder deaktiviert werden können.
+  Konfigurieren Sie diese Richtlinie, um eine Liste von Webanwendungen anzugeben, die im Hintergrund installieren, ohne dass Benutzerinteraktionen vorgenommen werden, und die Benutzer nicht deinstallieren oder deaktivieren können.
 
-Bei jedem Listenelement der Richtlinie handelt es sich um ein Objekt mit den folgenden Mitgliedern:
-  - "url", das zwingend erforderlich ist. "url" sollte die URL der Web-App sein, die Sie installieren möchten.
-
-Die Werte für die optionalen Mitglieder sind:
-  - "launch_container" sollte entweder "window" oder "tab" sein, um anzugeben, wie die Web App geöffnet wird, nachdem sie installiert wurde.
-  - "create_desktop_shortcut" muss „wahr“ sein, wenn unter Windows eine Desktopverknüpfung erstellt werden soll.
-
-Wenn "default_launch_container" ausgelassen wird, wird die App standardmäßig auf einer Registerkarte geöffnet. Unabhängig vom Wert von "default_launch_container" können Benutzer den Container ändern, in dem die App geöffnet wird. Wenn "create_desktop_shortcuts" ausgelassen wird, werden keine Desktopverknüpfungen erstellt.
+Bei jedem Listenelement der Richtlinie handelt es sich um ein Objekt mit einem verpflichtenden Element: "url" (die URL der zu installierenden Web-App), und zwei optionalen Mitgliedern: "default_launch_container" (gibt den Fenstermodus an, in dem die Web App geöffnet wird – ein neuer Tab ist die Standardeinstellung) und "create_desktop_shortcut" ("true", wenn Desktopverknüpfungen für Linux und Windows erstellt werden sollen).
 
   #### Unterstützte Funktionen:
   - Kann zwingend erforderlich sein: Ja
@@ -16360,8 +16424,7 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
   - Auf Windows und macOS ab 77, bis 84
 
   #### Beschreibung
-  
-Diese Richtlinie funktioniert nicht, da WebDriver nun mit allen vorhandenen Richtlinien kompatibel ist.
+  Diese Richtlinie funktioniert nicht, da WebDriver nun mit allen vorhandenen Richtlinien kompatibel ist.
 
 Diese Richtlinie ermöglicht es Benutzern der WebDriver-Funktion, Richtlinien außer Kraft zu setzen, die sich auf seinen Betrieb auswirken könnten.
 
