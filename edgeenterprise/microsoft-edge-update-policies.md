@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 06/10/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,491 +11,612 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: d772d8dd6f60b89e9bd12a77b740e5fad699756a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980012"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105569"
 ---
-# <span data-ttu-id="20839-103">Microsoft Edge – Update-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-103">Microsoft Edge - Update policies</span></span>
-<span data-ttu-id="20839-104">Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="20839-104">The latest version of Microsoft Edge includes the following policies that you can use to control how and when Microsoft Edge is updated.</span></span>
+# <span data-ttu-id="45f34-103">Microsoft Edge – Update-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-103">Microsoft Edge - Update policies</span></span>
+<span data-ttu-id="45f34-104">Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="45f34-104">The latest version of Microsoft Edge includes the following policies that you can use to control how and when Microsoft Edge is updated.</span></span>
 
-           
-<span data-ttu-id="20839-105">Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)</span><span class="sxs-lookup"><span data-stu-id="20839-105">For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)</span></span>
+<span data-ttu-id="45f34-105">Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)</span><span class="sxs-lookup"><span data-stu-id="45f34-105">For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)</span></span>
 > [!NOTE]
-> <span data-ttu-id="20839-106">Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.</span><span class="sxs-lookup"><span data-stu-id="20839-106">This article applies to Microsoft Edge version 77 or later.</span></span>
-
-## <span data-ttu-id="20839-107">Verfügbare Richtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-107">Available policies</span></span>
-<span data-ttu-id="20839-108">In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Update-bezogenen Gruppenrichtlinien aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="20839-108">These tables lists all of the update-related group policies available in this release of Microsoft Edge.</span></span> <span data-ttu-id="20839-109">Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.</span><span class="sxs-lookup"><span data-stu-id="20839-109">Use the links in the table to get more details about specific policies.</span></span>
+> <span data-ttu-id="45f34-106">Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.</span><span class="sxs-lookup"><span data-stu-id="45f34-106">This article applies to Microsoft Edge version 77 or later.</span></span>
+## <span data-ttu-id="45f34-107">Verfügbare Richtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-107">Available policies</span></span>
+<span data-ttu-id="45f34-108">In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Update-bezogenen Gruppenrichtlinien aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="45f34-108">These tables lists all of the update-related group policies available in this release of Microsoft Edge.</span></span> <span data-ttu-id="45f34-109">Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.</span><span class="sxs-lookup"><span data-stu-id="45f34-109">Use the links in the table to get more details about specific policies.</span></span>
 
 |||
 |-|-|
-|[<span data-ttu-id="20839-110">Anwendungen</span><span class="sxs-lookup"><span data-stu-id="20839-110">Applications</span></span>](#applications)|[<span data-ttu-id="20839-111">Voreinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-111">Preferences</span></span>](#preferences)|
-|[<span data-ttu-id="20839-112">Proxyserver</span><span class="sxs-lookup"><span data-stu-id="20839-112">Proxy Server</span></span>](#proxy-server)||
+|[<span data-ttu-id="45f34-110">Anwendungen</span><span class="sxs-lookup"><span data-stu-id="45f34-110">Applications</span></span>](#applications)|[<span data-ttu-id="45f34-111">Voreinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-111">Preferences</span></span>](#preferences)|
+|[<span data-ttu-id="45f34-112">Proxyserver</span><span class="sxs-lookup"><span data-stu-id="45f34-112">Proxy Server</span></span>](#proxy-server)|[<span data-ttu-id="45f34-113">Microsoft Edge WebView</span><span class="sxs-lookup"><span data-stu-id="45f34-113">Microsoft Edge WebView</span></span>](#microsoft-edge-webview)|
 
-### [<span data-ttu-id="20839-113">Anwendungen</span><span class="sxs-lookup"><span data-stu-id="20839-113">Applications</span></span>](#applications-policies)
-|<span data-ttu-id="20839-114">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="20839-114">Policy Name</span></span>|<span data-ttu-id="20839-115">Beschriftung</span><span class="sxs-lookup"><span data-stu-id="20839-115">Caption</span></span>|
+### [<span data-ttu-id="45f34-114">Anwendungen</span><span class="sxs-lookup"><span data-stu-id="45f34-114">Applications</span></span>](#applications-policies)
+|<span data-ttu-id="45f34-115">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="45f34-115">Policy Name</span></span>|<span data-ttu-id="45f34-116">Beschriftung</span><span class="sxs-lookup"><span data-stu-id="45f34-116">Caption</span></span>|
 |-|-|
-|[<span data-ttu-id="20839-116">InstallDefault</span><span class="sxs-lookup"><span data-stu-id="20839-116">InstallDefault</span></span>](#installdefault)|<span data-ttu-id="20839-117">Standardinstallation zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-117">Allow installation default</span></span>|
-|[<span data-ttu-id="20839-118">UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="20839-118">UpdateDefault</span></span>](#updatedefault)|<span data-ttu-id="20839-119">Die Updaterichtlinie überschreibt die Standardrichtlinie</span><span class="sxs-lookup"><span data-stu-id="20839-119">Update policy override default</span></span>|
-|[<span data-ttu-id="20839-120">Installieren</span><span class="sxs-lookup"><span data-stu-id="20839-120">Install</span></span>](#install)|<span data-ttu-id="20839-121">Installation zulassen (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="20839-121">Allow installation (per channel)</span></span>|
-|[<span data-ttu-id="20839-122">Aktualisieren</span><span class="sxs-lookup"><span data-stu-id="20839-122">Update</span></span>](#update)|<span data-ttu-id="20839-123">Außerkraftsetzung von Updaterichtlinien (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="20839-123">Update policy override (per channel)</span></span>|
-|[<span data-ttu-id="20839-124">Allowsxs</span><span class="sxs-lookup"><span data-stu-id="20839-124">Allowsxs</span></span>](#allowsxs)|<span data-ttu-id="20839-125">Microsoft Edge Seite-an-Seite-Browserumgebung zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-125">Allow Microsoft Edge Side by Side browser experience</span></span>|
-|[<span data-ttu-id="20839-126">CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="20839-126">CreateDesktopShortcutDefault</span></span>](#createdesktopshortcutdefault)|<span data-ttu-id="20839-127">Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation</span><span class="sxs-lookup"><span data-stu-id="20839-127">Prevent Desktop Shortcut creation upon install default</span></span>|
-|[<span data-ttu-id="20839-128">CreateDesktopShortcut</span><span class="sxs-lookup"><span data-stu-id="20839-128">CreateDesktopShortcut</span></span>](#createdesktopshortcut)|<span data-ttu-id="20839-129">Verhindern der Erstellung von Desktopverknüpfungen bei der Installation (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="20839-129">Prevent Desktop Shortcut creation upon install (per channel)</span></span>|
-|[<span data-ttu-id="20839-130">TargetVersionPrefix</span><span class="sxs-lookup"><span data-stu-id="20839-130">TargetVersionPrefix</span></span>](#targetversionprefix)|<span data-ttu-id="20839-131">Außerkraftsetzung der Zielversion (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="20839-131">Target version override (per channel)</span></span>|
+|[<span data-ttu-id="45f34-117">InstallDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-117">InstallDefault</span></span>](#installdefault)|<span data-ttu-id="45f34-118">Standardinstallation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-118">Allow installation default</span></span>|
+|[<span data-ttu-id="45f34-119">UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-119">UpdateDefault</span></span>](#updatedefault)|<span data-ttu-id="45f34-120">Die Updaterichtlinie überschreibt die Standardrichtlinie</span><span class="sxs-lookup"><span data-stu-id="45f34-120">Update policy override default</span></span>|
+|[<span data-ttu-id="45f34-121">Installieren</span><span class="sxs-lookup"><span data-stu-id="45f34-121">Install</span></span>](#install)|<span data-ttu-id="45f34-122">Installation zulassen (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="45f34-122">Allow installation (per channel)</span></span>|
+|[<span data-ttu-id="45f34-123">Aktualisieren</span><span class="sxs-lookup"><span data-stu-id="45f34-123">Update</span></span>](#update)|<span data-ttu-id="45f34-124">Außerkraftsetzung von Updaterichtlinien (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="45f34-124">Update policy override (per channel)</span></span>|
+|[<span data-ttu-id="45f34-125">Allowsxs</span><span class="sxs-lookup"><span data-stu-id="45f34-125">Allowsxs</span></span>](#allowsxs)|<span data-ttu-id="45f34-126">Microsoft Edge Seite-an-Seite-Browserumgebung zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-126">Allow Microsoft Edge Side by Side browser experience</span></span>|
+|[<span data-ttu-id="45f34-127">CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-127">CreateDesktopShortcutDefault</span></span>](#createdesktopshortcutdefault)|<span data-ttu-id="45f34-128">Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation</span><span class="sxs-lookup"><span data-stu-id="45f34-128">Prevent Desktop Shortcut creation upon install default</span></span>|
+|[<span data-ttu-id="45f34-129">CreateDesktopShortcut</span><span class="sxs-lookup"><span data-stu-id="45f34-129">CreateDesktopShortcut</span></span>](#createdesktopshortcut)|<span data-ttu-id="45f34-130">Verhindern der Erstellung von Desktopverknüpfungen bei der Installation (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="45f34-130">Prevent Desktop Shortcut creation upon install (per channel)</span></span>|
+|[<span data-ttu-id="45f34-131">RollbackToTargetVersion</span><span class="sxs-lookup"><span data-stu-id="45f34-131">RollbackToTargetVersion</span></span>](#rollbacktotargetversion)|<span data-ttu-id="45f34-132">Zurücksetzung auf Zielversion (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="45f34-132">Rollback to Target version (per channel)</span></span>|
+|[<span data-ttu-id="45f34-133">TargetVersionPrefix</span><span class="sxs-lookup"><span data-stu-id="45f34-133">TargetVersionPrefix</span></span>](#targetversionprefix)|<span data-ttu-id="45f34-134">Außerkraftsetzung der Zielversion (pro Kanal)</span><span class="sxs-lookup"><span data-stu-id="45f34-134">Target version override (per channel)</span></span>|
 
-### [<span data-ttu-id="20839-132">Voreinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-132">Preferences</span></span>](#preferences-policies)
-|<span data-ttu-id="20839-133">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="20839-133">Policy Name</span></span>|<span data-ttu-id="20839-134">Beschriftung</span><span class="sxs-lookup"><span data-stu-id="20839-134">Caption</span></span>|
+### [<span data-ttu-id="45f34-135">Voreinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-135">Preferences</span></span>](#preferences-policies)
+|<span data-ttu-id="45f34-136">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="45f34-136">Policy Name</span></span>|<span data-ttu-id="45f34-137">Beschriftung</span><span class="sxs-lookup"><span data-stu-id="45f34-137">Caption</span></span>|
 |-|-|
-|[<span data-ttu-id="20839-135">AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="20839-135">AutoUpdateCheckPeriodMinutes</span></span>](#autoupdatecheckperiodminutes)|<span data-ttu-id="20839-136">Überschreibung des Überprüfungszeitraums für automatische Updates</span><span class="sxs-lookup"><span data-stu-id="20839-136">Auto-update check period override</span></span>|
-|[<span data-ttu-id="20839-137">UpdatesSuppressed</span><span class="sxs-lookup"><span data-stu-id="20839-137">UpdatesSuppressed</span></span>](#updatessuppressed)|<span data-ttu-id="20839-138">Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates</span><span class="sxs-lookup"><span data-stu-id="20839-138">Time period in each day to suppress auto-update check</span></span>|
+|[<span data-ttu-id="45f34-138">AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="45f34-138">AutoUpdateCheckPeriodMinutes</span></span>](#autoupdatecheckperiodminutes)|<span data-ttu-id="45f34-139">Überschreibung des Überprüfungszeitraums für automatische Updates</span><span class="sxs-lookup"><span data-stu-id="45f34-139">Auto-update check period override</span></span>|
+|[<span data-ttu-id="45f34-140">UpdatesSuppressed</span><span class="sxs-lookup"><span data-stu-id="45f34-140">UpdatesSuppressed</span></span>](#updatessuppressed)|<span data-ttu-id="45f34-141">Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates</span><span class="sxs-lookup"><span data-stu-id="45f34-141">Time period in each day to suppress auto-update check</span></span>|
 
-### [<span data-ttu-id="20839-139">Proxyserver</span><span class="sxs-lookup"><span data-stu-id="20839-139">Proxy Server</span></span>](#proxy-server-policies)
-|<span data-ttu-id="20839-140">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="20839-140">Policy Name</span></span>|<span data-ttu-id="20839-141">Untertitel für Hörgeschädigte</span><span class="sxs-lookup"><span data-stu-id="20839-141">Caption</span></span>|
+### [<span data-ttu-id="45f34-142">Proxyserver</span><span class="sxs-lookup"><span data-stu-id="45f34-142">Proxy Server</span></span>](#proxy-server-policies)
+|<span data-ttu-id="45f34-143">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="45f34-143">Policy Name</span></span>|<span data-ttu-id="45f34-144">Untertitel für Hörgeschädigte</span><span class="sxs-lookup"><span data-stu-id="45f34-144">Caption</span></span>|
 |-|-|
-|[<span data-ttu-id="20839-142">ProxyMode</span><span class="sxs-lookup"><span data-stu-id="20839-142">ProxyMode</span></span>](#proxymode)|<span data-ttu-id="20839-143">Möglichkeit zur Angabe der Proxyservereinstellungen wählen</span><span class="sxs-lookup"><span data-stu-id="20839-143">Choose how to specify proxy server settings</span></span>|
-|[<span data-ttu-id="20839-144">ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="20839-144">ProxyPacUrl</span></span>](#proxypacurl)|<span data-ttu-id="20839-145">URL zu einer PAC-Proxydatei</span><span class="sxs-lookup"><span data-stu-id="20839-145">URL to a proxy .pac file</span></span>|
-|[<span data-ttu-id="20839-146">ProxyServer</span><span class="sxs-lookup"><span data-stu-id="20839-146">ProxyServer</span></span>](#proxyserver)|<span data-ttu-id="20839-147">Adresse oder URL des Proxyservers</span><span class="sxs-lookup"><span data-stu-id="20839-147">Address or URL of proxy server</span></span>|
+|[<span data-ttu-id="45f34-145">ProxyMode</span><span class="sxs-lookup"><span data-stu-id="45f34-145">ProxyMode</span></span>](#proxymode)|<span data-ttu-id="45f34-146">Möglichkeit zur Angabe der Proxyservereinstellungen wählen</span><span class="sxs-lookup"><span data-stu-id="45f34-146">Choose how to specify proxy server settings</span></span>|
+|[<span data-ttu-id="45f34-147">ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="45f34-147">ProxyPacUrl</span></span>](#proxypacurl)|<span data-ttu-id="45f34-148">URL zu einer PAC-Proxydatei</span><span class="sxs-lookup"><span data-stu-id="45f34-148">URL to a proxy .pac file</span></span>|
+|[<span data-ttu-id="45f34-149">ProxyServer</span><span class="sxs-lookup"><span data-stu-id="45f34-149">ProxyServer</span></span>](#proxyserver)|<span data-ttu-id="45f34-150">Adresse oder URL des Proxyservers</span><span class="sxs-lookup"><span data-stu-id="45f34-150">Address or URL of proxy server</span></span>|
 
-                 
-      
-  
-             
-            
-                  
+### [<span data-ttu-id="45f34-151">Microsoft Edge WebView</span><span class="sxs-lookup"><span data-stu-id="45f34-151">Microsoft Edge WebView</span></span>](#microsoft-edge-webview-policies)
+|<span data-ttu-id="45f34-152">Richtlinienname</span><span class="sxs-lookup"><span data-stu-id="45f34-152">Policy Name</span></span>|<span data-ttu-id="45f34-153">Beschriftung</span><span class="sxs-lookup"><span data-stu-id="45f34-153">Caption</span></span>|
+|-|-|
+|[<span data-ttu-id="45f34-154">Installieren</span><span class="sxs-lookup"><span data-stu-id="45f34-154">Install</span></span>](#install-webview)|<span data-ttu-id="45f34-155">Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-155">Allow installation</span></span>|
+|[<span data-ttu-id="45f34-156">Update/Aktualisieren</span><span class="sxs-lookup"><span data-stu-id="45f34-156">Update</span></span>](#update-webview)|<span data-ttu-id="45f34-157">Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-157">Update policy override</span></span>|
 
-## <span data-ttu-id="20839-148">Anwendungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-148">Applications policies</span></span>
+## <span data-ttu-id="45f34-158">Anwendungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-158">Applications policies</span></span>
 
-[<span data-ttu-id="20839-149">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-149">Back to top</span></span>](#microsoft-edge---update-policies)
-### <span data-ttu-id="20839-150">InstallDefault</span><span class="sxs-lookup"><span data-stu-id="20839-150">InstallDefault</span></span>
-#### <span data-ttu-id="20839-151">Standardinstallation zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-151">Allow installation default</span></span>
-><span data-ttu-id="20839-152">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-152">Microsoft Edge Update 1.2.145.5 and later</span></span>
+[<span data-ttu-id="45f34-159">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-159">Back to top</span></span>](#microsoft-edge---update-policies)
+### <span data-ttu-id="45f34-160">InstallDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-160">InstallDefault</span></span>
+#### <span data-ttu-id="45f34-161">Standardinstallation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-161">Allow installation default</span></span>
+><span data-ttu-id="45f34-162">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-162">Microsoft Edge Update 1.2.145.5 and later</span></span>
 
-#### <span data-ttu-id="20839-153">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-153">Description</span></span>
-<span data-ttu-id="20839-154">Sie können das Standardverhalten aller Kanäle festlegen, damit Microsoft Edge-Updates bei Verwendung von Microsoft Edge Update zugelassen oder blockiert werden.</span><span class="sxs-lookup"><span data-stu-id="20839-154">You can specify the default behavior of all channels to allow or block Microsoft Edge updates when Microsoft Edge Update is used.</span></span>
+#### <span data-ttu-id="45f34-163">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-163">Description</span></span>
+<span data-ttu-id="45f34-164">Sie können das Standardverhalten aller Kanäle festlegen, damit Microsoft Edge für in die Domäne eingebundene Geräte. zugelassen oder blockiert wird.</span><span class="sxs-lookup"><span data-stu-id="45f34-164">You can specify the default behavior of all channels to allow or block Microsoft Edge on domain-joined devices.</span></span>
 
-<span data-ttu-id="20839-155">Sie können diese Richtlinie für einzelne Kanäle außer Kraft setzen, indem Sie die Richtlinie '[Installation zulassen](#install)' für bestimmte Kanäle aktivieren.</span><span class="sxs-lookup"><span data-stu-id="20839-155">You can override this policy for individual channels by enabling the '[Allow installation](#install)' policy for specific channels.</span></span>
+<span data-ttu-id="45f34-165">Sie können diese Richtlinie für einzelne Kanäle außer Kraft setzen, indem Sie die Richtlinie '[Installation zulassen](#install)' für bestimmte Kanäle aktivieren.</span><span class="sxs-lookup"><span data-stu-id="45f34-165">You can override this policy for individual channels by enabling the '[Allow installation](#install)' policy for specific channels.</span></span>
 
-<span data-ttu-id="20839-156">Wenn Sie diese Richtlinie deaktivieren, wird die Installation von Microsoft Edge über Microsoft Edge Update blockiert.</span><span class="sxs-lookup"><span data-stu-id="20839-156">If you disable this policy, the installation of Microsoft Edge through Microsoft Edge Update is blocked.</span></span> <span data-ttu-id="20839-157">Dies wirkt sich nur auf die Installation von Microsoft Edge-Software aus und nur dann, wenn Benutzer Microsoft Edge Update ausführen und die Richtlinie '[Installation zulassen](#install)' nicht konfiguriert haben.</span><span class="sxs-lookup"><span data-stu-id="20839-157">This only affects the installation of Microsoft Edge software only when users are running Microsoft Edge Update and when they haven't configured the '[Allow installation](#install)' policy.</span></span>
+<span data-ttu-id="45f34-166">Wenn Sie diese Richtlinie deaktivieren, wird die Installation von Microsoft Edge blockiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-166">If you disable this policy, the installation of Microsoft Edge is blocked.</span></span> <span data-ttu-id="45f34-167">Dies wirkt sich nur auf die Installation der Microsoft Edge-Software aus, wenn die Richtlinie "[Installation zulassen](#install)" auf "nicht konfiguriert festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="45f34-167">This only affects the installation of Microsoft Edge software when the '[Allow installation](#install)' policy is set to Not Configured.</span></span>
 
-<span data-ttu-id="20839-158">Diese Richtlinie verhindert nicht, dass Microsoft Edge Update ausgeführt wird, oder dass Benutzer die Microsoft Edge-Software auf andere Weise installieren.</span><span class="sxs-lookup"><span data-stu-id="20839-158">This policy doesn't prevent Microsoft Edge Update from running or prevent users from installing Microsoft Edge software using other methods.</span></span>
-#### <span data-ttu-id="20839-159">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-159">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-160">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-160">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-161">Eindeutiger Name der GP: InstallDefault</span><span class="sxs-lookup"><span data-stu-id="20839-161">GP unique name: InstallDefault</span></span>
-- <span data-ttu-id="20839-162">GP-Name: Standardinstallation zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-162">GP name: Allow installation default</span></span>
-- <span data-ttu-id="20839-163">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="20839-163">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
-- <span data-ttu-id="20839-164">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-164">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-165">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-165">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-166">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-166">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-167">Name des Wertes: InstallDefault</span><span class="sxs-lookup"><span data-stu-id="20839-167">Value Name: InstallDefault</span></span>
-- <span data-ttu-id="20839-168">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-168">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-169">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-169">Example value:</span></span>
+<span data-ttu-id="45f34-168">Diese Richtlinie verhindert nicht, dass Microsoft Edge Update ausgeführt wird, oder dass Benutzer die Microsoft Edge-Software auf andere Weise installieren.</span><span class="sxs-lookup"><span data-stu-id="45f34-168">This policy doesn't prevent Microsoft Edge Update from running or prevent users from installing Microsoft Edge software using other methods.</span></span>
+
+<span data-ttu-id="45f34-169">Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-169">This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</span></span>
+#### <span data-ttu-id="45f34-170">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-170">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-171">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-171">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-172">Eindeutiger Name der GP: InstallDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-172">GP unique name: InstallDefault</span></span>
+- <span data-ttu-id="45f34-173">GP-Name: Standardinstallation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-173">GP name: Allow installation default</span></span>
+- <span data-ttu-id="45f34-174">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="45f34-174">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
+- <span data-ttu-id="45f34-175">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-175">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-176">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-176">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-177">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-177">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-178">Name des Wertes: InstallDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-178">Value Name: InstallDefault</span></span>
+- <span data-ttu-id="45f34-179">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-179">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-180">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-180">Example value:</span></span>
 ```
 0x00000001
 ```
-[<span data-ttu-id="20839-170">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-170">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-181">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-181">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-171">UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="20839-171">UpdateDefault</span></span>
-#### <span data-ttu-id="20839-172">Die Updaterichtlinie überschreibt die Standardrichtlinie</span><span class="sxs-lookup"><span data-stu-id="20839-172">Update policy override default</span></span>
-><span data-ttu-id="20839-173">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-173">Microsoft Edge Update 1.2.145.5 and later</span></span>
+### <span data-ttu-id="45f34-182">UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-182">UpdateDefault</span></span>
+#### <span data-ttu-id="45f34-183">Die Updaterichtlinie überschreibt die Standardrichtlinie</span><span class="sxs-lookup"><span data-stu-id="45f34-183">Update policy override default</span></span>
+><span data-ttu-id="45f34-184">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-184">Microsoft Edge Update 1.2.145.5 and later</span></span>
 
-#### <span data-ttu-id="20839-174">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-174">Description</span></span>
-<span data-ttu-id="20839-175">Hier können Sie das Standardverhalten für alle Kanäle angeben, wie Microsoft Edge Update verfügbare Updates für Microsoft Edge verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="20839-175">Lets you specify the default behavior for all channels concerning the way Microsoft Edge Update handles available updates for Microsoft Edge.</span></span> <span data-ttu-id="20839-176">Kann für einzelne Kanäle durch Angabe der Richtlinie '[Außerkraftsetzung von Updaterichtlinien](#update)' für diese bestimmten Kanäle außer Kraft gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="20839-176">Can be overridden for individual channels by specifying the '[Update policy override](#update)' policy for those specific channels.</span></span>
+#### <span data-ttu-id="45f34-185">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-185">Description</span></span>
+<span data-ttu-id="45f34-186">Hier können Sie das Standardverhalten für alle Kanäle angeben, wie Microsoft Edge Update verfügbare Updates für Microsoft Edge verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="45f34-186">Lets you specify the default behavior for all channels concerning the way Microsoft Edge Update handles available updates for Microsoft Edge.</span></span> <span data-ttu-id="45f34-187">Kann für einzelne Kanäle durch Angabe der Richtlinie '[Außerkraftsetzung von Updaterichtlinien](#update)' für diese bestimmten Kanäle außer Kraft gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-187">Can be overridden for individual channels by specifying the '[Update policy override](#update)' policy for those specific channels.</span></span>
 
-  <span data-ttu-id="20839-177">Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:</span><span class="sxs-lookup"><span data-stu-id="20839-177">If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:</span></span>
-   - <span data-ttu-id="20839-178">Updates immer zulassen: Updates werden immer dann angewendet, wenn sie gefunden werden, entweder durch die regelmäßige Updateprüfung oder durch eine manuelle Updateprüfung.</span><span class="sxs-lookup"><span data-stu-id="20839-178">Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.</span></span>
-   - <span data-ttu-id="20839-179">Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="20839-179">Automatic silent updates only: Updates are applied only when they're found by the periodic update check.</span></span>
-   - <span data-ttu-id="20839-180">Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt.</span><span class="sxs-lookup"><span data-stu-id="20839-180">Manual updates only: Updates are applied only when the user runs a manual update check.</span></span>
-   - <span data-ttu-id="20839-181">Updates deaktiviert: Updates werden nie angewendet.</span><span class="sxs-lookup"><span data-stu-id="20839-181">Updates disabled: Updates are never applied.</span></span>
+  <span data-ttu-id="45f34-188">Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:</span><span class="sxs-lookup"><span data-stu-id="45f34-188">If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:</span></span>
+   - <span data-ttu-id="45f34-189">Updates immer zulassen: Updates werden immer dann angewendet, wenn sie gefunden werden, entweder durch die regelmäßige Updateprüfung oder durch eine manuelle Updateprüfung.</span><span class="sxs-lookup"><span data-stu-id="45f34-189">Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.</span></span>
+   - <span data-ttu-id="45f34-190">Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-190">Automatic silent updates only: Updates are applied only when they're found by the periodic update check.</span></span>
+   - <span data-ttu-id="45f34-191">Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt.</span><span class="sxs-lookup"><span data-stu-id="45f34-191">Manual updates only: Updates are applied only when the user runs a manual update check.</span></span>
+   - <span data-ttu-id="45f34-192">Updates deaktiviert: Updates werden nie angewendet.</span><span class="sxs-lookup"><span data-stu-id="45f34-192">Updates disabled: Updates are never applied.</span></span>
 
-  <span data-ttu-id="20839-182">Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar.</span><span class="sxs-lookup"><span data-stu-id="20839-182">If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available.</span></span> <span data-ttu-id="20839-183">Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.</span><span class="sxs-lookup"><span data-stu-id="20839-183">If you disable updates, periodically check for updates, and distribute them to users.</span></span>
+  <span data-ttu-id="45f34-193">Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar.</span><span class="sxs-lookup"><span data-stu-id="45f34-193">If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available.</span></span> <span data-ttu-id="45f34-194">Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.</span><span class="sxs-lookup"><span data-stu-id="45f34-194">If you disable updates, periodically check for updates, and distribute them to users.</span></span>
 
-  <span data-ttu-id="20839-184">Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Außerkraftsetzung von Updaterichtlinien](#update)'.</span><span class="sxs-lookup"><span data-stu-id="20839-184">If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override](#update)' policy.</span></span>
-#### <span data-ttu-id="20839-185">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-185">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-186">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-186">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-187">Eindeutiger Name der GP: UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="20839-187">GP unique name: UpdateDefault</span></span>
-- <span data-ttu-id="20839-188">GP-Name: Die Updaterichtlinie überschreibt die Standardrichtlinie</span><span class="sxs-lookup"><span data-stu-id="20839-188">GP name: Update policy override default</span></span>
-- <span data-ttu-id="20839-189">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="20839-189">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
-- <span data-ttu-id="20839-190">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-190">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-191">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-191">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-192">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-192">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-193">Name des Wertes: UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="20839-193">Value Name: UpdateDefault</span></span>
-- <span data-ttu-id="20839-194">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-194">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-195">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-195">Example value:</span></span>
+  <span data-ttu-id="45f34-195">Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Außerkraftsetzung von Updaterichtlinien](#update)'.</span><span class="sxs-lookup"><span data-stu-id="45f34-195">If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override](#update)' policy.</span></span>
+
+  <span data-ttu-id="45f34-196">Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-196">This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</span></span>
+#### <span data-ttu-id="45f34-197">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-197">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-198">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-198">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-199">Eindeutiger Name der GP: UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-199">GP unique name: UpdateDefault</span></span>
+- <span data-ttu-id="45f34-200">GP-Name: Die Updaterichtlinie überschreibt die Standardrichtlinie</span><span class="sxs-lookup"><span data-stu-id="45f34-200">GP name: Update policy override default</span></span>
+- <span data-ttu-id="45f34-201">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="45f34-201">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
+- <span data-ttu-id="45f34-202">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-202">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-203">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-203">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-204">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-204">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-205">Name des Wertes: UpdateDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-205">Value Name: UpdateDefault</span></span>
+- <span data-ttu-id="45f34-206">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-206">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-207">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-207">Example value:</span></span>
 ```
 0x00000003
 ```
-[<span data-ttu-id="20839-196">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-196">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-208">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-208">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-197">Installieren</span><span class="sxs-lookup"><span data-stu-id="20839-197">Install</span></span>
-#### <span data-ttu-id="20839-198">Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-198">Allow installation</span></span>
-><span data-ttu-id="20839-199">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-199">Microsoft Edge Update 1.2.145.5 and later</span></span>
+### <span data-ttu-id="45f34-209">Installieren</span><span class="sxs-lookup"><span data-stu-id="45f34-209">Install</span></span>
+#### <span data-ttu-id="45f34-210">Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-210">Allow installation</span></span>
+><span data-ttu-id="45f34-211">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-211">Microsoft Edge Update 1.2.145.5 and later</span></span>
 
-#### <span data-ttu-id="20839-200">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-200">Description</span></span>
-<span data-ttu-id="20839-201">Gibt an, ob ein Microsoft Edge-Kanal mithilfe von Microsoft Edge Update installiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="20839-201">Specifies whether a Microsoft Edge channel can be installed using Microsoft Edge Update.</span></span>
+#### <span data-ttu-id="45f34-212">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-212">Description</span></span>
+<span data-ttu-id="45f34-213">Gibt an, ob ein Microsoft Edge-Kanal auf in die Domäne eingebundene Geräte installiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="45f34-213">Specifies whether a Microsoft Edge channel can be installed on domain-joined devices.</span></span>
 
-  <span data-ttu-id="20839-202">Wenn Sie diese Richtlinie für einen Kanal aktivieren, können Benutzer diesen Kanal von Microsoft Edge über Microsoft Edge Update installieren.</span><span class="sxs-lookup"><span data-stu-id="20839-202">If you enable this policy for a channel, users can install that channel of Microsoft Edge through Microsoft Edge Update.</span></span>
+  <span data-ttu-id="45f34-214">Wenn Sie diese Richtlinie für einen Kanal aktivieren, wird die Installation von Microsoft Edge nicht blockiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-214">If you enable this policy for a channel, Microsoft Edge will not be blocked from installation.</span></span>
 
-  <span data-ttu-id="20839-203">Wenn Sie diese Richtlinie für einen Kanal deaktivieren, können Sie diesen Kanal von Microsoft Edge nicht über Microsoft Edge Update installieren.</span><span class="sxs-lookup"><span data-stu-id="20839-203">If you disable this policy for a channel, users cannot install that channel of Microsoft Edge through Microsoft Edge Update.</span></span>
+  <span data-ttu-id="45f34-215">Wenn Sie diese Richtlinie für einen Kanal deaktivieren, wird die Installation von Microsoft Edge blockiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-215">If you disable this policy for a channel, Microsoft Edge will be blocked from installation.</span></span>
 
-  <span data-ttu-id="20839-204">Wenn Sie diese Richtlinie nicht für einen Kanal konfigurieren, bestimmt die Richtlinienkonfiguration '[Standardinstallation zulassen](#installdefault)', ob Benutzer diesen Kanal von Microsoft Edge über Microsoft Edge Update installieren können.</span><span class="sxs-lookup"><span data-stu-id="20839-204">If you don't configure this policy for a channel, the '[Allow installation default](#installdefault)' policy configuration determines whether users can install that channel of Microsoft Edge through Microsoft Edge Update.</span></span>
-#### <span data-ttu-id="20839-205">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-205">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-206">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-206">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-207">Eindeutiger Name der GP: Install</span><span class="sxs-lookup"><span data-stu-id="20839-207">GP unique name: Install</span></span>
-- <span data-ttu-id="20839-208">GP-Name: Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-208">GP name: Allow installation</span></span>
-- <span data-ttu-id="20839-209">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="20839-209">GP path:</span></span> 
-  - <span data-ttu-id="20839-210">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="20839-210">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
-  - <span data-ttu-id="20839-211">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="20839-211">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
-  - <span data-ttu-id="20839-212">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="20839-212">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
-  - <span data-ttu-id="20839-213">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="20839-213">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
-- <span data-ttu-id="20839-214">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-214">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-215">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-215">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-216">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-216">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-217">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="20839-217">Value Name:</span></span> 
-  - <span data-ttu-id="20839-218">(Stable): Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="20839-218">(Stable): Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
-  - <span data-ttu-id="20839-219">(Beta): Install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="20839-219">(Beta): Install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
-  - <span data-ttu-id="20839-220">(Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="20839-220">(Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
-  - <span data-ttu-id="20839-221">(Dev): Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="20839-221">(Dev): Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
-- <span data-ttu-id="20839-222">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-222">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-223">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-223">Example value:</span></span>
+  <span data-ttu-id="45f34-216">Wenn Sie diese Richtlinie nicht für einen Kanal konfigurieren, bestimmt die Richtlinienkonfiguration '[Standardinstallation zulassen](#installdefault)', ob Benutzer diesen Kanal von Microsoft Edge installieren können.</span><span class="sxs-lookup"><span data-stu-id="45f34-216">If you don't configure this policy for a channel, the '[Allow installation default](#installdefault)' policy configuration determines whether users can install that channel of Microsoft Edge.</span></span>
+
+  <span data-ttu-id="45f34-217">Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-217">This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</span></span>
+#### <span data-ttu-id="45f34-218">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-218">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-219">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-219">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-220">Eindeutiger Name der GP: Install</span><span class="sxs-lookup"><span data-stu-id="45f34-220">GP unique name: Install</span></span>
+- <span data-ttu-id="45f34-221">GP-Name: Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-221">GP name: Allow installation</span></span>
+- <span data-ttu-id="45f34-222">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="45f34-222">GP path:</span></span> 
+  - <span data-ttu-id="45f34-223">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="45f34-223">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
+  - <span data-ttu-id="45f34-224">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="45f34-224">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
+  - <span data-ttu-id="45f34-225">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="45f34-225">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
+  - <span data-ttu-id="45f34-226">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="45f34-226">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
+- <span data-ttu-id="45f34-227">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-227">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-228">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-228">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-229">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-229">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-230">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-230">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-231">(Stable): Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="45f34-231">(Stable): Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
+  - <span data-ttu-id="45f34-232">(Beta): Install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="45f34-232">(Beta): Install{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
+  - <span data-ttu-id="45f34-233">(Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="45f34-233">(Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
+  - <span data-ttu-id="45f34-234">(Dev): Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="45f34-234">(Dev): Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
+- <span data-ttu-id="45f34-235">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-235">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-236">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-236">Example value:</span></span>
 ```
 0x00000001
 ```
-[<span data-ttu-id="20839-224">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-224">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-237">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-237">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-225">Update</span><span class="sxs-lookup"><span data-stu-id="20839-225">Update</span></span>
-#### <span data-ttu-id="20839-226">Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-226">Update policy override</span></span>
-><span data-ttu-id="20839-227">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-227">Microsoft Edge Update 1.2.145.5 and later</span></span>
+### <span data-ttu-id="45f34-238">Update</span><span class="sxs-lookup"><span data-stu-id="45f34-238">Update</span></span>
+#### <span data-ttu-id="45f34-239">Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-239">Update policy override</span></span>
+><span data-ttu-id="45f34-240">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-240">Microsoft Edge Update 1.2.145.5 and later</span></span>
 
-#### <span data-ttu-id="20839-228">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-228">Description</span></span>
-<span data-ttu-id="20839-229">Gibt an, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge behandelt.</span><span class="sxs-lookup"><span data-stu-id="20839-229">Specifies how Microsoft Edge Update handles available updates from Microsoft Edge.</span></span>
+#### <span data-ttu-id="45f34-241">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-241">Description</span></span>
+<span data-ttu-id="45f34-242">Gibt an, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge behandelt.</span><span class="sxs-lookup"><span data-stu-id="45f34-242">Specifies how Microsoft Edge Update handles available updates from Microsoft Edge.</span></span>
 
-  <span data-ttu-id="20839-230">Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:</span><span class="sxs-lookup"><span data-stu-id="20839-230">If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:</span></span>
-   - <span data-ttu-id="20839-231">Updates immer zulassen: Updates werden immer dann angewendet, wenn sie gefunden werden, entweder durch die regelmäßige Updateprüfung oder durch eine manuelle Updateprüfung.</span><span class="sxs-lookup"><span data-stu-id="20839-231">Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.</span></span>
-   - <span data-ttu-id="20839-232">Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="20839-232">Automatic silent updates only: Updates are applied only when they're found by the periodic update check.</span></span>
-   - <span data-ttu-id="20839-233">Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt.</span><span class="sxs-lookup"><span data-stu-id="20839-233">Manual updates only: Updates are applied only when the user runs a manual update check.</span></span> <span data-ttu-id="20839-234">(Nicht alle Apps bieten eine Schnittstelle für diese Option.)</span><span class="sxs-lookup"><span data-stu-id="20839-234">(Not all apps provide an interface for this option.)</span></span>
-   - <span data-ttu-id="20839-235">Updates deaktiviert: Updates werden nie angewendet.</span><span class="sxs-lookup"><span data-stu-id="20839-235">Updates disabled: Updates are never applied.</span></span>
+<span data-ttu-id="45f34-243">Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:</span><span class="sxs-lookup"><span data-stu-id="45f34-243">If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:</span></span>
+  - <span data-ttu-id="45f34-244">Updates immer zulassen: Updates werden immer dann angewendet, wenn sie gefunden werden, entweder durch die regelmäßige Updateprüfung oder durch eine manuelle Updateprüfung.</span><span class="sxs-lookup"><span data-stu-id="45f34-244">Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.</span></span>
+  - <span data-ttu-id="45f34-245">Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-245">Automatic silent updates only: Updates are applied only when they're found by the periodic update check.</span></span>
+  - <span data-ttu-id="45f34-246">Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt.</span><span class="sxs-lookup"><span data-stu-id="45f34-246">Manual updates only: Updates are applied only when the user runs a manual update check.</span></span> <span data-ttu-id="45f34-247">(Nicht alle Apps bieten eine Schnittstelle für diese Option.)</span><span class="sxs-lookup"><span data-stu-id="45f34-247">(Not all apps provide an interface for this option.)</span></span>
+  - <span data-ttu-id="45f34-248">Updates deaktiviert: Updates werden nie angewendet.</span><span class="sxs-lookup"><span data-stu-id="45f34-248">Updates disabled: Updates are never applied.</span></span>
 
-  <span data-ttu-id="20839-236">Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar.</span><span class="sxs-lookup"><span data-stu-id="20839-236">If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available.</span></span> <span data-ttu-id="20839-237">Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.</span><span class="sxs-lookup"><span data-stu-id="20839-237">If you disable updates, periodically check for updates, and distribute them to users.</span></span>
+<span data-ttu-id="45f34-249">Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar.</span><span class="sxs-lookup"><span data-stu-id="45f34-249">If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available.</span></span> <span data-ttu-id="45f34-250">Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.</span><span class="sxs-lookup"><span data-stu-id="45f34-250">If you disable updates, periodically check for updates, and distribute them to users.</span></span>
 
-  <span data-ttu-id="20839-238">Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Die Updaterichtlinie überschreibt die Standardrichtlinie](#updatedefault)'.</span><span class="sxs-lookup"><span data-stu-id="20839-238">If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override default](#updatedefault)' policy.</span></span>
-#### <span data-ttu-id="20839-239">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-239">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-240">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-240">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-241">Eindeutiger Name der GP: Update</span><span class="sxs-lookup"><span data-stu-id="20839-241">GP unique name: Update</span></span>
-- <span data-ttu-id="20839-242">GP-Name: Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-242">GP name: Update policy override</span></span>
-- <span data-ttu-id="20839-243">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="20839-243">GP path:</span></span> 
-  - <span data-ttu-id="20839-244">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="20839-244">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
-  - <span data-ttu-id="20839-245">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="20839-245">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
-  - <span data-ttu-id="20839-246">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="20839-246">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
-  - <span data-ttu-id="20839-247">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="20839-247">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
-- <span data-ttu-id="20839-248">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-248">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-249">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-249">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-250">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-250">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-251">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="20839-251">Value Name:</span></span> 
-  - <span data-ttu-id="20839-252">(Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="20839-252">(Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
-  - <span data-ttu-id="20839-253">(Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="20839-253">(Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
-  - <span data-ttu-id="20839-254">(Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="20839-254">(Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
-  - <span data-ttu-id="20839-255">(Dev): Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="20839-255">(Dev): Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
-- <span data-ttu-id="20839-256">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-256">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-257">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-257">Example value:</span></span>
+<span data-ttu-id="45f34-251">Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Die Updaterichtlinie überschreibt die Standardrichtlinie](#updatedefault)'.</span><span class="sxs-lookup"><span data-stu-id="45f34-251">If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override default](#updatedefault)' policy.</span></span>
+
+<span data-ttu-id="45f34-252">Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406).</span><span class="sxs-lookup"><span data-stu-id="45f34-252">See [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406) for more information.</span></span>
+
+<span data-ttu-id="45f34-253">Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-253">This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</span></span>
+#### <span data-ttu-id="45f34-254">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-254">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-255">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-255">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-256">Eindeutiger Name der GP: Update</span><span class="sxs-lookup"><span data-stu-id="45f34-256">GP unique name: Update</span></span>
+- <span data-ttu-id="45f34-257">GP-Name: Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-257">GP name: Update policy override</span></span>
+- <span data-ttu-id="45f34-258">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="45f34-258">GP path:</span></span> 
+  - <span data-ttu-id="45f34-259">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="45f34-259">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
+  - <span data-ttu-id="45f34-260">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="45f34-260">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
+  - <span data-ttu-id="45f34-261">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="45f34-261">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
+  - <span data-ttu-id="45f34-262">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="45f34-262">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
+- <span data-ttu-id="45f34-263">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-263">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-264">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-264">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-265">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-265">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-266">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-266">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-267">(Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="45f34-267">(Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
+  - <span data-ttu-id="45f34-268">(Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="45f34-268">(Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
+  - <span data-ttu-id="45f34-269">(Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="45f34-269">(Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
+  - <span data-ttu-id="45f34-270">(Dev): Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="45f34-270">(Dev): Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
+- <span data-ttu-id="45f34-271">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-271">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-272">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-272">Example value:</span></span>
 ```
 0x00000001
 ```
-[<span data-ttu-id="20839-258">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-258">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-273">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-273">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-259">Allowsxs</span><span class="sxs-lookup"><span data-stu-id="20839-259">Allowsxs</span></span>
-#### <span data-ttu-id="20839-260">Microsoft Edge Seite-an-Seite-Browserumgebung zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-260">Allow Microsoft Edge Side by Side browser experience</span></span>
-><span data-ttu-id="20839-261">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-261">Microsoft Edge Update 1.2.145.5 and later</span></span>
+### <span data-ttu-id="45f34-274">Allowsxs</span><span class="sxs-lookup"><span data-stu-id="45f34-274">Allowsxs</span></span>
+#### <span data-ttu-id="45f34-275">Microsoft Edge Seite-an-Seite-Browserumgebung zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-275">Allow Microsoft Edge Side by Side browser experience</span></span>
+><span data-ttu-id="45f34-276">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-276">Microsoft Edge Update 1.2.145.5 and later</span></span>
 
-#### <span data-ttu-id="20839-262">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-262">Description</span></span>
-<span data-ttu-id="20839-263">Mit dieser Richtlinie können Benutzer Microsoft Edge (Edge-HTML) und Microsoft Edge (Chromium-basiert) nebeneinander ausführen.</span><span class="sxs-lookup"><span data-stu-id="20839-263">This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side-by-side.</span></span>
+#### <span data-ttu-id="45f34-277">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-277">Description</span></span>
+<span data-ttu-id="45f34-278">Mit dieser Richtlinie können Benutzer Microsoft Edge (Edge-HTML) und Microsoft Edge (Chromium-basiert) nebeneinander ausführen.</span><span class="sxs-lookup"><span data-stu-id="45f34-278">This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side-by-side.</span></span>
 
-<span data-ttu-id="20839-264">Wenn diese Richtlinie auf „Nicht konfiguriert” festgelegt ist, ersetzt Microsoft Edge (Chromium-basiert) Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten), und die Sicherheitsupdates vom November2019 werden installiert.</span><span class="sxs-lookup"><span data-stu-id="20839-264">If this policy is set to “Not configured”, Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.</span></span>  <span data-ttu-id="20839-265">Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Deaktiviert“.</span><span class="sxs-lookup"><span data-stu-id="20839-265">This is the same behavior as the “Disabled” setting.</span></span>
+<span data-ttu-id="45f34-279">Wenn diese Richtlinie auf „Nicht konfiguriert” festgelegt ist, ersetzt Microsoft Edge (Chromium-basiert) Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten), und die Sicherheitsupdates vom November2019 werden installiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-279">If this policy is set to “Not configured”, Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.</span></span>  <span data-ttu-id="45f34-280">Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Deaktiviert“.</span><span class="sxs-lookup"><span data-stu-id="45f34-280">This is the same behavior as the “Disabled” setting.</span></span>
 
-<span data-ttu-id="20839-266">Die Einstellung „Deaktiviert” blockiert eine Seite-an-Seite-Umgebung, und Microsoft Edge (Chromium-basiert) ersetzt Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten). Außerdem werden die Sicherheitsupdates vom November2019 installiert.</span><span class="sxs-lookup"><span data-stu-id="20839-266">The “Disabled” setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.</span></span>  <span data-ttu-id="20839-267">Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Nicht konfiguriert“.</span><span class="sxs-lookup"><span data-stu-id="20839-267">This is the same behavior as the “Not Configured” setting.</span></span>
+<span data-ttu-id="45f34-281">Die Einstellung „Deaktiviert” blockiert eine Seite-an-Seite-Umgebung, und Microsoft Edge (Chromium-basiert) ersetzt Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten). Außerdem werden die Sicherheitsupdates vom November2019 installiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-281">The “Disabled” setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.</span></span>  <span data-ttu-id="45f34-282">Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Nicht konfiguriert“.</span><span class="sxs-lookup"><span data-stu-id="45f34-282">This is the same behavior as the “Not Configured” setting.</span></span>
 
-<span data-ttu-id="20839-268">Wenn diese Richtlinie aktiviert ist, können Microsoft Edge (Chromium-basiert) und Microsoft Edge (Edge-HTML) nach der Installation von Microsoft Edge (Chromium-basiert) nebeneinander ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="20839-268">When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.</span></span>
+<span data-ttu-id="45f34-283">Wenn diese Richtlinie aktiviert ist, können Microsoft Edge (Chromium-basiert) und Microsoft Edge (Edge-HTML) nach der Installation von Microsoft Edge (Chromium-basiert) nebeneinander ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-283">When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.</span></span>
 
-<span data-ttu-id="20839-269">Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Installation von Microsoft Edge (Chromium-basiert) von Windows Update konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="20839-269">For this group policy to take affect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update.</span></span> <span data-ttu-id="20839-270">Hinweis: Ein Benutzer kann das automatische Update von Microsoft Edge (Chromium-basiert) mit dem Microsoft Edge (Chromium-basiert) Blocker Toolkit blockieren.</span><span class="sxs-lookup"><span data-stu-id="20839-270">Note: A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.</span></span>
-#### <span data-ttu-id="20839-271">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-271">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-272">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-272">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-273">Eindeutiger Name der GP: Allowsxs</span><span class="sxs-lookup"><span data-stu-id="20839-273">GP unique name: Allowsxs</span></span>
-- <span data-ttu-id="20839-274">GP-Name: Microsoft Edge Seite-an-Seite-Browserumgebung zulassen</span><span class="sxs-lookup"><span data-stu-id="20839-274">GP name: Allow Microsoft Edge Side by Side browser experience</span></span>
-- <span data-ttu-id="20839-275">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="20839-275">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
-- <span data-ttu-id="20839-276">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-276">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-277">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-277">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-278">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-278">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-279">Name des Wertes: Allowsxs</span><span class="sxs-lookup"><span data-stu-id="20839-279">Value Name: Allowsxs</span></span>
-- <span data-ttu-id="20839-280">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-280">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-281">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-281">Example value:</span></span>
+<span data-ttu-id="45f34-284">Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Installation von Microsoft Edge (Chromium-basiert) von Windows Update konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-284">For this group policy to take affect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update.</span></span> <span data-ttu-id="45f34-285">Hinweis: Ein Benutzer kann das automatische Update von Microsoft Edge (Chromium-basiert) mit dem Microsoft Edge (Chromium-basiert) Blocker Toolkit blockieren.</span><span class="sxs-lookup"><span data-stu-id="45f34-285">Note: A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.</span></span>
+#### <span data-ttu-id="45f34-286">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-286">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-287">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-287">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-288">Eindeutiger Name der GP: Allowsxs</span><span class="sxs-lookup"><span data-stu-id="45f34-288">GP unique name: Allowsxs</span></span>
+- <span data-ttu-id="45f34-289">GP-Name: Microsoft Edge Seite-an-Seite-Browserumgebung zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-289">GP name: Allow Microsoft Edge Side by Side browser experience</span></span>
+- <span data-ttu-id="45f34-290">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="45f34-290">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
+- <span data-ttu-id="45f34-291">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-291">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-292">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-292">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-293">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-293">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-294">Name des Wertes: Allowsxs</span><span class="sxs-lookup"><span data-stu-id="45f34-294">Value Name: Allowsxs</span></span>
+- <span data-ttu-id="45f34-295">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-295">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-296">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-296">Example value:</span></span>
 ```
 0x00000001
 ```
-[<span data-ttu-id="20839-282">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-282">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-297">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-297">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-283">CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="20839-283">CreateDesktopShortcutDefault</span></span>
-#### <span data-ttu-id="20839-284">Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation</span><span class="sxs-lookup"><span data-stu-id="20839-284">Prevent Desktop Shortcut creation upon install default</span></span>
-><span data-ttu-id="20839-285">Microsoft Edge Update 1.3.128.0 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-285">Microsoft Edge Update 1.3.128.0 and later</span></span>
+### <span data-ttu-id="45f34-298">CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-298">CreateDesktopShortcutDefault</span></span>
+#### <span data-ttu-id="45f34-299">Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation</span><span class="sxs-lookup"><span data-stu-id="45f34-299">Prevent Desktop Shortcut creation upon install default</span></span>
+><span data-ttu-id="45f34-300">Microsoft Edge Update 1.3.128.0 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-300">Microsoft Edge Update 1.3.128.0 and later</span></span>
 
-#### <span data-ttu-id="20839-286">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-286">Description</span></span>
-<span data-ttu-id="20839-287">Ermöglicht es Ihnen, das Standardverhalten aller Kanäle für die Erstellung einer Desktopverknüpfung festzulegen, wenn Microsoft Edge installiert wird.</span><span class="sxs-lookup"><span data-stu-id="20839-287">Lets you specify the default behavior for all channels for creating a desktop shortcut when Microsoft Edge is installed.</span></span>
+#### <span data-ttu-id="45f34-301">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-301">Description</span></span>
+<span data-ttu-id="45f34-302">Ermöglicht es Ihnen, das Standardverhalten aller Kanäle für die Erstellung einer Desktopverknüpfung festzulegen, wenn Microsoft Edge installiert wird.</span><span class="sxs-lookup"><span data-stu-id="45f34-302">Lets you specify the default behavior for all channels for creating a desktop shortcut when Microsoft Edge is installed.</span></span>
 
-  <span data-ttu-id="20839-288">Wenn Sie diese Richtlinie aktivieren, wird beim Installieren von Microsoft Edge eine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="20839-288">If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.</span></span>
-<span data-ttu-id="20839-289">Wenn Sie diese Richtlinie deaktivieren, wird beim Installieren von Microsoft Edge keine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="20839-289">If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.</span></span>
-<span data-ttu-id="20839-290">Wenn Sie diese Richtlinie nicht konfigurieren, wird während der Installation eine Desktopverknüpfung zu Microsoft Edge erstellt.</span><span class="sxs-lookup"><span data-stu-id="20839-290">If you don’t configure this policy a desktop shortcut to Microsoft Edge will be created during installation.</span></span>
-<span data-ttu-id="20839-291">Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirkung.</span><span class="sxs-lookup"><span data-stu-id="20839-291">If Microsoft Edge is already installed, this policy will have no effect.</span></span>
-#### <span data-ttu-id="20839-292">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-292">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-293">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-293">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-294">Eindeutiger Name der GP: CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="20839-294">GP unique name: CreateDesktopShortcutDefault</span></span>
-- <span data-ttu-id="20839-295">GP-Name: Standardeinstellung "Erstellung von Desktopverknüpfungen bei der Installation verhindern"</span><span class="sxs-lookup"><span data-stu-id="20839-295">GP name: Prevent Desktop Shortcut creation upon install default</span></span>
-- <span data-ttu-id="20839-296">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="20839-296">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
-- <span data-ttu-id="20839-297">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-297">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-298">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-298">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-299">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-299">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-300">Wertname: CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="20839-300">Value Name: CreateDesktopShortcutDefault</span></span>
-- <span data-ttu-id="20839-301">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-301">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-302">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-302">Example value:</span></span>
+  <span data-ttu-id="45f34-303">Wenn Sie diese Richtlinie aktivieren, wird beim Installieren von Microsoft Edge eine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="45f34-303">If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.</span></span>
+<span data-ttu-id="45f34-304">Wenn Sie diese Richtlinie deaktivieren, wird beim Installieren von Microsoft Edge keine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="45f34-304">If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.</span></span>
+<span data-ttu-id="45f34-305">Wenn Sie diese Richtlinie nicht konfigurieren, wird während der Installation eine Desktopverknüpfung zu Microsoft Edge erstellt.</span><span class="sxs-lookup"><span data-stu-id="45f34-305">If you don’t configure this policy a desktop shortcut to Microsoft Edge will be created during installation.</span></span>
+<span data-ttu-id="45f34-306">Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirkung.</span><span class="sxs-lookup"><span data-stu-id="45f34-306">If Microsoft Edge is already installed, this policy will have no effect.</span></span>
+#### <span data-ttu-id="45f34-307">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-307">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-308">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-308">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-309">Eindeutiger Name der GP: CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-309">GP unique name: CreateDesktopShortcutDefault</span></span>
+- <span data-ttu-id="45f34-310">GP-Name: Standardeinstellung "Erstellung von Desktopverknüpfungen bei der Installation verhindern"</span><span class="sxs-lookup"><span data-stu-id="45f34-310">GP name: Prevent Desktop Shortcut creation upon install default</span></span>
+- <span data-ttu-id="45f34-311">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen</span><span class="sxs-lookup"><span data-stu-id="45f34-311">GP path: Administrative Templates/Microsoft Edge Update/Applications</span></span>
+- <span data-ttu-id="45f34-312">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-312">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-313">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-313">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-314">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-314">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-315">Wertname: CreateDesktopShortcutDefault</span><span class="sxs-lookup"><span data-stu-id="45f34-315">Value Name: CreateDesktopShortcutDefault</span></span>
+- <span data-ttu-id="45f34-316">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-316">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-317">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-317">Example value:</span></span>
 ```
 0x00000001
 ```
-[<span data-ttu-id="20839-303">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-303">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-318">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-318">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-304">CreateDesktopShortcut</span><span class="sxs-lookup"><span data-stu-id="20839-304">CreateDesktopShortcut</span></span>
-#### <span data-ttu-id="20839-305">GP-Name: Erstellen von Desktopverknüpfungen bei Standardinstallation</span><span class="sxs-lookup"><span data-stu-id="20839-305">Prevent Desktop Shortcut creation upon install</span></span>
-><span data-ttu-id="20839-306">Microsoft Edge Update 1.3.128.0 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-306">Microsoft Edge Update 1.3.128.0 and later</span></span>
+### <span data-ttu-id="45f34-319">CreateDesktopShortcut</span><span class="sxs-lookup"><span data-stu-id="45f34-319">CreateDesktopShortcut</span></span>
+#### <span data-ttu-id="45f34-320">GP-Name: Erstellen von Desktopverknüpfungen bei Standardinstallation</span><span class="sxs-lookup"><span data-stu-id="45f34-320">Prevent Desktop Shortcut creation upon install</span></span>
+><span data-ttu-id="45f34-321">Microsoft Edge Update 1.3.128.0 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-321">Microsoft Edge Update 1.3.128.0 and later</span></span>
 
-#### <span data-ttu-id="20839-307">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-307">Description</span></span>
-<span data-ttu-id="20839-308">Wenn Sie diese Richtlinie aktivieren, wird beim Installieren von Microsoft Edge eine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="20839-308">If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.</span></span>
-<span data-ttu-id="20839-309">Wenn Sie diese Richtlinie deaktivieren, wird beim Installieren von Microsoft Edge keine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="20839-309">If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.</span></span>
-<span data-ttu-id="20839-310">Wenn Sie diese Richtlinie nicht konfigurieren, wird während der Installation eine Desktopverknüpfung zu Microsoft Edge erstellt.</span><span class="sxs-lookup"><span data-stu-id="20839-310">If you don’t configure this policy a desktop shortcut to Microsoft Edge will be created during installation.</span></span>
-<span data-ttu-id="20839-311">Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirkung.</span><span class="sxs-lookup"><span data-stu-id="20839-311">If Microsoft Edge is already installed, this policy will have no effect.</span></span>
+#### <span data-ttu-id="45f34-322">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-322">Description</span></span>
+<span data-ttu-id="45f34-323">Wenn Sie diese Richtlinie aktivieren, wird beim Installieren von Microsoft Edge eine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="45f34-323">If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.</span></span>
+<span data-ttu-id="45f34-324">Wenn Sie diese Richtlinie deaktivieren, wird beim Installieren von Microsoft Edge keine Desktopverknüpfung erstellt.</span><span class="sxs-lookup"><span data-stu-id="45f34-324">If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.</span></span>
+<span data-ttu-id="45f34-325">Wenn Sie diese Richtlinie nicht konfigurieren, wird während der Installation eine Desktopverknüpfung zu Microsoft Edge erstellt.</span><span class="sxs-lookup"><span data-stu-id="45f34-325">If you don’t configure this policy a desktop shortcut to Microsoft Edge will be created during installation.</span></span>
+<span data-ttu-id="45f34-326">Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirkung.</span><span class="sxs-lookup"><span data-stu-id="45f34-326">If Microsoft Edge is already installed, this policy will have no effect.</span></span>
 
-  <span data-ttu-id="20839-312">Wenn Sie diese Richtlinie für einen Kanal nicht konfigurieren, bestimmt die Richtlinienkonfiguration "[Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation](#createdesktopshortcutdefault)", ob bei Installation von Microsoft Edge eine Verknüpfung erstellt wird oder nicht.</span><span class="sxs-lookup"><span data-stu-id="20839-312">If you don't configure this policy for a channel, the '[Prevent Desktop Shortcut creation upon install default](#createdesktopshortcutdefault)' policy configuration determines shortcut creation when Microsoft Edge is installed.</span></span>
-#### <span data-ttu-id="20839-313">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-313">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-314">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-314">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-315">Eindeutiger Name der GP: CreateDesktopShortcut</span><span class="sxs-lookup"><span data-stu-id="20839-315">GP unique name: CreateDesktopShortcut</span></span>
-- <span data-ttu-id="20839-316">GP-Name: Erstellen von Desktopverknüpfungen bei Installation verhindern</span><span class="sxs-lookup"><span data-stu-id="20839-316">GP name: Prevent Desktop Shortcut creation upon install</span></span>
-- <span data-ttu-id="20839-317">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="20839-317">GP path:</span></span> 
-  - <span data-ttu-id="20839-318">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="20839-318">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
-  - <span data-ttu-id="20839-319">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="20839-319">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
-  - <span data-ttu-id="20839-320">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="20839-320">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
-  - <span data-ttu-id="20839-321">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="20839-321">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
-- <span data-ttu-id="20839-322">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-322">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-323">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-323">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-324">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-324">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-325">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="20839-325">Value Name:</span></span> 
-  - <span data-ttu-id="20839-326">(Stable): CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="20839-326">(Stable): CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
-  - <span data-ttu-id="20839-327">(Beta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="20839-327">(Beta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
-  - <span data-ttu-id="20839-328">(Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="20839-328">(Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
-  - <span data-ttu-id="20839-329">(Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="20839-329">(Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
-- <span data-ttu-id="20839-330">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-330">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-331">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-331">Example value:</span></span>
+  <span data-ttu-id="45f34-327">Wenn Sie diese Richtlinie für einen Kanal nicht konfigurieren, bestimmt die Richtlinienkonfiguration "[Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation](#createdesktopshortcutdefault)", ob bei Installation von Microsoft Edge eine Verknüpfung erstellt wird oder nicht.</span><span class="sxs-lookup"><span data-stu-id="45f34-327">If you don't configure this policy for a channel, the '[Prevent Desktop Shortcut creation upon install default](#createdesktopshortcutdefault)' policy configuration determines shortcut creation when Microsoft Edge is installed.</span></span>
+#### <span data-ttu-id="45f34-328">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-328">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-329">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-329">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-330">Eindeutiger Name der GP: CreateDesktopShortcut</span><span class="sxs-lookup"><span data-stu-id="45f34-330">GP unique name: CreateDesktopShortcut</span></span>
+- <span data-ttu-id="45f34-331">GP-Name: Erstellen von Desktopverknüpfungen bei Installation verhindern</span><span class="sxs-lookup"><span data-stu-id="45f34-331">GP name: Prevent Desktop Shortcut creation upon install</span></span>
+- <span data-ttu-id="45f34-332">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="45f34-332">GP path:</span></span> 
+  - <span data-ttu-id="45f34-333">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="45f34-333">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
+  - <span data-ttu-id="45f34-334">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="45f34-334">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
+  - <span data-ttu-id="45f34-335">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="45f34-335">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
+  - <span data-ttu-id="45f34-336">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="45f34-336">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
+- <span data-ttu-id="45f34-337">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-337">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-338">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-338">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-339">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-339">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-340">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-340">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-341">(Stable): CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="45f34-341">(Stable): CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
+  - <span data-ttu-id="45f34-342">(Beta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="45f34-342">(Beta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
+  - <span data-ttu-id="45f34-343">(Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="45f34-343">(Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
+  - <span data-ttu-id="45f34-344">(Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="45f34-344">(Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
+- <span data-ttu-id="45f34-345">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-345">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-346">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-346">Example value:</span></span>
 ```
 0x00000001
 ```
-[<span data-ttu-id="20839-332">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-332">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-347">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-347">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-333">TargetVersionPrefix</span><span class="sxs-lookup"><span data-stu-id="20839-333">TargetVersionPrefix</span></span>
-#### <span data-ttu-id="20839-334">Zielversion außer Kraft setzen</span><span class="sxs-lookup"><span data-stu-id="20839-334">Target version override</span></span>
-><span data-ttu-id="20839-335">Microsoft Edge Update 1.3.119.43 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-335">Microsoft Edge Update 1.3.119.43 and later</span></span>
+### <span data-ttu-id="45f34-348">RollbackToTargetVersion</span><span class="sxs-lookup"><span data-stu-id="45f34-348">RollbackToTargetVersion</span></span>
+#### <span data-ttu-id="45f34-349">Zurücksetzung auf Zielversion</span><span class="sxs-lookup"><span data-stu-id="45f34-349">Rollback to Target version</span></span>
+><span data-ttu-id="45f34-350">Microsoft Edge Update 1.3.133.3 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-350">Microsoft Edge Update 1.3.133.3 and later</span></span>
 
-#### <span data-ttu-id="20839-336">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-336">Description</span></span>
-<span data-ttu-id="20839-337">Wenn diese Richtlinie und die automatische Aktualisierung aktiviert sind, wird Microsoft Edge auf die durch diesen Richtlinienwert angegebene Version aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="20839-337">When this policy is enabled, and auto-update is enabled, Microsoft Edge will be updated to the version specified by this policy value.</span></span>
+#### <span data-ttu-id="45f34-351">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-351">Description</span></span>
+<span data-ttu-id="45f34-352">Gibt an, dass Microsoft Edge Update Installationen von Microsoft Edge auf die in "[Zielversionaußerkraftsetzung](#targetversionprefix)" angegebene Version zurücksetzen soll.</span><span class="sxs-lookup"><span data-stu-id="45f34-352">Specifies that Microsoft Edge Update should rollback installations of Microsoft Edge to the version indicated in '[Target version override](#targetversionprefix)'.</span></span>
 
-<span data-ttu-id="20839-338">Der Richtlinienwert muss eine bestimmte Microsoft Edge-Version sein, z. B. 83.0.499.12.</span><span class="sxs-lookup"><span data-stu-id="20839-338">The policy value must be a specific Microsoft Edge version, e.g. 83.0.499.12.</span></span>
+<span data-ttu-id="45f34-353">Diese Richtlinie hat keine Wirkung, es sei denn, "[Zielversionaußerkraftsetzung](#targetversionprefix)" ist festgelegt und "[Update-Richtlinie außer Kraft setzen](#update)" auf einen der Zustände "ein" festgelegt ist (Updates immer zulassen, Nur automatische unbeaufsichtigte Updates, Nur manuelle Updates).</span><span class="sxs-lookup"><span data-stu-id="45f34-353">This policy has no effect unless '[Target version override](#targetversionprefix)' is set and '[Update policy override](#update)' is set to one of the ON states (Always allow updates, Automatic silent updates only, Manual updates only).</span></span>
 
-<span data-ttu-id="20839-339">Wenn ein Gerät über eine neuere Version von Microsoft Edge als der angegebene Wert verfügt, bleibt Microsoft Edge bei der neueren Version und wird nicht auf die angegebene Version herabgestuft.</span><span class="sxs-lookup"><span data-stu-id="20839-339">If a device has newer version of Microsoft Edge than the value specified, Microsoft Edge will remain on the newer version and not downgrade to the specified version.</span></span>
+<span data-ttu-id="45f34-354">Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, bleiben Installationen mit einer höheren Version als die von "[Zielversionaußerkraftsetzung](#targetversionprefix)" unverändert.</span><span class="sxs-lookup"><span data-stu-id="45f34-354">If you disable this policy or don't configure it, installs that have a version higher than that specified by '[Target version override](#targetversionprefix)' will be left as-is.</span></span>
 
-<span data-ttu-id="20839-340">Wenn die angegebene Version nicht vorhanden oder nicht ordnungsgemäß formatiert ist, bleibt Microsoft Edge bei der aktuellen Version und wird nicht automatisch auf zukünftige Versionen aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="20839-340">If the specified version does not exist, or is improperly formatted, then Microsoft Edge will remain on its current version and not update to future versions automatically.</span></span>
-#### <span data-ttu-id="20839-341">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-341">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-342">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-342">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-343">Eindeutiger Name der GP: TargetVersionPrefix</span><span class="sxs-lookup"><span data-stu-id="20839-343">GP unique name: TargetVersionPrefix</span></span>
-- <span data-ttu-id="20839-344">GP-Name: Zielversion außer Kraft setzen</span><span class="sxs-lookup"><span data-stu-id="20839-344">GP name: Target version override</span></span>
-- <span data-ttu-id="20839-345">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="20839-345">GP path:</span></span> 
-  - <span data-ttu-id="20839-346">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="20839-346">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
-  - <span data-ttu-id="20839-347">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="20839-347">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
-  - <span data-ttu-id="20839-348">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="20839-348">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
-  - <span data-ttu-id="20839-349">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="20839-349">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
-- <span data-ttu-id="20839-350">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-350">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-351">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-351">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-352">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-352">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-353">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="20839-353">Value Name:</span></span> 
-  - <span data-ttu-id="20839-354">(Stable): TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="20839-354">(Stable): TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
-  - <span data-ttu-id="20839-355">(Beta): TargetVersionPrefix{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="20839-355">(Beta): TargetVersionPrefix{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
-  - <span data-ttu-id="20839-356">(Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="20839-356">(Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
-  - <span data-ttu-id="20839-357">(Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="20839-357">(Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
-- <span data-ttu-id="20839-358">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="20839-358">Value Type: REG_SZ</span></span>
-##### <span data-ttu-id="20839-359">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-359">Example value:</span></span>
+<span data-ttu-id="45f34-355">Wenn Sie diese Richtlinie aktivieren, werden Installationen mit einer aktuellen Version, die höher ist als durch "[Zielversionaußerkraftsetzung](#targetversionprefix)" angegeben, auf die Zielversion herabgestuft.</span><span class="sxs-lookup"><span data-stu-id="45f34-355">If you enable this policy, installs that have a current version higher than specified by the '[Target version override](#targetversionprefix)' will be downgraded to the target version.</span></span>
+
+<span data-ttu-id="45f34-356">Wir empfehlen Benutzern, die neueste Version des Microsoft Edge-Browsers zu installieren, um den Schutz durch die neuesten Sicherheitsupdates zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="45f34-356">We recommend that users install the latest version of the Microsoft Edge browser to ensure protection by the latest security updates.</span></span> <span data-ttu-id="45f34-357">Ein Rollback zu einer früheren Version birgt Risiken, die mit bekannten Sicherheitsproblemen zu tun haben.</span><span class="sxs-lookup"><span data-stu-id="45f34-357">Rollback to an earlier version risks exposure to known security issues.</span></span> <span data-ttu-id="45f34-358">Diese Richtlinie ist als vorübergehender Fix zur Behebung von Problemen in einem Microsoft Edge-Browser-Update vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="45f34-358">This policy is meant to be used as a temporary fix to address issues in a Microsoft Edge browser update.</span></span>
+
+<span data-ttu-id="45f34-359">Bevor Sie die Browserversion vorübergehend zurücksetzen, empfehlen wir, die Synchronisierung ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) für alle Benutzer in Ihrer Organisation zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="45f34-359">Before temporarily rolling back your browser version, we recommend that you turn on Sync ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) for all users in your organization.</span></span> <span data-ttu-id="45f34-360">Wenn Sie die Synchronisierung nicht aktivieren, besteht das Risiko eines endgültigen Verlusts von Browserdaten.</span><span class="sxs-lookup"><span data-stu-id="45f34-360">If you don't turn on Sync, there is a risk of permanent browsing data loss.</span></span> <span data-ttu-id="45f34-361">Verwenden Sie diese Richtlinie auf eigenes Risiko.</span><span class="sxs-lookup"><span data-stu-id="45f34-361">Use this policy at your own risk.</span></span>
+
+<span data-ttu-id="45f34-362">Hinweis: alle Versionen, die für einen Rollback verfügbar sind, können Sie hier [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise) anzeigen.</span><span class="sxs-lookup"><span data-stu-id="45f34-362">Note: All versions available for rollback can be viewed here [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise).</span></span>
+
+<span data-ttu-id="45f34-363">Diese Richtlinie bezieht sich auf Microsoft Edge Version 86 oder neuer.</span><span class="sxs-lookup"><span data-stu-id="45f34-363">This policy applies to Microsoft Edge version 86 or later.</span></span>
+
+<span data-ttu-id="45f34-364">Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918).</span><span class="sxs-lookup"><span data-stu-id="45f34-364">See [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918) for more information.</span></span>
+
+<span data-ttu-id="45f34-365">Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-365">This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</span></span>
+#### <span data-ttu-id="45f34-366">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-366">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-367">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-367">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-368">Eindeutiger Name der GP: RollbackToTargetVersion</span><span class="sxs-lookup"><span data-stu-id="45f34-368">GP unique name: RollbackToTargetVersion</span></span>
+- <span data-ttu-id="45f34-369">Name der GP: Zurücksetzung auf Zielversion</span><span class="sxs-lookup"><span data-stu-id="45f34-369">GP name: Rollback to Target version</span></span>
+- <span data-ttu-id="45f34-370">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="45f34-370">GP path:</span></span> 
+  - <span data-ttu-id="45f34-371">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="45f34-371">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
+  - <span data-ttu-id="45f34-372">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="45f34-372">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
+  - <span data-ttu-id="45f34-373">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="45f34-373">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
+  - <span data-ttu-id="45f34-374">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="45f34-374">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
+- <span data-ttu-id="45f34-375">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-375">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-376">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-376">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-377">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-377">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-378">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-378">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-379">(Stable): RollbackToTargetVersion{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="45f34-379">(Stable): RollbackToTargetVersion{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
+  - <span data-ttu-id="45f34-380">(Beta): RollbackToTargetVersion{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="45f34-380">(Beta): RollbackToTargetVersion{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
+  - <span data-ttu-id="45f34-381">(Canary): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="45f34-381">(Canary): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
+  - <span data-ttu-id="45f34-382">(Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="45f34-382">(Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
+- <span data-ttu-id="45f34-383">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-383">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-384">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-384">Example value:</span></span>
+```
+0x00000001
+```
+[<span data-ttu-id="45f34-385">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-385">Back to top</span></span>](#microsoft-edge---update-policies)
+
+
+### <span data-ttu-id="45f34-386">TargetVersionPrefix</span><span class="sxs-lookup"><span data-stu-id="45f34-386">TargetVersionPrefix</span></span>
+#### <span data-ttu-id="45f34-387">Zielversion außer Kraft setzen</span><span class="sxs-lookup"><span data-stu-id="45f34-387">Target version override</span></span>
+><span data-ttu-id="45f34-388">Microsoft Edge Update 1.3.119.43 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-388">Microsoft Edge Update 1.3.119.43 and later</span></span>
+
+#### <span data-ttu-id="45f34-389">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-389">Description</span></span>
+<span data-ttu-id="45f34-390">Wenn diese Richtlinie und die automatische Aktualisierung aktiviert sind, wird Microsoft Edge auf die durch diesen Richtlinienwert angegebene Version aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-390">When this policy is enabled, and auto-update is enabled, Microsoft Edge will be updated to the version specified by this policy value.</span></span>
+
+<span data-ttu-id="45f34-391">Der Richtlinienwert muss eine bestimmte Microsoft Edge-Version sein, z. B. 83.0.499.12.</span><span class="sxs-lookup"><span data-stu-id="45f34-391">The policy value must be a specific Microsoft Edge version, e.g. 83.0.499.12.</span></span>
+
+<span data-ttu-id="45f34-392">Wenn ein Gerät über eine neuere Version von Microsoft Edge als der angegebene Wert verfügt, bleibt Microsoft Edge bei der neueren Version und wird nicht auf die angegebene Version herabgestuft.</span><span class="sxs-lookup"><span data-stu-id="45f34-392">If a device has newer version of Microsoft Edge than the value specified, Microsoft Edge will remain on the newer version and not downgrade to the specified version.</span></span>
+
+<span data-ttu-id="45f34-393">Wenn die angegebene Version nicht vorhanden oder nicht ordnungsgemäß formatiert ist, bleibt Microsoft Edge bei der aktuellen Version und wird nicht automatisch auf zukünftige Versionen aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="45f34-393">If the specified version does not exist, or is improperly formatted, then Microsoft Edge will remain on its current version and not update to future versions automatically.</span></span>
+
+<span data-ttu-id="45f34-394">Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707).</span><span class="sxs-lookup"><span data-stu-id="45f34-394">See [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707) for more information.</span></span>
+
+<span data-ttu-id="45f34-395">Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-395">This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.</span></span>
+#### <span data-ttu-id="45f34-396">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-396">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-397">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-397">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-398">Eindeutiger Name der GP: TargetVersionPrefix</span><span class="sxs-lookup"><span data-stu-id="45f34-398">GP unique name: TargetVersionPrefix</span></span>
+- <span data-ttu-id="45f34-399">GP-Name: Zielversion außer Kraft setzen</span><span class="sxs-lookup"><span data-stu-id="45f34-399">GP name: Target version override</span></span>
+- <span data-ttu-id="45f34-400">GP-Pfad:</span><span class="sxs-lookup"><span data-stu-id="45f34-400">GP path:</span></span> 
+  - <span data-ttu-id="45f34-401">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="45f34-401">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge</span></span>
+  - <span data-ttu-id="45f34-402">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta</span><span class="sxs-lookup"><span data-stu-id="45f34-402">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta</span></span>
+  - <span data-ttu-id="45f34-403">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary</span><span class="sxs-lookup"><span data-stu-id="45f34-403">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary</span></span>
+  - <span data-ttu-id="45f34-404">Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev</span><span class="sxs-lookup"><span data-stu-id="45f34-404">Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev</span></span>
+- <span data-ttu-id="45f34-405">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-405">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-406">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-406">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-407">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-407">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-408">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-408">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-409">(Stable): TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span><span class="sxs-lookup"><span data-stu-id="45f34-409">(Stable): TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}</span></span>
+  - <span data-ttu-id="45f34-410">(Beta): TargetVersionPrefix{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span><span class="sxs-lookup"><span data-stu-id="45f34-410">(Beta): TargetVersionPrefix{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}</span></span>
+  - <span data-ttu-id="45f34-411">(Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span><span class="sxs-lookup"><span data-stu-id="45f34-411">(Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}</span></span>
+  - <span data-ttu-id="45f34-412">(Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span><span class="sxs-lookup"><span data-stu-id="45f34-412">(Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}</span></span>
+- <span data-ttu-id="45f34-413">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="45f34-413">Value Type: REG_SZ</span></span>
+##### <span data-ttu-id="45f34-414">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-414">Example value:</span></span>
 ```
 83.0.499.12
 ```
-[<span data-ttu-id="20839-360">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-360">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-415">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-415">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-## <span data-ttu-id="20839-361">Einstellungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-361">Preferences policies</span></span>
+## <span data-ttu-id="45f34-416">Einstellungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-416">Preferences policies</span></span>
 
-[<span data-ttu-id="20839-362">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-362">Back to top</span></span>](#microsoft-edge---update-policies)
-### <span data-ttu-id="20839-363">AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="20839-363">AutoUpdateCheckPeriodMinutes</span></span>
-#### <span data-ttu-id="20839-364">Überschreibung des Überprüfungszeitraums für automatische Updates</span><span class="sxs-lookup"><span data-stu-id="20839-364">Auto-update check period override</span></span>
-><span data-ttu-id="20839-365">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-365">Microsoft Edge Update 1.2.145.5 and later</span></span>
+[<span data-ttu-id="45f34-417">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-417">Back to top</span></span>](#microsoft-edge---update-policies)
+### <span data-ttu-id="45f34-418">AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="45f34-418">AutoUpdateCheckPeriodMinutes</span></span>
+#### <span data-ttu-id="45f34-419">Überschreibung des Überprüfungszeitraums für automatische Updates</span><span class="sxs-lookup"><span data-stu-id="45f34-419">Auto-update check period override</span></span>
+><span data-ttu-id="45f34-420">Microsoft Edge Update 1.2.145.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-420">Microsoft Edge Update 1.2.145.5 and later</span></span>
 
-#### <span data-ttu-id="20839-366">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-366">Description</span></span>
-<span data-ttu-id="20839-367">Wenn diese Richtlinie aktiviert ist, können Sie einen Wert für die Mindestanzahl von Minuten zwischen automatischen Updateprüfungen festlegen.</span><span class="sxs-lookup"><span data-stu-id="20839-367">If enabled, this policy lets you set a value for the minimum number of minutes between automatic update checks.</span></span> <span data-ttu-id="20839-368">Andernfalls sucht die automatische Updateprüfung standardmäßig alle 10 Stunden nach Updates.</span><span class="sxs-lookup"><span data-stu-id="20839-368">Otherwise, by default, auto-update checks for updates every 10 hours.</span></span>
+#### <span data-ttu-id="45f34-421">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-421">Description</span></span>
+<span data-ttu-id="45f34-422">Wenn diese Richtlinie aktiviert ist, können Sie einen Wert für die Mindestanzahl von Minuten zwischen automatischen Updateprüfungen festlegen.</span><span class="sxs-lookup"><span data-stu-id="45f34-422">If enabled, this policy lets you set a value for the minimum number of minutes between automatic update checks.</span></span> <span data-ttu-id="45f34-423">Andernfalls sucht die automatische Updateprüfung standardmäßig alle 10 Stunden nach Updates.</span><span class="sxs-lookup"><span data-stu-id="45f34-423">Otherwise, by default, auto-update checks for updates every 10 hours.</span></span>
 
-  <span data-ttu-id="20839-369">Wenn Sie alle automatischen Updateprüfungen deaktivieren möchten, setzen Sie den Wert auf 0 (nicht empfohlen).</span><span class="sxs-lookup"><span data-stu-id="20839-369">If you want to disable all auto-update checks, set the value to 0 (not recommended).</span></span>
-#### <span data-ttu-id="20839-370">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-370">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-371">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-371">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-372">Eindeutiger Name der GP: AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="20839-372">GP unique name: AutoUpdateCheckPeriodMinutes</span></span>
-- <span data-ttu-id="20839-373">GP-Name: Überschreibung des Überprüfungszeitraums für automatische Updates</span><span class="sxs-lookup"><span data-stu-id="20839-373">GP name: Auto-update check period override</span></span>
-- <span data-ttu-id="20839-374">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-374">GP path: Administrative Templates/Microsoft Edge Update/Preferences</span></span>
-- <span data-ttu-id="20839-375">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-375">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-376">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-376">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-377">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-377">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-378">Name des Wertes: AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="20839-378">Value Name: AutoUpdateCheckPeriodMinutes</span></span>
-- <span data-ttu-id="20839-379">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-379">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-380">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-380">Example value:</span></span>
+  <span data-ttu-id="45f34-424">Wenn Sie alle automatischen Updateprüfungen deaktivieren möchten, setzen Sie den Wert auf 0 (nicht empfohlen).</span><span class="sxs-lookup"><span data-stu-id="45f34-424">If you want to disable all auto-update checks, set the value to 0 (not recommended).</span></span>
+#### <span data-ttu-id="45f34-425">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-425">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-426">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-426">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-427">Eindeutiger Name der GP: AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="45f34-427">GP unique name: AutoUpdateCheckPeriodMinutes</span></span>
+- <span data-ttu-id="45f34-428">GP-Name: Überschreibung des Überprüfungszeitraums für automatische Updates</span><span class="sxs-lookup"><span data-stu-id="45f34-428">GP name: Auto-update check period override</span></span>
+- <span data-ttu-id="45f34-429">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-429">GP path: Administrative Templates/Microsoft Edge Update/Preferences</span></span>
+- <span data-ttu-id="45f34-430">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-430">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-431">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-431">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-432">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-432">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-433">Name des Wertes: AutoUpdateCheckPeriodMinutes</span><span class="sxs-lookup"><span data-stu-id="45f34-433">Value Name: AutoUpdateCheckPeriodMinutes</span></span>
+- <span data-ttu-id="45f34-434">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-434">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-435">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-435">Example value:</span></span>
 ```
 0x00000578
 ```
-[<span data-ttu-id="20839-381">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-381">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-436">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-436">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-382">UpdatesSuppressed</span><span class="sxs-lookup"><span data-stu-id="20839-382">UpdatesSuppressed</span></span>
-#### <span data-ttu-id="20839-383">Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates</span><span class="sxs-lookup"><span data-stu-id="20839-383">Time period in each day to suppress auto-update check</span></span>
-><span data-ttu-id="20839-384">Microsoft Edge Update 1.3.33.5 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-384">Microsoft Edge Update 1.3.33.5 and later</span></span>
+### <span data-ttu-id="45f34-437">UpdatesSuppressed</span><span class="sxs-lookup"><span data-stu-id="45f34-437">UpdatesSuppressed</span></span>
+#### <span data-ttu-id="45f34-438">Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates</span><span class="sxs-lookup"><span data-stu-id="45f34-438">Time period in each day to suppress auto-update check</span></span>
+><span data-ttu-id="45f34-439">Microsoft Edge Update 1.3.33.5 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-439">Microsoft Edge Update 1.3.33.5 and later</span></span>
 
-#### <span data-ttu-id="20839-385">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-385">Description</span></span>
-<span data-ttu-id="20839-386">Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab Stunde:Minute für einen Zeitraum der Dauer (in Minuten) unterdrückt.</span><span class="sxs-lookup"><span data-stu-id="20839-386">If you enable this policy, update checks are suppressed each day starting at Hour:Minute for a period of Duration (in minutes).</span></span> <span data-ttu-id="20839-387">Die Dauer ist von der Sommerzeit nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="20839-387">Duration isn't affected by daylight saving time.</span></span> <span data-ttu-id="20839-388">Wenn die Startzeit z.B. 22:00 lautet und die Dauer 480Minuten beträgt, werden Updates genau 8 Stunden lang unterdrückt, unabhängig davon, ob die Sommerzeit in diesem Zeitraum beginnt oder endet.</span><span class="sxs-lookup"><span data-stu-id="20839-388">For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.</span></span>
+#### <span data-ttu-id="45f34-440">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-440">Description</span></span>
+<span data-ttu-id="45f34-441">Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab Stunde:Minute für einen Zeitraum der Dauer (in Minuten) unterdrückt.</span><span class="sxs-lookup"><span data-stu-id="45f34-441">If you enable this policy, update checks are suppressed each day starting at Hour:Minute for a period of Duration (in minutes).</span></span> <span data-ttu-id="45f34-442">Die Dauer ist von der Sommerzeit nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="45f34-442">Duration isn't affected by daylight saving time.</span></span> <span data-ttu-id="45f34-443">Wenn die Startzeit z.B. 22:00 lautet und die Dauer 480Minuten beträgt, werden Updates genau 8 Stunden lang unterdrückt, unabhängig davon, ob die Sommerzeit in diesem Zeitraum beginnt oder endet.</span><span class="sxs-lookup"><span data-stu-id="45f34-443">For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.</span></span>
 
-  <span data-ttu-id="20839-389">Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Updateprüfungen während eines bestimmten Zeitraums nicht unterdrückt.</span><span class="sxs-lookup"><span data-stu-id="20839-389">If you disable or don't configure this policy, update checks aren't suppressed during any specific period.</span></span>
-#### <span data-ttu-id="20839-390">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-390">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-391">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-391">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-392">Eindeutiger Name der GP: UpdatesSuppressed</span><span class="sxs-lookup"><span data-stu-id="20839-392">GP unique name: UpdatesSuppressed</span></span>
-- <span data-ttu-id="20839-393">GP-Name: Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates</span><span class="sxs-lookup"><span data-stu-id="20839-393">GP name: Time period in each day to suppress auto-update check</span></span>
-  - <span data-ttu-id="20839-394">Optionen {Stunde, Minute, Dauer}</span><span class="sxs-lookup"><span data-stu-id="20839-394">Options { Hour, Minute, Duration }</span></span>
-- <span data-ttu-id="20839-395">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-395">GP path: Administrative Templates/Microsoft Edge Update/Preferences</span></span>
-- <span data-ttu-id="20839-396">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-396">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-397">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-397">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-398">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-398">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-399">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="20839-399">Value Name:</span></span> 
-  - <span data-ttu-id="20839-400">UpdatesSuppressedDurationMin</span><span class="sxs-lookup"><span data-stu-id="20839-400">UpdatesSuppressedDurationMin</span></span>
-  - <span data-ttu-id="20839-401">UpdatesSuppressedStartHour</span><span class="sxs-lookup"><span data-stu-id="20839-401">UpdatesSuppressedStartHour</span></span>
-  - <span data-ttu-id="20839-402">UpdatesSuppressedStartMin</span><span class="sxs-lookup"><span data-stu-id="20839-402">UpdatesSuppressedStartMin</span></span>
-- <span data-ttu-id="20839-403">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="20839-403">Value Type: REG_DWORD</span></span>
-##### <span data-ttu-id="20839-404">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-404">Example value:</span></span>
+  <span data-ttu-id="45f34-444">Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Updateprüfungen während eines bestimmten Zeitraums nicht unterdrückt.</span><span class="sxs-lookup"><span data-stu-id="45f34-444">If you disable or don't configure this policy, update checks aren't suppressed during any specific period.</span></span>
+#### <span data-ttu-id="45f34-445">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-445">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-446">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-446">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-447">Eindeutiger Name der GP: UpdatesSuppressed</span><span class="sxs-lookup"><span data-stu-id="45f34-447">GP unique name: UpdatesSuppressed</span></span>
+- <span data-ttu-id="45f34-448">GP-Name: Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates</span><span class="sxs-lookup"><span data-stu-id="45f34-448">GP name: Time period in each day to suppress auto-update check</span></span>
+  - <span data-ttu-id="45f34-449">Optionen {Stunde, Minute, Dauer}</span><span class="sxs-lookup"><span data-stu-id="45f34-449">Options { Hour, Minute, Duration }</span></span>
+- <span data-ttu-id="45f34-450">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-450">GP path: Administrative Templates/Microsoft Edge Update/Preferences</span></span>
+- <span data-ttu-id="45f34-451">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-451">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-452">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-452">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-453">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-453">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-454">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-454">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-455">UpdatesSuppressedDurationMin</span><span class="sxs-lookup"><span data-stu-id="45f34-455">UpdatesSuppressedDurationMin</span></span>
+  - <span data-ttu-id="45f34-456">UpdatesSuppressedStartHour</span><span class="sxs-lookup"><span data-stu-id="45f34-456">UpdatesSuppressedStartHour</span></span>
+  - <span data-ttu-id="45f34-457">UpdatesSuppressedStartMin</span><span class="sxs-lookup"><span data-stu-id="45f34-457">UpdatesSuppressedStartMin</span></span>
+- <span data-ttu-id="45f34-458">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-458">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-459">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-459">Example value:</span></span>
 ```
 duration   : 0x0000003c
 start hour : 0x00000001
 start min  : 0x00000002
 ```
-[<span data-ttu-id="20839-405">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-405">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-460">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-460">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-## <span data-ttu-id="20839-406">Proxyserver-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="20839-406">Proxy Server policies</span></span>
-  
-  
+## <span data-ttu-id="45f34-461">Proxyserver-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-461">Proxy Server policies</span></span>
 
-[<span data-ttu-id="20839-407">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-407">Back to top</span></span>](#microsoft-edge---update-policies)
-### <span data-ttu-id="20839-408">ProxyMode</span><span class="sxs-lookup"><span data-stu-id="20839-408">ProxyMode</span></span>
-#### <span data-ttu-id="20839-409">Möglichkeit zur Angabe der Proxyservereinstellungen wählen</span><span class="sxs-lookup"><span data-stu-id="20839-409">Choose how to specify proxy server settings</span></span>
-><span data-ttu-id="20839-410">Microsoft Edge Update 1.3.21.81 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-410">Microsoft Edge Update 1.3.21.81 and later</span></span>
+[<span data-ttu-id="45f34-462">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-462">Back to top</span></span>](#microsoft-edge---update-policies)
+### <span data-ttu-id="45f34-463">ProxyMode</span><span class="sxs-lookup"><span data-stu-id="45f34-463">ProxyMode</span></span>
+#### <span data-ttu-id="45f34-464">Möglichkeit zur Angabe der Proxyservereinstellungen wählen</span><span class="sxs-lookup"><span data-stu-id="45f34-464">Choose how to specify proxy server settings</span></span>
+><span data-ttu-id="45f34-465">Microsoft Edge Update 1.3.21.81 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-465">Microsoft Edge Update 1.3.21.81 and later</span></span>
 
-#### <span data-ttu-id="20839-411">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-411">Description</span></span>
-<span data-ttu-id="20839-412">Mit dieser Option können Sie die Proxyserver-Einstellungen angeben, die von Microsoft Edge Update verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="20839-412">Allows you to specify the proxy server settings that are used by Microsoft Edge Update.</span></span>
+#### <span data-ttu-id="45f34-466">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-466">Description</span></span>
+<span data-ttu-id="45f34-467">Mit dieser Option können Sie die Proxyserver-Einstellungen angeben, die von Microsoft Edge Update verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="45f34-467">Allows you to specify the proxy server settings that are used by Microsoft Edge Update.</span></span>
 
-  <span data-ttu-id="20839-413">Wenn Sie diese Richtlinie aktivieren, können Sie zwischen den folgenden Proxyserveroptionen wählen:</span><span class="sxs-lookup"><span data-stu-id="20839-413">If you enable this policy, you can choose between the following proxy server options:</span></span>
-   - <span data-ttu-id="20839-414">Wenn Sie niemals einen Proxyserver verwenden und immer eine direkte Verbindung herstellen, werden alle anderen Optionen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="20839-414">If you choose to never use a proxy server and always connect directly, all other options are ignored.</span></span>
-   - <span data-ttu-id="20839-415">Wenn Sie die System-Proxyeinstellungen verwenden oder den Proxyserver automatisch erkennen möchten, werden alle anderen Optionen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="20839-415">If you choose to use system proxy settings or auto-detect the proxy server, all other options are ignored.</span></span>
-   - <span data-ttu-id="20839-416">Wenn Sie den Proxymodus für feste Server auswählen, können Sie unter '[Adresse oder URL des Proxyservers](#proxyserver)' weitere Optionen angeben.</span><span class="sxs-lookup"><span data-stu-id="20839-416">If you choose fixed server proxy mode, you can specify further options in '[Address or URL of proxy server](#proxyserver)' policy.</span></span>
-   - <span data-ttu-id="20839-417">Wenn Sie ein PAC-Proxyskript verwenden, müssen Sie die URL für das Skript unter '[URL zu einer PAC-Proxydatei](#proxypacurl)' angeben.</span><span class="sxs-lookup"><span data-stu-id="20839-417">If you choose to use a .pac proxy script, you must specify the URL for the script in '[URL to a proxy .pac file](#proxypacurl)' policy.</span></span>
+  <span data-ttu-id="45f34-468">Wenn Sie diese Richtlinie aktivieren, können Sie zwischen den folgenden Proxyserveroptionen wählen:</span><span class="sxs-lookup"><span data-stu-id="45f34-468">If you enable this policy, you can choose between the following proxy server options:</span></span>
+   - <span data-ttu-id="45f34-469">Wenn Sie niemals einen Proxyserver verwenden und immer eine direkte Verbindung herstellen, werden alle anderen Optionen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="45f34-469">If you choose to never use a proxy server and always connect directly, all other options are ignored.</span></span>
+   - <span data-ttu-id="45f34-470">Wenn Sie die System-Proxyeinstellungen verwenden oder den Proxyserver automatisch erkennen möchten, werden alle anderen Optionen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="45f34-470">If you choose to use system proxy settings or auto-detect the proxy server, all other options are ignored.</span></span>
+   - <span data-ttu-id="45f34-471">Wenn Sie den Proxymodus für feste Server auswählen, können Sie unter '[Adresse oder URL des Proxyservers](#proxyserver)' weitere Optionen angeben.</span><span class="sxs-lookup"><span data-stu-id="45f34-471">If you choose fixed server proxy mode, you can specify further options in '[Address or URL of proxy server](#proxyserver)' policy.</span></span>
+   - <span data-ttu-id="45f34-472">Wenn Sie ein PAC-Proxyskript verwenden, müssen Sie die URL für das Skript unter '[URL zu einer PAC-Proxydatei](#proxypacurl)' angeben.</span><span class="sxs-lookup"><span data-stu-id="45f34-472">If you choose to use a .pac proxy script, you must specify the URL for the script in '[URL to a proxy .pac file](#proxypacurl)' policy.</span></span>
 
-  <span data-ttu-id="20839-418">Wenn Sie diese Richtlinie aktivieren, können Benutzer in Ihrer Organisation die Proxyeinstellungen in Microsoft Edge Update nicht ändern.</span><span class="sxs-lookup"><span data-stu-id="20839-418">If you enable this policy, users in your organization can't change the proxy settings in Microsoft Edge Update.</span></span>
+  <span data-ttu-id="45f34-473">Wenn Sie diese Richtlinie aktivieren, können Benutzer in Ihrer Organisation die Proxyeinstellungen in Microsoft Edge Update nicht ändern.</span><span class="sxs-lookup"><span data-stu-id="45f34-473">If you enable this policy, users in your organization can't change the proxy settings in Microsoft Edge Update.</span></span>
 
-  <span data-ttu-id="20839-419">Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden keine Proxyservereinstellungen konfiguriert. Benutzer in Ihrer Organisation können jedoch ihre eigenen Proxyeinstellungen für Microsoft Edge Update auswählen.</span><span class="sxs-lookup"><span data-stu-id="20839-419">If you disable or don't configure this policy, no proxy server settings are configured, but users in your organization can choose their own proxy settings for Microsoft Edge Update.</span></span>
-#### <span data-ttu-id="20839-420">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-420">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-421">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-421">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-422">Eindeutiger Name der GP: ProxyMode</span><span class="sxs-lookup"><span data-stu-id="20839-422">GP unique name: ProxyMode</span></span>
-- <span data-ttu-id="20839-423">GP-Name: Möglichkeit zur Angabe der Proxyservereinstellungen wählen</span><span class="sxs-lookup"><span data-stu-id="20839-423">GP name: Choose how to specify proxy server settings</span></span>
-- <span data-ttu-id="20839-424">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver</span><span class="sxs-lookup"><span data-stu-id="20839-424">GP path: Administrative Templates/Microsoft Edge Update/Proxy Server</span></span>
-- <span data-ttu-id="20839-425">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-425">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-426">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-426">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-427">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-427">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-428">Name des Wertes: ProxyMode</span><span class="sxs-lookup"><span data-stu-id="20839-428">Value Name: ProxyMode</span></span>
-- <span data-ttu-id="20839-429">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="20839-429">Value Type: REG_SZ</span></span>
-##### <span data-ttu-id="20839-430">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-430">Example value:</span></span>
+  <span data-ttu-id="45f34-474">Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden keine Proxyservereinstellungen konfiguriert. Benutzer in Ihrer Organisation können jedoch ihre eigenen Proxyeinstellungen für Microsoft Edge Update auswählen.</span><span class="sxs-lookup"><span data-stu-id="45f34-474">If you disable or don't configure this policy, no proxy server settings are configured, but users in your organization can choose their own proxy settings for Microsoft Edge Update.</span></span>
+#### <span data-ttu-id="45f34-475">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-475">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-476">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-476">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-477">Eindeutiger Name der GP: ProxyMode</span><span class="sxs-lookup"><span data-stu-id="45f34-477">GP unique name: ProxyMode</span></span>
+- <span data-ttu-id="45f34-478">GP-Name: Möglichkeit zur Angabe der Proxyservereinstellungen wählen</span><span class="sxs-lookup"><span data-stu-id="45f34-478">GP name: Choose how to specify proxy server settings</span></span>
+- <span data-ttu-id="45f34-479">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver</span><span class="sxs-lookup"><span data-stu-id="45f34-479">GP path: Administrative Templates/Microsoft Edge Update/Proxy Server</span></span>
+- <span data-ttu-id="45f34-480">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-480">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-481">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-481">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-482">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-482">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-483">Name des Wertes: ProxyMode</span><span class="sxs-lookup"><span data-stu-id="45f34-483">Value Name: ProxyMode</span></span>
+- <span data-ttu-id="45f34-484">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="45f34-484">Value Type: REG_SZ</span></span>
+##### <span data-ttu-id="45f34-485">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-485">Example value:</span></span>
 ```
 fixed_servers
 ```
-[<span data-ttu-id="20839-431">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-431">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-486">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-486">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-432">ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="20839-432">ProxyPacUrl</span></span>
-#### <span data-ttu-id="20839-433">URL zu einer PAC-Proxydatei</span><span class="sxs-lookup"><span data-stu-id="20839-433">URL to a proxy .pac file</span></span>
-><span data-ttu-id="20839-434">Microsoft Edge Update 1.3.21.81 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-434">Microsoft Edge Update 1.3.21.81 and later</span></span>
+### <span data-ttu-id="45f34-487">ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="45f34-487">ProxyPacUrl</span></span>
+#### <span data-ttu-id="45f34-488">URL zu einer PAC-Proxydatei</span><span class="sxs-lookup"><span data-stu-id="45f34-488">URL to a proxy .pac file</span></span>
+><span data-ttu-id="45f34-489">Microsoft Edge Update 1.3.21.81 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-489">Microsoft Edge Update 1.3.21.81 and later</span></span>
 
-#### <span data-ttu-id="20839-435">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-435">Description</span></span>
-<span data-ttu-id="20839-436">Ermöglicht die Angabe einer URL für eine PAC-Datei (Proxy Auto-Config).</span><span class="sxs-lookup"><span data-stu-id="20839-436">Allows you to specify a URL for a proxy auto-config (PAC) file.</span></span>
+#### <span data-ttu-id="45f34-490">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-490">Description</span></span>
+<span data-ttu-id="45f34-491">Ermöglicht die Angabe einer URL für eine PAC-Datei (Proxy Auto-Config).</span><span class="sxs-lookup"><span data-stu-id="45f34-491">Allows you to specify a URL for a proxy auto-config (PAC) file.</span></span>
 
-  <span data-ttu-id="20839-437">Wenn Sie diese Richtlinie aktivieren, können Sie eine URL für eine PAC-Datei angeben, um zu automatisieren, wie Microsoft Edge Update den geeigneten Proxyserver zum Abrufen einer bestimmten Website auswählt.</span><span class="sxs-lookup"><span data-stu-id="20839-437">If you enable this policy, you can specify a URL for a PAC file to automate how Microsoft Edge Update selects the appropriate proxy server for fetching a particular website.</span></span>
+  <span data-ttu-id="45f34-492">Wenn Sie diese Richtlinie aktivieren, können Sie eine URL für eine PAC-Datei angeben, um zu automatisieren, wie Microsoft Edge Update den geeigneten Proxyserver zum Abrufen einer bestimmten Website auswählt.</span><span class="sxs-lookup"><span data-stu-id="45f34-492">If you enable this policy, you can specify a URL for a PAC file to automate how Microsoft Edge Update selects the appropriate proxy server for fetching a particular website.</span></span>
 
-  <span data-ttu-id="20839-438">Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' manuelle Proxyeinstellungen festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="20839-438">This policy is applied only if you have specified manual proxy settings in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
+  <span data-ttu-id="45f34-493">Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' manuelle Proxyeinstellungen festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="45f34-493">This policy is applied only if you have specified manual proxy settings in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
 
-  <span data-ttu-id="20839-439">Konfigurieren Sie diese Richtlinie nicht, wenn Sie eine andere Proxy-Einstellung als manuell in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="20839-439">Don't configure this policy if you have selected a proxy setting other than manual in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
-#### <span data-ttu-id="20839-440">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-440">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-441">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-441">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-442">Eindeutiger Name der GP: ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="20839-442">GP unique name: ProxyPacUrl</span></span>
-- <span data-ttu-id="20839-443">GP-Name: URL zu einer PAC-Proxydatei</span><span class="sxs-lookup"><span data-stu-id="20839-443">GP name: URL to a proxy .pac file</span></span>
-- <span data-ttu-id="20839-444">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver</span><span class="sxs-lookup"><span data-stu-id="20839-444">GP path: Administrative Templates/Microsoft Edge Update/Proxy Server</span></span>
-- <span data-ttu-id="20839-445">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-445">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-446">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-446">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-447">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-447">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-448">Name des Wertes: ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="20839-448">Value Name: ProxyPacUrl</span></span>
-- <span data-ttu-id="20839-449">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="20839-449">Value Type: REG_SZ</span></span>
-##### <span data-ttu-id="20839-450">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-450">Example value:</span></span>
+  <span data-ttu-id="45f34-494">Konfigurieren Sie diese Richtlinie nicht, wenn Sie eine andere Proxy-Einstellung als manuell in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="45f34-494">Don't configure this policy if you have selected a proxy setting other than manual in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
+#### <span data-ttu-id="45f34-495">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-495">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-496">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-496">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-497">Eindeutiger Name der GP: ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="45f34-497">GP unique name: ProxyPacUrl</span></span>
+- <span data-ttu-id="45f34-498">GP-Name: URL zu einer PAC-Proxydatei</span><span class="sxs-lookup"><span data-stu-id="45f34-498">GP name: URL to a proxy .pac file</span></span>
+- <span data-ttu-id="45f34-499">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver</span><span class="sxs-lookup"><span data-stu-id="45f34-499">GP path: Administrative Templates/Microsoft Edge Update/Proxy Server</span></span>
+- <span data-ttu-id="45f34-500">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-500">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-501">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-501">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-502">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-502">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-503">Name des Wertes: ProxyPacUrl</span><span class="sxs-lookup"><span data-stu-id="45f34-503">Value Name: ProxyPacUrl</span></span>
+- <span data-ttu-id="45f34-504">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="45f34-504">Value Type: REG_SZ</span></span>
+##### <span data-ttu-id="45f34-505">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-505">Example value:</span></span>
 ```
 https://www.microsoft.com
 ```
-[<span data-ttu-id="20839-451">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-451">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-506">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-506">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-### <span data-ttu-id="20839-452">ProxyServer</span><span class="sxs-lookup"><span data-stu-id="20839-452">ProxyServer</span></span>
-#### <span data-ttu-id="20839-453">Adresse oder URL des Proxyservers</span><span class="sxs-lookup"><span data-stu-id="20839-453">Address or URL of proxy server</span></span>
-><span data-ttu-id="20839-454">Microsoft Edge Update 1.3.21.81 und höher</span><span class="sxs-lookup"><span data-stu-id="20839-454">Microsoft Edge Update 1.3.21.81 and later</span></span>
+### <span data-ttu-id="45f34-507">ProxyServer</span><span class="sxs-lookup"><span data-stu-id="45f34-507">ProxyServer</span></span>
+#### <span data-ttu-id="45f34-508">Adresse oder URL des Proxyservers</span><span class="sxs-lookup"><span data-stu-id="45f34-508">Address or URL of proxy server</span></span>
+><span data-ttu-id="45f34-509">Microsoft Edge Update 1.3.21.81 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-509">Microsoft Edge Update 1.3.21.81 and later</span></span>
 
-#### <span data-ttu-id="20839-455">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20839-455">Description</span></span>
-<span data-ttu-id="20839-456">Hier können Sie die URL des Proxy-Servers angeben, den Microsoft Edge Update verwenden soll.</span><span class="sxs-lookup"><span data-stu-id="20839-456">Allows you to specify the URL of the proxy server for Microsoft Edge Update to use.</span></span>
+#### <span data-ttu-id="45f34-510">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-510">Description</span></span>
+<span data-ttu-id="45f34-511">Hier können Sie die URL des Proxy-Servers angeben, den Microsoft Edge Update verwenden soll.</span><span class="sxs-lookup"><span data-stu-id="45f34-511">Allows you to specify the URL of the proxy server for Microsoft Edge Update to use.</span></span>
 
-  <span data-ttu-id="20839-457">Wenn Sie diese Richtlinie aktivieren, können Sie die Proxyserver-URL festlegen, die von Microsoft Edge Update in Ihrer Organisation verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="20839-457">If you enable this policy, you can set the proxy server URL used by Microsoft Edge Update in your organization.</span></span>
+  <span data-ttu-id="45f34-512">Wenn Sie diese Richtlinie aktivieren, können Sie die Proxyserver-URL festlegen, die von Microsoft Edge Update in Ihrer Organisation verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="45f34-512">If you enable this policy, you can set the proxy server URL used by Microsoft Edge Update in your organization.</span></span>
 
-  <span data-ttu-id="20839-458">Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' manuelle Proxyeinstellungen ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="20839-458">This policy is applied only if you have selected manual proxy settings in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
+  <span data-ttu-id="45f34-513">Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' manuelle Proxyeinstellungen ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="45f34-513">This policy is applied only if you have selected manual proxy settings in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
 
-  <span data-ttu-id="20839-459">Konfigurieren Sie diese Richtlinie nicht, wenn Sie eine andere Proxy-Einstellung als manuell in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="20839-459">Don't configure this policy if you have selected a proxy setting other than manual in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
-#### <span data-ttu-id="20839-460">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-460">Windows information and settings</span></span>
-##### <span data-ttu-id="20839-461">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="20839-461">Group Policy (ADMX) info</span></span>
-- <span data-ttu-id="20839-462">Eindeutiger Name der GP: ProxyServer</span><span class="sxs-lookup"><span data-stu-id="20839-462">GP unique name: ProxyServer</span></span>
-- <span data-ttu-id="20839-463">GP-Name: Adresse oder URL des Proxyservers</span><span class="sxs-lookup"><span data-stu-id="20839-463">GP name: Address or URL of proxy server</span></span>
-- <span data-ttu-id="20839-464">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver</span><span class="sxs-lookup"><span data-stu-id="20839-464">GP path: Administrative Templates/Microsoft Edge Update/Proxy Server</span></span>
-- <span data-ttu-id="20839-465">Name der GP-ADMX-Datei: edgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="20839-465">GP ADMX file name: edgeupdate.admx</span></span>
-##### <span data-ttu-id="20839-466">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="20839-466">Windows Registry Settings</span></span>
-- <span data-ttu-id="20839-467">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="20839-467">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
-- <span data-ttu-id="20839-468">Name des Wertes: ProxyServer</span><span class="sxs-lookup"><span data-stu-id="20839-468">Value Name: ProxyServer</span></span>
-- <span data-ttu-id="20839-469">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="20839-469">Value Type: REG_SZ</span></span>
-##### <span data-ttu-id="20839-470">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="20839-470">Example value:</span></span>
+  <span data-ttu-id="45f34-514">Konfigurieren Sie diese Richtlinie nicht, wenn Sie eine andere Proxy-Einstellung als manuell in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="45f34-514">Don't configure this policy if you have selected a proxy setting other than manual in the '[Choose how to specify proxy server settings](#proxymode)' policy.</span></span>
+#### <span data-ttu-id="45f34-515">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-515">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-516">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-516">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-517">Eindeutiger Name der GP: ProxyServer</span><span class="sxs-lookup"><span data-stu-id="45f34-517">GP unique name: ProxyServer</span></span>
+- <span data-ttu-id="45f34-518">GP-Name: Adresse oder URL des Proxyservers</span><span class="sxs-lookup"><span data-stu-id="45f34-518">GP name: Address or URL of proxy server</span></span>
+- <span data-ttu-id="45f34-519">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver</span><span class="sxs-lookup"><span data-stu-id="45f34-519">GP path: Administrative Templates/Microsoft Edge Update/Proxy Server</span></span>
+- <span data-ttu-id="45f34-520">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-520">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-521">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-521">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-522">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-522">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-523">Name des Wertes: ProxyServer</span><span class="sxs-lookup"><span data-stu-id="45f34-523">Value Name: ProxyServer</span></span>
+- <span data-ttu-id="45f34-524">Werttyp: REG_SZ</span><span class="sxs-lookup"><span data-stu-id="45f34-524">Value Type: REG_SZ</span></span>
+##### <span data-ttu-id="45f34-525">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-525">Example value:</span></span>
 ```
 https://www.microsoft.com
 ```
-[<span data-ttu-id="20839-471">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="20839-471">Back to top</span></span>](#microsoft-edge---update-policies)
+[<span data-ttu-id="45f34-526">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-526">Back to top</span></span>](#microsoft-edge---update-policies)
 
 
-## <span data-ttu-id="20839-472">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="20839-472">See also</span></span>
-  - [<span data-ttu-id="20839-473">Konfigurieren von Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="20839-473">Configuring Microsoft Edge</span></span>](configure-microsoft-edge.md)
-  - [<span data-ttu-id="20839-474">Microsoft Edge Enterprise-Angebotsseite</span><span class="sxs-lookup"><span data-stu-id="20839-474">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+## <span data-ttu-id="45f34-527">Microsoft Edge WebView-Richtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-527">Microsoft Edge WebView policies</span></span>
+
+[<span data-ttu-id="45f34-528">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-528">Back to top</span></span>](#microsoft-edge---update-policies)
+### <span data-ttu-id="45f34-529">Installieren (WebView)</span><span class="sxs-lookup"><span data-stu-id="45f34-529">Install (WebView)</span></span>
+#### <span data-ttu-id="45f34-530">Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-530">Allow installation</span></span>
+><span data-ttu-id="45f34-531">Microsoft Edge Update 1.3.127.1 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-531">Microsoft Edge Update 1.3.127.1 and later</span></span>
+
+#### <span data-ttu-id="45f34-532">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-532">Description</span></span>
+<span data-ttu-id="45f34-533">Hiermit können Sie festlegen, ob Microsoft Edge WebView mithilfe von Microsoft Edge Update installiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="45f34-533">Lets you specify whether Microsoft Edge WebView can be installed using Microsoft Edge Update.</span></span>
+
+  - <span data-ttu-id="45f34-534">Wenn Sie diese Richtlinie aktivieren, können Benutzer Microsoft Edge über Microsoft Edge Update installieren.</span><span class="sxs-lookup"><span data-stu-id="45f34-534">If you enable this policy, users can install Microsoft Edge WebView through Microsoft Edge Update.</span></span>
+  - <span data-ttu-id="45f34-535">Wenn Sie diese Richtlinie deaktivieren, können Benutzer Microsoft Edge nicht über Microsoft Edge Update installieren.</span><span class="sxs-lookup"><span data-stu-id="45f34-535">If you disable this policy, users cannot install Microsoft Edge WebView through Microsoft Edge Update.</span></span>
+  - <span data-ttu-id="45f34-536">Wenn Sie diese Richtlinie nicht konfigurieren, bestimmt die Richtlinienkonfiguration "[Standardinstallation zulassen](#installdefault)", ob Benutzer Microsoft Edge WebView über Microsoft Edge Update installieren können.</span><span class="sxs-lookup"><span data-stu-id="45f34-536">If you don't configure this policy, the '[Allow installation default](#installdefault)' policy configuration determines whether users can install Microsoft Edge WebView through Microsoft Edge Update.</span></span>
+#### <span data-ttu-id="45f34-537">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-537">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-538">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-538">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-539">Eindeutiger Name der GP: Install</span><span class="sxs-lookup"><span data-stu-id="45f34-539">GP unique name: Install</span></span>
+- <span data-ttu-id="45f34-540">GP-Name: Installation zulassen</span><span class="sxs-lookup"><span data-stu-id="45f34-540">GP name: Allow installation</span></span>
+- <span data-ttu-id="45f34-541">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Microsoft Edge WebView</span><span class="sxs-lookup"><span data-stu-id="45f34-541">GP path: Administrative Templates/Microsoft Edge Update/Microsoft Edge WebView</span></span>
+- <span data-ttu-id="45f34-542">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-542">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-543">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-543">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-544">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-544">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-545">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-545">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-546">Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}</span><span class="sxs-lookup"><span data-stu-id="45f34-546">Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}</span></span>
+- <span data-ttu-id="45f34-547">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-547">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-548">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-548">Example value:</span></span>
+```
+0x00000001
+```
+[<span data-ttu-id="45f34-549">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-549">Back to top</span></span>](#microsoft-edge---update-policies)
+
+
+### <span data-ttu-id="45f34-550">Update (WebView)</span><span class="sxs-lookup"><span data-stu-id="45f34-550">Update (WebView)</span></span>
+#### <span data-ttu-id="45f34-551">Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-551">Update policy override</span></span>
+><span data-ttu-id="45f34-552">Microsoft Edge Update 1.3.127.1 und höher</span><span class="sxs-lookup"><span data-stu-id="45f34-552">Microsoft Edge Update 1.3.127.1 and later</span></span>
+
+#### <span data-ttu-id="45f34-553">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45f34-553">Description</span></span>
+<span data-ttu-id="45f34-554">Sie können angeben, ob automatische Updates für Microsoft Edge WebView aktiviert sind oder nicht.</span><span class="sxs-lookup"><span data-stu-id="45f34-554">Lets you specify whether or not automatic updates are enabled for Microsoft Edge WebView.</span></span> <span data-ttu-id="45f34-555">Microsoft Edge WebView ist eine Komponente, die von Anwendungen zum Anzeigen von Webinhalten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="45f34-555">Microsoft Edge WebView is a component used by applications to display web content.</span></span>
+<span data-ttu-id="45f34-556">"Automatische Updates" ist standardmäßig aktiviert.</span><span class="sxs-lookup"><span data-stu-id="45f34-556">Automatic updates are enabled by default.</span></span> <span data-ttu-id="45f34-557">Durch das Deaktivieren von automatischen Updates für Microsoft Edge WebView können Kompatibilitätsprobleme mit Anwendungen verursacht werden, die von dieser Komponente abhängig sind.</span><span class="sxs-lookup"><span data-stu-id="45f34-557">Disabling automatic updates for Microsoft Edge WebView might cause compatibility issues with applications that depend on this component.</span></span>
+
+  <span data-ttu-id="45f34-558">Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update die Microsoft Edge WebView-Updates entsprechend der Konfiguration der folgenden Optionen:</span><span class="sxs-lookup"><span data-stu-id="45f34-558">If you enable this policy, Microsoft Edge Update handles Microsoft Edge WebView updates according to how you configure the following options:</span></span>
+  - <span data-ttu-id="45f34-559">Updates immer zulassen: Updates werden automatisch heruntergeladen und angewendet</span><span class="sxs-lookup"><span data-stu-id="45f34-559">Always allow updates: Updates are automatically downloaded and applied</span></span>
+  - <span data-ttu-id="45f34-560">Updates deaktiviert: Updates werden nie heruntergeladen und angewendet</span><span class="sxs-lookup"><span data-stu-id="45f34-560">Updates disabled: Updates are never downloaded or applied</span></span>
+
+  <span data-ttu-id="45f34-561">Wenn Sie diese Richtlinie nicht aktivieren, werden Updates automatisch heruntergeladen und angewendet.</span><span class="sxs-lookup"><span data-stu-id="45f34-561">If you don't enable this policy, updates are automatically downloaded and applied.</span></span>
+#### <span data-ttu-id="45f34-562">Windows-Informationen und -Einstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-562">Windows information and settings</span></span>
+##### <span data-ttu-id="45f34-563">Informationen zur Gruppenrichtlinie (ADMX)</span><span class="sxs-lookup"><span data-stu-id="45f34-563">Group Policy (ADMX) info</span></span>
+- <span data-ttu-id="45f34-564">Eindeutiger Name der GP: Update</span><span class="sxs-lookup"><span data-stu-id="45f34-564">GP unique name: Update</span></span>
+- <span data-ttu-id="45f34-565">GP-Name: Außerkraftsetzung von Updaterichtlinien</span><span class="sxs-lookup"><span data-stu-id="45f34-565">GP name: Update policy override</span></span>
+- <span data-ttu-id="45f34-566">GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Microsoft Edge WebView</span><span class="sxs-lookup"><span data-stu-id="45f34-566">GP path: Administrative Templates/Microsoft Edge Update/Microsoft Edge WebView</span></span>
+- <span data-ttu-id="45f34-567">Name der GP-ADMX-Datei: msedgeupdate.admx</span><span class="sxs-lookup"><span data-stu-id="45f34-567">GP ADMX file name: msedgeupdate.admx</span></span>
+##### <span data-ttu-id="45f34-568">Windows-Registrierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="45f34-568">Windows Registry Settings</span></span>
+- <span data-ttu-id="45f34-569">Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span><span class="sxs-lookup"><span data-stu-id="45f34-569">Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate</span></span>
+- <span data-ttu-id="45f34-570">Name des Wertes:</span><span class="sxs-lookup"><span data-stu-id="45f34-570">Value Name:</span></span> 
+  - <span data-ttu-id="45f34-571">Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}</span><span class="sxs-lookup"><span data-stu-id="45f34-571">Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}</span></span>
+- <span data-ttu-id="45f34-572">Werttyp: REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="45f34-572">Value Type: REG_DWORD</span></span>
+##### <span data-ttu-id="45f34-573">Beispielwert:</span><span class="sxs-lookup"><span data-stu-id="45f34-573">Example value:</span></span>
+```
+0x00000001
+```
+[<span data-ttu-id="45f34-574">Zurück zum Anfang</span><span class="sxs-lookup"><span data-stu-id="45f34-574">Back to top</span></span>](#microsoft-edge---update-policies)
+
+
+## <span data-ttu-id="45f34-575">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="45f34-575">See also</span></span>
+  - [<span data-ttu-id="45f34-576">Konfigurieren von Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="45f34-576">Configuring Microsoft Edge</span></span>](configure-microsoft-edge.md)
+  - [<span data-ttu-id="45f34-577">Microsoft Edge Enterprise-Angebotsseite</span><span class="sxs-lookup"><span data-stu-id="45f34-577">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
