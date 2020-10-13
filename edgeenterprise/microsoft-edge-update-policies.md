@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 06/10/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,28 +11,26 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: d772d8dd6f60b89e9bd12a77b740e5fad699756a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980012"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105569"
 ---
 # Microsoft Edge – Update-Richtlinien
 Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.
 
-           
 Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
-
 ## Verfügbare Richtlinien
 In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Update-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
 
 |||
 |-|-|
 |[Anwendungen](#applications)|[Voreinstellungen](#preferences)|
-|[Proxyserver](#proxy-server)||
+|[Proxyserver](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
 ### [Anwendungen](#applications-policies)
 |Richtlinienname|Beschriftung|
@@ -44,6 +42,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Allowsxs](#allowsxs)|Microsoft Edge Seite-an-Seite-Browserumgebung zulassen|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation|
 |[CreateDesktopShortcut](#createdesktopshortcut)|Verhindern der Erstellung von Desktopverknüpfungen bei der Installation (pro Kanal)|
+|[RollbackToTargetVersion](#rollbacktotargetversion)|Zurücksetzung auf Zielversion (pro Kanal)|
 |[TargetVersionPrefix](#targetversionprefix)|Außerkraftsetzung der Zielversion (pro Kanal)|
 
 ### [Voreinstellungen](#preferences-policies)
@@ -59,12 +58,11 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[ProxyPacUrl](#proxypacurl)|URL zu einer PAC-Proxydatei|
 |[ProxyServer](#proxyserver)|Adresse oder URL des Proxyservers|
 
-                 
-      
-  
-             
-            
-                  
+### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+|Richtlinienname|Beschriftung|
+|-|-|
+|[Installieren](#install-webview)|Installation zulassen|
+|[Update/Aktualisieren](#update-webview)|Außerkraftsetzung von Updaterichtlinien|
 
 ## Anwendungsrichtlinien
 
@@ -74,19 +72,21 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 >Microsoft Edge Update 1.2.145.5 und höher
 
 #### Beschreibung
-Sie können das Standardverhalten aller Kanäle festlegen, damit Microsoft Edge-Updates bei Verwendung von Microsoft Edge Update zugelassen oder blockiert werden.
+Sie können das Standardverhalten aller Kanäle festlegen, damit Microsoft Edge für in die Domäne eingebundene Geräte. zugelassen oder blockiert wird.
 
 Sie können diese Richtlinie für einzelne Kanäle außer Kraft setzen, indem Sie die Richtlinie '[Installation zulassen](#install)' für bestimmte Kanäle aktivieren.
 
-Wenn Sie diese Richtlinie deaktivieren, wird die Installation von Microsoft Edge über Microsoft Edge Update blockiert. Dies wirkt sich nur auf die Installation von Microsoft Edge-Software aus und nur dann, wenn Benutzer Microsoft Edge Update ausführen und die Richtlinie '[Installation zulassen](#install)' nicht konfiguriert haben.
+Wenn Sie diese Richtlinie deaktivieren, wird die Installation von Microsoft Edge blockiert. Dies wirkt sich nur auf die Installation der Microsoft Edge-Software aus, wenn die Richtlinie "[Installation zulassen](#install)" auf "nicht konfiguriert festgelegt ist.
 
 Diese Richtlinie verhindert nicht, dass Microsoft Edge Update ausgeführt wird, oder dass Benutzer die Microsoft Edge-Software auf andere Weise installieren.
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
 #### Windows-Informationen und -Einstellungen
 ##### Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: InstallDefault
 - GP-Name: Standardinstallation zulassen
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: InstallDefault
@@ -114,12 +114,14 @@ Hier können Sie das Standardverhalten für alle Kanäle angeben, wie Microsoft 
   Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar. Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.
 
   Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Außerkraftsetzung von Updaterichtlinien](#update)'.
+
+  Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
 #### Windows-Informationen und -Einstellungen
 ##### Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: UpdateDefault
 - GP-Name: Die Updaterichtlinie überschreibt die Standardrichtlinie
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: UpdateDefault
@@ -136,13 +138,15 @@ Hier können Sie das Standardverhalten für alle Kanäle angeben, wie Microsoft 
 >Microsoft Edge Update 1.2.145.5 und höher
 
 #### Beschreibung
-Gibt an, ob ein Microsoft Edge-Kanal mithilfe von Microsoft Edge Update installiert werden kann.
+Gibt an, ob ein Microsoft Edge-Kanal auf in die Domäne eingebundene Geräte installiert werden kann.
 
-  Wenn Sie diese Richtlinie für einen Kanal aktivieren, können Benutzer diesen Kanal von Microsoft Edge über Microsoft Edge Update installieren.
+  Wenn Sie diese Richtlinie für einen Kanal aktivieren, wird die Installation von Microsoft Edge nicht blockiert.
 
-  Wenn Sie diese Richtlinie für einen Kanal deaktivieren, können Sie diesen Kanal von Microsoft Edge nicht über Microsoft Edge Update installieren.
+  Wenn Sie diese Richtlinie für einen Kanal deaktivieren, wird die Installation von Microsoft Edge blockiert.
 
-  Wenn Sie diese Richtlinie nicht für einen Kanal konfigurieren, bestimmt die Richtlinienkonfiguration '[Standardinstallation zulassen](#installdefault)', ob Benutzer diesen Kanal von Microsoft Edge über Microsoft Edge Update installieren können.
+  Wenn Sie diese Richtlinie nicht für einen Kanal konfigurieren, bestimmt die Richtlinienkonfiguration '[Standardinstallation zulassen](#installdefault)', ob Benutzer diesen Kanal von Microsoft Edge installieren können.
+
+  Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
 #### Windows-Informationen und -Einstellungen
 ##### Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: Install
@@ -152,7 +156,7 @@ Gibt an, ob ein Microsoft Edge-Kanal mithilfe von Microsoft Edge Update installi
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: 
@@ -175,15 +179,19 @@ Gibt an, ob ein Microsoft Edge-Kanal mithilfe von Microsoft Edge Update installi
 #### Beschreibung
 Gibt an, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge behandelt.
 
-  Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:
-   - Updates immer zulassen: Updates werden immer dann angewendet, wenn sie gefunden werden, entweder durch die regelmäßige Updateprüfung oder durch eine manuelle Updateprüfung.
-   - Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.
-   - Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt. (Nicht alle Apps bieten eine Schnittstelle für diese Option.)
-   - Updates deaktiviert: Updates werden nie angewendet.
+Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:
+  - Updates immer zulassen: Updates werden immer dann angewendet, wenn sie gefunden werden, entweder durch die regelmäßige Updateprüfung oder durch eine manuelle Updateprüfung.
+  - Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.
+  - Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt. (Nicht alle Apps bieten eine Schnittstelle für diese Option.)
+  - Updates deaktiviert: Updates werden nie angewendet.
 
-  Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar. Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.
+Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig nach Updates suchen, indem Sie den manuellen Updatemechanismus der App verwenden, sofern verfügbar. Wenn Sie Updates deaktivieren, suchen Sie regelmäßig nach Updates und verteilen Sie diese an die Benutzer.
 
-  Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Die Updaterichtlinie überschreibt die Standardrichtlinie](#updatedefault)'.
+Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, behandelt Microsoft Edge Update die verfügbaren Updates gemäß der Richtlinie '[Die Updaterichtlinie überschreibt die Standardrichtlinie](#updatedefault)'.
+
+Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406).
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
 #### Windows-Informationen und -Einstellungen
 ##### Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: Update
@@ -193,7 +201,7 @@ Gibt an, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge behand
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: 
@@ -228,7 +236,7 @@ Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Insta
 - Eindeutiger Name der GP: Allowsxs
 - GP-Name: Microsoft Edge Seite-an-Seite-Browserumgebung zulassen
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: Allowsxs
@@ -256,7 +264,7 @@ Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirku
 - Eindeutiger Name der GP: CreateDesktopShortcutDefault
 - GP-Name: Standardeinstellung "Erstellung von Desktopverknüpfungen bei der Installation verhindern"
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Anwendungen
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Wertname: CreateDesktopShortcutDefault
@@ -288,7 +296,7 @@ Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirku
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: 
@@ -296,6 +304,55 @@ Wenn Microsoft Edge bereits installiert ist, hat diese Richtlinie keine Auswirku
   - (Beta): CreateDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Werttyp: REG_DWORD
+##### Beispielwert:
+```
+0x00000001
+```
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+
+
+### RollbackToTargetVersion
+#### Zurücksetzung auf Zielversion
+>Microsoft Edge Update 1.3.133.3 und höher
+
+#### Beschreibung
+Gibt an, dass Microsoft Edge Update Installationen von Microsoft Edge auf die in "[Zielversionaußerkraftsetzung](#targetversionprefix)" angegebene Version zurücksetzen soll.
+
+Diese Richtlinie hat keine Wirkung, es sei denn, "[Zielversionaußerkraftsetzung](#targetversionprefix)" ist festgelegt und "[Update-Richtlinie außer Kraft setzen](#update)" auf einen der Zustände "ein" festgelegt ist (Updates immer zulassen, Nur automatische unbeaufsichtigte Updates, Nur manuelle Updates).
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, bleiben Installationen mit einer höheren Version als die von "[Zielversionaußerkraftsetzung](#targetversionprefix)" unverändert.
+
+Wenn Sie diese Richtlinie aktivieren, werden Installationen mit einer aktuellen Version, die höher ist als durch "[Zielversionaußerkraftsetzung](#targetversionprefix)" angegeben, auf die Zielversion herabgestuft.
+
+Wir empfehlen Benutzern, die neueste Version des Microsoft Edge-Browsers zu installieren, um den Schutz durch die neuesten Sicherheitsupdates zu gewährleisten. Ein Rollback zu einer früheren Version birgt Risiken, die mit bekannten Sicherheitsproblemen zu tun haben. Diese Richtlinie ist als vorübergehender Fix zur Behebung von Problemen in einem Microsoft Edge-Browser-Update vorgesehen.
+
+Bevor Sie die Browserversion vorübergehend zurücksetzen, empfehlen wir, die Synchronisierung ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) für alle Benutzer in Ihrer Organisation zu aktivieren. Wenn Sie die Synchronisierung nicht aktivieren, besteht das Risiko eines endgültigen Verlusts von Browserdaten. Verwenden Sie diese Richtlinie auf eigenes Risiko.
+
+Hinweis: alle Versionen, die für einen Rollback verfügbar sind, können Sie hier [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise) anzeigen.
+
+Diese Richtlinie bezieht sich auf Microsoft Edge Version 86 oder neuer.
+
+Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918).
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
+#### Windows-Informationen und -Einstellungen
+##### Informationen zur Gruppenrichtlinie (ADMX)
+- Eindeutiger Name der GP: RollbackToTargetVersion
+- Name der GP: Zurücksetzung auf Zielversion
+- GP-Pfad: 
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev
+- Name der GP-ADMX-Datei: msedgeupdate.admx
+##### Windows-Registrierungseinstellungen
+- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Name des Wertes: 
+  - (Stable): RollbackToTargetVersion{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta): RollbackToTargetVersion{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Werttyp: REG_DWORD
 ##### Beispielwert:
 ```
@@ -316,6 +373,10 @@ Der Richtlinienwert muss eine bestimmte Microsoft Edge-Version sein, z. B. 83.0.
 Wenn ein Gerät über eine neuere Version von Microsoft Edge als der angegebene Wert verfügt, bleibt Microsoft Edge bei der neueren Version und wird nicht auf die angegebene Version herabgestuft.
 
 Wenn die angegebene Version nicht vorhanden oder nicht ordnungsgemäß formatiert ist, bleibt Microsoft Edge bei der aktuellen Version und wird nicht automatisch auf zukünftige Versionen aktualisiert.
+
+Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707).
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
 #### Windows-Informationen und -Einstellungen
 ##### Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: TargetVersionPrefix
@@ -325,7 +386,7 @@ Wenn die angegebene Version nicht vorhanden oder nicht ordnungsgemäß formatier
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: 
@@ -357,7 +418,7 @@ Wenn diese Richtlinie aktiviert ist, können Sie einen Wert für die Mindestanza
 - Eindeutiger Name der GP: AutoUpdateCheckPeriodMinutes
 - GP-Name: Überschreibung des Überprüfungszeitraums für automatische Updates
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Einstellungen
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: AutoUpdateCheckPeriodMinutes
@@ -383,7 +444,7 @@ Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab S
 - GP-Name: Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates
   - Optionen {Stunde, Minute, Dauer}
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Einstellungen
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: 
@@ -401,8 +462,6 @@ start min  : 0x00000002
 
 
 ## Proxyserver-Richtlinien
-  
-  
 
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 ### ProxyMode
@@ -426,7 +485,7 @@ Mit dieser Option können Sie die Proxyserver-Einstellungen angeben, die von Mic
 - Eindeutiger Name der GP: ProxyMode
 - GP-Name: Möglichkeit zur Angabe der Proxyservereinstellungen wählen
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: ProxyMode
@@ -455,7 +514,7 @@ Ermöglicht die Angabe einer URL für eine PAC-Datei (Proxy Auto-Config).
 - Eindeutiger Name der GP: ProxyPacUrl
 - GP-Name: URL zu einer PAC-Proxydatei
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: ProxyPacUrl
@@ -484,7 +543,7 @@ Hier können Sie die URL des Proxy-Servers angeben, den Microsoft Edge Update ve
 - Eindeutiger Name der GP: ProxyServer
 - GP-Name: Adresse oder URL des Proxyservers
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver
-- Name der GP-ADMX-Datei: edgeupdate.admx
+- Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: ProxyServer
@@ -492,6 +551,68 @@ Hier können Sie die URL des Proxy-Servers angeben, den Microsoft Edge Update ve
 ##### Beispielwert:
 ```
 https://www.microsoft.com
+```
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+
+
+## Microsoft Edge WebView-Richtlinien
+
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+### Installieren (WebView)
+#### Installation zulassen
+>Microsoft Edge Update 1.3.127.1 und höher
+
+#### Beschreibung
+Hiermit können Sie festlegen, ob Microsoft Edge WebView mithilfe von Microsoft Edge Update installiert werden kann.
+
+  - Wenn Sie diese Richtlinie aktivieren, können Benutzer Microsoft Edge über Microsoft Edge Update installieren.
+  - Wenn Sie diese Richtlinie deaktivieren, können Benutzer Microsoft Edge nicht über Microsoft Edge Update installieren.
+  - Wenn Sie diese Richtlinie nicht konfigurieren, bestimmt die Richtlinienkonfiguration "[Standardinstallation zulassen](#installdefault)", ob Benutzer Microsoft Edge WebView über Microsoft Edge Update installieren können.
+#### Windows-Informationen und -Einstellungen
+##### Informationen zur Gruppenrichtlinie (ADMX)
+- Eindeutiger Name der GP: Install
+- GP-Name: Installation zulassen
+- GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Microsoft Edge WebView
+- Name der GP-ADMX-Datei: msedgeupdate.admx
+##### Windows-Registrierungseinstellungen
+- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Name des Wertes: 
+  - Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+- Werttyp: REG_DWORD
+##### Beispielwert:
+```
+0x00000001
+```
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+
+
+### Update (WebView)
+#### Außerkraftsetzung von Updaterichtlinien
+>Microsoft Edge Update 1.3.127.1 und höher
+
+#### Beschreibung
+Sie können angeben, ob automatische Updates für Microsoft Edge WebView aktiviert sind oder nicht. Microsoft Edge WebView ist eine Komponente, die von Anwendungen zum Anzeigen von Webinhalten verwendet wird.
+"Automatische Updates" ist standardmäßig aktiviert. Durch das Deaktivieren von automatischen Updates für Microsoft Edge WebView können Kompatibilitätsprobleme mit Anwendungen verursacht werden, die von dieser Komponente abhängig sind.
+
+  Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update die Microsoft Edge WebView-Updates entsprechend der Konfiguration der folgenden Optionen:
+  - Updates immer zulassen: Updates werden automatisch heruntergeladen und angewendet
+  - Updates deaktiviert: Updates werden nie heruntergeladen und angewendet
+
+  Wenn Sie diese Richtlinie nicht aktivieren, werden Updates automatisch heruntergeladen und angewendet.
+#### Windows-Informationen und -Einstellungen
+##### Informationen zur Gruppenrichtlinie (ADMX)
+- Eindeutiger Name der GP: Update
+- GP-Name: Außerkraftsetzung von Updaterichtlinien
+- GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Microsoft Edge WebView
+- Name der GP-ADMX-Datei: msedgeupdate.admx
+##### Windows-Registrierungseinstellungen
+- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Name des Wertes: 
+  - Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+- Werttyp: REG_DWORD
+##### Beispielwert:
+```
+0x00000001
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 

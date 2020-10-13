@@ -3,19 +3,19 @@ title: MicrosoftEdge-Veröffentlichungszeitplan
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/09/2020
+ms.date: 10/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: MicrosoftEdge-Veröffentlichungszeitplan
-ms.openlocfilehash: 8df63d7ccee92ee2152dee67d33f38ead6e886f7
-ms.sourcegitcommit: 14065fff63da1cf46dabfd6d4a5a454d3645ec5f
+ms.openlocfilehash: f0732a0db8b766f20ec758dea43c7ef9ce6af817
+ms.sourcegitcommit: 2c361b30e0ada64b639edb11472fecf6bbce0d39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "11004527"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105921"
 ---
 # MicrosoftEdge-Veröffentlichungszeitplan
 
@@ -40,8 +40,8 @@ In der folgenden Tabelle sind die geplanten Veröffentlichungsdaten für die Bet
 | 82 | Veröffentlicht | [Abgebrochen](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/) | [Abgebrochen](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/) |
 | 83 | Veröffentlicht<br>Version | 22.04.2020<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-83047813-april-22) | 21.05.2020<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-83047837-may-21) |
 | 84 | Veröffentlicht<br>Version | 02.06.2020<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-84052211-june-2) | 16.07.2020<br> [84.0.522.40](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-84052240-july-16) |
-| **85** | Veröffentlicht<br>Version | 28.07.2020<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-85056418-july-28)  | **27.08.2020**<br>**[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27)** |
-| **86** | Veröffentlicht<br>Version | **09.09.2020**<br>**[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9)** | Woche vom 08.10.2020 |
+| 85 | Veröffentlicht<br>Version | 28.07.2020<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-85056418-july-28)  | 27.08.2020<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
+| **86** | Veröffentlicht<br>Version | **09.09.2020**<br>**[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9)** | **09.10.2020**<br>**[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9)** |
 | 87 | Zielversion | Woche vom 19.10.2020 | Woche vom 19.11.2020 |
 | 88 | Zielversion | Woche vom 07.12.2020 | Woche vom 21.01.2021 |
 | 89 | Zielversion | Woche vom 01.02.2021 | Woche vom 04.03.2021 |
