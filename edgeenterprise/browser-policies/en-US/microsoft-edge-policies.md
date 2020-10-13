@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: dc780166f05afd7d667f901a1198ce125831d01b
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094609"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105539"
 ---
 # Microsoft Edge-Richtlinien
 Die neueste Version von Microsoft Edge umfasst die folgenden Richtlinien. Sie können diese Richtlinien verwenden, um zu konfigurieren, wie Microsoft Edge in Ihrer Organisation ausgeführt wird.
@@ -255,7 +255,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[DownloadRestrictions](#downloadrestrictions)|Downloadbeschränkungen zulassen|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Aktivieren des Features „Sammlungen“|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Ermöglicht Benutzern das Bearbeiten von Favoriten|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Veraltete Features für Webplattformen für einen begrenzten Zeitraum wieder aktivieren|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Herunterladen aktivieren von Domänenaktionen von Microsoft (veraltet)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Aktivieren von Online-OCSP-/CRL-Prüfungen|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Zulassen von Zertifikaten, die mit SHA-1 signiert wurden, wenn sie von lokalen Vertrauensankern ausgegeben wurden (veraltet).|
@@ -345,6 +345,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung für Signed HTTP Exchange (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Aktivieren der Website-Isolation für alle Websites|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Rechtschreibprüfung aktivieren|
 |[SpellcheckLanguage](#spellchecklanguage)|Aktivieren spezifischer Sprachen für die Rechtschreibprüfung|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Deaktivierung der Rechtschreibprüfungssprachen erzwingen|
@@ -10120,14 +10121,16 @@ Deaktivieren Sie diese Richtlinie, um zu verhindern, dass Benutzer Favoriten hin
   [Zurück zum Anfang](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Veraltete Features für Webplattformen für einen begrenzten Zeitraum wieder aktivieren
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Unterstützte Versionen:
-  - Auf Windows und macOS ab 77 oder höher
+  - On Windows and macOS since 77, until 86
 
   #### Beschreibung
-  Geben Sie eine Liste von veralteten Webplattform-Features an, um diese vorübergehend wieder zu aktivieren.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Geben Sie eine Liste von veralteten Webplattform-Features an, um diese vorübergehend wieder zu aktivieren.
 
 Diese Richtlinie lässt Sie veraltete Webplattform-Features für einen begrenzten Zeitraum wieder aktivieren. Features werden durch eine Kennzeichnungs-Zeichenfolge identifiziert.
 
@@ -10154,7 +10157,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   #### Windows-Informationen und -Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - GP eindeutiger Name: EnableDeprecatedWebPlatformFeatures
-  - GP-Name: Veraltete Features für Webplattformen für einen begrenzten Zeitraum wieder aktivieren
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -15055,6 +15058,58 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutze
 
   #### Mac – Informationen und Einstellungen
   - Einstellung Schlüsselname: SitePerProcess
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Unterstützte Versionen:
+  - On Windows and macOS since 87 or later
+
+  #### Beschreibung
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Unterstützte Funktionen:
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Value Name: SpeechRecognitionEnabled
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000001
+```
+
+
+  #### Mac – Informationen und Einstellungen
+  - Preference Key Name: SpeechRecognitionEnabled
   - Beispielwert:
 ``` xml
 <true/>
