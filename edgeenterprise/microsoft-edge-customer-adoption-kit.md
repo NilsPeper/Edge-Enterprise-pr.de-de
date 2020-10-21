@@ -45,13 +45,13 @@ Verwenden Sie dieses Benutzerhandbuch, um mit der Planung der Bereitstellung zu 
 
 Verwenden Sie dieses Benutzerhandbuch, um Benutzer über das neue Microsoft Edge zu informieren. Das Benutzerhandbuch enthält Übersichten über die Benutzeroberfläche, Menüs und Funktionen. Wir haben auch Tipps für die ersten Schritte der Benutzer hinzugefügt.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Benutzerhandbuch – Erste Schritte":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
 ### E-Mail-Vorlagen
 
 Verwenden Sie diese E-Mail-Vorlagen, um anzukündigen, dass das neue Microsoft Edge jetzt für Benutzer verfügbar ist, und um Tipps und Tricks bereitzustellen, wie Benutzer das Beste aus dem Browser herausholen.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="E-Mail-Vorlage für Tipps und Tricks":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
 ### Digitale Anmeldung
 
@@ -62,7 +62,7 @@ Verwenden Sie die folgende digitale Anmeldung, um Benutzer über den neuen Micro
 - Microsoft Search in Bing
 - Sicherheit
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Neuer Tab-Seite":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
 ## Andere Lernressourcen
 
