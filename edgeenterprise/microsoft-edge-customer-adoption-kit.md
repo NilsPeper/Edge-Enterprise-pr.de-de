@@ -45,13 +45,13 @@ ms.locfileid: "11072632"
 
 <span data-ttu-id="f15fc-119">Verwenden Sie dieses Benutzerhandbuch, um Benutzer über das neue Microsoft Edge zu informieren.</span><span class="sxs-lookup"><span data-stu-id="f15fc-119">Use this guide to educate users on the new Microsoft Edge.</span></span> <span data-ttu-id="f15fc-120">Das Benutzerhandbuch enthält Übersichten über die Benutzeroberfläche, Menüs und Funktionen.</span><span class="sxs-lookup"><span data-stu-id="f15fc-120">The guide includes overviews of the UI, menus, and features.</span></span> <span data-ttu-id="f15fc-121">Wir haben auch Tipps für die ersten Schritte der Benutzer hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f15fc-121">We've also included tips to help users get started.</span></span>
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Benutzerhandbuch – Erste Schritte":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
 ### <span data-ttu-id="f15fc-123">E-Mail-Vorlagen</span><span class="sxs-lookup"><span data-stu-id="f15fc-123">Email templates</span></span>
 
 <span data-ttu-id="f15fc-124">Verwenden Sie diese E-Mail-Vorlagen, um anzukündigen, dass das neue Microsoft Edge jetzt für Benutzer verfügbar ist, und um Tipps und Tricks bereitzustellen, wie Benutzer das Beste aus dem Browser herausholen.</span><span class="sxs-lookup"><span data-stu-id="f15fc-124">Use these email templates to announce that the new Microsoft Edge is available for users and to provide tips and tricks on how to get the most out of the browser.</span></span>
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="E-Mail-Vorlage für Tipps und Tricks":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
 ### <span data-ttu-id="f15fc-126">Digitale Anmeldung</span><span class="sxs-lookup"><span data-stu-id="f15fc-126">Digital Signage</span></span>
 
@@ -62,7 +62,7 @@ ms.locfileid: "11072632"
 - <span data-ttu-id="f15fc-130">Microsoft Search in Bing</span><span class="sxs-lookup"><span data-stu-id="f15fc-130">Microsoft Search in Bing</span></span>
 - <span data-ttu-id="f15fc-131">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="f15fc-131">Security</span></span>
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text=""Neuer Tab"-Seite":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
 ## <span data-ttu-id="f15fc-133">Andere Lernressourcen</span><span class="sxs-lookup"><span data-stu-id="f15fc-133">Other learning resources</span></span>
 
