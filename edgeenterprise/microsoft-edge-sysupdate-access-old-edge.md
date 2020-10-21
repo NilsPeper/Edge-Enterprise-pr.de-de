@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Informationen für den Zugriff auf die alte Version von Microsoft Edge
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980023"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125517"
 ---
 # Zugreifen auf Microsoft Edge Legacy nach der Installation der neuen Version von Microsoft Edge
 
@@ -35,6 +35,8 @@ Die meisten Organisationen möchten Microsoft Edge Legacy sicherlich durch die n
 > Der Support für die Desktop-App von Microsoft Edge Legacy läuft am 9. März 2021 zugunsten des neuen Microsoft Edge aus. Dies bedeutet, dass Microsoft Edge Legacy nach diesem Datum keine Sicherheitsupdates mehr erhält. Diese Änderung gilt für alle Funktionen der Desktop-App von Microsoft Edge Legacy. [Weitere Informationen](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## Vorbemerkungen
+> [!NOTE]
+> Ab Windows 10, Version 20H2, ist Microsoft Edge Legacy nicht mehr enthalten. Ab dieser Version von Windows 10 wird die parallele Verwendung nicht mehr unterstützt.
 
 Die Verfahren in diesem Artikel gelten für Systeme, die mit den neuesten Sicherheitsupdates aktualisiert wurden. Wenn die neue Version von Microsoft Edge installiert ist, wird die alte Version (Microsoft Edge Legacy) ausgeblendet. Bei allen Versuchen, die alte Version von Microsoft Edge zu starten, wird der Benutzer standardmäßig auf die neu installierte Version von Microsoft Edge umgeleitet. In diesem Artikel wird beschrieben, wie Sie Microsoft Edge Legacy nach der Installation von Microsoft Edge weiterhin verwenden können.
 
