@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/16/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: e35d98c762edb11049cc0b4956ba0a8d991ad86c
-ms.sourcegitcommit: 5dea32e4330b9157a7c415cb473dd97522e17ae4
+ms.openlocfilehash: 57cd68d9366dd80812617f98934d44918b76926c
+ms.sourcegitcommit: a54037baf06d6f2e30b9485cfd397468b3174a86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "11120233"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133202"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,59 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!IMPORTANT]
 > Lesen Sie dieses [Update zu Microsoft Edge-Kanalversionen](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+<!-- begin major 87 -->
+## Version 87.0.664.12: 20.Oktober
+
+### Funktionsupdates
+
+- **Automatisches Umleiten von inkompatiblen Websites aus Internet Explorer zu MicrosoftEdge**. Mit dem MicrosoftEdge87 Stable-Update werden öffentliche Websites, die in Internet Explorer eine Inkompatibilitätsmeldung anzeigen, standardmäßig automatisch zu MicrosoftEdge umgeleitet. Sie können dieses Feature deaktivieren, indem Sie die in [Umleitung von Internet Explorer zu MicrosoftEdge zur Kompatibilität mit modernen Websites](https://docs.microsoft.com/deployedge/edge-learnmore-neededge) konfigurieren.
+- **Manuelles Zurücksetzen von MicrosoftEdge-Synchronisierungsdaten in der Cloud**. Wir führen eine Möglichkeit ein, mit der MicrosoftEdge-Synchronisierungsdaten aus dem Produkt heraus zurückgesetzt werden können. Damit wird sichergestellt, dass Benutzerdaten aus Microsoft-Diensten gelöscht werden. Außerdem werden bestimmte Produktprobleme behoben, bei denen zuvor ein Supportticket erforderlich war.
+- **Datenschutzfeatures des Kioskmodus aktiviert**. Ab MicrosoftEdge, Version87, werden Kioskmodus-Features aktiviert, die Unternehmen im Zusammenhang mit dem Datenschutz für Benutzerdaten helfen. Diese Features ermöglichen es beispielsweise, dass die Benutzerdaten beim Beenden gelöscht werden, dass heruntergeladene Dateien gelöscht werden und dass die konfigurierte Startumgebung nach einer festgelegten Leerlaufzeitspanne zurückgesetzt wird. Informieren Sie sich genauer zum [Konfigurieren des MicrosoftEdge-Kioskmodus](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+- **Einmaliges Anmelden (Single Sign On, SSO) steht jetzt für Azure Active Directory-Konten (AzureAD) unter Vorgängerversionen von Windows zur Verfügung.** Ein Benutzer, der sich bei MicrosoftEdge unter einer Vorgängerversion von MicrosoftWindows (Versionen 7 und 8.1) angemeldet hat, wird automatisch bei Websites angemeldet, die so konfiguriert wurden, dass einmaliges Anmelden mit Geschäfts-, Schul- oder Unikonten (z.B. SharePoint.com, Office.com und Bing.com) möglich ist.
+- **Automatisches Anmelden bei Microsoft-Konten mit einmaligem Anmelden (SSO) im Web**. Ein unter einer Vorgängerversion von Windows angemeldeter MicrosoftEdge-Benutzer wird jetzt automatisch bei Websites registriert, die so konfiguriert wurden, dass SSO bei Microsoft-Konten (z.B. Bing.com, Office.com, MSN.com und Outlook.com) zulässig ist.
+- **ClickOnce-Bereitstellung standardmäßig aktiviert**. ClickOnce ist in MicrosoftEdge87 standardmäßig aktiviert, wodurch die Hindernisse für Unternehmen reduziert werden, die Software bereitstellen und mit dem Browserverhalten der Vorgängerversion von MicrosoftEdge besser übereinstimmen möchten. Ab MicrosoftEdge87 gibt der Status „Nicht konfiguriert“ der Richtlinie „ClickOnceEnabled“ den neuen standardmäßigen ClickOnce-Status „Aktiviert“ (im Vergleich zum vorherigen Standardstatus „Deaktiviert“) wieder.
+- **Auf der Enterprise-Seite „Neue Registerkarte” (New Tab Page, NTP) wird Produktivität in anpassbare, arbeitsrelevante Feedinhalte integriert**. Im Enterprise-NTP-Bereich werden die Office365-Produktivitätsseite, die wir den mit ihrem Geschäfts-, Schul-oder Unikonto angemeldeten Benutzern bieten, mit personalisierten, arbeitsrelevanten Unternehmens- und Branchenfeeds zusammengeführt, die auf einer einzigen Seite organisiert sind. Benutzer können die vertrauten Office365-Inhalte und MicrosoftSearch for Business erkennen, das von Bing unterstützt wird. Darüber hinaus können sie mühelos zu einem anpassbaren „Mein Feed“ mit Inhalten und Modulen, die für den Benutzer, sein Unternehmen oder seine Branche relevant sind, sowie zu einer Auswahl weiterer Feeds wechseln, die von der Organisation zur Verfügung gestellt wurde. [Weitere Informationen](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
+
+- **Datenschutz und Sicherheit:**
+
+  - Unterstützung von TLS-Tokenbindung für mit Richtlinien konfigurierte Websites. Die TLS-Tokenbindung hilft bei der Verhinderung von Angriffen zum Diebstahl von Token, um sicherzustellen, dass Cookies nur auf dem Gerät wiederverwendet werden können, auf dem sie ursprünglich festgelegt wurden. Die Verwendung der TLS-Tokenbindung erfordert es, dass die Richtlinie [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) festgelegt wurde und dass die aufgeführten Websites dieses Feature unterstützen.
+
+- **Tastaturunterstützung für Textmarker in PDF-Dateien**. Benutzer können jeden beliebigen Text in einer PDF-Datei mithilfe ihrer Tastatur hervorheben.
+
+- **Drucken:**
+
+  - Wählen Sie die Seite aus, die beim beidseitigen Drucken gedreht werden soll. Benutzer können auswählen, ob ein Blatt beim beidseitigen Drucken auf die lange Seite (Querformat) oder die kurze Seite (Hochformat) gedreht werden soll.
+  - Wählen Sie den Druckmodus „Rasterung“ für das Unternehmen aus. Steuern Sie, wie MicrosoftEdge auf einem Nicht-PostScript-Drucker unter Windows druckt. Manchmal müssen Druckaufträge bei Nicht-PostScript-Druckern gerastert werden, damit korrekt gedruckt wird. Die Druckoptionen sind „Full" (Vollständig) und „Fast“ (Schnell).
+
+### Richtlinienupdates
+
+#### Neue Richtlinien
+
+Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+
+- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) – Zum Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen.
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) – Shopping in MicrosoftEdge aktiviert.
+- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) – Zum Ausblenden des Dialogfelds für einmalige Umleitung und des Banners in MicrosoftEdge.
+- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) – Zum Konfigurieren der Adressleistenbearbeitung für Benutzerfreundlichkeit beim öffentlichen Surfen im Kioskmodus.
+- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) – Zum Löschen von Dateien, die während einer Kiosksitzung heruntergeladen wurden, wenn MicrosoftEdge geschlossen wird.
+- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) – Zum Aktivieren der Schaltfläche für Kennwortanzeige.
+- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) – Zum Verhindern, dass das BHO (Browserhilfsobjekt) installiert wird, um inkompatible Websites von Internet Explorer zu MicrosoftEdge umzuleiten.
+- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) – Zum Umleiten inkompatibler Websites von Internet Explorer zu MicrosoftEdge.
+- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) – Zum Konfigurieren der Spracherkennung.
+- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) – Zum Aktivieren des Features „Weberfassung“ in MicrosoftEdge.
+
+#### Veraltete Richtlinie
+
+[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) – Zum Konfigurieren der MicrosoftEdge-Oberfläche für neue Registerkartenseiten.
+
+#### Veraltete Richtlinie
+
+[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) – Zum erneuten Aktivieren von veralteten Features für Webplattformen für einen begrenzten Zeitraum.
+
+
+
+<!-- end major 87 -->
 
 ## Version 86.0.622.43: 16. Oktober
 
