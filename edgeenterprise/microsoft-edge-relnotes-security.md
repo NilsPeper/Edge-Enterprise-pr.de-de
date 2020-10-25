@@ -3,23 +3,27 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/09/2020
+ms.date: 10/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: ac29dbb9e69f005b13e2ea7196413cc3a9a75e81
-ms.sourcegitcommit: bdd2b9f7fc6f816ed03bf57de89b87a66b9479c1
+ms.openlocfilehash: f7bb1c349db079aa3c94210752fc9c7870e5619a
+ms.sourcegitcommit: ab912e0629e3f060220f28cdecb414d292b0e37d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105800"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "11133743"
 ---
 # Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitsupdates, die in Updates für den Microsoft Edge Stable-Kanal enthalten sind.
+
+## 22. Oktober 2020
+
+Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.51)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999), das laut Chromium-Team ein aktives Exploit ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 9. Oktober 2020
 
@@ -133,4 +137,4 @@ Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal
 
 ## Weitere Informationen
 
-- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
