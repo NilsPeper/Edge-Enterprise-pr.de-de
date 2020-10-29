@@ -143,6 +143,8 @@
       href: microsoft-edge-webview-policies.md
     - name: Weitere Referenzen ansehen
       items:
+        - name: Abwärtskompatibilität für Enterprise-Registerkarte "neu"
+          href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce und DirectInvoke
           href: edge-learn-more-co-di.md
         - name: Befehlszeilenoptionen zum Konfigurieren von Proxyeinstellungen
