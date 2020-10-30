@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133293"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136118"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!IMPORTANT]
 > Lesen Sie dieses [Update zu Microsoft Edge-Kanalversionen](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Version 87.0.664.18: 26.Oktober
+
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 <!-- begin major 87 -->
 ## Version 87.0.664.12: 20.Oktober
@@ -48,7 +52,7 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 #### Neue Richtlinien
 
-Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) – Zum Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen.
 - [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) – Shopping in MicrosoftEdge aktiviert.
@@ -69,19 +73,17 @@ Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten admin
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) – Zum erneuten Aktivieren von veralteten Features für Webplattformen für einen begrenzten Zeitraum.
 
-
-
 <!-- end major 87 -->
 
-## Version 86.0.622.43: 16. Oktober
+## Version 86.0.622.43: 16.Oktober
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 86.0.622.36: 7. Oktober
+## Version 86.0.622.36: 7.Oktober
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 86.0.622.31: 1. Oktober
+## Version 86.0.622.31: 1.Oktober
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 

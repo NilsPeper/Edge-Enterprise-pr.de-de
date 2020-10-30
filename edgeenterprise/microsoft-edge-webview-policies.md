@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge WebView2-Richtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134444"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136214"
 ---
 # Microsoft Edge WebView2 –⁠ Richtlinien
 
@@ -40,8 +40,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge WebView2
 
 |Richtlinienname|Beschriftung|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|Konfigurieren des Speicherorts des ausführbaren Browser-Ordners|
-|[releaseChannelPreference](#releasechannelpreference)|Einstellen der Präferenz für die Suchreihenfolge der Veröffentlichungskanäle|
+|[BrowserExecutableFolder](#browserexecutablefolder)|Konfigurieren des Speicherorts des ausführbaren Browser-Ordners|
+|[ReleaseChannelPreference](#releasechannelpreference)|Einstellen der Präferenz für die Suchreihenfolge der Veröffentlichungskanäle|
 
 
 
@@ -50,7 +50,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge WebView2
 
   [Zurück zum Anfang](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### Konfigurieren des Speicherorts des ausführbaren Browser-Ordners
 
@@ -80,7 +80,7 @@ Um den Wert für den Ordnerpfad festzulegen, geben Sie einen Wertnamen und ein W
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - Eindeutiger Name der GP: browserExecutableFolder
+  - Eindeutiger Name der GP: BrowserExecutableFolder
   - Name der GP: Konfigurieren des Speicherorts des ausführbaren Browser-Ordners
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/WebView2/Loader Override Settings
   - GP Pfad (Empfohlen): n.a.
@@ -88,7 +88,7 @@ Um den Wert für den Ordnerpfad festzulegen, geben Sie einen Wertnamen und ein W
 
   ##### Windows-Registrierungseinstellungen
 
-  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Pfad (Empfohlen): n.a.
   - Wertname: REG_SZ-Liste
   - Werttyp: REG_SZ-Liste
@@ -96,7 +96,7 @@ Um den Wert für den Ordnerpfad festzulegen, geben Sie einen Wertnamen und ein W
   ##### Beispielwert:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -104,7 +104,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [Zurück zum Anfang](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### Einstellen der Präferenz für die Suchreihenfolge der Veröffentlichungskanäle
 
@@ -136,7 +136,7 @@ Um den Wert für den bevorzugten Veröffentlichungskanal festzulegen, geben Sie 
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - Eindeutiger Name der GP: releaseChannelPreference
+  - Eindeutiger Name der GP: ReleaseChannelPreference
   - Name der GP: Einstellen der Präferenz für die Suchreihenfolge der Veröffentlichungskanäle
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/WebView2/Loader Override Settings
   - GP Pfad (Empfohlen): n.a.
@@ -144,7 +144,7 @@ Um den Wert für den bevorzugten Veröffentlichungskanal festzulegen, geben Sie 
 
   ##### Windows-Registrierungseinstellungen
 
-  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Pfad (Empfohlen): n.a.
   - Wertname: REG_SZ-Liste
   - Werttyp: REG_SZ-Liste
@@ -152,7 +152,7 @@ Um den Wert für den bevorzugten Veröffentlichungskanal festzulegen, geben Sie 
   ##### Beispielwert:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 

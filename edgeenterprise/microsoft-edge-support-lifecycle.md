@@ -3,19 +3,19 @@ title: Microsoft Edge-Lebenszyklus
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/13/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Lebenszyklus
-ms.openlocfilehash: 6f29155362a4f942f850116ca09162d49f1dfc52
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 311041e314a5c21d1110275cafbc23aadd6b737b
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980024"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136204"
 ---
 # Microsoft Edge-Lebenszyklusrichtlinie
 
@@ -29,6 +29,13 @@ In diesem Artikel wird die Lebenszyklusrichtlinie beschrieben, die für Microsof
 Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft wird Microsoft Edge in der [Modern Lifecycle-Richtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy) enthalten sein.
 
 Als Teil dieser Richtlinie werden die unterstützten Versionen von Microsoft Edge die neueste verfügbare Version aus den Beta- und Stable-Kanälen enthalten.
+
+## Verfügbarkeit des persönlichen Supports für MicrosoftEdge
+Sicherheits- und Wartungsupdates stehen nur in den neuesten Versionen des Stable-Kanals und des Beta-Kanals zur Verfügung. Die Verwendung älterer Versionen von MicrosoftEdge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen. Wenn bei Ihrer Organisation ältere Versionen verwendet werden müssen, steht persönlicher Support für die aktuellsten drei Stable-Kanalversionen und die neueste Beta-Kanalversion zur Verfügung.  Die effektive Dauer des persönlichen Supports für eine Stable-Kanalversion beträgt ca.18Wochen. Die effektive Supportdauer für eine Beta-Kanalversion beträgt ca.6Wochen; frühere Beta-Kanalversionen werden nicht unterstützt.
+
+Microsoft empfiehlt dringend, mit der aktuellsten Stable- oder Beta-Kanalversion auf dem neuesten Stand zu bleiben.
+
+
 
 ## Weitere Informationen
 

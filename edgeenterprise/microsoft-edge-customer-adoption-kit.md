@@ -3,19 +3,19 @@ title: Microsoft Edge – Material für die Einführung bei Kunden
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/22/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge – Material für die Einführung bei Kunden
-ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: dd75deb8be985a421adc158069e5562f4428415b
+ms.sourcegitcommit: 76a48f5818c90f3edf5780cfcca5def5aeb863bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072632"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136078"
 ---
 # Material für die Einführung von Kunden für Microsoft Edge
 
@@ -29,9 +29,12 @@ Das Paket für die Einführung bei Kunden enthält das folgende Material:
 
 - IT-Bereitstellungshandbuch
 - Benutzerhandbuch – Erste Schritte
-- Ankündigungsmail
-- E-Mail mit Tipps und Tricks
+- Einführende E-Mail
+- Banner
 - Digitale Anmeldung
+- Onepager
+- Demo und GIFs
+- Webressourcen Links
 
 [Customer Adoption Kit herunterladen](https://www.microsoft.com/download/details.aspx?id=102119)
 
@@ -64,10 +67,22 @@ Verwenden Sie die folgende digitale Anmeldung, um Benutzer über den neuen Micro
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Microsoft Mechanics-Videoreihe":::
 
+### Banner
+
+Verwenden Sie diese Banner auf Ihren internen Websites, um Ihren Mitarbeitern den neuen MicrosoftEdge anzukündigen.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Microsoft Mechanics-Videoreihe":::
+
+### Onepager
+
+Senden oder posten Sie diese Onepager, um Ihre Mitarbeiter über MicrosoftEdge zu informieren und den Browser für die Verwendung am Arbeitsplatz einzurichten.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="Microsoft Mechanics-Videoreihe":::
+
 ## Andere Lernressourcen
 
 Wenn Sie daran interessiert sind, mehr über die Vorteile von Microsoft Edge zu erfahren, [besuchen Sie unsere Webseite](https://www.microsoft.com/edge/business).
 
 ## Weitere Informationen
 
-- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
