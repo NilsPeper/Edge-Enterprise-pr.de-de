@@ -3,19 +3,19 @@ title: Umleitung von Internet Explorer zu Microsoft Edge zur Kompatibilität mit
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Umleitung von Internet Explorer zu Microsoft Edge zur Kompatibilität mit modernen Websites
-ms.openlocfilehash: ce9e8dabdff25cc3ba375746ec82ddd78b6d7694
-ms.sourcegitcommit: cf991cc4bd2e70169902cbda9ddc870d70e31ca2
+ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
+ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120520"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151095"
 ---
 # Umleitung von Internet Explorer zu Microsoft Edge zur Kompatibilität mit modernen Websites
 
@@ -74,14 +74,14 @@ Die Umleitung von Internet Explorer zu Microsoft Edge erfordert ein Internet Exp
 - Wenn Sie diese Richtlinie aktivieren, wird das für die Umleitung erforderliche BHO nicht installiert, und Ihre Benutzer sehen weiterhin Inkompatibilitätsmeldungen für bestimmte Websites in Internet Explorer. Wenn das BHO bereits installiert ist, wird es beim nächsten Update des stabilen Microsoft Edge-Kanals deinstalliert.
 - Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird das BHO installiert. Hierbei handelt es sich um das standardmäßige Verhalten.
 
-Zusätzlich zur Notwendigkeit des BHO gibt es eine Abhängigkeit bei **RedirectSitesFromInternetExplorerRedirectMode**, was auf „Websiteliste“ oder „Nicht konfiguriert“ festgelegt sein muss.
+Zusätzlich zur Notwendigkeit des BHO gibt es eine Abhängigkeit bei **RedirectSitesFromInternetExplorerRedirectMode**, was auf „Websites basierend auf der Websiteliste inkompatibler Websites umleiten“ oder „Nicht konfiguriert“ festgelegt sein muss.
 
 ### Richtlinie: RedirectSitesFromInternetExplorerRedirectMode
 
  Diese Richtlinie entspricht der Microsoft Edge-**Standardbrowser**-Einstellung „Internet Explorer kann Websites in Microsoft Edge öffnen". Sie können auf diese Einstellung zugreifen, indem Sie zur URL *edge://settings/defaultbrowser* wechseln.  
 
 - Wenn Sie diese Richtlinie nicht konfigurieren oder auf „Websiteliste“ festlegen, leitet Internet Explorer inkompatible Websites zu Microsoft Edge um. Hierbei handelt es sich um das standardmäßige Verhalten.
-- Wenn Sie diese Richtlinie deaktivieren, werden inkompatible Websites nicht zu Microsoft Edge umgeleitet.
+- Wenn Sie diese Richtlinie deaktivieren möchten, wählen Sie **aktiviert** und dann in der Dropdownliste unter “Optionen: Inkompatible Websites von Internet Explorer zu Microsoft Edge umleiten” **deaktivieren** aus. In diesem Zustand werden inkompatible Websites nicht zu Microsoft Edge umgeleitet.
 
 > [!NOTE]
 > Wenn Sie ein persönliches Gerät verwenden, das nicht von Ihrem Unternehmen verwaltet wird, wird unter **Internet Explorer-Kompatibilität** die Einstellung „Zulassen, dass Websites im Internet Explorer-Modus geladen werden“ angezeigt.
@@ -104,11 +104,11 @@ Diese Richtlinie konfiguriert die Benutzererfahrung bei der Umleitung bei inkomp
 
 Wenn Sie die Umleitung VOR dem Update auf die stabile Microsoft Edge-Version 87 deaktivieren möchten, führen Sie die folgenden Schritte aus:
 
-1. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerRedirectMode** auf **Aktiviert** fest. Diese Einstellung beendet die Umleitung, sobald die Richtlinie wirksam wird.
+1. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerPreventBHOInstall** auf **Aktiviert** fest.
 
 Wenn Sie die Umleitung NACH dem Update auf die stabile Microsoft Edge-Version 87 deaktivieren möchten, führen Sie die folgenden Schritte aus:
 
-1. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerRedirectMode** auf **Deaktiviert** fest. Diese Einstellung beendet die Umleitung, sobald die Richtlinie wirksam wird.
+1. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerRedirectMode** auf **aktiviert** fest, und wählen Sie dann in der Dropdownliste unter “Optionen: Inkompatible Websites von Internet Explorer zu Microsoft Edge umleiten” **deaktivieren** aus. Diese Einstellung beendet die Umleitung, sobald die Richtlinie wirksam wird.
 2. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerPreventBHOInstall** auf **Aktiviert** fest. Damit wird das BHO nach dem nächsten Microsoft Edge-Update deinstalliert.
 
 ## Weitere Informationen
