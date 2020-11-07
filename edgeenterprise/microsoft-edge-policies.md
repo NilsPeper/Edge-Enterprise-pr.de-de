@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134464"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155312"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -29,6 +29,18 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
+## Neue und veraltete Richtlinien
+
+In der folgenden Tabelle sind neue und veraltete Richtlinien für dieses Update aufgelistet.
+
+| Name | Status |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | Neu |
+| [ProxyBypassList](#proxybypasslist) | Veraltet |
+| [ProxyMode](#proxymode) | Veraltet |
+| [ProxyPacUrl](#proxypacurl) | Veraltet |
+| [ProxyServer](#proxyserver) | Veraltet |
+
 ## Verfügbare Richtlinien
 
 In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Browser-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
@@ -39,10 +51,10 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Einstellungen für den Inhalt](#content-settings)|[Standardmäßiger Suchdienstanbieter](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP-Authentifizierung](#http-authentication)|
 |[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Systemeigenes Messaging](#native-messaging)|
-|[Kennwort-Manager und Schutz](#password-manager-and-protection)|[Drucken](#printing)|
-|[Proxyserver](#proxy-server)|[SmartScreen-Einstellungen](#smartscreen-settings)|
-|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|[Sonstiges](#additional)|
-
+|[Kennwort-Manager und Schutz](#password-manager-and-protection)|[Leistung](#performance)|
+|[Drucken](#printing)|[Proxyserver](#proxy-server)|
+|[SmartScreen-Einstellungen](#smartscreen-settings)|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|
+|[Sonstiges](#additional)|
 
 ### [*Application Guard-Einstellungen*](#application-guard-settings-policies)
 
@@ -126,7 +138,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 
 |Richtlinienname|Beschriftung|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Zulassen ursprungsübergreifender HTTP-Authentifizierungsaufforderungen|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Gibt eine Liste der Server an, an die Microsoft Edge Benutzeranmeldeinformationen delegieren kann|
 |[AuthSchemes](#authschemes)|Unterstützte Authentifizierungsschemas|
 |[AuthServerAllowlist](#authserverallowlist)|Konfigurieren der Liste der zulässigen Authentifizierungsserver|
@@ -156,6 +168,11 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Konfigurieren Sie die Liste der Unternehmens-Login-URLs, bei denen der Kennwortschutzdienst gesalzene Hashes eines Kennworts sammeln soll|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Auslösung der Warnung zum Kennwortschutz konfigurieren|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Schaltfläche „Kennwort anzeigen“ aktivieren|
+### [*Leistung*](#performance-policies)
+
+|Richtlinienname|Beschriftung|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|Startbeschleunigung aktivieren|
 ### [*Drucken*](#printing-policies)
 
 |Richtlinienname|Beschriftung|
@@ -170,10 +187,10 @@ und Tipps für Microsoft-Dienste erhalten können.|
 
 |Richtlinienname|Beschriftung|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|Konfigurieren von Proxy-Umgehungsregeln|
-|[ProxyMode](#proxymode)|Konfigurieren Sie die Proxyservereinstellungen|
-|[ProxyPacUrl](#proxypacurl)|Festlegen der URL für die Proxy .pac-Datei|
-|[ProxyServer](#proxyserver)|Konfigurieren der Adresse oder URL des Proxyservers|
+|[ProxyBypassList](#proxybypasslist)|Proxy-Umgehungsregeln konfigurieren (veraltet)|
+|[ProxyMode](#proxymode)|Proxyservereinstellungen konfigurieren (veraltet)|
+|[ProxyPacUrl](#proxypacurl)|Proxy-.pac-Datei-URL festlegen (veraltet)|
+|[ProxyServer](#proxyserver)|Adresse oder URL von Proxyservern konfigurieren (veraltet)|
 |[ProxySettings](#proxysettings)|Proxyeinstellungen|
 ### [*SmartScreen-Einstellungen*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Verwaltung der Gefährdung lokaler IP-Adressen durch WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
+|[WebWidgetAllowed](#webwidgetallowed)|Webwidget aktivieren|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start zulassen|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
 
 
@@ -546,7 +565,6 @@ Standardmäßig ist Google Cast aktiviert.
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: EnableMediaRouter
@@ -608,7 +626,6 @@ Falls Sie die Richtlinie [EnableMediaRouter](#enablemediarouter) auch auf „Fal
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -1205,7 +1215,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -1345,7 +1353,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -1485,7 +1491,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -1765,7 +1767,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -2510,7 +2501,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -3133,7 +3116,6 @@ Wenn Sie diese Einstellung deaktivieren, sind Blickpunkt-Erlebnisse und -Empfehl
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -3442,7 +3422,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -3587,7 +3565,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultSearchProviderImageURL
@@ -3654,7 +3631,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultSearchProviderImageURLPostParams
@@ -3718,7 +3694,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 ```
 "mis"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -3785,7 +3760,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 ```
 "My Intranet Search"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -3854,7 +3828,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -3925,7 +3898,6 @@ Beginnend mit Microsoft Edge 84 können Sie diese Richtlinie als empfohlene Rich
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -4004,7 +3976,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 "bing"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: NewTabPageSearchBox
@@ -4076,7 +4047,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ExtensionAllowedTypes
@@ -4138,7 +4108,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -4206,7 +4175,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -4291,7 +4259,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ExtensionInstallForcelist
@@ -4320,9 +4287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   URLs definieren, von denen Erweiterungen und Designs installiert werden können.
 
-Standardmäßig müssen Benutzer eine *.crx-Datei für jede Erweiterung oder jedes Skript, das sie installieren möchten, herunterladen und diese dann auf die Seite mit den Microsoft Edge-Einstellungen ziehen. Mit dieser Richtlinie können bestimmte URLs die Erweiterung oder das Skript für den Benutzer installieren.
+URLs definieren, von denen Erweiterungen und Designs direkt installiert werden können, ohne dass die Pakete per Drag & Drop auf die Seite edge://extensions gezogen werden müssen.
 
-Jedes Element in dieser Liste ist ein Übereinstimmungsmuster im Erweiterungs-Stil (siehe [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Benutzer können Elemente ganz einfach von einer beliebigen URL aus installieren, die einem Element in dieser Liste entspricht. Sowohl der Speicherort der Datei "*.crx" als auch die Seite, von der der Download ausgeführt wird (mit anderen Worten, der Referrer), muss von diesen Mustern her zulässig sein.
+Jedes Element in dieser Liste ist ein Übereinstimmungsmuster im Erweiterungs-Stil (siehe [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Benutzer können Elemente ganz einfach von einer beliebigen URL aus installieren, die einem Element in dieser Liste entspricht. Sowohl der Speicherort der Datei "*.crx" als auch die Seite, von der der Download ausgeführt wird (mit anderen Worten, der Referrer), muss von diesen Mustern her zulässig sein. Hosten Sie die Dateien nicht an einem Ort, für den eine Authentifizierung erforderlich ist.
 
 Die Richtlinie [ExtensionInstallBlocklist](#extensioninstallblocklist) hat Vorrang vor dieser Richtlinie. Erweiterungen, die sich in der Blockier-Liste befinden, werden nicht installiert, auch wenn sie von einer-Website in dieser Liste stammen.
 
@@ -4359,7 +4326,6 @@ Die Richtlinie [ExtensionInstallBlocklist](#extensioninstallblocklist) hat Vorra
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -4652,7 +4618,6 @@ Normalerweise ist dies als Phishing-Abwehr deaktiviert. Wenn Sie diese Richtlini
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AllowCrossOriginAuthPrompt
@@ -4714,7 +4679,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, delegiert Microsoft Edge keine Be
 ```
 "contoso.com"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -4778,7 +4742,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden alle vier Schemas verwende
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AuthSchemes
@@ -4840,7 +4803,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, versucht Microsoft Edge zu erkenn
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -4904,7 +4866,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der kanoni
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DisableAuthNegotiateCnameLookup
@@ -4966,7 +4927,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, enthält der ge
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5099,7 +5059,6 @@ Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [h
   - Unter Windows seit 87 oder später
 
   #### Beschreibung
-                                                                                              
 
   Diese Richtlinie bezieht sich nur auf Microsoft Edge-Kioskmodus.
 
@@ -5141,7 +5100,6 @@ Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [h
 ```
 0x00000001
 ```
-
 
   
 
@@ -5201,7 +5159,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5270,7 +5227,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: NativeMessagingBlocklist
@@ -5335,7 +5291,6 @@ Als Standard, falls Sie diese Richtlinie nicht konfigurieren, gestattet Microsof
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5404,7 +5359,6 @@ Wenn Sie diese Richtlinie aktivieren oder deaktivieren, können die Benutzer sie
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5484,7 +5438,6 @@ Obligatorisch und Empfohlen deaktiviert: beide Zustände funktionieren in der no
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -5543,7 +5496,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5610,7 +5562,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5691,7 +5642,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PasswordProtectionWarningTrigger
@@ -5769,6 +5719,71 @@ Diese Richtlinie hat nur Einfluss auf die Browser-Schaltfläche „Kennwort anze
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ## Leistungsrichtlinien
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### Startbeschleunigung aktivieren
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Microsoft Edge-Prozesse können bei der Betriebssystem-Anmeldung starten und nach dem Schließen des letzten Browserfensters im Hintergrund neu starten.
+
+Wenn Microsoft Edge im Hintergrundmodus ausgeführt wird, wird der Browser u. U. nicht geschlossen, wenn das letzte Fenster geschlossen wird, und nach dem Schließen des Fensters nicht im Hintergrund neu gestartet. Informationen dazu, was nach dem Konfigurieren von Microsoft Edge für den Hintergrundmodus geschieht, finden Sie in der [BackgroundModeEnabled](#backgroundmodeenabled)-Richtlinie.
+
+Wenn Sie diese Richtlinie aktivieren, ist die Startbeschleunigung aktiviert.
+
+Wenn Sie diese Richtlinie deaktivieren, ist die Startbeschleunigung deaktiviert.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, ist die Startbeschleunigung möglicherweise anfänglich aktiviert oder deaktiviert. Der Benutzer kann das Verhalten unter edge://settings/system konfigurieren.
+
+Weitere Informationen zur Startbeschleunigung finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018).
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: StartupBoostEnabled
+  - GP-Name: Startbeschleunigung aktivieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Performance
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/Performance
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: StartupBoostEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ## Richtlinien zum Drucken
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -5827,7 +5842,6 @@ Wenn ein Feld ausgelassen wird, bedeutet dies, dass alle Werte übereinstimmen. 
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -5893,7 +5907,6 @@ Wenn Sie diese Richtlinie aktivieren, drucken Benutzer immer Kopf- und Fußzeile
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PrintHeaderFooter
@@ -5956,7 +5969,6 @@ Wenn Sie diese Richtlinie aktivieren, verwendet die Seitenansicht den Standarddr
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PrintPreviewUseSystemDefaultPrinter
@@ -6018,7 +6030,6 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer nicht aus Microsoft Edg
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -6168,7 +6179,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, wird mit den Dr
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: UseSystemPrintDialog
@@ -6186,9 +6196,9 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, wird mit den Dr
 
   ### ProxyBypassList
 
-  #### Konfigurieren von Proxy-Umgehungsregeln
+  #### Proxy-Umgehungsregeln konfigurieren (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
 
@@ -6196,9 +6206,11 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, wird mit den Dr
 
   #### Beschreibung
 
-  Gibt eine Liste von Hosts an, für die Microsoft Edge jeden Proxy umgeht.
+  Diese Richtlinie ist veraltet. Verwenden Sie stattdessen [ProxySettings](#proxysettings). Funktioniert nicht in Microsoft Edge Version 91.
 
-Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie [ProxyMode](#proxymode) die Option "festgelegte Proxy Server verwenden" ausgewählt haben. Wenn Sie irgend einen anderen Modus zum Konfigurieren von Proxy-Richtlinien ausgewählt haben, sollten Sie diese Richtlinie nicht aktivieren oder konfigurieren.
+Gibt eine Liste von Hosts an, für die Microsoft Edge jeden Proxy umgeht.
+
+Diese Richtlinie wird nur angewendet, wenn die Richtlinie für [ProxySettings](#proxysettings) nicht angegeben ist und Sie in der Richtlinie [ProxyMode](#proxymode) „fixed_servers“ ausgewählt haben. Wenn Sie irgend einen anderen Modus zum Konfigurieren von Proxy-Richtlinien ausgewählt haben, sollten Sie diese Richtlinie nicht aktivieren oder konfigurieren.
 
 Wenn Sie diese Richtlinie aktivieren, können Sie eine Liste mit Hosts erstellen, für die Microsoft Edge keinen Proxy verwendet.
 
@@ -6221,7 +6233,7 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: ProxyBypassList
-  - GP-Name: Konfigurieren von Proxy-Umgehungsregeln
+  - GP-Name: Proxy-Umgehungsregeln konfigurieren (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Proxy server
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -6239,7 +6251,6 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ProxyBypassList
@@ -6253,9 +6264,9 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
 
   ### ProxyMode
 
-  #### Konfigurieren Sie die Proxyservereinstellungen
+  #### Proxyservereinstellungen konfigurieren (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
 
@@ -6263,21 +6274,20 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
 
   #### Beschreibung
 
-  Legen Sie die Proxyservereinstellungen fest, die von Microsoft Edge verwendet werden. Wenn Sie diese Richtlinie aktivieren, können die Benutzer die Proxyeinstellungen nicht ändern.
+  Diese Richtlinie ist veraltet. Verwenden Sie stattdessen [ProxySettings](#proxysettings). Funktioniert nicht in Microsoft Edge Version 91.
 
-Wenn Sie niemals einen Proxyserver verwenden und immer eine direkte Verbindung herstellen, werden alle anderen Optionen ignoriert.
+Wenn Sie diese Richtlinie aktivieren, können Sie den von Microsoft Edge verwendeten Proxyserver angeben, und Benutzer können die Proxyeinstellungen nicht ändern. Microsoft Edge ignoriert alle Proxy-bezogenen Optionen, die über die Befehlszeile angegeben werden. Diese Richtlinie wird nur angewendet, wenn die Richtlinie für [ProxySettings](#proxysettings) nicht angegeben wurde.
 
-Wenn Sie die System-Proxyeinstellungen verwenden, werden alle anderen Optionen ignoriert.
+Wenn Sie eine der folgenden Optionen auswählen, werden andere Optionen ignoriert:
+  * direct = nie einen Proxy Server verwenden und immer eine direkte Verbindung herstellen
+  * system = System-Proxyeinstellungen verwenden
+  * auto_detect = Proxyserver automatisch bestimmen
 
-Wenn Sie den Proxyserver automatisch erkennen möchten, werden alle anderen Optionen ignoriert.
-
-Wenn Sie den Proxymodus für feste Server auswählen, können Sie unter [ProxyServer](#proxyserver) und „durch Kommas getrennte Liste von Proxy-Umgehungsregeln“ weitere Optionen festlegen.
-
-Wenn Sie ein PAC-Proxyskript verwenden, müssen Sie dem Skript die URL unter 'URL zu einer PAC-Proxydatei' mitteilen.
+Bei Auswahl folgender Optionen:
+  * fixed_servers = festgelegte Proxyserver verwenden. Sie können weitere Optionen mit [Proxyserver](#proxyserver) und [ProxyBypassList](#proxybypasslist) angeben.
+  * pac_script = .pac-Proxyskript verwenden. Verwenden Sie [ProxyPacUrl](#proxypacurl), um die URL zu einer Proxy-.pac-Datei anzugeben.
 
 Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-Wenn Sie diese Richtlinie aktivieren, ignoriert Microsoft Edge alle Proxy-bezogenen Optionen, die von der Befehlszeile aus angegeben wurden.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer ihre eigenen Proxyeinstellungen auswählen.
 
@@ -6310,7 +6320,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger Name der GP: ProxyMode
-  - GP-Name: Konfigurieren Sie die Proxyservereinstellungen
+  - GP-Name: Proxyservereinstellungen konfigurieren (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Proxy server
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -6328,7 +6338,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 "direct"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ProxyMode
@@ -6342,9 +6351,9 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   ### ProxyPacUrl
 
-  #### Festlegen der URL für die Proxy .pac-Datei
+  #### Proxy-.pac-Datei-URL festlegen (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
 
@@ -6352,9 +6361,11 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### Beschreibung
 
-  Legt die URL für eine Proxy-Autokonfigurationsdatei (PAC-Datei) fest.
+  Diese Richtlinie ist veraltet. Verwenden Sie stattdessen [ProxySettings](#proxysettings). Funktioniert nicht in Microsoft Edge Version 91.
 
-Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie [ProxyMode](#proxymode) die Option "Ein .pac-Proxyskript verwenden" ausgewählt haben. Wenn Sie irgend einen anderen Modus zum Konfigurieren von Proxy-Richtlinien ausgewählt haben, sollten Sie diese Richtlinie nicht aktivieren oder konfigurieren.
+Legt die URL für eine Proxy-Autokonfigurationsdatei (PAC-Datei) fest.
+
+Diese Richtlinie wird nur angewendet, wenn die Richtlinie für [ProxySettings](#proxysettings) nicht angegeben ist und Sie in der Richtlinie [ProxyMode](#proxymode) „pac_script“ ausgewählt haben. Wenn Sie irgend einen anderen Modus zum Konfigurieren von Proxy-Richtlinien ausgewählt haben, sollten Sie diese Richtlinie nicht aktivieren oder konfigurieren.
 
 Wenn Sie diese Richtlinie aktivieren, können Sie die URL für eine PAC-Datei angeben, die definiert, wie der Browser automatisch den richtigen Proxyserver auswählt, um eine bestimmte Website abzurufen.
 
@@ -6377,7 +6388,7 @@ Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linki
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger Name der GP: ProxyPacUrl
-  - GP-Name: Festlegen der URL für die Proxy .pac-Datei
+  - GP-Name: Proxy-.pac-Datei-URL festlegen (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Proxy server
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -6395,7 +6406,6 @@ Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linki
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ProxyPacUrl
@@ -6409,9 +6419,9 @@ Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linki
 
   ### ProxyServer
 
-  #### Konfigurieren der Adresse oder URL des Proxyservers
+  #### Adresse oder URL von Proxyservern konfigurieren (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
 
@@ -6419,9 +6429,11 @@ Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linki
 
   #### Beschreibung
 
-  Gibt die URL des Proxyservers an.
+  Diese Richtlinie ist veraltet. Verwenden Sie stattdessen [ProxySettings](#proxysettings). Funktioniert nicht in Microsoft Edge Version 91.
 
-Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie [ProxyMode](#proxymode) die Option "festgelegte Proxy Server verwenden" ausgewählt haben. Wenn Sie irgend einen anderen Modus zum Konfigurieren von Proxy-Richtlinien ausgewählt haben, sollten Sie diese Richtlinie nicht aktivieren oder konfigurieren.
+Gibt die URL des Proxyservers an.
+
+Diese Richtlinie wird nur angewendet, wenn die Richtlinie für [ProxySettings](#proxysettings) nicht angegeben ist und Sie in der Richtlinie [ProxyMode](#proxymode) „fixed_servers“ ausgewählt haben. Wenn Sie irgend einen anderen Modus zum Konfigurieren von Proxy-Richtlinien ausgewählt haben, sollten Sie diese Richtlinie nicht aktivieren oder konfigurieren.
 
 Wenn Sie diese Richtlinie aktivieren, wird der durch diese Richtlinie konfigurierte Proxy Server für alle URLs verwendet.
 
@@ -6444,7 +6456,7 @@ Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microso
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger Name der GP: ProxyServer
-  - GP-Name: Konfigurieren der Adresse oder URL des Proxyservers
+  - GP-Name: Adresse oder URL von Proxyservern konfigurieren (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Proxy server
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -6461,7 +6473,6 @@ Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microso
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -6499,23 +6510,20 @@ Mit dieser Richtlinie werden die folgenden einzelnen Richtlinien außer Kraft ge
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-Im Feld ProxyMode können Sie den von Microsoft Edge verwendeten Proxyserver angeben. Dies verhindert, dass Benutzer Proxyeinstellungen ändern.
+Beim Festlegen der [ProxySettings](#proxysettings)-Richtlinie sind die folgenden Felder zulässig:
+  * „ProxyMode“, über das Sie den von Microsoft Edge verwendeten Proxyserver angeben können. Dies verhindert, dass Benutzer Proxyeinstellungen ändern.
+  * „ProxyPacUrl“, eine URL zu einer Proxy-.pac-Datei
+  * „ProxyServer“, eine URL für den Proxy Server
+  * „ProxyBypassList“, eine Liste von Proxy-Hosts, die von Microsoft Edge umgangen werden
 
-Das Feld ProxyPacUrl ist eine URL zu einer Proxy-.pac-Datei.
+Bei Auswahl der folgenden Werte für „ProxyMode“:
+  * direct: Es wird kein Proxy verwendet, und alle anderen Felder werden ignoriert.
+  * system: Es wird der Proxy des Systems verwendet, und alle anderen Felder werden ignoriert.
+  * auto_detect: Alle anderen Felder werden ignoriert.
+  * fixed_server: Es werden die Felder "Proxyserver" und "ProxyBypassList" verwendet.
+  * pac_script: Es werden die Felder "ProxyPacUrl" und "ProxyBypassList" verwendet.
 
-Das ProxyServer-Feld ist eine URL für den Proxy Server.
-
-Das Feld ProxyBypassList ist eine Liste der Proxy Hosts, die von Microsoft Edge umgangen werden.
-
-Wenn Sie den Wert „direct“ als "ProxyMode" auswählen, wird kein Proxy verwendet, und alle anderen Felder werden ignoriert.
-
-Wenn Sie den Wert "system" als "ProxyMode" auswählen, wird der Proxy des Systems verwendet, und alle anderen Felder werden ignoriert.
-
-Wenn Sie den Wert "auto_detect" als "ProxyMode" auswählen, werden alle anderen Felder ignoriert.
-
-Wenn Sie den Wert "fixed_server" als "ProxyMode" auswählen, werden die Felder "Proxyserver" und "ProxyBypassList" verwendet.
-
-Wenn Sie den Wert "pac_script" als "ProxyMode" auswählen, werden die Felder "ProxyPacUrl" und "ProxyBypassList" verwendet.
+Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Unterstützte Funktionen:
 
@@ -6640,7 +6648,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PreventSmartScreenPromptOverride
@@ -6705,7 +6712,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -6773,7 +6779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -6844,7 +6849,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SmartScreenEnabled
@@ -6909,7 +6913,6 @@ Diese Richtlinie gilt nur für Windows-Instanzen, die mit einer Microsoft Active
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -6968,7 +6971,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -7040,7 +7042,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: HomepageIsNewTabPage
@@ -7108,7 +7109,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -7179,7 +7179,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -7347,7 +7346,6 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder sie nicht konfigurieren, b
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: NewTabPageHideDefaultTopSites
@@ -7417,7 +7415,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -7578,7 +7575,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: NewTabPagePrerenderEnabled
@@ -7661,7 +7657,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: NewTabPageSetFeedType
@@ -7740,7 +7735,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000004
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: RestoreOnStartup
@@ -7804,7 +7798,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -7871,7 +7864,6 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ShowHomeButton
@@ -7935,7 +7927,6 @@ Wenn Sie die Richtlinien für einen standardmäßigen Suchanbieter ([DefaultSear
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8003,7 +7994,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AdsSettingForIntrusiveAdsSites
@@ -8033,7 +8023,7 @@ Beachten Sie, dass auch bei Abschaltung dieser Richtlinie nicht sichergestellt i
 
 Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer den Browser- und Downloadverlauf löschen.
 
-Wenn Sie diese Richtlinie deaktivieren, können Benutzer den Browser- und Downloadverlauf nicht löschen.
+Wenn Sie diese Richtlinie deaktivieren, können Benutzer den Browser- und Downloadverlauf nicht löschen, und die Verlaufssynchronisierung ist deaktiviert.
 
 Wenn Sie diese Richtlinie aktivieren, aktivieren Sie die Richtlinie [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) nicht, da sich beide auf das Löschen von Daten auswirken. Wenn Sie beide Optionen aktivieren, hat die [ClearBrowsingDataOnExit](#clearbrowsingdataonexit)-Richtlinie Vorrang und löscht alle Daten, wenn Microsoft Edge geschlossen wird – unabhängig davon, wie diese Richtlinie konfiguriert ist.
 
@@ -8069,7 +8059,6 @@ Wenn Sie diese Richtlinie aktivieren, aktivieren Sie die Richtlinie [ClearBrowsi
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8132,7 +8121,6 @@ Wenn Sie diese Richtlinie deaktivieren und der Benutzer eine Aktion ausführt, d
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8198,7 +8186,6 @@ Diese Richtlinie wird künftig entfernt.
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AllowPopupsDuringPageUnload
@@ -8258,7 +8245,6 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer 
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8323,7 +8309,6 @@ Wenn Sie diese Richtlinie deaktivieren oder diese Richtlinie nicht konfigurieren
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8394,7 +8379,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -8451,7 +8435,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8521,7 +8504,6 @@ Insbesondere gibt es ein Auswahlfeld namens **ähnliche Seiten vorschlagen, wenn
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AlternateErrorPagesEnabled
@@ -8583,7 +8565,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder nicht aktivieren, öffnet Mic
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8669,7 +8650,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AmbientAuthenticationInPrivateModesEnabled
@@ -8729,7 +8709,6 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder nicht festlegen, folgt App
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8793,7 +8772,6 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, verwendet Micr
 "en"
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -8850,7 +8828,6 @@ Diese Richtlinie wirkt sich auf alle Arten von Audio-Eingabegeräten aus, nicht 
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8911,7 +8888,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -8982,7 +8958,6 @@ Diese Richtlinie soll Unternehmen Flexibilität beim Deaktivieren der Audio-Sand
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -9096,7 +9071,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -9295,7 +9269,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: AutoOpenAllowedForURLs
@@ -9372,7 +9345,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: AutoOpenFileTypes
@@ -9440,7 +9412,6 @@ Beachten Sie, dass Sie, wenn Sie diese Richtlinie deaktivieren, auch alle Aktivi
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AutofillAddressEnabled
@@ -9502,7 +9473,6 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer 
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -9571,7 +9541,6 @@ Eine Registerkarte muss geschlossen und erneut geöffnet werden, damit diese Ric
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AutoplayAllowed
@@ -9636,7 +9605,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist der Hintergrundmodus anfängl
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -9691,7 +9659,6 @@ Wenn Sie diese Einstellung deaktivieren, wird die Liste der verfügbaren Vorlage
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -9765,7 +9732,6 @@ Wenn Sie weitere Informationen zu dieser Richtlinie erhalten möchten oder die f
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: BingAdsSuppression
@@ -9830,7 +9796,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Cookies von Drittanbietern
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: BlockThirdPartyCookies
@@ -9891,7 +9856,6 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer im Identitäts-Flyoutme
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -9955,7 +9919,6 @@ Wenn Sie diese Richtlinie deaktivieren, lässt Microsoft Edge keine Benutzer in 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: BrowserGuestModeEnabled
@@ -10017,7 +9980,6 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, sendet Microsoft 
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10095,7 +10057,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: BrowserSignin
@@ -10161,7 +10122,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist der integrierte DNS-Client au
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10274,7 +10234,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: CertificateTransparencyEnforcementDisabledForCas
@@ -10346,7 +10305,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10415,7 +10373,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10486,7 +10443,6 @@ Konfigurieren Sie die [SaveCookiesOnExit](#savecookiesonexit)-Richtlinie, um das
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ClearBrowsingDataOnExit
@@ -10552,7 +10508,6 @@ Wenn Sie diese Richtlinie deaktivieren, aktivieren Sie die Richtlinie [ClearBrow
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10622,7 +10577,6 @@ Weitere Informationen zu ClickOnce finden Sie unter [https://go.microsoft.com/fw
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -10648,6 +10602,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden keine Beschränkungen für
 Zuordnung von Richtlinienoptionen:
 
 * pinterest_suggestions (pinterest_suggestions) = Pinterest-Vorschläge
+
+* collections_share (collections_share) = Sammlungen freigeben
 
 Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
 
@@ -10682,9 +10638,9 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10693,6 +10649,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10751,7 +10708,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10814,7 +10770,6 @@ Einige Komponenten sind jedoch von dieser Richtlinie ausgenommen. Dazu gehört j
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -10880,7 +10835,6 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ConfigureDoNotTrack
@@ -10901,6 +10855,7 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
   #### Unterstützte Versionen:
 
   - Unter Windows seit 87 oder später
+  - Auf macOS ab 88 oder höher
 
   #### Beschreibung
 
@@ -10963,6 +10918,13 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000003
 ```
 
+  #### Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: ConfigureFriendlyURLFormat
+  - Beispielwert:
+``` xml
+<integer>3</integer>
+```
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -11028,7 +10990,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -11085,7 +11046,6 @@ Hier finden Sie weitere Informationen zu diesem Feature: SpeechSynthesis-API: [h
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -11155,7 +11115,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -11212,7 +11171,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -11278,7 +11236,6 @@ Wenn Sie diese Richtlinie deaktivieren, werden DNS-Abfangprüfungen nicht ausgef
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DNSInterceptionChecksEnabled
@@ -11343,7 +11300,6 @@ Hinweis für Windows-Administratoren: Diese Richtlinie funktioniert nur für PCs
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultBrowserSettingEnabled
@@ -11407,7 +11363,6 @@ Der Wert für die Richtlinie wird nur dann angewendet, wenn die Richtlinie „[D
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -11481,7 +11436,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultSensorsSetting
@@ -11553,7 +11507,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -11629,7 +11582,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -11684,7 +11636,6 @@ Wenn Sie diese Richtlinie auf "deaktiviert" festlegen oder die Richtlinie nicht 
 ```
 0x00000000
 ```
-
 
   
 
@@ -11752,7 +11703,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -11840,7 +11790,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: DiagnosticData
@@ -11907,7 +11856,6 @@ Weitere Informationen zu DirectInvoke finden Sie unter [https://go.microsoft.com
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -11962,7 +11910,6 @@ Wenn die [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)-Ric
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -12028,7 +11975,6 @@ Bitte beachten Sie, dass diese Richtlinie sich auf Screenshots auswirkt, die im 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DisableScreenshots
@@ -12093,7 +12039,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird das standardmäßige Cacheve
 "${user_home}/Edge_cache"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DiskCacheDir
@@ -12157,7 +12102,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird die Standardgröße verwende
 ```
 0x06400000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -12235,7 +12179,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 "off"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DnsOverHttpsMode
@@ -12302,7 +12245,6 @@ Falsch formatierte Vorlagen werden ignoriert.
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DnsOverHttpsTemplates
@@ -12368,7 +12310,6 @@ Wenn der Ordner, der vom Pfad angegeben wird, nicht vorhanden ist, wird beim Her
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -12454,7 +12395,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DownloadRestrictions
@@ -12516,7 +12456,6 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer nicht auf Sammlungen in
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -12640,7 +12579,6 @@ Deaktivieren Sie diese Richtlinie, um zu verhindern, dass Benutzer Favoriten hin
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: EditFavoritesEnabled
@@ -12659,7 +12597,6 @@ Deaktivieren Sie diese Richtlinie, um zu verhindern, dass Benutzer Favoriten hin
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Unterstützte Versionen:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12716,7 +12653,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -12790,7 +12726,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird die Liste der Domänenaktion
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: EnableDomainActionsDownload
@@ -12852,7 +12787,6 @@ Wenn Sie die Richtlinie deaktivieren oder nicht konfigurieren, führt Microsoft 
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -12918,7 +12852,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: EnableSha1ForLocalAnchors
@@ -12978,7 +12911,6 @@ Diese Richtlinie gilt auch für Komponentenerweiterungen.
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13041,7 +12973,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, sehen die Benut
 ```
 0x00000000
 ```
-
 
   
 
@@ -13112,7 +13043,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13201,7 +13131,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ExperimentationAndConfigurationServiceControl
@@ -13270,7 +13199,6 @@ Wenn Sie ab Microsoft Edge 84 diese Richtlinie nicht konfigurieren, kann der Ben
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13332,7 +13260,6 @@ Wenn Sie diese Richtlinie deaktivieren, wird die Seite Family Safety nicht angez
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13397,7 +13324,6 @@ Wenn diese Richtlinie nicht konfiguriert ist, kann der Benutzer entscheiden, die
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13475,7 +13401,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ForceBingSafeSearch
@@ -13537,7 +13462,6 @@ Wenn Sie diese Richtlinie auf "false" festlegen oder Sie nicht konfigurieren, w�
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13603,7 +13527,6 @@ Im kurzlebigen Modus werden Profildaten nur für die Dauer der Benutzersitzung a
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ForceEphemeralProfiles
@@ -13665,7 +13588,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird SafeSearch
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13731,7 +13653,6 @@ Diese Unternehmensrichtlinie ist standardmäßig deaktiviert.
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ForceLegacyDefaultReferrerPolicy
@@ -13794,7 +13715,6 @@ Diese Richtlinie ist standardmäßig deaktiviert. Wenn sie aktiviert ist, sind B
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -13853,7 +13773,6 @@ Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#b
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -13929,7 +13848,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ForceYouTubeRestrict
@@ -13994,7 +13912,6 @@ Das Öffnen von Microsoft Edge im Kioskmodus mithilfe der Befehlszeile ist nicht
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -14053,7 +13970,6 @@ Diese Richtlinie dient dazu, Unternehmen je nach Legacy-Verhalten die Möglichke
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14123,7 +14039,6 @@ Beliebte Einzelwort-Suchbegriffe benötigen eine manuelle Auswahl von Suchvorsch
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14182,7 +14097,6 @@ Beliebte Einzelwort-Suchbegriffe benötigen eine manuelle Auswahl von Suchvorsch
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14245,7 +14159,6 @@ Wenn Sie diese Richtlinie deaktivieren, ist die Hardwarebeschleunigung deaktivie
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14330,7 +14243,6 @@ Hinweis: die spezifischen Konfigurationsoptionen, die dem Benutzer in der Erstau
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14457,7 +14369,6 @@ Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Micro
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportAutofillFormData
@@ -14526,7 +14437,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportBrowserSettings
@@ -14592,7 +14502,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14662,7 +14571,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportExtensions
@@ -14730,7 +14638,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14800,7 +14707,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportHistory
@@ -14868,7 +14774,6 @@ Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Micro
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -14938,7 +14843,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportOpenTabs
@@ -15006,7 +14910,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -15076,7 +14979,6 @@ Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Micro
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportSavedPasswords
@@ -15145,7 +15047,6 @@ Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Micro
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ImportSearchEngine
@@ -15211,7 +15112,6 @@ Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass 
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -15287,7 +15187,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: InPrivateModeAvailability
@@ -15347,7 +15246,6 @@ Wenn Sie diese Richtlinie deaktivieren, werden für unsichere Formulare keine Wa
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -15415,7 +15313,6 @@ Beachten Sie, dass die Richtlinie pro Renderer angewendet wird, wobei der aktuel
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -15493,7 +15390,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -15555,7 +15451,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -15606,7 +15501,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15683,7 +15577,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -15700,15 +15593,17 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### Beschreibung
 
-  Diese Richtlinie ersetzt die Kennzeichnungsrichtlinie für IE-Modus-Tests. Sie ermöglicht es Benutzern, einen IE-Modus-Tab über die Menüoption für die Benutzeroberfläche zu öffnen.
+  Diese Richtlinie ermöglicht Benutzern das Testen von Anwendungen im Internet Explorer-Modus durch Öffnen eines IE-Modus-Tabs in Microsoft Edge.
+
+Dies ist über das Menü "Weitere Tools" durch Auswahl der Option "Websites im Internet Explorer-Modus öffnen" möglich.
+
+Darüber hinaus können Benutzer ihre Anwendungen in einem modernen Browser testen, ohne Anwendungen aus der Websiteliste zu entfernen, indem sie die Option "Websites im Edge-Modus öffnen" verwenden.
 
 Diese Einstellung funktioniert in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) auf „IEMode“ und der Richtlinie „[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)“, wenn die Liste mindestens einen Eintrag hat.
 
-Wenn Sie diese Richtlinie aktivieren, können Benutzer einen IE-Modus-Tab über die Benutzeroberflächenoption öffnen und von der aktuellen Website zu einer IE-Modus-Website wechseln.
+Wenn Sie diese Richtlinie aktivieren, wird die Option "Websites im Internet Explorer-Modus öffnen" unter "Weitere Tools" angezeigt. Benutzer können ihre Websites im Internet Explorer-Modus in diesem Tab anzeigen. Die Option "Websites im Edge-Modus öffnen" wird auch unter "Weitere Tools" angezeigt, um das Testen von Websites in einem modernen Browser zu ermöglichen, ohne sie aus der Websiteliste zu entfernen.
 
-Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Benutzeroberflächenoption im Menü nicht direkt anzeigen.
-
-Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung für IE-Modus-Tests manuell einrichten.
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Optionen "Im Internet Explorer-Modus öffnen" und "Im Edge-Modus öffnen" nicht im Menü "Weitere Tools" angezeigt. Benutzer können diese Optionen jedoch mit dem --ie-mode-test-Flag konfigurieren.
 
   #### Unterstützte Funktionen:
 
@@ -15742,7 +15637,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Sie die Kennzeichnung fü
 ```
 0x00000000
 ```
-
 
   
 
@@ -15802,7 +15696,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellun
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -15871,7 +15764,6 @@ Zur Anwendung dieser Richtlinie ist ein Browser-Neustart erforderlich.
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -16232,7 +16124,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Standardwert (32) verwen
 0x00000020
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: MaxConnectionsPerProxy
@@ -16296,7 +16187,6 @@ Wenn die Richtlinie [EnableMediaRouter](#enablemediarouter) deaktiviert ist, hat
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -16368,7 +16258,6 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: MetricsReportingEnabled
@@ -16433,7 +16322,6 @@ Wenn diese Richtlinie nicht festgelegt wurde, wird die Erkennung der Fensterübe
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -16492,7 +16380,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird das Standardzeitlimit von 2 
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16558,7 +16445,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 0x00000002
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -16626,7 +16512,6 @@ Diese Richtlinie gilt nur für Windows-Instanzen, die mit einer Microsoft Active
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -16685,7 +16570,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -16752,7 +16636,6 @@ Wenn Sie diese Richtlinie aktivieren oder diese Richtlinie nicht festlegen, kön
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PaymentMethodQueryEnabled
@@ -16814,7 +16697,6 @@ Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Einstellung nic
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -16880,7 +16762,6 @@ Benutzereinstellungen zum Aktivieren oder Deaktivieren des Assistenten zum Anhef
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -16937,7 +16818,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist die proaktive Authentifizieru
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -17001,7 +16881,6 @@ Wenn Sie diese Richtlinie deaktivieren (auf "false" festlegen), kann Microsoft E
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: PromotionalTabsEnabled
@@ -17063,7 +16942,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellun
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -17128,7 +17006,6 @@ QUIC ist ein Tranportschicht-Netzwerkprotokoll, das die Leistung von Webanwendun
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -17215,8 +17092,6 @@ Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsof
   Mit dieser Einstellung können Sie angeben, ob Internet Explorer Navigationsanforderungen für Websites, die einen modernen Browser benötigen, zu Microsoft Edge umleitet.
 
 Wenn Sie diese Richtlinie nicht konfigurieren oder auf „Websiteliste“ festlegen, leitet Internet Explorer ab M87 inkompatible Websites, die einen modernen Browser benötigen, zu Microsoft Edge um.
-
-Microsoft stellt eine Liste öffentlicher Websites bereit, für die eine solche Umleitung erforderlich ist, beispielsweise https://mail.yahoo.com.
 
 Wenn eine Website von Internet Explorer zu Microsoft Edge umgeleitet wird, wird die Internet Explorer-Registerkarte, auf der die Website geladen wurde, geschlossen, wenn Sie keine vorherigen Inhalte hatte. Andernfalls wird die Registerkarte zu einer Microsoft-Hilfeseite weitergeleitet, die erklärt, warum die Website an Microsoft Edge umgeleitet wurde.
 
@@ -17334,7 +17209,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: RelaunchNotification
@@ -17397,7 +17271,6 @@ Wenn diese Option nicht festgelegt ist, wird der Standardzeitraum von 604800000 
 0x240c8400
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: RelaunchNotificationPeriod
@@ -17458,7 +17331,6 @@ Das Deaktivieren dieser Richtlinie wirkt sich negativ auf die Sicherheit und Sta
 0x00000000
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -17513,7 +17385,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, verwendet Micro
 ```
 0x00000000
 ```
-
 
   
 
@@ -17574,7 +17445,6 @@ Insbesondere gibt es ein Wahlfeld **Verwenden eines Webdiensts zum Beheben von N
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -17637,7 +17507,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder sie leer lassen, können Benu
 ```
 ".*@contoso.com"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -17703,7 +17572,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Standardpfad für den Se
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -17761,7 +17629,6 @@ Weitere Informationen zur Verwendung von Server gespeicherten Benutzerprofilen f
 0x00000001
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -17816,7 +17683,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Adobe Fl
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -17880,7 +17746,6 @@ Wenn Sie diese Richtlinie deaktivieren, werden die Benutzer daran gehindert, jeg
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SSLErrorOverrideAllowed
@@ -17904,7 +17769,7 @@ Wenn Sie diese Richtlinie deaktivieren, werden die Benutzer daran gehindert, jeg
 
   #### Beschreibung
 
-  Sets the minimum supported version of TLS. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge eine Standard-Minimalversion, TLS 1.0.
+  Sets the minimum supported version of TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
 
 Wenn Sie diese Richtlinie festlegen, verwendet Microsoft Edge keine SSL/TLS-Versionen, die niedriger als die angegebene Version sind. Jeder nicht erkannte Wert wird ignoriert.
 
@@ -17950,7 +17815,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
 "tls1"
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18023,7 +17887,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: SaveCookiesOnExit
@@ -18089,7 +17952,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Browse
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SavingBrowserHistoryDisabled
@@ -18148,7 +18010,6 @@ Wenn Sie diese Richtlinie deaktivieren, treten beim Aufrufen von Screen-Share-AP
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18211,7 +18072,6 @@ Wenn Sie diese Richtlinie deaktivieren, wird der Webseiten-Bildlauf zu bestimmte
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18277,7 +18137,6 @@ Wenn diese Richtlinie nicht festgelegt wurde, sind Suchvorschläge aktiviert, ab
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SearchSuggestEnabled
@@ -18339,7 +18198,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SecurityKeyPermitAttestation
@@ -18399,7 +18257,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18461,7 +18318,6 @@ Um diese Richtlinie zu aktivieren, muss [MetricsReportingEnabled](#metricsreport
 ```
 0x00000000
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18530,7 +18386,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18603,7 +18458,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SensorsBlockedForUrls
@@ -18674,7 +18528,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18747,7 +18600,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SerialBlockedForUrls
@@ -18812,7 +18664,6 @@ Wenn Sie diese Richtlinie deaktivieren, wird die Verknüpfung nicht angezeigt.
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ShowOfficeShortcutInFavoritesBar
@@ -18874,7 +18725,6 @@ Wenn diese Richtlinie auf deaktiviert festgelegt ist, können signierte HTTP-Aus
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -18938,7 +18788,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutze
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19064,7 +18913,6 @@ Wenn Sie diese Richtlinie deaktivieren, kann der Benutzer keine Rechtsschreibpr�
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SpellcheckEnabled
@@ -19135,7 +18983,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -19199,7 +19046,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -19258,7 +19104,6 @@ Diese Richtlinie wirkt sich nicht auf andere Typen von gemischten Inhalten auße
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19320,7 +19165,6 @@ Wenn diese Richtlinie falsch oder nicht festgelegt ist, werden die Warnungen auf
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SuppressUnsupportedOSWarning
@@ -19380,7 +19224,6 @@ Wenn Sie diese Richtlinie nicht festlegen oder sie nicht wie empfohlen anwenden,
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19444,7 +19287,6 @@ Benutzer sind nicht dazu in der Lage, die Deaktivierung von Datentypen außer Kr
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19513,7 +19355,6 @@ Diese Richtlinie kann verwendet werden, um auf betroffene Proxys zu testen und d
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19586,7 +19427,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: TLSCipherSuiteDenyList
@@ -19655,7 +19495,6 @@ Wenn Sie diese Richtlinie deaktivieren, werden keine Registerkarten eingefroren.
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: TabFreezingEnabled
@@ -19713,7 +19552,6 @@ Wenn Sie diese Richtlinie deaktivieren, werden keine Registerkarten eingefroren.
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19776,7 +19614,6 @@ Wenn Sie diese Richtlinie nicht festlegen, versucht der Browser nur dann, Speich
 ```
 0x00000800
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -19850,7 +19687,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: TrackingPrevention
@@ -19915,7 +19751,6 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: TranslateEnabled
@@ -19938,7 +19773,6 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
   - Auf Windows und macOS ab 77 oder höher
 
   #### Beschreibung
-                    
 
   Das Aktivieren der Richtlinie ermöglicht den Zugriff auf die aufgelisteten URLs, als Ausnahmen zur [URLBlocklist](#urlblocklist).
 
@@ -19991,7 +19825,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -20075,7 +19908,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: URLBlocklist
@@ -20149,7 +19981,6 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, ist die Funktion 
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: UserAgentClientHintsEnabled
@@ -20216,7 +20047,6 @@ Eine Liste der Variablen, die verwendet werden können, finden Sie unter [https:
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: UserDataDir
@@ -20279,7 +20109,6 @@ Wenn Sie diese Richtlinie festlegen, werden alte Momentaufnahmen nach Bedarf gel
 0x00000003
 ```
 
-
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -20334,7 +20163,6 @@ Wenn Sie diese Richtlinie deaktivieren, können die Benutzer Microsoft Edge Feed
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -20400,7 +20228,6 @@ Diese Richtlinie wirkt sich auf alle Arten von Video-Eingaben aus, nicht nur auf
 0x00000000
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: VideoCaptureAllowed
@@ -20460,7 +20287,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -20528,7 +20354,6 @@ Unabhängig davon, ob und wie diese Richtlinie aktiviert ist, kann die WPAD-Opti
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -20745,7 +20570,6 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
 0x00000001
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: WebComponentsV0Enabled
@@ -20763,7 +20587,6 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
 
   >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
-                     
   #### Unterstützte Versionen:
 
   - Auf Windows und macOS ab 77, bis 84
@@ -20811,7 +20634,6 @@ Wenn die Richtlinie deaktiviert oder nicht konfiguriert ist, ist es WebDriver ni
 ```
 0x00000001
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -20880,7 +20702,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Mac – Informationen und Einstellungen
   
@@ -20961,7 +20782,6 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 "default"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: WebRtcLocalhostIpHandling
@@ -21024,7 +20844,6 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 "10000-11999"
 ```
 
-
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: WebRtcUdpPortRange
@@ -21032,6 +20851,130 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Webwidget aktivieren
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Aktiviert das Webwidget. Wenn diese Option aktiviert ist, können Benutzer das Widget verwenden, um im Internet vom Desktop aus oder über eine Anwendung zu suchen. Das Widget bietet ein Suchfeld, im dem Webvorschläge angezeigt werden, und öffnet alle Websuchen in Microsoft Edge. Im Suchfeld werden Vorschläge für die Suche (auf Bing gestützt) und für URLs angezeigt. Das Widget umfasst außerdem Feed-Kacheln, die angeklickt werden können, um weitere Informationen auf msn.com in einem neuen Tab oder im Fenster des Microsoft Edge-Browsers anzuzeigen. Die Feed-Kacheln könnten Werbeanzeigen enthalten. Das Widget kann über die Microsoft Edge-Einstellungen oder über das Menü "Weitere Tools" in Microsoft Edge gestartet werden.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, ist das Web-Widget automatisch für alle Profile aktiviert.
+In den Microsoft Edge-Einstellungen wird die Option zum Starten des Widgets angezeigt.
+In den Microsoft Edge-Einstellungen wird das Menüelement zum Ausführen des Widgets beim Windows-Start (automatischer Start) angezeigt.
+Wenn die Richtlinie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) aktiviert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Ein“ gesetzt.
+Wenn die Richtlinie [WebWidgetIsEnabledOnStartup-](#webwidgetisenabledonstartup) deaktiviert oder nicht konfiguriert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Aus“ gesetzt.
+Benutzer sehen das Menüelement, um das Widget über das Microsoft Edge-Menü "Weitere Tools" zu starten. Benutzer können das Widget über das Menü "Weitere Tools" starten.
+Das Widget kann durch die Option "Beenden" in der Statusleiste oder durch Schließen des Widgets über die Taskleiste deaktiviert werden. Wenn die Autostart-Option ausgewählt wurde, wird das Widget beim Neustart des Systems neu gestartet.
+
+Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget für alle Profile deaktiviert.
+Die Option zum Starten des Widgets über die Microsoft Edge-Einstellungen wird deaktiviert.
+Die Option zum Starten des Widget beim Windows-Start (automatischer Start) wird deaktiviert.
+Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools" wird deaktiviert.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WebWidgetAllowed
+  - GP-Name: Webwidget aktivieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: WebWidgetAllowed
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Web-Widget beim Windows-Start zulassen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Gestattet dem Web-Widget beim Start von Windows zu starten.
+
+Ist diese Option aktiviert, wird das Web-Widget standardmäßig beim Windows-Start ausgeführt.
+Wenn das Widget über die Richtlinie [WebWidgetAllowed](#webwidgetallowed) deaktiviert wurde, startet diese Richtlinie das Widget nicht beim Windows-Start.
+
+Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
+Die Option zum Starten des Widgets beim Windows-Start wird deaktiviert und in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
+Die Option zum Starten des Widgets beim Windows-Start wird in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WebWidgetIsEnabledOnStartup
+  - GP-Name: Web-Widget beim Windows-Start zulassen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: WebWidgetIsEnabledOnStartup
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -21090,7 +21033,6 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Micros
 ```
 0x00000001
 ```
-
 
   
 
