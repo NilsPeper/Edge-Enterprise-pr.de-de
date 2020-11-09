@@ -3,19 +3,19 @@ title: Bereit für Microsoft Edge
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Bereit für Microsoft Edge
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155362"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157688"
 ---
 # Bereit für Microsoft Edge
 
@@ -24,6 +24,17 @@ Dieser Artikel enthält Informationen für den IT-Administrator, der eine Micros
 ## Webanwendungskompatibilität und -unterstützung
 
 Um Sie bei der Planung Ihrer Bereitstellung von Microsoft Edge zu unterstützen, haben wir eine Liste der Webanwendungen zusammengestellt, die möglicherweise in Ihrer Organisation verwendet werden. Anhand dieser Liste können Sie feststellen, ob die Webanwendung für Microsoft Edge bereit ist, wie in der öffentlichen Unterstützungserklärung des Webanwendungsanbieters dokumentiert.
+
+### Zur Anwendungsliste hinzufügen
+
+Die Liste wird regelmäßig aktualisiert, wenn Unterstützungserklärungen aus Feedback zur Kundenbindung identifiziert werden.
+
+Wenn Sie Web-Apps anbieten und Ihre Unterstützungserklärung als Kundenreferenz eintragen möchten, wenden Sie sich bitte mit folgenden Informationen an [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+
+- Produktname
+- Unterstützte Version (sofern zutreffend)
+- Anbietername
+- URL der öffentlichen Unterstützungserklärung
 
 ### Anwendungsliste
 
