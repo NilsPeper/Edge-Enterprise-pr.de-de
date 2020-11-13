@@ -3,19 +3,19 @@ title: Sicherheit in Microsoft Edge für Ihr Unternehmen
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/09/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sicherheit in Microsoft Edge für Ihr Unternehmen
-ms.openlocfilehash: 465dbc2a7e90d205630f559d8a7b7d582f0467ae
-ms.sourcegitcommit: 10e18ce8a9585bb54c2716939fce93e1c6e708fd
+ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
+ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11160954"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165935"
 ---
 # Sicherheit in Microsoft Edge für Ihr Unternehmen
 
@@ -27,7 +27,7 @@ Wir beginnen die Vertiefung mit **externen Bedrohungen**, und gehen dann zu **in
 
 ### Hoch bewerteter Schutz vor Phishing und Schadsoftware
 
-Das in Microsoft Edge integrierte SmartScreen-Feature blockiert einer [unabhängigen Studie von NSS Labs](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) zufolge mehr Phishing- und Malware-Versuche als die Safe Browsing-Funktion von Google Chrome. SmartScreen überprüft die Zuverlässigkeit von Websites und Downloads in Echtzeit, wenn Benutzer online arbeiten, und ist Teil von [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), das Signale und Erkenntnisse aufzeichnet, die von Microsofts großem Netzwerk aus globalen Ressourcen, Forschern und Partnern generiert werden. Durch die Überprüfung anhand dynamischer, Cloud-basierter Listen gefährlicher Websites und Downloads hilft Ihnen Microsoft Edge beim Erkennen und Blockieren von selbst kurzlebigen Bedrohungen, die schnell wieder verschwinden.  
+In Microsoft Edge integriert, blockiert SmartScreen laut einer unabhängigen Studie von NSS Labs mehr [Phishing](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf)- und [Malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf)-Versuche als das sichere Browsen von Google Chrome. SmartScreen überprüft die Zuverlässigkeit von Websites und Downloads in Echtzeit, wenn Benutzer online arbeiten, und ist Teil von [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), das Signale und Erkenntnisse aufzeichnet, die von Microsofts großem Netzwerk aus globalen Ressourcen, Forschern und Partnern generiert werden. Durch die Überprüfung anhand dynamischer, Cloud-basierter Listen gefährlicher Websites und Downloads hilft Ihnen Microsoft Edge beim Erkennen und Blockieren von selbst kurzlebigen Bedrohungen, die schnell wieder verschwinden.  
 
 [Microsoft Edge mit SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) blockierte [während des NSS Labs-Tests](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) 95,5 % der Phishing-Versuche und 98, 5% aller Angriffsversuche durch Schadsoftware, während die Raten der Safe Browsing-Funktion von Chrome bei 86,9 % bzw. 86,0 % lagen.
 
@@ -56,7 +56,7 @@ Neben dem Schutz vor externen Bedrohungen müssen IT-Administratoren auch für d
 > [!NOTE]
 > Die Konfiguration von Windows Information Protection (WIP) erfordert entweder die Lizenzierung von Microsoft Intune oder Microsoft Endpoint Configuration Manager, oder die Verwendung einer MDM-Lösung (Mobile Device Management) von Drittanbietern, für die möglicherweise zusätzliche Lizenzen erforderlich sind.
 
-**Microsoft Endpoint DLP wird in Microsoft Edge nur nativ unterstützt. (Microsoft Endpoint DLP befindet sich derzeit in der öffentlichen Vorschau und es wird erwartet, dass es zu einem späteren Zeitpunkt 2020 allgemein zur Verfügung stehen wird.)** Microsoft Endpunkt-DLP (Data Loss Prevention, Verhinderung von Datenverlust am Endpunkt) ist in das Microsoft Security Center integriert und erweitert den Informationsschutz auf Microsoft Edge, damit Benutzer auf nicht kompatible Aktivitäten aufmerksam gemacht werden und um den Verlust von Daten zu verhindern, wenn Benutzer online arbeiten. Es erkennt und kennzeichnet vertrauliche Daten innerhalb des Unternehmens, die vom Administrator festgelegten Kriterien entsprechen, z. B. Dateien mit Kreditkartennummern oder behördlichen IDs (beispielsweise Sozialversicherungsnummern), Finanzinformationen usw. Microsoft Information Protection-Richtlinien können ohne zusätzliche Neukonfiguration für Microsoft Endpunkt-DLP genutzt werden, einschließlich Bezeichner für vertrauliche Inhalte und von den IT-Administratoren bereits angepasster Richtlinien. Dies bedeutet die nahtlose Bereitstellung von Informationsschutz für IT-Administratoren.
+**Microsoft-Endpunkt-DLP wird in Microsoft Edge nur nativ unterstützt**. Microsoft Endpunkt-DLP (Data Loss Prevention, Verhinderung von Datenverlust am Endpunkt) ist in das Microsoft Security Center integriert und erweitert den Informationsschutz auf Microsoft Edge, damit Benutzer auf nicht kompatible Aktivitäten aufmerksam gemacht werden und um den Verlust von Daten zu verhindern, wenn Benutzer online arbeiten. Es erkennt und kennzeichnet vertrauliche Daten innerhalb des Unternehmens, die vom Administrator festgelegten Kriterien entsprechen, z. B. Dateien mit Kreditkartennummern oder behördlichen IDs (beispielsweise Sozialversicherungsnummern), Finanzinformationen usw. Microsoft Information Protection-Richtlinien können ohne zusätzliche Neukonfiguration für Microsoft Endpunkt-DLP genutzt werden, einschließlich Bezeichner für vertrauliche Inhalte und von den IT-Administratoren bereits angepasster Richtlinien. Dies bedeutet die nahtlose Bereitstellung von Informationsschutz für IT-Administratoren.
 
 > [!NOTE]
 > Für Microsoft Endpunkt-DLP ist ein Microsoft 365 E5- oder Microsoft 365 E5-Compliance-Abonnement erforderlich.

@@ -3,25 +3,29 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/04/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: ec288ba2f358f2657d79c6aad29bbc57310189b2
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
+ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155272"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11166029"
 ---
 # Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitsupdates, die in Updates für den Microsoft Edge Stable-Kanal enthalten sind.
 
-## 4. November 2020
+## 11.November2020
+
+Microsoft hat den neuesten **Microsoft Edge Stable-Kanal (Version 86.0.622.68)** veröffentlicht, in dem die neuesten Sicherheitsupdates des Chromium-Projekts integriert sind. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdate](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
+## 4.November2020
 
 Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.63)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), das laut Chromium-Team ein aktives Exploit ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
@@ -141,4 +145,4 @@ Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal
 
 ## Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
