@@ -1,9 +1,9 @@
 ---
 title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
-author: brianalt-msft
+author: dan-wesley
 manager: tahills
-ms.date: 10/07/2020
+ms.date: 11/12/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,14 +11,15 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
-ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
+ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
+ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105569"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "11167307"
 ---
 # Microsoft Edge – Update-Richtlinien
+
 Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.
 
 Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)
