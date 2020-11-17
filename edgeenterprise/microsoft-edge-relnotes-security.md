@@ -3,35 +3,39 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
-ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
+ms.openlocfilehash: c6367b803994a975f07bd38f375835c17625d905
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11166029"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168760"
 ---
 # Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitsupdates, die in Updates für den Microsoft Edge Stable-Kanal enthalten sind.
 
+## 13. November 2020
+
+Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.69)** veröffentlicht, in dem die neuesten Sicherheitsupdates des Chromium-Projekts integriert sind. Dieses Update enthält [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) und [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), wovon laut Chromium-Team ein Exploit im Umlauf ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+
 ## 11.November2020
 
-Microsoft hat den neuesten **Microsoft Edge Stable-Kanal (Version 86.0.622.68)** veröffentlicht, in dem die neuesten Sicherheitsupdates des Chromium-Projekts integriert sind. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdate](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft hat den neuesten **Microsoft Edge Stable-Kanal (Version 86.0.622.68)** veröffentlicht, in dem die neuesten Sicherheitsupdates des Chromium-Projekts integriert sind. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 4.November2020
 
-Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.63)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), das laut Chromium-Team ein aktives Exploit ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.63)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), wovon laut Chromium-Team ein Exploit im Umlauf ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 22. Oktober 2020
 
-Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.51)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999), das laut Chromium-Team ein aktives Exploit ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 86.0.622.51)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999), wovon laut Chromium-Team ein Exploit im Umlauf ist. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 9. Oktober 2020
 

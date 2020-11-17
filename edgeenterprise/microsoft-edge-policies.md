@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155312"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168800"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -28,18 +28,6 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
-
-## Neue und veraltete Richtlinien
-
-In der folgenden Tabelle sind neue und veraltete Richtlinien für dieses Update aufgelistet.
-
-| Name | Status |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | Neu |
-| [ProxyBypassList](#proxybypasslist) | Veraltet |
-| [ProxyMode](#proxymode) | Veraltet |
-| [ProxyPacUrl](#proxypacurl) | Veraltet |
-| [ProxyServer](#proxyserver) | Veraltet |
 
 ## Verfügbare Richtlinien
 
@@ -4003,15 +3991,23 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### Beschreibung
 
-  Steuert, welche Erweiterungstypen installiert werden können, und schränkt den Laufzeitzugriff ein.
+  Durch Festlegen der Richtlinie wird gesteuert, welche Apps und Erweiterungen in Microsoft Edge installiert werden können, mit welchen Hosts Sie interagieren können und es wird der Zugriff auf die Laufzeit eingeschränkt.
 
-Diese Einstellung definiert die zulässigen Typen von Erweiterungen und die Hosts, mit denen sie interagieren können. Der Wert ist eine Liste von Zeichenfolgen, von denen jede eine der folgenden sein sollte: "extension", "theme", "user_script" und "hosted_app". Weitere Informationen zu diesen Typen finden Sie in der Dokumentation zu Microsoft Edge-Erweiterungen.
+Wenn Sie diese Richtlinie nicht festlegen, gibt es keine Einschränkungen für zulässige Erweiterungen und App-Typen.
 
-Beachten Sie, dass sich diese Richtlinie auch auf Erweiterungen auswirkt, die mithilfe der [ExtensionInstallForcelist](#extensioninstallforcelist) Richtlinie erzwungen werden.
+Erweiterungen und Apps, die einen Typ aufweisen, der nicht in der Liste enthalten ist, werden nicht installiert. Jeder Wert sollte eine der folgenden Zeichenfolgen sein:
 
-Wenn Sie diese Richtlinie aktivieren, werden nur Erweiterungen installiert, die mit einem Typ in der Liste übereinstimmen.
+* „extension“
 
-Wenn Sie diese Richtlinie nicht konfigurieren, werden keine Einschränkungen für die zulässigen Erweiterungstypen erzwungen.
+* „theme“
+
+* „user_script“
+
+* „hosted_app“
+
+Weitere Informationen zu diesen Typen finden Sie in der Dokumentation zu Microsoft Edge-Erweiterungen.
+
+Hinweis: Diese Richtlinie wirkt sich auch auf Erweiterungen und Apps aus, deren Installation mithilfe von [ExtensionInstallForcelist](#extensioninstallforcelist) erzwungen werden soll.
 
   #### Unterstützte Funktionen:
 
@@ -4202,27 +4198,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### Beschreibung
 
-  Gibt Erweiterungen an, die im Hintergrund installiert werden, ohne dass Benutzerinteraktionen vorgenommen werden, und die Benutzer nicht deinstallieren oder deaktivieren können ("erzwungen-installiert"). Alle von den Erweiterungen angeforderten Berechtigungen werden implizit ohne Benutzerinteraktionen gewährt, einschließlich aller weiteren Berechtigungen, die von künftigen Versionen der Erweiterung angefordert werden. Außerdem werden Berechtigungen für die Erweiterungs-APIs "enterprise.deviceAttributes" und "enterprise.platformKeys" gewährt. (Diese beiden APIs sind nur für Erweiterungen verfügbar, die "erzwungen" installiert wurden.)
+  Legen Sie diese Richtlinie fest, um eine Liste der Apps und Erweiterungen anzugeben, die ohne Benutzerinteraktion im Hintergrund installiert werden. Benutzer können diese Einstellung nicht deinstallieren oder deaktivieren. Berechtigungen werden implizit gewährt, einschließlich der Erweiterungs-APIs enterprise.deviceAttributes und enterprise.platformKeys. Hinweis: Diese beiden APIs sind für Apps und Erweiterungen, deren Installation nicht erzwungen wird, nicht verfügbar.
 
-Diese Richtlinie hat Vorrang vor einer potenziell widersprüchlichen [ExtensionInstallBlocklist](#extensioninstallblocklist) Richtlinie. Wenn Sie eine Erweiterung aus der Liste erzwungen-installierter Erweiterungen entfernen, wird diese von Microsoft Edge automatisch deinstalliert.
+Wenn Sie diese Richtlinie nicht festlegen, werden keine Apps oder Erweiterungen automatisch installiert, und Benutzer können jede beliebige App in Microsoft Edge deinstallieren.
 
-Die erzwungene Installation ist auf Apps und Erweiterungen beschränkt, die auf der Website der Microsoft Edge-Add-Ons aufgeführt sind, und zwar für Instanzen, die nicht zu den folgenden gehören: Windows-Instanzen, die in eine Microsoft Active Directory-Domäne eingebunden sind, oder Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, sowie macOS-Instanzen, die über MDM verwaltet werden oder über MCX in eine Domäne eingebunden sind.
+Diese Richtlinie ersetzt die [ExtensionInstallBlocklist](#extensioninstallblocklist)-Richtlinie. Wenn eine App oder Erweiterung, deren Installation zuvor erzwungen wurde, aus dieser Liste entfernt wird, wird Sie von Microsoft Edge automatisch deinstalliert.
 
-Beachten Sie, dass Benutzer den Quellcode beliebiger Erweiterungen mithilfe von Entwicklungstools ändern können, wodurch die Erweiterung potenziell unbrauchbar wird. Falls dies ein Problem darstellt, konfigurieren Sie die Richtlinie [DeveloperToolsAvailability](#developertoolsavailability).
+Auf Microsoft Windows-Instanzen kann die Installation von Apps und Erweiterungen von außerhalb der Microsoft Edge Add-ons-Website nur dann erzwungen werden, wenn die Instanz mit einer Microsoft Active Directory-Domäne verbunden ist und Windows 10 Pro ausgeführt wird.
 
-Verwenden Sie zum Hinzufügen einer Erweiterung zur Liste das folgende Format:
+Auf macOS-Instanzen kann die Installation von Apps und Erweiterungen von außerhalb der Microsoft Edge-Add-ons-Website nur dann erzwungen werden, wenn die Instanz über MDM verwaltet oder über MCX mit einer Domäne verbunden wird.
 
-[extensionID];[updateURL]
+Der Quellcode einer beliebigen Erweiterung kann von Benutzern mit Entwicklertools geändert werden, wodurch die Erweiterung möglicherweise nicht mehr funktionsfähig ist. Wenn dies ein Problem darstellt, konfigurieren Sie die DeveloperToolsDisabled-Richtlinie.
 
-- extensionID – die 32-stellige Zeichenfolge, die im Entwicklermodus auf edge://extensions angezeigt wird.
+Jedes Listenelement der Richtlinie ist eine Zeichenfolge, die eine Erweiterungs-ID und optional eine durch ein Semikolon (;) abgetrennte „Update“-URL enthält. Die Erweiterungs-ID ist die Zeichenfolge mit 32 Buchstaben, die beispielsweise auf edge://extensions im Entwicklermodus gefunden wird. Wenn angegeben, sollte die „Update“-URL auf ein Update-Manifest-XML-Dokument ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ) verweisen. Standardmäßig wird die Update-URL der Microsoft Edge-Add-ons-Website verwendet. Die in dieser Richtlinie gesetzte „Update“-URL wird nur für die Erstinstallation verwendet; bei nachfolgenden Aktualisierungen der Erweiterung wird die Update-URL im Manifest der Erweiterung verwendet.
 
-- updateURL (optional) ist die Adresse des Updatemanifest-XML-Dokuments für die App oder die Erweiterung, wie unter [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) beschrieben. Wenn Sie eine Erweiterung aus dem Chrome Web Store installieren möchten, stellen Sie die Chrome Web Store Aktualisierungs-URL https://clients2.google.com/service/update2/crxbereit. Beachten Sie, dass die in dieser Richtlinie festgelegte Update-URL nur für die Erstinstallation verwendet wird. Nachfolgende Updates der Erweiterung verwenden die im Manifest der Erweiterung angegebene Aktualisierungs-URL. Wenn Sie die URL-Aktualisierung nicht festlegen, wird davon ausgegangen, dass die Erweiterung im Microsoft-Shop gehostet wird und die folgende URL-Aktualisierung wir verwendet (https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-
-Beispielsweise installiert gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx die Microsoft Online-App von der Update-URL des Microsoft Store. Weitere Informationen zum Hosting von Erweiterungen finden Sie unter: [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044).
-
-Falls Sie diese Richtlinie nicht konfigurieren, werden keine Erweiterungen automatisch installiert, und Benutzer können alle Erweiterungen in Microsoft Edge deinstallieren.
-
-Beachten Sie, dass diese Richtlinie nicht für den InPrivate-Modus gilt.
+Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informieren Sie sich über Hosting-Erweiterungen (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Unterstützte Funktionen:
 
