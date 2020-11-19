@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/17/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 8e454772e2c2873068f7598a30ae74ee1384d467
-ms.sourcegitcommit: e442280f8ef6a20c565e8d0dc8296874a2f8fb22
+ms.openlocfilehash: 61123466da51b8cffbd233d4616c16c447bef5e8
+ms.sourcegitcommit: 9c2a08e8d7f30053c32cc65ac9d921e1b569b10d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175235"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11179782"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!IMPORTANT]
 > Lesen Sie dieses [Update zu Microsoft Edge-Kanalversionen](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Version 87.0.664.40: 18. November
+
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## Version 87.0.664.36: 16. November
 

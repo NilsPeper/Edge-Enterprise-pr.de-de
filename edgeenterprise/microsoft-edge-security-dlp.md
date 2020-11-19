@@ -3,19 +3,19 @@ title: Verhinderung von Datenverlust in Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Verhinderung von Datenverlust (DLP) in Microsoft Edge
-ms.openlocfilehash: 59c1b68c0526a49a2ee30283893707852514828d
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104612"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176942"
 ---
 # Verhinderung von Datenverlust (DLP) in Microsoft Edge
 
@@ -27,12 +27,17 @@ Diese Kombination von Benutzeraktivitäten hat sich auch auf Geräte ausgebreite
 
 Microsoft Edge unterstützt nativ zwei unterschiedliche DLP-Lösungen, Microsoft Endpoint DLP und Windows Information Protection (WIP).
 
-## Microsoft Endpoint DLP
+## Microsoft Endpoint-Verhinderung von Datenverlust (Endpunkt-DLP)
 
-Microsoft Endpoint DLP ist die nächste Generation von DLP, die moderne Konzepte wie datenbasierten Schutz verwendet. Er ist in Windows 10 und Microsoft Edge integriert, sodass keine weiteren Agents oder Plugins auf dem Gerät erforderlich sind. Weitere Informationen zu Endpunkt-DLP finden Sie unter [Informationen zum Microsoft 365-Endpunkt zur Verhinderung von Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+Microsoft Endpoint DLP ist die nächste Generation der Verhinderung von Datenverlust unter Verwendung moderner Konzepte wie des datenzentrischen Schutzes. Sie ist in Windows 10 und Microsoft Edge integriert, sodass keine zusätzlichen Agents oder Plugins auf dem Gerät benötigt werden.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 85 oder neuer.
+
+Weitere Informationen zu Endpunkt-DLP finden Sie unter:
+
+- [Informationen zur Verhinderung von Microsoft 365-Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [Erste Schritte mit der Verhinderung von Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
 
 Microsoft Edge erzwingt administratorenkonfigurierte Richtlinien für vertrauliche Dateien und zeichnet Überwachungsereignisse für nicht kompatible Aktivitäten auf.
 
