@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/19/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
+ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168800"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11181986"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -28,6 +28,17 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
+
+## Neue und veraltete Richtlinien
+
+In der folgenden Tabelle sind die neuen und veralteten Richtlinien für dieses Update aufgeführt.
+
+| Name | Status |
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Neu |
+|[BlockExternalExtensions](#blockexternalextensions) | Neu |
+|[ShowMicrosoftRewards](#showmicrosoftrewards) | Neu |
+|[ProactiveAuthEnabled](#proactiveauthenabled) | Veraltet |
 
 ## Verfügbare Richtlinien
 
@@ -41,8 +52,9 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Systemeigenes Messaging](#native-messaging)|
 |[Kennwort-Manager und Schutz](#password-manager-and-protection)|[Leistung](#performance)|
 |[Drucken](#printing)|[Proxyserver](#proxy-server)|
-|[SmartScreen-Einstellungen](#smartscreen-settings)|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|
-|[Sonstiges](#additional)|
+|[Einstellungen für Sleeping Tabs](#sleeping-tabs-settings)|[SmartScreen-Einstellungen](#smartscreen-settings)|
+|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|[Sonstiges](#additional)|
+
 
 ### [*Application Guard-Einstellungen*](#application-guard-settings-policies)
 
@@ -114,8 +126,9 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Konfigurieren das neuen Suchfeld für die Registerkartenoberfläche |
 ### [*Extensions*](#extensions-policies)
 
-|Richtlinienname|Beschriftung|
+|Richtlinienname|Untertitel|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|Blockiert die Installation externer Erweiterungen|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Konfigurieren von zulässigen Erweiterungstypen|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Zulassen, dass bestimmte Erweiterungen installiert werden|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Steuern, welche Erweiterungen nicht installiert werden können|
@@ -180,6 +193,13 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ProxyPacUrl](#proxypacurl)|Proxy-.pac-Datei-URL festlegen (veraltet)|
 |[ProxyServer](#proxyserver)|Adresse oder URL von Proxyservern konfigurieren (veraltet)|
 |[ProxySettings](#proxysettings)|Proxyeinstellungen|
+### [*Einstellungen für Sleeping Tabs*](#sleeping-tabs-settings-policies)
+
+|Richtlinienname|Beschriftung|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Sleeping Tabs auf bestimmten Websites blockieren|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Sleeping Tabs konfigurieren|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Inaktivitätszeitüberschreitung im Hintergrund für Sleeping Tabs einstellen|
 ### [*SmartScreen-Einstellungen*](#smartscreen-settings-policies)
 
 |Richtlinienname|Beschriftung|
@@ -341,7 +361,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Websites erlauben, nach verfügbaren Zahlungsmethoden zu fragen|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Die Personalisierung von Werbung, der Suche und von Nachrichten ermöglichen, indem der Browserverlauf an Microsoft gesendet wird|
 |[PinningWizardAllowed](#pinningwizardallowed)|Assistent „an Taskleiste anheften“ zulassen|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Proaktive Authentifizierung aktivieren|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Proaktive Authentifizierung aktivieren (veraltet)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Aktivieren von Promotion-Inhalten auf der gesamten Registerkarte|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Fragen, wo heruntergeladene Dateien gespeichert werden sollen|
 |[QuicAllowed](#quicallowed)|QUIC-Protokoll zulassen|
@@ -369,7 +389,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Zugriff auf Sensoren auf bestimmten Websites zulassen|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Zugriff auf Sensoren auf bestimmten Websites blockieren|
 |[SerialAskForUrls](#serialaskforurls)|Die Serial-API auf bestimmten Websites zulassen|
-|[SerialBlockedForUrls](#serialblockedforurls)|Die Serial-API auf bestimmten Websites blockieren|
+|[SerialBlockedForUrls](#serialblockedforurls)|Serial-API auf bestimmten Websites blockieren|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards-Erfahrungen anzeigen|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung für Signed HTTP Exchange (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Aktivieren der Website-Isolation für alle Websites|
@@ -3977,6 +3998,71 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   ## Erweiterungsrichtlinien
 
+  [Nach oben](#microsoft-edge---policies)
+
+  ### BlockExternalExtensions
+
+  #### Blockiert die Installation externer Erweiterungen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Steuern Sie die Installation externer Erweiterungen.
+
+Wenn Sie diese Einstellung aktivieren, wird die Installation externer Erweiterungen blockiert.
+
+Wenn Sie diese Einstellung deaktivieren oder nicht festlegen, können externe Erweiterungen installiert werden.
+
+Externe Erweiterungen und ihre Installation sind unter https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options dokumentiert.
+
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: BlockExternalExtensions
+  - Name der Gruppenrichtlinie: blockiert die Installation externer Erweiterungen
+  - GP-Pfad (zwingend erforderlich): Administrative Templates/Microsoft Edge/Extensions
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: BlockExternalExtensions
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: BlockExternalExtensions
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
   [Zurück zum Anfang](#microsoft-edge---policies)
 
   ### ExtensionAllowedTypes
@@ -6579,6 +6665,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 ```
   
 
+  [Nach oben](#microsoft-edge---policies)
+
+  ## Einstellungsrichtlinien für Sleeping Tabs
+
+  [Nach oben](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### Sleeping Tabs auf bestimmten Websites blockieren
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die nicht durch Sleeping Tabs in den Ruhezustand versetzt werden dürfen.
+
+Wenn die Richtlinie [SleepingTabsEnabled](#sleepingtabsenabled) deaktiviert ist, wird diese Liste nicht verwendet und keine Websites werden automatisch in den Ruhezustand versetzt.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, können alle Websites in den Ruhezustand versetzt werden, es sei denn, die persönliche Konfiguration des Benutzers blockiert sie.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SleepingTabsBlockedForUrls
+  - GP-Name: Sleeping Tabs auf bestimmten Websites blockieren
+  - GP-Pfad (zwingend erforderlich): Einstellungen für administrative Vorlagen/Microsoft Edge/Sleeping Tabs
+  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping Tabs-Einstellungen
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows Registry-Einstellungen
+
+  - Pfad (zwingend erforderlich): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: SleepingTabsBlockedForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Nach oben](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### Sleeping Tabs konfigurieren
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Mit dieser Richtlinieneinstellung können Sie konfigurieren, ob die Sleeping Tabs aktiviert werden sollen. Die Funktion Sleeping Tabs senkt die CPU-, Batterie- und Speichernutzung, indem sie inaktive Hintergrund-Tabs in den Ruhezustand versetzt. Microsoft Edge verwendet Heuristiken, um zu gewährleisten, dass keine Tabs in den Ruhezustand versetzt werden, die im Hintergrund nützliche Arbeit verrichten, z. B. Benachrichtigungen anzeigen, Ton wiedergeben und Video streamen. Standardmäßig ist die Funktion Sleeping Tabs aktiviert.
+
+Einzelne Websites können möglicherweise durch Konfigurieren der Richtlinie [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) nicht in den Ruhezustand versetzt werden.
+
+Wenn Sie diese Einstellung aktivieren, ist Sleeping Tabs eingeschaltet.
+
+Wenn Sie diese Funktion deaktivieren, ist Sleeping Tabs ausgeschaltet.
+
+Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie Sleeping Tabs verwenden möchten.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SleepingTabsEnabled
+  - GP-Name: Sleeping Tabs konfigurieren
+  - GP-Pfad (zwingend erforderlich): Einstellungen für administrative Vorlagen/Microsoft Edge/Sleeping Tabs
+  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping Tabs-Einstellungen
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: SleepingTabsEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: SleepingTabsEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Nach oben](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### Inaktivitätszeitüberschreitung im Hintergrund für Sleeping Tabs einstellen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Mit dieser Richtlinieneinstellung können Sie die Zeitüberschreitung in Sekunden konfigurieren, nach der inaktive Hintergrund-Tabs automatisch in den Ruhezustand versetzt werden, wenn Sleeping Tabs aktiviert ist. Standardmäßig beträgt dieser Timeout 7.200Sekunden (2Stunden).
+
+Tabs werden nur dann automatisch in den Ruhezustand versetzt, wenn die Richtlinie [SleepingTabsEnabled](#sleepingtabsenabled) aktiviert oder nicht konfiguriert ist und der Benutzer die Einstellung Sleeping Tabs aktiviert hat.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer den Wert für die Zeitüberschreitung wählen.
+
+Zuordnung von Richtlinienoptionen:
+
+* 5Minuten (300) = 5Minuten Inaktivität
+
+* 15Minuten (900) = 15Minuten Inaktivität
+
+* 30Minuten (1.800) = 30Minuten Inaktivität
+
+* 1Stunde (3.600) = 1Stunde Inaktivität
+
+* 2Stunden (7.200) = 2Stunden Inaktivität
+
+* 3Stunden (10.800) = 3Stunden Inaktivität
+
+* 6Stunden (21.600) = 6Stunden Inaktivität
+
+* 12Stunden (43.200) = 12Stunden Inaktivität
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Ganze Zahl
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SleepingTabsTimeout
+  - GP-Name: Inaktivitätszeitüberschreitung im Hintergrund für Sleeping Tabs einstellen
+  - GP-Pfad (zwingend erforderlich): Einstellungen für administrative Vorlagen/Microsoft Edge/Sleeping Tabs
+  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping Tabs-Einstellungen
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: SleepingTabsTimeout
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000384
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: SleepingTabsTimeout
+  - Beispielwert:
+``` xml
+<integer>900</integer>
+```
+  
+
   [Zurück zum Anfang](#microsoft-edge---policies)
 
   ## SmartScreen-Einstellungs-Richtlinien
@@ -7359,9 +7664,11 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder sie nicht konfigurieren, b
 
   #### Beschreibung
 
-  Konfiguriert die Standard-URL für die neue Registerkartenseite.
+  Konfiguriert die Standard-URL für die neue Tab-Seite.
 
-Diese Richtlinie bestimmt die Seite, die beim Erstellen neuer Registerkarten (einschließlich beim Öffnen neuer Fenster) geöffnet wird. Er wirkt sich auch auf die Startseite aus, wenn diese auf die neue Registerkartenseite festgelegt ist.
+Die empfohlene Version dieser Richtlinie ist derzeit nicht funktionsfähig und funktioniert genau wie die zwingend erforderlich Version.
+
+Diese Richtlinie bestimmt die Seite, die beim Erstellen neuer Tabs (auch beim Öffnen neuer Fenster) geöffnet wird. Er wirkt sich auch auf die Startseite aus, wenn diese auf die neue Registerkartenseite festgelegt ist.
 
 Diese Richtlinie bestimmt nicht, welche Seite beim Start geöffnet wird. Dies wird durch die Richtlinie [RestoreOnStartup](#restoreonstartup) gesteuert. Es wirkt sich auch nicht auf die Startseite aus, wenn diese auf die neue Registerkartenseite festgelegt ist.
 
@@ -7889,7 +8196,7 @@ Wenn Sie die Richtlinien für einen standardmäßigen Suchanbieter ([DefaultSear
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
-  - Dynamische Richtlinienaktualisierung: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
 
   #### Datentyp:
 
@@ -16758,9 +17065,9 @@ Benutzereinstellungen zum Aktivieren oder Deaktivieren des Assistenten zum Anhef
 
   ### ProactiveAuthEnabled
 
-  #### Proaktive Authentifizierung aktivieren
+  #### Proaktive Authentifizierung aktivieren (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
 
@@ -16768,11 +17075,13 @@ Benutzereinstellungen zum Aktivieren oder Deaktivieren des Assistenten zum Anhef
 
   #### Beschreibung
 
-  Sie können konfigurieren, ob die proaktive Authentifizierung aktiviert werden soll.
+  Diese Richtlinie ist veraltet, da sie nicht unabhängig von der Browser-Anmeldung funktioniert. Funktioniert nicht in Microsoft Edge Version 91. Wenn Sie die Browser-Anmeldung konfigurieren möchten, verwenden Sie die Richtlinie [BrowserSignin](#browsersignin).
 
-Wenn Sie diese Richtlinie aktivieren, versucht Microsoft Edge, den angemeldeten Benutzer mit Microsoft-Diensten proaktiv zu authentifizieren. In regelmäßigen Abständen überprüft Microsoft Edge mit einem Onlinedienst nach einem aktualisierten Manifest, das die Konfiguration enthält, die vorgibt, wie dies zu tun ist.
+Sie können konfigurieren, ob die proaktive Authentifizierung in Microsoft Edge aktiviert werden soll.
 
-Wenn Sie diese Richtlinie deaktivieren, versucht Microsoft Edge nicht, den angemeldeten Benutzer mit Microsoft-Diensten proaktiv zu authentifizieren. Microsoft Edge sucht nicht mehr bei einem Onlinedienst nach einem aktualisierten Manifest, das die entsprechende Konfiguration enthält.
+Wenn Sie diese Richtlinie aktivieren, versucht Microsoft Edge, sich nahtlos bei Websites und Diensten mit dem Konto zu authentifizieren, das sich beim Browser angemeldet hat.
+
+Wenn Sie diese Richtlinie deaktivieren, versucht Microsoft Edge nicht, sich bei Websites oder Diensten über Single Sign-on (SSO) zu authentifizieren. Authentifizierte Benutzererfahrungen, wie Enterprise New Tab Page, funktionieren nicht (z.B. neuere und empfohlene Office-Dokumente sind nicht verfügbar).
 
 Wenn Sie diese Richtlinie nicht konfigurieren, ist die proaktive Authentifizierung aktiviert.
 
@@ -16790,9 +17099,9 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist die proaktive Authentifizieru
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: ProactiveAuthEnabled
-  - GP-Name: Proaktive Authentifizierung aktivieren
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - Eindeutiger GP-Name: ProactiveAuthEnabled
+  - GP-Name: proaktive Authentifizierung aktivieren (veraltet)
+  - GP-Pfad (zwingend erforderlich): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -18599,6 +18908,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Nach oben](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Microsoft Rewards-Erfahrungen anzeigen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Microsoft Rewards Benutzererfahrungen und Benachrichtigungen anzeigen.
+Wenn Sie diese Richtlinie aktivieren:
+   - Benutzer von Microsoft-Konten (ausgenommen Azure AD-Konten) in Suchen-und-Punkten-Märkten werden die Microsoft Rewards-Umgebung in ihrem Microsoft Edge-Benutzerprofil sehen.
+   - Die Einstellung zur Aktivierung von Microsoft Rewards in den Microsoft Edge-Einstellungen wird aktiviert und eingeschaltet.
+   - Die Einstellung zur Aktivierung des Give-Modus wird aktiviert und respektiert die Benutzereinstellung.
+
+Wenn Sie diese Richtlinie deaktivieren:
+   - Benutzer von Microsoft-Konten (ausgenommen Azure AD-Konten) in Suchen-und-Punkten-Märkten werden die Microsoft Rewards-Umgebung nicht in ihrem Microsoft Edge-Benutzerprofil sehen.
+   - Die Einstellung zur Aktivierung von Microsoft Rewards in den Microsoft Edge-Einstellungen wird deaktiviert und ausgeschaltet.
+
+Wenn Sie diese Richtlinie nicht konfigurieren:
+   - Benutzer von Microsoft-Konten (ausgenommen Azure AD-Konten) in Suchen-und-Punkten-Märkten werden die Microsoft Rewards-Umgebung in ihrem Microsoft Edge-Benutzerprofil sehen.
+   - Die Einstellung zur Aktivierung von Microsoft Rewards in den Microsoft Edge-Einstellungen wird aktiviert und eingeschaltet.
+   - Die Einstellung zur Aktivierung des Give-Modus wird aktiviert und respektiert die Benutzereinstellung.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: ShowMicrosoftRewards
+  - GP-Name: Microsoft Rewards-Umgebung anzeigen
+  - GP-Pfad (zwingend erforderlich): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: ShowMicrosoftRewards
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000000
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: ShowMicrosoftRewards
+  - Beispielwert:
+``` xml
+<false/>
 ```
   
 
