@@ -3,19 +3,19 @@ title: Microsoft Edge-Rollback für Unternehmen
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Zurücksetzen von Microsoft Edge auf eine vorherige Version
-ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
-ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
+ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
+ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993705"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "11192425"
 ---
 # Zurücksetzen von Microsoft Edge auf eine vorherige Version
 
@@ -30,7 +30,7 @@ Durch ein Rollback können Sie Ihre Microsoft Edge-Browserversion auf eine früh
 
 ## Vorbemerkungen
 
-Es ist wichtig zu verstehen, wie das Rollback-Feature in einer Microsoft Edge-Umgebung installiert wird. Sie können das Rollback mithilfe von zwei unterschiedlichen Methoden durchführen: manuell mit einer MSI-Datei oder mithilfe von Microsoft Edge Update- und Gruppenrichtlinien. Außerdem empfehlen wir die Verwendung einer Auswahl von Gruppenrichtlinien für eine reibungslosere Durchführung.
+Es ist wichtig zu verstehen, wie das Rollback-Feature in einer Microsoft Edge-Umgebung installiert wird. Sie können das Rollback mithilfe von zwei unterschiedlichen Methoden durchführen: manuell mit einer MSI-Datei oder mithilfe von Microsoft Edge Update- und Gruppenrichtlinien. Wir empfehlen außerdem Gruppen-Richtlinien für eine reibungslosere Bereitstellung zu nutzen.
 
 ### Empfehlungen
 
@@ -81,7 +81,7 @@ Führen Sie die folgenden Schritte aus, um das Rollback über Microsoft Edge Upd
    - Nur automatische unbeaufsichtigte Updates
 
      > [!NOTE]
-     > Um die Aktualisierung einer Gruppenrichtlinie zu erzwingen, geben Sie `dsregcmd /status` in der Windows-Eingabeaufforderung mit Administratorrechten ("Als Administrator ausführen") ein.
+     > Um die Aktualisierung einer Gruppenrichtlinie zu erzwingen, geben Sie `gpupdate /force` in der Windows-Eingabeaufforderung mit Administratorrechten ("Als Administrator ausführen") ein.
 
 5. Klicken Sie auf **OK**, um die Richtlinie zu speichern. Das Rollback erfolgt, wenn Microsoft Edge Update das nächste Mal nach einem Update sucht. Wenn Sie die Aktualisierung schneller ausgeführt werden soll, können Sie das Microsoft Edge Update-Abrufintervall ändern oder das Rollback mithilfe einer MSI-Datei aktivieren.
 
@@ -113,7 +113,7 @@ Es empfiehlt sich, nach dem Aktivieren des Rollbacks einen Neustart für die Ben
 
 Eine Momentaufnahme ist eine mit Versionsstempel versehene Kopie des Benutzerdatenordners. Während eines Versionsupgrades wird eine Momentaufnahme der vorherigen Version erstellt und im Momentaufnahme-Ordner gespeichert. Nach dem Rollback wird eine versionsgleiche Momentaufnahme in den neuen Benutzerdatenordner kopiert und aus dem Momentaufnahme-Ordner gelöscht. Wenn nach dem Downgrade keine versionsgleiche Momentaufnahme verfügbar ist, stützt sich das Rollback auf die Synchronisierung, um die Benutzerdaten in die neue Microsoft Edge-Version einzufügen.
 
-Mit der Gruppenrichtlinie [UserDataSnapshotRetentionLimit] können Sie eine Grenze für die Anzahl der Momentaufnahmen festlegen, die zu jedem beliebigen Zeitpunkt aufbewahrt werden können. Standardmäßig werden drei Momentaufnahmen aufbewahrt. Sie können diese Richtlinie so konfigurieren, dass 0-5 Momentaufnahmen aufbewahrt werden.
+Mit der [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit)-Gruppenrichtlinie können Sie einen Grenzwert für die Anzahl der Snapshots festlegen, die zu einem bestimmten Zeitpunkt aufbewahrt werden können. Standardmäßig werden drei Momentaufnahmen aufbewahrt. Sie können diese Richtlinie so konfigurieren, dass 0-5 Momentaufnahmen aufbewahrt werden.
 
 ## Häufig gestellte Fragen
 
@@ -159,7 +159,6 @@ Microsoft Edge Update hat noch keine Suche nach Updates durchgeführt. Die autom
 ### Als IT-Administrator habe ich alle Schritte für eine ordnungsgemäße Zurücksetzung befolgt. Das Rollback wurde nur für einen Teil meiner Benutzergruppe durchgeführt. Warum wurde es nicht auch für die anderen durchgeführt?
 
 Die Gruppenrichtlinieneinstellung wurde noch nicht mit allen Clients synchronisiert. Wenn Administratoren eine Gruppenrichtlinie festlegen, werden die entsprechenden Einstellungen nicht sofort von den Clients empfangen. Sie können [ein Remoteupdate von Gruppenrichtlinien erzwingen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
-
 
 ## Weitere Informationen
 
