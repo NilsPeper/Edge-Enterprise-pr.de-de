@@ -3,19 +3,19 @@ title: Konfigurieren von MicrosoftEdge für Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/09/2019
+ms.date: 11/30/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren der Microsoft Edge-Richtlinieneinstellungen auf Windows-Geräten
-ms.openlocfilehash: 99aaf002f868ce29e81aa40024fa1de2e83d76e1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979893"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194703"
 ---
 # Konfigurieren der Microsoft Edge-Richtlinieneinstellungen unter Windows
 
@@ -53,12 +53,12 @@ Wechseln Sie zur [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEn
 #### Fügen Sie Active Directory die administrative Vorlage hinzu.
 
 1. Navigieren Sie auf einem Domänencontroller oder einer Arbeitsstation mit RSAT zum Ordner **PolicyDefinition** (auch als _zentraler Speicher_ bezeichnet) auf einem beliebigen Domänencontroller für Ihre Domäne. Bei älteren Versionen von Windows Server müssen Sie möglicherweise den Ordner „PolicyDefinition” erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten des zentralen Speichers für Administrative Vorlagen für Gruppenrichtlinien in Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
-1. Öffnen Sie *MicrosoftEdgePolicyTemplates*, und wechseln Sie zu **windows** > **admx**.
-1. Kopieren Sie die Datei *msedge.admx* in den Ordner „PolicyDefinition”. (Beispiel: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-1. Öffnen Sie im Ordner *admx* den entsprechenden Sprachordner. Wenn Sie sich beispielsweise in den Vereinigten Staaten befinden, öffnen Sie den Ordner **en-US**.
-1. Kopieren Sie die Datei *msedge.adml* in den entsprechenden Sprachordner im Ordner „PolicyDefinition”. Erstellen Sie den Ordner, falls er noch nicht vorhanden ist. (Beispiel: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
-1. Wenn Ihre Domäne über mehr als einen Domänencontroller verfügt, werden die neuen ADMX-Dateien beim nächsten Domänen-Replikationsintervall auf diese repliziert.
-1. Um zu bestätigen, dass die Dateien richtig geladen wurden, öffnen Sie den **Gruppenrichtlinienverwaltungs-Editor** über die Windows-Verwaltungsprogramme und erweitern Sie **Computerkonfiguration** > **Richtlinien** > **Administrative Vorlagen** > **Microsoft Edge**. Es sollte mindestens ein Microsoft Edge-Knoten angezeigt werden, wie unten dargestellt.
+2. Öffnen Sie *MicrosoftEdgePolicyTemplates*, und wechseln Sie zu **windows** > **admx**.
+3. Kopieren Sie die Datei *msedge.admx* in den Ordner „PolicyDefinition”. (Beispiel: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
+4. Öffnen Sie im Ordner *admx* den entsprechenden Sprachordner. Wenn Sie sich beispielsweise in den Vereinigten Staaten befinden, öffnen Sie den Ordner **en-US**.
+5. Kopieren Sie die Datei *msedge.adml* in den entsprechenden Sprachordner im Ordner „PolicyDefinition”. Erstellen Sie den Ordner, falls er noch nicht vorhanden ist. (Beispiel: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+6. Wenn Ihre Domäne über mehr als einen Domänencontroller verfügt, werden die neuen ADMX-Dateien beim nächsten Domänen-Replikationsintervall auf diese repliziert.
+7. Um zu bestätigen, dass die Dateien richtig geladen wurden, öffnen Sie den **Gruppenrichtlinienverwaltungs-Editor** über die Windows-Verwaltungsprogramme und erweitern Sie **Computerkonfiguration** > **Richtlinien** > **Administrative Vorlagen** > **Microsoft Edge**. Es sollte mindestens ein Microsoft Edge-Knoten angezeigt werden, wie unten dargestellt.
 
     ![Microsoft Edge-Richtlinien](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
@@ -69,19 +69,6 @@ Wechseln Sie zur [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEn
 3. Öffnen Sie im Ordner *admx* den entsprechenden Sprachordner. Wenn Sie sich beispielsweise in den Vereinigten Staaten befinden, öffnen Sie den Ordner **en-US**.
 4. Kopieren Sie die Datei *msedge.adml* in den entsprechenden Sprachordner im Vorlagenordner „Richtliniendefinition”. (Beispiel: C:\Windows\PolicyDefinitions\en-US)
 5. Öffnen Sie zum Bestätigen der korrekten Dateien entweder den Editor für lokale Gruppenrichtlinien direkt (Windows-Taste + R) und geben Sie „gpedit.msc” ein oder öffnen Sie MMC, und laden Sie das Snap-In „Editor für lokale Gruppenrichtlinien”. Wenn ein Fehler auftritt, liegt dies normalerweise daran, dass sich die Dateien an einem falschen Speicherort befinden.
-
-<!--
-To add the administrative template to manage Microsoft Edge updates:
-
-1. Open the *MicrosoftEdgePolicyTemplates* file and go to **windows** > **admx**.
-2. Copy the *msedgeupdate.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *updatepolicies* folder, open the appropriate language folder. For example, if you’re in Germany, open the **de-DE** folder.
-4. Copy the *msedgeupdate.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\de-DE)
-5. Open MMC and load the Local Group Policy Editor snap-in to confirm the files loaded correctly. If an error occurs, it’s usually because the files are in an incorrect location.
-
-> [!NOTE]
-> Currently the Microsoft Edge update policies are only localized in en-US. Additional language support will be added in a future release.
--->
 
 ### 2. Festlegen von obligatorischen oder empfohlenen Richtlinien
 
@@ -108,22 +95,7 @@ Möglicherweise müssen Sie Microsoft Edge schließen und erneut öffnen, bevor 
 
 Sie können auch REGEDIT.exe auf einem Zielcomputer verwenden, um die Registrierungseinstellungen anzuzeigen, in denen Gruppenrichtlinieneinstellungen gespeichert werden. Diese Einstellungen befinden sich im Registrierungspfad **HKLM\SOFTWARE\Policies\Microsoft\Edge.**
 
-## Häufig gestellte Fragen
-
-### Kann Microsoft Edge für die Verwendung von Master-Einstellungen konfiguriert werden?
-
-Ja, Sie können Microsoft Edge so konfigurieren, dass es eine Mastervoreinstellungsdatei verwendet.
-
- Mit einer Mastervoreinstellungsdatei können Sie Standardeinstellungen konfigurieren, wenn Microsoft Edge bereitgestellt wird. Sie können auch eine Mastervoreinstellungsdatei verwenden, um Einstellungen auf Computern anzuwenden, die nicht von einem Geräteverwaltungssystem verwaltet werden. Diese Einstellungen werden auf das Profil des Benutzers angewendet, wenn der Benutzer zum ersten Mal den Browser ausführt. Nachdem der Benutzer den Browser ausgeführt hat, werden Änderungen an der Mastervoreinstellungsdatei nicht angewendet. Benutzer können Einstellungen aus den Mastervoreinstellungen im Browser ändern. Wenn Sie eine Einstellung zwingend vornehmen oder eine Einstellung nach der ersten Ausführung des Browsers ändern möchten, müssen Sie eine Richtlinie verwenden.
-
-Mit einer Mastervoreinstellungsdatei können Sie viele verschiedene Einstellungen und Voreinstellungen für den Browser anpassen, einschließlich der für andere Chromium-basierte Browser und Microsoft Edge-spezifische Einstellungen.  Richtlinienbezogene Voreinstellungen können mithilfe der Mastervoreinstellungsdatei konfiguriert werden. In Fällen, in denen eine Richtlinie festgelegt ist und ein entsprechender Master-Voreinstellungssatz vorhanden ist, hat die Richtlinieneinstellung Vorrang.
-
-> [!IMPORTANT]
-> Möglicherweise sind nicht alle verfügbaren Einstellungen mit der Microsoft Edge-Terminologie und den Namenskonventionen konsistent.  Es besteht keine Garantie dafür, dass diese Voreinstellungen in zukünftigen Versionen weiterhin wie erwartet funktionieren. Voreinstellungen werden in späteren Versionen möglicherweise geändert oder ignoriert.
-
-Eine Master-Voreinstellungsdatei ist eine Textdatei, die mit JSON-Markup formatiert wurde. Diese Datei muss demselben Verzeichnis wie die ausführbare msedge.exe-Datei hinzugefügt werden. Für systemweite Unternehmensbereitstellungen unter Windows ist dies in der Regel: *Windows: C:\Program Files\Microsoft\Edge\Application\ master_preferences*.
-
-## Weitere Informationen:
+## Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Konfigurieren für Windows mit Intune](configure-edge-with-intune.md)

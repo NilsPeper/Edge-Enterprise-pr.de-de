@@ -3,19 +3,19 @@ title: Konfigurieren von Microsoft Edge unter macOS mit Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 02/20/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren der Microsoft Edge-Richtlinieneinstellungen auf Mac-Geräten mit Jamf
-ms.openlocfilehash: 336bdfed2c53811615b0183dc5ca7db916cd7428
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979898"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194713"
 ---
 # Konfigurieren der Microsoft Edge-Richtlinieneinstellungen unter macOS mit Jamf
 
@@ -45,8 +45,8 @@ Weitere Informationen finden Sie im Jamf Pro-Administratorhandbuch unter [Comput
 So rufen Sie das Richtlinienmanifest ab
 
 - Navigieren Sie zur [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise).
-- Wählen Sie in der Dropdownliste „Kanal/Version“ **einen beliebigen Kanal mit der Version 81 oder höher aus.***.
-- Wählen Sie in der Dropdownliste „Build“ den Eintrag jeder ** 81 Build oder höher** aus.***.
+- Wählen Sie in der Dropdownliste „Kanal/Version“ **einen beliebigen Kanal mit Version 81 oder höher aus.**_.
+- Wählen Sie in der Dropdownliste „Build“ einen beliebigen _*81 Build oder höher**_ aus.
 - Klicken Sie auf GET POLICY FILES (Richtliniendateien abrufen), um Ihr Richtlinienvorlagenpaket herunterzuladen.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ Dieses Manifest wird ab Build 81.0.416.3 in jedem Richtlinienpaket veröffentlic
 Führen Sie die folgenden Schritte aus, um das Richtlinienmanifest in Jamf Pro hochzuladen, und erstellen Sie dann ein Richtlinienprofil für macOS.
 
 1. Melden Sie sich bei Jamf an.
-2. Wählen Sie die Registerkarte **Computer** aus.
+2. Wählen Sie die Registerkarte _*Computer** aus.
 3. Wählen Sie unter **Content Management** (Inhaltsverwaltung) **Configuration Profiles** (Konfigurationsprofile) aus.
 4. Klicken Sie auf der Seite **Configuration Profiles** (Konfigurationsprofile) auf **+ New** (Neu).
 
@@ -115,22 +115,7 @@ Nachdem Sie das neue Konfigurationsprofil erstellt haben, müssen Sie noch den *
 2. Behalten Sie für **Limitations** (Beschränkungen) die Standardeinstellung bei: "None" (Keine). Klicken Sie auf **Abbrechen**.
 3. Behalten Sie für **Exclusions** (Ausschlüsse) die Standardeinstellung bei: "None" (Keine). Klicken Sie auf **Abbrechen**.
 
-## Häufig gestellte Fragen
-
-### Kann Microsoft Edge für die Verwendung von Master-Einstellungen konfiguriert werden?
-
-Ja, Sie können Microsoft Edge so konfigurieren, dass es eine Mastervoreinstellungsdatei verwendet.
-
-Mit einer Mastervoreinstellungsdatei können Sie Standardeinstellungen für ein Browser-Benutzerprofil konfigurieren, wenn Microsoft Edge bereitgestellt wird. Sie können auch eine Mastervoreinstellungsdatei verwenden, um Einstellungen auf Computern anzuwenden, die nicht von einem Geräteverwaltungssystem verwaltet werden. Diese Einstellungen werden auf das Profil des Benutzers angewendet, wenn der Benutzer zum ersten Mal den Browser ausführt. Nachdem der Benutzer den Browser ausgeführt hat, werden Änderungen an der Mastervoreinstellungsdatei nicht angewendet. Benutzer können Einstellungen aus den Mastervoreinstellungen im Browser ändern. Wenn Sie eine Einstellung zwingend vornehmen oder eine Einstellung nach der ersten Ausführung des Browsers ändern möchten, müssen Sie eine Richtlinie verwenden.
-
-Mit einer Mastervoreinstellungsdatei können Sie viele verschiedene Einstellungen und Voreinstellungen für den Browser anpassen, einschließlich der für andere Chromium-basierte Browser und Microsoft Edge-spezifische Einstellungen.  Richtlinienbezogene Voreinstellungen können mithilfe der Mastervoreinstellungsdatei konfiguriert werden. In Fällen, in denen eine Richtlinie festgelegt ist und ein entsprechender Master-Voreinstellungssatz vorhanden ist, hat die Richtlinieneinstellung Vorrang.
-
-> [!IMPORTANT]
-> Möglicherweise sind nicht alle verfügbaren Einstellungen mit der Microsoft Edge-Terminologie und den Namenskonventionen konsistent.  Es besteht keine Garantie dafür, dass diese Voreinstellungen in zukünftigen Versionen weiterhin wie erwartet funktionieren. Voreinstellungen werden in späteren Versionen möglicherweise geändert oder ignoriert.
-
-Eine Master-Voreinstellungsdatei ist eine Textdatei, die mit JSON-Markup formatiert wurde. Diese Datei muss demselben Verzeichnis wie die ausführbare msedge.exe-Datei hinzugefügt werden. Für systemweite Enterprise-Bereitstellungen auf macOS ist die sin der Regel: „*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*” oder „*/Library/Microsoft/Microsoft Edge Master Preferences*”.
-
-## Weitere Informationen:
+## Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Konfigurieren für macOS mit Intune](configure-microsoft-edge-on-mac.md)
