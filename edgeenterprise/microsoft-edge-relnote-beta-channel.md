@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192536"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195261"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -24,7 +24,13 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > [!IMPORTANT]
 > Lesen Sie dieses [Update zu Microsoft Edge-Kanalversionen](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
-## Version 87.0.664.52: vom 30. November
+## Version 87.0.664.55: 3. Dezember
+
+Verschiedene Bugs und Leistungsprobleme wurden behoben. Das folgende neue Feature wird in diesem Release unterstützt.
+
+- **Benachrichtigungen werden generiert, wenn das Kennwort eines Benutzers in einem Onlineleck gefunden wird**. Benutzerkennwörter werden anhand eines Repositorys mit bekannten Anmeldeinformationen überprüft, und der Benutzer wird gewarnt, wenn eine Übereinstimmung gefunden wird. (Dieses Feature ist in Microsoft Edge Stable 88 verfügbar.)
+
+## Version 87.0.664.52: 30. November
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
