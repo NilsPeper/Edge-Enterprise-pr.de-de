@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
-ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
+ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
+ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195261"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "11196536"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -28,7 +28,7 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben. Das folgende neue Feature wird in diesem Release unterstützt.
 
-- **Benachrichtigungen werden generiert, wenn das Kennwort eines Benutzers in einem Onlineleck gefunden wird**. Benutzerkennwörter werden anhand eines Repositorys mit bekannten Anmeldeinformationen überprüft, und der Benutzer wird gewarnt, wenn eine Übereinstimmung gefunden wird. (Dieses Feature ist in Microsoft Edge Stable 88 verfügbar.)
+- **Benachrichtigungen werden generiert, wenn das Kennwort eines Benutzers in einem Onlineleck gefunden wird**. Benutzerkennwörter werden gegen ein Verzeichnis bekannter Anmeldeinformationen überprüft und geben dem Benutzer eine Warnung zurück, wenn eine Übereinstimmung gefunden wird. Um die Sicherheit und den Datenschutz zu gewährleisten, werden Benutzerkennwörter gehashed und verschlüsselt, wenn Sie mit der Datenbank der durchgesickerten Anmeldeinformationen abgeglichen werden.
 
 ## Version 87.0.664.52: 30. November
 
