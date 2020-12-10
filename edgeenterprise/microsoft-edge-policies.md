@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181986"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195136"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -33,12 +33,18 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 In der folgenden Tabelle sind die neuen und veralteten Richtlinien für dieses Update aufgeführt.
 
-| Name | Status |
+| Name | Beschriftung |
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Neu |
-|[BlockExternalExtensions](#blockexternalextensions) | Neu |
-|[ShowMicrosoftRewards](#showmicrosoftrewards) | Neu |
-|[ProactiveAuthEnabled](#proactiveauthenabled) | Veraltet |
+|[PrinterTypeDenyList](#printertypedenylist)|Deaktivieren von Druckertypen in der Verweigerungsliste|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Zulassen, dass lokale Dateien im Internet Explorer-Modus gestartet werden|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Dateierweiterungs-Zulassungsliste zum Öffnen von lokalen Dateien im Internet Explorer-Modus|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Anzeigen des Kontextmenüs zum Öffnen eines Links im Internet Explorer-Modus|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Verhalten der Intranetumleitung|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Legt fest, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge verarbeitet|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Konfiguriert die Verfügbarkeit eines vertikalen Layouts für Registerkarten auf der Seite des Browsers|
+| VERALTET [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Zulassen des Legacy-TLS/DTLS-Downgrades in WebRTC|
+
+
 
 ## Verfügbare Richtlinien
 
@@ -83,7 +89,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Verwendung von unsicheren Inhaltsausnahmen steuern|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Standardeinstellung für JavaScript|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Standardeinstellung für Benachrichtigungen|
-|[DefaultPluginsSetting](#defaultpluginssetting)|Standardeinstellung für Adobe Flash|
+|[DefaultPluginsSetting](#defaultpluginssetting)|Standardeinstellung für Adobe Flash (veraltet)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|Standardeinstellung für Popupfenster|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Steuern der Verwendung der Web-Bluetooth-API|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Steuern der Verwendung der WebUSB-API|
@@ -101,8 +107,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Zurückkehren zum alten SameSite-Verhalten für Cookies auf bestimmten Websites|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Zulassen von Benachrichtigungen bei bestimmten Websites|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Blockieren von Benachrichtigungen für bestimmte Websites|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|Zulassen des Adobe Flash-Plug-Ins auf bestimmten Websites|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|Blockieren des Adobe Flash-Plug-Ins auf bestimmten Websites|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|Zulassen des Adobe Flash-Plug-Ins auf bestimmten Websites (veraltet)|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|Blockieren des Adobe Flash-Plug-Ins auf bestimmten Websites (veraltet)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Popupfenster auf bestimmten Websites zulassen|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Popupfenster auf bestimmten Websites blockieren|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrieren von Protokollhandlern|
@@ -181,6 +187,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[DefaultPrinterSelection](#defaultprinterselection)|Regeln zur Auswahl des Standarddruckers|
 |[PrintHeaderFooter](#printheaderfooter)|Drucken von Kopf- und Fußzeilen|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Standarddrucker des Systems als Standarddrucker festlegen|
+|[PrinterTypeDenyList](#printertypedenylist)|Deaktivieren von Druckertypen in der Verweigerungsliste|
 |[PrintingEnabled](#printingenabled)|Drucken aktivieren|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Standardmäßiges Seitenformat für den Druck|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Drucken über das System-Dialogfeld „Drucken“|
@@ -343,9 +350,13 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Regulierung des IntensiveWakeUpThrottlingEnabled-Features|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Konfigurieren der Ermittlung von Anwendungsstillständen für Internet Explorer-Modus|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Konfigurieren der Internet Explorer-Integration|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Zulassen, dass lokale Dateien im Internet Explorer-Modus gestartet werden|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Dateierweiterungs-Zulassungsliste zum Öffnen von lokalen Dateien im Internet Explorer-Modus|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Anzeigen des Kontextmenüs zum Öffnen eines Links im Internet Explorer-Modus|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Enterprise Mode Site List konfigurieren|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Angeben, wie sich „seiteninterne“ Navigationen zu nicht konfigurierten Websites verhalten, wenn sie von Seiten im Internet Explorer-Modus gestartet werden|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer-Modus-Tests zulassen|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Verhalten der Intranetumleitung|
 |[IsolateOrigins](#isolateorigins)|Aktivieren der Website-Isolation für bestimmte Ursprünge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Vorschläge von lokalen Anbietern zulassen|
 |[ManagedFavorites](#managedfavorites)|Favoriten konfigurieren|
@@ -375,7 +386,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[RestrictSigninToPattern](#restrictsignintopattern)|Einschränken, welche Konten als primäre Microsoft Edge-Konten verwendet werden können|
 |[RoamingProfileLocation](#roamingprofilelocation)|Festlegen des Server gespeicherten Profilverzeichnisses|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Aktivieren der Verwendung von Roaming-Kopien für Microsoft Edge-Profildaten|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte (veraltet)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Zulassen, dass Benutzer die HTTPS-Warnungsseite überschreiten können|
 |[SSLVersionMin](#sslversionmin)|Mindestens aktivierte TLS-Version|
 |[SaveCookiesOnExit](#savecookiesonexit)|Speichern von Cookies, wenn Microsoft Edge geschlossen wird|
@@ -411,10 +422,12 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[TranslateEnabled](#translateenabled)|Übersetzungen aktivieren|
 |[URLAllowlist](#urlallowlist)|Definieren einer Liste zulässiger URLs|
 |[URLBlocklist](#urlblocklist)|Blockieren des Zugriffs auf eine Liste von URLs|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Legt fest, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge verarbeitet|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Aktivieren des Features User-Agent Client Hints (veraltet)|
 |[UserDataDir](#userdatadir)|Festlegen des Benutzerdatenverzeichnisses|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Schränkt die Anzahl der Benutzerdaten-Momentaufnahmen ein, die zur Verwendung für Notfall-Rollbacks aufbewahrt werden.|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Benutzerfeedback zulassen|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Konfiguriert die Verfügbarkeit eines vertikalen Layouts für Registerkarten auf der Seite des Browsers|
 |[VideoCaptureAllowed](#videocaptureallowed)|Video-Aufnahme zulassen oder blockieren|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Websites, die auf Video-Aufnahmegeräte zugreifen können, ohne eine Berechtigung anfordern zu müssen|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|WPAD-Optimierung einrichten|
@@ -422,6 +435,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[WebCaptureEnabled](#webcaptureenabled)|Aktivieren des Features „Websammlung“ in MicrosoftEdge.|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Erneut aktivieren der Web Components v0 API bis M84 (veraltet)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Zulassen, dass WebDriver inkompatible Richtlinien außer Kraft setzt (veraltet)|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Zulassen des Legacy-TLS/DTLS-Downgrades in WebRTC (veraltet)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Verwaltung der Gefährdung lokaler IP-Adressen durch WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
@@ -1513,17 +1527,19 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   ### DefaultPluginsSetting
 
-  #### Standardeinstellung für Adobe Flash
+  #### Standardeinstellung für Adobe Flash (veraltet)
 
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 87 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 77 oder höher
+  - Unter Windows und macOS seit 77 bis 87
 
   #### Beschreibung
 
-  [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
+  Diese Richtlinie funktioniert nicht, da Flash nicht mehr von Microsoft Edge unterstützt wird.
+
+[PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellung manuell ändern.
 
@@ -1551,8 +1567,8 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: DefaultPluginsSetting
-  - GP-Name: Standardeinstellung für Adobe Flash
+  - Eindeutiger GP-Name: DefaultPluginsSetting
+  - GP-Name: Standardeinstellung für Adobe Flash (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Content settings
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -2724,23 +2740,25 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   ### PluginsAllowedForUrls
 
-  #### Zulassen des Adobe Flash-Plug-Ins auf bestimmten Websites
+  #### Zulassen des Adobe Flash-Plug-Ins auf bestimmten Websites (veraltet)
 
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 87 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 77 oder höher
+  - Unter Windows und macOS seit 77 bis 87
 
   #### Beschreibung
 
-  Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die das Adobe Flash-Plug-In ausführen dürfen.
+  Diese Richtlinie funktioniert nicht, da Flash nicht mehr von Microsoft Edge unterstützt wird.
+
+Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die das Adobe Flash-Plug-In ausführen dürfen.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit „*“-und „[*.]“-Platzhaltern für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
 
-  #### Unterstützte Funktionen:
+  #### Unterstützte Features:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -2754,8 +2772,8 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: PluginsAllowedForUrls
-  - GP-Name: Zulassen des Adobe Flash-Plug-Ins auf bestimmten Websites
+  - Eindeutiger GP-Name: PluginsAllowedForUrls
+  - GP-Name: Zulassen des Adobe Flash-Plug-Ins auf bestimmten Websites (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Content settings
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -2791,23 +2809,25 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   ### PluginsBlockedForUrls
 
-  #### Blockieren des Adobe Flash-Plug-Ins auf bestimmten Websites
+  #### Blockieren des Adobe Flash-Plug-Ins auf bestimmten Websites (veraltet)
 
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 87 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 77 oder höher
+  - Unter Windows und macOS seit 77 bis 87
 
   #### Beschreibung
 
-  Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die das Adobe Flash-Plug-In nicht ausführen dürfen.
+  Diese Richtlinie funktioniert nicht, da Flash nicht mehr von Microsoft Edge unterstützt wird.
+
+Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die das Adobe Flash-Plug-In nicht ausführen dürfen.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit „*“-und „[*.]“-Platzhaltern für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
 
-  #### Unterstützte Funktionen:
+  #### Unterstützte Features:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -2821,8 +2841,8 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: PluginsBlockedForUrls
-  - GP-Name: Blockieren des Adobe Flash-Plug-Ins auf bestimmten Websites
+  - Eindeutiger GP-Name: PluginsBlockedForUrls
+  - GP-Name: Blockieren des Adobe Flash-Plug-Ins auf bestimmten Websites (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Content settings
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -6051,6 +6071,88 @@ Wenn Sie diese Richtlinie aktivieren, verwendet die Seitenansicht den Standarddr
   - Beispielwert:
 ``` xml
 <false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### PrinterTypeDenyList
+
+  #### Deaktivieren von Druckertypen in der Verweigerungsliste
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Die Druckertypen auf der Verweigerungsliste werden nicht ermittelt, oder ihre Funktionen werden nicht abgerufen.
+
+Wenn alle Druckertypen auf die Verweigerungsliste gesetzt werden, wird das Drucken effektiv deaktiviert, da es kein Druckziel für Dokumente gibt.
+
+Wenn Sie diese Richtlinie nicht konfigurieren oder die Druckerliste leer ist, können alle Druckertypen ermittelt werden.
+
+Zu den Druckerzielen gehören Erweiterungsdrucker und lokale Drucker. Erweiterungsdrucker werden auch als Druckanbieterziele bezeichnet und umfassen alle Ziele, die zu einer Microsoft Edge-Erweiterung gehören.
+Lokale Drucker werden auch als native Druckziele bezeichnet und umfassen Ziele, die für den lokalen Computer und freigegebene Netzwerkdrucker verfügbar sind.
+
+Zuordnung von Richtlinienoptionen:
+
+* privet (privet) = Zeroconf-basierte (mDNS + DNS-SD) Protokollziele
+
+* extension (extension) = erweiterungsbasierte Ziele
+
+* pdf (pdf) = das „Als PDF speichern“-Ziel
+
+* local (local) = Lokale Druckerziele
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: PrinterTypeDenyList
+  - GP-Name: Deaktivieren von Druckertypen in der Verweigerungsliste
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Printing
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
+  - Pfad (empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
+
+```
+
+  #### Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: PrinterTypeDenyList
+  - Beispielwert:
+``` xml
+<array>
+  <string>local</string>
+  <string>privet</string>
+</array>
 ```
   
 
@@ -12889,17 +12991,17 @@ Deaktivieren Sie diese Richtlinie, um zu verhindern, dass Benutzer Favoriten hin
 
   ### EnableDeprecatedWebPlatformFeatures
 
-  #### Re-enable deprecated web platform features for a limited time (obsolete)
+  #### Veraltete Features für Webplattformen für einen begrenzten Zeitraum wieder aktivieren (veraltet)
 
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 86 nicht mehr.
   #### Unterstützte Versionen:
 
   - On Windows and macOS since 77, until 86
 
   #### Beschreibung
 
-  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+  Diese Richtlinie ist veraltet, da dedizierte webplattforms-Richtlinien jetzt zum Verwalten einzelner veralteter Webplattform-Features verwendet werden.
 
 Geben Sie eine Liste von veralteten Webplattform-Features an, um diese vorübergehend wieder zu aktivieren.
 
@@ -12932,7 +13034,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
+  - GP-Name: Veraltete Features für Webplattformen für einen begrenzten Zeitraum wieder aktivieren (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -15752,6 +15854,186 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationLocalFileAllowed
+
+  #### Zulassen, dass lokale Dateien im Internet Explorer-Modus gestartet werden
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Diese Richtlinie steuert die Verfügbarkeit des Befehlszeilenarguments „--ie-mode-file-url“, das verwendet wird, um Microsoft Edge mit einer auf der Befehlszeile angegebenen lokalen Datei im Internet Explorer-Modus zu starten.
+
+Diese Einstellung kann verwendet werden in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), festgelegt auf „IEMode“.
+
+Wenn Sie diese Richtlinie auf „true“ festlegen oder nicht konfigurieren, darf der Benutzer das Befehlszeilenargument „--ie-mode-file-url“ zum Starten lokaler Dateien im Internet Explorer-Modus verwenden.
+
+Wenn Sie diese Richtlinie auf „false“ festlegen, darf der Benutzer das Befehlszeilenargument „--ie-mode-file-url“ nicht zum Starten lokaler Dateien im Internet Explorer-Modus verwenden.
+
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InternetExplorerIntegrationLocalFileAllowed
+  - GP-Name: Zulassen, dass lokale Dateien im Internet Explorer-Modus gestartet werden
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: InternetExplorerIntegrationLocalFileAllowed
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+
+  #### Dateierweiterungs-Zulassungsliste zum Öffnen von lokalen Dateien im Internet Explorer-Modus
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Diese Richtlinie begrenzt, welche file://-URLs basierend auf der Dateierweiterung im Internet Explorer-Modus gestartet werden dürfen.
+
+Diese Einstellung kann verwendet werden in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), festgelegt auf „IEMode“.
+
+Bei der Anforderung, eine file://-URL im Internet Explorer-Modus zu starten, muss die Dateierweiterung der URL in dieser Liste vorhanden sein, damit die URL im Internet Explorer-Modus gestartet werden darf. Eine URL, deren Öffnen im Internet Explorer-Modus blockiert ist, wird stattdessen im Microsoft Edge-Modus geöffnet.
+
+Wenn Sie diese Richtlinie auf den speziellen Wert „*“ festlegen oder sie nicht konfigurieren, sind alle Dateierweiterungen erlaubt.
+
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InternetExplorerIntegrationLocalFileExtensionAllowList
+  - GP-Name: Dateierweiterungs-Zulassungsliste zum Öffnen von lokalen Dateien im Internet Explorer-Modus
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
+  - Pfad (empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\2 = ".pdf"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\3 = ".vsdx"
+
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileShowContextMenu
+
+  #### Anzeigen des Kontextmenüs zum Öffnen eines Links im Internet Explorer-Modus
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Diese Richtlinie steuert die Sichtbarkeit der Option „Link in der neuen Internet Explorer-Modus-Registerkarte öffnen“ im Kontextmenü für file://-Links.
+
+Diese Einstellung kann verwendet werden in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), festgelegt auf „IEMode“.
+
+Wenn Sie diese Richtlinie auf „true“ festlegen, ist das Kontextmenüelement „Link in der neuen Internet Explorer-Modus-Registerkarte öffnen“ für file://-Links verfügbar.
+
+Wenn Sie diese Richtlinie auf „false“ festlegen oder nicht konfigurieren, wird das Kontextmenüelement nicht hinzugefügt.
+
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InternetExplorerIntegrationLocalFileShowContextMenu
+  - GP-Name: Anzeigen des Kontextmenüs zum Öffnen eines Links im Internet Explorer-Modus
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationSiteList
 
   #### Enterprise Mode Site List konfigurieren
@@ -15935,6 +16217,82 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Opti
 0x00000000
 ```
 
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### IntranetRedirectBehavior
+
+  #### Verhalten der Intranetumleitung
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Diese Richtlinie konfiguriert das Verhalten für die Intranetumleitung über DNS-Interception-Prüfungen. Bei den Prüfungen wird versucht zu ermitteln, ob sich der Browser hinter einem Proxy befindet, der unbekannte Hostnamen umleitet.
+
+Wenn diese Richtlinie nicht konfiguriert ist, verwendet der Browser das Standardverhalten von DNS-Interception-Prüfungen und Intranetumleitungsvorschlägen. In M88 sind sie standardmäßig aktiviert, werden aber im zukünftigen Release standardmäßig deaktiviert sein.
+
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ist eine verwandte Richtlinie, die DNS-Interception-Prüfungen möglicherweise auch deaktiviert. Diese Richtlinie ist jedoch eine flexiblere Version, die Infoleiste für Intranetumleitungen separat steuern kann und in Zukunft erweitert werden kann.
+Wenn entweder [DNSInterceptionChecksChecksEnabled](#dnsinterceptionchecksenabled) oder diese Richtlinie die Deaktivierung von Interception-Prüfungen anfordert, werden die Prüfungen deaktiviert.
+Wenn DNS-Interception-Prüfungen durch diese Richtlinie deaktiviert werden, [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) jedoch aktiviert ist, führen Einzelwortabfragen immer noch zu Intranetnavigationen.
+
+Zuordnung von Richtlinienoptionen:
+
+* Default (0) = Standardverhalten des Browsers verwenden.
+
+* DisableInterceptionChecksDisableInfobar (1) = DNS-Interception-Prüfungen und Meinten Sie "http://intranetsite/"-Infoleisten deaktivieren.
+
+* DisableInterceptionChecksEnableInfobar (2) = DNS-Interception-Prüfungen deaktivieren und Meinten Sie "http://intranetsite/"-Infoleisten zulassen.
+
+* EnableInterceptionChecksEnableInfobar (3) = DNS-Interception-Prüfungen und Meinten Sie "http://intranetsite/"-Infoleisten zulassen.
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Ganze Zahl
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: IntranetRedirectBehavior
+  - GP-Name: Verhalten der Intranetumleitung
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: IntranetRedirectBehavior
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  #### Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: IntranetRedirectBehavior
+  - Beispielwert:
+``` xml
+<integer>1</integer>
+```
   
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -17934,17 +18292,19 @@ Weitere Informationen zur Verwendung von Server gespeicherten Benutzerprofilen f
 
   ### RunAllFlashInAllowMode
 
-  #### Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte
+  #### Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte (veraltet)
 
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 87 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 77 oder höher
+  - Unter Windows und macOS seit 77 bis 87
 
   #### Beschreibung
 
-  Wenn Sie diese Richtlinie aktivieren, werden alle in Websites, die so eingerichtet sind, dass sie Adobe Flash in den Inhaltseinstellungen zulassen – entweder vom Benutzer oder von einer Unternehmensrichtlinie – eingebetteten Adobe Flash-Inhalte ausgeführt. Dies umfasst Inhalte aus anderen Ursprüngen und/oder kleine Inhalte.
+  Diese Richtlinie funktioniert nicht, da Flash nicht mehr von Microsoft Edge unterstützt wird.
+
+Wenn Sie diese Richtlinie aktivieren, werden alle in Websites, die so eingerichtet sind, dass sie Adobe Flash in den Inhaltseinstellungen zulassen – entweder vom Benutzer oder von einer Unternehmensrichtlinie – eingebetteten Adobe Flash-Inhalte ausgeführt. Dies umfasst Inhalte aus anderen Ursprüngen und/oder kleine Inhalte.
 
 Wenn Sie steuern möchten, welche Websites Adobe Flash ausführen können, lesen Sie die Spezifikationen in den [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls)-Richtlinien.
 
@@ -17964,8 +18324,8 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Adobe Fl
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: RunAllFlashInAllowMode
-  - GP-Name: Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte
+  - Eindeutiger GP-Name: RunAllFlashInAllowMode
+  - GP-Name: Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -18068,7 +18428,7 @@ Wenn Sie diese Richtlinie deaktivieren, werden die Benutzer daran gehindert, jeg
 
   #### Beschreibung
 
-  Sets the minimum supported version of TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
+  Bestimmt die mindestens unterstützte Version von TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
 
 Wenn Sie diese Richtlinie festlegen, verwendet Microsoft Edge keine SSL/TLS-Versionen, die niedriger als die angegebene Version sind. Jeder nicht erkannte Wert wird ignoriert.
 
@@ -18998,7 +19358,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren:
 
   Diese Richtlinie hat aufgrund veränderter betrieblicher Anforderungen nicht erwartungsgemäß funktioniert. Therefore it's deprecated and should not be used.
 
-Gibt an, ob eine Verknüpfung mit Office.com in die Favoritenleiste einbezogen werden soll. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+Gibt an, ob eine Verknüpfung mit Office.com in die Favoritenleiste einbezogen werden soll. Benutzer, die bei Microsoft Edge angemeldet sind, gelangen durch diese Verknüpfung zu ihren Microsoft Office Apps und Dokumenten. Wenn diese Richtlinie aktiviert oder nicht konfiguriert ist, können Benutzer auswählen, ob die Verknüpfung angezeigt werden soll, indem sie die Umschaltfläche im Kontextmenü der Favoritenleiste ändern.
 Wenn Sie diese Richtlinie deaktivieren, wird die Verknüpfung nicht angezeigt.
 
   #### Unterstützte Funktionen:
@@ -19182,13 +19542,13 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutze
 
   #### Beschreibung
 
-  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+  Legen Sie fest, ob Websites die W3C-websprach-API verwenden können, um die Sprache des Benutzers zu erkennen. Die Microsoft Edge-Implementierung der Web-Sprach-API verwendet Azure Cognitive Services, sodass Sprach Daten den Computer verlassen.
 
-If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können webbasierte Anwendungen, die die websprach-API verwenden, die Spracherkennung verwenden.
 
-If you disable this policy, Speech Recognition is not available through the Web Speech API.
+Wenn Sie diese Richtlinie deaktivieren, ist die Spracherkennung über die websprach-API nicht verfügbar.
 
-Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+Hier finden Sie weitere Informationen zu diesem Feature: SpeechRecognition-API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
 
   #### Unterstützte Funktionen:
 
@@ -20298,6 +20658,60 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### UpdatePolicyOverride
+
+  #### Legt fest, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge verarbeitet
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter macOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren, verarbeitet Microsoft Edge Update Microsoft Edge-Updates entsprechend der Konfiguration der folgenden Optionen:
+
+- Nur automatische unbeaufsichtigte Updates: Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.
+
+- Nur manuelle Updates: Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt. (Nicht alle Apps bieten eine Schnittstelle für diese Option.)
+
+Wenn Sie „manuelle Updates” auswählen, stellen Sie sicher, dass Sie regelmäßig mit Microsoft AutoUpdate nach Updates suchen.
+
+Wenn Sie diese Richtlinie nicht aktivieren und konfigurieren, sucht Microsoft Edge Update automatisch nach Updates.
+
+
+Zuordnung von Richtlinienoptionen:
+
+* automatic-silent-only (automatic-silent-only) = Updates werden nur angewendet, wenn sie von der regelmäßigen Updateprüfung gefunden werden.
+
+* manual-only (manual-only) = Updates werden nur angewendet, wenn der Benutzer eine manuelle Updateprüfung ausführt. (Nicht alle Apps bieten eine Schnittstelle für diese Option.)
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Zeichenfolge
+
+  
+
+  #### Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: UpdatePolicyOverride
+  - Beispielwert:
+``` xml
+<string>automatic-silent-only</string>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### UserAgentClientHintsEnabled
 
   #### Aktivieren des Features User-Agent Client Hints (veraltet)
@@ -20537,6 +20951,70 @@ Wenn Sie diese Richtlinie deaktivieren, können die Benutzer Microsoft Edge Feed
   #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: UserFeedbackAllowed
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### VerticalTabsAllowed
+
+  #### Konfiguriert die Verfügbarkeit eines vertikalen Layouts für Registerkarten auf der Seite des Browsers
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Konfiguriert, ob ein Benutzer auf ein alternatives Layout zugreifen kann, bei dem die Registerkarten vertikal an der Seite des Browsers statt oben ausgerichtet sind.
+Wenn mehrere Registerkarten geöffnet sind, ermöglicht dieses Layout eine bessere Anzeige und Verwaltung von Registerkarten. Die Websitetitel sind besser sichtbar, es ist einfacher, ausgerichtete Symbole zu scannen, und es gibt mehr Platz zum Verwalten und Schließen von Registerkarten.
+
+Wenn Sie diese Richtlinie deaktivieren, ist das vertikale Registerkartenlayout nicht als Option für Benutzer verfügbar.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, befindet sich das Registerkartenlayout weiterhin oben, aber Benutzer können vertikale Registerkarten an der Seite aktivieren.
+
+
+  #### Unterstützte Features:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: VerticalTabsAllowed
+  - GP-Name: Konfiguriert die Verfügbarkeit eines vertikalen Layouts für Registerkarten auf der Seite des Browsers
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: VerticalTabsAllowed
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  #### Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: VerticalTabsAllowed
   - Beispielwert:
 ``` xml
 <true/>
@@ -21011,6 +21489,67 @@ Wenn die Richtlinie deaktiviert oder nicht konfiguriert ist, ist es WebDriver ni
   - Beispielwert:
 ``` xml
 <true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### WebRtcAllowLegacyTLSProtocols
+
+  #### Zulassen des Legacy-TLS/DTLS-Downgrades in WebRTC (veraltet)
+
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren, können WebRTC-Peerverbindungen auf veraltete Versionen der TLS/DTLS-Protokolle (DTLS 1.0, TLS 1.0 und TLS 1.1) herabgestuft werden.
+Wenn Sie diese Richtlinie deaktivieren oder nicht festlegen, sind diese TLS/DTLS-Versionen deaktiviert.
+
+Diese Richtlinie ist temporär und wird in einer zukünftigen Version von Microsoft Edge entfernt.
+
+  #### Unterstützte Features:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WebRtcAllowLegacyTLSProtocols
+  - GP-Name: Zulassen des Legacy-TLS/DTLS-Downgrades in WebRTC (veraltet)
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: WebRtcAllowLegacyTLSProtocols
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000000
+```
+
+  #### Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: WebRtcAllowLegacyTLSProtocols
+  - Beispielwert:
+``` xml
+<false/>
 ```
   
 
