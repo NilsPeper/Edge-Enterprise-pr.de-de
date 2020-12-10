@@ -3,19 +3,19 @@ title: Unterstützung und Konfiguration der Identität in Microsoft Edge
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 07/15/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Unterstützung und Konfiguration der Identität in Microsoft Edge
-ms.openlocfilehash: 357f3928d870f83aa087f86cbe30db3ec4f360a2
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
+ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980082"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11201292"
 ---
 # Unterstützung und Konfiguration der Identität in Microsoft Edge
 
@@ -79,13 +79,13 @@ Bei der nahtlosen einmaligen Anmeldung werden Benutzer automatisch angemeldet, w
 
 ### Integrierte Windows-Authentifizierung (WIA)
 
-Microsoft Edge unterstützt auch die integrierte Windows-Authentifizierung für Authentifizierungsanforderungen im internen Netzwerk einer Organisation für alle Anwendungen, die einen Browser für die Authentifizierung verwenden. Dies wird in allen Versionen von Windows 10 und niedrigeren Windows-Versionen unterstützt. Standardmäßig verwendet Microsoft Edge die Intranetzone als Zulassungsliste für die WIA. Informationen zum Konfigurieren, welche Server für die integrierte Authentifizierung aktiviert sind, finden Sie in der [AuthServerAllowlist-Richtlinie](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist).
+Microsoft Edge unterstützt auch die integrierte Windows-Authentifizierung für Authentifizierungsanforderungen im internen Netzwerk einer Organisation für alle Anwendungen, die einen Browser für die Authentifizierung verwenden. Dies wird in allen Versionen von Windows 10 und niedrigeren Windows-Versionen unterstützt. Standardmäßig verwendet Microsoft Edge die Intranetzone als Zulassungsliste für die WIA. Alternativ können Sie die Liste der Server, die für die integrierte Authentifizierung aktiviert sind, mithilfe der [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist)-Richtlinie anpassen. Unter MacOS ist diese Richtlinie erforderlich, um die integrierte Authentifizierung zu ermöglichen.
 
 Damit WIA-basiertes SSO in Microsoft Edge (Version 77 und höher) unterstützt wird, müssen Sie möglicherweise auch einige serverseitige Konfigurationen vornehmen. Sie müssen wahrscheinlich die ADFS-Eigenschaft (Active Directory Federation Services) **WiaSupportedUserAgents** konfigurieren, damit Unterstützung für die neue Benutzer-Agent-Zeichenfolge für MicrosoftEdge hinzugefügt wird. Informationen hierzu finden Sie unter [Anzeigen von WIASupportedUserAgent-Einstellungen](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) und [Ändern der WIASupportedUserAgent-Einstellungen](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings). Nachstehend finden Sie ein Beispiel für die Microsoft Edge-Zeichenfolge des Benutzer-Agenten unter Windows 10. Näheres erfahren Sie unter [Microsoft Edge Benutzer-Agent](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string). 
 
-Das folgende Beispiel einer UA-Zeichenfolge bezieht sich auf den zum Zeitpunkt der Veröffentlichung dieses Artikels neuesten Dev Channel-Build:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
+Das folgende Beispiel einer UA-Zeichenfolge bezieht sich auf den zum Zeitpunkt der Veröffentlichung dieses Artikels neuesten Entwicklerkanal-Build:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
-Unter MacOS können Sie auch [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist)- und [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist)-Richtlinien verwenden, um Kerberos-SSO mit Microsoft Edge zu aktivieren.
+Für Dienste, die das Delegieren von „Anmeldeinformationen aushandeln“ erfordern, unterstützt Microsoft Edge die beschränkte Delegierung mithilfe der [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist)-Richtlinie.
 
 ## Zusätzliche Authentifizierungskonzepte
 
