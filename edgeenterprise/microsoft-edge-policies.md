@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: b6d3ca2b485f6ce508f1a280fef48c4ed392d5fc
+ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195136"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205733"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -29,22 +29,14 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-## Neue und veraltete Richtlinien
+## Neue Richtlinien
 
-In der folgenden Tabelle sind die neuen und veralteten Richtlinien für dieses Update aufgeführt.
+In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
 
 | Name | Beschriftung |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|Deaktivieren von Druckertypen in der Verweigerungsliste|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Zulassen, dass lokale Dateien im Internet Explorer-Modus gestartet werden|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Dateierweiterungs-Zulassungsliste zum Öffnen von lokalen Dateien im Internet Explorer-Modus|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Anzeigen des Kontextmenüs zum Öffnen eines Links im Internet Explorer-Modus|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|Verhalten der Intranetumleitung|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Legt fest, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge verarbeitet|
-|[VerticalTabsAllowed](#verticaltabsallowed)|Konfiguriert die Verfügbarkeit eines vertikalen Layouts für Registerkarten auf der Seite des Browsers|
-| VERALTET [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Zulassen des Legacy-TLS/DTLS-Downgrades in WebRTC|
-
-
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Einschränken des Druckmodus für Hintergrundgrafiken|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Standarddruckmodus für Hintergrundgrafiken|
 
 ## Verfügbare Richtlinien
 
@@ -188,6 +180,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[PrintHeaderFooter](#printheaderfooter)|Drucken von Kopf- und Fußzeilen|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Standarddrucker des Systems als Standarddrucker festlegen|
 |[PrinterTypeDenyList](#printertypedenylist)|Deaktivieren von Druckertypen in der Verweigerungsliste|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Einschränken des Druckmodus für Hintergrundgrafiken|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Standarddruckmodus für Hintergrundgrafiken|
 |[PrintingEnabled](#printingenabled)|Drucken aktivieren|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Standardmäßiges Seitenformat für den Druck|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Drucken über das System-Dialogfeld „Drucken“|
@@ -2756,9 +2750,9 @@ Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die d
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit „*“-und „[*.]“-Platzhaltern für diese Richtlinie nicht mehr unterstützt.
 
-  #### Unterstützte Features:
+  #### Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -2825,9 +2819,9 @@ Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die d
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit „*“-und „[*.]“-Platzhaltern für diese Richtlinie nicht mehr unterstützt.
 
-  #### Unterstützte Features:
+  #### Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -4174,7 +4168,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Beschreibung
 
-  Standardmäßig sind alle Erweiterungen zulässig. Wenn Sie jedoch alle Erweiterungen blockieren, indem Sie die Richtlinie "ExtensionInstallBlockList" auf "*" festlegen, können Benutzer nur die in dieser Richtlinie definierten Erweiterungen installieren.
+  Durch Festlegen dieser Richtlinie wird angegeben, welche Erweiterungen nicht der Blockierungsliste unterliegen.
+
+Ein Blocklistenwert von * bedeutet, dass alle Erweiterungen blockiert sind und Benutzer nur Erweiterungen installieren können, die in der Zulassungsliste aufgeführt sind.
+
+Standardmäßig sind alle Erweiterungen zulässig. Wenn Sie jedoch Erweiterungen nach Richtlinie verboten haben, können Sie die Liste der zulässigen Erweiterungen verwenden, um diese Richtlinie zu ändern.
 
   #### Unterstützte Funktionen:
 
@@ -4237,11 +4235,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### Beschreibung
 
-  Listet bestimmte Erweiterungen auf, die Benutzer in Microsoft Edge NICHT installieren können. Wenn Sie diese Richtlinie bereitstellen, werden alle Erweiterungen in dieser Liste, die zuvor installiert wurden, deaktiviert, und der Benutzer ist nicht in der Lage, sie zu aktivieren. Wenn Sie ein Element aus der Liste der blockierten Erweiterungen entfernen, wird diese Erweiterung überall, wo sie zuvor installiert war, automatisch wieder aktiviert.
+  Mit dieser Option können Sie angeben, welche Erweiterungen die Benutzer nicht installieren können. Erweiterungen, die bereits installiert sind, werden deaktiviert, wenn Sie blockiert werden, ohne eine Möglichkeit für den Benutzer, Sie zu aktivieren. Nachdem eine deaktivierte Erweiterung aus der Blockierungsliste entfernt wurde, wird Sie automatisch wieder aktiviert.
 
-Verwenden Sie "*", um alle Erweiterungen zu blockieren, die nicht explizit in der Zulassungsliste aufgelistet sind.
+Ein Blocklistenwert von ' * ' bedeutet, dass alle Erweiterungen blockiert sind, es sei denn, Sie werden explizit in der Zulassen-Liste aufgeführt.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer beliebige Erweiterungen in Microsoft Edge installieren.
+Wenn diese Richtlinie nicht eingerichtet ist, kann der Benutzer eine beliebige Erweiterung in Microsoft Edge installieren.
 
   #### Unterstützte Funktionen:
 
@@ -4448,11 +4446,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### Beschreibung
 
-  Konfiguriert Erweiterungsverwaltungseinstellungen für Microsoft Edge.
+  Die Einstellung dieser Richtlinie steuert die Einstellungen für die Erweiterungsverwaltung von Microsoft Edge, einschließlich aller Einstellungen, die durch vorhandene erweiterungsbezogene Richtlinien gesteuert werden. Diese Richtlinie ersetzt alle älteren Richtlinien, die möglicherweise festgelegt wurden.
 
-Diese Richtlinie steuert mehrere Einstellungen, einschließlich der Einstellungen, die von allen vorhandenen Erweiterungs-bezogenen Richtlinien gesteuert werden. Diese Richtlinie setzt alle Legacy-Richtlinien außer Kraft, wenn beide festgelegt sind.
+Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der exakten Update-URL, die im Erweiterungsmanifest angegeben ist Erweiterung ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
 
-Mit dieser Richtlinie wird eine Erweiterungs-ID oder eine Update-URL ihrer jeweiligen Konfiguration zugeordnet. Bei einer Erweiterungs-ID wird die Konfiguration nur auf die angegebene Erweiterung angewendet. Legen Sie eine Standardkonfiguration für die spezielle ID "*" fest, damit diese auf alle Erweiterungen angewendet wird, die in dieser Richtlinie nicht ausdrücklich aufgelistet sind. Bei einer Update-URL wird die Konfiguration auf alle Erweiterungen angewendet, die die genaue Aktualisierungs-URL aufweisen, die im Manifest dieser Erweiterung angegeben ist, wie unter [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)beschrieben.
+Hinweis: für Windows-Instanzen, die nicht zu einer Microsoft Active Directory-Domäne hinzugefügt wurden, ist die erzwungene Installation auf Apps und Erweiterungen auf der Microsoft Edge-Add-Ons-Website limitiert.
+
 
   #### Unterstützte Funktionen:
 
@@ -5217,9 +5216,9 @@ Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [h
 
   #### Beschreibung
 
-  Listen Sie bestimmte systemeigene Messaginghosts auf, die Benutzer in Microsoft Edge verwenden können.
+  Durch Festlegen der Richtlinie wird angegeben, welche systemeigenen Messaging-Hosts nicht der Verweigerungsliste unterliegen. Der Wert für die Verweigerungsliste von * bedeutet, dass alle systemeigenen Messaging-Hosts verweigert werden, es sei denn, Sie werden ausdrücklich zugelassen.
 
-Standardmäßig sind alle systemeigenen Messaginghosts zulässig. Wenn Sie die [NativeMessagingBlocklist](#nativemessagingblocklist) Richtlinie auf * festlegen, werden alle systemeigenen Messaginghosts blockiert, und es werden nur die hier aufgeführten systemeigenen Messaginghosts geladen.
+Standardmäßig sind alle systemeigenen Messaging-Hosts zugelassen. Wenn jedoch ein systemeigener Messaging-Host durch eine Richtlinie abgelehnt wird, kann der Administrator die Zulassen-Liste verwenden, um diese Richtlinie zu ändern.
 
   #### Unterstützte Funktionen:
 
@@ -5282,11 +5281,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### Beschreibung
 
-  Gibt an, welche systemeigenen Messaginghosts nicht verwendet werden sollten.
+  Durch Festlegen dieser Richtlinie wird angegeben, welche systemeigenen Messaging-Hosts nicht geladen werden sollten. Der Wert für die Verweigerungsliste von * bedeutet, dass alle systemeigenen Messaging-Hosts verweigert werden, es sei denn, Sie werden ausdrücklich zugelassen.
 
-Verwenden Sie "*", um alle systemeigenen Messaginghosts zu blockieren, es sei denn, sie werden in der Zulassungsliste explizit aufgelistet.
-
-Wenn Sie diese Richtlinie nicht konfigurieren, lädt Microsoft Edge alle installierten, systemeigenen Messaginghosts.
+Wenn Sie diese Richtlinie nicht feststellen, lädt Microsoft Edge alle installierten systemeigenen Messaging-Hosts.
 
   #### Unterstützte Funktionen:
 
@@ -5349,11 +5346,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### Beschreibung
 
-  Ermöglicht die Installation von systemeigenen Messaginghosts auf Benutzerebene.
+  Wenn Sie diese Richtlinie auf Aktiviert setzen oder sie nicht aktivieren, kann Microsoft Edge systemeigene Messaging-Hosts verwenden, die auf der Benutzerebene installiert sind.
 
-Wenn Sie diese Richtlinie deaktivieren, verwendet Microsoft Edge nur auf Systemebene installierte, systemeigene Messaginghosts.
-
-Als Standard, falls Sie diese Richtlinie nicht konfigurieren, gestattet Microsoft Edge die Nutzung von systemeigenen Messaginghosts auf Benutzerebene.
+Wenn Sie diese Richtlinie auf Deaktiviert festlegen, kann Microsoft Edge diese Hosts nur verwenden, wenn Sie auf Systemebene installiert sind.
 
   #### Unterstützte Funktionen:
 
@@ -6153,6 +6148,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### Einschränken des Druckmodus für Hintergrundgrafiken
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Schränkt den Druckmodus für Hintergrundgrafiken ein. Wenn diese Richtlinie nicht aktiviert ist, gibt es keine Einschränkungen beim Drucken von Hintergrundgrafiken.
+
+Zuordnung von Richtlinienoptionen:
+
+* Any (Any) = Drucken mit und ohne Hintergrundgrafiken zulassen
+
+* enabled (enabled) = Druck nur mit Hintergrundgrafiken zulassen
+
+* Disabled (disabled) = Druck nur ohne Hintergrundgrafiken zulassen
+
+Verwenden Sie die vorhergehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Zeichenfolge
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP-eindeutiger Name: PrintingAllowedBackgroundGraphicsModes
+  - GP-Name: Einschränken des Druckmodus für Hintergrundgrafiken
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Printing
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): N/A
+  - Wertname: PrintingAllowedBackgroundGraphicsModes
+  - Werttyp: REG_SZ
+
+  ##### Beispielwert:
+
+```
+"enabled"
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Name des Präferenzschlüssels: PrintingAllowedBackgroundGraphicsModes
+  - Beispielwert:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### Standarddruckmodus für Hintergrundgrafiken
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Überschreibt den Standarddruckmodus für Hintergrundgrafiken.
+
+Zuordnung von Richtlinienoptionen:
+
+* enabled (enabled) = Standardmäßiges Aktivieren des Druckmodus für Hintergrundgrafiken
+
+* Disabled (disabled) = standardmäßiges Deaktivieren des Druckmodus für Hintergrundgrafiken
+
+Verwenden Sie die vorhergehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Zeichenfolge
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP-eindeutiger Name: PrintingBackgroundGraphicsDefault
+  - GP-Name: Standarddruckmodus für Hintergrundgrafiken
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Printing
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): N/A
+  - Wertname: PrintingBackgroundGraphicsDefault
+  - Werttyp: REG_SZ
+
+  ##### Beispielwert:
+
+```
+"enabled"
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Name des Präferenzschlüssels: PrintingBackgroundGraphicsDefault
+  - Beispielwert:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8292,7 +8421,7 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 
   Aktiviert die Anzeige der relevanten Microsoft-Suche in Bing-Vorschläge in der Vorschlagsliste der Adressleiste, wenn der Benutzer eine Suchzeichenfolge in der Adressleiste eingibt. Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer Ergebnisse anzeigen, die von Microsoft Suche in Bing in der Vorschlagsliste der Microsoft Edge-Adressleiste angezeigt werden. Um die Microsoft-Suche in Bing-Resultate anzuzeigen, muss der Benutzer mit seinem Azure AD-Konto für diese Organisation bei Microsoft Edge angemeldet sein.
 Wenn Sie diese Richtlinie deaktivieren, können die Benutzer interne Ergebnisse in der Vorschlagsliste der Microsoft Edge-Adressleiste nicht anzeigen.
-Wenn Sie die Richtlinien für einen standardmäßigen Suchanbieter ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) und [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)) aktiviert haben und der angegebene Suchanbieter nicht Bing ist, gilt diese Richtlinie nicht, und es gibt in der Vorschlagsliste der Adressleiste keine Microsoft-Suche in Bing-Vorschläge.
+Ab Microsoft Edge Version 89 wird Microsoft Search in Bing-Vorschlägen auch dann verfügbar sein, wenn Bing nicht der Standardsuchanbieter des Benutzers ist.
 
   #### Unterstützte Funktionen:
 
@@ -15779,7 +15908,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
+  - Pfad (empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationEnhancedHangDetection
   - Werttyp: REG_DWORD
 
@@ -15840,7 +15969,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
+  - Pfad (empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationLevel
   - Werttyp: REG_DWORD
 
@@ -17951,9 +18080,8 @@ Wenn diese Option nicht festgelegt ist, wird der Standardzeitraum von 604800000 
 
   #### Beschreibung
 
-  Wenn diese Richtlinie aktiviert oder nicht festgelegt ist, ist die Renderer-Code-Integrität aktiviert. Diese Richtlinie sollte nur deaktiviert werden, wenn Kompatibilitätsprobleme mit Software von Drittanbietern auftreten, die innerhalb der Renderer-Prozesse von Microsoft Edge ausgeführt werden müssen.
-
-Das Deaktivieren dieser Richtlinie wirkt sich negativ auf die Sicherheit und Stabilität von Microsoft Edge aus, da unbekannte und potenziell böswilliger Code innerhalb der Renderer-Prozesse von Microsoft Edge geladen werden kann.
+  Wenn Sie die Richtlinie auf "Aktiviert" setzen oder sie nicht setzen, wird die Renderer-Code-Integrität aktiviert.
+Wenn Sie die Richtlinie auf "Deaktiviert" setzen, wirkt sich dies nachteilig auf die Sicherheit und Stabilität von Microsoft Edge aus, da unbekannter und potenziell schädlicher Code innerhalb der Renderer-Prozesse von Microsoft Edge geladen werden kann. Deaktivieren Sie die Richtlinie nur, wenn Kompatibilitätsprobleme mit Software von Drittanbietern auftreten, die innerhalb der Renderer-Prozesse von Microsoft Edge ausgeführt werden müssen.
 
   #### Unterstützte Funktionen:
 
