@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/10/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: b6d3ca2b485f6ce508f1a280fef48c4ed392d5fc
-ms.sourcegitcommit: 2887b30d46a9fe59d2ab9f95e638197ae058eaf7
+ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218734"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -433,8 +433,6 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Verwaltung der Gefährdung lokaler IP-Adressen durch WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
-|[WebWidgetAllowed](#webwidgetallowed)|Webwidget aktivieren|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start zulassen|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
 
 
@@ -15908,7 +15906,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationEnhancedHangDetection
   - Werttyp: REG_DWORD
 
@@ -15969,7 +15967,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationLevel
   - Werttyp: REG_DWORD
 
@@ -21888,131 +21886,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [Zurück zum Anfang](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### Webwidget aktivieren
-
-  
-  
-  #### Unterstützte Versionen:
-
-  - Unter Windows ab Version 88 oder höher
-
-  #### Beschreibung
-
-  Aktiviert das Webwidget. Wenn diese Option aktiviert ist, können Benutzer das Widget verwenden, um im Internet vom Desktop aus oder über eine Anwendung zu suchen. Das Widget bietet ein Suchfeld, im dem Webvorschläge angezeigt werden, und öffnet alle Websuchen in Microsoft Edge. Im Suchfeld werden Vorschläge für die Suche (auf Bing gestützt) und für URLs angezeigt. Das Widget umfasst außerdem Feed-Kacheln, die angeklickt werden können, um weitere Informationen auf msn.com in einem neuen Tab oder im Fenster des Microsoft Edge-Browsers anzuzeigen. Die Feed-Kacheln könnten Werbeanzeigen enthalten. Das Widget kann über die Microsoft Edge-Einstellungen oder über das Menü "Weitere Tools" in Microsoft Edge gestartet werden.
-
-Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, ist das Web-Widget automatisch für alle Profile aktiviert.
-In den Microsoft Edge-Einstellungen wird die Option zum Starten des Widgets angezeigt.
-In den Microsoft Edge-Einstellungen wird das Menüelement zum Ausführen des Widgets beim Windows-Start (automatischer Start) angezeigt.
-Wenn die Richtlinie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) aktiviert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Ein“ gesetzt.
-Wenn die Richtlinie [WebWidgetIsEnabledOnStartup-](#webwidgetisenabledonstartup) deaktiviert oder nicht konfiguriert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Aus“ gesetzt.
-Benutzer sehen das Menüelement, um das Widget über das Microsoft Edge-Menü "Weitere Tools" zu starten. Benutzer können das Widget über das Menü "Weitere Tools" starten.
-Das Widget kann durch die Option "Beenden" in der Statusleiste oder durch Schließen des Widgets über die Taskleiste deaktiviert werden. Wenn die Autostart-Option ausgewählt wurde, wird das Widget beim Neustart des Systems neu gestartet.
-
-Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget für alle Profile deaktiviert.
-Die Option zum Starten des Widgets über die Microsoft Edge-Einstellungen wird deaktiviert.
-Die Option zum Starten des Widget beim Windows-Start (automatischer Start) wird deaktiviert.
-Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools" wird deaktiviert.
-
-  #### Unterstützte Funktionen:
-
-  - Kann zwingend erforderlich sein: Ja
-  - Kann empfohlen werden: Nein
-  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
-
-  #### Datentyp:
-
-  - Boolesch
-
-  #### Windows-Informationen und -Einstellungen
-
-  ##### Informationen zur Gruppenrichtlinie (ADMX)
-
-  - Eindeutiger GP-Name: WebWidgetAllowed
-  - GP-Name: Webwidget aktivieren
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
-  - GP Pfad (Empfohlen): n.a.
-  - GP ADMX Dateiname: MSEdge.admx
-
-  ##### Windows-Registrierungseinstellungen
-
-  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
-  - Wertname: WebWidgetAllowed
-  - Werttyp: REG_DWORD
-
-  ##### Beispielwert:
-
-```
-0x00000001
-```
-
-  
-
-  [Zurück zum Anfang](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Web-Widget beim Windows-Start zulassen
-
-  
-  
-  #### Unterstützte Versionen:
-
-  - Unter Windows ab Version 88 oder höher
-
-  #### Beschreibung
-
-  Gestattet dem Web-Widget beim Start von Windows zu starten.
-
-Ist diese Option aktiviert, wird das Web-Widget standardmäßig beim Windows-Start ausgeführt.
-Wenn das Widget über die Richtlinie [WebWidgetAllowed](#webwidgetallowed) deaktiviert wurde, startet diese Richtlinie das Widget nicht beim Windows-Start.
-
-Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
-Die Option zum Starten des Widgets beim Windows-Start wird deaktiviert und in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
-
-Wenn Sie diese Richtlinie nicht konfigurieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
-Die Option zum Starten des Widgets beim Windows-Start wird in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
-
-  #### Unterstützte Funktionen:
-
-  - Kann zwingend erforderlich sein: Ja
-  - Kann empfohlen werden: Nein
-  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
-
-  #### Datentyp:
-
-  - Boolesch
-
-  #### Windows-Informationen und -Einstellungen
-
-  ##### Informationen zur Gruppenrichtlinie (ADMX)
-
-  - Eindeutiger GP-Name: WebWidgetIsEnabledOnStartup
-  - GP-Name: Web-Widget beim Windows-Start zulassen
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
-  - GP Pfad (Empfohlen): n.a.
-  - GP ADMX Dateiname: MSEdge.admx
-
-  ##### Windows-Registrierungseinstellungen
-
-  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
-  - Wertname: WebWidgetIsEnabledOnStartup
-  - Werttyp: REG_DWORD
-
-  ##### Beispielwert:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
