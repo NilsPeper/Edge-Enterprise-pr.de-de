@@ -3,26 +3,26 @@ title: Microsoft Edge Enterprise-Synchronisierung
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 10/21/2020
+ms.date: 12/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise-Synchronisierung
-ms.openlocfilehash: e51346d9bab83228c42a84a7a14ee45dc9b463a7
-ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
+ms.openlocfilehash: 791188b5d28c867d6409a4d5373ea6c1ec7e49c7
+ms.sourcegitcommit: 482b2e440a62cbf974dc45ac817f9d9d187ba1b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133130"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205464"
 ---
 # Microsoft Edge Enterprise-Synchronisierung
 
 In diesem Artikel wird erläutert, wie Sie mit Microsoft Edge Favoriten, Kennwörter und andere Browserdaten auf allen angemeldeten Geräten synchronisieren können.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher, sofern nichts anderes angegeben ist.
 
 ## Übersicht
 
@@ -33,8 +33,11 @@ Dank der Microsoft Edge-Synchronisierung können Benutzer auf ihre Browserdaten 
 - Adressen und mehr (Formulareinträge)
 - Sammlungen
 - Einstellungen
+- Erweiterung
+- Geöffnete Registerkarten (verfügbar in Microsoft Edge, Version 88)
+- Verlauf (verfügbar in Microsoft Edge, Version 88)
 
-Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und dieser kann die Synchronisierung für jeden der oben aufgeführten Datentypen aktivieren oder deaktivieren.
+Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und Benutzer können die Synchronisierung für die beiden oben aufgeführten Datentypen aktivieren oder deaktivieren.
 
 > [!NOTE]
 > Zusätzliche Geräteverbindungs- und Konfigurationsdaten (wie Gerätename, Marke und Modell) werden hochgeladen, um die Synchronisationsfunktionalität zu unterstützen.
@@ -43,17 +46,17 @@ Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und 
 
 Die Synchronisierung von Microsoft Edge für Azure Active Directory (Azure AD)-Konten ist für jedes der folgenden Abonnements verfügbar:
 
-- Azure AD Premium (P1 und P2)
+- Azure AD Premium (P1 oder P2)
 - M365 Business Premium
-- Office365 E1 und höher
-- Azure Information Protection (AIP) (P1 & P2)
+- Office365E1 und höher
+- Azure Information Protection (AIP) (P1 oder P2)
 - Alle EDU-Abonnements (Microsoft Apps für Studenten oder Dozenten, Exchange Online für Studenten oder Dozenten, O365 A1 oder höher, M365 A1 oder höher oder Azure Information Protection P1 oder P2 für Studenten oder Dozenten)
 
 ## Konfigurieren der Microsoft Edge-Synchronisierung
 
 Konfigurationsoptionen für die Microsoft Edge-Synchronisierung stehen über den Azure Information Protection (AIP)-Dienst zur Verfügung. Wenn AIP für einen Mandanten aktiviert ist, können alle Benutzer Microsoft Edge-Daten unabhängig von der Lizenzierung synchronisieren. Anweisungen zum Aktivieren von AIP finden Sie [hier](https://docs.microsoft.com/azure/information-protection/activate-office365).
 
-Um die Synchronisierung auf eine bestimmte Benutzergruppe zu beschränken, können Sie die [AIP-Richtlinie zur Onboarding-Steuerung](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) für diese Benutzer aktivieren. Wenn die Synchronisierung immer noch nicht verfügbar ist, nachdem Sie sich vergewissert haben, dass das Onboarding für alle erforderlichen Benutzer erfolgt ist, stellen Sie mithilfe des PowerShell-Cmdlets [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps)  sicher, dass IPCv3Service aktiviert ist.
+Um die Synchronisierung auf eine bestimmte Benutzergruppe zu beschränken, können Sie die [AIP-Richtlinie zur Onboarding-Steuerung](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps&preserve-view=true) für diese Benutzer aktivieren. Wenn die Synchronisierung immer noch nicht verfügbar ist, nachdem Sie sich vergewissert haben, dass das Onboarding für alle erforderlichen Benutzer erfolgt ist, stellen Sie mithilfe des PowerShell-Cmdlets [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps&preserve-view=true)  sicher, dass IPCv3Service aktiviert ist.
 
 > [!CAUTION]
 > Die Aktivierung von Azure Information Protection erlaubt auch anderen Anwendungen, wie z.B. Microsoft Word oder Microsoft Outlook, Inhalte mit AIP zu schützen. Darüber hinaus wird jede Onboarding-Kontrollrichtlinie, die zur Einschränkung der Edge-Synchronisierung verwendet wird, auch andere Anwendungen daran hindern, Inhalte mithilfe von AIP zu schützen.
@@ -68,6 +71,7 @@ Die folgenden Gruppenrichtlinien wirken sich auf die Microsoft Edge-Synchronisie
 
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): Deaktiviert die Synchronisierung vollständig.
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): Deaktiviert das Speichern des Browserverlaufs und die Synchronisierung. Die Synchronisierung geöffneter Registerkarten wird durch diese Richtlinie ebenfalls deaktiviert.
+- [AllowDeletingBrowserHistory](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowdeletingbrowserhistory): Wenn diese Richtlinie deaktiviert ist, wird auch die Verlaufsdatensynchronisierung deaktiviert.
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): Konfigurieren Sie die Liste der Typen, die von der Synchronisierung ausgeschlossen werden.
 - [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): Zulassen, dass Active Directory (AD)-Profile lokalen Speicher verwenden. Weitere Informationen finden Sie unter [Lokale Synchronisierung für Active Directory (AD)-Benutzende](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync).
 - [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): Aktivieren Sie die Synchronisierung standardmäßig, und fordern Sie keine Benutzerzustimmung zur Synchronisierung an.  
@@ -76,9 +80,17 @@ Die folgenden Gruppenrichtlinien wirken sich auf die Microsoft Edge-Synchronisie
 
 ### SICHERHEIT und von SERVER-/DATENKONFORMITÄT
 
-#### Werden die synchronisierten Daten verschlüsselt? 
+#### Werden die synchronisierten Daten verschlüsselt?
 
-Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Die meisten Datentypen werden im Ruhezustand im Microsoft-Dienst zusätzlich mit AES256 verschlüsselt. 
+Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Alle Datentypen werden im Ruhezustand im Microsoft-Dienst zusätzlich mit AES128 verschlüsselt. Alle Datentypen mit Ausnahme derjenigen, die für die Synchronisierung von geöffneten Registerkarten und Verlaufsdaten verwendet werden, werden mit über [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/)verwalteten Schlüsseln zusätzlich verschlüsselt, bevor sie das Gerät des Benutzers verlassen.
+
+#### Warum werden die Daten von geöffneten Registerkarten und Verlaufsdaten nicht zusätzlich clientseitig verschlüsselt?  
+
+Um die Ressourcennutzung auf Endbenutzergeräten zu verringern, werden Verlaufsdaten serverseitig basierend auf den Roamingdaten geöffneter Registerkarten generiert. Dieser Vorgang wäre bei clientseitiger Verschlüsselung dieser Daten nicht möglich. Wenden Sie die Richtlinien [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) oder [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) an, um die Synchronisierung von geöffneten Registerkarten und Verlaufsdaten zu deaktivieren.
+
+#### Können Mandantenadministratoren ihren eigenen Schlüssel mitbringen?
+
+Ja, über  [Azure Information Protection](https://azure.microsoft.com/services/information-protection/).
 
 #### Wo werden Microsoft Edge-Synchronisierungsdaten für gespeichert?
 
@@ -88,27 +100,19 @@ Synchronisierte Daten für Azure AD-Konten werden auf sicheren Servern entsprech
 
 Nein.
 
-#### Können Mandantenadministratoren ihren eigenen Schlüssel mitbringen?
-
-Ja, über [Azure Information Protection](https://azure.microsoft.com/services/information-protection/).
-
 #### Unter welche Nutzungsbedingungen fällt die Unternehmenssynchronisierung?
 
-Die Nutzungsbedingungen sind die gleichen wie bei Ihrem Azure AD-Abonnement. Alle Nutzungsbedingungen von Azure AD fallen letztlich unter die [Onlinedienst-Vertragsbedingungen](https://www.microsoft.com/licensing/product-licensing/products) von Microsoft.
+Die Nutzungsbedingungen für die Microsoft Edge-Synchronisierung gehören zur Microsoft-Softwarelizenz, die in Microsoft Edge unter  *edge://terms* einsehbar ist. Ihr Abonnement und die Nutzungsbedingungen von Azure AD fallen letztlich unter die [Onlinedienst-Vertragsbedingungen](https://www.microsoft.com/licensing/product-licensing/products) von Microsoft Corporation.
 
 #### Unterstützt Microsoft Edge Government Community Cloud (GCC) High-Compliance?
 
-Derzeit nicht. GCC High ist Tarifstufe D, während Microsoft Edge nur bis zur Tarifstufe C Unterstützung bietet.
+Derzeit nicht. Für Kunden in der GCC High-Cloud ist die Microsoft Edge-Synchronisierung deaktiviert.
 
 ### ANWENDEN DER SYNCHRONISIERUNG
 
-#### Was gilt für Kunden aus Unternehmen und dem Bildungsbereich, die sich für Microsoft Edge Legacy entscheiden?
+#### Warum wird die Microsoft Edge-Synchronisierung nicht in allen M365-Abonnements unterstützt?
 
-Die aktuelle Version des Microsoft Edge-Browsers ist weiterhin im ESR-Angebot verfügbar.
-
-#### Warum brauche ich ein Premium-Abonnement für Azure AD für die Synchronisierung?
-
-Die Unternehmenssynchronisierung ist von Azure Information Protection abhängig, das nicht in allen Azure AD-Tarifstufen verfügbar ist.
+Die Unternehmenssynchronisierung ist von Azure Information Protection abhängig, das nicht in allen M365-Abonnements verfügbar ist.
 
 #### Basiert die Microsoft Edge-Synchronisierung auf Enterprise State Roaming (ESR)?
 
@@ -118,9 +122,9 @@ Nein. ESR kann verwendet werden, um die Synchronisierung zu aktivieren, aber Mic
 
 Es gibt keine Pläne, diese Synchronisierung zu unterstützen. Wenn Sie in Ihrer Umgebung noch IE zur Unterstützung von Legacyanwendungen benötigen, sollten Sie unseren [neuen IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode) in Betracht ziehen.
 
-#### Wird der neue Microsoft Edge-Browser mit der Vorgängerversion von Microsoft Edge synchronisiert?
+#### Wird Microsoft Edge mit der Vorgängerversion von Microsoft Edge synchronisiert?
 
-Nein. Wir sind der Meinung, dass die Verbindung dieser beiden Ökosysteme zu Kompromissen bezüglich der Zuverlässigkeit der Synchronisation im neuen Microsoft Edge führen würde. Wir stellen sicher, dass vorhandene Daten zum neuen Microsoft Edge migriert werden. Benutzer können zudem Daten aus dem Browser Ihrer Wahl importieren. Dies bedeutet auch, dass der neue Microsoft Edge-Browser keine Möglichkeit für eine Synchronisierung mit dem IE bietet.
+Nein. Wir sind der Meinung, dass die Verbindung dieser beiden Ökosysteme zu Kompromissen bezüglich der Zuverlässigkeit der Synchronisation in Microsoft Edge führen würde. Wir stellen sicher, dass vorhandene Daten zu Microsoft Edge migriert werden. Benutzer können zudem Daten aus dem Browser Ihrer Wahl importieren. Dies bedeutet auch, dass der neue Microsoft Edge-Browser keine Möglichkeit für eine Synchronisierung mit dem IE bietet.
 
 ### VERWALTEN DER SYNCHRONISIERUNG
 
