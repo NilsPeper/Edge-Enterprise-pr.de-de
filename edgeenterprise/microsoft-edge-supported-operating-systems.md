@@ -3,19 +3,19 @@ title: Unterstützte Betriebssysteme für Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/10/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Unterstützte Betriebssysteme für Microsoft Edge
-ms.openlocfilehash: 3d3b9c341230aff4ab8fb7dbc1beb40bd2025beb
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 866708bc1d24523f47237a5242575a16544b8009
+ms.sourcegitcommit: 7db4c9854175898844ce3daf75d8007cfc6632a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218724"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "11237247"
 ---
 # Unterstützte Betriebssysteme für Microsoft Edge
 
@@ -43,8 +43,6 @@ Microsoft Edge folgt der Modern Lifecycle-Richtlinie und wird unter den folgende
 - Windows 10 IoT Enterprise SAC _***
 - Windows 10 IoT Enterprise 2019 LTSC ****
 
-
-
 ### Windows Server
 
 - Windows Server 2008 R2 **
@@ -55,7 +53,7 @@ Microsoft Edge folgt der Modern Lifecycle-Richtlinie und wird unter den folgende
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** Microsoft Edge wird unter Windows 7 und Windows Server 2008 R2 bis zum 15. Juli 2021 weiterhin unterstützt. Diese Betriebssysteme werden nicht mehr unterstützt, und Microsoft empfiehlt Ihnen den Umstieg auf ein unterstütztes Betriebssystem, wie z.B. Windows 10. Auch wenn Microsoft Edge dazu beiträgt, Ihre Sicherheit im Internet zu erhöhen, kann Ihr PC dennoch anfällig für Sicherheitsrisiken sein. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Ohne die erweiterten Sicherheitsupdates für Windows7 ist die Funktionalität von Internet Explorer anfällig für Sicherheitsrisiken. Darüber hinaus kann die Funktionalität des IE-Modus ohne die fortgesetzte Wartung durch die erweiterten Sicherheitsupdates nicht mehr funktionieren.  
+> ** Microsoft Edge wird unter Windows 7 und Windows Server 2008 R2 bis zum 15. Januar 2022 weiterhin unterstützt. Diese Betriebssysteme werden nicht mehr unterstützt, und Microsoft empfiehlt Ihnen den Umstieg auf ein unterstütztes Betriebssystem, wie z.B. Windows 10. Auch wenn Microsoft Edge dazu beiträgt, Ihre Sicherheit im Internet zu erhöhen, kann Ihr PC dennoch anfällig für Sicherheitsrisiken sein. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Ohne die erweiterten Sicherheitsupdates für Windows7 ist die Funktionalität von Internet Explorer anfällig für Sicherheitsrisiken. Darüber hinaus kann die Funktionalität des IE-Modus ohne die fortgesetzte Wartung durch die erweiterten Sicherheitsupdates nicht mehr funktionieren.  
 >
 > **_ Siehe auch weiter oben: Für nicht mehr unterstützte Windows 10 SAC-Versionen mit noch unterstütztem Microsoft Edge wird empfohlen, so schnell wie möglich auf eine unterstützte Win10 SAC-Version zu aktualisieren, um sicher zu bleiben. Microsoft Edge, das in diesem Zustand unterstützt wird, sollte als eine temporäre Überbrückung bis zum Erreichen eines unterstützten Betriebssystemzustands betrachtet werden.
 >
@@ -76,6 +74,10 @@ Microsoft Edge für Android kann auf Tablets und Smartphones installiert werden,
 ### Chromebooks
 
 Microsoft Edge unterstützt keine Chromebooks.
+
+## Letzte Änderungen
+
+- **17.12.2020** – Microsoft Edge-Unterstützung für Windows 7 und Windows Server 2008 R2 verlängert bis 15. Januar 2022.
 
 ## Weitere Informationen
 
