@@ -1,21 +1,21 @@
 ---
 title: FAQ zum IE-Modus
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: FAQ und Problembehandlung für Microsoft Edge mit IE-Modus
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979947"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238172"
 ---
 # FAQ zum IE-Modus
 
@@ -81,6 +81,20 @@ In Microsoft Edge gibt es keine explizite Befehlszeile, die der Option *nomerge*
 2. Verwenden Sie die Befehlszeile `--user-data-dir=<path>`, aber für jede Sitzung mit einem anderen Pfad. Bei Bedarf können Sie ein Hilfsprogramm für den Benutzer erstellen, mit dem Microsoft Edge gestartet und der Pfad für die Sitzung geändert wird.
 
 Wenn keine der vorstehenden Optionen für Ihr Szenario geeignet ist, setzen Sie sich über einen unserer Feedbackkanäle mit uns in Verbindung: Microsoft-Support, [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) oder [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise).
+
+### Kann ich Links im Internet Explorer-Modus als Webseiten speichern?
+ 
+Ja, Sie können die Option „Ziel speichern unter“ im Kontextmenü für den Internet Explorer-Modus in Microsoft Edge aktivieren. Konfigurieren Sie dazu die Gruppenrichtlinie *„‘Ziel speichern als‘ im Internet Explorer-Modus zulassen“* unter *Computer-Konfiguration > Administrative Vorlagen > Windows-Komponenten > Internet Explorer*.
+Der Speichermechanismus funktioniert gleich wie in Internet Explorer, und wenn das Ziel als HTML-Datei gespeichert wird, rendert die Datei beim erneuten Öffnen die Seite in Microsoft Edge.
+ 
+Beachten Sie, dass für diese Funktion die folgenden minimalen Updates für das Betriebssystem erforderlich sind:
+- Windows 10, Version 2004, Windows Server, Version 2004, Windows 10, Version 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows 10 Version 1903, Windows 10, Version 1909, Windows Server, Version 1903 ([KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386))
+- Windows 10 Version 1809, Windows Server Version 1809, Windows Server 2019 ([KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390))
+- Windows 10, Version 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows 10, Version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows 10, Version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
 
 ## Weitere Informationen
 

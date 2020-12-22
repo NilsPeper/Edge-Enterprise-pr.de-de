@@ -3,19 +3,19 @@ title: Cookie-Weitergabe von Microsoft Edge an Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/05/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Konfigurieren der Cookie-Weitergabe von Microsoft Edge an Internet Explorer '
-ms.openlocfilehash: 5740a4ce31a240573b9106e7a20a5c44688aca0a
-ms.sourcegitcommit: 2024629929044e2dcf146674058c1d6312c32e9a
+ms.openlocfilehash: ddd9d34b5e2b0ee49093734da82e4a4fa7aa6a69
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "11157541"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238182"
 ---
 # Cookie-Weitergabe von Microsoft Edge an Internet Explorer
 
