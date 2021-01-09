@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218734"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254973"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -29,14 +29,18 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
+
 ## Neue Richtlinien
 
 In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
 
 | Name | Beschriftung |
-|--|--|
-|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Einschränken des Druckmodus für Hintergrundgrafiken|
-|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Standarddruckmodus für Hintergrundgrafiken|
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Standardauthentifizierung für HTTP zulassen|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Window.opener für Links mit dem Ziel \_blank nicht setzen|
+|[WebWidgetAllowed](#webwidgetallowed)|Zulassen des Web-Widgets|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start aktivieren|
+
 
 ## Verfügbare Richtlinien
 
@@ -50,7 +54,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Systemeigenes Messaging](#native-messaging)|
 |[Kennwort-Manager und Schutz](#password-manager-and-protection)|[Leistung](#performance)|
 |[Drucken](#printing)|[Proxyserver](#proxy-server)|
-|[Einstellungen für Sleeping Tabs](#sleeping-tabs-settings)|[SmartScreen-Einstellungen](#smartscreen-settings)|
+|[Einstellungen für „Schlafende Registerkarten“](#sleeping-tabs-settings)|[SmartScreen-Einstellungen](#smartscreen-settings)|
 |[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|[Sonstiges](#additional)|
 
 
@@ -141,6 +145,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Gibt eine Liste der Server an, an die Microsoft Edge Benutzeranmeldeinformationen delegieren kann|
 |[AuthSchemes](#authschemes)|Unterstützte Authentifizierungsschemas|
 |[AuthServerAllowlist](#authserverallowlist)|Konfigurieren der Liste der zulässigen Authentifizierungsserver|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Standardauthentifizierung für HTTP zulassen|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Deaktivieren des CNAME-Lookup beim Verhandeln der Kerberos-Authentifizierung|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Einschließen eines nicht standardmäßigen Ports in Kerberos-SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Steuern, ob die NTLMv2-Authentifizierung aktiviert ist|
@@ -194,13 +199,13 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ProxyPacUrl](#proxypacurl)|Proxy-.pac-Datei-URL festlegen (veraltet)|
 |[ProxyServer](#proxyserver)|Adresse oder URL von Proxyservern konfigurieren (veraltet)|
 |[ProxySettings](#proxysettings)|Proxyeinstellungen|
-### [*Einstellungen für Sleeping Tabs*](#sleeping-tabs-settings-policies)
+### [*Einstellungen für „Schlafende Registerkarten“*](#sleeping-tabs-settings-policies)
 
 |Richtlinienname|Beschriftung|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Sleeping Tabs auf bestimmten Websites blockieren|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|Sleeping Tabs konfigurieren|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|Inaktivitätszeitüberschreitung im Hintergrund für Sleeping Tabs einstellen|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|„Schlafende Registerkarten“ auf bestimmten Websites blockieren|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|„Schlafende Registerkarten“ konfigurieren|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Zeitlimit für die Inaktivität der Hintergrundregisterkarte für „Schlafende Registerkarten“ festlegen|
 ### [*SmartScreen-Einstellungen*](#smartscreen-settings-policies)
 
 |Richtlinienname|Beschriftung|
@@ -235,7 +240,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Anzeigeneinstellung für Websites mit aufdringlichen Anzeigen|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Löschen des Browser- und Downloadverlaufs aktivieren|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Dialogfelder „Dateiauswahl“ zulassen|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Ermöglicht es einer Seite, Popups während ihrer Entladung anzuzeigen|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Ermöglicht es einer Seite, Popups während ihrer Entladung anzuzeigen (veraltet)|
 |[AllowSurfGame](#allowsurfgame)|Surfspiel zulassen|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Seiten das Senden synchroner XHR-Anforderungen während der Seitenschließung ermöglichen (veraltet)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Konfigurieren Sie die Liste der Websites, für die Microsoft Edge versucht, eine Tokenbindung einzurichten.|
@@ -316,7 +321,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Konfigurieren, ob Microsoft Edge automatisch ein Zertifikat auswählen soll, wenn mehrere Zertifikat-Übereinstimmungen für eine Website vorhanden sind, die mit „AutoSelectCertificateForUrls“ konfiguriert ist|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Verwendung von kurzlebigen Profilen zulassen|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google SafeSearch erzwingen|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Verwenden Sie die standardmäßige Verweiserrichtlinie „kein Verweiser beim Downgrade“ (veraltet)|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Verwenden Sie eine Standard-Referrer-Richtlinie „no-referrer-when-downgrade“ (veraltet).|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Erzwingen der Ausführung des Netzwerkcodes im Browserprozess (veraltet)|
 |[ForceSync](#forcesync)|Synchronisierung von Browserdaten erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Erzwingen des minimal eingeschränkten Modus für YouTube|
@@ -357,7 +362,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ManagedSearchEngines](#managedsearchengines)|Verwalten von Suchmaschinen|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximale Anzahl gleichzeitiger Verbindungen mit dem Proxyserver|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Zulassen, dass Google Cast eine Verbindung mit den Cast-Geräten aller IP-Adressen herstellt|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Aktivieren der Berichterstellung für Nutzung und Absturz (veraltet).|
+|[MetricsReportingEnabled](#metricsreportingenabled)|Aktivieren der Berichterstellung für Nutzungs- und Absturzdaten (veraltet)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Native Window Occlusion aktivieren|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Festlegen eines Zeitlimits für die Verzögerung der Registerkartennavigation für die Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Aktivieren der Netzwerkvorhersage|
@@ -390,7 +395,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Suchvorschläge zulassen|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites oder Domänen, für die keine Berechtigung zur Verwendung der direkten Sicherheitsschlüssel-Bestätigung erforderlich ist|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Senden aller Intranet-Seiten an Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Senden von Siteinformationen, um die Microsoft-Dienste zu verbessern (veraltet).|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Senden von Website-Informationen, um Microsoft-Dienste zu verbessern (veraltet)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Zugriff auf Sensoren auf bestimmten Websites zulassen|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Zugriff auf Sensoren auf bestimmten Websites blockieren|
 |[SerialAskForUrls](#serialaskforurls)|Die Serial-API auf bestimmten Websites zulassen|
@@ -410,6 +415,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Aktivieren eines TLS 1.3-Sicherheitsfeatures für lokale Vertrauensanker (veraltet)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Angeben der zu deaktivierenden TLS-Verschlüsselungssammlungen|
 |[TabFreezingEnabled](#tabfreezingenabled)|Einfrieren von Hintergrundregisterkarten zulassen|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Window.opener für Links mit dem Ziel _blank nicht setzen|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Beenden von Prozessen im Task-Manager des Browsers zulassen|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Festlegen der Speicherbegrenzung in Megabyte, die eine einzelne Microsoft Edge-Instanz verwenden kann|
 |[TrackingPrevention](#trackingprevention)|Blockieren der Nachverfolgung der Browsing-Aktivitäten des Benutzers|
@@ -433,6 +439,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Verwaltung der Gefährdung lokaler IP-Adressen durch WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
+|[WebWidgetAllowed](#webwidgetallowed)|Zulassen des Web-Widgets|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start aktivieren|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
 
 
@@ -758,6 +766,8 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+
 Konfigurieren Sie die [SaveCookiesOnExit](#savecookiesonexit)-Richtlinie, um das Löschen von Cookies beim Beenden zu verhindern.
 
   #### Unterstützte Funktionen:
@@ -835,6 +845,8 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+
   #### Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
@@ -911,6 +923,8 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
 Wenn Sie die [RestoreOnStartup](#restoreonstartup) Richtlinie so festlegen, dass URLs aus vorherigen Sitzungen wiederhergestellt werden, wird diese Richtlinie ignoriert, und Cookies werden für diese Websites dauerhaft gespeichert.
 
@@ -2748,9 +2762,9 @@ Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die d
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit „*“-und „[*.]“-Platzhaltern für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
 
-  #### Unterstützte Funktionen:
+  #### Unterstützte Features:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -2817,9 +2831,9 @@ Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die d
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit „*“-und „[*.]“-Platzhaltern für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
 
-  #### Unterstützte Funktionen:
+  #### Unterstützte Features:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -4235,7 +4249,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   Mit dieser Option können Sie angeben, welche Erweiterungen die Benutzer nicht installieren können. Erweiterungen, die bereits installiert sind, werden deaktiviert, wenn Sie blockiert werden, ohne eine Möglichkeit für den Benutzer, Sie zu aktivieren. Nachdem eine deaktivierte Erweiterung aus der Blockierungsliste entfernt wurde, wird Sie automatisch wieder aktiviert.
 
-Ein Blocklistenwert von ' * ' bedeutet, dass alle Erweiterungen blockiert sind, es sei denn, Sie werden explizit in der Zulassen-Liste aufgeführt.
+Ein Blockierungslistenwert von „\*“ bedeutet, dass alle Erweiterungen blockiert sind, es sei denn, Sie werden explizit in der Zulassungsliste aufgeführt.
 
 Wenn diese Richtlinie nicht eingerichtet ist, kann der Benutzer eine beliebige Erweiterung in Microsoft Edge installieren.
 
@@ -4446,7 +4460,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Die Einstellung dieser Richtlinie steuert die Einstellungen für die Erweiterungsverwaltung von Microsoft Edge, einschließlich aller Einstellungen, die durch vorhandene erweiterungsbezogene Richtlinien gesteuert werden. Diese Richtlinie ersetzt alle älteren Richtlinien, die möglicherweise festgelegt wurden.
 
-Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der exakten Update-URL, die im Erweiterungsmanifest angegeben ist Erweiterung ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der exakten Update-URL, die im Erweiterungsmanifest angegeben ist ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+
+Um Erweiterungen aus einem bestimmten Drittanbieter-Store zu blockieren, müssen Sie nur die update_url für den diesen Store blockieren. Wenn Sie z. B. Erweiterungen aus dem Chrome Web Store blockieren möchten, können Sie den folgenden JSON verwenden.
+
+{"update_url:https://clients2.google.com/service/update2/crx":{"installation_mode":"blocked"}}
+
+Beachten Sie, dass Sie [extensionInstallForcelist](#extensioninstallforcelist) und [ExtensionInstallAllowlist](#extensioninstallallowlist) weiterhin verwenden können, um die Installation bestimmter Erweiterungen zu erzwingen/zu erlauben, auch wenn der Store mit dem JSON im vorherigen Beispiel blockiert wurde.
 
 Hinweis: für Windows-Instanzen, die nicht zu einer Microsoft Active Directory-Domäne hinzugefügt wurden, ist die erzwungene Installation auf Apps und Erweiterungen auf der Microsoft Edge-Add-Ons-Website limitiert.
 
@@ -4903,6 +4923,66 @@ Wenn Sie diese Richtlinie nicht konfigurieren, versucht Microsoft Edge zu erkenn
   - Beispielwert:
 ``` xml
 <string>*contoso.com,contoso.com</string>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### BasicAuthOverHttpEnabled
+
+  #### Standardauthentifizierung für HTTP zulassen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren oder nicht festlegen, sind Standardauthentifizierungsanforderungen zulässig, die über nicht sicheres HTTP empfangen werden.
+
+Wenn Sie diese Richtlinie deaktivieren, werden nicht sichere HTTP-Anforderungen aus dem Standardauthentifizierungsschema blockiert, und nur sicheres HTTPS ist zulässig.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: BasicAuthOverHttpEnabled
+  - GP-Name: Standardauthentifizierung für HTTP zulassen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/HTTP authentication
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: BasicAuthOverHttpEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000000
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: BasicAuthOverHttpEnabled
+  - Beispielwert:
+``` xml
+<false/>
 ```
   
 
@@ -6788,7 +6868,7 @@ Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microso
 ```
   
 
-  [Zurück zum Anfang](#microsoft-edge---policies)
+  [Nach oben](#microsoft-edge---policies)
 
   ### ProxySettings
 
@@ -6894,15 +6974,15 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 ```
   
 
-  [Nach oben](#microsoft-edge---policies)
+  [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ## Einstellungsrichtlinien für Sleeping Tabs
+  ## Einstellungsrichtlinien für „Schlafende Registerkarten“
 
-  [Nach oben](#microsoft-edge---policies)
+  [Zurück zum Anfang](#microsoft-edge---policies)
 
   ### SleepingTabsBlockedForUrls
 
-  #### Sleeping Tabs auf bestimmten Websites blockieren
+  #### „Schlafende Registerkarten“ auf bestimmten Websites blockieren
 
   
   
@@ -6912,7 +6992,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Beschreibung
 
-  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die nicht durch Sleeping Tabs in den Ruhezustand versetzt werden dürfen.
+  Definieren Sie eine auf URL-Mustern basierende Liste von Websites, die nicht durch „Schlafende Registerkarten“ in den Ruhezustand versetzt werden dürfen.
 
 Wenn die Richtlinie [SleepingTabsEnabled](#sleepingtabsenabled) deaktiviert ist, wird diese Liste nicht verwendet und keine Websites werden automatisch in den Ruhezustand versetzt.
 
@@ -6933,9 +7013,9 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können alle Websites in den Ruhe
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: SleepingTabsBlockedForUrls
-  - GP-Name: Sleeping Tabs auf bestimmten Websites blockieren
-  - GP-Pfad (zwingend erforderlich): Einstellungen für administrative Vorlagen/Microsoft Edge/Sleeping Tabs
-  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping Tabs-Einstellungen
+  - GP-Name: „Schlafende Registerkarten“ auf bestimmten Websites blockieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping tabs settings
   - GP ADMX Dateiname: MSEdge.admx
 
   ##### Windows Registry-Einstellungen
@@ -6969,7 +7049,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### Sleeping Tabs konfigurieren
+  #### „Schlafende Registerkarten“ konfigurieren
 
   
   
@@ -6979,15 +7059,15 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### Beschreibung
 
-  Mit dieser Richtlinieneinstellung können Sie konfigurieren, ob die Sleeping Tabs aktiviert werden sollen. Die Funktion Sleeping Tabs senkt die CPU-, Batterie- und Speichernutzung, indem sie inaktive Hintergrund-Tabs in den Ruhezustand versetzt. Microsoft Edge verwendet Heuristiken, um zu gewährleisten, dass keine Tabs in den Ruhezustand versetzt werden, die im Hintergrund nützliche Arbeit verrichten, z. B. Benachrichtigungen anzeigen, Ton wiedergeben und Video streamen. Standardmäßig ist die Funktion Sleeping Tabs aktiviert.
+  Mit dieser Richtlinieneinstellung können Sie konfigurieren, ob „Schlafende Registerkarten“ aktiviert werden sollen. Die Funktion „Schlafende Registerkarten“ senkt die CPU-, Batterie- und Speichernutzung, indem sie inaktive Hintergrund-Registerkarten in den Ruhezustand versetzt. Microsoft Edge verwendet Heuristiken, um zu gewährleisten, dass keine Tabs in den Ruhezustand versetzt werden, die im Hintergrund nützliche Arbeit verrichten, z. B. Benachrichtigungen anzeigen, Ton wiedergeben und Video streamen. Standardmäßig ist die Funktion „Schlafende Registerkarten“ aktiviert.
 
 Einzelne Websites können möglicherweise durch Konfigurieren der Richtlinie [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) nicht in den Ruhezustand versetzt werden.
 
-Wenn Sie diese Einstellung aktivieren, ist Sleeping Tabs eingeschaltet.
+Wenn Sie diese Einstellung aktivieren, ist „Schlafende Registerkarten“ eingeschaltet.
 
-Wenn Sie diese Funktion deaktivieren, ist Sleeping Tabs ausgeschaltet.
+Wenn Sie diese Funktion deaktivieren, ist „Schlafende Registerkarten“ ausgeschaltet.
 
-Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie Sleeping Tabs verwenden möchten.
+Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie „Schlafende Registerkarten“ verwenden möchten.
 
   #### Unterstützte Funktionen:
 
@@ -7004,9 +7084,9 @@ Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: SleepingTabsEnabled
-  - GP-Name: Sleeping Tabs konfigurieren
-  - GP-Pfad (zwingend erforderlich): Einstellungen für administrative Vorlagen/Microsoft Edge/Sleeping Tabs
-  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping Tabs-Einstellungen
+  - GP-Name: „Schlafende Registerkarten“ konfigurieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping tabs settings
   - GP ADMX Dateiname: MSEdge.admx
 
   ##### Windows-Registrierungseinstellungen
@@ -7035,7 +7115,7 @@ Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie
 
   ### SleepingTabsTimeout
 
-  #### Inaktivitätszeitüberschreitung im Hintergrund für Sleeping Tabs einstellen
+  #### Zeitlimit für die Inaktivität der Hintergrundregisterkarte für „Schlafende Registerkarten“ festlegen
 
   
   
@@ -7045,9 +7125,9 @@ Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie
 
   #### Beschreibung
 
-  Mit dieser Richtlinieneinstellung können Sie die Zeitüberschreitung in Sekunden konfigurieren, nach der inaktive Hintergrund-Tabs automatisch in den Ruhezustand versetzt werden, wenn Sleeping Tabs aktiviert ist. Standardmäßig beträgt dieser Timeout 7.200Sekunden (2Stunden).
+  Mit dieser Richtlinieneinstellung können Sie die Zeitüberschreitung in Sekunden konfigurieren, nach der inaktive Hintergrund-Registerkarten automatisch in den Ruhezustand versetzt werden, wenn „Schlafende Registerkarten“ aktiviert ist. Standardmäßig beträgt diese Zeitüberschreitung 7 200Sekunden (2Stunden).
 
-Tabs werden nur dann automatisch in den Ruhezustand versetzt, wenn die Richtlinie [SleepingTabsEnabled](#sleepingtabsenabled) aktiviert oder nicht konfiguriert ist und der Benutzer die Einstellung Sleeping Tabs aktiviert hat.
+Tabs werden nur dann automatisch in den Ruhezustand versetzt, wenn die Richtlinie [SleepingTabsEnabled](#sleepingtabsenabled) aktiviert ist, oder nicht konfiguriert ist und der Benutzer die Einstellung „Schlafende Registerkarten“ aktiviert hat.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer den Wert für die Zeitüberschreitung wählen.
 
@@ -7086,9 +7166,9 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: SleepingTabsTimeout
-  - GP-Name: Inaktivitätszeitüberschreitung im Hintergrund für Sleeping Tabs einstellen
-  - GP-Pfad (zwingend erforderlich): Einstellungen für administrative Vorlagen/Microsoft Edge/Sleeping Tabs
-  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping Tabs-Einstellungen
+  - GP-Name: Festlegen des Zeitlimits für die Inaktivität der Hintergrund-Registerkarte für „Schlafende Registerkarten“
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP-Pfad (empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese überschreiben)/Sleeping tabs settings
   - GP ADMX Dateiname: MSEdge.admx
 
   ##### Windows-Registrierungseinstellungen
@@ -8661,13 +8741,13 @@ Wenn Sie diese Richtlinie deaktivieren und der Benutzer eine Aktion ausführt, d
 
   ### AllowPopupsDuringPageUnload
 
-  #### Ermöglicht es einer Seite, Popups während ihrer Entladung anzuzeigen
+  #### Ermöglicht es einer Seite, Popups während ihrer Entladung anzuzeigen (veraltet)
 
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 87 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 78 oder höher
+  - Unter Windows und macOS seit 78 bis 87
 
   #### Beschreibung
 
@@ -8675,9 +8755,9 @@ Wenn Sie diese Richtlinie deaktivieren und der Benutzer eine Aktion ausführt, d
 
 Wenn die Richtlinie auf "aktiviert" festgelegt ist, können Seiten Popups anzeigen, während sie entladen werden.
 
-Wenn die Richtlinie deaktiviert oder nicht eingerichtet ist, dürfen Seiten keine Popups anzeigen, während sie entladen werden. Dies ist gemäß Spezifikation: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
+Wenn die Richtlinie deaktiviert oder nicht eingerichtet ist, dürfen Seiten keine Popups anzeigen, während sie entladen werden. Dies ist gemäß der Spezifikation: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
 
-Diese Richtlinie wird künftig entfernt.
+Diese Richtlinie wurde in Microsoft Edge 88 entfernt und wird ignoriert, wenn festgelegt.
 
   #### Unterstützte Funktionen:
 
@@ -8694,7 +8774,7 @@ Diese Richtlinie wird künftig entfernt.
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: AllowPopupsDuringPageUnload
-  - GP-Name: Ermöglicht es einer Seite, Popups während ihrer Entladung anzuzeigen
+  - GP-Name: Ermöglicht es einer Seite, Popups während ihrer Entladung anzuzeigen (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -11469,11 +11549,15 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   Aktiviert die Verwendung von Active Directory-Konten für die automatische Anmeldung, wenn die Computer Ihrer Benutzer domänenverbunden sind und Ihre Umgebung nicht hybridverbunden ist. Wenn Sie möchten, dass Benutzer stattdessen automatisch mit ihren Azure Active Directory-Konten angemeldet werden, stellen Sie Ihre Umgebung bitte auf Azure AD-Anmeldung (Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197)) oder Hybridverbindung (Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) Weitere Informationen) um.
 
-Wenn Sie die [BrowserSignin](#browsersignin) Richtlinie auf deaktiviert konfiguriert haben, wird diese Richtlinie nicht wirksam.
+Bei jedem Start versucht Microsoft Edge, sich mit dieser Richtlinie zu anmelden, solange das erste gestartete Profil nicht angemeldet ist oder noch keine automatische Anmeldung geschehen ist.
+
+Wenn Sie die Richtlinie [BrowserSignin](#browsersignin) auf deaktiviert konfiguriert haben, wird diese Richtlinie nicht wirksam.
 
 Wenn Sie diese Richtlinie aktivieren und auf „SignInAndMakeDomainAccountNonRemovable“ setzen, meldet Microsoft Edge Benutzer automatisch an, die sich auf einem domänenverbundenen Computer befinden und ihr Active Directory-Konto verwenden.
 
 Wenn Sie diese Richtlinie auf „Disabled“ setzen oder sie nicht festlegen, meldet Microsoft Edge nicht automatisch Benutzer an, die sich auf einem domänenverbundenen Computer mit Active Directory-Konto befinden.
+
+Ab Microsoft Edge 89, wenn ein vorhandenes lokales Profil mit deaktivierter Synchronisierung vorhanden ist und der Computer jetzt hybrid verbunden ist, d. h. es verfügt über ein Azure AD-Konto, wird das lokale Profil automatisch auf ein Azure AD-Profil aktualisiert, um die vollen Azure AD-Synchronisierungsfunktionen zu erhalten.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -14128,21 +14212,21 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird SafeSearch
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### Verwenden Sie die standardmäßige Verweiserrichtlinie „kein Verweiser beim Downgrade“ (veraltet)
+  #### Verwenden Sie eine Standard-Referrer-Richtlinie „no-referrer-when-downgrade“ (veraltet).
 
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach Microsoft Edge 88 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 81 oder höher
+  - Unter Windows und macOS seit 81 bis 88
 
   #### Beschreibung
 
-  Diese Richtlinie ist veraltet, weil sie nur als kurzfristiger Mechanismus vorgesehen ist, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu verschaffen, falls diese mit der aktuellen Standard-Referrer-Richtlinie inkompatibel sind. Es wird in Microsoft Edge ab Version 88 nicht mehr funktionieren.
+  Diese Richtlinie funktioniert nicht, weil sie nur als kurzfristiger Mechanismus vorgesehen war, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu geben, falls diese mit der neuen Standard-Referrer-Richtlinie inkompatibel waren.
 
-Die standardmäßige Referrer-Richtlinie von Microsoft Edge wird vom aktuellen Wert von "no-referrer-when-downgrade" auf den sichereren „strict-origin-when-cross-origin“ durch ein schrittweises Rollout gestärkt.
+Die Standard-Referrer-Richtlinie von Microsoft Edge wurde vom Wert „no-referrer-when-downgrade“ auf den sichereren Wert „strict-origin-when-cross-origin“ verstärkt.
 
-Vor dem Rollout hat diese Unternehmensrichtlinie keine Wirkung. Nach dem Rollout, wenn diese Unternehmensrichtlinie aktiviert ist, wird die standardmäßige Referrer-Richtlinie von Microsoft Edge auf den alten Wert "no-referrer-when-downgrade" festgelegt.
+Wenn diese Unternehmensrichtlinie aktiviert ist, wird die Standard-Referrer-Richtlinie von Microsoft Edge auf den alten Wert „no-referrer-when-downgrade“ festgelegt.
 
 Diese Unternehmensrichtlinie ist standardmäßig deaktiviert.
 
@@ -14161,7 +14245,7 @@ Diese Unternehmensrichtlinie ist standardmäßig deaktiviert.
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: ForceLegacyDefaultReferrerPolicy
-  - GP-Name: Verwenden Sie die standardmäßige Verweiserrichtlinie „kein Verweiser beim Downgrade“ (verworfen)
+  - GP-Name: Verwenden Sie die Standard-Referrer-Richtlinie „no-referrer-when-downgrade“ (veraltet).
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -16983,19 +17067,19 @@ Wenn die Richtlinie [EnableMediaRouter](#enablemediarouter) deaktiviert ist, hat
 
   ### MetricsReportingEnabled
 
-  #### Aktivieren der Berichterstellung für Nutzung und Absturz (veraltet).
+  #### Aktivieren der Berichterstellung für Nutzungs- und Absturzdaten (veraltet)
 
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach Microsoft Edge 88 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 77 oder höher
+  - Unter Windows und macOS seit 77 bis 88
 
   #### Beschreibung
 
-  Diese Einstellung ist veraltet. Es wird derzeit unterstützt, wird jedoch in Microsoft Edge 89 veraltet sein. Diese Richtlinie wird durch die neue Richtlinie ersetzt: [DiagnosticData](#diagnosticdata) für Windows 7, Windows 8 und macOS. Diese Richtlinie wird durch "Telemetrie unter Win 10 zulassen" ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)) ersetzt.
+  Diese Richtlinie wird nicht mehr unterstützt. Sie wird durch [DiagnosticData](#diagnosticdata) (für Windows 7, Windows 8 und macOS) und „Telemetrie zulassen“ unter Windows 10 ersetzt ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
-Diese Richtlinie ermöglicht die Erstellung von Berichten zu Nutzungs- und Absturzdaten über Microsoft Edge an Microsoft.
+Diese Richtlinie ermöglicht die Erstellung von Berichten zu Nutzungs- und Absturzdaten für Microsoft Edge an Microsoft.
 
 Aktivieren Sie diese Richtlinie, um Berichte zu Nutzungs- und Absturzdaten an Microsoft zu senden. Deaktivieren Sie diese Richtlinie, wenn Sie die Daten nicht an Microsoft senden möchten. In beiden Fällen können Benutzer die Einstellung weder ändern noch außer Kraft setzen.
 
@@ -17022,7 +17106,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: MetricsReportingEnabled
-  - GP-Name: Aktivieren der Berichterstellung für Nutzung und Absturz (veraltet).
+  - GP-Name: Aktivieren der Berichterstellung für Nutzungs- und Absturzdaten (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -17253,13 +17337,15 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   Mit dieser Richtlinie wird festgelegt, ob ein Benutzer das Microsoft Edge-Profil, das automatisch mit dem Geschäfts- oder Schulkonto eines Benutzers angemeldet ist, entfernen kann.
 
-Wenn Sie diese Richtlinie aktivieren, wird ein nicht entfernbares Profil mit dem Geschäfts- oder Schulkonto des Benutzers unter Windows erstellt. Dieses Profil lässt sich nicht abmelden oder entfernen.
+Wenn Sie diese Richtlinie aktivieren, wird ein nicht entfernbares Profil mit dem Geschäfts- oder Schulkonto des Benutzers unter Windows erstellt. Dieses Profil lässt sich nicht abmelden oder entfernen. Das Profil kann nur dann „nicht entfernbar“ werden, wenn das Profil mit einem lokalen Konto oder einem Azure AD-Konto angemeldet ist, das dem Anmeldekonto des Betriebssystems entspricht.
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, kann das Profil, das automatisch mit dem Geschäfts- oder Schulkonto eines Benutzers in Windows angemeldet wird, vom Benutzer abgemeldet oder entfernt werden.
 
 Wenn Sie die Browseranmeldung konfigurieren möchten, verwenden Sie die Richtlinie [BrowserSignin](#browsersignin).
 
 Diese Richtlinie gilt nur für Windows-Instanzen, die mit einer Microsoft Active Directory-Domäne verknüpft sind, Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind.
+
+Wenn ab Microsoft Edge 89 ein vorhandenes lokales Profil mit deaktivierter Synchronisierung vorhanden ist und der Computer hybrid verbunden ist, aktualisiert es das lokale Profil automatisch auf das Azure AD-Profil und macht es „nicht entfernbar“, anstatt ein neues nicht entfernbares Azure AD-Profil zu erstellen.
 
   #### Unterstützte Funktionen:
 
@@ -19049,17 +19135,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Senden von Siteinformationen, um die Microsoft-Dienste zu verbessern (veraltet).
+  #### Senden von Website-Informationen, um Microsoft-Dienste zu verbessern (veraltet)
 
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach Microsoft Edge 88 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 77 oder höher
+  - Unter Windows und macOS seit 77 bis 88
 
   #### Beschreibung
 
-  Diese Einstellung ist veraltet. Es wird derzeit unterstützt, wird jedoch in Microsoft Edge 89 veraltet sein. Diese Richtlinie wird durch die neue Richtlinie ersetzt: [DiagnosticData](#diagnosticdata) für Windows 7, Windows 8 und macOS. Diese Richtlinie wird durch "Telemetrie unter Win 10 zulassen" ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)) ersetzt.
+  Diese Richtlinie wird nicht mehr unterstützt. Sie wird durch [DiagnosticData](#diagnosticdata) (für Windows 7, Windows 8 und macOS) und „Telemetrie zulassen“ unter Windows 10 ersetzt ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Diese Richtlinie ermöglicht das Senden von Informationen über die in Microsoft Edge besuchten Websites an Microsoft, um Dienste wie die Suche zu verbessern.
 
@@ -19086,7 +19172,7 @@ Um diese Richtlinie zu aktivieren, muss [MetricsReportingEnabled](#metricsreport
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: SendSiteInfoToImproveServices
-  - GP-Name: Senden von Site-Informationen, um die Microsoft-Dienste zu verbessern (veraltet).
+  - GP-Name: Senden von Website-Informationen, um Microsoft-Dienste zu verbessern (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -19415,7 +19501,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 Wenn Sie diese Richtlinie aktivieren:
    - Benutzer von Microsoft-Konten (ausgenommen Azure AD-Konten) in Suchen-und-Punkten-Märkten werden die Microsoft Rewards-Umgebung in ihrem Microsoft Edge-Benutzerprofil sehen.
    - Die Einstellung zur Aktivierung von Microsoft Rewards in den Microsoft Edge-Einstellungen wird aktiviert und eingeschaltet.
-   - Die Einstellung zur Aktivierung des Give-Modus wird aktiviert und respektiert die Benutzereinstellung.
 
 Wenn Sie diese Richtlinie deaktivieren:
    - Benutzer von Microsoft-Konten (ausgenommen Azure AD-Konten) in Suchen-und-Punkten-Märkten werden die Microsoft Rewards-Umgebung nicht in ihrem Microsoft Edge-Benutzerprofil sehen.
@@ -19424,7 +19509,6 @@ Wenn Sie diese Richtlinie deaktivieren:
 Wenn Sie diese Richtlinie nicht konfigurieren:
    - Benutzer von Microsoft-Konten (ausgenommen Azure AD-Konten) in Suchen-und-Punkten-Märkten werden die Microsoft Rewards-Umgebung in ihrem Microsoft Edge-Benutzerprofil sehen.
    - Die Einstellung zur Aktivierung von Microsoft Rewards in den Microsoft Edge-Einstellungen wird aktiviert und eingeschaltet.
-   - Die Einstellung zur Aktivierung des Give-Modus wird aktiviert und respektiert die Benutzereinstellung.
 
   #### Unterstützte Funktionen:
 
@@ -20362,6 +20446,68 @@ Wenn Sie diese Richtlinie deaktivieren, werden keine Registerkarten eingefroren.
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### TargetBlankImpliesNoOpener
+
+  #### Window.opener für Links mit dem Ziel _blank nicht setzen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 88 oder höher
+
+  #### Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren oder nicht festlegen, wird die Eigenschaft window.opener auf NULL festgelegt, es sei denn, der Anker gibt rel="opener" an.
+
+Wenn Sie diese Richtlinie deaktivieren, dürfen Popups, die auf _blank zielen, via JavaScript auf die Seite zugreifen, die das Öffnen des Popups angefordert hat.
+
+Diese Richtlinie wird in der Microsoft Edge-Version 95 veraltet werden.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: TargetBlankImpliesNoOpener
+  - GP-Name: Legen Sie window.opener für Links, die auf _blank zielen, nicht fest
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: TargetBlankImpliesNoOpener
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000000
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: TargetBlankImpliesNoOpener
+  - Beispielwert:
+``` xml
+<false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### TaskManagerEndProcessEnabled
 
   #### Beenden von Prozessen im Task-Manager des Browsers zulassen
@@ -20634,7 +20780,7 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 
 Formatieren Sie das URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-Mithilfe dieser Richtlinie können Sie Ausnahmen für restriktive Sperrlisten formulieren. Sie können z.B. "*" in die Sperrliste einschließen, um alle Anforderungen zu blockieren, und dann diese Richtlinie verwenden, um den Zugriff auf eine beschränkte Liste von URLs zuzulassen. Mithilfe dieser Richtlinie können Sie Ausnahmen für bestimmte Schemas, Unterdomänen anderer Domänen, Ports oder bestimmte Pfade einrichten.
+Mithilfe dieser Richtlinie können Sie Ausnahmen für restriktive Sperrlisten formulieren. Sie können z.B. „\“ in die Sperrliste einschließen, um alle Anforderungen zu blockieren, und dann diese Richtlinie verwenden, um den Zugriff auf eine beschränkte Liste von URLs zuzulassen. Mithilfe dieser Richtlinie können Sie Ausnahmen für bestimmte Schemas, Unterdomänen anderer Domänen, Ports oder bestimmte Pfade einrichten.
 
 Der spezifischste Filter bestimmt, ob eine URL blockiert oder zulässig ist. Die Zulassungsliste hat Vorrang vor der Sperrliste.
 
@@ -21354,7 +21500,14 @@ Unabhängig davon, ob und wie diese Richtlinie aktiviert ist, kann die WPAD-Opti
 
   Konfigurieren Sie diese Richtlinie, um eine Liste von Webanwendungen anzugeben, die im Hintergrund installieren, ohne dass Benutzerinteraktionen vorgenommen werden, und die Benutzer nicht deinstallieren oder deaktivieren können.
 
-Bei jedem Listenelement der Richtlinie handelt es sich um ein Objekt mit einem verpflichtenden Element: "url" (die URL der zu installierenden Web-App), und zwei optionalen Mitgliedern: "default_launch_container" (gibt den Fenstermodus an, in dem die Web App geöffnet wird – ein neuer Tab ist die Standardeinstellung) und "create_desktop_shortcut" ("true", wenn Desktopverknüpfungen für Linux und Windows erstellt werden sollen).
+Jedes Listenelement der Richtlinie ist ein Objekt mit einem obligatorischen Element: url (die URL der zu installierenden Web-App)
+
+und drei optionale Elemente:
+- default_launch_container (gibt den Fenstermodus an, mit dem die Web-App geöffnet wird – eine neue Registerkarte ist die Standardeinstellung)
+
+- create_desktop_shortcut („Wahr“, wenn Sie Linux- und Windows-Desktopverknüpfungen erstellen möchten)
+
+- override_app_name (ab Microsoft Edge 89 können Sie den Namen der App überschreiben, wenn es sich nicht um eine progressive Web-App (PWA) handelt, oder den App-Namen, der vorübergehend installiert wird, wenn es sich um eine PWA handelt, aber eine Authentifizierung erforderlich ist, bevor die Installation abgeschlossen werden kann)
 
   #### Unterstützte Funktionen:
 
@@ -21395,6 +21548,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21402,7 +21560,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Kompakter Beispielwert:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21426,6 +21584,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -21886,7 +22052,131 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 ``` xml
 <string>10000-11999</string>
 ```
- 
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Zulassen des Web-Widgets
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Aktiviert das Webwidget. Wenn diese Option aktiviert ist, können Benutzer das Widget verwenden, um im Internet vom Desktop aus oder über eine Anwendung zu suchen. Das Widget bietet ein Suchfeld, im dem Webvorschläge angezeigt werden, und öffnet alle Websuchen in Microsoft Edge. Im Suchfeld werden Vorschläge für die Suche (auf Bing gestützt) und für URLs angezeigt. Das Widget umfasst außerdem Feed-Kacheln, die angeklickt werden können, um weitere Informationen auf msn.com in einem neuen Tab oder im Fenster des Microsoft Edge-Browsers anzuzeigen. Die Feed-Kacheln könnten Werbeanzeigen enthalten. Das Widget kann über die Microsoft Edge-Einstellungen oder über das Menü "Weitere Tools" in Microsoft Edge gestartet werden.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, ist das Web-Widget automatisch für alle Profile aktiviert.
+In den Microsoft Edge-Einstellungen wird die Option zum Starten des Widgets angezeigt.
+In den Microsoft Edge-Einstellungen wird das Menüelement zum Ausführen des Widgets beim Windows-Start (automatischer Start) angezeigt.
+Wenn die Richtlinie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) aktiviert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Ein“ gesetzt.
+Wenn die Richtlinie [WebWidgetIsEnabledOnStartup-](#webwidgetisenabledonstartup) deaktiviert oder nicht konfiguriert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Aus“ gesetzt.
+Benutzer sehen das Menüelement, um das Widget über das Microsoft Edge-Menü "Weitere Tools" zu starten. Benutzer können das Widget über das Menü "Weitere Tools" starten.
+Das Widget kann durch die Option "Beenden" in der Statusleiste oder durch Schließen des Widgets über die Taskleiste deaktiviert werden. Wenn die Autostart-Option ausgewählt wurde, wird das Widget beim Neustart des Systems neu gestartet.
+
+Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget für alle Profile deaktiviert.
+Die Option zum Starten des Widgets über die Microsoft Edge-Einstellungen wird deaktiviert.
+Die Option zum Starten des Widget beim Windows-Start (automatischer Start) wird deaktiviert.
+Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools" wird deaktiviert.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WebWidgetAllowed
+  - GP-Name: Webwidget aktivieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: WebWidgetAllowed
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Web-Widget beim Windows-Start aktivieren
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 88 oder höher
+
+  #### Beschreibung
+
+  Gestattet dem Web-Widget beim Start von Windows zu starten.
+
+Ist diese Option aktiviert, wird das Web-Widget standardmäßig beim Windows-Start ausgeführt.
+Wenn das Widget über die Richtlinie [WebWidgetAllowed](#webwidgetallowed) deaktiviert wurde, startet diese Richtlinie das Widget nicht beim Windows-Start.
+
+Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
+Die Option zum Starten des Widgets beim Windows-Start wird deaktiviert und in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
+Die Option zum Starten des Widgets beim Windows-Start wird in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WebWidgetIsEnabledOnStartup
+  - GP-Name: Web-Widget beim Windows-Start zulassen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: WebWidgetIsEnabledOnStartup
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
