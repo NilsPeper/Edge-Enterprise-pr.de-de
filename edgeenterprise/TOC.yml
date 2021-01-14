@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/13/2021
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -27,16 +27,18 @@
       href: deploy-edge-plan-deployment.md
     - name: Bereit für Microsoft Edge
       href: deploy-edge-ready-for-edge.md
-    - name: Versionsinformationen
-      items:
-        - name: Veröffentlichungszeitplan
-          href: microsoft-edge-release-schedule.md
-        - name: Anmerkungen zur Beta-Kanal-Version
-          href: microsoft-edge-relnote-beta-channel.md
-        - name: Anmerkungen zur Stable-Kanal-Version
-          href: microsoft-edge-relnote-stable-channel.md
-        - name: Sicherheitsupdates
-          href: microsoft-edge-relnotes-security.md
+    - name: Anmerkungen zur Stable-Kanal-Version
+      href: microsoft-edge-relnote-stable-channel.md
+    - name: Anmerkungen zur archivierten Version des stabilen Kanals
+      href: microsoft-edge-relnote-archive-stable-channel.md
+    - name: Anmerkungen zur Beta-Kanal-Version
+      href: microsoft-edge-relnote-beta-channel.md
+    - name: Anmerkungen zur archivierten Version des Betakanals
+      href: microsoft-edge-relnote-archive-beta-channel.md
+    - name: Veröffentlichungszeitplan
+      href: microsoft-edge-release-schedule.md
+    - name: Sicherheitsupdates
+      href: microsoft-edge-relnotes-security.md
     - name: Microsoft Edge-Richtlinienzuordnung
       items:
         - name: Richtlinienzuordnung – Übersicht
@@ -123,11 +125,11 @@
       href: ms-edge-security-for-business.md
     - name: Zulassungsliste für Microsoft Edge-Endpunkte
       href: microsoft-edge-security-endpoints.md
-    - name: Verhinderung von Datenverlust (DLP)
+    - name: 'Verhinderung von Datenverlust (Data Loss Prevention, DLP)'
       href: microsoft-edge-security-dlp.md
     - name: Schutz vor potenziell unerwünschten Anwendungen
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Unterstützung für Azure AD-bedingter Zugriff
+    - name: Unterstützung für bedingten Azure AD-Zugriff
       href: ms-edge-security-conditional-access.md
     - name: Unterstützung für Application Guard
       href: microsoft-edge-security-windows-defender-application-guard.md
@@ -151,7 +153,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Weitere Referenzen ansehen
       items:
-        - name: Abwärtskompatibilität für Enterprise-Registerkarte "neu"
+        - name: Abwärtskompatibilität für die Registerkarte "Enterprise Neu"
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce und DirectInvoke
           href: edge-learn-more-co-di.md
@@ -177,17 +179,17 @@
           href: edge-learnmore-reset-data-in-cloud.md
         - name: Benutzerdatenverzeichnis-Variablen
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Verwenden von Microsoft Edge Rollback für Unternehmen
+        - name: Verwenden des Rollbacks von Microsoft Edge für Unternehmen
           href: edge-learnmore-rollback.md
-- name: Microsoft Edge-Videos
+- name: Microsoft Edge Videos
   items:
-    - name: Microsoft Edge-Videosammlung
+    - name: Microsoft Edge -Videosammlung
       href: microsoft-edge-videos.md
-    - name: Video-Browser-Isolierung mit Application Guard
+    - name: Video – Browserisolation mit Application Guard
       href: microsoft-edge-video-security-application-guard.md
     - name: Video – Bereitstellen von Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: Video-Verhinderung von Datenverlust (DLP)
+    - name: 'Video – Verhinderung von Datenverlust (Data Loss Prevention, DLP)'
       href: microsoft-edge-video-security-dlp.md
     - name: Video – Microsoft Edge und Microsoft Search
       href: microsoft-edge-video-search.md
