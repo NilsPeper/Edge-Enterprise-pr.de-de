@@ -11,33 +11,35 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 10/15/2020
-  ms.openlocfilehash: 09eb7c214e048ddd281817f8050ef4f1ff4cb985
-  ms.sourcegitcommit: 49a37e9c584eeb44683c83f098a15464054a26f9
+  ms.date: 12/01/2020
+  ms.openlocfilehash: 2a0466121bb773be20a01ec0b9f72e16bb8ac644
+  ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/15/2020
-  ms.locfileid: "11119410"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "11269276"
 landingContent:
 - title: Weitere Informationen zu Microsoft Edge im Unternehmen
   linkLists:
   - linkListType: overview
     links:
-    - text: Microsoft Edge-Videos
-      url: microsoft-edge-videos.md
     - text: Microsoft Edge – Kanalübersicht
       url: microsoft-edge-channels.md
     - text: Herunterladen eines Microsoft Edge-Kanals
       url: https://aka.ms/EdgeEnterprise
     - text: Verwenden der Enterprise-Features
       url: edge-ie-mode.md
-    - text: Video – Microsoft Edge und Microsoft Search
-      url: microsoft-edge-video-search.md
+  - linkListType: video
+    links:
+    - text: Microsoft Edge Videos
+      url: microsoft-edge-videos.md
+    - text: Microsoft Edge -YouTube-Kanal
+      url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Bereitstellen und Aktualisieren von Microsoft Edge
   linkLists:
   - linkListType: deploy
     links:
-    - text: Planen Ihrer Bereitstellung von Microsoft Edge
+    - text: Planen Sie Ihre Bereitstellung von Microsoft Edge
       url: deploy-edge-plan-deployment.md
     - text: Video – Bereitstellen von Microsoft Edge
       url: microsoft-edge-video-deploy.md
