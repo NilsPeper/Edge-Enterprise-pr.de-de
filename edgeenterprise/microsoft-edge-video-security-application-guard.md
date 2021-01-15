@@ -3,31 +3,29 @@ title: Microsoft Edge-Browserisolation mit Application Guard
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 01/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Browserisolation mit Application Guard
-ms.openlocfilehash: 260a661dc6361854f5a8b3766c8e3c80c393ce39
-ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
+ms.openlocfilehash: abbe1994f811a4e779104a4c358915bf2b41ef55
+ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105751"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "11269330"
 ---
 # Video: Microsoft Edge-Browserisolation mit Application Guard
 
-In diesem Video wird gezeigt wie Microsoft Edge Browserisolation mit Application Guard unterstützt.
+In diesem Video wird gezeigt, wie Microsoft Edge die Browserisolation mit Application Guard unterstützt. Klicken Sie auf den nächsten Screenshot, um das Video von Arunesh Chandra, Senior Program Manager, Microsoft Edge Security, anzusehen.
+
+[![Browserisolation mithilfe von Application Guard]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
 ## Über das Video
 
-Mit Microsoft Edge verringern Sie die Anfälligkeit Ihres Unternehmens gegenüber webbasierten Angriffen. Erfahren Sie, wie Microsoft Edge Microsoft Defender Application Guard zur Verwendung von Browserisolation gegen externe Bedrohungen unterstützt.
-
-Klicken Sie auf den nächsten Screenshot, um das Video von Arunesh Chandra, Senior Program Manager, Microsoft Edge Security, zu sehen.
-
-[![Microsoft Edge-Browserisolation mit Application Guard](https://res.cloudinary.com/marcomontalbano/image/upload/v1602180267/video_to_markdown/images/youtube--zQjaRqNXMqw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=zQjaRqNXMqw&t=3s "Microsoft Edge - Browser isolation using Application Guard")
+Mit Microsoft Edge verringern Sie die Anfälligkeit Ihres Unternehmens gegenüber webbasierten Angriffen. Erfahren Sie, wie Microsoft Edge den Microsoft Defender Application Guard zur Verwendung von Browserisolation gegen externe Bedrohungen unterstützt.
 
 ## Weitere Informationen
 
