@@ -3,33 +3,29 @@ title: Bereitstellen von Microsoft Edge für Hunderte oder Tausende von Geräten
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 04/23/2020
+ms.date: 01/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Bereitstellen von Microsoft Edge für Hunderte oder Tausende von Geräten
-ms.openlocfilehash: b97620d98d3fe523237f34040c8ec18ac4cca99c
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 16fb39c6429073a83c30ddfc69aa764643d57f7c
+ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980009"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "11269350"
 ---
 # Video: Bereitstellen von Microsoft Edge für Hunderte oder Tausende von Geräten
 
-In dem in diesem Artikel beschriebenen Video werden die Schritte zum Bereitstellen von Microsoft Edge für alle Ihre verwalteten Geräte vorgestellt.
+Dieses Video zeigt die Schritte zum Bereitstellen von Microsoft Edge auf allen Ihren verwalteten Geräten. Klicken Sie auf den nächsten Screenshot, um das Video von Jeremy Chapman, Direktor von Microsoft 365, anzusehen.
+
+[![Bereitstellen von Microsoft Edge für Hunderte oder Tausende von Geräten](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
 ## Über das Video
 
 Sehen Sie sich eine praktische Einführung in die Bereitstellung von Microsoft Edge auf Ihren Geräten an. Erfahren Sie mehr über die Optionen für Microsoft-Edge-Pakete für die automatische Installation, die Bereitstellung von Microsoft Edge auf Windows-PCs mithilfe von Microsoft Endpoint Configuration Manager sowie die Schritte, um sicherzustellen, dass alle verwalteten Geräte, einschließlich Ihrer Smartphones und Macs, mit Microsoft Edge bereitgestellt werden.
-
-Klicken Sie auf den nächsten Screenshot, um das Video von Jeremy Chapman, Direktor von Microsoft 365, zu sehen.
-
-<!-- [![Deploy Microsoft Edge video](http://img.youtube.com/vi/o90UsN6g6NE/0.jpg)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")-->
-
-[![Schritte zum Bereitstellen von Microsoft Edge](https://res.cloudinary.com/marcomontalbano/image/upload/v1587672892/video_to_markdown/images/youtube--o90UsN6g6NE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices.")
 
 ## Weitere Informationen
 
