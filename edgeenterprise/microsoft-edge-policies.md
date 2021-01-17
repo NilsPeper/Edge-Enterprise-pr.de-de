@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254973"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270841"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -29,17 +29,14 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-
 ## Neue Richtlinien
 
 In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
 
 | Name | Beschriftung |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Standardauthentifizierung für HTTP zulassen|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Window.opener für Links mit dem Ziel \_blank nicht setzen|
-|[WebWidgetAllowed](#webwidgetallowed)|Zulassen des Web-Widgets|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start aktivieren|
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Lebensdauereinstellungen der Browserdaten|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Definieren einer geordneten Liste der bevorzugten Sprachen, in der Websites angezeigt werden sollen, wenn die Website die Sprache unterstützt|
 
 
 ## Verfügbare Richtlinien
@@ -267,7 +264,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Aktivieren der Profilerstellung im Flyout „Identität“ oder auf der Seite „Einstellungen“|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Gastmodus aktivieren|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Abfragen an einen Browser Netzwerk-Zeitdienst zulassen|
-|[BrowserSignin](#browsersignin)|Browser-Anmeldungseinstellungen|
+|[BrowserSignin](#browsersignin)|Browser-Anmeldeeinstellungen|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Lebensdauereinstellungen der Browserdaten|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Verwenden des integrierten DNS-Clients|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Bestimmt, ob die integrierte Zertifikatprüfung zum Überprüfen von Serverzertifikaten verwendet wird (veraltet)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Deaktivieren der Erzwingung der Zertifikattransparenz für eine Liste mit subjectPublicKeyInfo-Hashwerten|
@@ -290,6 +288,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Zugriff auf das Kontextmenü des Standardsuchanbieters zulassen|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Standardeinstellung für Sensoren|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Steuerung der Verwendung der Serial-API|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Definieren einer geordneten Liste der bevorzugten Sprachen, in der Websites angezeigt werden sollen, wenn die Website die Sprache unterstützt|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Voraussetzen, dass die Enterprise Mode Site List vor der Registerkartennavigation verfügbar ist|
 |[DeleteDataOnMigration](#deletedataonmigration)|Löschen alter Browserdaten bei der Migration|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Steuern, wo Entwicklertools verwendet werden können|
@@ -439,8 +438,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Verwaltung der Gefährdung lokaler IP-Adressen durch WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
-|[WebWidgetAllowed](#webwidgetallowed)|Zulassen des Web-Widgets|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start aktivieren|
+|[WebWidgetAllowed](#webwidgetallowed)|Webwidget aktivieren|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start zulassen|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
 
 
@@ -6311,7 +6310,9 @@ Verwenden Sie die vorhergehenden Informationen, wenn Sie diese Richtlinie konfig
 
   #### Beschreibung
 
-  Überschreibt den Standarddruckmodus für Hintergrundgrafiken.
+  Überschreibt die zuletzt verwendete Einstellung zum Drucken von Hintergrundgrafiken.
+Wenn Sie diese Einstellung aktivieren, ist das Drucken von Hintergrundgrafiken aktiviert.
+Wenn Sie diese Einstellung deaktivieren, ist das Drucken von Hintergrundgrafiken deaktiviert.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -6868,7 +6869,7 @@ Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microso
 ```
   
 
-  [Nach oben](#microsoft-edge---policies)
+  [Zurück zum Anfang](#microsoft-edge---policies)
 
   ### ProxySettings
 
@@ -10674,6 +10675,108 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### Lebensdauereinstellungen der Browserdaten
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Konfiguriert die Lebensdauereinstellungen von Browserdaten für Microsoft Edge.
+Diese Richtlinie steuert die Lebensdauer ausgewählter Browserdaten. Diese Richtlinie hat keine Auswirkung, wenn die Synchronisierung aktiviert ist.
+Die verfügbaren Datentypen sind „browsing_history“, „download_history“, „cookies_and_other_site_data“, „cached_images_and_files“, „password_signin“, „autofill“, „site_settings“ und „hosted_app_data“.
+Microsoft Edge entfernt regelmäßig Daten ausgewählter Typen, die älter sind als „time_to_live_in_hours“. Da das Löschen von Daten nur in bestimmten Intervallen erfolgt, werden einige Daten möglicherweise etwas länger, aber nie mehr als doppelt so lange wie ihre erwartete „time_to_live_in_hours“.
+
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Dictionary
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: BrowsingDataLifetime
+  - GP-Name: Lebensdauereinstellungen der Browserdaten
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: BrowsingDataLifetime
+  - Werttyp: REG_SZ
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### Kompakter Beispielwert:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: BrowsingDataLifetime
+  - Beispielwert:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### Verwenden des integrierten DNS-Clients
@@ -10688,13 +10791,13 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   Steuert, ob der integrierte DNS-Client verwendet werden soll.
 
-Dies wirkt sich nicht darauf aus, welche DNS-Server verwendet werden, sondern nur auf den Softwarestapel, der für die Kommunikation verwendet wird. Wenn das Betriebssystem beispielsweise so konfiguriert ist, dass es einen Enterprise-DNS-Server verwendet, wird dieser Server auch vom integrierten DNS-Client verwendet. Es kann jedoch vorkommen, dass der integrierte DNS-Client Server auf unterschiedliche Weise ansprechen wird, da modernere DNS-bezogene Protokolle wie DNS-over-TLS verwendet werden können.
+Diese Richtlinie steuert, welcher Softwarestapel für die Kommunikation mit dem DNS-Server verwendet wird: der Betriebssystem-DNS-Client oder der integrierte DNS-Client von Microsoft Edge. Diese Richtlinie hat keine Auswirkungen auf die verwendeten DNS-Server: Wenn das Betriebssystem beispielsweise für die Verwendung eines Unternehmens-DNS-Servers konfiguriert ist, würde derselbe Server vom integrierten DNS-Client verwendet. Sie steuert auch nicht, ob DNS-over-HTTPS verwendet wird. Microsoft Edge verwendet immer den integrierten Resolver für DNS-over-HTTPS-Anforderungen. Informationen zum Steuern von DNS-over-HTTPS finden Sie in der Richtlinie[DnsOverHttpsMode](#dnsoverhttpsmode).
 
 Wenn Sie diese Richtlinie aktivieren, wird der integrierte DNS-Client verwendet (sofern verfügbar).
 
-Wenn Sie diese Richtlinie deaktivieren, wird der Client nie verwendet.
+Wenn Sie diese Richtlinie deaktivieren, wird der integrierte DNS-Client nur verwendet, wenn DNS-over-HTTPS verwendet wird.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, ist der integrierte DNS-Client auf MacOS standardmäßig aktiviert, und die Benutzer können die Verwendung des integrierten DNS-Clients ändern, indem Sie die Edge://Flags bearbeiten oder eine Befehlszeilenkennzeichnung angeben.
+Wenn Sie diese Richtlinie nicht konfigurieren, ist der integrierte DNS-Client standardmäßig aktiviert.
 
   #### Unterstützte Funktionen:
 
@@ -12129,6 +12232,70 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### Definieren einer geordneten Liste der bevorzugten Sprachen, in der Websites angezeigt werden sollen, wenn die Website die Sprache unterstützt
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Konfiguriert die Sprachvarianten, die Microsoft Edge als Teil des HTTP-Headers der „Accept-Language“-Anforderung an Websites sendet, und verhindert, dass Benutzer die Reihenfolge der bevorzugten Sprachen in den Microsoft Edge-Einstellungen hinzufügen, entfernen oder ändern können. Benutzer, welche die Sprachen ändern möchten, in denen Microsoft Edge angezeigt wird oder die Übersetzung von Seiten anbietet, sind auf die in dieser Richtlinie konfigurierten Sprachen beschränkt.
+
+Wenn Sie diese Richtlinie aktivieren, werden Websites in der ersten Sprache in der Liste angezeigt, die sie unterstützen, sofern keine andere Website-spezifische Logik zur Bestimmung der Anzeigesprache verwendet wird. Die in dieser Richtlinie definierten Sprachvarianten überschreiben die Sprachen, die als Teil der Richtlinie [SpellcheckLanguage](#spellchecklanguage) konfiguriert sind.
+
+Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, sendet Microsoft Edge Websites die vom Benutzer angegebenen bevorzugten Sprachen als Teil des HTTP-Headers der „Accept-Language“-Anforderung.
+
+Ausführliche Informationen zu gültigen Sprachvarianten finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854).
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Zeichenfolge
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: DefinePreferredLanguages
+  - GP-Name: Definieren einer geordneten Liste der bevorzugten Sprachen, in der Websites angezeigt werden sollen, wenn die Website die Sprache unterstützt
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: DefinePreferredLanguages
+  - Werttyp: REG_SZ
+
+  ##### Beispielwert:
+
+```
+"en-US,fr,es"
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: DefinePreferredLanguages
+  - Beispielwert:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### Voraussetzen, dass die Enterprise Mode Site List vor der Registerkartennavigation verfügbar ist
@@ -13090,11 +13257,11 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer nicht auf Sammlungen in
 
   #### Beschreibung
 
-  Diese Richtlinie ermöglicht Benutzern, die Preise eines Produkts zu vergleichen, das Sie gerade betrachten, Gutscheine von der Website zu erhalten, auf der Sie sich befinden oder während des Auftragsabschlusses automatisch Coupons anzuwenden.
+  Mit dieser Richtlinie können Benutzer die Preise eines Produkts vergleichen, das sie sich anschauen, Gutscheine oder Rabatte von der Website erhalten, auf der sie sich befinden, oder während dem Auftragsabschluss automatisch Gutscheine anwenden.
 
-Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, werden Einkaufsfeatures wie Preisvergleich und Coupons automatisch für Einzelhandelsdomänen angewendet. Coupons für den aktuellen Händler und die Preise von anderen Händlern werden auf einem Server abgeholt.
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, werden Einkaufsfunktionen wie Preisvergleich, Gutscheine oder Rabatte automatisch für Einzelhandelsdomänen angewendet. Gutscheine für den aktuellen Händler und die Preise von anderen Händlern werden auf einem Server abgeholt.
 
-Wenn Sie diese Richtlinie deaktivieren, werden Einkaufsfeatures wie Preisvergleich und Coupons für Einzelhandelsdomänen nicht automatisch gefunden.
+Wenn Sie diese Richtlinien für Einkaufsfunktionen wie Preisvergleiche deaktivieren, werden Gutscheine und Rabatte für Einzelhandelsdomänen nicht automatisch gefunden.
 
   #### Unterstützte Funktionen:
 
@@ -16357,7 +16524,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
+  - Pfad (empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationSiteRedirect
   - Werttyp: REG_DWORD
 
@@ -18461,9 +18628,9 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Standardpfad für den Se
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden nur die normalen lokalen Profile verwendet.
 
-Die Richtlinie [SyncDisabled](#syncdisabled) deaktiviert die gesamte Datensynchronisierung, wobei die Richtlinie außer Kraft gesetzt wird.
+[SyncDisabled](#syncdisabled) deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf diese Richtlinie.
 
-Weitere Informationen zur Verwendung von Server gespeicherten Benutzerprofilen finden Sie unter https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles.
+Weitere Informationen zur Verwendung von Roaming-Benutzerprofilen finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058).
 
   #### Unterstützte Funktionen:
 
@@ -19381,7 +19548,7 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
 
   - Eindeutiger GP-Name: SerialAskForUrls
   - GP-Name: Die Serial-API auf bestimmten Websites zulassen.
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP-Pfad (zwingend erforderlich): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -19400,7 +19567,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac – Informationen und Einstellungen
+  #### Mac-Informationen und -Einstellungen
   
   - Einstellung Schlüsselname: SerialAskForUrls
   - Beispielwert:
@@ -20128,7 +20295,9 @@ Wenn diese Richtlinie falsch oder nicht festgelegt ist, werden die Warnungen auf
 
   #### Beschreibung
 
-  Deaktiviert die Datensynchronisierung in Microsoft Edge. Durch diese Richtlinie wird außerdem verhindert, dass die Synchronisierungs Bestätigungsaufforderung angezeigt wird.
+  Deaktiviert die Datensynchronisierung in Microsoft Edge. Durch diese Richtlinie wird außerdem verhindert, dass die Zustimmungsaufforderung für die Synchronisierung angezeigt wird.
+
+Diese Richtlinie deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf die Richtlinie [RoamingProfileSupportEnabled](#roamingprofilesupportenabled).
 
 Wenn Sie diese Richtlinie nicht festlegen oder sie nicht wie empfohlen anwenden, können die Benutzer die Synchronisierung aktivieren oder deaktivieren. Wenn Sie diese Richtlinie als zwingend erforderlich anwenden, können die Benutzer die Synchronisierung nicht aktivieren.
 
@@ -22058,7 +22227,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 
   ### WebWidgetAllowed
 
-  #### Zulassen des Web-Widgets
+  #### Webwidget aktivieren
 
   
   
@@ -22122,7 +22291,7 @@ Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Web-Widget beim Windows-Start aktivieren
+  #### Web-Widget beim Windows-Start zulassen
 
   
   
