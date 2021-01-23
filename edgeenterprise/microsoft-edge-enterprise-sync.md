@@ -3,19 +3,19 @@ title: Konfigurieren und Beheben von Problemen mit der Microsoft Edge-Synchronis
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/14/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren und Beheben von Problemen mit der Microsoft Edge-Synchronisierung
-ms.openlocfilehash: fa9b9ead6319bceeb95066003a77be7ecf84db46
-ms.sourcegitcommit: 68b50c45b2b78acec5a0776ce4ddd11410a4e382
+ms.openlocfilehash: 36912d2fd1c33a227ce1d4b7c912f6ef1dfdcc00
+ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270765"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297455"
 ---
 # Konfigurieren und Beheben von Problemen mit der Microsoft Edge-Synchronisierung
 
@@ -86,9 +86,9 @@ Ein beliebter Anwendungsfall für die Aufrechterhaltung der Benutzeridentität i
 
 Bevor Sie ein Problem als Synchronisierungsproblem behandeln, überprüfen Sie, ob der Benutzer mit einem gültigen Konto beim Browser angemeldet ist.
 
-Der nächste Screenshot zeigt ein Beispiel für einen Identitätsfehler in *edge://sync-internals* unter **Anmeldeinformationen**:
+Der nächste Screenshot zeigt ein Beispiel für einen Identitätsfehler. Der Fehler ist "**Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea**" und wird in *edge://sync-internals* unter **Anmeldeinformationen** angezeigt:
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Identitätsfehler":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Last Token Error EDGE_AUTH_ERROR: 3,54, 3ea":::
 
 ### Häufige Synchronisierungsprobleme
 
@@ -160,9 +160,8 @@ Wenn dieser Fehler für ein Azure Active Directory-Konto auftritt oder wenn DISA
 
 ### Problem: Kryptograph-Fehler aufgetreten
 
-Dieser Fehler wird unter **Typeninformation** in *edge://sync-internals* angezeigt und kann bedeuten, dass die dienstseitigen Daten des Benutzers zurückgesetzt werden müssen. Der nächste Screenshot zeigt ein Beispiel der Details für einen Kryptografiefehler.
-
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Kryptograph-Fehler.":::
+Dieser Fehler wird unter **Typeninformation** in *edge://sync-internals* angezeigt und kann bedeuten, dass die dienstseitigen Daten des Benutzers zurückgesetzt werden müssen. Das folgende Beispiel zeigt eine Kryptografiefehlermeldung:
+<br>"Fehler:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, Kryptografiefehler wurde erkannt".
 
 1. Starten Sie Microsoft Edge neu, navigieren Sie zu *edge://sync-internals* und überprüfen Sie den Abschnitt „**AAD-Kontoschlüsselstatus**“.
    - "Erfolg“ in „Letztes MIP-Ergebnis“: Der Kryptograph-Fehler bedeutet, dass Serverdaten möglicherweise mit einem verlorenen Schlüssel verschlüsselt sind. Eine Datenzurücksetzung ist erforderlich, um die Synchronisierung fortsetzen zu können.
