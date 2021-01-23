@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270841"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281024"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -35,8 +35,10 @@ In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgefüh
 
 | Name | Beschriftung |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|Lebensdauereinstellungen der Browserdaten|
-|[DefinePreferredLanguages](#definepreferredlanguages)|Definieren einer geordneten Liste der bevorzugten Sprachen, in der Websites angezeigt werden sollen, wenn die Website die Sprache unterstützt|
+|[MAMEnabled](#mamenabled)|Verwaltung mobiler Apps aktiviert|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen|
+
+
 
 
 ## Verfügbare Richtlinien
@@ -48,12 +50,12 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Application Guard-Einstellungen](#application-guard-settings)|[Cast](#cast)|
 |[Einstellungen für den Inhalt](#content-settings)|[Standardmäßiger Suchdienstanbieter](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP-Authentifizierung](#http-authentication)|
-|[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Systemeigenes Messaging](#native-messaging)|
-|[Kennwort-Manager und Schutz](#password-manager-and-protection)|[Leistung](#performance)|
-|[Drucken](#printing)|[Proxyserver](#proxy-server)|
-|[Einstellungen für „Schlafende Registerkarten“](#sleeping-tabs-settings)|[SmartScreen-Einstellungen](#smartscreen-settings)|
-|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|[Sonstiges](#additional)|
-
+|[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Verwaltbarkeit](#manageability)|
+|[Systemeigenes Messaging](#native-messaging)|[Kennwort-Manager und Schutz](#password-manager-and-protection)|
+|[Leistung](#performance)|[Drucken](#printing)|
+|[Proxyserver](#proxy-server)|[Einstellungen für „Schlafende Registerkarten“](#sleeping-tabs-settings)|
+|[SmartScreen-Einstellungen](#smartscreen-settings)|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|
+|[Sonstiges](#additional)|
 
 ### [*Application Guard-Einstellungen*](#application-guard-settings-policies)
 
@@ -152,6 +154,11 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Konfigurieren der Adressleistenbearbeitung für die öffentliche Browsernutzung im Kioskmodus.|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Löschen von Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, wenn Microsoft Edge geschlossen wird|
+### [*Verwaltbarkeit*](#manageability-policies)
+
+|Richtlinienname|Beschriftung|
+|-|-|
+|[MAMEnabled](#mamenabled)|Verwaltung mobiler Apps aktiviert|
 ### [*Systemeigenes Messaging*](#native-messaging-policies)
 
 |Richtlinienname|Beschriftung|
@@ -401,6 +408,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SerialBlockedForUrls](#serialblockedforurls)|Serial-API auf bestimmten Websites blockieren|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards-Erfahrungen anzeigen|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung für Signed HTTP Exchange (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Aktivieren der Website-Isolation für alle Websites|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5277,6 +5285,72 @@ Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [h
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ## Richtlinien zur Verwaltbarkeit
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Verwaltung mobiler Apps aktiviert
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Ermöglicht dem Microsoft Edge-Browser, Richtlinien von den Intune-Anwendungsverwaltungsdiensten abzurufen und sie auf Benutzerprofile anzuwenden.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Richtlinien für die mobile App-Verwaltung (Mobile App Management, MAM) angewendet werden.
+
+Wenn Sie diese Richtlinie deaktivieren, kommuniziert Microsoft Edge nicht mit Intune, um die MAM-Richtlinien anzufordern.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: MAMEnabled
+  - GP-Name: Verwaltung mobiler Apps aktiviert
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Manageability
+  - GP-Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: MAMEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000000
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: MAMEnabled
+  - Beispielwert:
+``` xml
+<false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ## Richtlinien zum systemeigenen Messaging
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -9137,6 +9211,8 @@ Insbesondere gibt es ein Auswahlfeld namens **ähnliche Seiten vorschlagen, wenn
   Deaktiviert den internen PDF-Viewer in Microsoft Edge.
 
 Wenn Sie diese Richtlinie aktivieren, behandelt Microsoft Edge PDF-Dateien als Downloads und ermöglicht es Benutzern, diese mit der Standardanwendung zu öffnen.
+
+Wenn Microsoft Edge der Standard-PDF-Reader ist, werden die PDF-Dateien nicht heruntergeladen und weiterhin in Microsoft Edge geöffnet.
 
 Wenn Sie diese Richtlinie nicht konfigurieren oder nicht aktivieren, öffnet Microsoft Edge PDF-Dateien (es sei denn, der Benutzer deaktiviert dies).
 
@@ -16524,7 +16600,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationSiteRedirect
   - Werttyp: REG_DWORD
 
@@ -19548,7 +19624,7 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
 
   - Eindeutiger GP-Name: SerialAskForUrls
   - GP-Name: Die Serial-API auf bestimmten Websites zulassen.
-  - GP-Pfad (zwingend erforderlich): Administrative Templates/Microsoft Edge/
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -19567,7 +19643,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SerialAskForUrls
   - Beispielwert:
@@ -19777,6 +19853,68 @@ Wenn Sie diese Richtlinie deaktivieren, wird die Verknüpfung nicht angezeigt.
   - Beispielwert:
 ``` xml
 <false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Mit dieser Richtlinieneinstellung können Sie festlegen, ob Mitarbeiter Empfehlungen und Benachrichtigungen zur produktinternen Unterstützung von Microsoft Edge erhalten sollen.
+
+Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, erhalten Mitarbeiter Empfehlungen/Benachrichtigungen von Microsoft Edge.
+
+Wenn Sie diese Einstellung deaktivieren, werden Mitarbeiter keine Empfehlungen/Benachrichtigungen von Microsoft Edge erhalten.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: ShowRecommendationsEnabled
+  - GP-Name: Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: ShowRecommendationsEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: ShowRecommendationsEnabled
+  - Beispielwert:
+``` xml
+<true/>
 ```
   
 
