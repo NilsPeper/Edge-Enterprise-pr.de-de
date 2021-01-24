@@ -3,23 +3,23 @@ title: Der PDF-Reader in Microsoft Edge
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 08/05/2020
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über den PDF-Reader in Microsoft Edge.
-ms.openlocfilehash: c189bc08d4af0c9d5c4d9c573e0b5b7ef32a7fb3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d4d9d3efa063b9b6981d5c7cd4bc69968b56448b
+ms.sourcegitcommit: f0f250190fc09964175778338a177f1240946b98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980063"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297219"
 ---
 # Der PDF-Reader in Microsoft Edge
 
-PDF-Dateien gehören zu unserem Alltag. Wir erhalten sie in Form von Verträgen und Vereinbarungen, Newslettern, Formularen, Forschungsartikeln, Lebensläufen usw. Diese Dateien verdeutlichen die Notwendigkeit eines zuverlässigen, sicheren und leistungsfähigen PDF-Readers, der in Unternehmen eingesetzt werden kann.
+PDF-Dateien machen einen großen Teil unseres täglichen Lebens aus. Wir erhalten sie in Form von Verträgen und Vereinbarungen, Newslettern, Formularen, Forschungsartikeln, Lebensläufen usw. Diese Dateien verdeutlichen die Notwendigkeit eines zuverlässigen, sicheren und leistungsfähigen PDF-Readers, der in Unternehmen eingesetzt werden kann.
 
 Microsoft Edge bietet einen integrierten PDF-Reader, mit dem Sie lokale PDF-Dateien, Online-PDF-Dateien oder in Webseiten eingebettete PDF-Dateien öffnen können. Sie können diesen Dateien mit Freihand Notizen hinzufügen und sie mit Hervorhebungen versehen. Dieser PDF-Reader stellt eine einzige Anwendung zur Abdeckung aller Anforderungen im Hinblick auf Webseiten und PDF-Dokumente dar. Der Microsoft Edge PDF-Reader ist eine sichere und zuverlässige Anwendung, die auf Windows- und macOS-Desktopplattformen funktioniert.
 
@@ -34,12 +34,17 @@ Die folgende Tabelle veranschaulicht, welche Kanäle und Versionen von Microsoft
 |---------|------------------------|
 | Anzeigen und Drucken von lokalen, Online- und eingebetteten PDF-Dateien | 79.0.309.71                |
 | Einfaches Ausfüllen von Formularen<br>(JavaScript-Formulare werden nicht unterstützt) | 79.0.309.71           |
+|Inhaltsverzeichnis| 86.0.622.38 |
+| Seitenansicht |Derzeit in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)-Kanälen verfügbar |
+| Browsen im Caretmodus |87.0.664.41 |
 | Freihandeingaben  | 80.0.361.48            |
 | Freihand-Anpassung | 83.0.478.54  |
 | Hervorheben  | 81.0.416.53         |
-| Laut vorlesen | Derzeit in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)-Kanälen verfügbar |
-| Anzeigen von MIP-geschützten Dateien | Windows-Unterstützung in 80.0.361.48<br>Mac-Unterstützung in 81.0.416.53 |
-|  Anzeigen von IRM-geschützten Dateien  | 83.0.478.37            |
+| Textnotizen | Derzeit in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)-Kanälen verfügbar |
+| Laut vorlesen | 84.0.522.63  |
+| Anzeigen von durch Microsoft Information Protection (MIP) geschützten Dateien | Windows-Unterstützung in 80.0.361.48<br>Mac-Unterstützung in 81.0.416.53 |
+|  Anzeigen von durch Information Rights Management (IRM) geschützten Dateien  | 83.0.478.37            |
+| Anzeigen und Überprüfen digitaler Signaturen | Verfügbar in Canary- und Dev-Kanälen. Es wird aktiv daran gearbeitet. |
 
 ### Einschränkungen
 
@@ -50,67 +55,98 @@ Beachten Sie die folgenden Einschränkungen für den aktuellen PDF-Reader:
 
 ## Features
 
+Der in Microsoft Edge integrierte PDF-Reader verfügt über die grundlegenden Lese- und Navigationsfunktionen, unter anderem Zoom, Drehen, An Seite/Breite passen, zur Seite springen und suchen. Sie können über eine anheftbare Symbolleiste am oberen Rand des PDF-Inhalts darauf zugreifen. Dieser Abschnitt enthält eine Übersicht über einige wichtige Funktionen. Der nächste Screenshot zeigt die Symbolleiste des PDF-Readers.
+
+![Symbolleiste für den PDF-Reader](media/microsoft-edge-pdf/pdf-reader-toolbar.png)
+
+### Inhaltsverzeichnis
+
+Mit Inhaltsverzeichnissen können Benutzer ganz einfach durch PDF-Dokumente navigieren, die ein Inhaltsverzeichnis enthalten. Wenn ein Benutzer auf das Inhaltsverzeichnissymbol klickt, wird ein Navigationsbereich mit einer Liste der mit Bezeichnungen versehenen Abschnitte und Unterabschnitte im PDF-Dokument angezeigt. Der Benutzer kann dann auf eine der Bezeichnungen im Bereich klicken, um zu diesem Abschnitt des Dokuments zu navigieren. Der Bereich bleibt so lange wie nötig geöffnet und kann geschlossen werden, wenn der Benutzer zum Lesen des Dokuments zurück möchte. Der nächste Screenshot zeigt den Navigationsbereich für ein geöffnetes Dokument.
+
+![Navigation im PDF-Reader mit Inhaltsverzeichnis](media/microsoft-edge-pdf/pdf-reader-toc.png)
+
+### Seitenansicht
+
+Microsoft Edge unterstützt unterschiedliche Ansichten für PDF-Dokumente in unseren Dev- und Canary-Kanälen. Benutzer können das Layout eines Dokuments von einer Einzelseitenansicht in zwei Seiten ändern, die nebeneinander angezeigt werden. Um zu ändern, wie das PDF-Dokument angezeigt wird, können Benutzer auf der PDF-Symbolleiste auf die Schaltfläche „Seitenansicht“ klicken und dann eine der Ansichten auswählen, die sie verwenden möchten. Die Zwei-Seiten-Ansicht wird im nächsten Screenshot angezeigt.
+
+![PDF-Reader, der die Zwei-Seiten-Ansicht eines Dokuments benutzt.](media/microsoft-edge-pdf/pdf-reader-page-view.png)
+
+### Browsen im Caretmodus
+
+Das Caretbrowsen ist für in Microsoft Edge geöffnete PDF-Dateien verfügbar, was bedeutet, dass Benutzer über die Tastatur mit PDF-Dateien interagieren können. Wenn ein Benutzer die F7-TASTE an einer beliebigen Stelle im Browser drückt, wird er gefragt, ob das Caretbrowsen aktiviert werden soll. Wenn diese Option aktiviert ist, ist das Caretbrowsen für alle Inhalte verfügbar, die im Browser geöffnet werden, sei es PDF-Dateien oder Webseiten. Wenn ein Benutzer erneut F7 drückt, wird das Caretbrowsen deaktiviert. Wenn das Caretbrowsen aktiv ist und der Fokus auf dem Inhalt liegt, sehen Benutzer einen blinkenden Cursor in der PDF-Datei. Das Caretformat kann auch verwendet werden, um durch die Datei zu navigieren oder Text durch Drücken der UMSCHALTTASTE beim Bewegen des Cursors auszuwählen. Mit dieser Funktion können Benutzer Elemente ganz einfach als Hervorhebungen erstellen oder mit Elementen wie Links, Formularfeldern mit der Tastatur interagieren. Der nächste Screenshot zeigt das Popupmenü zum Aktivieren des Browsens im Caretmodus.
+
+![Menü „PDF-Reader“ für das Browsen im Caretmodus.](media/microsoft-edge-pdf/pdf-reader-caret-mode.png)
+
 ### Freihandeingaben
 
 Freihandeingaben in PDF-Dateien sind praktisch, um sich schnell Notizen zu machen, die auf einfache Weise referenziert werden können, zum Signieren oder um PDF-Formulare auszufüllen. Diese Funktion ist jetzt in Microsoft Edge verfügbar. Neben Freihandeingaben können Sie mithilfe von Farbe und Strichbreite die Aufmerksamkeit auf bestimmte Teile der PDF-Datei lenken. Der nächste Screenshot zeigt, wie ein Benutzer Freihandeingaben auf einer PDF-Seite vornehmen kann.
 
-<!-- SCREENSHOT -->
 ![Freihandeingaben auf PDF-Seiten](media/microsoft-edge-pdf/pdf-reader-inking.png)
 
 ### Hervorheben
 
-Der PDF-Reader in Microsoft Edge ermöglicht das Hinzufügen und Bearbeiten von Hervorhebungen. Zum Erstellen eines Hervorhebung muss der Benutzer lediglich den Text markieren, mit der rechten Maustaste darauf klicken, im Menü „Hervorhebungen“ und die gewünschte Farbe auswählen. Der nächste Screenshot zeigt die verfügbaren Hervorhebungsoptionen.
+Der PDF-Reader in Microsoft Edge ermöglicht das Hinzufügen und Bearbeiten von Hervorhebungen. Zum Erstellen eines Hervorhebung muss der Benutzer lediglich den Text markieren, mit der rechten Maustaste darauf klicken, im Menü „Hervorhebungen“ und die gewünschte Farbe auswählen. Highlights können auch mit einem Stift oder einer Tastatur erstellt werden. Der nächste Screenshot zeigt die verfügbaren Hervorhebungsoptionen.
 
 ![Verwenden der Option „Hervorheben“ im PDF-Reader](media/microsoft-edge-pdf/pdf-reader-highlight.png)
 
+### Textnotizen
+
+Beim Lesen einer PDF-Datei können Textnotizen zu Text in der Datei hinzugefügt werden, um später einfach nachlesen zu können.
+
+Benutzer können eine Notiz hinzufügen, indem sie den Text markieren, für den sie eine Notiz hinzufügen möchten, und das Kontextmenü mit der rechten Maustaste aufrufen. Wenn Sie im Menü die Option **Kommentar hinzufügen** auswählen, wird ein Textfeld geöffnet, in dem Benutzer ihre Kommentare hinzufügen können. Sie können den Kommentar eingeben und dann auf das Kontrollkästchen klicken, um den Kommentar zu speichern.
+
+Nachdem eine Notiz hinzugefügt wurde, wird der ausgewählte Text hervorgehoben, und es wird ein Kommentarsymbol angezeigt, das den Kommentar angibt. Benutzer können mit der Maus auf dieses Symbol zeigen, um eine Vorschau des Kommentars anzuzeigen, oder darauf klicken, um die Notiz zu öffnen und zu bearbeiten.
+
+Der nächste Screenshot zeigt eine Notiz, die dem hervorgehobenen Text hinzugefügt wird.
+
+![Der PDF-Reader fügt dem Dokument eine Textnotiz hinzu.](media/microsoft-edge-pdf/pdf-reader-text-note.png)
+
 ### Laut vorlesen
 
-„Laut vorlesen“ für PDF ermöglicht Benutzern das bequeme Anhören von PDF-Inhalten, während sie andere wichtige Aufgaben ausführen. Außerdem hilft es auditiv Lernenden, sich auf den Inhalt zu konzentrieren, wodurch das Lernen erheblich erleichtert wird. Der nächste Screenshot zeigt ein Beispiel für die „Laut vorlesen“-Funktion. Die Hervorhebung zeigt den Text an, der gerade vorgelesen wird.
+Das laute Vorlesen für PDF erhöht den Komfort, dass Benutzer dem Inhalt der PDF zuhören und gleichzeitig andere Aufgaben ausführen können, die ihnen möglicherweise von Bedeutung sind. Außerdem hilft es auditiv Lernenden, sich auf den Inhalt zu konzentrieren, wodurch das Lernen erheblich erleichtert wird. Der nächste Screenshot zeigt ein Beispiel für „Laut vorlesen“. Die Hervorhebung zeigt den Text an, der gerade vorgelesen wird.
 
-![Verwenden der Option „Hervorheben“ im PDF-Reader](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
+![Verwenden der Hervorhebungsoption für „Laut vorlesen“ im PDF-Reader](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
 
 ### Geschützte PDF-Dateien
 
-[Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide) ermöglicht Benutzern die sichere Zusammenarbeit mit anderen Personen und dabei die Compliance-Richtlinien ihrer Organisation einzuhalten. Nachdem eine Datei geschützt wurde, werden die Aktionen, die von Benutzern daran ausgeführt werden können, durch die ihnen zugewiesenen Zugriffsberechtigungen bestimmt.
+[Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&preserve-view=true) ermöglicht Benutzern die sichere Zusammenarbeit mit anderen Personen und dabei die Compliance-Richtlinien ihrer Organisation einzuhalten. Nachdem eine Datei geschützt wurde, werden die Aktionen, die von Benutzern daran ausgeführt werden können, durch die ihnen zugewiesenen Zugriffsberechtigungen bestimmt.
 
-Diese Dateien können direkt im Browser geöffnet werden, ohne eine andere Software herunterladen oder ein Add-In installieren zu müssen. Damit wird die von MIP gebotene Sicherheit direkt in den Browser integriert und so ein nahtloser Workflow ermöglicht.
+> [!IMPORTANT]
+> Für MIP ist eine Lizenz erforderlich. Weitere Informationen finden Sie in dieser [Microsoft 365-Lizenzierungsanleitung.](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
 
-<!-- SCREENSHOT -->
+Diese Dateien können direkt im Browser geöffnet werden, ohne eine andere Software herunterladen oder ein Add-In installieren zu müssen. Diese Funktion integriert die von MIP bereitgestellte Sicherheit direkt in den Browser, um einen nahtlosen Workflow zu bieten.
+
 ![Geschütztes PDF-Dokument.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 
-Neben MIP-geschützten Dateien können auch PDF-Dateien in [IRM (Information Rights Management)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide)-geschützten SharePoint-Bibliotheken direkt im Browser geöffnet werden.
+Neben MIP-geschützten Dateien können auch PDF-Dateien in [IRM (Information Rights Management)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide&preserve-view=true)-geschützten SharePoint-Bibliotheken direkt im Browser geöffnet werden.
 
 Mit Microsoft Edge können Benutzer MIP-geschützte Dateien anzeigen, die lokal oder in der Cloud gespeichert sind. Lokal gespeicherte Dateien können direkt im Browser geöffnet werden. Für aus einem Clouddienst wie SharePoint geöffnete Dateien muss der Benutzer möglicherweise die Option "Im Browser öffnen" verwenden.
 
 Wenn das Profil, mit dem der Benutzer bei Microsoft Edge angemeldet ist, mindestens über die Berechtigung zum Anzeigen der Datei verfügt, wird die Datei in Microsoft Edge geöffnet.
 
-<!-- SCREENSHOT -->
 ![Aufforderung zum Speichern einer SharePoint-PDF-Seite, die durch MIP geschützt ist](media/microsoft-edge-pdf/pdf-reader-sharepoint-irm.png)
 
-## Bedienungshilfen
+### Anzeigen und Überprüfen zertifikatbasierter digitaler Signaturen
+
+In dieser digitalen Welt ist es wichtig, die Authentizität und den Besitz des Inhalts im Dokument nachzuweisen. Zertifikatbasierte digitale Signaturen werden häufig in PDF-Dokumenten verwendet, um sicherzustellen, dass der Inhalt des Dokuments mit dem vom Autor beabsichtigten identisch ist und nicht geändert wurde. Mit Microsoft Edge können Sie digitale Zertifikatsignaturen in PDFs anzeigen und überprüfen.
+
+Wir arbeiten aktiv an der Verbesserung des Supports, um mehr Situationen zu adressieren, und freuen uns auf Feedback dazu.
+
+## Barrierefreiheit
 
 Der PDF-Reader bietet Unterstützung für Barrierefreiheit für Tastaturnavigation, den Modus für hohen Kontrast und die Sprachausgabe für Windows- und macOS-Geräte.
 
 ### Barrierefreiheit für Tastaturnavigation
 
-Benutzer können mithilfe der Tastatur zu verschiedenen Teilen des Dokuments navigieren, mit denen ein Benutzer interagieren kann, z. B. Formulare und Hervorhebungen.
-
-<!-- SCREENSHOT -->
+Benutzer können mithilfe der Tastatur zu verschiedenen Teilen des Dokuments navigieren, mit denen ein Benutzer interagieren kann, z. B. Formulare und Hervorhebungen. Benutzer können den Caretmodus auch verwenden, um mithilfe der Tastatur in den PDF-Dateien zu navigieren und mit diesen zu interagieren.
 
 ### Modus für hohen Kontrast
 
 Der PDF-Reader verwendet die auf Betriebssystemebene festgelegten Einstellungen, um PDF-Inhalte im Modus „Hoher Kontrast“ darzustellen.
 
-<!-- SCREENSHOT -->
-<!--![High contrast mode for pdf file](media/microsoft-edge-pdf/pdf-reader-high-contrast.png)-->
-
 ### Unterstützung für Sprachausgabe
 
-Benutzer können mithilfe von Bildschirmsprachausgaben auf Windows- und Mac-Computern in PDF-Dateien navigieren und diese lesen. <!--The next screenshot shows the toolbar that users can use for audio settings when they're using the Read Aloud option in PDF reader. -->
-
-<!-- SCREENSHOT -->
-<!--
-![Screen reader toolbar](media/microsoft-edge-pdf/pdf-reader-read-aloud.png) -->
+Benutzer können mithilfe von Bildschirmsprachausgaben auf Windows- und Mac-Computern in PDF-Dateien navigieren und diese lesen.
 
 ## Sicherheit und Zuverlässigkeit
 
@@ -123,7 +159,7 @@ Dieser Schutz gilt auch für alle angezeigten Online-PDF-Dateien. Darüber hinau
 
 ### Zuverlässigkeit
 
-Da Microsoft Edge auf Chromium basiert, können die Benutzer mit dem gleichen Maß an Zuverlässigkeit rechnen, den sie von Google Chrome gewohnt.
+Da Microsoft Edge Chromium-basiert ist, können Benutzer den gleichen Zuverlässigkeitsgrad erwarten, den sie in anderen Chromium-basierten Browsern gewohnt sind.
 
 ## Bereitstellen und Aktualisieren des PDF-Readers
 
@@ -134,10 +170,12 @@ Der PDF-Reader wird mit dem restlichen Microsoft Edge-Browser bereitgestellt und
 
 ## Roadmap und Feedback
 
-Die Roadmap für den PDF-Reader in Microsoft Edge finden Sie [hier](https://techcommunity.microsoft.com/t5/articles/roadmap-for-pdf-reader-in-microsoft-edge/m-p/1467667).
+Die Roadmap für den PDF-Reader in Microsoft Edge ist [hier](https://techcommunity.microsoft.com/t5/articles/roadmap-for-pdf-reader-in-microsoft-edge/m-p/1467667) verfügbar.
 
 Wir freuen uns auf Ihr Feedback zu den Funktionen, die Ihnen besonders wichtig sind. Senden Sie uns Ihr Feedback über [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/) und über das [Microsoft Edge Insider](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider)-Forum.
 
 ## Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise Landing Page](https://aka.ms/EdgeEnterprise)
+- [Microsoft 365-Roadmap](https://www.microsoft.com/microsoft-365/roadmap)
+- [Video: Microsoft Edge PDF-Reader für Unternehmen](microsoft-edge-video-pdf-reader.md)
