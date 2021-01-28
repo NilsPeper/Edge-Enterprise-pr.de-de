@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge WebView2-Richtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 63a34f35994b459eb26258c38d870ed5db126794
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 52c426e3c08764fbbfdce207127ca083d38a93c4
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281034"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304718"
 ---
 # <span data-ttu-id="977ef-103">Microsoft Edge WebView2 –⁠ Richtlinien</span><span class="sxs-lookup"><span data-stu-id="977ef-103">Microsoft Edge WebView2 - Policies</span></span>
 
 <span data-ttu-id="977ef-104">Die neueste Version von Microsoft Edge WebView2 umfasst die folgenden Richtlinien.</span><span class="sxs-lookup"><span data-stu-id="977ef-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="977ef-105">Sie können diese Richtlinien verwenden, um zu konfigurieren, wie Microsoft Edge WebView2 in Ihrer Organisation ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="977ef-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
 
 <span data-ttu-id="977ef-106">Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wie und wann Microsoft Edge WebView2 aktualisiert wird, finden Sie unter [Microsoft Edge Updaterichtlinien-Referenz](microsoft-edge-update-policies.md).</span><span class="sxs-lookup"><span data-stu-id="977ef-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
-
 
 > [!NOTE]
 > <span data-ttu-id="977ef-107">Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.</span><span class="sxs-lookup"><span data-stu-id="977ef-107">This article applies to Microsoft Edge version 87 or later.</span></span>
