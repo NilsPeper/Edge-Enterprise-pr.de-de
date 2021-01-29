@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281024"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304728"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -35,11 +35,7 @@ In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgefüh
 
 | Name | Beschriftung |
 |--|--|
-|[MAMEnabled](#mamenabled)|Verwaltung mobiler Apps aktiviert|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen|
-
-
-
+|[SmartActionsBlockList](#smartactionsblocklist)|Blockieren intelligenter Aktionen für eine Liste von Diensten|
 
 ## Verfügbare Richtlinien
 
@@ -411,6 +407,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung für Signed HTTP Exchange (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Aktivieren der Website-Isolation für alle Websites|
+|[SmartActionsBlockList](#smartactionsblocklist)|Blockieren intelligenter Aktionen für eine Liste von Diensten|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Rechtschreibprüfung aktivieren|
 |[SpellcheckLanguage](#spellchecklanguage)|Aktivieren spezifischer Sprachen für die Rechtschreibprüfung|
@@ -2901,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### Beschreibung
 
-  Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die Popup-Fenster öffnen dürfen.
+  Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die Popup-Fenster öffnen dürfen. * ist kein akzeptierter Wert für diese Richtlinie.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPopupsSetting](#defaultpopupssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
@@ -2966,7 +2963,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### Beschreibung
 
-  Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die keine Popup-Fenster öffnen dürfen.
+  Definieren Sie eine Liste an Websites, basierend auf URL-Mustern, die keine Popup-Fenster öffnen dürfen. * ist kein akzeptierter Wert für diese Richtlinie.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPopupsSetting](#defaultpopupssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
@@ -4027,7 +4024,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
   
 
-  [Zurück zum Anfang](#microsoft-edge---policies)
+  [Nach oben](#microsoft-edge---policies)
 
   ## Erweiterungsrichtlinien
 
@@ -6980,8 +6977,8 @@ Bei Auswahl der folgenden Werte für „ProxyMode“:
   * direct: Es wird kein Proxy verwendet, und alle anderen Felder werden ignoriert.
   * system: Es wird der Proxy des Systems verwendet, und alle anderen Felder werden ignoriert.
   * auto_detect: Alle anderen Felder werden ignoriert.
-  * fixed_server: Es werden die Felder "Proxyserver" und "ProxyBypassList" verwendet.
-  * pac_script: Es werden die Felder "ProxyPacUrl" und "ProxyBypassList" verwendet.
+  * fixed_servers: Die Felder „ProxyServer“ und „ProxyBypassList“ werden verwendet.
+  * pac_script: Die Felder „ProxyPacUrl“ und „ProxyBypassList“ werden verwendet.
 
 Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
@@ -7017,7 +7014,7 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7026,7 +7023,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### Kompakter Beispielwert:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7040,7 +7037,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -20045,6 +20042,83 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutze
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### Blockieren intelligenter Aktionen für eine Liste von Diensten
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und MacOS seit 89 oder höher
+
+  #### Beschreibung
+
+  Listen Sie bestimmte Dienste auf, z. B. PDFs, die keine intelligenten Aktionen anzeigen. (Intelligente Aktionen sind Aktionen wie "definieren", die in Voll- und Minikontextmenüs in Microsoft Edge verfügbar sind.)
+
+Wenn Sie die Richtlinie aktivieren:
+   - Die intelligente Aktion in Mini- und Vollkontextmenüs wird für alle Profile für Dienste deaktiviert, die der angegebenen Liste entsprechen.
+   - Benutzern wird die intelligente Aktion in Mini- und Vollkontextmenüs für die Textauswahl für Dienste nicht angezeigt, die der angegebenen Liste entsprechen.
+   - In den Microsoft Edge-Einstellungen wird die intelligente Aktion in Mini- und Vollkontextmenüs für Dienste deaktiviert, die der angegebenen Liste entsprechen.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren:
+   - Die intelligente Aktion in Mini- und Vollkontextmenüs wird für alle Profile aktiviert.
+   - Benutzer sehen die intelligente Aktion in Mini- und Vollkontextmenüs für die Textauswahl.
+   - In den Microsoft Edge-Einstellungen wird die intelligente Aktion in Mini- und Vollkontextmenüs aktiviert.
+
+Zuordnung von Richtlinienoptionen:
+
+* smart_actions_pdf (smart_actions_pdf) = Intelligente Aktionen in PDF
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: SmartActionsBlockList
+  - GP-Name: Blockieren intelligenter Aktionen für eine Liste von Diensten
+  - GP-Pfad (Verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (Verpflichtend): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - Pfad (Empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: SmartActionsBlockList
+  - Beispielwert:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21807,14 +21881,7 @@ Unabhängig davon, ob und wie diese Richtlinie aktiviert ist, kann die WPAD-Opti
 
   Konfigurieren Sie diese Richtlinie, um eine Liste von Webanwendungen anzugeben, die im Hintergrund installieren, ohne dass Benutzerinteraktionen vorgenommen werden, und die Benutzer nicht deinstallieren oder deaktivieren können.
 
-Jedes Listenelement der Richtlinie ist ein Objekt mit einem obligatorischen Element: url (die URL der zu installierenden Web-App)
-
-und drei optionale Elemente:
-- default_launch_container (gibt den Fenstermodus an, mit dem die Web-App geöffnet wird – eine neue Registerkarte ist die Standardeinstellung)
-
-- create_desktop_shortcut („Wahr“, wenn Sie Linux- und Windows-Desktopverknüpfungen erstellen möchten)
-
-- override_app_name (ab Microsoft Edge 89 können Sie den Namen der App überschreiben, wenn es sich nicht um eine progressive Web-App (PWA) handelt, oder den App-Namen, der vorübergehend installiert wird, wenn es sich um eine PWA handelt, aber eine Authentifizierung erforderlich ist, bevor die Installation abgeschlossen werden kann)
+Bei jedem Listenelement der Richtlinie handelt es sich um ein Objekt mit einem verpflichtenden Element: "url" (die URL der zu installierenden Web-App), und zwei optionalen Mitgliedern: "default_launch_container" (gibt den Fenstermodus an, in dem die Web App geöffnet wird – ein neuer Tab ist die Standardeinstellung) und "create_desktop_shortcut" ("true", wenn Desktopverknüpfungen für Linux und Windows erstellt werden sollen).
 
   #### Unterstützte Funktionen:
 
@@ -21855,11 +21922,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21867,7 +21929,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Kompakter Beispielwert:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21891,14 +21953,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```

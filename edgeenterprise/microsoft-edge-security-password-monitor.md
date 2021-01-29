@@ -3,19 +3,19 @@ title: Automatische Aktivierung des Kennwortmonitors für Benutzer
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Automatische Aktivierung des Kennwortmonitors für Benutzer
-ms.openlocfilehash: 8ea96522fe99082579e88b2eab330fb265d02b12
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297502"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304535"
 ---
 # Automatische Aktivierung des Kennwortmonitors für Benutzer
 
@@ -26,7 +26,7 @@ In diesem Artikel wird beschrieben, wie der Kennwortmonitor in Microsoft Edge f�
 
 ## Einführung, Vorteile und Verfügbarkeit
 
-Der Kennwortmonitor hilft Microsoft Edge-Benutzern, ihre Onlinekonten zu schützen, indem sie informiert werden, ob eines ihrer Kennwörter in einem Onlineleck gefunden wurde. Onlinelecks oder Datenschutzverletzungen geschehen, wenn Angreifer Daten über Apps oder Websites von Drittanbietern stehlen.
+Der Kennwortmonitor hilft Microsoft Edge-Benutzern, ihre Onlinekonten zu schützen, indem sie informiert werden, ob eines ihrer Kennwörter in einem Onlineleck gefunden wurde. Onlinelecks oder Datenschutzverletzungen geschehen, wenn Angreifer Daten über Apps oder Websites von Drittanbietern stehlen. Weitere Informationen finden Sie im Microsoft Research Blog im Dokument [Kennwortmonitor: Schutz von Kennwörtern in Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/).
 
 ### Vorteile
 
@@ -34,7 +34,7 @@ Angesichts der Häufigkeit und des Umfangs dieser Onlineangriffe, ist diese Art 
 
 ### Verfügbarkeit
 
-Der Kennwortmonitor wurde bereits in frühen Vorschaukanälen (Canary/Dev) verwendet und wird ab dem 21.01.2021 auf Stable Channel Version 88 heraufgestuft. Das Rollout erfolgt schrittweise, und es kann einige Wochen dauern, bis die folgende Meldung und Steuerung auf der Seite **Einstellungen** > **Profil** > **Kennwort** angezeigt wird.
+Der Kennwortmonitor ist ab 21. Januar verfügbar im Stabilen Kanal, Version 88. Das Rollout erfolgt schrittweise, und es kann einige Wochen dauern, bis die folgende Meldung und Steuerung auf der Seite **Einstellungen** > **Profil** > **Kennwort** angezeigt wird.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option zum Aktivieren des Kennwortmonitors":::
 

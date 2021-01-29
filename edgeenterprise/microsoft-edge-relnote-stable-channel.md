@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: b7a875c7a3688d1839be9c3fdc835f77e14f3bae
-ms.sourcegitcommit: f0f250190fc09964175778338a177f1240946b98
+ms.openlocfilehash: fd5336a57ad3f6706a2a61a2781c772f12e8b795
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297189"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304545"
 ---
 # Versionshinweise für Microsoft Edge Stable Channel
 
@@ -28,6 +28,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 88.0.705.53: 26. Januar
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 88.0.705.50: 21. Januar
 
