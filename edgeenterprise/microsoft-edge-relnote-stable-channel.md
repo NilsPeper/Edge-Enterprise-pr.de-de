@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 01/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: fd5336a57ad3f6706a2a61a2781c772f12e8b795
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
+ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304545"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306065"
 ---
 # Versionshinweise für Microsoft Edge Stable Channel
 
@@ -28,6 +28,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 88.0.705.56: 28. Januar
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 88.0.705.53: 26. Januar
 
@@ -48,6 +52,11 @@ Sicherheitsupdates sind [hier](https://docs.microsoft.com/DeployEdge/microsoft-e
 - **Authentifizierung:**
 
   - Einmaliges Anmelden (SSO, Single Sign On) ist jetzt für Azure Active Directory-Konten (Azure AD) und Microsoft-Konto (MSA) unter Windows auf niedrigerer Ebene verfügbar. Ein Benutzer, der bei Microsoft Edge unter Microsoft Windows auf niedrigerer Ebene (7, 8.1) angemeldet ist, wird jetzt automatisch bei Websites angemeldet, die so konfiguriert sind, dass sie eine einmalige Anmeldung mit Geschäfts- und Microsoft-Konten ermöglichen (z. B. bing.com, office.com, msn.com, outlook.com).<br>Hinweis: Ein Benutzer muss sich möglicherweise abmelden und dann erneut anmelden, wenn er sich in einer Version vor Microsoft Edge 88 bei Microsoft Edge angemeldet hat, um diese Funktion nutzen zu können.
+  
+  - Single Sign-On (SSO) auf Geschäftswebsites mit beliebigen Windows Azure Active Directory (Azure AD)-Konten auf dem System in Nicht-Azure AD-Microsoft Edge-Profilen. Dieses Feature kann für jedes Profil aktiviert werden, das nicht mit einem Geschäfts-/Schulkonto angemeldet ist und nicht Gast oder Privat ist und die Verwendung eines beliebigen angemeldeten Geschäfts-/Schulkontos auf dem Betriebssystem mit diesem Profil zulässt. Dieses Feature kann in **Einstellungen** > **Profile** > **Profileinstellungen** > **Single Sign-on für Geschäfts- und Schulwebsites mit diesem Profil erlauben** konfiguriert werden.
+  
+    > [!NOTE]
+    > „Single Sign-On (SSO) für alle Windows-Konten, die das Microsoft Edge-Profil verwenden" ist eine Aktualisierung für die Versionshinweise vom 21. Januar.
 
 - **Kioskmodus-Option zum Beenden der Sitzung**. Die Schaltfläche „Sitzung beenden“ ist jetzt im öffentlichen Browsing im Kioskmodus verfügbar. Diese Funktion stellt sicher, dass Browserdaten und -einstellungen gelöscht werden, wenn Microsoft Edge geschlossen wird. Weitere Informationen zu den Funktionen und der Roadmap des Kioskmodus finden Sie unter [Konfigurieren des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
@@ -336,7 +345,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## Version 85.0.564.68: 1. Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 85.0.564.63: 23. September
 
