@@ -1,30 +1,45 @@
 ---
-ms.openlocfilehash: fee3153f7884bd3c36328d88e433d3ca1b13d0e4
-ms.sourcegitcommit: 23277e25061c75da033ed042e25c33acff3ac0bd
+ms.openlocfilehash: 841bb970fba4da5c861343d3032155e99b2e7a4d
+ms.sourcegitcommit: 21509bb4ca9b2f62c657fbdb43267dec0de1c458
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "11297852"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "11306587"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## Woche vom 25. Januar 2021
+
+
+| Veröffentlicht am |Thementitel | Änderung |
+|------|------------|--------|
+| 25.01.2021 | [Aktualisierungen für Microsoft Edge-Inhalte](/DeployEdge/microsoft-edge-content-updates)<br>Bemerkungen zu Inhalten, die in der Woche vom 25. Januar veröffentlicht wurden. | geändert |
+| 26.01.2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Aktualisierung mit dem Zusatz für die Hauptversion 88.0.705.50. Bekanntgabe der Verfügbarkeit von SSO.| geändert |
+| 26.01.2021 | [Automatische Aktivierung des Kennwortmonitors für Benutzer](/DeployEdge/microsoft-edge-security-password-monitor)<br>Korrektur von Verfügbarkeit und Link zu Microsoft Research zum Schutz von Kennwörtern. | geändert |
+| 27.01.2021 | [Browser-Richtliniendokumentation für Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Aktualisierung, neue Richtlinie hinzugefügt.| geändert |
+| 27.01.2021 | [Richtliniendokumentation für Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies)<br>Aktualisieren, keine Änderungen. | geändert |
+| 27.01.2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update für Fixes der Nebenversion 88.0.705.53. | geändert |
+| 28.01.2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update für Fixes der Nebenversion 88.0.705.56. | geändert |
+| 29.01.2021 | [Microsoft Edge-Versionshinweise für den Betakanal](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Update für Fixes der Nebenversion 88.0.705.56. | geändert |
+
 
 ## Woche vom 18. Januar 2021
 
 
 | Veröffentlicht am |Thementitel | Änderung |
 |------|------------|--------|
-| 22/1/2021 | [Der PDF-Reader in Microsoft Edge](/DeployEdge/microsoft-edge-pdf)<br>Aktualisieren Sie mit Ergänzungen zu unterstützten Features. | geändert |
-| 22/1/2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Feature-Liste für Hauptversion 88.0.705.50 aktualisiert. | geändert |
-| 21/1/2021 | [Microsoft Edge-Versionshinweise für den Betakanal](/DeployEdge/microsoft-edge-relnote-beta-channel),<br>Korrekturen für Nebenversion 88.0.705.49.| geändert |
-| 21/1/2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update für Hauptversion 88.0.705.50, Aufrufen neuer Features und neuer oder veralteter Gruppenrichtlinien.| geändert |
-| 21/1/2021 | [Versionshinweise für Microsoft Edge-Sicherheitsupdates](/DeployEdge/microsoft-edge-relnotes-security)<br>Sicherheitsupdate für die Stabil-Version 88.0.705.50.  | geändert |
-| 21/1/2021 | [Richtliniendokumentation für Microsoft Edge Browser](/DeployEdge/microsoft-edge-policies)<br>Aktualisieren sie neue Richtlinien, und rufen Sie sie auf.| geändert |
-| 21/1/2021 | [Richtliniendokumentation für Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies)<br>Automatische Aktualisierung, keine Änderungen. | geändert |
-| 22/1/2021 | [Automatische Aktivierung des Kennwortmonitors für Benutzer](/DeployEdge/microsoft-edge-security-password-monitor)<br>Neuer Artikel, in dem die Kennwortüberwachung und deren automatische Aktivierung für Benutzer beschrieben werden. | hinzugefügt |
-| 21/1/2021 | [Enterprise Site List Manager in Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager)<br>Neuer Artikel, der den in Microsoft Edge integrierten Site List Manager beschreibt. | hinzugefügt |
-| 19/1/2021 | [Aktualisierungen für Microsoft Edge-Inhalte](/DeployEdge/microsoft-edge-content-updates)<br>Kommentieren Sie den in der Vorwoche veröffentlichten Inhalt. | geändert |
-| 22/1/2021 | [Konfigurieren des Microsoft Edge-Kioskmodus](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Aktualisieren der Feature-Support und -Roadmap. | geändert |
-| 22/1/2021 | [Konfigurieren und Beheben von Problemen mit der Microsoft Edge-Synchronisierung](/DeployEdge/microsoft-edge-enterprise-sync)<br>Aktualisieren Sie den Artikel, um die Problembehandlung zu verdeutlichen. | geändert |
+| 22/1/2021 | [Der PDF-Reader in Microsoft Edge](/DeployEdge/microsoft-edge-pdf) | geändert |
+| 22/1/2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel) | geändert |
+| 21.01.2021 | [Microsoft Edge-Versionshinweise für den Betakanal](/DeployEdge/microsoft-edge-relnote-beta-channel) | geändert |
+| 21/1/2021 | [Microsoft Edge-Versionshinweise für Stabilen Kanal](/DeployEdge/microsoft-edge-relnote-stable-channel) | geändert |
+| 21/1/2021 | [Versionshinweise für Microsoft Edge-Sicherheitsupdates](/DeployEdge/microsoft-edge-relnotes-security) | geändert |
+| 21/1/2021 | [Richtliniendokumentation für Microsoft Edge Browser](/DeployEdge/microsoft-edge-policies) | geändert |
+| 21/1/2021 | [Richtliniendokumentation für Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies) | geändert |
+| 22/1/2021 | [Automatische Aktivierung des Kennwortmonitors für Benutzer](/DeployEdge/microsoft-edge-security-password-monitor) | hinzugefügt |
+| 21/1/2021 | [Enterprise Site List Manager in Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager) | hinzugefügt |
+| 19/1/2021 | [Aktualisierungen für Microsoft Edge-Inhalte](/DeployEdge/microsoft-edge-content-updates) | geändert |
+| 22/1/2021 | [Konfigurieren des Microsoft Edge-Kioskmodus](/DeployEdge/microsoft-edge-configure-kiosk-mode) | geändert |
+| 22/1/2021 | [Konfigurieren und Beheben von Problemen mit der Microsoft Edge-Synchronisierung](/DeployEdge/microsoft-edge-enterprise-sync) | geändert |
 
 
 ## Woche vom 21. Dezember 2020
