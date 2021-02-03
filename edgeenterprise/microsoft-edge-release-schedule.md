@@ -3,19 +3,19 @@ title: Microsoft Edge-Veröffentlichungszeitplan
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Veröffentlichungszeitplan
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297700"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311522"
 ---
 # Microsoft Edge-Veröffentlichungszeitplan
 
@@ -33,6 +33,8 @@ In der folgenden Tabelle sind die geplanten Veröffentlichungsdaten für die Bet
 > Die Veröffentlichungsdaten sind ungefähr und könnten je nach Buildstatus variieren.
 
 ### Microsoft Edge-Versionen
+
+In der folgenden Tabelle werden nur die Informationen der Hauptversionen in beiden Kanälen verfolgt und angegeben.
 
 | Version | Veröffentlichungsstatus | Beta-Kanal<br>Veröffentlichungswoche | Stable-Kanal<br>Veröffentlichungswoche |
 |---------|-----|------|--------|
