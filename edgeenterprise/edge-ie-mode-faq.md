@@ -3,23 +3,23 @@ title: FAQ zum IE-Modus
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: FAQ und Problembehandlung für Microsoft Edge mit IE-Modus
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238172"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312591"
 ---
 # FAQ zum IE-Modus
 
-In diesem Artikel finden Sie Tipps zur Problembehandlung und FAQ zu Microsoft Edge (Version 77 oder höher).
+Dieser Artikel enthält Tipps zur Fehlerbehebung und häufig gestellte Fragen zu Microsoft Edge Version 77 oder höher.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle **Stable**, **Beta** und **Dev**, Version 77 oder höher.
@@ -62,6 +62,10 @@ Dieser Fehler wird möglicherweise angezeigt, wenn in Internet Explorer ein uner
 ### Fehlermeldung: "Deaktivieren Sie das Remotedebuggen, um diese Website im IE-Modus zu öffnen, da es sonst möglicherweise nicht wie erwartet funktioniert."
 
 Diese Fehlermeldung wird möglicherweise angezeigt, wenn Sie Remotedebuggen durchführen und zu einer Webseite navigieren, die für die Ausführung im IE-Modus konfiguriert ist. Sie können den Vorgang fortsetzen, aber die Seite wird mit Microsoft Edge gerendert.
+
+### Fehlermeldung: "Fehler: EMIE-Site-Liste konnte nicht abgerufen werden."
+
+Möglicherweise wird dieser Fehler auf der *edge://compat/enterprise* Seite angezeigt, der darauf hinweist, dass der Download der Site-Liste fehlgeschlagen ist. Ab Microsoft Edge Version 87 ist die HTTP-Authentifizierung ebenfalls nicht zulässig, wenn Cookies mithilfe der [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies)-Richtlinie für Anforderungen von Drittanbietern blockiert werden. Sie können Cookies für die bestimmte Domain zulassen, in der sich Ihre Site-Liste im Unternehmensmodus befindet, indem Sie die [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls)-Richtlinie verwenden, um sicherzustellen, dass das Herunterladen der Site-Liste erfolgreich ist.
 
 ## Häufig gestellte Fragen
 
