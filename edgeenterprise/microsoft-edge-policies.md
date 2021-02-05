@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
-ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
+ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
+ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304728"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313423"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -33,9 +33,11 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
 
-| Name | Beschriftung |
+| Name| Beschriftung |
 |--|--|
-|[SmartActionsBlockList](#smartactionsblocklist)|Blockieren intelligenter Aktionen für eine Liste von Diensten|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello für HTTP-Authentifizierung aktiviert|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Legt verwaltete Konfigurationswerte für Websites auf bestimmte Ursprünge fest|
+
 
 ## Verfügbare Richtlinien
 
@@ -144,6 +146,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Deaktivieren des CNAME-Lookup beim Verhandeln der Kerberos-Authentifizierung|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Einschließen eines nicht standardmäßigen Ports in Kerberos-SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Steuern, ob die NTLMv2-Authentifizierung aktiviert ist|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello für HTTP-Authentifizierung aktiviert|
 ### [*Einstellungen für den Kioskmodus*](#kiosk-mode-settings-policies)
 
 |Richtlinienname|Beschriftung|
@@ -360,6 +363,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Verhalten der Intranetumleitung|
 |[IsolateOrigins](#isolateorigins)|Aktivieren der Website-Isolation für bestimmte Ursprünge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Vorschläge von lokalen Anbietern zulassen|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Legt verwaltete Konfigurationswerte für Websites auf bestimmte Ursprünge fest|
 |[ManagedFavorites](#managedfavorites)|Favoriten konfigurieren|
 |[ManagedSearchEngines](#managedsearchengines)|Verwalten von Suchmaschinen|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximale Anzahl gleichzeitiger Verbindungen mit dem Proxyserver|
@@ -4024,7 +4028,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 ```
   
 
-  [Nach oben](#microsoft-edge---policies)
+  [Zurück zum Anfang](#microsoft-edge---policies)
 
   ## Erweiterungsrichtlinien
 
@@ -5157,6 +5161,59 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist NTLMv2 standardmäßig aktivi
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### WindowsHelloForHTTPAuthEnabled
+
+  #### Windows Hello für HTTP-Authentifizierung aktiviert
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 90 oder höher
+
+  #### Beschreibung
+
+  Gibt an, ob die Benutzeroberfläche für Windows-Anmeldeinformationen verwendet werden soll, um auf NTLM- und Aushandlungs-Authentifizierungsaufforderungen zu antworten.
+
+Wenn Sie diese Richtlinie deaktivieren, wird eine einfache Eingabeaufforderung mit Benutzername und Kennwort verwendet, um auf NTLM- und Aushandlungs-Aufforderungen zu reagieren. Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, wird die Benutzeroberfläche für Windows-Anmeldeinformationen verwendet.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: WindowsHelloForHTTPAuthEnabled
+  - GP-Name: Windows Hello für HTTP-Authentifizierung aktiviert
+  - GP-Pfad (Verpflichtend): Administrative Templates/Microsoft Edge/HTTP authentication
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/HTTP-Authentifizierung
+  - GP ADMX-Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: WindowsHelloForHTTPAuthEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ## Richtlinien für Einstellungen für den Kioskmodus
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -5321,13 +5378,13 @@ Wenn Sie diese Richtlinie deaktivieren, kommuniziert Microsoft Edge nicht mit In
   - GP eindeutiger Name: MAMEnabled
   - GP-Name: Verwaltung mobiler Apps aktiviert
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Manageability
-  - GP-Pfad (Empfohlen): n.a.
+  - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: MAMEnabled
   - Werttyp: REG_DWORD
 
@@ -5337,7 +5394,7 @@ Wenn Sie diese Richtlinie deaktivieren, kommuniziert Microsoft Edge nicht mit In
 0x00000000
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: MAMEnabled
   - Beispielwert:
@@ -6416,7 +6473,7 @@ Verwenden Sie die vorhergehenden Informationen, wenn Sie diese Richtlinie konfig
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): N/A
+  - Pfad (Empfohlen): n.a.
   - Wertname: PrintingBackgroundGraphicsDefault
   - Werttyp: REG_SZ
 
@@ -6426,7 +6483,7 @@ Verwenden Sie die vorhergehenden Informationen, wenn Sie diese Richtlinie konfig
 "enabled"
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Name des Präferenzschlüssels: PrintingBackgroundGraphicsDefault
   - Beispielwert:
@@ -7002,7 +7059,7 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
-  ##### Windows-Registrierungseinstellungen
+  ##### Windows Registry-Einstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
   - Pfad (Empfohlen): n.a.
@@ -7256,7 +7313,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000384
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SleepingTabsTimeout
   - Beispielwert:
@@ -10727,7 +10784,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
+  - Pfad (empfohlen): n.a.
   - Wertname: BrowserSignin
   - Werttyp: REG_DWORD
 
@@ -12294,7 +12351,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-  #### Mac – Informationen und Einstellungen
+  #### Mac-Informationen und -Einstellungen
   
   - Einstellung Schlüsselname: DefaultSerialGuardSetting
   - Beispielwert:
@@ -16727,7 +16784,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: IntranetRedirectBehavior
   - Werttyp: REG_DWORD
 
@@ -16877,6 +16934,103 @@ Zur Anwendung dieser Richtlinie ist ein Browser-Neustart erforderlich.
   - Beispielwert:
 ``` xml
 <false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### ManagedConfigurationPerOrigin
+
+  #### Legt verwaltete Konfigurationswerte für Websites auf bestimmte Ursprünge fest
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und macOS seit 90 oder höher
+
+  #### Beschreibung
+
+  Durch Festlegen dieser Richtlinie wird der Rückgabewert der API für die verwaltete Konfiguration für den angegebenen Ursprung definiert.
+
+ Die verwaltete Konfigurations-API ist eine Schlüsselwert-Konfiguration, auf die über den Javascript-Aufruf „navigator.device.getManagedConfiguration()“ zugegriffen werden kann. Diese API ist nur für Ursprünge verfügbar, die erzwungen installierten Webanwendungen über [WebAppInstallForceList](#webappinstallforcelist) entsprechen.
+
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Dictionary
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: ManagedConfigurationPerOrigin
+  - GP-Name: Legt verwaltete Konfigurationswerte für Websites auf bestimmte Ursprünge fest
+  - GP-Pfad (Verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: ManagedConfigurationPerOrigin
+  - Werttyp: REG_SZ
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h", 
+    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "origin": "https://www.contoso.com"
+  }, 
+  {
+    "managed_configuration_hash": "djio12easd89u12aws", 
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "origin": "https://www.example.com"
+  }
+]
+```
+
+  ##### Kompakter Beispielwert:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
+  ```
+  
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: ManagedConfigurationPerOrigin
+  - Beispielwert:
+``` xml
+<key>ManagedConfigurationPerOrigin</key>
+<array>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>asd891jedasd12ue9h</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration.json</string>
+    <key>origin</key>
+    <string>https://www.contoso.com</string>
+  </dict>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>djio12easd89u12aws</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration2.json</string>
+    <key>origin</key>
+    <string>https://www.example.com</string>
+  </dict>
+</array>
 ```
   
 
@@ -19766,7 +19920,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren:
 
   - Eindeutiger GP-Name: ShowMicrosoftRewards
   - GP-Name: Microsoft Rewards-Umgebung anzeigen
-  - GP-Pfad (zwingend erforderlich): Administrative Templates/Microsoft Edge/
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -20373,15 +20527,15 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   #### Aktivieren der strikteren Behandlung von gemischten Inhalten (veraltet)
 
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 84 nicht mehr.
   #### Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 81 oder höher
+  - Unter Windows und macOS ab 81 bis 84
 
   #### Beschreibung
 
-  Diese Richtlinie ist veraltet, weil sie nur als kurzfristiger Mechanismus vorgesehen ist, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu verschaffen, falls diese mit strikterer Behandlung von Mischinhalten inkompatibel sind. Es wird in Microsoft Edge ab Version 85 nicht funktionieren.
+  Diese Richtlinie funktioniert nicht, da sie nur als kurzfristiger Mechanismus vorgesehen war, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu geben, wenn festgestellt wurde, dass sie mit einer strikteren Behandlung gemischter Inhalte nicht kompatibel sind.
 
 Mit dieser Richtlinie wird die Behandlung gemischter Inhalte (HTTP-Inhalt auf HTTPS-Websites) im Browser gesteuert.
 
@@ -20406,8 +20560,8 @@ Diese Richtlinie wirkt sich nicht auf andere Typen von gemischten Inhalten auße
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: StricterMixedContentTreatmentEnabled
-  - GP-Name: Aktivieren der strikteren Behandlung von gemischten Inhalten (veraltet)
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP-Name: Aktivieren einer strikteren Behandlung gemischter Inhalte (veraltet)
+  - GP-Pfad (Verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -20735,7 +20889,7 @@ Diese Richtlinie hat keine Auswirkungen auf QUIC-basierte Verbindungen. QUIC kan
   ##### Windows-Registrierungseinstellungen
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Pfad (Empfohlen): n.a.
+  - Pfad (empfohlen): n.a.
   - Wertname: 1, 2, 3, ...
   - Werttyp: REG_SZ-Liste
 
@@ -20748,7 +20902,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-  #### Mac – Informationen und Einstellungen
+  #### Mac-Informationen und -Einstellungen
   
   - Name des Einstellungsschlüssels: TLSCipherSuiteDenyList
   - Beispielwert:
@@ -20868,7 +21022,7 @@ Diese Richtlinie wird in der Microsoft Edge-Version 95 veraltet werden.
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: TargetBlankImpliesNoOpener
   - Werttyp: REG_DWORD
 
@@ -20878,7 +21032,7 @@ Diese Richtlinie wird in der Microsoft Edge-Version 95 veraltet werden.
 0x00000000
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: TargetBlankImpliesNoOpener
   - Beispielwert:
@@ -21881,7 +22035,14 @@ Unabhängig davon, ob und wie diese Richtlinie aktiviert ist, kann die WPAD-Opti
 
   Konfigurieren Sie diese Richtlinie, um eine Liste von Webanwendungen anzugeben, die im Hintergrund installieren, ohne dass Benutzerinteraktionen vorgenommen werden, und die Benutzer nicht deinstallieren oder deaktivieren können.
 
-Bei jedem Listenelement der Richtlinie handelt es sich um ein Objekt mit einem verpflichtenden Element: "url" (die URL der zu installierenden Web-App), und zwei optionalen Mitgliedern: "default_launch_container" (gibt den Fenstermodus an, in dem die Web App geöffnet wird – ein neuer Tab ist die Standardeinstellung) und "create_desktop_shortcut" ("true", wenn Desktopverknüpfungen für Linux und Windows erstellt werden sollen).
+Jedes Listenelement der Richtlinie ist ein Objekt mit einem obligatorischen Element: url (die URL der zu installierenden Web-App)
+
+und drei optionale Elemente:
+- default_launch_container (gibt den Fenstermodus an, mit dem die Web-App geöffnet wird – eine neue Registerkarte ist die Standardeinstellung)
+
+- create_desktop_shortcut („Wahr“, wenn Sie Linux- und Windows-Desktopverknüpfungen erstellen möchten)
+
+- override_app_name (ab Microsoft Edge 89 können Sie den Namen der App überschreiben, wenn es sich nicht um eine progressive Web-App (PWA) handelt, oder den App-Namen, der vorübergehend installiert wird, wenn es sich um eine PWA handelt, aber eine Authentifizierung erforderlich ist, bevor die Installation abgeschlossen werden kann)
 
   #### Unterstützte Funktionen:
 
@@ -21922,6 +22083,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21929,7 +22095,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Kompakter Beispielwert:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21953,6 +22119,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -22038,7 +22212,7 @@ Wenn Sie diese Richtlinie auf „wahr“ festlegen, werden die Funktionen der We
 
 Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht festlegen, werden die Funktionen der Webkomponenten v0 standardmäßig deaktiviert, beginnend mit M80.
 
-  #### Unterstützte Funktionen:
+  #### Unterstützte Features:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -22061,7 +22235,7 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
+  - Pfad (empfohlen): n.a.
   - Wertname: WebComponentsV0Enabled
   - Werttyp: REG_DWORD
 
