@@ -3,26 +3,26 @@ title: 'Enterprise Site List Manager in Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Aktivieren und Verwenden des Enterprise Site List Managers in Microsoft Edge '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281048"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312581"
 ---
 # Enterprise Site List Manager in Microsoft Edge
 
 In diesem Artikel wird erläutert, wie Sie den Zugriff auf und die Verwendung des Enterprise Site List Managers in Microsoft Edge zum Erstellen, Bearbeiten und Exportieren Ihrer Websiteliste für den Unternehmensmodus für Internet Explorer-Modus aktivieren.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 89 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 89 oder höher. 
 
 ## Übersicht
 
@@ -38,7 +38,7 @@ Wenn diese Option aktiviert ist, werden die Benutzer eine Option mit Namen „En
 
 ## Verwenden des Enterprise Mode Site List Managers
 
-Das Enterprise Site List Manager-Tool verwendet die Version v.2 des Schemas. Wenn Sie ein Schema der Version v.1 in den Enterprise Site List Manager (Schema v.2) importieren, wird der XML-Code in der Version v.2 des Schemas gespeichert.
+Das Enterprise Site List Manager-Tool verwendet die Version v.2 des Schemas. Wenn Sie ein Schema der Version v.1 in den Enterprise Site List Manager (Schema v.2) importieren, wird der XML-Code in der Version v.2 des Schemas gespeichert. Siehe [Anleitung für das Schema v.2 für den Unternehmensmodus](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ### Hinzufügen einzelner Websites zu Ihrer Websiteliste  
 
@@ -127,5 +127,5 @@ Geben Sie zum Durchsuchen einen Teil der URL in das Suchfeld  **Websites nach 
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Informationen zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [Anleitungen für das Unternehmensmodusschema V.2](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Weitere Informationen zum Unternehmensmodus](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Zusätzliche Informationen zu Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
