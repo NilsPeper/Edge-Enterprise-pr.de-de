@@ -3,19 +3,19 @@ title: Microsoft Edge und Microsoft Defender Application Guard
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/12/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Unterstützung für Microsoft Defender Application Guard
-ms.openlocfilehash: fcf9bb6e36ddd5e014bd8176643554bfe3ff8fd4
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: 751201192c3b4e69cc866f35e51a6db23b9972f9
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314588"
 ---
 # Microsoft Edge-Unterstützung für Microsoft Defender Application Guard
 
@@ -38,7 +38,10 @@ Application Guard wurde für Windows 10 und Microsoft Edge entwickelt und verwen
 
 Der Unternehmensadministrator definiert, was zu vertrauenswürdigen Websites, Cloudressourcen und internen Netzwerken gehört. Alles, was nicht in der Liste der vertrauenswürdigen Sites enthalten ist, wird als nicht vertrauenswürdig angesehen. Diese Websites werden vom Unternehmensnetzwerk und den Daten auf dem Gerät des Benutzers isoliert.
 
-Weitere Informationen finden Sie unter [Was ist Application Guard, und wie funktioniert es?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work).
+Weitere Informationen finden Sie unter:
+
+- Sehen Sie sich unser Video zur [Microsoft Edge-Browserisolation mit Application Guard](microsoft-edge-video-security-application-guard.md) an.
+- Lesen Sie, [was Application Guard ist und wie es funktioniert.](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)
 
 Der nächste Screenshot zeigt ein Beispiel einer Meldung von Application Guard, die zeigt, dass sich der Benutzer in einem sicheren Bereich befindet.
 

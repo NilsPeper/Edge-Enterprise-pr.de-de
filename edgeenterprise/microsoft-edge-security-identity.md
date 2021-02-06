@@ -3,23 +3,23 @@ title: Unterstützung und Konfiguration der Identität in Microsoft Edge
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Unterstützung und Konfiguration der Identität in Microsoft Edge
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201292"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314608"
 ---
 # Unterstützung und Konfiguration der Identität in Microsoft Edge
 
-In diesem Artikel wird beschrieben, wie Microsoft Edge die Identität verwendet, um Features wie Synchronisierung und Einmaliges Anmelden (Single Sign-On, SSO) zu unterstützen. MicrosoftEdge unterstützt die Anmeldung mit Active Directory Domain Services- (ADDS), Azure Active Directory- (AzureAD) und Microsoft-Konten (MSA). Derzeit unterstützt MicrosoftEdge nur Azure Active Directory-Konten (AzureAD), die zur globalen Cloud oder der unabhängigen GCC (Government Community Cloud) gehören. Wir arbeiten daran, Unterstützung für weitere unabhängige Clouds hinzuzufügen. 
+In diesem Artikel wird beschrieben, wie Microsoft Edge die Identität verwendet, um Features wie Synchronisierung und Einmaliges Anmelden (Single Sign-On, SSO) zu unterstützen. MicrosoftEdge unterstützt die Anmeldung mit Active Directory Domain Services- (ADDS), Azure Active Directory- (AzureAD) und Microsoft-Konten (MSA). Derzeit unterstützt MicrosoftEdge nur Azure Active Directory-Konten (AzureAD), die zur globalen Cloud oder der unabhängigen GCC (Government Community Cloud) gehören. Wir arbeiten daran, Unterstützung für weitere unabhängige Clouds hinzuzufügen.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
@@ -28,10 +28,10 @@ In diesem Artikel wird beschrieben, wie Microsoft Edge die Identität verwendet,
 
 MicrosoftEdge unterstützt die Anmeldung bei einem Browserprofil mit einem AzureAD-, MSA- oder Domänenkonto. Der für die Anmeldung verwendete Kontotyp bestimmt, welche authentifizierten Features für den Benutzer in Microsoft Edge verfügbar sind. In der folgenden Tabelle wird die Funktionsunterstützung für die einzelnen Kontotypen zusammengefasst.
 
-|    | Azure AD Premium | Azure AD Free | Lokale AD DS | MSA     |
+| Feature   | Azure AD Premium | Azure AD Free | Lokale AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
-| Synchronisieren | Ja | Nein | Nein. | Ja |
-| SSO mit Primärem Aktualisierungstoken | Ja | Ja | Nein. | Ja |
+| Synchronisieren | Ja | Nein. | Nein | Ja |
+| SSO mit Primärem Aktualisierungstoken | Ja | Ja | Nein | Ja |
 | Nahtlose SSO | Ja | Ja | Ja | n.a. |
 | Integrierte Windows-Authentifizierung | Ja | Ja | Ja | n.a. |
 | Enterprise-Seite „Neue Registerkarte” | Erfordert O365 |   Erfordert O365 | Nein | n.a. |
@@ -51,7 +51,7 @@ Standardmäßig wird der Benutzer nicht automatisch angemeldet. Wenn Benutzer au
 
 ### Manuelle Anmeldung
 
-Wenn der Benutzer nicht automatisch bei Microsoft Edge angemeldet wird, kann er sich bei der ersten Ausführung, in den Browsereinstellungen oder im Identitäts-Flyout manuell bei Microsoft Edge anmelden. 
+Wenn der Benutzer nicht automatisch bei Microsoft Edge angemeldet wird, kann er sich bei der ersten Ausführung, in den Browsereinstellungen oder im Identitäts-Flyout manuell bei Microsoft Edge anmelden.
 
 ### Verwalten der Browser-Anmeldung
 
@@ -104,7 +104,7 @@ Wenn ein Benutzer Kennwörter in Microsoft Edge speichert, kann er eine Funktion
 ## Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Angebotsseite der Microsoft Edge-Dokumentation](https://docs.microsoft.com/DeployEdge/)
+- [Video: Microsoft Edge und Identität](microsoft-edge-video-identity.md)
 - [Identitäts- und Zugriffsmanagement](https://www.microsoft.com/security/technology/identity-access-management)
 - [Identitätsplattform](https://developer.microsoft.com/identity)
 - [Vier Schritte zu einer starken Identitätsgrundlage mit Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)

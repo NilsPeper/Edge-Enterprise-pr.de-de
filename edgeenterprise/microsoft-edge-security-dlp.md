@@ -3,19 +3,19 @@ title: Verhinderung von Datenverlust in Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Verhinderung von Datenverlust (DLP) in Microsoft Edge
-ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
-ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
+ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314558"
 ---
 # Verhinderung von Datenverlust (DLP) in Microsoft Edge
 
@@ -34,21 +34,22 @@ Microsoft Endpoint DLP ist die nächste Generation der Verhinderung von Datenver
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 85 oder neuer.
 
-Weitere Informationen zu Endpunkt-DLP finden Sie unter:
+Verwenden Sie die folgenden Ressourcen, um mehr über Endpunkt-DLP zu erfahren:
 
-- [Informationen zur Verhinderung von Microsoft 365-Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
-- [Erste Schritte mit der Verhinderung von Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
+- [Video: Microsoft Edge und Verhinderung von Datenverlust (DLP)](microsoft-edge-video-security-dlp.md)
+- [Informationen zur Verhinderung von Microsoft 365-Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
+- [Erste Schritte mit der Verhinderung von Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
 
 Microsoft Edge erzwingt administratorenkonfigurierte Richtlinien für vertrauliche Dateien und zeichnet Überwachungsereignisse für nicht kompatible Aktivitäten auf.
 
 Einige der Benutzeraktivitäten, die Sie auf Geräten unter Windows 10 überwachen und verwalten können, umfassen die folgenden Aktivitäten:
 
-- Dateiupload: Schützen Sie den vertraulichen Dateiupload vor nicht autorisierten Cloud-Speicherorten. Die nächsten drei Screenshots zeigen eine Reihenfolge, in der ein Benutzer versucht, eine vertrauliche Datendatei in den lokalen Speicher zu setzen.
+- Dateiupload: Schützen Sie den vertraulichen Dateiupload vor nicht autorisierten Cloud-Speicherorten. <!-- The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.-->
 - Schutz der Zwischenablage: Verhindern, dass vertrauliche Daten aus der Datei kopiert werden.
 - Druckschutz: Schützen vertraulicher Dateien, die gedruckt werden sollen.
 - Auf USB/ Im Netzwerk speichern: Schützen vertraulicher Dateien vor dem Speichern in einem USB-Speicher oder nicht autorisierten Netzwerkspeicherorten.
 
-Ausführlichere Informationen zu den Benutzeraktivitäten, die Sie überwachen und verwalten können, finden Sie unter [Endpunktaktivitäten, die Sie überwachen und entsprechende Maßnahmen ergreifen können](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
+Ausführlichere Informationen zu den Benutzeraktivitäten, die Sie überwachen und verwalten können, finden Sie unter [Endpunktaktivitäten, die Sie überwachen und entsprechende Maßnahmen ergreifen können](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).
 
 ## Windows Information Protection
 
@@ -62,5 +63,5 @@ Lesen Sie [Support für Windows Information Protection](https://docs.microsoft.c
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Video: Verhinderung von Datenverlust in Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [Übersicht über die Verhinderung von Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
+- [Übersicht über die Verhinderung von Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
 - [Schützen von Unternehmensdaten mithilfe von Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

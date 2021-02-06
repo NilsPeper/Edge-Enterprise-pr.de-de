@@ -3,30 +3,33 @@ title: Windows Updates für Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows Updates für Microsoft Edge.
-ms.openlocfilehash: ab5832dc878495a0f0a0880676fb7c3e34b69d4d
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980020"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313905"
 ---
 # Windows Updates zur Unterstützung der nächsten Version von Microsoft Edge
 
 In diesem Artikel wird beschrieben, wie Windows aktualisiert wird, um die nächste Version von Microsoft Edge zu unterstützen.
+
+> [!IMPORTANT]
+> Lesen Sie den [Blogbeitrag](https://aka.ms/EdgeLegacyEOS) des Microsoft Edge-Produktteams über das Serviceende der Vorgängerversion von Microsoft Edge.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf den Microsoft Edge Stable-Kanal.
 
 ## Microsoft Edge und der Freigabezyklus der Windows-Versionen
 
-Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Hauptversionen von Windows gebunden sind, werden Änderungen am Betriebssystem vorgenommen, um sicherzustellen, dass die nächste Version von Microsoft Edge nahtlos in Windows passt. Aus diesem Grund werden Funktionsupdates in einem ca. 6-wöchigen Zyklus veröffentlicht. Sicherheits- und Kompatibilitätsupdates werden bei Bedarf ausgeliefert.
+Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Hauptversionen von Windows gebunden sind, werden Änderungen am Betriebssystem vorgenommen, um sicherzustellen, dass die nächste Version von Microsoft Edge nahtlos in Windows passt. Aus diesem Grund werden Featureupdates in einem (etwa) 6-wöchigen Zyklus veröffentlicht. Sicherheits- und Kompatibilitätsupdates werden nach Bedarf ausgeliefert.
 
 ## Updates und die Benutzererfahrung
 

@@ -3,19 +3,19 @@ title: Konfigurieren des Microsoft Edge-Kioskmodus
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 01/21/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren des Microsoft Edge-Kioskmodus
-ms.openlocfilehash: be353a0e13e9234de40296a2e8dcc31b1b800f52
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 3f6e75b73d8c541bae4442263a5b415aeeb15eb1
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297471"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314618"
 ---
 # Konfigurieren des Microsoft Edge-Kioskmodus
 
@@ -39,44 +39,85 @@ Ein anfänglicher Satz von Kioskmodusfeatures steht zum Testen mit Microsoft Edg
 
 ### Unterstützte Features im Kioskmodus
 
-In der folgenden Tabelle sind die im Kioskmodus unterstützten Features aufgeführt.
+In der folgenden Tabelle sind die Features aufgeführt, die vom Kioskmodus in Microsoft Edge und der Vorgängerversion von Microsoft Edge unterstützt werden. Verwenden Sie diese Tabelle als Leitfaden für die Umstellung auf Microsoft Edge, indem Sie vergleichen, wie diese Features in beiden Versionen von Microsoft Edge unterstützt werden.
 
-|Feature|Digital\Interactive Signage|Öffentliches Surfen|Verfügbar mit Microsoft Edge Version (und höher)|
-|-|-|-|-|
-|InPrivate-Navigation|„Y“ zugeordnet ist|„Y“ zugeordnet ist|87|
-|Zurücksetzen bei Inaktivität|„Y“ zugeordnet ist|„Y“ zugeordnet ist|87|
-|[Schreibgeschützte Adressleiste](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (Richtlinie) |N|„Y“ zugeordnet ist |87|
-|[Löschen von Downloads beim Beenden](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (Richtlinie)  | „Y“ zugeordnet ist|„Y“ zugeordnet ist |87|
-|F11 blockiert (Vollbild-/Ein-/Austritt) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 87 |
-|F12 blockiert (Entwicklertools starten) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 87 |
-| Unterstützung für mehrere Registerkarten | N| „Y“ zugeordnet ist| 87|
-|Sitzung beenden | N| „Y“ zugeordnet ist| 88|
-|Alle internen Microsoft Edge-URLs werden blockiert, mit *Ausnahme* von edge://downloads und *edge://print* |N|„Y“ zugeordnet ist|88|
-| STRG+N blockiert (neues Fenster öffnen) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |
-| STRG+T blockiert (neue Registerkarte öffnen) | N | „Y“ zugeordnet ist | 89 |
-|Einstellungen und vieles mehr (...) zeigt nur die erforderlichen Optionen an.  |N |„Y“ zugeordnet ist |89 |
+|Feature|Digital\Interactive Signage|Öffentliches Surfen|Verfügbar mit Microsoft Edge, Version (und höher)|Verfügbar mit der Vorgängerversion von Microsoft Edge|
+|-|-|-|-|-|
+|InPrivate-Navigation|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|„Y“ zugeordnet ist|
+|Zurücksetzen bei Inaktivität|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|J|
+|[Schreibgeschützte Adressleiste](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (Richtlinie) |N|„Y“ zugeordnet ist |89|N|
+|[Löschen von Downloads beim Beenden](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (Richtlinie)  | „Y“ zugeordnet ist|„Y“ zugeordnet ist |89|N|
+|F11 blockiert (Vollbildmodus aktivieren/deaktivieren) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |„Y“ zugeordnet ist|
+|F12 blockiert (Entwicklertools starten) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
+| Unterstützung für mehrere Registerkarten | N| „Y“ zugeordnet ist| 89|J|
+|[Unterstützung von URLs zulassen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (Richtlinie)|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|N|
+|[Unterstützung von URLs sperren](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (Richtlinie)|J|„Y“ zugeordnet ist|89|N|
+|[Schaltfläche „Start“ anzeigen](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
+|[Favoriten verwalten](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
+|[Drucker aktivieren](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (Richtlinie)|J|„Y“ zugeordnet ist|89|J|
+|[Konfigurieren der URL der neuen Registerkartenseite](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist||J|
+|Sitzung beenden | N| „Y“ zugeordnet ist| 89|J|
+|Alle internen Microsoft Edge-URLs werden blockiert, mit Ausnahme von *edge://downloads* und *edge://print* |N|„Y“ zugeordnet ist|89|„Y“ zugeordnet ist|
+| STRG+N blockiert (neues Fenster öffnen) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
+| STRG+T blockiert (neue Registerkarte öffnen) |J | „Y“ zugeordnet ist | 89 |J|
+|Einstellungen und mehr (...) zeigt nur die erforderlichen Optionen an.  |„Y“ zugeordnet ist |„Y“ zugeordnet ist |89 |„Y“ zugeordnet ist|
+|Start anderer Anwendungen über den Browser einschränken|J|„Y“ zugeordnet ist|90/91|J|
+|Sperrung der Benutzeroberflächen-Druckeinstellungen|J|J|90/91|J|
+|[Neue Registerkartenseite als Startseite festlegen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (Richtlinie)|-|-|TBD|J|
 
 > [!NOTE]
 > Im Laufe der Weiterentwicklung des Kioskmodus werden auch weitere Features verfügbar sein.
 
 ## Verwenden der Kioskmodus-Features
 
-Microsoft Edge Kioskmodusfeatures können mit den folgenden Windows 10-Befehlszeilenoptionen aufgerufen werden:
+Features des Microsoft Edge-Kioskmodus können mit den folgenden Windows 10-Befehlszeilenoptionen für digitale/interaktive Beschilderung und öffentliches Browsen aufgerufen werden.
 
-- Kioskmodus "Digitale/interaktive Beschilderung": `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
-- Kioskmodus "Öffentliches Surfen": `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
+### Kioskmodus: digitale/interaktive Beschilderung
+ 
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
+```
+
+### Kioskmodus: öffentliches Browsen
+
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
+```
 
 ### Zusätzliche Befehlszeilenoptionen
 
-- `--no-first-run` : Deaktivieren Sie die erste Ausführung von Microsoft Edge.
-- `--kiosk-idle-timeout-minutes` : Ändern Sie den Zeitraum (in Minuten) nach der letzten Benutzeraktivität, nach dem der Microsoft Edge-Kioskmodus die Benutzersitzung zurücksetzt. Die folgenden Werte werden unterstützt:
+- **--no-first-run**: Deaktivieren der Umgebung der ersten Microsoft Edge-Ausführung.
 
-  - Standardwerte
-    - Vollbildmodus – deaktiviert
-    - Öffentliches Surfen – 5 Minuten
-  - Zulässige Werte
-    - 0 – deaktiviert den Timer
-    - 1-1440 Minuten für das Zurücksetzen für den Leerlaufzeit-Zeitgeber
+   ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --no-first-run
+  ```
+
+  ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
+  ```
+
+- **--kiosk-idle-timeout-minutes=**: Ändern der Zeit (in Minuten) zwischen der letzten Benutzeraktivität und der Zurücksetzung der Sitzung des Benutzers durch den Microsoft Edge-Kioskmodus. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
+
+   ```
+   --kiosk-idle-timeout-minutes=value
+   ``` 
+   Die folgenden Werte werden unterstützt:
+
+     - Standardwerte (in Minuten)
+       - Vollbild – 0 (deaktiviert)
+       - Öffentliches Surfen – 5 Minuten
+    - Zulässige Werte
+      - 0 – deaktiviert den Timer
+      - 1-1440 Minuten für das Zurücksetzen für den Leerlaufzeit-Zeitgeber
+
+
+    ```
+    msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --kiosk-idle-timeout-minutes=1
+   ```
+
+   ```
+   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --kiosk-idle-timeout-minutes=1
+   ```
 
 ## Supportrichtlinien für den Kioskmodus
 
@@ -97,7 +138,8 @@ Verwenden Sie eine der in der folgenden Tabelle aufgeführten Microsoft Edge-Ric
 |[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | „Y“ zugeordnet ist|
 |[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | „Y“ zugeordnet ist|
 |[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|„Y“ zugeordnet ist |
-|[SmartScreen-Einstellungen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |„Y“ zugeordnet ist |„Y“ zugeordnet ist |
+|[SmartScreen-Einstellungen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |„Y“ zugeordnet ist |J |
+|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|J|„Y“ zugeordnet ist|
 
 ## Microsoft Edge mit zugewiesenem Zugriff
 
@@ -105,7 +147,7 @@ Verwenden Sie eine der in der folgenden Tabelle aufgeführten Microsoft Edge-Ric
 
 Microsoft Edge unterstützt derzeit eine Teilmenge der gleichen Kioskmodustypen der Vorgängerversion von Microsoft Edge für den zugewiesenen Zugriff mit einer einzelnen App mit den folgenden Sperrmodus-Funktionen: Digitale/interaktive Beschilderung und Öffentliches Browsen.  
 
-Der Kioskmodus mit zugewiesenem Zugriff ist derzeit für Tests mit dem neuesten  [Windows10 Insider Preview-Build](https://insider.windows.com/), Version 20215 oder höher, und mit dem  [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), Version 87.0.644.4 oder höher, verfügbar.
+Der Microsoft Edge-Kioskmodus mit einer Einzel-App mit zugewiesenen Zugriff ist derzeit für Tests mit dem neuesten  [Windows 10 Insider Preview-Build](https://insider.windows.com/), Version 20215 oder höher, und mit dem  [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, verfügbar.
 
 **Wie erhalte ich den Windows Insider Preview-Build?**
 
@@ -122,12 +164,8 @@ Wenn Sie Microsoft Edge mit zugewiesenen Zugriffen mit mehreren Apps verwenden, 
 Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ein oder zwei Einzel-App-Kioskgeräten. Führen Sie die folgenden Schritte aus, um einen Einzel-App-Kioskcomputer einzurichten.
 
 1. Installieren Sie die neueste Windows 10 Insider Preview-Version (20215 oder höher). Folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](https://docs.microsoft.com/windows-insider/get-started).
-2. Installieren Sie die neueste Version des [Microsoft Edge Stable-Kanals,](https://www.microsoft.com/edge)Version 87 oder höher.  Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Dev-Kanal,](https://www.microsoftedgeinsider.com/download)Version 89 oder höher, herunterladen.
-
-   > [!IMPORTANT]
-   > Da eine Installation auf Geräteebene erforderlich ist, wird nur ein nicht-Canary-Kanal unterstützt.
-
-3. Öffnen Sie auf dem Kiosk-Computer die Windows-Einstellungen, und geben Sie im Suchfeld "Kiosk" ein. Wählen Sie  **Einen Kiosk einrichten (zugewiesener Zugriff)** aus, das im nächsten Screenshot dargestellt ist, um das Dialogfeld zum Erstellen des Kiosks zu öffnen.
+2. Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, herunterladen.
+3. Öffnen Sie auf dem Kiosk-Computer die Windows-Einstellungen, und geben Sie im Suchfeld „Kiosk“ ein. Wählen Sie  **Einen Kiosk einrichten (zugewiesener Zugriff)** aus, das im nächsten Screenshot dargestellt ist, um das Dialogfeld zum Erstellen des Kiosks zu öffnen.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Einrichten eines Kiosks mit zugewiesenem Zugriff":::
 
@@ -173,8 +211,15 @@ Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ei
 
 Die Veröffentlichung dieser Preview-Version des Kioskmodus erfolgt im Rahmen unserer kontinuierlichen Bemühungen, das Produkt zu verbessern und neue Features hinzuzufügen.
 
-Es wird empfohlen, dies zu deaktivieren:
+Es wird empfohlen, folgende Elemente zu deaktivieren:
 
+- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
+- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
+- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
 - [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Erweiterungen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
@@ -189,12 +234,12 @@ Unterstützung und Funktionen, die hinzukommen werden:
 - Allgemeine Verfügbarkeit des Microsoft Edge-Kioskmodus mit zugewiesener Zugriffs-Einzel-App unter Windows 10 1909 und höher.
 - Zusätzliche Features für Parität mit Vorgängerversion von Microsoft Edge.
 - Integration in Intune zum Konfigurieren von Geräten über die Profil-Benutzerumgebung im Kioskmodus.
-- Zusätzliche Tastenkombinationen werden blockiert.
 - Schränken Sie den Start anderer Anwendungen über den Browser ein.
+- Sperrung der Benutzeroberflächen-Druckeinstellungen.
 
 ## Weitere Informationen
 
-- [Konfigurieren von Kiosken und digitalen Anmeldungen in Windows-Desktopeditionen](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Bereitstellen des Microsoft Edge Legacy-Kioskmodus](https://aka.ms/edgekioskmode)
+- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Planen Ihrer Bereitstellung von Microsoft Edge](deploy-edge-plan-deployment.md)
-- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
+- [Konfigurieren von Kiosken und digitalen Anmeldungen in Windows-Desktopeditionen](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Planen der Kioskmodusumstellung](microsoft-edge-kiosk-mode-transition-plan.md)
