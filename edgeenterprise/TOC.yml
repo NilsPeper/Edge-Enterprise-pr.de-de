@@ -1,4 +1,4 @@
-# last revised 01/21/2021
+# last revised 02/05/2021
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -25,6 +25,8 @@
       href: microsoft-edge-roadmap.md
     - name: Planen Ihrer Bereitstellung von Microsoft Edge
       href: deploy-edge-plan-deployment.md
+    - name: Microsoft Edge in Ihrer Umgebung
+      href: deploy-edge-prepare-to-deploy.md
     - name: Bereit für Microsoft Edge
       href: deploy-edge-ready-for-edge.md
     - name: Anmerkungen zur Stable-Kanal-Version
@@ -55,14 +57,14 @@
       href: microsoft-edge-supported-languages.md
     - name: Systemupdates für Microsoft Edge
       items:
-        - name: Blocker-Toolkit für Microsoft Edge Updates
-          href: microsoft-edge-blocker-toolkit.md
         - name: Zugreifen auf die alte Version von Microsoft Edge
           href: microsoft-edge-sysupdate-access-old-edge.md
         - name: Windows-Updates zur Unterstützung von Microsoft Edge
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Bereitstellen von Microsoft Edge
   items:
+    - name: Bereitstellen von Microsoft Edge mit Windows 10-Updates
+      href: deploy-edge-with-windows-10-updates.md
     - name: Bereitstellen unter Windows mit Konfigurations-Manager
       href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Bereitstellen unter Windows mit Intune
@@ -91,6 +93,8 @@
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge und Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
+    - name: Planen des Übergangs für den Kioskmodus
+      href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Konfigurieren des Microsoft Edge-Kioskmodus
       href: microsoft-edge-configure-kiosk-mode.md
     - name: Microsoft Edge-Synchronisierung
@@ -129,7 +133,7 @@
       href: microsoft-edge-security-endpoints.md
     - name: 'Verhinderung von Datenverlust (Data Loss Prevention, DLP)'
       href: microsoft-edge-security-dlp.md
-    - name: Kennwortüberwachung automatisch für Benutzer aktiviert
+    - name: Automatische Aktivierung des Kennwortmonitors für Benutzer
       href: microsoft-edge-security-password-monitor.md
     - name: Schutz vor potenziell unerwünschten Anwendungen
       href: microsoft-edge-potentially-unwanted-apps.md
