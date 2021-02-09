@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 6175f1a4156af697e121ebe7230b5b86d347e825
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: df5298934496db5f5899bebad3ecf44bbda91913
+ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314225"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "11319259"
 ---
 # Versionshinweise für Microsoft Edge Stable Channel
 
@@ -31,7 +31,7 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 ## Version 88.0.705.63: 5. Februar
 
-Sicherheitsupdates sind [hier](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021) aufgeführt.
+Sicherheitsupdates sind [hier](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021) aufgeführt. Dieses Update enthält [CVE-2021-21148,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) für das laut Chromium-Team ein Exploit im Umlauf ist.
 
 ## Version 88.0.705.62: 4. Februar
 
@@ -208,7 +208,7 @@ Sicherheitsupdates werden [hier](https://docs.microsoft.com/DeployEdge/microsoft
 
 #### Neue Richtlinien
 
-Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) – Zum Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen.
 - [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) – Shopping in MicrosoftEdge aktiviert.
@@ -352,7 +352,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## Version 85.0.564.68: 1. Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 85.0.564.63: 23. September
 
