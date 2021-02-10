@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge WebView2-Richtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 774e92c265d1a9bfca1f68b18f34a1262a418946
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: 508ff905e0b14a30d14c82558b6328b2619dd8a3
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313433"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325905"
 ---
 # Microsoft Edge WebView2 –⁠ Richtlinien
 
 Die neueste Version von Microsoft Edge WebView2 umfasst die folgenden Richtlinien. Sie können diese Richtlinien verwenden, um zu konfigurieren, wie Microsoft Edge WebView2 in Ihrer Organisation ausgeführt wird.
 
 Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wie und wann Microsoft Edge WebView2 aktualisiert wird, finden Sie unter [Microsoft Edge Updaterichtlinien-Referenz](microsoft-edge-update-policies.md).
-
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.
