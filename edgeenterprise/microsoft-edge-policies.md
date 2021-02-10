@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313423"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325895"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -33,10 +33,11 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
 
-| Name| Beschriftung |
+| Name | Beschriftung |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello für HTTP-Authentifizierung aktiviert|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Legt verwaltete Konfigurationswerte für Websites auf bestimmte Ursprünge fest|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Synchronisierung von Application Guard-Favoriten aktiviert|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Verwalten der Funktion zur Schnellansicht von Office-Dateien in Microsoft Edge|
+
 
 
 ## Verfügbare Richtlinien
@@ -60,6 +61,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |Richtlinienname|Beschriftung|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard-Containerproxy|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Synchronisierung von Application Guard-Favoriten aktiviert|
 ### [*Cast*](#cast-policies)
 
 |Richtlinienname|Beschriftung|
@@ -381,6 +383,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Aktivieren von Promotion-Inhalten auf der gesamten Registerkarte|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Fragen, wo heruntergeladene Dateien gespeichert werden sollen|
 |[QuicAllowed](#quicallowed)|QUIC-Protokoll zulassen|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Verwalten der Funktion zur Schnellansicht von Office-Dateien in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Verhindern der Installation des BHO zum Umleiten von inkompatiblen Websites von Internet Explorer zu Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Umleiten von inkompatiblen Websites von Internet Explorer zu MicrosoftEdge|
 |[RelaunchNotification](#relaunchnotification)|Einen Benutzer informieren, dass für ausstehende Updates ein Browser-Neustart empfohlen oder erforderlich ist|
@@ -536,6 +539,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### Synchronisierung von Application Guard-Favoriten aktiviert
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab Version 90 oder höher
+
+  #### Beschreibung
+
+  Diese Richtlinie ermöglicht Microsoft Edge-Computern/-Geräten, für die Application Guard aktiviert ist, das Synchronisieren von Favoriten zwischen Host und Container, damit die Favoriten übereinstimmen.
+
+Wenn [ManagedFavorites](#managedfavorites) konfiguriert sind, werden diese Favoriten auch mit dem Container synchronisiert.
+
+Wenn Sie diese Richtlinie aktivieren, ist die Bearbeitung von Favoriten im Container deaktiviert. Daher werden die Schaltflächen „Favoriten hinzufügen“ und der „Favoritenordner hinzufügen“ in der Benutzeroberfläche des Containerbrowsers abgeblendet.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Favoriten auf dem Host nicht für den Container freigegeben.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: ApplicationGuardFavoritesSyncEnabled
+  - GP-Name: Application Guard Favorites Sync Enabled
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Application Guard-Einstellungen
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: ApplicationGuardFavoritesSyncEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
 
   
 
@@ -2703,7 +2763,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale Standardwert verwendet. Dieser Standardwert stammt aus der Richtlinie [DefaultNotificationsSetting](#defaultnotificationssetting), sofern diese festgelegt ist, oder aus der persönlichen Konfiguration des Benutzers. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Unterstützte Funktionen:
+  #### Unterstützte Features:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -4019,7 +4079,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 "bing"
 ```
 
-  #### Mac – Informationen und Einstellungen
+  #### Mac-Informationen und -Einstellungen
   
   - Name des Einstellungsschlüssels: NewTabPageSearchBox
   - Beispielwert:
@@ -5232,9 +5292,9 @@ Wenn Sie diese Richtlinie deaktivieren, wird eine einfache Eingabeaufforderung m
 
   Diese Richtlinie gilt nur für den Microsoft Edge-Kioskmodus, während die öffentliche Browseroberfläche verwendet wird.
 
-Wenn Sie diese Richtlinie aktivieren, können Benutzer die URL in der Adressleiste nicht ändern.
-
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können die Benutzer die URL in der Adressleiste ändern.
+
+Durch Aktivieren dieser Richtlinie wird verhindert, dass Benutzer die URL in der Adressleiste ändern.
 
 Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
@@ -8114,7 +8174,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird die standardmäßige neue Re
 
 Wenn Sie diese Richtlinie *und* die Richtlinie [NewTabPageSetFeedType](#newtabpagesetfeedtype) konfigurieren, hat diese Richtlinie Vorrang.
 
-Wenn eine ungültige URL bereitgestellt wird, werden neue Registerkarten about://blank öffnen.
+Wenn eine leere Registerkarte bevorzugt wird, ist „about:blank“ die richtige zu verwendende URL, nicht „about://blank“.
 
 Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Microsoft Active Directory-Domäne verknüpft sind, Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, oder MacOS-Instanzen, die über MDM verwaltet oder über MCX einer Domäne beigetreten sind.
 
@@ -10432,9 +10492,9 @@ Wenn Sie weitere Informationen zu dieser Richtlinie erhalten möchten oder die f
 
 * Sie verfügen über einen EDU-Mandanten, aber die Richtlinie funktioniert nicht.
 
-* Ihre IP-Adresse wurde für das werbefreie Sucherlebnis auf eine Whitelist gesetzt.
+* Ihre IP-Adresse wurde für das werbefreie Sucherlebnis auf eine Zulassungsliste gesetzt.
 
-* Bei Microsoft Edge Legacy hatten Sie bereits die werbefreie Suchumgebung und möchten ein Upgrade auf die neue Version von Microsoft Edge durchführen.
+* Bei Vorgängerversion von Microsoft Edge hatten Sie bereits die werbefreie Suchumgebung und möchten ein Upgrade auf die neue Version von Microsoft Edge durchführen.
 
   #### Unterstützte Funktionen:
 
@@ -18282,6 +18342,68 @@ QUIC ist ein Tranportschicht-Netzwerkprotokoll, das die Leistung von Webanwendun
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Verwalten der Funktion zur Schnellansicht von Office-Dateien in Microsoft Edge
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und macOS seit 90 oder höher
+
+  #### Beschreibung
+
+  Hiermit können Sie festlegen, ob Benutzer Office-Dateien im Web anzeigen können, die sich nicht auf OneDrive oder SharePoint befinden. (Beispiel: Word-Dokumente, PowerPoint-Präsentationen und Excel-Tabellenkalkulationen)
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können diese Dateien in Microsoft Edge mithilfe von Office Viewer angezeigt werden, ohne sie herunterzuladen.
+
+Wenn Sie diese Richtlinie deaktivieren, werden die Dateien heruntergeladen, um angezeigt zu werden.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: QuickViewOfficeFilesEnabled
+  - GP-Name: Verwalten der Funktion zur Schnellansicht von Office-Dateien in Microsoft Edge
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: QuickViewOfficeFilesEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Name des Einstellungsschlüssels: QuickViewOfficeFilesEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Verhindern der Installation des BHO zum Umleiten von inkompatiblen Websites von Internet Explorer zu Microsoft Edge
@@ -20041,7 +20163,7 @@ Wenn Sie diese Einstellung deaktivieren, werden Mitarbeiter keine Empfehlungen/B
 
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: ShowRecommendationsEnabled
+  - Eindeutiger GP-Name: ShowRecommendationsEnabled
   - GP-Name: Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
@@ -20208,7 +20330,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutze
 
   #### Beschreibung
 
-  Listen Sie bestimmte Dienste auf, z. B. PDFs, die keine intelligenten Aktionen anzeigen. (Intelligente Aktionen sind Aktionen wie "definieren", die in Voll- und Minikontextmenüs in Microsoft Edge verfügbar sind.)
+  Listen Sie bestimmte Dienste auf, z. B. PDFs, die keine intelligenten Aktionen anzeigen. (Intelligente Aktionen sind Aktionen wie „definieren“, die in Voll- und Minikontextmenüs in Microsoft Edge verfügbar sind.)
 
 Wenn Sie die Richtlinie aktivieren:
    - Die intelligente Aktion in Mini- und Vollkontextmenüs wird für alle Profile für Dienste deaktiviert, die der angegebenen Liste entsprechen.
@@ -20889,7 +21011,7 @@ Diese Richtlinie hat keine Auswirkungen auf QUIC-basierte Verbindungen. QUIC kan
   ##### Windows-Registrierungseinstellungen
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: 1, 2, 3, ...
   - Werttyp: REG_SZ-Liste
 
@@ -20902,7 +21024,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: TLSCipherSuiteDenyList
   - Beispielwert:
@@ -22212,7 +22334,7 @@ Wenn Sie diese Richtlinie auf „wahr“ festlegen, werden die Funktionen der We
 
 Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht festlegen, werden die Funktionen der Webkomponenten v0 standardmäßig deaktiviert, beginnend mit M80.
 
-  #### Unterstützte Features:
+  #### Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -22235,7 +22357,7 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: WebComponentsV0Enabled
   - Werttyp: REG_DWORD
 
