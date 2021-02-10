@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 1738114b34625d8c4b2e96536c6e91dccd9fafa6
-ms.sourcegitcommit: 5d9ca85738c9dd8581738674e0459a549b6381c8
+ms.openlocfilehash: 822c6cf40cc046d1fe38301fb89cf2a8fe67c04e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "11319069"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325865"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -29,26 +29,31 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ### Funktionsupdates
 
-- Der Kiosk-Modus ermöglicht zusätzliche Sperrfunktionen. Ab Microsoft Edge Version 89 haben wir zusätzliche Sperrfunktionen im Kioskmodus hinzugefügt, damit Kunden ihre Arbeit produktiver und sicherer erledigen können. [Mehr dazu](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
+- **Der Kiosk-Modus ermöglicht zusätzliche Sperrfunktionen**. Ab Microsoft Edge Version 89 haben wir zusätzliche Sperrfunktionen im Kioskmodus hinzugefügt, damit Kunden ihre Arbeit produktiver und sicherer erledigen können. [Mehr dazu](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
-- Das Site List Manager-Tool im Enterprise-Modus ist im Browser über die Seite *edge://compat* verfügbar. Mit diesem Tool können Sie XML-Site-Listen für den Internet Explorer-Modus unter Microsoft Edge erstellen, bearbeiten und exportieren. Sie können den Zugriff auf dieses Tool nach Bedarf über Gruppenrichtlinien aktivieren. [Mehr dazu](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
+- **Das Site List Manager-Tool im Enterprise-Modus ist im Browser über die Seite *edge://compat* verfügbar**. Mit diesem Tool können Sie XML-Site-Listen für den Internet Explorer-Modus unter Microsoft Edge erstellen, bearbeiten und exportieren. Sie können den Zugriff auf dieses Tool nach Bedarf über Gruppenrichtlinien aktivieren. [Mehr dazu](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
 
-- Setzen Sie Ihre Microsoft Edge-Synchronisierungsdaten in der Cloud manuell zurück. Wir bieten eine Möglichkeit, Ihre Microsoft Edge-Synchronisierungsdaten aus dem Produkt heraus zurückzusetzen. Auf diese Weise wird sichergestellt, dass Ihre Daten aus den Microsoft-Diensten gelöscht werden und bestimmte Produktprobleme behoben werden, für die zuvor ein Support-Ticket erforderlich war.
+- **Verbessern der Browserleistung mit ruhenden Registerkarten**. Das Ruhen von Registerkarten verbessert die Browserleistung, indem inaktive Registerkarten in den Ruhezustand versetzt werden, um Systemressourcen wie Speicher und CPU freizugeben, sodass aktive Registerkarten oder andere Anwendungen sie verwenden können. Benutzer können verhindern, dass Websites in den Ruhezustand versetzt werden, und die Zeitspanne konfigurieren, in der eine inaktive Registerkarte in den Ruhezustand versetzt wird. Um die Benutzer in ihrem Fluss zu halten, gibt es auch [Heuristiken](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434), die verhindern, dass bestimmte Websites in den Ruhezustand versetzt werden, z.B. Intranetsites. Diese Funktion kann mit Gruppenrichtlinien verwaltet werden.
 
-- Verbesserungen bei der Textauswahl in PDF-Dokumenten. Benutzer erhalten eine reibungslosere und konsistentere Textauswahl für PDF-Dokumente, die ab Version 89 in Microsoft Edge geöffnet werden.
+  > [!NOTE]
+  > „Verbessern der Browserleistung mit ruhenden Registerkarten“ ist ein Update für die Versionshinweise vom 3. Februar für Hauptversion 89.0.774.18.
 
-- Die Warnung "Entwicklermoduserweiterungen deaktivieren" kann dauerhaft verworfen werden. Ab Microsoft Edge, Version 89, können Sie die Warnung "Entwicklermoduserweiterungen deaktivieren" deaktivieren, indem Sie die Option "Diese Option nicht erneut anzeigen" auswählen.
+- **Setzen Sie Ihre Microsoft Edge-Synchronisierungsdaten in der Cloud manuell zurück**. Wir bieten eine Möglichkeit, Ihre Microsoft Edge-Synchronisierungsdaten aus dem Produkt heraus zurückzusetzen. Auf diese Weise wird sichergestellt, dass Ihre Daten aus den Microsoft-Diensten gelöscht werden und bestimmte Produktprobleme behoben werden, für die zuvor ein Support-Ticket erforderlich war.
 
-- Verwalten Sie Ihre Erweiterungen über die Symbolleiste. Über das neue Erweiterungsmenü in der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
+- **Verbesserungen bei der Textauswahl in PDF-Dokumenten**. Benutzer erhalten eine reibungslosere und konsistentere Textauswahl für PDF-Dokumente, die ab Version 89 in Microsoft Edge geöffnet werden.
 
-- Unterstützung für die Suche in natürlicher Sprache in der Adressleiste, auf der Verlaufssuchseite und im Verlaufshub. Ab Microsoft Edge Version 89 wird das Auffinden eines Artikels/einer Website durch die Suche in natürlicher Sprache in der Adressleiste, auf der Verlaufsseite und im Verlaufshub einfacher. Benutzer können zusätzlich zu Titeln/URL-Keyword-Übereinstimmungen nach zuvor angesehenem Seiteninhalt/Beschreibung/Timing (z. B. "Kuchenrezept der letzten Woche") suchen.
+- **Die Warnung „Erweiterungen des Entwicklermodus deaktivieren“ kann dauerhaft verworfen werden**. Ab Microsoft Edge, Version 89, können Sie die Warnung "Entwicklermoduserweiterungen deaktivieren" deaktivieren, indem Sie die Option "Diese Option nicht erneut anzeigen" auswählen.
+
+- **Verwalten Sie Ihre Erweiterungen über die Symbolleiste**. Über das neue Erweiterungsmenü in der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
+
+- **Unterstützung für die Suche in natürlicher Sprache in der Adressleiste, auf der Verlaufssuchseite und im Verlaufshub**. Ab Microsoft Edge Version 89 wird das Auffinden eines Artikels/einer Website durch die Suche in natürlicher Sprache in der Adressleiste, auf der Verlaufsseite und im Verlaufshub einfacher. Benutzer können zusätzlich zu Titeln/URL-Keyword-Übereinstimmungen nach zuvor angesehenem Seiteninhalt/Beschreibung/Timing (z. B. "Kuchenrezept der letzten Woche") suchen.
 
 - **Produktivität:**
 
   - Das Feld für das Geburtsdatum wird jetzt beim automatischen Ausfüllen unterstützt. Heute hilft Ihnen Microsoft Edge, Zeit und Mühe beim Ausfüllen von Formularen und beim Erstellen von Online-Konten zu sparen, indem Sie Ihre Daten wie Adressen, Namen, Telefonnummern usw. automatisch ausfüllen. Ab Microsoft Edge Version 89 bieten wir Unterstützung für ein anderes Feld, das Sie gespeichert und automatisch ausgefüllt haben können – das Geburtsdatum. Sie können diese Informationen jederzeit in Ihren Profileinstellungen anzeigen, bearbeiten und löschen.
   - Erweitern Sie die Vorschläge zum automatischen Ausfüllen, um Inhalte aus der Zwischenablage aufzunehmen. Der Inhalt der Zwischenablage wird analysiert, wenn Sie ein Profil-/Adressfeld (z. B. Telefon, E-Mail, Postleitzahl, Stadt, Bundesland usw.) auswählen, das als Vorschläge zum automatischen Ausfüllen angezeigt wird.
 
-- Unterstützt das Blockieren der automatischen Wiedergabe von Videos. Ab Microsoft Edge Version 89 haben Benutzer die Möglichkeit, die automatische Wiedergabe von Medien zu blockieren.
+- **Unterstützung des Blockierens der automatischen Wiedergabe von Videos**. Ab Microsoft Edge Version 89 haben Benutzer die Möglichkeit, die automatische Wiedergabe von Medien zu blockieren.
 
 ### Richtlinienupdates
 
@@ -104,7 +109,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
   - Einmaliges Anmelden (SSO, Single Sign On) ist jetzt für Azure Active Directory-Konten (Azure AD) und Microsoft Account (MSA) unter MacOS und Windows auf niedrigerer Ebene verfügbar. Ein Benutzer, der bei Microsoft Edge unter macOS oder Microsoft Windows (7, 8.1) auf niedrigerer Ebene angemeldet ist, wird jetzt automatisch bei Websites angemeldet, die so konfiguriert sind, dass sie eine einmalige Anmeldung mit Work- und Microsoft-Konten ermöglichen (z. B. bing.com, office.com, msn.com, outlook.com).<br>Hinweis: Ein Benutzer muss sich möglicherweise abmelden und dann erneut anmelden, wenn er sich in einer Version vor Microsoft Edge 88 bei Microsoft Edge angemeldet hat, um diese Funktion nutzen zu können.
   - Wechseln Sie Benutzer unter macOS automatisch zu ihrem Arbeitsprofil für Websites, die sich bei ihrem Arbeitskonto authentifizieren. Ab Microsoft Edge Version 88 bieten wir die Möglichkeit, unter Websites zu wechseln, die sich unter macOS mit dem Arbeitsprofil eines Benutzers authentifizieren.<br>Hinweis: Ein Benutzer muss sich möglicherweise abmelden und dann erneut anmelden, wenn er sich in einer Version vor Microsoft Edge 88 bei Microsoft Edge angemeldet hat, um diese Funktion nutzen zu können.
 
-- Kioskmodus-Option zum Beenden der Sitzung. Die Schaltfläche "Sitzung beenden" ist jetzt im öffentlichen Browsing im Kioskmodus verfügbar. Diese Funktion stellt sicher, dass Browserdaten und -einstellungen gelöscht werden, wenn Microsoft Edge geschlossen wird. Weitere Informationen zu den Funktionen und der Roadmap des Kioskmodus finden Sie unter [Konfigurieren des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
+- **Kioskmodus-Option zum Beenden der Sitzung**. Die Schaltfläche „Sitzung beenden“ ist jetzt im öffentlichen Browsing im Kioskmodus verfügbar. Diese Funktion stellt sicher, dass Browserdaten und -einstellungen gelöscht werden, wenn Microsoft Edge geschlossen wird. Weitere Informationen zu den Funktionen und der Roadmap des Kioskmodus finden Sie unter [Konfigurieren des Microsoft Edge-Kioskmodus](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
 - **Sicherheit und Datenschutz:**
 
@@ -259,11 +264,11 @@ Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten admin
 
 ## Version 86.0.622.43: 16.Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 86.0.622.36: 7.Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 86.0.622.31: 1.Oktober
 
