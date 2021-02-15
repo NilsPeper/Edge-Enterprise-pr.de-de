@@ -3,19 +3,19 @@ title: Lokale Synchronisierung für Active Directory (AD)-Benutzende
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 10/05/2020
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Lokale Synchronisierung für Active Directory (AD)-Benutzende
-ms.openlocfilehash: ce7fd912bc8cbd71e12444d58073e43df6b138db
-ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
+ms.openlocfilehash: adf0adc8370aa1e18d07d0d2e91727d1ac607bf1
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11099744"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328047"
 ---
 # Lokale Synchronisierung für Active Directory (AD)-Benutzende
 
@@ -30,7 +30,7 @@ Zum Synchronisieren von Benutzerdaten in Microsoft Edge sind in der Regel ein Mi
 
 ## Funktionsweise
 
-Mit Microsoft Edge können Profile Active Directory (AD)-Konten zugeordnet werden, die bei der Cloud-Synchronisierung nicht verwendet werden können. Wenn die lokale Synchronisierung aktiviert ist, werden die Daten aus dem AD-Profil in einer Datei mit dem Namen "profile.pb" gespeichert. Diese Datei wird standardmäßig unter *%APPDATA%/Microsoft/Edge* gespeichert. Nachdem diese Datei geschrieben wurde, kann sie zwischen verschiedenen Computern verschoben werden, und die Benutzerdaten werden auf jedem Computer ausgelesen bzw. geschrieben.
+Mit Microsoft Edge können Profile Active Directory (AD)-Konten zugeordnet werden, die bei der Cloud-Synchronisierung nicht verwendet werden können. Wenn die lokale Synchronisierung aktiviert ist, werden die Daten aus dem AD-Profil in einer Datei mit dem Namen "profile.pb" gespeichert. Diese Datei wird standardmäßig unter *%APPDATA%/Microsoft/Edge* gespeichert. Nachdem diese Datei geschrieben wurde, kann sie zwischen verschiedenen Computern verschoben werden, und die Benutzerdaten werden auf jedem Computer ausgelesen bzw. geschrieben. Microsoft Edge liest und schreibt nur aus dieser Datei. Es liegt in der Verantwortung des Admins, sicherzustellen, dass die Datei bei Bedarf verschoben wird.
 
 ## Verwenden der lokalen Synchronisierung
 
@@ -42,7 +42,7 @@ Konfigurieren Sie zum Aktivieren der lokalen Synchronisierung in Microsoft Edge 
 
 ### Stellen Sie sicher, dass ein Profil mit einem Active Directory-Konto verknüpft ist.
 
-Die lokale Synchronisierung funktioniert nur mit dem Profil, das mit einem Active Directory (AD)-Konto verknüpft ist. Wenn kein solches Profil vorhanden ist, funktioniert die lokale Synchronisierung nicht. Um sicherzustellen, dass sich die Benutzer mit einem AD-Konto anmelden, konfigurieren Sie die Richtlinie [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin).
+Die lokale Synchronisierung funktioniert nur mit dem Profil, das mit einem Active Directory (AD)-Konto verknüpft ist. Wenn kein solches Profil vorhanden ist, funktioniert die lokale Synchronisierung nicht. Um sicherzustellen, dass sich die Benutzer mit einem AD-Konto anmelden, konfigurieren Sie die Richtlinie [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin). Für die lokale Synchronisierung verwendet Microsoft Edge nur AD, um eine Identität für die Benutzerdaten zu erstellen, und es besteht keine direkte Beziehung zwischen der Art und Weise, wie Microsoft Edge lokale Daten liest und schreibt, und der Art und Weise, wie der Administrator das Roaming für einen AD-Benutzer konfiguriert hat.
 
 ### Ändern des Speicherorts der Benutzerdaten (optional)
 
@@ -67,7 +67,7 @@ Da für die lokale Synchronisierung eine Benutzerdatendatei zwischen Computern v
 
 ### Verwenden anderer Synchronisierungsrichtlinien mit der lokalen Synchronisierung
 
-Die Richtlinie [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) kann verwendet werden, um die Synchronisierung der Favoriten oder Einstellungen bei Bedarf selektiv zu deaktivieren. Wenn die Richtlinie [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) aktiv ist, wird die lokale Synchronisierung ebenfalls deaktiviert.  
+Die Richtlinie [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) kann verwendet werden, um die Synchronisierung der Favoriten oder Einstellungen bei Bedarf selektiv zu deaktivieren. Die Richtline [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) hat keine Auswirkungen auf die lokale Synchronisierung.
 
 ## Weitere Informationen
 

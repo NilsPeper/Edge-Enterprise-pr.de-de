@@ -3,23 +3,27 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/09/2021
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 822c6cf40cc046d1fe38301fb89cf2a8fe67c04e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325865"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328067"
 ---
 # Versionshinweise für Microsoft Edge Beta-Kanal
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind [hier](microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
+
+## Version 89.0.774.27: 12. Februar
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 89.0.774.23: 8. Februar
 
@@ -268,11 +272,11 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 86.0.622.36: 7.Oktober
 
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## Version 86.0.622.31: 1.Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## Version 86.0.622.28: 28. September
 
