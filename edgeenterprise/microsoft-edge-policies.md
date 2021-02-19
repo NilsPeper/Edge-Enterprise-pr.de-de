@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325895"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340605"
 ---
 # Microsoft Edge-Richtlinien
 
@@ -29,16 +29,15 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-## Neue Richtlinien
+## Neue und veraltete Richtlinien
 
-In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
+In der folgenden Tabelle sind die neuen und veralteten Richtlinien für dieses Update aufgeführt.
 
 | Name | Beschriftung |
 |--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Synchronisierung von Application Guard-Favoriten aktiviert|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Verwalten der Funktion zur Schnellansicht von Office-Dateien in Microsoft Edge|
-
-
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Zulassen, dass Benutzer von der HTTPS-Warnseite für bestimmte Ursprünge fortfahren können|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Aktivieren der Fenster-Okklusion|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Systemeigene Fenster-Okklusion aktivieren (veraltet)|
 
 ## Verfügbare Richtlinien
 
@@ -371,7 +370,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximale Anzahl gleichzeitiger Verbindungen mit dem Proxyserver|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Zulassen, dass Google Cast eine Verbindung mit den Cast-Geräten aller IP-Adressen herstellt|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Aktivieren der Berichterstellung für Nutzungs- und Absturzdaten (veraltet)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Native Window Occlusion aktivieren|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Systemeigene Fenster-Okklusion aktivieren (veraltet)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Festlegen eines Zeitlimits für die Verzögerung der Registerkartennavigation für die Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Aktivieren der Netzwerkvorhersage|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Konfigurieren, ob ein Benutzer immer ein Standardprofil hat, das automatisch mit seinem Geschäfts- oder Schulkonto angemeldet ist|
@@ -395,7 +394,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[RoamingProfileLocation](#roamingprofilelocation)|Festlegen des Server gespeicherten Profilverzeichnisses|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Aktivieren der Verwendung von Roaming-Kopien für Microsoft Edge-Profildaten|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte (veraltet)|
-|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Zulassen, dass Benutzer die HTTPS-Warnungsseite überschreiten können|
+|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Zulassen, dass Benutzer ab der HTTPS-Warnseite fortfahren können|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Zulassen, dass Benutzer von der HTTPS-Warnseite für bestimmte Ursprünge fortfahren können|
 |[SSLVersionMin](#sslversionmin)|Mindestens aktivierte TLS-Version|
 |[SaveCookiesOnExit](#savecookiesonexit)|Speichern von Cookies, wenn Microsoft Edge geschlossen wird|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Speichern des Browserverlaufs deaktivieren|
@@ -453,6 +453,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[WebWidgetAllowed](#webwidgetallowed)|Webwidget aktivieren|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start zulassen|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Aktivieren der Fenster-Okklusion|
 
 
 
@@ -2763,7 +2764,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale Standardwert verwendet. Dieser Standardwert stammt aus der Richtlinie [DefaultNotificationsSetting](#defaultnotificationssetting), sofern diese festgelegt ist, oder aus der persönlichen Konfiguration des Benutzers. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Unterstützte Features:
+  #### Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
   - Kann empfohlen werden: Nein
@@ -4079,7 +4080,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 "bing"
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: NewTabPageSearchBox
   - Beispielwert:
@@ -7119,7 +7120,7 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
-  ##### Windows Registry-Einstellungen
+  ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
   - Pfad (Empfohlen): n.a.
@@ -10844,7 +10845,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: BrowserSignin
   - Werttyp: REG_DWORD
 
@@ -12411,7 +12412,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 0x00000002
 ```
 
-  #### Mac-Informationen und -Einstellungen
+  #### Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: DefaultSerialGuardSetting
   - Beispielwert:
@@ -15090,7 +15091,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Beschreibung
 
-  Legt die Verwendung der Hardwarebeschleunigung fest, falls diese verfügbar ist. Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, wird die Hardwarebeschleunigung aktiviert, sofern kein GPU-Feature explizit blockiert wird.
+  Gibt an, ob die Hardwarebeschleunigung verwendet werden soll, wenn sie verfügbar ist. Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, wird die Hardwarebeschleunigung aktiviert, sofern kein GPU-Feature explizit blockiert wird.
 
 Wenn Sie diese Richtlinie deaktivieren, ist die Hardwarebeschleunigung deaktiviert.
 
@@ -17591,9 +17592,9 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   ### NativeWindowOcclusionEnabled
 
-  #### Native Window Occlusion aktivieren
+  #### Systemeigene Fenster-Okklusion aktivieren (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### Unterstützte Versionen:
 
@@ -17601,13 +17602,15 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   #### Beschreibung
 
-  Aktiviert Native Window Occlusion in Microsoft Edge.
+  Diese Richtlinie ist veraltet. Verwenden Sie stattdessen die Richtlinie „[WindowOcclusionEnabled](#windowocclusionenabled)“. Dies wird in Microsoft Edge, Version 92 nicht funktionieren.
+
+Aktiviert systemeigene Fenster-Okklusion in Microsoft Edge.
 
 Wenn Sie diese Einstellung aktivieren, wird Microsoft Edge zum Verringern der benötigten CPU-Leistung und des Stromverbrauchs erkennen, ob ein Fenster von anderen Fenstern überlagert wird, und das Zeichnen der überdeckten Pixel wird unterbrochen.
 
 Wenn Sie diese Einstellung deaktivieren, wird Microsoft Edge nicht erkennen, wenn ein Fenster von anderen Fenstern überdeckt wird.
 
-Wenn diese Richtlinie nicht festgelegt wurde, wird die Erkennung der Fensterüberlagerung aktiviert.
+Wenn diese Richtlinie nicht festgelegt ist, wird die Erkennung von Okklusion aktiviert.
 
   #### Unterstützte Funktionen:
 
@@ -17624,7 +17627,7 @@ Wenn diese Richtlinie nicht festgelegt wurde, wird die Erkennung der Fensterübe
   ##### Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: NativeWindowOcclusionEnabled
-  - GP-Name: Native Window Occlusion aktivieren
+  - GP-Name: Systemeigene Fenster-Okklusion aktivieren (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -19139,6 +19142,77 @@ Wenn Sie diese Richtlinie deaktivieren, werden die Benutzer daran gehindert, jeg
   - Beispielwert:
 ``` xml
 <true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### Zulassen, dass Benutzer von der HTTPS-Warnseite für bestimmte Ursprünge fortfahren können
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows und macOS seit 90 oder höher
+
+  #### Beschreibung
+
+  Microsoft Edge zeigt eine Warnseite an, wenn Benutzer Websites besuchen, die SSL-Fehler aufweisen.
+
+Wenn Sie die Richtlinie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) aktivieren oder nicht konfigurieren, bewirkt diese Richtlinie nichts.
+
+Wenn Sie die Richtlinie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) deaktivieren, können Sie durch Konfigurieren dieser Richtlinie eine Liste von Ursprungsmustern für Websites konfigurieren, auf denen Benutzer weiterhin durch die SSL-Fehlerseiten klicken können. Benutzer können bei Ursprüngen, die nicht in dieser Liste enthalten sind, nicht durch SSL-Fehlerseiten klicken.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, gilt die Richtlinie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) für alle Websites.
+
+Ausführliche Informationen zu gültigen Ursprungsmustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie. Diese Richtlinie stimmt nur mit dem Ursprung überein, sodass alle Pfade oder Abfragen im URL-Muster ignoriert werden.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: SSLErrorOverrideAllowedForOrigins
+  - GP-Name: Zulassen, dass Benutzer von der HTTPS-Warnseite für bestimmte Ursprünge fortfahren können
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows Registry-Einstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - Pfad (empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: SSLErrorOverrideAllowedForOrigins
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -22162,9 +22236,9 @@ Jedes Listenelement der Richtlinie ist ein Objekt mit einem obligatorischen Elem
 und drei optionale Elemente:
 - default_launch_container (gibt den Fenstermodus an, mit dem die Web-App geöffnet wird – eine neue Registerkarte ist die Standardeinstellung)
 
-- create_desktop_shortcut („Wahr“, wenn Sie Linux- und Windows-Desktopverknüpfungen erstellen möchten)
+- create_desktop_shortcut (Wahr, wenn Sie Linux- und Microsoft Windows-Desktopverknüpfungen erstellen möchten.)
 
-- override_app_name (ab Microsoft Edge 89 können Sie den Namen der App überschreiben, wenn es sich nicht um eine progressive Web-App (PWA) handelt, oder den App-Namen, der vorübergehend installiert wird, wenn es sich um eine PWA handelt, aber eine Authentifizierung erforderlich ist, bevor die Installation abgeschlossen werden kann)
+- fallback_app_name (Ab Microsoft Edge 90 können Sie den Namen der App überschreiben, wenn es sich nicht um eine Progressive Web App (PWA) handelt, oder den App-Namen, der vorübergehend installiert wird, wenn es sich um eine PWA handelt, aber eine Authentifizierung erforderlich ist, bevor die Installation abgeschlossen werden kann.)
 
   #### Unterstützte Funktionen:
 
@@ -22208,7 +22282,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22217,7 +22291,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Kompakter Beispielwert:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22245,7 +22319,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22884,6 +22958,63 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Micros
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
   - Pfad (Empfohlen): n.a.
   - Wertname: WinHttpProxyResolverEnabled
+  - Werttyp: REG_DWORD
+
+  ##### Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### WindowOcclusionEnabled
+
+  #### Aktivieren der Fenster-Okklusion
+
+  
+  
+  #### Unterstützte Versionen:
+
+  - Unter Windows ab 89 oder höher
+
+  #### Beschreibung
+
+  Aktiviert die Fenster-Okklusion in Microsoft Edge.
+
+Wenn Sie diese Einstellung aktivieren, wird Microsoft Edge zum Verringern der benötigten CPU-Leistung und des Stromverbrauchs erkennen, ob ein Fenster von anderen Fenstern überlagert wird, und das Zeichnen der überdeckten Pixel wird unterbrochen.
+
+Wenn Sie diese Einstellung deaktivieren, wird Microsoft Edge nicht erkennen, wenn ein Fenster von anderen Fenstern überdeckt wird.
+
+Wenn diese Richtlinie nicht festgelegt wurde, wird die Erkennung der Fensterüberlagerung aktiviert.
+
+  #### Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+
+  - Boolesch
+
+  #### Windows-Informationen und -Einstellungen
+
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: WindowOcclusionEnabled
+  - GP-Name: Aktiviert die Fenster-Okklusion
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): n.a.
+  - Wertname: WindowOcclusionEnabled
   - Werttyp: REG_DWORD
 
   ##### Beispielwert:
