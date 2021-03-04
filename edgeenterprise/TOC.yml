@@ -1,4 +1,4 @@
-# last revised 02/05/2021
+# last revised 03/02/2021
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -31,11 +31,11 @@
       href: deploy-edge-ready-for-edge.md
     - name: Anmerkungen zur Stable-Kanal-Version
       href: microsoft-edge-relnote-stable-channel.md
-    - name: Anmerkungen zur archivierten Version des stabilen Kanals
+    - name: Anmerkungen zur archivierten Veröffentlichung des stabilen Kanals
       href: microsoft-edge-relnote-archive-stable-channel.md
     - name: Anmerkungen zur Beta-Kanal-Version
       href: microsoft-edge-relnote-beta-channel.md
-    - name: Anmerkungen zur archivierten Version des Betakanals
+    - name: Beta channel archived release notes
       href: microsoft-edge-relnote-archive-beta-channel.md
     - name: Veröffentlichungszeitplan
       href: microsoft-edge-release-schedule.md
@@ -93,7 +93,7 @@
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge und Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: Planen des Übergangs für den Kioskmodus
+    - name: Planen Ihrer Kioskmodus-Umstellung
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Konfigurieren des Microsoft Edge-Kioskmodus
       href: microsoft-edge-configure-kiosk-mode.md
@@ -113,6 +113,8 @@
           href: edge-ie-mode-sitelist.md
         - name: Konfigurieren von Richtlinien für den IE-Modus
           href: edge-ie-mode-policies.md
+        - name: Deaktivieren von Internet Explorer 11
+          href: edge-ie-disable-ie11.md
         - name: Schrittweise Anleitung für Enterprise Site Discovery
           href: edge-ie-mode-site-discovery.md
         - name: FAQ zum IE-Modus
@@ -161,7 +163,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Weitere Referenzen ansehen
       items:
-        - name: Abwärtskompatibilität für die Registerkarte "Enterprise Neu"
+        - name: Abwärtskompatibilität für Enterprise New-Registerkartenseite
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce und DirectInvoke
           href: edge-learn-more-co-di.md
@@ -187,15 +189,15 @@
           href: edge-learnmore-reset-data-in-cloud.md
         - name: Benutzerdatenverzeichnis-Variablen
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Verwenden des Rollbacks von Microsoft Edge für Unternehmen
+        - name: Verwenden des Microsoft Edge-Rollbacks für Unternehmen
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge Videos
   items:
-    - name: Microsoft Edge -Videosammlung
+    - name: Microsoft Edge-Videosammlung
       href: microsoft-edge-videos.md
-    - name: Video – Microsoft Edge – Zustand des Browsers 2020
+    - name: Video – Microsoft Edge – Status des Browsers 2020
       href: microsoft-edge-video-state-of-browser.md
-    - name: Video – Browserisolation mit Application Guard
+    - name: Video – Browserisolation mithilfe von Application Guard
       href: microsoft-edge-video-security-application-guard.md
     - name: Video – Bereitstellen von Microsoft Edge
       href: microsoft-edge-video-deploy.md
@@ -207,7 +209,7 @@
       href: microsoft-edge-video-version-rollback.md
     - name: Video – PDF-Reader in Microsoft Edge
       href: microsoft-edge-video-pdf-reader.md
-    - name: Video – Sicheres Browsen in Microsoft Edge
+    - name: Video – Sicheres Browsen auf Microsoft Edge
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Video – Sicherheit, Kompatibilität und Verwaltbarkeit'
       href: microsoft-edge-video-security-compatibility-manageability.md

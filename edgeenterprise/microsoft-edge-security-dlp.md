@@ -3,21 +3,21 @@ title: Verhinderung von Datenverlust in Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Verhinderung von Datenverlust (DLP) in Microsoft Edge
-ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314558"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384983"
 ---
-# <span data-ttu-id="6b97f-103">Verhinderung von Datenverlust (DLP) in Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="6b97f-103">Data Loss Prevention (DLP) in Microsoft Edge</span></span>
+# <a name="data-loss-prevention-dlp-in-microsoft-edge"></a><span data-ttu-id="6b97f-103">Verhinderung von Datenverlust (DLP) in Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="6b97f-103">Data Loss Prevention (DLP) in Microsoft Edge</span></span>
 
 <span data-ttu-id="6b97f-104">Die Verhinderung von Datenverlust (Data Loss Prevention, DLP) ist ein System von Technologien, die vertrauliche Unternehmensdaten erkennen und vor unbefugtem Zugriff schützen.</span><span class="sxs-lookup"><span data-stu-id="6b97f-104">Data loss prevention (DLP) is a system of technologies that identify and safeguard sensitive enterprise data from unauthorized disclosure.</span></span> <span data-ttu-id="6b97f-105">Die Unternehmen müssen vertrauliche Informationen schützen und deren nicht autorisierte Offenlegung verhindern, um den Unternehmensstandards und Branchenvorschriften zu entsprechen.</span><span class="sxs-lookup"><span data-stu-id="6b97f-105">To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its unauthorized disclosure.</span></span> <span data-ttu-id="6b97f-106">Zu den vertraulichen Informationen gehören unter anderem Finanzdaten oder personenbezogene Informationen (PII) wie Kreditkartennummern, Sozialversicherungsnummern oder Krankenakten.</span><span class="sxs-lookup"><span data-stu-id="6b97f-106">Sensitive information includes financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records, among many other things.</span></span>
 
@@ -27,7 +27,7 @@ ms.locfileid: "11314558"
 
 <span data-ttu-id="6b97f-111">Microsoft Edge unterstützt nativ zwei unterschiedliche DLP-Lösungen, Microsoft Endpoint DLP und Windows Information Protection (WIP).</span><span class="sxs-lookup"><span data-stu-id="6b97f-111">Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).</span></span>
 
-## <span data-ttu-id="6b97f-112">Microsoft Endpoint-Verhinderung von Datenverlust (Endpunkt-DLP)</span><span class="sxs-lookup"><span data-stu-id="6b97f-112">Microsoft Endpoint data loss prevention (Endpoint DLP)</span></span>
+## <a name="microsoft-endpoint-data-loss-prevention-endpoint-dlp"></a><span data-ttu-id="6b97f-112">Microsoft Endpoint-Verhinderung von Datenverlust (Endpunkt-DLP)</span><span class="sxs-lookup"><span data-stu-id="6b97f-112">Microsoft Endpoint data loss prevention (Endpoint DLP)</span></span>
 
 <span data-ttu-id="6b97f-113">Microsoft Endpoint DLP ist die nächste Generation der Verhinderung von Datenverlust unter Verwendung moderner Konzepte wie des datenzentrischen Schutzes.</span><span class="sxs-lookup"><span data-stu-id="6b97f-113">Microsoft Endpoint DLP is the next generation of data loss prevention using modern concepts such as data-centric protection.</span></span> <span data-ttu-id="6b97f-114">Sie ist in Windows 10 und Microsoft Edge integriert, sodass keine zusätzlichen Agents oder Plugins auf dem Gerät benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="6b97f-114">It's built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device.</span></span>
 
@@ -51,15 +51,15 @@ ms.locfileid: "11314558"
 
 <span data-ttu-id="6b97f-126">Ausführlichere Informationen zu den Benutzeraktivitäten, die Sie überwachen und verwalten können, finden Sie unter [Endpunktaktivitäten, die Sie überwachen und entsprechende Maßnahmen ergreifen können](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="6b97f-126">For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).</span></span>
 
-## <span data-ttu-id="6b97f-127">Windows Information Protection</span><span class="sxs-lookup"><span data-stu-id="6b97f-127">Windows Information Protection</span></span>
+## <a name="windows-information-protection"></a><span data-ttu-id="6b97f-127">Windows Information Protection</span><span class="sxs-lookup"><span data-stu-id="6b97f-127">Windows Information Protection</span></span>
 
 <span data-ttu-id="6b97f-128">Lesen Sie [Support für Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), in dem beschrieben wird, wie Microsoft Edge Windows Information Protection (WIP) unterstützt.</span><span class="sxs-lookup"><span data-stu-id="6b97f-128">Check out [Support for Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), which describes how Microsoft Edge supports Windows Information Protection (WIP).</span></span> <span data-ttu-id="6b97f-129">In den folgenden Abschnitten finden Sie Informationen zu den Systemanforderungen, den Vorteilen und den unterstützten Funktionen:</span><span class="sxs-lookup"><span data-stu-id="6b97f-129">You can learn moe about system requirements, benefits, and supported features in the following sections:</span></span>
 
-- [<span data-ttu-id="6b97f-130">Systemanforderungen</span><span class="sxs-lookup"><span data-stu-id="6b97f-130">System Requirements</span></span>](https://docs.microsoft.com/deployedge/:microsoft-edge-security-windows-information-protection#system-requirements)
+- [<span data-ttu-id="6b97f-130">Systemanforderungen</span><span class="sxs-lookup"><span data-stu-id="6b97f-130">System Requirements</span></span>](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
 - [<span data-ttu-id="6b97f-131">Vorteile von Windows Information Protection</span><span class="sxs-lookup"><span data-stu-id="6b97f-131">Windows Information Protection Benefits</span></span>](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [<span data-ttu-id="6b97f-132">In Microsoft Edge unterstützte WIP-Features</span><span class="sxs-lookup"><span data-stu-id="6b97f-132">WIP features supported in Microsoft Edge</span></span>](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
-## <span data-ttu-id="6b97f-133">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6b97f-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b97f-133">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6b97f-133">See also</span></span>
 
 - [<span data-ttu-id="6b97f-134">Microsoft Edge Enterprise-Angebotsseite</span><span class="sxs-lookup"><span data-stu-id="6b97f-134">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
 - [<span data-ttu-id="6b97f-135">Video: Verhinderung von Datenverlust in Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="6b97f-135">Video: Data loss prevention - Microsoft Edge</span></span>](https://www.youtube.com/watch?v=dLD04U9eTqg)
