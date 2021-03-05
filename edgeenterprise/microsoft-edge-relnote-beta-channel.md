@@ -3,35 +3,47 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/12/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
-ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
+ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
+ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "11328067"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385627"
 ---
-# Versionshinweise für Microsoft Edge Beta-Kanal
+# <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind [hier](microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
 
-## Version 89.0.774.27: 12. Februar
+## <a name="version-89077445-march-3"></a>Version 89.0.774.45: 3. März
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 89.0.774.23: 8. Februar
+## <a name="version-89077439-february-26"></a>Version 89.0.774.39: 26. Februar
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-89077434-february-22"></a>Version 89.0.774.34: 22. Februar
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-89077427-february-12"></a>Version 89.0.774.27: 12. Februar
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-89077423-february-8"></a>Version 89.0.774.23: 8. Februar
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 <!-- begin major 89 -->
-## Version 89.0.774.18: 3. Februar
+## <a name="version-89077418-february-3"></a>Version 89.0.774.18: 3. Februar
 
-### Funktionsupdates
+### <a name="feature-updates"></a>Funktionsupdates
 
 - **Der Kiosk-Modus ermöglicht zusätzliche Sperrfunktionen**. Ab Microsoft Edge Version 89 haben wir zusätzliche Sperrfunktionen im Kioskmodus hinzugefügt, damit Kunden ihre Arbeit produktiver und sicherer erledigen können. [Mehr dazu](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
@@ -59,9 +71,9 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 - **Unterstützung des Blockierens der automatischen Wiedergabe von Videos**. Ab Microsoft Edge Version 89 haben Benutzer die Möglichkeit, die automatische Wiedergabe von Medien zu blockieren.
 
-### Richtlinienupdates
+### <a name="policy-updates"></a>Richtlinienupdates
 
-#### Neue Richtlinien
+#### <a name="new-policies"></a>Neue Richtlinien
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime) – Durchsuchen der Einstellungen für die Lebensdauer von Daten
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) – Mobile App Management aktiviert
@@ -71,37 +83,37 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 - [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault)– Standard-Druckmodus für Hintergrundgrafiken
 - [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist)– Blockieren der intelligenten Aktionen für eine Liste von Diensten
 
-#### Veraltete Richtlinie
+#### <a name="obsoleted-policies"></a>Veraltete Richtlinie
 
 - [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy): Verwenden Sie die standardmäßige Verweiserrichtlinie „kein Verweiser beim Downgrade“
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) – Aktivieren Sie die Berichterstellung für Nutzung und Absturz
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices)|Senden von Site-Informationen, um die Microsoft-Dienste zu verbessern
 <!-- end major 89 -->
 
-## Version 88.0.705.56: 29. Januar
+## <a name="version-88070556-january-29"></a>Version 88.0.705.56: 29. Januar
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 88.0.705.49: 20. Januar
+## <a name="version-88070549-january-20"></a>Version 88.0.705.49: 20. Januar
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 88.0.705.45: 15. Januar
+## <a name="version-88070545-january-15"></a>Version 88.0.705.45: 15. Januar
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 88.0.705.41: 11. Januar
+## <a name="version-88070541-january-11"></a>Version 88.0.705.41: 11. Januar
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 88.0.705.29: 21. Dezember
+## <a name="version-88070529-december-21"></a>Version 88.0.705.29: 21. Dezember
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 <!-- begin major 88 -->
-## Version 88.0.705.18: 9. Dezember
+## <a name="version-88070518-december-9"></a>Version 88.0.705.18: 9. Dezember
 
-### Funktionsupdates
+### <a name="feature-updates"></a>Funktionsupdates
 
 - **Abschreibungen:**
 
@@ -146,9 +158,9 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
   - Browsersymbole werden auf das Fluent-Designsystem aktualisiert. Im Rahmen unserer fortgesetzten Arbeit an Fluent Design im Browser haben wir Änderungen vorgenommen, um die Symbole näher am neuen Microsoft-Symbolsystem auszurichten. Diese Änderungen wirken sich auf viele unserer High-Touch-Benutzeroberflächen aus, einschließlich Registerkarten, Adressleiste sowie Navigations- und Wegfindungssymbole in unseren verschiedenen Menüs.
   - Verbesserte Schriftwiedergabe. Die Textwiedergabe wurde verbessert, um die Übersichtlichkeit zu verbessern und Unschärfe zu verringern.
 
-### Richtlinienupdates
+### <a name="policy-updates"></a>Richtlinienupdates
 
-#### Neue Richtlinien
+#### <a name="new-policies"></a>Neue Richtlinien
 
 Sechzehn neue Richtlinien wurden hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
@@ -167,7 +179,7 @@ Sechzehn neue Richtlinien wurden hinzugefügt. Laden Sie die aktualisierten admi
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) – Konfiguriert die Verfügbarkeit eines vertikalen Layouts für Registerkarten an der Seite des Browsers.
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) – Ermöglichen Sie ein älteres TLS/DTLS-Downgrade in WebRTC.
 
-#### Veraltete Richtlinien
+#### <a name="deprecated-policies"></a>Veraltete Richtlinien
 
 Die folgenden Richtlinien sind veraltet.
 
@@ -178,7 +190,7 @@ Die folgenden Richtlinien sind veraltet.
 - [Proxyserver](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) – Konfigurieren Sie die Adresse oder URL des Proxyservers.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) – Erlauben Sie WebDriver, inkompatible Richtlinien zu überschreiben.
 
-#### Veraltete Richtlinie
+#### <a name="obsoleted-policies"></a>Veraltete Richtlinie
 
 Die folgenden Richtlinien sind veraltet.
 
@@ -189,40 +201,40 @@ Die folgenden Richtlinien sind veraltet.
 
 <!-- end major 88 -->
 
-## Version 87.0.664.55: 3. Dezember
+## <a name="version-87066455-december-3"></a>Version 87.0.664.55: 3. Dezember
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben. Das folgende neue Feature wird in diesem Release unterstützt.
 
 - **Benachrichtigungen werden generiert, wenn das Kennwort eines Benutzers in einem Onlineleck gefunden wird**. Benutzerkennwörter werden gegen ein Verzeichnis bekannter Anmeldeinformationen überprüft und geben dem Benutzer eine Warnung zurück, wenn eine Übereinstimmung gefunden wird. Um die Sicherheit und den Datenschutz zu gewährleisten, werden Benutzerkennwörter gehashed und verschlüsselt, wenn Sie mit der Datenbank der durchgesickerten Anmeldeinformationen abgeglichen werden.
 
-## Version 87.0.664.52: 30. November
+## <a name="version-87066452-november-30"></a>Version 87.0.664.52: 30. November
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 87.0.664.40: vom 18. November
+## <a name="version-87066440-november-18"></a>Version 87.0.664.40: vom 18. November
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 87.0.664.36: 16. November
+## <a name="version-87066436-november-16"></a>Version 87.0.664.36: 16. November
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 87.0.664.30: 9. November
+## <a name="version-87066430-november-9"></a>Version 87.0.664.30: 9. November
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 87.0.664.24: 2. November
+## <a name="version-87066424-november-2"></a>Version 87.0.664.24: 2. November
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
-## Version 87.0.664.18: 26.Oktober
+## <a name="version-87066418-october-26"></a>Version 87.0.664.18: 26.Oktober
 
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 <!-- begin major 87 -->
-## Version 87.0.664.12: 20.Oktober
+## <a name="version-87066412-october-20"></a>Version 87.0.664.12: 20.Oktober
 
-### Funktionsupdates
+### <a name="feature-updates"></a>Funktionsupdates
 
 - **Datenschutzfeatures des Kioskmodus aktiviert**. Ab MicrosoftEdge, Version87, werden Kioskmodus-Features aktiviert, die Unternehmen im Zusammenhang mit dem Datenschutz für Benutzerdaten helfen. Diese Features ermöglichen es beispielsweise, dass die Benutzerdaten beim Beenden gelöscht werden, dass heruntergeladene Dateien gelöscht werden und dass die konfigurierte Startumgebung nach einer festgelegten Leerlaufzeitspanne zurückgesetzt wird. Informieren Sie sich genauer zum [Konfigurieren des MicrosoftEdge-Kioskmodus](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 - **ClickOnce-Bereitstellung standardmäßig aktiviert**. ClickOnce ist in MicrosoftEdge87 standardmäßig aktiviert, wodurch die Hindernisse für Unternehmen reduziert werden, die Software bereitstellen und mit dem Browserverhalten der Vorgängerversion von MicrosoftEdge besser übereinstimmen möchten. Ab MicrosoftEdge87 gibt der Status „Nicht konfiguriert“ der Richtlinie „ClickOnceEnabled“ den neuen standardmäßigen ClickOnce-Status „Aktiviert“ (im Vergleich zum vorherigen Standardstatus „Deaktiviert“) wieder.
@@ -239,9 +251,9 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
   - Wählen Sie die Seite aus, die beim beidseitigen Drucken gedreht werden soll. Benutzer können auswählen, ob ein Blatt beim beidseitigen Drucken auf die lange Seite (Querformat) oder die kurze Seite (Hochformat) gedreht werden soll.
   - Wählen Sie den Druckmodus „Rasterung“ für das Unternehmen aus. Steuern Sie, wie MicrosoftEdge auf einem Nicht-PostScript-Drucker unter Windows druckt. Manchmal müssen Druckaufträge bei Nicht-PostScript-Druckern gerastert werden, damit korrekt gedruckt wird. Die Druckoptionen sind „Full" (Vollständig) und „Fast“ (Schnell).
 
-### Richtlinienupdates
+### <a name="policy-updates"></a>Richtlinienupdates
 
-#### Neue Richtlinien
+#### <a name="new-policies"></a>Neue Richtlinien
 
 Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
@@ -256,39 +268,39 @@ Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten admin
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) – Zum Konfigurieren der Spracherkennung.
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) – Zum Aktivieren des Features „Weberfassung“ in MicrosoftEdge.
 
-#### Veraltete Richtlinie
+#### <a name="deprecated-policy"></a>Veraltete Richtlinie
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) – Zum Konfigurieren der MicrosoftEdge-Oberfläche für neue Registerkartenseiten.
 
-#### Veraltete Richtlinie
+#### <a name="obsoleted-policy"></a>Veraltete Richtlinie
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) – Zum erneuten Aktivieren von veralteten Features für Webplattformen für einen begrenzten Zeitraum.
 
 <!-- end major 87 -->
 
-## Version 86.0.622.43: 16.Oktober
+## <a name="version-86062243-october-16"></a>Version 86.0.622.43: 16.Oktober
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 86.0.622.36: 7.Oktober
-
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
-
-## Version 86.0.622.31: 1.Oktober
+## <a name="version-86062236-october-7"></a>Version 86.0.622.36: 7.Oktober
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 86.0.622.28: 28. September
+## <a name="version-86062231-october-1"></a>Version 86.0.622.31: 1.Oktober
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## Version 86.0.622.15: 14. September
+## <a name="version-86062228-september-28"></a>Version 86.0.622.28: 28. September
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-86062215-september-14"></a>Version 86.0.622.15: 14. September
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
