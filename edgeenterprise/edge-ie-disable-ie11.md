@@ -3,19 +3,19 @@ title: Deaktivieren von Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Internet Explorer 11 deaktivieren und den Internet Explorer-Modus in Microsoft Edge verwenden können.
-ms.openlocfilehash: 08d1fe48bfc4614710f4a341a285048194a64794
-ms.sourcegitcommit: 928714329d0b11575494f557498f69a8417a3289
+ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385333"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393609"
 ---
 # <a name="disable-internet-explorer-11"></a>Deaktivieren von Internet Explorer 11
 
@@ -67,7 +67,7 @@ Wenn Ihre Websiteliste für den Unternehmensmodus Anwendungen enthält, die für
 
 Führen Sie die folgenden Schritte aus, um Internet Explorer 11 mithilfe von Gruppenrichtlinien zu deaktivieren:
 
-1. Laden Sie die neueste [Microsoft Edge-Richtlinienvorlage ](https://www.microsoft.com/en-us/business/download)herunter, und installieren Sie sie.
+1. Laden Sie die neueste [Microsoft Edge-Richtlinienvorlage ](https://www.microsoft.com/edge/business/download)herunter, und installieren Sie sie.
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
 3. Wechseln Sie zu ***Computerkonfiguration/Administrative Vorlagen/Windows-Komponenten/Internet Explorer***. 
 4. Doppelklicken Sie auf  ** Internet Explorer 11 als eigenständigen Browser deaktivieren**.
