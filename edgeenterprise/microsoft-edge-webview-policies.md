@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge WebView2-Richtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 47072c6e39944bb51fd4c683a9597125d8776d08
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388733"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406356"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 –⁠ Richtlinien
 
@@ -31,9 +31,8 @@ Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wi
 
 In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge WebView2 verfügbaren Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
 
-|||
-|-|-|
-|[Einstellungen für Loader-Außerkraftsetzung](#loader-override-settings)|
+- [Einstellungen für Loader-Außerkraftsetzung](#loader-override-settings)
+
 
 ### [*<a name="loader-override-settings"></a>Einstellungen für Loader-Außerkraftsetzung*](#loader-override-settings-policies)
 
