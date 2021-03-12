@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388727"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406376"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -29,29 +29,36 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-## <a name="new-policies"></a>Neue Richtlinien
+## <a name="new-and-deprecated-policies"></a>Neue und veraltete Richtlinien
 
-In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
+In der folgenden Tabelle sind die neuen und veralteten Richtlinien für dieses Update aufgeführt.
 
-| Name | Beschriftung |
+|Name|Untertitel|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Druckrastermodus|
+|[SSLVersionMin](#sslversionmin)|Minimale TLS-Version aktiviert (veraltet)|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
 In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Browser-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
 
-|||
-|-|-|
-|[Application Guard-Einstellungen](#application-guard-settings)|[Cast](#cast)|
-|[Einstellungen für den Inhalt](#content-settings)|[Standardmäßiger Suchdienstanbieter](#default-search-provider)|
-|[Extensions](#extensions)|[HTTP-Authentifizierung](#http-authentication)|
-|[Einstellungen für den Kioskmodus](#kiosk-mode-settings)|[Verwaltbarkeit](#manageability)|
-|[Systemeigenes Messaging](#native-messaging)|[Kennwort-Manager und Schutz](#password-manager-and-protection)|
-|[Leistung](#performance)|[Drucken](#printing)|
-|[Proxyserver](#proxy-server)|[Einstellungen für „Schlafende Registerkarten“](#sleeping-tabs-settings)|
-|[SmartScreen-Einstellungen](#smartscreen-settings)|[Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)|
-|[Sonstiges](#additional)|
+- [Application Guard-Einstellungen](#application-guard-settings)
+- [Cast](#cast)
+- [Einstellungen für den Inhalt](#content-settings)
+- [Standardmäßiger Suchdienstanbieter](#default-search-provider)
+- [Extensions](#extensions)
+- [HTTP-Authentifizierung](#http-authentication)
+- [Einstellungen für den Kioskmodus](#kiosk-mode-settings)
+- [Verwaltbarkeit](#manageability)
+- [Systemeigenes Messaging](#native-messaging)
+- [Kennwort-Manager und Schutz](#password-manager-and-protection)
+- [Leistung](#performance)
+- [Drucken](#printing)
+- [Proxyserver](#proxy-server)
+- [Einstellungen für „Schlafende Registerkarten“](#sleeping-tabs-settings)
+- [SmartScreen-Einstellungen](#smartscreen-settings)
+- [Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)
+- [Sonstiges](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Application Guard-Einstellungen*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte (veraltet)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Zulassen, dass Benutzer ab der HTTPS-Warnseite fortfahren können|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Zulassen, dass Benutzer von der HTTPS-Warnseite für bestimmte Ursprünge fortfahren können|
-|[SSLVersionMin](#sslversionmin)|Mindestens aktivierte TLS-Version|
+|[SSLVersionMin](#sslversionmin)|Minimale TLS-Version aktiviert (veraltet)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Speichern von Cookies, wenn Microsoft Edge geschlossen wird|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Speichern des Browserverlaufs deaktivieren|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Bildschirmaufnahme zulassen oder verweigern|
@@ -1895,7 +1902,7 @@ Wenn Sie die Richtlinie nicht festlegen, bedeutet dies, dass [DefaultFileSystemR
 
 URL-Muster dürfen nicht mit [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -1964,7 +1971,7 @@ Wenn Sie die Richtlinie nicht festlegen, gilt [DefaultFileSystemReadGuardSetting
 
 URL-Muster dürfen nicht mit [FileSystemReadAskForUrls](#filesystemreadaskforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2033,7 +2040,7 @@ Wenn Sie die Richtlinie nicht festlegen, gilt [DefaultFileSystemWriteGuardSettin
 
 URL-Muster dürfen nicht mit [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2102,7 +2109,7 @@ Wenn Sie die Richtlinie nicht festlegen, gilt [DefaultFileSystemWriteGuardSettin
 
 URL-Muster dürfen nicht mit [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2169,6 +2176,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird für alle Websites der globale Standardwert aus der [DefaultImagesSetting](#defaultimagessetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers verwendet.
 
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
@@ -2233,6 +2242,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die keine Bilder anzeigen dürfen.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultImagesSetting](#defaultimagessetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2299,6 +2310,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Wenn Sie diese Richtlinie nicht konfigurieren, werden blockierbare Mischinhalte blockiert und optional können blockierbare Mischinhalte auch aktualisiert werden. Benutzer können jedoch Ausnahmen festlegen, um unsichere Mischinhalte auf bestimmten Websites zuzulassen.
 
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
@@ -2363,6 +2376,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   Erstellen Sie eine Liste von URL-Mustern, um Websites festzulegen, die keine blockierbaren (d h. aktiven) gemischten Inhalte (also HTTP-Inhalte auf HTTPS-Websites) anzeigen dürfen und für die optional blockierbare Mischinhalte aktualisiert werden.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, werden blockierbare Mischinhalte blockiert und optional können blockierbare Mischinhalte auch aktualisiert werden. Benutzer können jedoch Ausnahmen festlegen, um unsichere Mischinhalte auf bestimmten Websites zuzulassen.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -9129,7 +9144,7 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer 
 
   #### <a name="description"></a>Beschreibung
 
-  Diese Richtlinie wird nicht mehr unterstützt, weil sie nur als kurzfristiger Mechanismus vorgesehen ist, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu verschaffen, falls diese mit der Änderung inkompatibel sind, um synchrone XHR-Anforderungen während der Seitenschließung abzulehnen. Es wird in Microsoft Edge ab Version 88 nicht mehr funktionieren.
+  Diese Richtlinie wird nicht mehr unterstützt, weil sie nur als kurzfristiger Mechanismus vorgesehen ist, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu verschaffen, falls diese mit der Änderung inkompatibel sind, um synchrone XHR-Anforderungen während der Seitenschließung abzulehnen. Dies wird in Microsoft Edge, Version 93 nicht funktionieren.
 
 Mit dieser Richtlinie können Sie festlegen, dass während der Schließung einer Seite synchrone XHR-Anforderungen gesendet werden können.
 
@@ -11052,7 +11067,7 @@ Wenn Sie diese Richtlinie aktivieren, wird der integrierte DNS-Client verwendet 
 
 Wenn Sie diese Richtlinie deaktivieren, wird der integrierte DNS-Client nur verwendet, wenn DNS-over-HTTPS verwendet wird.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, ist der integrierte DNS-Client standardmäßig aktiviert.
+Wenn Sie diese Richtlinie nicht konfigurieren, ist der integrierte DNS-Client unter macOS und Android standardmäßig aktiviert (wenn weder privates DNS noch VPN aktiviert sind).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -11112,7 +11127,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist der integrierte DNS-Client st
 
   Diese Richtlinie ist veraltet, da sie nur als kurzfristiger Mechanismus dienen soll, um Unternehmen mehr Zeit zu geben, ihre Umgebungen zu aktualisieren und Probleme zu melden, wenn sich herausstellt, dass sie mit der integrierten Zertifikatsprüfung nicht kompatibel sind.
 
-Dies wird in der Microsoft Edge für Mac OS X-Version 87 nicht funktionieren, wenn die Entfernung der Unterstützung für die Legacy Zertifikatprüfung aus Microsoft Edge für Mac OS X geplant ist.
+Es wird nicht in Microsoft Edge Version 92 funktionieren, wenn die Unterstützung für die alte Zertifikatsüberprüfung unter Mac OS X entfernt werden soll.
 
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
@@ -19284,9 +19299,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>Mindestens aktivierte TLS-Version
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>Minimale TLS-Version aktiviert (veraltet)
 
-  
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
   
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
@@ -19294,7 +19309,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Beschreibung
 
-  Bestimmt die mindestens unterstützte Version von TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
+  Die Unterstützung für die Unterdrückung der TLS 1.0/1.1-Warnung wird ab Version 91 (ca. Mai 2021) aus Microsoft Edge entfernt und diese Richtlinie wird dann nicht mehr funktionieren.
+
+Bestimmt die mindestens unterstützte Version von TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
 
 Wenn Sie diese Richtlinie festlegen, verwendet Microsoft Edge keine SSL/TLS-Versionen, die niedriger als die angegebene Version sind. Jeder nicht erkannte Wert wird ignoriert.
 
@@ -19323,7 +19340,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: SSLVersionMin
-  - GP-Name: Mindestens aktivierte TLS-Version
+  - GP-Name: Minimale TLS-Version aktiviert (veraltet)
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx

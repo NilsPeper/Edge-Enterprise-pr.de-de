@@ -3,23 +3,23 @@ title: Sprachunterstützung für Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Sprachunterstützung für Microsoft Edge
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Microsoft Edge unterstützt die Anzeigesprache für Windows und macOS.
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384992"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406160"
 ---
 # <a name="microsoft-edge-language-support"></a>Sprachunterstützung für Microsoft Edge
 
-In diesem Artikel wird gezeigt, wie Sie Microsoft Edge-Einstellungen verwenden können, um dem Browser eine unterstützte Sprache hinzuzufügen. Microsoft Edge unterstützt 96 Sprachen unter Windows und 91 Sprachen auf macOS.
+In diesem Artikel wird gezeigt, wie Sie Microsoft Edge-Einstellungen verwenden können, um dem Browser eine unterstützte Sprache hinzuzufügen. Microsoft Edge unterstützt 84 Anzeigesprachen unter Windows und 81 Anzeigesprachen unter macOS.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 78 oder höher.
@@ -58,9 +58,9 @@ Neben der Verwendung einer Fremdsprache im Browser können Sie die Erweiterung [
 > [!NOTE]
 > Wenn die Übersetzererweiterung nach der Installation nicht funktioniert, starten Sie Microsoft Edge neu. Wenn die Erweiterung immer noch nicht funktioniert, geben Sie Feedback über den Feedback-Hub.
 
-## <a name="supported-languages"></a>Unterstützte Sprachen
+## <a name="supported-display-languages"></a>Unterstützte Anzeigesprachen
 
-In der folgenden Tabelle werden die Sprachen aufgeführt, die von Microsoft Edge unterstützt werden.
+In der folgenden Tabelle sind die Anzeigesprachen aufgeführt, die von Microsoft Edge unterstützt werden.
 
 > [!NOTE]
 > Sprachen, die von Microsoft Edge unter macOS nicht unterstützt werden, sind durch ein Sternchen (*) hinter dem Land bzw. der Region gekennzeichnet.  
