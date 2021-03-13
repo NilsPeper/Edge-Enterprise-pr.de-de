@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406376"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408647"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -26,16 +26,9 @@ Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wi
 
 Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) für die empfohlenen grundlegenden Sicherheitskonfigurations-Einstellungen für Microsoft Edge herunterladen. Weitere Informationen finden Sie unter [Microsoft Sicherheitsbaselines-Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
+
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
-
-## <a name="new-and-deprecated-policies"></a>Neue und veraltete Richtlinien
-
-In der folgenden Tabelle sind die neuen und veralteten Richtlinien für dieses Update aufgeführt.
-
-|Name|Untertitel|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|Minimale TLS-Version aktiviert (veraltet)|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 

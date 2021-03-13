@@ -1,4 +1,4 @@
-# last revised 03/08/2021
+# last revised 03/11/2021
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -191,8 +191,6 @@
           href: edge-learnmore-regex.md
         - name: Zurücksetzen von Microsoft Edge-Daten
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: Benutzerdatenverzeichnis-Variablen
-          href: edge-learnmore-create-user-directory-vars.md
         - name: Verwenden des Microsoft Edge-Rollbacks für Unternehmen
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge Videos

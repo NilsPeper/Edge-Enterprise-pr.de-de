@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge WebView2-Richtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 47072c6e39944bb51fd4c683a9597125d8776d08
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: c6516259e2632efba9b80ecd0cb6ee51975f68db
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406356"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408627"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 –⁠ Richtlinien
 
