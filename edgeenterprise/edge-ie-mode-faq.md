@@ -3,32 +3,33 @@ title: FAQ zum IE-Modus
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/02/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: FAQ und Problembehandlung für Microsoft Edge mit IE-Modus
-ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
-ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
+ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
+ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "11312591"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11431812"
 ---
-# FAQ zum IE-Modus
+# <a name="ie-mode-faq"></a>FAQ zum IE-Modus
 
 Dieser Artikel enthält Tipps zur Fehlerbehebung und häufig gestellte Fragen zu Microsoft Edge Version 77 oder höher.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle **Stable**, **Beta** und **Dev**, Version 77 oder höher.
 
-## Problembehandlung für IE-Modus
+
+## <a name="troubleshoot-ie-mode"></a>Problembehandlung für IE-Modus
 
 Verwenden Sie die Informationen in diesem Abschnitt, um Probleme mit dem IE-Modus zu diagnostizieren und zu beheben.
 
-### Diagnoseinformationen zum Internet Explorer-Modus
+### <a name="internet-explorer-mode-diagnostic-information"></a>Diagnoseinformationen zum Internet Explorer-Modus
 
 Sie können Diagnoseinformationen für den Internet Explorer-Modus auf der Registerkarte zur Microsoft Edge-Kompatibilität abrufen. Wechseln Sie zu *edge://compat/iediagnostic*, um diese Registerkarte zu öffnen. Auf dieser Seite werden möglicherweise Diagnosemeldungen angezeigt. Auf dieser Seite finden Sie auch Konfigurationsinformationen zu den folgenden Kategorien:
 
@@ -38,7 +39,7 @@ Sie können Diagnoseinformationen für den Internet Explorer-Modus auf der Regis
 - **Befehlszeile**: Zeigt die Befehlszeilenzeichenfolge und die Schalter an, die zum Starten von Microsoft Edge verwendet werden.
 - **Gruppenrichtlinieneinstellungen**: Zeigt an, ob der IE-Modus mithilfe von Gruppenrichtlinien und den angewendeten Richtlinien konfiguriert ist.
 
-### Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge mit Administratorrechten neu zu installieren."
+### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge mit Administratorrechten neu zu installieren."
 
 Diese Fehlermeldung wird möglicherweise angezeigt, wenn nicht alle erforderlichen Windows-Updates vorhanden sind. Siehe die unter [Info zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode) aufgeführten Voraussetzungen für die erforderlichen Versionen von Windows und Microsoft Edge.
 
@@ -55,39 +56,39 @@ Mögliche Lösungen:
 
 Um zu überprüfen, ob Microsoft Edge auf Systemebene installiert ist, geben Sie "edge://version" in die Adressleiste von Microsoft Edge ein. Der Pfad für die ausführbare Datei beginnt mit *C:\Programmdateien* und weist auf eine Systeminstallation hin. Wenn der Pfad der ausführbaren Datei mit *C:\Users\*, beginnt, deinstallieren Sie Microsoft Edge, und installieren Sie ihn mit Administratorrechten neu.
 
-### Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge neu zu starten."
+### <a name="error-message-to-open-this-page-in-ie-mode-try-restarting-microsoft-edge"></a>Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge neu zu starten."
 
 Dieser Fehler wird möglicherweise angezeigt, wenn in Internet Explorer ein unerwarteter Fehler aufgetreten ist. Beim Neustart von Microsoft Edge wird dieser Fehler in der Regel behoben.
 
-### Fehlermeldung: "Deaktivieren Sie das Remotedebuggen, um diese Website im IE-Modus zu öffnen, da es sonst möglicherweise nicht wie erwartet funktioniert."
+### <a name="error-message-turn-off-remote-debugging-to-open-this-site-in-ie-mode-otherwise-it-might-not-work-as-expected"></a>Fehlermeldung: "Deaktivieren Sie das Remotedebuggen, um diese Website im IE-Modus zu öffnen, da es sonst möglicherweise nicht wie erwartet funktioniert."
 
 Diese Fehlermeldung wird möglicherweise angezeigt, wenn Sie Remotedebuggen durchführen und zu einer Webseite navigieren, die für die Ausführung im IE-Modus konfiguriert ist. Sie können den Vorgang fortsetzen, aber die Seite wird mit Microsoft Edge gerendert.
 
-### Fehlermeldung: "Fehler: EMIE-Site-Liste konnte nicht abgerufen werden."
+### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>Fehlermeldung: "Fehler: EMIE-Site-Liste konnte nicht abgerufen werden."
 
 Möglicherweise wird dieser Fehler auf der *edge://compat/enterprise* Seite angezeigt, der darauf hinweist, dass der Download der Site-Liste fehlgeschlagen ist. Ab Microsoft Edge Version 87 ist die HTTP-Authentifizierung ebenfalls nicht zulässig, wenn Cookies mithilfe der [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies)-Richtlinie für Anforderungen von Drittanbietern blockiert werden. Sie können Cookies für die bestimmte Domain zulassen, in der sich Ihre Site-Liste im Unternehmensmodus befindet, indem Sie die [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls)-Richtlinie verwenden, um sicherzustellen, dass das Herunterladen der Site-Liste erfolgreich ist.
 
-## Häufig gestellte Fragen
+## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
-### Wird der IE-Modus Internet Explorer11 ersetzen?
+### <a name="will-ie-mode-replace-internet-explorer-11"></a>Wird der IE-Modus Internet Explorer11 ersetzen?
 
 Wir bemühen uns, Internet Explorer als unterstützten, zuverlässigen und sicheren Browser zu erhalten. Internet Explorer ist weiterhin eine Komponente des Windows-Betriebssystems, und verfügt daher über denselben Supportlebenszyklus wie das Betriebssystem, auf dem er installiert ist. Weitere Details finden Sie unter [Häufig gestellte Fragen zum Lebenszyklus – Internet Explorer](https://support.microsoft.com/help/17454/). Zwar unterstützt und aktualisiert Microsoft Internet Explorer weiterhin, die neuesten Features und Plattformupdates sind jedoch nur in Microsoft Edge verfügbar.
 
-### Kann ich "Mit Explorer öffnen" oder "Im Datei-Explorer anzeigen" in SharePoint mit dem IE-Modus verwenden?
+### <a name="can-i-use-open-with-explorer-or-view-in-file-explorer-in-sharepoint-with-ie-mode"></a>Kann ich "Mit Explorer öffnen" oder "Im Datei-Explorer anzeigen" in SharePoint mit dem IE-Modus verwenden?
 
 Ja, wenn dies im eigenständigen Internet Explorer 11 funktioniert, funktioniert es auch im IE-Modus. Anstatt aber die Option „Öffnen mit Explorer“ zu verwenden, besteht der empfohlene Ansatz zum Verwalten von Dateien und Ordnern außerhalb von SharePoint darin, [Ihre SharePoint-Dateien zu synchronisieren](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) oder [Dateien in SharePoint zu verschieben oder zu kopieren](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
 
-### Unterstützt der IE-Modus in Microsoft Edge die von Internet Explorer 11 unterstützte Option *nomerge*?
+### <a name="does-ie-mode-on-microsoft-edge-support-the-nomerge-option-that-was-supported-in-internet-explorer-11"></a>Unterstützt der IE-Modus in Microsoft Edge die von Internet Explorer 11 unterstützte Option *nomerge*?
 
 In Microsoft Edge gibt es keine explizite Befehlszeile, die der Option *nomerge* entspricht, aber es gibt eine Reihe von Alternativen, die wir empfehlen, um diese Funktionalität bereitzustellen.
 
 1. Verwenden Sie Profile in Microsoft Edge: Jedes Profil wird einer anderen IE-Sitzung für IE-Modus-Seiten zugeordnet. Dieses Verhalten ist also identisch mit der Option *nomerge*.
 2. Verwenden Sie die Befehlszeile `--user-data-dir=<path>`, aber für jede Sitzung mit einem anderen Pfad. Bei Bedarf können Sie ein Hilfsprogramm für den Benutzer erstellen, mit dem Microsoft Edge gestartet und der Pfad für die Sitzung geändert wird.
 
-Wenn keine der vorstehenden Optionen für Ihr Szenario geeignet ist, setzen Sie sich über einen unserer Feedbackkanäle mit uns in Verbindung: Microsoft-Support, [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) oder [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise).
+Wenn keine der oben genannten Optionen für Ihr Szenario funktioniert, greifen Sie über einen unserer Feedbackkanäle zu: Microsoft-Support oder [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
-### Kann ich Links im Internet Explorer-Modus als Webseiten speichern?
- 
+### <a name="can-i-save-links-as-webpages-in-internet-explorer-mode"></a>Kann ich Links im Internet Explorer-Modus als Webseiten speichern?
+
 Ja, Sie können die Option „Ziel speichern unter“ im Kontextmenü für den Internet Explorer-Modus in Microsoft Edge aktivieren. Konfigurieren Sie dazu die Gruppenrichtlinie *„‘Ziel speichern als‘ im Internet Explorer-Modus zulassen“* unter *Computer-Konfiguration > Administrative Vorlagen > Windows-Komponenten > Internet Explorer*.
 Der Speichermechanismus funktioniert gleich wie in Internet Explorer, und wenn das Ziel als HTML-Datei gespeichert wird, rendert die Datei beim erneuten Öffnen die Seite in Microsoft Edge.
  
@@ -100,7 +101,7 @@ Beachten Sie, dass für diese Funktion die folgenden minimalen Updates für das 
 - Windows 10, Version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Informationen zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode)
