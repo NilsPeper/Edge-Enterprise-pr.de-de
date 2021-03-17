@@ -85,7 +85,7 @@ In Microsoft Edge gibt es keine explizite Befehlszeile, die der Option *nomerge*
 1. Verwenden Sie Profile in Microsoft Edge: Jedes Profil wird einer anderen IE-Sitzung für IE-Modus-Seiten zugeordnet. Dieses Verhalten ist also identisch mit der Option *nomerge*.
 2. Verwenden Sie die Befehlszeile `--user-data-dir=<path>`, aber für jede Sitzung mit einem anderen Pfad. Bei Bedarf können Sie ein Hilfsprogramm für den Benutzer erstellen, mit dem Microsoft Edge gestartet und der Pfad für die Sitzung geändert wird.
 
-Wenn keine der oben genannten Optionen für Ihr Szenario funktioniert, greifen Sie über einen unserer Feedbackkanäle zu: Microsoft-Support oder [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+Wenn keine der oben genannten Optionen für Ihr Szenario funktioniert, setzen Sie sich über einen unserer Feedbackkanäle mit uns in Verbindung: Microsoft-Support oder [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ### <a name="can-i-save-links-as-webpages-in-internet-explorer-mode"></a>Kann ich Links im Internet Explorer-Modus als Webseiten speichern?
 
