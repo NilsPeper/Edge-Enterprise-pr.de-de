@@ -3,26 +3,29 @@ title: Konfigurieren des Microsoft Edge-Kioskmodus
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über Kioskmodus-Features und wie Sie Microsoft Edge-Kioskmodusoptionen konfigurieren können.
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388547"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442485"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Konfigurieren des Microsoft Edge-Kioskmodus
 
 In diesem Artikel wird beschrieben, wie Sie die Optionen für den Microsoft Edge-Kioskmodus Ihren Anforderungen entsprechend konfigurieren können. Eine Roadmap zukünftiger Features wird ebenfalls vorgestellt.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder höher.
+
+> [!IMPORTANT]
+> Aufrufen der Microsoft Edge-Kioskmodusfeatures in Windows 10 mithilfe der Befehlszeilenargumente, die unter [Verwenden von Kioskmodusfeatures](#use-kiosk-mode-features) angegeben sind.
 
 ## <a name="overview"></a>Übersicht
 
@@ -211,7 +214,7 @@ Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ei
 
 Die Veröffentlichung dieser Preview-Version des Kioskmodus erfolgt im Rahmen unserer kontinuierlichen Bemühungen, das Produkt zu verbessern und neue Features hinzuzufügen.
 
-Es wird empfohlen, folgende Elemente zu deaktivieren:
+Wir unterstützen derzeit die folgenden Features nicht und empfehlen, diese zu deaktivieren:
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -224,6 +227,7 @@ Es wird empfohlen, folgende Elemente zu deaktivieren:
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Erweiterungen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Roadmap
 
