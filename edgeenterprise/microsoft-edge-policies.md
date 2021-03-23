@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
-ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
+ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408647"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442475"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -29,6 +29,16 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
+
+## <a name="new-policies"></a>Neue Richtlinien
+
+In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgeführt.
+
+|Name|Untertitel|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Zulassen von Direktlinks auf der neuen Registerkartenseite|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Abrufen der „Keep-alive“-Dauer beim Herunterfahren|
+
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
@@ -230,7 +240,8 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Ausblenden der standardmäßigen Top-Websites auf der neuen Registerkartenseite|
 |[NewTabPageLocation](#newtabpagelocation)|Konfigurieren der URL der neuen Registerkartenseite|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Festlegen der Quicklinks auf der neuen Registerkartenseite|
-|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Aktivieren des Vorabladens der neuen Registerkarte für schnellere Darstellung|
+|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Aktivieren des Vorabladens der neuen Registerkartenseite zur schnelleren Darstellung|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Zulassen von Direktlinks auf der neuen Registerkartenseite|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Konfigurieren der neuen Registerkartenoberfläche für Microsoft Edge (veraltet)|
 |[RestoreOnStartup](#restoreonstartup)|Auszuführende Aktion beim Start|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Websites, die beim Start des Browsers geöffnet werden sollen|
@@ -322,6 +333,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Anzeigen eines „immer öffnen“-Kontrollkästchens im externen Protokoll-Dialog|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Zulassen, dass Benutzer den Familiensicherheits- und Kindermodus konfigurieren|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Aktivieren der Favoritenleiste|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Abrufen der „Keep-alive“-Dauer beim Herunterfahren|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Erzwingen von Bing SafeSearch|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Konfigurieren, ob Microsoft Edge automatisch ein Zertifikat auswählen soll, wenn mehrere Zertifikat-Übereinstimmungen für eine Website vorhanden sind, die mit „AutoSelectCertificateForUrls“ konfiguriert ist|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Verwendung von kurzlebigen Profilen zulassen|
@@ -8454,6 +8466,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="newtabpagequicklinksenabled"></a>NewTabPageQuickLinksEnabled
+
+  #### <a name="allow-quick-links-on-the-new-tab-page"></a>Zulassen von Direktlinks auf der neuen Registerkartenseite
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 91 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, zeigt Microsoft Edge auf der neuen Registerkartenseite Direktlinks an, und der Benutzer kann mit dem Steuerelement interagieren und Direktlinks ein- und ausschalten. Wenn Sie diese Richtlinie aktivieren, werden keine Direktlinks angezeigt. Der Benutzer kann weiterhin Direktlinks ein- und ausschalten.
+
+Wenn Sie diese Richtlinie deaktivieren, blendet Microsoft Edge Direktlinks auf der neuen Registerkartenseite aus und deaktiviert das Steuerelement für Direktlinks im Flyout der NTP-Einstellungen.
+
+Diese Richtlinie gilt nur für lokale Microsoft Edge-Benutzerprofile, mit einem Microsoft-Konto angemeldete Profile und mit Active Directory angemeldete Profile. Verwenden Sie das M365-Verwaltungsportal, um die Enterprise-Seite „Neue Registerkarte” für Profile zu konfigurieren, die mit Azure Active Directory angemeldet sind.
+
+Verwandte Richtlinie: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: NewTabPageQuickLinksEnabled
+  - GP-Name: Zulassen von Direktlinks auf der neuen Registerkartenseite
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Start, Startseite und neue Registerkarte
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): N/A
+  - Wertname: NewTabPageQuickLinksEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: NewTabPageQuickLinksEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
   #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Konfigurieren der neuen Registerkartenoberfläche für Microsoft Edge (veraltet)
@@ -14376,6 +14452,68 @@ Wenn diese Richtlinie nicht konfiguriert ist, kann der Benutzer entscheiden, die
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+
+  #### <a name="fetch-keepalive-duration-on-shutdown"></a>Abrufen der „Keep-alive“-Dauer beim Herunterfahren
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und macOS seit 90 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Steuert die Dauer (in Sekunden), in der „Keep-alive“-Anforderungen zulässig sind, um zu verhindern, dass der Browser das Herunterfahren beendet.
+
+Wenn Sie diese Richtlinie konfigurieren, blockiert der Browser das Beenden des Herunterfahrens, während alle ausstehenden „Keep-alive“-Anforderungen verarbeitet werden (siehe https://fetch.spec.whatwg.org/#request-keepalive-flag) bis zu dem durch diese Richtlinie angegebenen maximalen Zeitraum).
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Standardwert von 0 Sekunden verwendet, und ausstehende „Keep-alive“-Anforderungen werden beim Herunterfahren des Browsers sofort abgebrochen.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Ganze Zahl
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: FetchKeepaliveDurationOnShutdown
+  - GP-Name: Abrufen der „Keep-alive“-Dauer beim Herunterfahren
+  - GP-Pfad (verpflichtend): Administrative Vorlagen/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): N/A
+  - Wertname: FetchKeepaliveDurationOnShutdown
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: FetchKeepaliveDurationOnShutdown
+  - Beispielwert:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
   #### <a name="enforce-bing-safesearch"></a>Erzwingen von Bing SafeSearch
@@ -15102,7 +15240,11 @@ Beliebte Einzelwort-Suchbegriffe benötigen eine manuelle Auswahl von Suchvorsch
 
   #### <a name="description"></a>Beschreibung
 
-  Hostnamen, die in dieser Liste angegeben sind, sind von der HSTS-Richtlinienüberprüfung ausgenommen, die möglicherweise Anfragen von "http://" auf "https://" hochstuft. In dieser Richtlinie sind nur Einzelbezeichnungs-Hostnamen zulässig. Hostnamen müssen kanonisch sein. Jeder IDN muss in sein A-Label-Format konvertiert werden, und alle ASCII-Zeichen müssen in Kleinbuchstaben vorliegen. Diese Richtlinie gilt nur für die explizit angegebenen Hostnamen. Er gilt nicht für Unterdomänen der Namen in der Liste.
+  Durch Festlegen der Richtlinie wird eine Liste der Hostnamen angegeben, die vorab geladene HSTS-Upgrades von http auf https umgehen.
+
+In dieser Richtlinie sind nur Hostnamen mit einer Bezeichnung zulässig, und diese Richtlinie gilt nur für statische HSTS-vorinstallierte Einträge (z. B. „App“, „neu“, „Suche“, „abspielen“). Diese Richtlinie verhindert keine HSTS-Upgrades für Server, die dynamisch HSTS-Upgrades mit einem Strict-Transport-Security-Antwortheader angefordert haben.
+
+Angegebene Hostnamen müssen kanonisch sein: Alle IDNs müssen in das A-Beschriftungsformat konvertiert werden, und alle ASCII-Buchstaben müssen kleingeschrieben werden. Diese Richtlinie gilt nur für die angegebenen Hostnamen mit einer einzelnen Bezeichnung, nicht für Unterdomänen dieser Namen.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -16819,9 +16961,11 @@ Dies ist über das Menü "Weitere Tools" durch Auswahl der Option "Websites im I
 
 Darüber hinaus können Benutzer ihre Anwendungen in einem modernen Browser testen, ohne Anwendungen aus der Websiteliste zu entfernen, indem sie die Option "Websites im Edge-Modus öffnen" verwenden.
 
-Diese Einstellung funktioniert in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) auf „IEMode“ und der Richtlinie „[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)“, wenn die Liste mindestens einen Eintrag hat.
+Diese Einstellung kann verwendet werden in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), festgelegt auf „IEMode“.
+   
+                                                                                                                         
 
-Wenn Sie diese Richtlinie aktivieren, wird die Option "Websites im Internet Explorer-Modus öffnen" unter "Weitere Tools" angezeigt. Benutzer können ihre Websites im Internet Explorer-Modus in diesem Tab anzeigen. Die Option "Websites im Edge-Modus öffnen" wird auch unter "Weitere Tools" angezeigt, um das Testen von Websites in einem modernen Browser zu ermöglichen, ohne sie aus der Websiteliste zu entfernen.
+Wenn Sie diese Richtlinie aktivieren, wird die Option „Websites im Internet Explorer-Modus öffnen" unter „Weitere Tools" angezeigt. Benutzer können ihre Websites im Internet Explorer-Modus in diesem Tab anzeigen. Die Option "Websites im Edge-Modus öffnen" wird auch unter "Weitere Tools" angezeigt, um das Testen von Websites in einem modernen Browser zu ermöglichen, ohne sie aus der Websiteliste zu entfernen.
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Optionen "Im Internet Explorer-Modus öffnen" und "Im Edge-Modus öffnen" nicht im Menü "Weitere Tools" angezeigt. Benutzer können diese Optionen jedoch mit dem --ie-mode-test-Flag konfigurieren.
 
