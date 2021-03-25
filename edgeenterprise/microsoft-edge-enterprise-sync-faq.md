@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Häufig gestellte Fragen zur Microsoft Edge Enterprise-Synchronisierung.
-ms.openlocfilehash: 51f6dfc4cd8f308815ee111c30d5501ec0e44f59
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400192"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447869"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>FAQ zur Microsoft Edge Enterprise-Synchronisierung
 
@@ -25,11 +25,11 @@ In diesem Artikel finden Sie Antworten auf häufig gestellte Fragen zur Unterneh
 
 ### <a name="is-the-synced-data-encrypted"></a>Werden die synchronisierten Daten verschlüsselt?
 
-Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Alle Datentypen werden im Ruhezustand im Microsoft-Dienst zusätzlich mit AES-128 verschlüsselt. Alle Datentypen mit Ausnahme derjenigen, die für die Synchronisierung von geöffneten Registerkarten und Verlaufsdaten verwendet werden, werden mit über die [Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern)-Richtlinie verwalteten Schlüsseln zusätzlich verschlüsselt, bevor sie das Gerät des Benutzers verlassen.
+Die Daten werden beim Transport mithilfe von TLS 1.2 oder höher verschlüsselt. Alle Datentypen werden im Ruhezustand im Microsoft-Dienst zusätzlich mit AES-128 verschlüsselt. Alle Datentypen mit Ausnahme derjenigen, die für die Synchronisierung von geöffneten Registerkarten und Verlaufsdaten verwendet werden, werden mit über die [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern)-Richtlinie verwalteten Schlüsseln zusätzlich verschlüsselt, bevor sie das Gerät des Benutzers verlassen.
 
 ### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>Warum haben die Daten von offenen Registerkarten und Verlaufsdaten nicht weitere clientseitige Verschlüsselung?
 
-Um die Ressourcenauslastung auf Endbenutzergeräten zu verringern, werden Verlaufsdaten serverseitig basierend auf den Roaming-Daten der offenen Registerkarten generiert. Dieser Vorgang wäre bei clientseitiger Verschlüsselung dieser Daten nicht möglich. Wenden Sie die Richtlinien [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) oder [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) an, um die Synchronisierung von geöffneten Registerkarten und Verlaufsdaten zu deaktivieren.
+Um die Ressourcenauslastung auf Endbenutzergeräten zu verringern, werden Verlaufsdaten serverseitig basierend auf den Roaming-Daten der offenen Registerkarten generiert. Dieser Vorgang wäre bei clientseitiger Verschlüsselung dieser Daten nicht möglich. Wenden Sie die Richtlinien [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) oder [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) an, um die Synchronisierung von geöffneten Registerkarten und Verlaufsdaten zu deaktivieren.
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>Können Mandantenadministratoren ihren eigenen Schlüssel mitbringen?
 
@@ -63,7 +63,7 @@ Nein. ESR kann verwendet werden, um die Synchronisierung zu aktivieren, aber Mic
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Wird Microsoft Edge jemals die Synchronisierung zwischen Microsoft Edge und IE unterstützen?
 
-Es gibt keine Pläne, diese Synchronisierung zu unterstützen. Wenn Sie in Ihrer Umgebung noch IE zur Unterstützung von Legacyanwendungen benötigen, sollten Sie unseren [neuen IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode) in Betracht ziehen.
+Es gibt keine Pläne, diese Synchronisierung zu unterstützen. Wenn Sie in Ihrer Umgebung noch IE zur Unterstützung von Legacyanwendungen benötigen, sollten Sie unseren [neuen IE-Modus](./edge-ie-mode.md) in Betracht ziehen.
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>Wird Microsoft Edge mit der Vorgängerversion von Microsoft Edge synchronisiert?
 
@@ -73,7 +73,7 @@ Nein. Wir sind der Meinung, dass die Verbindung dieser beiden Ökosysteme zu Kom
 
 ### <a name="is-it-possible-to-stop-my-users-from-syncing-with-a-personal-tenant"></a>Kann ich verhindern, dass meine Benutzer mit einem persönlichen Mandanten synchronisiert werden?
 
-Nicht direkt. Sie können jedoch mithilfe der Richtlinie [RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern) festlegen, welche Profile sich bei Microsoft Edge anmelden können.
+Nicht direkt. Sie können jedoch mithilfe der Richtlinie [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern) festlegen, welche Profile sich bei Microsoft Edge anmelden können.
 
 ## <a name="see-also"></a>Weitere Informationen
 

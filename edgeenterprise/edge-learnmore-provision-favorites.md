@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Bereitstellen von Favoriten für Microsoft Edge
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088699"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447599"
 ---
-# Bereitstellen von Favoriten für Microsoft Edge
+# <a name="provision-favorites-for-microsoft-edge"></a>Bereitstellen von Favoriten für Microsoft Edge
 
 Angeregt durch Kundenfeedback haben wir Verbesserungen vorgenommen, um die Bereitstellung von Favoriten zu erleichtern. Ab Microsoft Edge, Version 85 müssen Administratoren keine Dateien mehr manuell erstellen, um Favoriten bereitzustellen. Administratoren können zum Hinzufügen von Favoriten und Ordnern die Microsoft Edge-Benutzeroberfläche verwenden, um eine Datei zu generieren, die in eine Gruppenrichtlinie exportiert werden kann.
 
-In diesem Artikel wird beschrieben, wie Sie Favoriten und Ordner für Ihre Organisation bereitstellen. Sie können die Richtlinie zum [Konfigurieren von Favoriten](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) verwenden, um Favoriten und Ordner bereitzustellen.
+In diesem Artikel wird beschrieben, wie Sie Favoriten und Ordner für Ihre Organisation bereitstellen. Sie können die Richtlinie zum [Konfigurieren von Favoriten](//DeployEdge/microsoft-edge-policies#configure-favorites) verwenden, um Favoriten und Ordner bereitzustellen.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 85 oder neuer.
 
-## Voraussetzungen und Empfehlungen
+## <a name="prerequisites-and-recommendations"></a>Voraussetzungen und Empfehlungen
 
 - Microsoft Edge, Version 85 mit installierter entsprechender administrativer Vorlage für Gruppenrichtlinien.
 - Wir empfehlen, zum Bereitstellen dieser Favoriten ein neues Profil in Microsoft Edge zu verwenden. Alle Favoriten, die über dieses Profil gespeichert werden, werden in den Export einbezogen.  
 
-## Bereitstellen von Favoriten und Ordnern
+## <a name="provision-favorites-and-folders"></a>Bereitstellen von Favoriten und Ordnern
 
 Führen Sie die folgenden Schritte aus, um Ihren Benutzern Favoriten und Ordner bereitzustellen.
 
@@ -66,6 +66,6 @@ Führen Sie die folgenden Schritte aus, um Ihren Benutzern Favoriten und Ordner 
 
 7. Klicken Sie auf **OK** oder **Übernehmen**, um die Richtlinieneinstellungen zu speichern.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Verhinderung von Datenverlust (DLP) in Microsoft Edge
-ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+ms.openlocfilehash: ac34386ed1b691d7b45f30c2b2ec295955d11104
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384983"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447929"
 ---
 # <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Verhinderung von Datenverlust (DLP) in Microsoft Edge
 
@@ -37,8 +37,8 @@ Microsoft Endpoint DLP ist die nächste Generation der Verhinderung von Datenver
 Verwenden Sie die folgenden Ressourcen, um mehr über Endpunkt-DLP zu erfahren:
 
 - [Video: Microsoft Edge und Verhinderung von Datenverlust (DLP)](microsoft-edge-video-security-dlp.md)
-- [Informationen zur Verhinderung von Microsoft 365-Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
-- [Erste Schritte mit der Verhinderung von Endpunkt Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
+- [Informationen zur Verhinderung von Microsoft 365-Endpunkt Datenverlust](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide)
+- [Erste Schritte mit der Verhinderung von Endpunkt Datenverlust](/microsoft-365/compliance/endpoint-dlp-getting-started?preserve-view=true&view=o365-worldwide)
 
 Microsoft Edge erzwingt administratorenkonfigurierte Richtlinien für vertrauliche Dateien und zeichnet Überwachungsereignisse für nicht kompatible Aktivitäten auf.
 
@@ -49,19 +49,19 @@ Einige der Benutzeraktivitäten, die Sie auf Geräten unter Windows 10 überwach
 - Druckschutz: Schützen vertraulicher Dateien, die gedruckt werden sollen.
 - Auf USB/ Im Netzwerk speichern: Schützen vertraulicher Dateien vor dem Speichern in einem USB-Speicher oder nicht autorisierten Netzwerkspeicherorten.
 
-Ausführlichere Informationen zu den Benutzeraktivitäten, die Sie überwachen und verwalten können, finden Sie unter [Endpunktaktivitäten, die Sie überwachen und entsprechende Maßnahmen ergreifen können](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).
+Ausführlichere Informationen zu den Benutzeraktivitäten, die Sie überwachen und verwalten können, finden Sie unter [Endpunktaktivitäten, die Sie überwachen und entsprechende Maßnahmen ergreifen können](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
 
 ## <a name="windows-information-protection"></a>Windows Information Protection
 
-Lesen Sie [Support für Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), in dem beschrieben wird, wie Microsoft Edge Windows Information Protection (WIP) unterstützt. In den folgenden Abschnitten finden Sie Informationen zu den Systemanforderungen, den Vorteilen und den unterstützten Funktionen:
+Lesen Sie [Support für Windows Information Protection](./microsoft-edge-security-windows-information-protection.md), in dem beschrieben wird, wie Microsoft Edge Windows Information Protection (WIP) unterstützt. In den folgenden Abschnitten finden Sie Informationen zu den Systemanforderungen, den Vorteilen und den unterstützten Funktionen:
 
-- [Systemanforderungen](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
-- [Vorteile von Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
-- [In Microsoft Edge unterstützte WIP-Features](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
+- [Systemanforderungen](./microsoft-edge-security-windows-information-protection.md#system-requirements)
+- [Vorteile von Windows Information Protection](./microsoft-edge-security-windows-information-protection.md#windows-information-protection-benefits)
+- [In Microsoft Edge unterstützte WIP-Features](./microsoft-edge-security-windows-information-protection.md#wip-features-supported-in-microsoft-edge)
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Video: Verhinderung von Datenverlust in Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [Übersicht über die Verhinderung von Datenverlust](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
-- [Schützen von Unternehmensdaten mithilfe von Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Übersicht über die Verhinderung von Datenverlust](/microsoft-365/compliance/data-loss-prevention-policies?preserve-view=true&view=o365-worldwide)
+- [Schützen von Unternehmensdaten mithilfe von Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

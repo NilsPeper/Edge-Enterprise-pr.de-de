@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planen der Kioskmodusumstellung
-ms.openlocfilehash: 3a438c6dd71d9e1f0e644d24e3b1d1d60b099e8e
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314235"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447849"
 ---
-# Planen der Kioskmodusumstellung
+# <a name="plan-your-kiosk-mode-transition"></a>Planen der Kioskmodusumstellung
 
 Dieser Artikel enthält Anleitungen zur Umstellung Ihres Kiosks der Vorgängerversion von Microsoft Edge auf Microsoft Edge.  
 
@@ -27,7 +27,7 @@ Dieser Artikel enthält Anleitungen zur Umstellung Ihres Kiosks der Vorgängerve
 > [!IMPORTANT]
 > Wenn die Unterstützung für die Vorgängerversion von Microsoft Edge am 9.März 2021 endet, wird es entfernt und im Rahmen von Windows Update von April durch Microsoft Edge (Chromium-basiert) ersetzt. Weitere Informationen finden Sie [in diesem Blogbeitrag](https://aka.ms/EdgeLegacyEOS). Damit Sie ihre browserbasierten Kioskszenarien weiterhin verwenden können, müssen Sie Microsoft Edge (Chromium-basiert) installieren und den Kioskmodus vor der Windows Update-Freigabe von April auf Ihrem Gerät einrichten.
 
-## Schritte zum Einrichten des Kiosks
+## <a name="kiosk-setup-steps"></a>Schritte zum Einrichten des Kiosks
 
 Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks in Microsoft Edge.
 
@@ -35,34 +35,34 @@ Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks i
 
 |Feature|Digital\Interactive Signage|Öffentliches Surfen|Verfügbar mit Microsoft Edge, Version (und höher)|Verfügbar mit der Vorgängerversion von Microsoft Edge|
 |-|-|-|-|-|
-|InPrivate-Navigation|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|J|
+|InPrivate-Navigation|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|„Y“ zugeordnet ist|
 |Zurücksetzen bei Inaktivität|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|J|
-|[Schreibgeschützte Adressleiste](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (Richtlinie) |N|„Y“ zugeordnet ist |89|N|
-|[Löschen von Downloads beim Beenden](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (Richtlinie)  | „Y“ zugeordnet ist|„Y“ zugeordnet ist |89|N|
-|F11 blockiert (Vollbildmodus aktivieren/deaktivieren) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
+|[Schreibgeschützte Adressleiste](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (Richtlinie) |N|„Y“ zugeordnet ist |89|N|
+|[Löschen von Downloads beim Beenden](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (Richtlinie)  | „Y“ zugeordnet ist|„Y“ zugeordnet ist |89|N|
+|F11 blockiert (Vollbildmodus aktivieren/deaktivieren) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |„Y“ zugeordnet ist|
 |F12 blockiert (Entwicklertools starten) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
 | Unterstützung für mehrere Registerkarten | N| „Y“ zugeordnet ist| 89|J|
-|[Unterstützung von URLs zulassen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (Richtlinie)|J|„Y“ zugeordnet ist|89|N|
-|[Unterstützung von URLs sperren](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (Richtlinie)|J|„Y“ zugeordnet ist|89|N|
-|[Schaltfläche „Start“ anzeigen](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
-|[Favoriten verwalten](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
-|[Drucker aktivieren](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (Richtlinie)|J|„Y“ zugeordnet ist|89|J|
-|[Konfigurieren der URL der neuen Registerkartenseite](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist||J|
+|[Unterstützung von URLs zulassen](./microsoft-edge-policies.md#urlallowlist) (Richtlinie)|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|N|
+|[Unterstützung von URLs sperren](./microsoft-edge-policies.md#urlblocklist) (Richtlinie)|J|„Y“ zugeordnet ist|89|N|
+|[Schaltfläche „Start“ anzeigen](./microsoft-edge-policies.md#showhomebutton) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
+|[Favoriten verwalten](./microsoft-edge-policies.md#managedfavorites) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
+|[Drucker aktivieren](./microsoft-edge-policies.md#printingenabled) (Richtlinie)|J|„Y“ zugeordnet ist|89|J|
+|[Konfigurieren der URL der neuen Registerkartenseite](./microsoft-edge-policies.md#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist||J|
 |Sitzung beenden | N| „Y“ zugeordnet ist| 89|J|
-|Alle internen Microsoft Edge-URLs werden blockiert, mit Ausnahme von *edge://downloads* und *edge://print* |N|„Y“ zugeordnet ist|89|J|
+|Alle internen Microsoft Edge-URLs werden blockiert, mit Ausnahme von *edge://downloads* und *edge://print* |N|„Y“ zugeordnet ist|89|„Y“ zugeordnet ist|
 | STRG+N blockiert (neues Fenster öffnen) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
 | STRG+T blockiert (neue Registerkarte öffnen) |J | „Y“ zugeordnet ist | 89 |J|
-|Einstellungen und mehr (...) zeigt nur die erforderlichen Optionen an.  |J |„Y“ zugeordnet ist |89 |J|
-|Start anderer Anwendungen über den Browser einschränken|J|J|90/91|J|
-|Sperrung der Benutzeroberflächen-Druckeinstellungen|J|J|90/91|J|
-|[Neue Registerkartenseite als Startseite festlegen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (Richtlinie)|-|-|TBD|J|
+|Einstellungen und mehr (...) zeigt nur die erforderlichen Optionen an.  |„Y“ zugeordnet ist |„Y“ zugeordnet ist |89 |„Y“ zugeordnet ist|
+|Start anderer Anwendungen über den Browser einschränken|J|„Y“ zugeordnet ist|90/91|J|
+|Sperrung der Benutzeroberflächen-Druckeinstellungen|J|„Y“ zugeordnet ist|90/91|J|
+|[Neue Registerkartenseite als Startseite festlegen](./microsoft-edge-policies.md#homepageisnewtabpage) (Richtlinie)|-|-|TBD|J|
 
 > [!NOTE]
 > Informationen zum Veröffentlichungszeitplan für Microsoft Edge finden Sie unter [Microsoft Edge-Veröffentlichungszeitplan](microsoft-edge-release-schedule.md).
 
 **Schritt 2: Testen des neuen Kiosk in Microsoft Edge.** Es wird empfohlen, das Einrichten des Kioskmodus in Microsoft Edge zu testen. Eine schnelle und einfache Möglichkeit zum Testen des Kioskmodus ist das Konfigurieren einer Einzel-App mit zugewiesenen Zugriff mithilfe der Windows-Einstellungen, wie im Folgenden beschrieben.
 
-1. Installieren Sie die neueste Windows 10 Insider Preview-Version (20215 oder höher). Folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](https://docs.microsoft.com/windows-insider/get-started).
+1. Installieren Sie die neueste Windows 10 Insider Preview-Version (20215 oder höher). Folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](/windows-insider/get-started).
 2. Installieren Sie die neueste Version des [Microsoft Edge Stable-Kanals,](https://www.microsoft.com/edge)Version 87 oder höher.  Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, herunterladen.
 
    > [!IMPORTANT]
@@ -109,11 +109,11 @@ Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks i
 
 **Schritt 3: Entwickeln eines Umstellungsplans.** Basierend auf Ihren Test- und organisatorischen Anforderungen empfehlen wir die Entwicklung eines Umstellungplans und den Wechsel zu Microsoft Edge (Chromium-basiert), bevor der Support für die Vorgängerversion von Microsoft Edge am 9. März 2021 endet.
 
-## Zusätzliche Szenarien, in denen Sie einen vorhandenen Kioskmodus neu erstellen müssen
+## <a name="additional-scenarios-that-require-you-to-recreate-an-existing-kiosk-mode"></a>Zusätzliche Szenarien, in denen Sie einen vorhandenen Kioskmodus neu erstellen müssen
 
 Wenn Sie auf Windows 10, Version 20H2, aktualisieren, wird Microsoft Edge (Chromium-basiert) installiert und die Vorgängerversion von Microsoft Edge verborgen. In diesem Fall müssen Sie den Kioskmodus in Microsoft Edge (Chromium-basiert) erneut einrichten.
 
-## So erhalten Sie Hilfe
+## <a name="how-to-get-help"></a>So erhalten Sie Hilfe
 
 Der Kioskmodus ist möglicherweise ein wichtiger Bestandteil Ihres täglichen Geschäfts. Daher möchten wir ihnen helfen, diese Umstellung so reibungslos wie möglich zu gestalten und Unterbrechungen zu vermeiden. Wenn Ihr Unternehmen bei der Umstellung auf Microsoft Edge (Chromium-basiert) Hilfe benötigt:
 
@@ -121,7 +121,7 @@ Der Kioskmodus ist möglicherweise ein wichtiger Bestandteil Ihres täglichen Ge
 - Für Kunden mit 150 oder mehr kostenpflichtigen Plätzen von Windows 10 Enterprise ist zudem [FastTrack-Support](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) kostenlos verfügbar.
 - [App Assure](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure) ist verfügbar, wenn Website- oder App-Kompatibilitätsprobleme auftreten.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Neues Microsoft Edge ersetzt die Vorgängerversion von Microsoft Edge im Rahmen des Windows 10 Update Tuesday Release von April](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)

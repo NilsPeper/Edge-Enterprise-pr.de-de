@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: So automatisieren Sie Microsoft Edge für die macOS-Bereitstellung mit Jamf.
-ms.openlocfilehash: 8639c0b7bf78bb8e22370dba29b592af73d8cb40
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: f02b9efde872082cf2301a4cf66b0a3f3782e39b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194723"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447489"
 ---
-# Bereitstellen unter macOS mit JAMF
+# <a name="deploy-to-macos-with-jamf"></a>Bereitstellen unter macOS mit JAMF
 
 In diesem Artikel wird beschrieben, wie Microsoft Edge für macOS mithilfe von Jamf bereitgestellt wird.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie vor der Bereitstellung von Microsoft Edge sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 - Die Microsoft Edge-Installationsdatei **MicrosoftEdgeDev-\<version\>.pkg** befindet sich an einem zugänglichen Speicherort in Ihrem Netzwerk. Sie können die Installationsdateien für Microsoft Edge Enterprise von der [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise) herunterladen.
 - Sie verfügen über ein JAMF-Cloud-Konto mit der Zugriffsebene und den erforderlichen Berechtigungen zum Erstellen und Bereitstellen von Installationsdateien auf Computern.
 
-## So stellen Sie Microsoft Edge mithilfe von Jamf bereit:
+## <a name="to-deploy-microsoft-edge-using-jamf"></a>So stellen Sie Microsoft Edge mithilfe von Jamf bereit:
 
 1. Melden Sie sich bei Jamf an und wechseln Sie zu **Alle Einstellungen**.
 
@@ -93,8 +93,8 @@ Stellen Sie vor der Bereitstellung von Microsoft Edge sicher, dass die folgenden
 
 Herzlichen Glückwunsch! Sie haben soeben die Konfiguration von Jamf für die Bereitstellung von Microsoft Edge für macOS abgeschlossen. Wenn die von Ihnen definierte auslösende Bedingung „true” ist, wird das Paket auf den von Ihnen angegebenen Computern bereitgestellt.
 
-## Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Jamf in Microsoft Intune integrieren](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Jamf in Microsoft Intune integrieren](/intune/conditional-access-integrate-jamf)

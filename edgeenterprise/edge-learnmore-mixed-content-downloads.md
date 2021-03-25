@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge und Downloads gemischter Inhalte
-ms.openlocfilehash: 57da17a8684b97aad88e7837ff9d070f6862357b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 13cc9d935dfe415039078b2ca794945b4fa2d1a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979981"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447269"
 ---
-# Informationen zu Microsoft Edge und Downloads gemischter Inhalte
+# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Informationen zu Microsoft Edge und Downloads gemischter Inhalte
 
 In diesem Artikel werden Downloads gemischter Inhalte erläutert und wie Microsoft Edge mit diesen umgeht.
 
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version 85 oder neuer.
 
-## Was sind Downloads gemischter Inhalte?
+## <a name="what-are-mixed-content-downloads"></a>Was sind Downloads gemischter Inhalte?
 
 Zu einem Download gemischter Inhalte kommt es, wenn Sie einen Download von einer HTML-Seite starten, die über eine sichere HTTPS-Verbindung geladen wurde, wobei aber eine der folgenden Bedingungen besteht:
 
@@ -33,7 +33,7 @@ Zu einem Download gemischter Inhalte kommt es, wenn Sie einen Download von einer
 
 Bei beiden Szenario handelt es sich um gemischten Inhalt, da die Anforderung mit sicherem HTTPS gestellt wurde und sowohl HTTP- als auch HTTPS-Inhalt beim Erreichen des endgültigen Downloadziels beteiligt sind. In modernen Browsern werden Warnungen zu diesem Typ von Inhalt angezeigt, um den Benutzer darauf hinzuweisen, dass dieser Download möglicherweise ungesichert übertragen wird, auch wenn die Seite des ursprünglichen Zugriffs sicher war.
 
-## Downloadwarnungen und Benutzeroptionen
+## <a name="download-warnings-and-user-options"></a>Downloadwarnungen und Benutzeroptionen
 
 Die Downloadwarnung stellt sicher, dass Benutzer wissen, dass die Datei, die sie gerade herunterladen, von bösartigen Angreifern in Ihrem Netzwerk gelesen werden könnte. Durch diese Warnung kann sich ein Benutzer fundiert entscheiden, ob die Datei heruntergeladen werden soll.
 
@@ -56,17 +56,17 @@ Wenn sich ein Benutzer entschließt, den Download zu behalten, wird er zum Best�
 
  ![Internet Explorer-Modus](./media/edge-learnmore-mixed-content-downloads/edge-mixed-content-download-override.png)
 
-## Unterstützende Richtlinien
+## <a name="supporting-policies"></a>Unterstützende Richtlinien
 
-Unternehmen, die das Blockieren gemischter Inhalte von bestimmten Websites ausschließen möchten, können hierfür die Richtlinie [InsecureContentAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) verwenden.
+Unternehmen, die das Blockieren gemischter Inhalte von bestimmten Websites ausschließen möchten, können hierfür die Richtlinie [InsecureContentAllowedForUrls](./microsoft-edge-policies.md#insecurecontentallowedforurls) verwenden.
 
-## Lizenz für Inhalte
+## <a name="content-license"></a>Lizenz für Inhalte
 
 > [!NOTE]
 > Teile dieser Seite sind Änderungen, die auf von Chromium.org erstellten und freigegebenen Werken basieren und gemäß den in der [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) beschriebenen Begriffen verwendet werden. Die Originalseite von Chromium finden Sie [hier](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Diese Arbeit unterliegt einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Veröffentlichungszeitplan
-ms.openlocfilehash: 7c679918a52a251a53ed5aa5d36df587ba1c46ab
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: a78c56d4c20da711eb73679dbe1c974bfac3c869
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442410"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448179"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge-Veröffentlichungszeitplan
 
@@ -23,7 +23,7 @@ In diesem Artikel wird der Versionsrhythmus und der erwartete Veröffentlichungs
 
 ## <a name="release-cadence"></a>Versionsrhythmus
 
-Microsoft bietet vier Optionen, sogenannte „Kanäle“, zum Verwalten, wie oft Microsoft Edge mit neuen Features aktualisiert wird. Das Microsoft Edge-Team plant, alle sechs Wochen öffentliche Updates für die Beta- und Stable-Kanäle bereitzustellen. Weitere Informationen zu unseren Kanälen, deren Veröffentlichungszyklus und den Supportstufen finden Sie in der [Kanalübersicht](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview).
+Microsoft bietet vier Optionen, sogenannte „Kanäle“, zum Verwalten, wie oft Microsoft Edge mit neuen Features aktualisiert wird. Das Microsoft Edge-Team plant, alle sechs Wochen öffentliche Updates für die Beta- und Stable-Kanäle bereitzustellen. Weitere Informationen zu unseren Kanälen, deren Veröffentlichungszyklus und den Supportstufen finden Sie in der [Kanalübersicht](./microsoft-edge-channels.md#channel-overview).
 
 > [!NOTE]
 > Beginnend mit der Stable-Channel-Version 94 geht Microsoft Edge zu einem 4-wöchigen Hauptversionszyklus über. Wir wissen jedoch, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge-Updates zu planen und zu testen. Um unsere Unternehmenskunden zu unterstützen, die einen längeren Zeitrahmen für die Verwaltung von Updates benötigen, wird Microsoft Edge eine **Extended Stable-Option anbieten, die auf einen längeren, 8-wöchigen Hauptversionszyklus** ausgerichtet ist; diese Option wird nur für Kunden mit verwalteten Umgebungen verfügbar sein.
@@ -41,9 +41,9 @@ In der folgenden Tabelle werden nur die Informationen der Hauptversionen in beid
 
 | Version | Veröffentlichungsstatus | Beta-Kanal<br>Veröffentlichungswoche | Stable-Kanal<br>Veröffentlichungswoche |
 |---------|-----|------|--------|
-| 88 | Veröffentlicht<br>Version | 9. Dezember 2020<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 21. Januar 2021<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
-| **89** | Veröffentlicht<br>Version | 3. Feb 2021<br>[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3) | **4. März 2021**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
-| **90** | Veröffentlicht<br>Version | **16. März 2021**<br>**[90.0.818.8](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16)** | Woche vom 15. April 2021 |
+| 88 | Veröffentlicht<br>Version | 9. Dezember 2020<br>[88.0.705.18](./microsoft-edge-relnote-beta-channel.md#version-88070518-december-9) | 21. Januar 2021<br>[88.0.705.50](./microsoft-edge-relnote-stable-channel.md#version-88070550-january-21)|
+| **89** | Veröffentlicht<br>Version | 3. Feb 2021<br>[89.0.774.18](./microsoft-edge-relnote-beta-channel.md#version-89077418-february-3) | **4. März 2021**<br>**[89.0.774.45](./microsoft-edge-relnote-stable-channel.md#version-89077445-march-21)** |
+| **90** | Veröffentlicht<br>Version | **16. März 2021**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | Woche vom 15. April 2021 |
 | 91 | Zielversion | Woche vom 27. April 2021 | Woche vom 27. Mai 2021 |
 | 92 | Zielversion | Woche vom 08. Juni 2021 | Woche vom 22. Juli 2021 |
 | 93 | Zielversion | Woche vom 03. August 2021 | Woche vom 02. September 2021 |

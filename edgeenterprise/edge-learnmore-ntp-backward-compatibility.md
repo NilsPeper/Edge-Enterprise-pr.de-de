@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Abwärtskompatibilität für Enterprise-Seite „Neue Registerkarte”
-ms.openlocfilehash: c10671a6ec8e1ff4dcb0db3f3c085f82ae973122
-ms.sourcegitcommit: af6ab070d0c09bca4a9cf505b107ed7e04839763
+ms.openlocfilehash: 5721db16c634250b3a586f6bd1b6b531a07815a5
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "11144481"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447259"
 ---
-# Abwärtskompatibilität für Enterprise-Seite „Neue Registerkarte”
+# <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a>Abwärtskompatibilität für Enterprise-Seite „Neue Registerkarte”
 
 Dieser Artikel beschreibt die Änderung auf der Seite „Neue Registerkarte“ und wie Benutzer mit Microsoft Edge Version 87 und früher abwärtskompatibel sein können.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.
 
-## Informations-Feeds von einem einzigen Endpunkt
+## <a name="information-feeds-from-single-endpoint"></a>Informations-Feeds von einem einzigen Endpunkt
 
 Die neue Version der Enterprise-Seite „Neue Registerkarte“ kombiniert konforme Microsoft 365-Inhalte mit branchenrelevanten und konformen Informations-Feeds, die über den MSN.com-Endpunkt bereitgestellt werden.
 
@@ -33,9 +33,9 @@ Die neue Version der Enterprise-Seite „Neue Registerkarte“ kombiniert konfor
 
 Wenn der Zugriff auf die MSN.com-Domäne für Ihre Organisation eingeschränkt ist, empfehlen wir dringend, den Benutzern den Zugriff auf diese [URL](https://ntp.msn.com).
 
-Wenn Sie mehr Zeit benötigen, um den Zugriff auf die MSN-Domäne zu ermöglichen, empfehlen wir die Verwendung von [NewTabPageSetFeedType](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagesetfeedtype), mit dem Sie für die Seite „Neue Registerkarte“ entweder die Microsoft News- oder die Office 365-Feed-Erfahrung wählen können.
+Wenn Sie mehr Zeit benötigen, um den Zugriff auf die MSN-Domäne zu ermöglichen, empfehlen wir die Verwendung von [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype), mit dem Sie für die Seite „Neue Registerkarte“ entweder die Microsoft News- oder die Office 365-Feed-Erfahrung wählen können.
 
-### Verwenden Sie weiterhin Office.com
+### <a name="keep-using-officecom"></a>Verwenden Sie weiterhin Office.com
 
  Sie können die Richtlinie **NewTabPageSetFeedType** so konfigurieren, dass weiterhin die veraltete Office.com-Domäne verwendet wird.
 
@@ -47,12 +47,12 @@ Die folgenden Richtlinieneinstellungen erzwingen, dass die Enterprise-Seite „N
 - Legen Sie die Richtlinie als **Obligatorisch** fest.
 - Legen Sie den Wert für die Richtlinienzuordnung auf **Office (1) = Office 365-Feed-Erfahrung** fest.
 
-Wenn der Umstieg auf Office.com nicht möglich ist, wenden Sie sich an uns und senden Sie uns Ihr Feedback. Eine weitere Möglichkeit besteht darin, die [NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) so zu konfigurieren, dass sie auf eine Endpunkt-URL verweist, die von Ihrer Organisation zulässig ist.
+Wenn der Umstieg auf Office.com nicht möglich ist, wenden Sie sich an uns und senden Sie uns Ihr Feedback. Eine weitere Möglichkeit besteht darin, die [NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) so zu konfigurieren, dass sie auf eine Endpunkt-URL verweist, die von Ihrer Organisation zulässig ist.
 
 > [!NOTE]
 > Die Richtlinie **NewTabPageLocation** hat Vorrang, wenn auch die Richtlinie **NewTabPageSetFeedType** konfiguriert ist.
 
-## Enterprise-Benutzer erhalten jetzt Microsoft-Nachrichteninhalte über „Mein Feed“
+## <a name="enterprise-users-will-now-get-microsoft-news-content-via-my-feed"></a>Enterprise-Benutzer erhalten jetzt Microsoft-Nachrichteninhalte über „Mein Feed“
 
 Die Enterprise-Seite „Neue Registerkarte“ bietet branchenrelevante Informationen in **Mein Feed** und Office 365-Inhalt in einer einzigen Ansicht für Benutzer, die mit Ihrem Azure Active Directory (Azure AD)-Konto angemeldet sind. Für Benutzer, die mit ihrem Azure Active Directory (Azure AD) angemeldet sind und im Einstellungs-Flyout die Option „Microsoft News“ gewählt haben, wird die neue Registerkartenansicht durch den Inhalt von **Mein Feed** ersetzt. Wenn sie eine neue Registerkarte im Browser öffnen, sieht diese wie das Beispiel im nächsten Screenshot aus.
 
@@ -61,7 +61,7 @@ Die Enterprise-Seite „Neue Registerkarte“ bietet branchenrelevante Informati
 > [!NOTE]
 > Benutzer, die nicht bei Azure AD angemeldet sind, sehen weiterhin den MSN News-Feed, wenn sie eine neue Registerkarte öffnen.
 
-## Seitenlayout
+## <a name="page-layout"></a>Seitenlayout
 
 Mit den Änderungen an der Seite „Neue Registerkarte“ muss das Seitenlayout nicht mehr zwei bestimmte Inhaltstypen (Office 365 und Microsoft News) steuern, so dass der Inhaltsumschalter nicht mehr verfügbar ist. Im nächsten Screenshot wird das Flyout für das Seitenlayout angezeigt.
 
@@ -69,7 +69,7 @@ Mit den Änderungen an der Seite „Neue Registerkarte“ muss das Seitenlayout 
 
 Wenn Sie weiterhin auf Microsoft News-Inhalte zugreifen möchten, die nicht an Ihre Organisation gebunden sind, müssen Sie ein anderes Browserprofil verwenden. Wechseln Sie zu *edge://settings/profiles*, und melden Sie sich von Ihrem Azure AD-Profil ab. Mit dieser Aktion wird die standardmäßige Anzeige für die Enterprise-Seite „Neue Registerkarte“ angezeigt. 
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Unternehmensmodus für Internet Explorer 11](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Unternehmensmodus für Internet Explorer 11](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

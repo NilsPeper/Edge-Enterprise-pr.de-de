@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: FAQ und Problembehandlung für Microsoft Edge mit IE-Modus
-ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
-ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
+ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11431812"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447729"
 ---
 # <a name="ie-mode-faq"></a>FAQ zum IE-Modus
 
@@ -41,7 +41,7 @@ Sie können Diagnoseinformationen für den Internet Explorer-Modus auf der Regis
 
 ### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge mit Administratorrechten neu zu installieren."
 
-Diese Fehlermeldung wird möglicherweise angezeigt, wenn nicht alle erforderlichen Windows-Updates vorhanden sind. Siehe die unter [Info zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode) aufgeführten Voraussetzungen für die erforderlichen Versionen von Windows und Microsoft Edge.
+Diese Fehlermeldung wird möglicherweise angezeigt, wenn nicht alle erforderlichen Windows-Updates vorhanden sind. Siehe die unter [Info zum IE-Modus](./edge-ie-mode.md) aufgeführten Voraussetzungen für die erforderlichen Versionen von Windows und Microsoft Edge.
 
 Diese Fehlermeldung wird möglicherweise angezeigt, wenn alle erforderlichen Windows-Updates installiert sind:
 
@@ -66,7 +66,7 @@ Diese Fehlermeldung wird möglicherweise angezeigt, wenn Sie Remotedebuggen durc
 
 ### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>Fehlermeldung: "Fehler: EMIE-Site-Liste konnte nicht abgerufen werden."
 
-Möglicherweise wird dieser Fehler auf der *edge://compat/enterprise* Seite angezeigt, der darauf hinweist, dass der Download der Site-Liste fehlgeschlagen ist. Ab Microsoft Edge Version 87 ist die HTTP-Authentifizierung ebenfalls nicht zulässig, wenn Cookies mithilfe der [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies)-Richtlinie für Anforderungen von Drittanbietern blockiert werden. Sie können Cookies für die bestimmte Domain zulassen, in der sich Ihre Site-Liste im Unternehmensmodus befindet, indem Sie die [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls)-Richtlinie verwenden, um sicherzustellen, dass das Herunterladen der Site-Liste erfolgreich ist.
+Möglicherweise wird dieser Fehler auf der *edge://compat/enterprise* Seite angezeigt, der darauf hinweist, dass der Download der Site-Liste fehlgeschlagen ist. Ab Microsoft Edge Version 87 ist die HTTP-Authentifizierung ebenfalls nicht zulässig, wenn Cookies mithilfe der [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies)-Richtlinie für Anforderungen von Drittanbietern blockiert werden. Sie können Cookies für die bestimmte Domain zulassen, in der sich Ihre Site-Liste im Unternehmensmodus befindet, indem Sie die [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls)-Richtlinie verwenden, um sicherzustellen, dass das Herunterladen der Site-Liste erfolgreich ist.
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -104,5 +104,5 @@ Beachten Sie, dass für diese Funktion die folgenden minimalen Updates für das 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Informationen zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Weitere Informationen zum Unternehmensmodus](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Informationen zum IE-Modus](./edge-ie-mode.md)
+- [Weitere Informationen zum Unternehmensmodus](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

@@ -10,33 +10,33 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie hier, wie Sie Microsoft Edge mithilfe vom System Center Konfigurations-Manager (SCCM) bereitstellen können.
-ms.openlocfilehash: be14f2db3b28b7585bfad1706b9f82209235df0a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979957"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447829"
 ---
-# Bereitstellen von Microsoft Edge mithilfe vom System Center Konfigurations-Manager
+# <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Bereitstellen von Microsoft Edge mithilfe vom System Center Konfigurations-Manager
 
 In diesem Artikel erfahren Sie, wie Sie eine Microsoft Edge-Bereitstellung mithilfe vom System Center Konfigurations-Manager (SCCM) automatisieren.
 
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
-## Vorbemerkungen
+## <a name="before-you-begin"></a>Vorbemerkungen
 
-Lesen Sie die Informationen im Artikel [Einführung in die Anwendungsverwaltung im Konfigurations-Manager](https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management). Dieser Artikel zur Anwendungsverwaltung hilft Ihnen, die in diesem Artikel verwendete Terminologie zu verstehen und ist ein Leitfaden für die Vorbereitung Ihrer Website für die Installation von Anwendungen.
+Lesen Sie die Informationen im Artikel [Einführung in die Anwendungsverwaltung im Konfigurations-Manager](/sccm/apps/understand/introduction-to-application-management). Dieser Artikel zur Anwendungsverwaltung hilft Ihnen, die in diesem Artikel verwendete Terminologie zu verstehen und ist ein Leitfaden für die Vorbereitung Ihrer Website für die Installation von Anwendungen.
 
 Laden Sie die Microsoft Edge Enterprise-Installationsdateien (**MicrosoftEdgeDevEnterpriseX64.msi** und/oder **MicrosoftEdgeDevEnterpriseX86.msi**) von der [Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)-Angebotsseite herunter.
 
 Stellen Sie sicher, dass Sie die Microsoft Edge-Installationsdateien an einem zugänglichen Netzwerkspeicherort speichern.
 
-## Erstellen der Anwendung
+## <a name="create-the-application"></a>Erstellen der Anwendung
 
 Sie erstellen die Anwendung mithilfe eines Assistenten für Konfigurations-Manager.
 
-### Starten des Anwendungserstellungs-Assistenten und Erstellen der Anwendung  
+### <a name="start-the-create-application-wizard-and-create-the-application"></a>Starten des Anwendungserstellungs-Assistenten und Erstellen der Anwendung  
 
 1. Klicken Sie in der Konfigurations-Manager-Konsole auf **Softwarebibliothek** > **Anwendungsverwaltung** > **Anwendungen**.  
 
@@ -85,7 +85,7 @@ Der folgende Screenshot zeigt das für diesen Artikel verwendete Beispiel.
 
 ![Anwendungen](./media/edge-ent-deployment-sccm/edge-ent-create-app-8.png)
 
-## Ändern von Anwendungseigenschaften und Bereitstellungseinstellungen
+## <a name="change-application-properties-and-deployment-settings"></a>Ändern von Anwendungseigenschaften und Bereitstellungseinstellungen
 
 Nachdem Sie eine Anwendung erstellt haben, können Sie die Anwendungseinstellungen bei Bedarf verfeinern. So zeigen Sie die Anwendungseigenschaften an:
 
@@ -94,7 +94,7 @@ Nachdem Sie eine Anwendung erstellt haben, können Sie die Anwendungseinstellung
 
    ![Konfigurieren der Anwendungseigenschaften](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-1.png)
 
- Auf der Dialogseite **<application name\> Anwendungseigenschaften** wird eine Registerkartenansicht der Elemente angezeigt, die Sie konfigurieren können, um das Verhalten der Anwendung zu ändern. Weitere Informationen über die konfigurierbaren Einstellungen finden Sie unter [Anwendungen erstellen](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications).
+ Auf der Dialogseite **<application name\> Anwendungseigenschaften** wird eine Registerkartenansicht der Elemente angezeigt, die Sie konfigurieren können, um das Verhalten der Anwendung zu ändern. Weitere Informationen über die konfigurierbaren Einstellungen finden Sie unter [Anwendungen erstellen](/sccm/apps/deploy-use/create-applications).
 
 In diesem Beispiel ändern Sie einige Eigenschaften des Bereitstellungstyps der Anwendung. So ändern Sie die Bereitstellungseigenschaften:
 
@@ -104,7 +104,7 @@ In diesem Beispiel ändern Sie einige Eigenschaften des Bereitstellungstyps der 
 
    ![Bearbeiten Sie den Bereitstellungstyp.](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-2.png)
 
-### Fügen Sie dem Bereitstellungstyp eine Anforderung hinzu.
+### <a name="add-a-requirement-to-the-deployment-type"></a>Fügen Sie dem Bereitstellungstyp eine Anforderung hinzu.
 
  Mit Anforderungen werden Bedingungen angegeben, die erfüllt sein müssen, bevor eine Anwendung auf einem Gerät installiert wird. Sie können aus integrierten Anforderungen auswählen oder Ihre eigene Anforderung erstellen. Sie können beispielsweise eine Anforderung hinzufügen, dass die Anwendung nur auf PCs installiert wird, auf denen Windows10 **x86** oder **x64** ausgeführt wird, abhängig von der Zielprozessorarchitektur der Installationsdatei. In diesem Beispiel geben Sie Windows10 **x86** an.
 
@@ -132,12 +132,12 @@ In diesem Beispiel ändern Sie einige Eigenschaften des Bereitstellungstyps der 
 
 4. Klicken Sie auf **OK**, um die einzelnen geöffneten Eigenschaftenseiten zu schließen und zur Liste **Anwendungen** in der Konfigurations-Manager-Konsole zurückzukehren.  
 
-## Hinzufügen des Anwendungsinhalts zu einem Verteilungspunkt  
+## <a name="add-the-application-content-to-a-distribution-point"></a>Hinzufügen des Anwendungsinhalts zu einem Verteilungspunkt  
 
 Um die aktualisierte Anwendung auf PCs bereitzustellen, müssen Sie sicherstellen, dass der Anwendungsinhalt auf einen Verteilungspunkt kopiert wird. PCs greifen auf den Verteilungspunkt zu, um die Anwendung zu installieren.  
 
 >[!TIP]
->Weitere Informationen zu Verteilungspunkten und zur Inhaltsverwaltung im Konfigurations-Manager finden Sie unter [Bereitstellen und Verwalten von Inhalten für System Center Konfigurations-Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
+>Weitere Informationen zu Verteilungspunkten und zur Inhaltsverwaltung im Konfigurations-Manager finden Sie unter [Bereitstellen und Verwalten von Inhalten für System Center Konfigurations-Manager](/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
 
 1. Klicken Sie in der Konfigurations-Manager-Konsole auf **Softwarebibliothek**.  
 
@@ -155,7 +155,7 @@ Um die aktualisierte Anwendung auf PCs bereitzustellen, müssen Sie sicherstelle
 
 Sie können im Arbeitsbereich **Überwachung** unter **Verteilungsstatus** > **Inhaltsstatus** überprüfen, ob der Anwendungsinhalt erfolgreich auf den Verteilungspunkt kopiert wurde.  
 
-## Bereitstellen der Anwendung  
+## <a name="deploy-the-application"></a>Bereitstellen der Anwendung  
 
 Stellen Sie als Nächstes die Anwendung für eine Gerätesammlung in Ihrer Hierarchie bereit. In diesem Beispiel stellen Sie die Anwendung für die Gerätesammlung **Alle Systeme“** bereit.  
 
@@ -199,11 +199,11 @@ Stellen Sie als Nächstes die Anwendung für eine Gerätesammlung in Ihrer Hiera
 
 Verwenden Sie die Informationen im folgenden Abschnitt **Überwachen der Anwendung**, um den Status der Anwendungsbereitstellung anzuzeigen.  
 
-## Die Anwendung überwachen
+## <a name="monitor-the-application"></a>Die Anwendung überwachen
 
  In diesem Abschnittsehen Sie sich den Bereitstellungsstatus der soeben bereitgestellten Anwendung an.  
 
-### So überprüfen Sie den Bereitstellungsstatus  
+### <a name="to-review-the-deployment-status"></a>So überprüfen Sie den Bereitstellungsstatus  
 
 1. Klicken Sie in der Konfigurations-Manager-Konsole auf **Überwachung** > **Bereitstellungen**.  
 
@@ -226,13 +226,13 @@ Verwenden Sie die Informationen im folgenden Abschnitt **Überwachen der Anwendu
     - **Unbekannt**: Der Konfigurations-Manager konnte den Status der Bereitstellung nicht melden. Bitte versuchen Sie es später noch einmal.  
 
     >[!TIP]
-    >Es gibt verschiedene Möglichkeiten, Anwendungsbereitstellungen zu überwachen. Weitere Informationen finden Sie unter [Überwachen von Anwendungen in der System Center Konfigurations-Manager-Konsole](https://docs.microsoft.com/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+    >Es gibt verschiedene Möglichkeiten, Anwendungsbereitstellungen zu überwachen. Weitere Informationen finden Sie unter [Überwachen von Anwendungen in der System Center Konfigurations-Manager-Konsole](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
-## Installationsoptionen für Endbenutzer  
+## <a name="end-user-experience"></a>Installationsoptionen für Endbenutzer  
 
 Benutzer mit PCs, die von Konfigurations-Manager verwaltet werden und Windows10 der angegebenen Prozessorarchitektur ausführen, werden in einer Meldung darüber informiert, dass sie die Microsoft Edge Dev-Anwendung installieren müssen. Wenn sie diese Installationsoption akzeptieren, wird die Anwendung installiert.  
 
-## Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Weitere Informationen zum Bereitstellen von MSI-Paketen finden Sie unter Erstellen und Bereitstellen einer Anwendung mit System Center Konfigurations-Manager.](https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application)
+- [Weitere Informationen zum Bereitstellen von MSI-Paketen finden Sie unter Erstellen und Bereitstellen einer Anwendung mit System Center Konfigurations-Manager.](/sccm/apps/get-started/create-and-deploy-an-application)

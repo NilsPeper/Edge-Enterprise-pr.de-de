@@ -10,19 +10,19 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Umleitung von Internet Explorer zu Microsoft Edge zur Kompatibilität mit modernen Websites
-ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175198"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447589"
 ---
-# Umleitung von Internet Explorer zu Microsoft Edge zur Kompatibilität mit modernen Websites
+# <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Umleitung von Internet Explorer zu Microsoft Edge zur Kompatibilität mit modernen Websites
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf die stabile Microsoft Edge Version 87 oder neuer.
 
-## Übersicht
+## <a name="overview"></a>Übersicht
 
 Viele moderne Websites haben Designs, die mit Internet Explorer nicht kompatibel sind. Immer wenn ein Internet Explorer-Benutzer eine inkompatible öffentliche Website besucht, erhält er eine Nachricht, die besagt, dass die Website mit seinem Browser inkompatibel ist, und er muss manuell zu einem anderen Browser wechseln.
 
@@ -31,9 +31,9 @@ Die Notwendigkeit, manuell zu einem anderen Browser zu wechseln, ändert sich ab
 Wenn ein Benutzer zu einer Website wechselt, die mit Internet Explorer nicht kompatibel ist, wird er automatisch zu Microsoft Edge umgeleitet. In diesem Artikel werden die Benutzererfahrung für die Umleitung sowie die Gruppenrichtlinien beschrieben, die zum Konfigurieren oder Deaktivieren der automatischen Umleitung verwendet werden.
 
 > [!NOTE]
-> Microsoft verwaltet eine Liste aller Websites, von denen bekannt ist, dass sie nicht mit Internet Explorer kompatibel sind. Weitere Informationen finden Sie unter [Anfordern von Updates für die Liste inkompatibler Websites](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+> Microsoft verwaltet eine Liste aller Websites, von denen bekannt ist, dass sie nicht mit Internet Explorer kompatibel sind. Weitere Informationen finden Sie unter [Anfordern von Updates für die Liste inkompatibler Websites](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
-## Umleitungserfahrung
+## <a name="redirection-experience"></a>Umleitungserfahrung
 
 Bei der Umleitung zu Microsoft Edge wird den Benutzern das einmalige Dialogfeld im nächsten Screenshot angezeigt. In diesem Dialogfeld wird erklärt, warum sie umgeleitet werden, und fordert sie auf, die Zustimmung zum Kopieren ihrer Browserdaten und -Einstellungen von Internet Explorer zu Microsoft Edge zu erteilen. Die folgenden Browserdaten werden importiert: Favoriten, Kennwörter, Suchmaschinen, offene Registerkarten, Verlauf, Einstellungen, Cookies und die Startseite.
 
@@ -56,7 +56,7 @@ Wenn eine Website von Internet Explorer zu Microsoft Edge umgeleitet wird, wird 
 > [!NOTE]
 > Nach einer Umleitung können Benutzer zu Internet Explorer zurückkehren, um Websites zu nutzen, die nicht in der Internet Explorer-Inkompatibilitätsliste enthalten sind.  
 
-## Richtlinien zum Konfigurieren der Umleitung zu Microsoft Edge
+## <a name="policies-to-configure-redirection-to-microsoft-edge"></a>Richtlinien zum Konfigurieren der Umleitung zu Microsoft Edge
 
 > [!NOTE]
 > Diese Richtlinien werden bis zum 26. Oktober 2020 als ADMX-Datei-Updates, und bis zum 9. November 2020 in Intune verfügbar sein.
@@ -67,7 +67,7 @@ Drei Gruppenrichtlinien müssen konfiguriert sein, um die automatische Umleitung
 - RedirectSitesFromInternetExplorerRedirectMode
 - HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-### Richtlinie: RedirectSitesFromInternetExplorerPreventBHOInstall
+### <a name="policy-redirectsitesfrominternetexplorerpreventbhoinstall"></a>Richtlinie: RedirectSitesFromInternetExplorerPreventBHOInstall
 
 Die Umleitung von Internet Explorer zu Microsoft Edge erfordert ein Internet Explorer-Browserhilfsobjekt (BHO) mit dem Namen „IEtoEdge BHO“. Die Richtlinie **RedirectSitesFromInternetExplorerPreventBHOInstall** steuert, ob dieses BHO installiert ist oder nicht.  
 
@@ -76,7 +76,7 @@ Die Umleitung von Internet Explorer zu Microsoft Edge erfordert ein Internet Exp
 
 Zusätzlich zur Notwendigkeit des BHO gibt es eine Abhängigkeit bei **RedirectSitesFromInternetExplorerRedirectMode**, was auf „Websites basierend auf der Websiteliste inkompatibler Websites umleiten“ oder „Nicht konfiguriert“ festgelegt sein muss.
 
-### Richtlinie: RedirectSitesFromInternetExplorerRedirectMode
+### <a name="policy-redirectsitesfrominternetexplorerredirectmode"></a>Richtlinie: RedirectSitesFromInternetExplorerRedirectMode
 
  Diese Richtlinie entspricht der Microsoft Edge-**Standardbrowser**-Einstellung „Internet Explorer kann Websites in Microsoft Edge öffnen". Sie können auf diese Einstellung zugreifen, indem Sie zur URL *edge://settings/defaultbrowser* wechseln.  
 
@@ -88,9 +88,9 @@ Zusätzlich zur Notwendigkeit des BHO gibt es eine Abhängigkeit bei **RedirectS
 >
 >Wenn Sie ein in die Domäne eingebundenes Gerät oder ein beim Mobile Device Management (MDM) registriertes Gerät verwenden, wird diese Option nicht angezeigt.
 >
-> Wenn Sie Ihren Benutzern stattdessen das Laden von Websites im Internet Explorer-Modus gestatten möchten, können Sie dies tun, indem Sie die Richtlinie [Internet Explorer-Modustest](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing) konfigurieren.
+> Wenn Sie Ihren Benutzern stattdessen das Laden von Websites im Internet Explorer-Modus gestatten möchten, können Sie dies tun, indem Sie die Richtlinie [Internet Explorer-Modustest](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing) konfigurieren.
 
-### Richtlinie: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>Richtlinie: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
 Diese Richtlinie konfiguriert die Benutzererfahrung bei der Umleitung bei inkompatiblen Websites zu Microsoft Edge.  
 
@@ -100,7 +100,7 @@ Diese Richtlinie konfiguriert die Benutzererfahrung bei der Umleitung bei inkomp
   > [!NOTE]
   > Benutzer-Browserdaten werden jedes Mal importiert, wenn ein Benutzer neu umgeleitet wird. Dies geschieht jedoch nur, wenn der Benutzer dem Import im einmaligen Umleitungsdialogfeld zugestimmt hat.
 
-## Deaktivieren der Umleitung zu Microsoft Edge
+## <a name="disable-redirection-to-microsoft-edge"></a>Deaktivieren der Umleitung zu Microsoft Edge
 
 Wenn Sie die Umleitung VOR dem Update auf die stabile Microsoft Edge-Version 87 deaktivieren möchten, führen Sie die folgenden Schritte aus:
 
@@ -111,8 +111,8 @@ Wenn Sie die Umleitung NACH dem Update auf die stabile Microsoft Edge-Version 87
 1. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerRedirectMode** auf **Aktiviert** fest, und wählen Sie dann in der Dropdownliste unter “Optionen: Inkompatible Websites von Internet Explorer zu Microsoft Edge umleiten” **Deaktivieren** aus. Diese Einstellung beendet die Umleitung, sobald die Richtlinie wirksam wird.
 2. Legen Sie die Richtlinie **RedirectSitesFromInternetExplorerPreventBHOInstall** auf **Aktiviert** fest. Damit wird das BHO nach dem nächsten Microsoft Edge-Update deinstalliert.
 
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 
-- [Anfordern von Updates für die Liste inkompatibler Websites](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [Anfordern von Updates für die Liste inkompatibler Websites](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge-Richtlinien](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+- [Microsoft Edge-Richtlinien](./microsoft-edge-policies.md)

@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren von Richtlinien für den IE-Modus
-ms.openlocfilehash: 2d2ded3a3fb338bdf2d815d681b52249007945ac
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979940"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447359"
 ---
-# Konfigurieren von Richtlinien für den IE-Modus
+# <a name="configure-ie-mode-policies"></a>Konfigurieren von Richtlinien für den IE-Modus
 
 In diesem Artikel wird erläutert, wie Sie Richtlinien für den IE-Modus konfiguriert werden.
 
@@ -31,13 +31,13 @@ Zum Konfigurieren des IE-Modus sind drei Schritte erforderlich:
 3. (Optional) [Umleiten von Websites von Internet Explorer zu Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
-> Richtlinien zum Aktivieren des IE-Modus können über Intune konfiguriert werden. Weitere Informationen finden Sie unter [Microsoft Edge zu Microsoft Intune hinzufügen](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) und [Microsoft Edge-Richtlinien mit Microsoft Intune konfigurieren](https://docs.microsoft.com/DeployEdge/configure-edge-with-intune).
+> Richtlinien zum Aktivieren des IE-Modus können über Intune konfiguriert werden. Weitere Informationen finden Sie unter [Microsoft Edge zu Microsoft Intune hinzufügen](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) und [Microsoft Edge-Richtlinien mit Microsoft Intune konfigurieren](./configure-edge-with-intune.md).
 
-## Konfigurieren der Internet Explorer-Integration
+## <a name="configure-internet-explorer-integration"></a>Konfigurieren der Internet Explorer-Integration
 
 Sie können Internet Explorer so konfigurieren, dass er direkt in Microsoft Edge (IE-Modus) geöffnet wird. Sie können Internet Explorer auch so konfigurieren, dass er in einem eigenen Internet Explorer 11-Fenster geöffnet wird. Die meisten Benutzer bevorzugen es, wenn Websites direkt in Microsoft Edge im IE-Modus geöffnet werden.
 
-### Aktivieren der Internet Explorer-Integration mithilfe einer Gruppenrichtlinie
+### <a name="enable-internet-explorer-integration-using-group-policy"></a>Aktivieren der Internet Explorer-Integration mithilfe einer Gruppenrichtlinie
 
 1. Laden Sie die aktuelle [Microsoft Edge-Richtlinienvorlage](https://www.microsoft.com/en-us/edge/business/download) herunter, und verwenden Sie sie.
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
@@ -53,14 +53,14 @@ Sie können Internet Explorer so konfigurieren, dass er direkt in Microsoft Edge
    > Das Festlegen der Richtlinie auf **Deaktiviert** impliziert, dass der IE-Modus durch die Richtlinie deaktiviert ist, aber über dge://flags oder Befehlszeilenoptionen festgelegt werden kann.
 7. Klicken Sie auf **OK** oder **Übernehmen**, um diese Richtlinieneinstellung zu speichern.
 
-## Umleiten von Websites von Microsoft Edge in den IE-Modus
+## <a name="redirect-sites-from-microsoft-edge-to-ie-mode"></a>Umleiten von Websites von Microsoft Edge in den IE-Modus
 
 Es gibt zwei Möglichkeiten, um zu bestimmen, welche Websites im IE-Modus geöffnet werden sollen:
 
 - (Empfohlen) [Konfigurieren von Websites in der Enterprise Mode-Siteliste](#configure-sites-on-the-enterprise-site-list)
 - [Konfigurieren aller Intranetsites](#configure-all-intranet-sites)
 
-### Konfigurieren von Websites in der Enterprise Mode-Siteliste
+### <a name="configure-sites-on-the-enterprise-site-list"></a>Konfigurieren von Websites in der Enterprise Mode-Siteliste
 
 Mithilfe der folgenden Gruppenrichtlinien können Sie bestimmte Websites so konfigurieren, dass sie im IE-Modus geöffnet werden:
 
@@ -71,10 +71,10 @@ Mithilfe der folgenden Gruppenrichtlinien können Sie bestimmte Websites so konf
 
 Weitere Informationen zu Enterprise Mode-Siteliste finden Sie unter:
 
-- [Verwenden des Enterprise Mode Site List Manager](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Hinzufügen mehrerer Websites zur Websiteliste für den Unternehmensmodus unter Verwendung einer Datei und von Enterprise Mode Site List Manager (Schema V.2)](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
+- [Verwenden des Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
+- [Hinzufügen mehrerer Websites zur Websiteliste für den Unternehmensmodus unter Verwendung einer Datei und von Enterprise Mode Site List Manager (Schema V.2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
-### Konfigurieren mithilfe der Richtlinie "Die Websiteliste für den Unternehmensmodus-IE verwenden":
+### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Konfigurieren mithilfe der Richtlinie "Die Websiteliste für den Unternehmensmodus-IE verwenden":
 
 Der IE-Modus kann die bestehende Richtlinie zur Konfiguration der Enterprise Site List für Internet Explorer verwenden, sodass Sie nur eine einzige Liste erstellen und pflegen müssen.
 
@@ -90,7 +90,7 @@ Der IE-Modus kann die bestehende Richtlinie zur Konfiguration der Enterprise Sit
     - Lokale Datei: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Klicken Sie auf **OK** oder **Übernehmen**, um die Einstellungen zu speichern.
 
-### Konfiguration mithilfe der Richtlinie "Enterprise Mode Site List konfigurieren":
+### <a name="configure-using-the-configure-the-enterprise-mode-site-list-policy"></a>Konfiguration mithilfe der Richtlinie "Enterprise Mode Site List konfigurieren":
 
 Sie können den IE-Modus auch mit einer separaten Richtlinie für Microsoft Edge konfigurieren. Diese zusätzliche Richtlinie ermöglicht es Ihnen, die IE-Websiteliste außer Kraft zu setzen. In einigen Organisationen wird die beispielsweise Produktionswebsiteliste auf alle Benutzer ausgerichtet. Sie können die Pilotwebsiteliste dann mithilfe dieser Richtlinie für eine kleine Gruppe von Benutzern bereitstellen.
 
@@ -106,7 +106,7 @@ Sie können den IE-Modus auch mit einer separaten Richtlinie für Microsoft Edge
     - Lokale Datei: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Klicken Sie auf **OK** oder **Übernehmen**, um die Einstellungen zu speichern.
 
-### Konfigurieren aller Intranetsites
+### <a name="configure-all-intranet-sites"></a>Konfigurieren aller Intranetsites
 
 Der IE-Modus kann so konfiguriert werden, dass er für alle Websites in der lokalen Intranetzone verwendet wird. Mit einer Enterprise Mode Site List können Sie einzelne Websites aus dem IE-Modus entfernen.
 
@@ -119,7 +119,7 @@ Der IE-Modus kann so konfiguriert werden, dass er für alle Websites in der loka
 3. Doppelklicken Sie auf **Alle Intranetsites an Internet Explorer senden**.
 4. Wählen Sie **Aktiviert** aus, und klicken Sie dann auf **OK** oder **Übernehmen**, um die Richtlinieneinstellungen zu speichern.
 
-## Umleiten von Websites von Internet Explorer zu Microsoft Edge
+## <a name="redirect-sites-from-ie-to-microsoft-edge"></a>Umleiten von Websites von Internet Explorer zu Microsoft Edge
 
 Sie können verhindern, dass Ihre Benutzer Internet Explorer für Websites verwenden, die ihn nicht benötigen. Internet Explorer kann Websites, die sich nicht in Ihrer Websiteliste befinden, automatisch zu Microsoft Edge umleiten.
 
@@ -138,8 +138,8 @@ Sie können verhindern, dass Ihre Benutzer Internet Explorer für Websites verwe
    - Microsoft Edge, Version 45 oder früher
 9. Klicken Sie auf **OK** oder **Übernehmen**, um die Einstellungen zu speichern.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Informationen zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Weitere Informationen zum Unternehmensmodus](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Informationen zum IE-Modus](./edge-ie-mode.md)
+- [Weitere Informationen zum Unternehmensmodus](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

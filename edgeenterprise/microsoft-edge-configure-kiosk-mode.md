@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über Kioskmodus-Features und wie Sie Microsoft Edge-Kioskmodusoptionen konfigurieren können.
-ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442485"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448129"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Konfigurieren des Microsoft Edge-Kioskmodus
 
@@ -48,17 +48,17 @@ In der folgenden Tabelle sind die Features aufgeführt, die vom Kioskmodus in Mi
 |-|-|-|-|-|
 |InPrivate-Navigation|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|„Y“ zugeordnet ist|
 |Zurücksetzen bei Inaktivität|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|J|
-|[Schreibgeschützte Adressleiste](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (Richtlinie) |N|„Y“ zugeordnet ist |89|N|
-|[Löschen von Downloads beim Beenden](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (Richtlinie)  | „Y“ zugeordnet ist|„Y“ zugeordnet ist |89|N|
+|[Schreibgeschützte Adressleiste](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (Richtlinie) |N|„Y“ zugeordnet ist |89|N|
+|[Löschen von Downloads beim Beenden](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (Richtlinie)  | „Y“ zugeordnet ist|„Y“ zugeordnet ist |89|N|
 |F11 blockiert (Vollbildmodus aktivieren/deaktivieren) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |„Y“ zugeordnet ist|
 |F12 blockiert (Entwicklertools starten) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
 | Unterstützung für mehrere Registerkarten | N| „Y“ zugeordnet ist| 89|J|
-|[Unterstützung von URLs zulassen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (Richtlinie)|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|N|
-|[Unterstützung von URLs sperren](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (Richtlinie)|J|„Y“ zugeordnet ist|89|N|
-|[Schaltfläche „Start“ anzeigen](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
-|[Favoriten verwalten](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
-|[Drucker aktivieren](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (Richtlinie)|J|„Y“ zugeordnet ist|89|J|
-|[Konfigurieren der URL der neuen Registerkartenseite](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist||Y|
+|[Unterstützung von URLs zulassen](./microsoft-edge-policies.md#urlallowlist) (Richtlinie)|„Y“ zugeordnet ist|„Y“ zugeordnet ist|89|N|
+|[Unterstützung von URLs sperren](./microsoft-edge-policies.md#urlblocklist) (Richtlinie)|J|„Y“ zugeordnet ist|89|N|
+|[Schaltfläche „Start“ anzeigen](./microsoft-edge-policies.md#showhomebutton) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
+|[Favoriten verwalten](./microsoft-edge-policies.md#managedfavorites) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
+|[Drucker aktivieren](./microsoft-edge-policies.md#printingenabled) (Richtlinie)|J|„Y“ zugeordnet ist|89|J|
+|[Konfigurieren der URL der neuen Registerkartenseite](./microsoft-edge-policies.md#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist||Y|
 |Schaltfläche „Sitzung beenden" * | N| „Y“ zugeordnet ist| 89|J|
 |Alle internen Microsoft Edge-URLs werden blockiert, mit Ausnahme von *edge://downloads* und *edge://print* |N|„Y“ zugeordnet ist|89|Y|
 | STRG+N gesperrt (öffnen Sie ein neues Fenster) * | Y | „Y“ zugeordnet ist | 89 |J|
@@ -66,7 +66,7 @@ In der folgenden Tabelle sind die Features aufgeführt, die vom Kioskmodus in Mi
 |Einstellungen und mehr (...) zeigt nur die erforderlichen Optionen an.  |„Y“ zugeordnet ist |„Y“ zugeordnet ist |89 |„Y“ zugeordnet ist|
 |Start anderer Anwendungen über den Browser einschränken|J|„Y“ zugeordnet ist|90/91|J|
 |Sperrung der Benutzeroberflächen-Druckeinstellungen|J|„Y“ zugeordnet ist|90/91|J|
-|[Neue Registerkartenseite als Startseite festlegen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (Richtlinie)|-|-|TBD|Y|
+|[Neue Registerkartenseite als Startseite festlegen](./microsoft-edge-policies.md#homepageisnewtabpage) (Richtlinie)|-|-|TBD|Y|
 
 > [!NOTE]
 > Features gefolgt von "*" werden nur in einem zugewiesenen Zugriffsszenario für einzelne Apps aktiviert.
@@ -124,25 +124,25 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ## <a name="support-policies-for-kiosk-mode"></a>Supportrichtlinien für den Kioskmodus
 
-Verwenden Sie eine der in der folgenden Tabelle aufgeführten Microsoft Edge-Richtlinien, um die Kioskerfahrung für den von Ihnen konfigurierten Microsoft Edge-Kioskmodustyp zu verbessern. Weitere Informationen zu diesen Richtlinien finden Sie unter [Microsoft Edge – Browser policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
+Verwenden Sie eine der in der folgenden Tabelle aufgeführten Microsoft Edge-Richtlinien, um die Kioskerfahrung für den von Ihnen konfigurierten Microsoft Edge-Kioskmodustyp zu verbessern. Weitere Informationen zu diesen Richtlinien finden Sie unter [Microsoft Edge – Browser policy reference](./microsoft-edge-policies.md).
 
 > [!NOTE]
 > Die Richtlinienkonfiguration ist nicht auf die in der folgenden Tabelle aufgeführten Richtlinien beschränkt. Es sollten jedoch zusätzliche Richtlinien getestet werden, um sicherzustellen, dass die Funktionalität des Kioskmodus nicht negativ beeinträchtigt wird.
 
 |Gruppenrichtlinie|Digital\Interactive Signage|Einzel-App für öffentliches Browsen|
 |--|--|--|
-|[Drucken](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | „Y“ zugeordnet ist|„Y“ zugeordnet ist |
-|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | „Y“ zugeordnet ist|
-|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | „Y“ zugeordnet ist|
-|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |„Y“ zugeordnet ist |
-|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |„Y“ zugeordnet ist |
-|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |„Y“ zugeordnet ist |„Y“ zugeordnet ist |
-|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |„Y“ zugeordnet ist | „Y“ zugeordnet ist|
-|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | „Y“ zugeordnet ist|
-|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | „Y“ zugeordnet ist|
-|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|„Y“ zugeordnet ist |
-|[SmartScreen-Einstellungen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |„Y“ zugeordnet ist |J |
-|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|J|„Y“ zugeordnet ist|
+|[Drucken](./microsoft-edge-policies.md#printing-policies) | „Y“ zugeordnet ist|„Y“ zugeordnet ist |
+|[HomePageLocation](./microsoft-edge-policies.md#homepagelocation) |N | „Y“ zugeordnet ist|
+|[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton) |N | „Y“ zugeordnet ist|
+|[NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) |N |„Y“ zugeordnet ist |
+|[FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled) |N |„Y“ zugeordnet ist |
+|[URLAllowlist](./microsoft-edge-policies.md#urlallowlist) |„Y“ zugeordnet ist |„Y“ zugeordnet ist |
+|[URLBlocklist](./microsoft-edge-policies.md#urlblocklist) |„Y“ zugeordnet ist | „Y“ zugeordnet ist|
+|[ManagedSearchEngines](./microsoft-edge-policies.md#managedsearchengines) |N | „Y“ zugeordnet ist|
+|[UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed) |N | „Y“ zugeordnet ist|
+|[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|„Y“ zugeordnet ist |
+|[SmartScreen-Einstellungen](./microsoft-edge-policies.md#smartscreen-settings-policies) |„Y“ zugeordnet ist |J |
+|[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|J|„Y“ zugeordnet ist|
 
 ## <a name="microsoft-edge-with-assigned-access"></a>Microsoft Edge mit zugewiesenem Zugriff
 
@@ -154,11 +154,11 @@ Der Microsoft Edge-Kioskmodus mit einer Einzel-App mit zugewiesenen Zugriff ist 
 
 **Wie erhalte ich den Windows Insider Preview-Build?**
 
-Wenn Sie einen Windows10 Insider Preview-Build auf einem PC installieren möchten, folgen Sie den Anweisungen unter  [Erste Schritte mit Windows10 Insider Preview-Builds](https://docs.microsoft.com/windows-insider/get-started).
+Wenn Sie einen Windows10 Insider Preview-Build auf einem PC installieren möchten, folgen Sie den Anweisungen unter  [Erste Schritte mit Windows10 Insider Preview-Builds](/windows-insider/get-started).
 
 ### <a name="multi-app-kiosk"></a>Multi-App-Kiosk
 
-Microsoft Edge kann unter Windows10 mit [zugewiesenem Multi-App-Zugriff](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Befolgen Sie die Anweisungen zum Einrichten eines Multi-App-Kiosks, um Microsoft Edge mit zugewiesenen [Multi-App-Zugriffen zu konfigurieren.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) (Die AUMID für den Stable-Kanal von Microsoft Edge ist **MSEdge**.)
+Microsoft Edge kann unter Windows10 mit [zugewiesenem Multi-App-Zugriff](/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Befolgen Sie die Anweisungen zum Einrichten eines Multi-App-Kiosks, um Microsoft Edge mit zugewiesenen [Multi-App-Zugriffen zu konfigurieren.](/windows/configuration/lock-down-windows-10-to-specific-apps) (Die AUMID für den Stable-Kanal von Microsoft Edge ist **MSEdge**.)
 
 Wenn Sie Microsoft Edge mit zugewiesenen Zugriffen mit mehreren Apps verwenden, können Sie den Microsoft Edge Kiosk so konfigurieren, dass er die[Microsoft Edge-Browserrichtlinien](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) verwendet, um die Browsererfahrung so zu konfigurieren, dass Ihre individuellen Anforderungen erfüllt werden.
 
@@ -166,7 +166,7 @@ Wenn Sie Microsoft Edge mit zugewiesenen Zugriffen mit mehreren Apps verwenden, 
 
 Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ein oder zwei Einzel-App-Kioskgeräten. Führen Sie die folgenden Schritte aus, um einen Einzel-App-Kioskcomputer einzurichten.
 
-1. Installieren Sie die neueste Windows 10 Insider Preview-Version (20215 oder höher). Folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](https://docs.microsoft.com/windows-insider/get-started).
+1. Installieren Sie die neueste Windows 10 Insider Preview-Version (20215 oder höher). Folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](/windows-insider/get-started).
 2. Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, herunterladen.
 3. Öffnen Sie auf dem Kiosk-Computer die Windows-Einstellungen, und geben Sie im Suchfeld „Kiosk“ ein. Wählen Sie  **Einen Kiosk einrichten (zugewiesener Zugriff)** aus, das im nächsten Screenshot dargestellt ist, um das Dialogfeld zum Erstellen des Kiosks zu öffnen.
 
@@ -216,18 +216,18 @@ Die Veröffentlichung dieser Preview-Version des Kioskmodus erfolgt im Rahmen un
 
 Wir unterstützen derzeit die folgenden Features nicht und empfehlen, diese zu deaktivieren:
 
-- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
-- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
-- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
-- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
-- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
-- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
-- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
-- [Erweiterungen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
-- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
+- [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
+- [ManagedFavorites](./microsoft-edge-policies.md#managedfavorites)
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
+- [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
+- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
+- [Erweiterungen](./microsoft-edge-policies.md#extensions-policies)
+- [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Roadmap
 
@@ -245,5 +245,5 @@ Unterstützung und Funktionen, die hinzukommen werden:
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Planen Ihrer Bereitstellung von Microsoft Edge](deploy-edge-plan-deployment.md)
-- [Konfigurieren von Kiosken und digitalen Anmeldungen in Windows-Desktopeditionen](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Konfigurieren von Kiosken und digitalen Anmeldungen in Windows-Desktopeditionen](/windows/configuration/kiosk-methods)
 - [Planen der Kioskmodusumstellung](microsoft-edge-kiosk-mode-transition-plan.md)

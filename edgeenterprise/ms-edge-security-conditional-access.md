@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge und bedingter Zugriff
-ms.openlocfilehash: a81d39c15f418dab6565ee7acc45de17f66e3828
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 898a86c8c268a8c46e80dbd5ef3a435c300fb04e
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094773"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447139"
 ---
-# Microsoft Edge und bedingter Zugriff
+# <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge und bedingter Zugriff
   
 Dieser Artikel beschreibt, wie Microsoft Edge bedingten Zugriff unterstützt und wie Sie auf Ressourcen zugreifen können, die durch bedingten Zugriff geschützt sind.
 
@@ -26,7 +26,7 @@ Dieser Artikel beschreibt, wie Microsoft Edge bedingten Zugriff unterstützt und
 
 Ein wichtiger Aspekt der Cloud-Sicherheit ist die Identität und der Zugriff, wenn es um die Verwaltung von Cloud-Ressourcen geht. In einer mobilen Welt, in der die Cloud an erster Stelle steht, können Benutzer mit einer Vielzahl von Geräten und Apps von überall aus auf die Ressourcen Ihres Unternehmens zugreifen. Folglich reicht es nicht aus, sich nur darauf zu konzentrieren, wer auf eine Ressource zugreifen kann. Sie müssen auch berücksichtigen, wie auf eine Ressource zugegriffen wird. Mit bedingtem Zugriff auf Azure Active Directory (Azure AD) können Sie das Gleichgewicht zwischen Sicherheit und Produktivität herstellen.
 
-## Zugriff auf Ressourcen mit Zugriffsschutz in Microsoft Edge
+## <a name="accessing-conditional-access-protected-resources-in-microsoft-edge"></a>Zugriff auf Ressourcen mit Zugriffsschutz in Microsoft Edge
 
 Microsoft Edge unterstützt den Azure AD bedingten Zugriff systemeigen. Es ist nicht erforderlich, eine separate Erweiterung zu installieren. Wenn Sie bei einem Microsoft Edge-Profil mit Unternehmens-Azure AD-Anmeldeinformationen angemeldet sind, ermöglicht Microsoft Edge den nahtlosen Zugriff auf Unternehmens-Cloud-Ressourcen, die mit bedingtem Zugriff geschützt sind.
 
@@ -44,11 +44,11 @@ Klicken Sie in der oberen rechten Ecke des Browsers auf das Profilbild, um sich 
 
 Diese Unterstützung ist auf allen Plattformen verfügbar, einschließlich aller unterstützten Versionen von Windows und macOS.
 
-### So stellen Sie den bedingten Zugriff in Azure Active Directory bereit
+### <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>So stellen Sie den bedingten Zugriff in Azure Active Directory bereit
 
-[Bereitstellen des bedingten Zugriffs](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) enthält eine ausführliche Anleitung zur Bereitstellung des bedingten Zugriffs in Azure Active Directory.
+[Bereitstellen des bedingten Zugriffs](/azure/active-directory/conditional-access/plan-conditional-access) enthält eine ausführliche Anleitung zur Bereitstellung des bedingten Zugriffs in Azure Active Directory.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Video: Sicherheit, Kompatibilität und Verwaltbarkeit](/microsoft-edge-video-security-compatibility-manageability.md)

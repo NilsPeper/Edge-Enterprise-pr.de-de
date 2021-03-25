@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Verwenden von Befehlszeilenoptionen zum Konfigurieren von Proxyeinstellungen '
-ms.openlocfilehash: b5e2326e075ad89481560a6642944a8e88f4daa3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d0924f723aab6832e5b4eb70c60e1d329d3c7a9d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980040"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447639"
 ---
-# So verwenden Sie Microsoft Edge-Befehlszeilenoptionen zum Konfigurieren von Proxyeinstellungen
+# <a name="how-to-use-microsoft-edge-command-line-options-to-configure-proxy-settings"></a>So verwenden Sie Microsoft Edge-Befehlszeilenoptionen zum Konfigurieren von Proxyeinstellungen
 
 In diesem Artikel wird beschrieben, wie Sie mithilfe von Befehlszeilenoptionen die Standardnetzwerkeinstellungen des Systems überschreiben können.
 
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
-## Netzwerkeinstellungen des Systems
+## <a name="system-network-settings"></a>Netzwerkeinstellungen des Systems
 
 Der Microsoft Edge-Netzwerkstapel verwendet standardmäßig die Netzwerkeinstellungen des Systems. Zu diesen Einstellungen gehören *Proxyeinstellungen* sowie *Zertifikat- und private Schlüsselspeicher*.
 
@@ -32,13 +32,13 @@ Es gibt Szenarien, in denen Benutzer eine Alternative zur Verwendung der Standar
 
 Diese Befehlszeilenoptionen entsprechen den folgenden Richtlinien in der **Proxyserver**-Gruppe:
 
-- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist)
-- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode)
-- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl)
-- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver)
-- [ProxySettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxysettings)
+- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist)
+- [ProxyMode](./microsoft-edge-policies.md#proxymode)
+- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl)
+- [ProxyServer](./microsoft-edge-policies.md#proxyserver)
+- [ProxySettings](./microsoft-edge-policies.md#proxysettings)
 
-## Befehlszeilenoptionen für Proxyeinstellungen
+## <a name="command-line-options-for-proxy-settings"></a>Befehlszeilenoptionen für Proxyeinstellungen
 
 Microsoft Edge unterstützt die folgenden proxybezogenen Befehlszeilenoptionen.
 
@@ -72,14 +72,14 @@ Weist Microsoft Edge an, alle angegebenen Proxys für die angegebene durch Semik
 
 Weist Microsoft Edge an, die PAC-datei unter der angegebenen URL zu verwenden. Beispielsweise weist `--proxy-pac-url="https://wpad/proxy.pac"` Microsoft Edge an, Proxyinformationen für URL-Anforderungen mithilfe der **proxy.pac**-Datei aufzulösen.
 
-## Lizenz für Inhalte
+## <a name="content-license"></a>Lizenz für Inhalte
 
 > [!NOTE]
 > Teile dieser Seite sind Änderungen, die auf von Chromium.org erstellten und freigegebenen Werken basieren und gemäß den in der [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) beschriebenen Begriffen verwendet werden. Die Originalseite von Chromium finden Sie [hier](https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Diese Arbeit unterliegt einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zu erweiterten Konfigurationseinstellungen und zusätzlichen Optionen finden Sie in der [Proxy-Dokumentation](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md) des Chromium Open Source-Projekts.
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

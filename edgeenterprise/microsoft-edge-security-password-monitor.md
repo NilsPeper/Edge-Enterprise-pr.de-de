@@ -10,41 +10,41 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Automatische Aktivierung des Kennwortmonitors für Benutzer
-ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: d1995735ac7558c1608d427aac70081d4afed3a0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304535"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447279"
 ---
-# Automatische Aktivierung des Kennwortmonitors für Benutzer
+# <a name="password-monitor-auto-enabled-for-users"></a>Automatische Aktivierung des Kennwortmonitors für Benutzer
 
 In diesem Artikel wird beschrieben, wie der Kennwortmonitor in Microsoft Edge für ausgewählte Benutzer aktiviert wird, und Administratoren erfahren, wie sie die Aktivierung der Überwachung steuern können.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 88 oder höher.
 
-## Einführung, Vorteile und Verfügbarkeit
+## <a name="introduction-benefits-and-availability"></a>Einführung, Vorteile und Verfügbarkeit
 
 Der Kennwortmonitor hilft Microsoft Edge-Benutzern, ihre Onlinekonten zu schützen, indem sie informiert werden, ob eines ihrer Kennwörter in einem Onlineleck gefunden wurde. Onlinelecks oder Datenschutzverletzungen geschehen, wenn Angreifer Daten über Apps oder Websites von Drittanbietern stehlen. Weitere Informationen finden Sie im Microsoft Research Blog im Dokument [Kennwortmonitor: Schutz von Kennwörtern in Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/).
 
-### Vorteile
+### <a name="benefits"></a>Vorteile
 
 Angesichts der Häufigkeit und des Umfangs dieser Onlineangriffe, ist diese Art von Schutz für jeden erforderlich. Microsoft Edge verfügt über die integrierte Möglichkeit, die gespeicherten Kennwörter eines Benutzers auf sicherem Wege mit Kennwörtern abzugleichen, die als gefährdet bekannt sind, und benachrichtigt den Benutzer, wenn eine Übereinstimmung gefunden wird.  
 
-### Verfügbarkeit
+### <a name="availability"></a>Verfügbarkeit
 
 Der Kennwortmonitor ist ab 21. Januar verfügbar im Stabilen Kanal, Version 88. Das Rollout erfolgt schrittweise, und es kann einige Wochen dauern, bis die folgende Meldung und Steuerung auf der Seite **Einstellungen** > **Profil** > **Kennwort** angezeigt wird.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option zum Aktivieren des Kennwortmonitors":::
 
-## Konfigurieren von Gruppenrichtlinien für den Kennwortmonitor
+## <a name="configure-group-policy-for-password-monitor"></a>Konfigurieren von Gruppenrichtlinien für den Kennwortmonitor
 
-Dieses Feature wird über die Gruppenrichtlinie [PasswordMonitorAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmonitorallowed) gesteuert.
+Dieses Feature wird über die Gruppenrichtlinie [PasswordMonitorAllowed](./microsoft-edge-policies.md#passwordmonitorallowed) gesteuert.
 
 Nach der Aktivierung der Richtlinie müssen Benutzer noch ihre Zustimmung geben, um das Feature zu aktivieren. Die Zustimmung ist erforderlich, da das Feature vertrauliche und personenbezogene Daten (Kennwörter) des Benutzers verwendet. Wenn das Feature mithilfe von Gruppenrichtlinien deaktiviert ist, können Benutzer diese Einstellung nicht außer Kraft setzen.  
 
-## Aktivieren des Kennwortmonitors für Benutzer
+## <a name="enabling-password-monitor-for-users"></a>Aktivieren des Kennwortmonitors für Benutzer
 
 Nachdem die Kennwortmonitor-Richtlinie aktiviert wurde, gibt es unterschiedliche Möglichkeiten, dieses Feature Benutzern zur Verfügung zu stellen.
 
@@ -63,7 +63,7 @@ Nachdem die Kennwortmonitor-Richtlinie aktiviert wurde, gibt es unterschiedliche
    
 - Direkte Aktivierung. Benutzer können das Feature jederzeit unter **Einstellungen** > **Kennwörter** aktivieren oder deaktivieren.
 
-## Benutzerszenarien mit automatische Aktivierung des Kennwortmonitors
+## <a name="user-scenarios-with-password-monitor-auto-enabled"></a>Benutzerszenarien mit automatische Aktivierung des Kennwortmonitors
 
 In der folgenden Tabelle sind Szenarien aufgeführt, in denen der Kennwortmonitor automatisch aktiviert ist. Zudem wird beschrieben, wie er auf Benutzergeräten funktioniert.
 
@@ -80,9 +80,9 @@ Auch wenn ein Benutzer mit einem Geschäftskonto angemeldet ist, für das eine d
 - Kennwortsynchronisierung ist deaktiviert
 - Die Freigabe von Daten für Microsoft-Server ist deaktiviert.
 
-## Häufig gestellte Fragen
+## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
-### Wie kann der Kennwortmonitor für meine Organisation deaktiviert werden?
+### <a name="how-can-password-monitor-be-disabled-for-my-organization"></a>Wie kann der Kennwortmonitor für meine Organisation deaktiviert werden?
 
 Sie können den Kennwortmonitor für Ihre Organisation deaktivieren durch:
 - Verwenden der Gruppenrichtlinie "PasswordMonitorAllowed".
@@ -91,10 +91,10 @@ Sie können den Kennwortmonitor für Ihre Organisation deaktivieren durch:
   > [!NOTE]
   > Der Kennwortmonitor kann auch dann funktionieren, wenn die Kennwortsynchronisierung deaktiviert ist, solange der Benutzer die explizite Zustimmung zum Aktivieren des Features erteilt oder es über "Einstellungen" selbst aktiviert hat.
 
-### Was geschieht, wenn ein Benutzer, für den das Feature automatisch aktiviert wurde, den Kennwortmonitor über die Einstellungen deaktiviert?
+### <a name="what-happens-if-a-user-for-whom-the-feature-has-been-auto-enabled-turns-password-monitor-off-via-settings"></a>Was geschieht, wenn ein Benutzer, für den das Feature automatisch aktiviert wurde, den Kennwortmonitor über die Einstellungen deaktiviert?
 
 Die Benutzereinstellung wird berücksichtigt, und das Feature bleibt für den Benutzer deaktiviert. Möglicherweise wird ihnen jedoch erneut ein Zustimmungsdialogfeld angezeigt, falls der Benutzer bisher noch nie auf die Zustimmungsaufforderung geantwortet hat.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

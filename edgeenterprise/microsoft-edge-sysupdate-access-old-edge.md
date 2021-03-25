@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Informationen für den Zugriff auf die alte Version von Microsoft Edge
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313895"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447089"
 ---
-# Zugreifen auf Microsoft Edge Legacy nach der Installation der neuen Version von Microsoft Edge
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a>Zugreifen auf Microsoft Edge Legacy nach der Installation der neuen Version von Microsoft Edge
 
 Die Vorgängerversion von Microsoft Edge erhält ab dem 9.März2021 keine Sicherheitsupdates mehr. Sie können bis zum 13.April auf die Vorgängerversion von Microsoft Edge zugreifen. Weitere Informationen finden Sie im [Blogbeitrag](https://aka.ms/EdgeLegacyEOS) des Microsoft Edge-Produktteams.
 
@@ -34,13 +34,13 @@ Die meisten Organisationen möchten Microsoft Edge Legacy sicherlich durch die n
 >
 > Der Support für die Desktop-App von Microsoft Edge Legacy läuft am 9. März 2021 zugunsten des neuen Microsoft Edge aus. Dies bedeutet, dass Microsoft Edge Legacy nach diesem Datum keine Sicherheitsupdates mehr erhält. Diese Änderung gilt für alle Funktionen der Desktop-App von Microsoft Edge Legacy. [Weitere Informationen](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
-## Vorbemerkungen
+## <a name="before-you-begin"></a>Vorbemerkungen
 > [!NOTE]
 > Ab Windows 10, Version 20H2, ist Microsoft Edge Legacy nicht mehr enthalten. Ab dieser Version von Windows 10 wird die parallele Verwendung nicht mehr unterstützt.
 
 Die Verfahren in diesem Artikel gelten für Systeme, die mit den neuesten Sicherheitsupdates aktualisiert wurden. Wenn die neue Version von Microsoft Edge installiert ist, wird die alte Version (Microsoft Edge Legacy) ausgeblendet. Bei allen Versuchen, die alte Version von Microsoft Edge zu starten, wird der Benutzer standardmäßig auf die neu installierte Version von Microsoft Edge umgeleitet. In diesem Artikel wird beschrieben, wie Sie Microsoft Edge Legacy nach der Installation von Microsoft Edge weiterhin verwenden können.
 
-## Schnellstart: Parallele Verwendung von Microsoft Edge Beta Channel und Microsoft Edge Legacy
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a>Schnellstart: Parallele Verwendung von Microsoft Edge Beta Channel und Microsoft Edge Legacy
 
 Bevor Sie die ausführlichen Anweisungen in diesem Artikel verwenden, sollten Sie die folgenden zwei Schritte beachten, damit Ihre Benutzer Microsoft Edge Legacy und Microsoft Edge [Beta Channel](microsoft-edge-channels.md) parallel ausführen können.
 
@@ -52,13 +52,13 @@ Bevor Sie die ausführlichen Anweisungen in diesem Artikel verwenden, sollten Si
 
 Diese parallele Lösung ist weniger komplex und erfordert weniger Verwaltungsaufwand als die in diesem Artikel beschriebene detaillierte Lösung. Diese Lösung bedeutet jedoch, dass Sie den Beta-Kanal anstelle des Stable-Kanals ausführen müssen.
 
-## Parallele Verwendung von Microsoft Edge Stable Channel und Microsoft Edge Legacy
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a>Parallele Verwendung von Microsoft Edge Stable Channel und Microsoft Edge Legacy
 
 Wenn Sie den stabilen Kanal der nächsten Version von Microsoft Edge auf Systemebene installieren, wird die aktuelle Version (Microsoft Edge Legacy) ausgeblendet. Wenn Sie Benutzern die parallele Verwendung beider Versionen von Microsoft Edge in Windows ermöglichen möchten, können Sie diese Oberfläche aktivieren, indem Sie die Gruppenrichtlinie **Microsoft Edge-Browser im Parallelbetrieb zulassen** auf **Aktiviert** festlegen.
 
-Diese Gruppenrichtlinie ist [hier](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs) dokumentiert.
+Diese Gruppenrichtlinie ist [hier](./microsoft-edge-update-policies.md#allowsxs) dokumentiert.
 
-### So richten Sie die Richtlinie für den Parallelbetrieb des Browsers ein:
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a>So richten Sie die Richtlinie für den Parallelbetrieb des Browsers ein:
 
 1. Installieren Sie die Richtliniendefinitionen über [Microsoft Edge for Business](https://www.microsoft.com/edge/business/download).
 
@@ -86,7 +86,7 @@ Durch das Festlegen dieser Richtlinie erhält der folgende Registrierungsschlüs
 - Name des Wertes: `Allowsxs`
 - Werttyp: `'REG_DWORD'`
 
-#### Leitlinien für bewährte Methoden
+#### <a name="best-practice-guidance"></a>Leitlinien für bewährte Methoden
 
 Für die bestmögliche Benutzerfreundlichkeit sollte die Option **Microsoft Edge-Browser im Parallelbetrieb zulassen** aktiviert werden, bevor die neue Version von Microsoft Edge auf den Geräten der Benutzer bereitgestellt wird.
 
@@ -100,7 +100,7 @@ Wenn die Gruppenrichtlinie aktiviert ist, nachdem Microsoft Edge bereitgestellt 
 2. Microsoft Edge Legacy muss erneut an "Start" oder die Taskleiste angeheftet werden, da die Anheftung migriert wird, wenn die neue Version von Microsoft Edge bereitgestellt wird.
 3. Sites, die an "Start" oder die Taskleiste für Microsoft Edge Legacy angeheftet waren, werden auf die neue Version von Microsoft Edge migriert.
 
-## Weitere Informationen
+## <a name="additional-information"></a>Weitere Informationen
 
 Nachdem die Systeme vollständig aktualisiert sind und der Stable-Kanal der nächsten Version von Microsoft Edge installiert ist, werden der folgende Registrierungsschlüssel und -wert festgelegt:
 
@@ -110,7 +110,7 @@ Nachdem die Systeme vollständig aktualisiert sind und der Stable-Kanal der näc
   > [!IMPORTANT]
   > Dieser Schlüssel wird bei jeder Aktualisierung des Microsoft Edge Stable-Kanals überschrieben. Als bewährte Methode wird empfohlen, diesen Schlüssel NICHT zu löschen, damit Benutzer auf beide Versionen von Microsoft Edge zugreifen können.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Windows-Updates zur Unterstützung von Microsoft Edge](microsoft-edge-sysupdate-windows-updates.md)
