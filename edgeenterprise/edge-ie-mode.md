@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Hier erfahren Sie, wie Sie Microsoft Edge im IE-Modus verwenden.
-ms.openlocfilehash: bcb25e0f104d4a9b64ee8fd7bf29b12bb24b4724
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980004"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447339"
 ---
-# Informationen zum IE-Modus
+# <a name="about-ie-mode"></a>Informationen zum IE-Modus
 
 In diesem Artikel finden Sie eine Übersicht und Voraussetzungen für die Verwendung von Microsoft Edge mit dem IE-Modus.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle **Stable**, **Beta** und **Dev**, Version 77 oder höher.
 
-## Was ist der IE-Modus?
+## <a name="what-is-ie-mode"></a>Was ist der IE-Modus?
 
 Der IE-Modus auf Microsoft Edge erleichtert es Ihnen, alle Websites Ihrer Organisation in einem einzigen Browser zu verwenden. Dabei wird das integrierte Chrom-Modul für moderne Websites und das Trident MSHTML-Modul aus Internet Explorer 11 (IE11) für ältere Websites verwendet.
 
@@ -41,22 +41,22 @@ Nur die Websites, die Sie speziell (über eine Richtlinie) konfigurieren, verwen
   > Es wird nur eine Enterprise Mode Site List verarbeitet. Die Microsoft Edge-Websitelistenrichtlinie hat Vorrang vor der Internet Explorer-Websitelistenrichtlinie.
 - Alle Intranetwebsites, wenn die Gruppenrichtlinie **Alle Intranetwebsites an Internet Explorer senden** aktiviert ist (Microsoft Edge 77 oder höher)
 
-### Der IE-Modus unterstützt die folgenden Funktionen von Internet Explorer
+### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Der IE-Modus unterstützt die folgenden Funktionen von Internet Explorer
 
 - Alle Dokumentmodi und Unternehmensmodi
 - ActiveX-Steuerelemente (wie Java oder Silverlight)
 - Browserhilfsobjekte 
 - Internet Explorer-Einstellungen und Gruppenrichtlinien, die sich auf die Sicherheitszoneneinstellungen und den geschützten Modus auswirken
-- Die F12-Entwicklertools für IE, wenn der Start mit [IEChooser](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10) erfolgt
+- Die F12-Entwicklertools für IE, wenn der Start mit [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10) erfolgt
 - Microsoft Edge-Erweiterungen (Erweiterungen, die direkt mit dem IE-Seiteninhalt interagieren, werden nicht unterstützt.)
 
-### Der IE-Modus unterstützt die folgenden Funktionen von Internet Explorer nicht
+### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Der IE-Modus unterstützt die folgenden Funktionen von Internet Explorer nicht
 
 - Internet Explorer-Symbolleisten
 - Internet Explorer-Einstellungen und Gruppenrichtlinien, die sich auf das Navigationsmenü auswirken (z.B. Suchmaschinen und Startseiten)
 - IE11 oder Entwicklungstools von MicrosoftEdge F12
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgenden Voraussetzungen gelten für die Verwendung von Microsoft Edge im IE-Modus.
 
@@ -87,10 +87,10 @@ Die folgenden Voraussetzungen gelten für die Verwendung von Microsoft Edge im I
   > [!IMPORTANT]
   > ** Windows7 und Windows Server2008 R2 unterstützen Microsoft Edge weiterhin, nachdem der Support für diese Betriebssysteme abgelaufen ist. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Es wird empfohlen, so bald wie möglich ein Upgrade auf ein unterstütztes Betriebssystem durchzuführen, um geschützt zu bleiben. Der Support für Microsoft Edge mit den erweiterten Sicherheitsupdates sollte als eine vorübergehende Überbrückung bis zum Erreichen eines unterstützten Betriebssystemstatus betrachtet werden.
 
-2. Die administrative Vorlage von Microsoft Edge. Weitere Informationen finden Sie unter [Konfigurieren von Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge).
+2. Die administrative Vorlage von Microsoft Edge. Weitere Informationen finden Sie unter [Konfigurieren von Microsoft Edge](./configure-microsoft-edge.md).
 3. Aktivieren von Internet Explorer11 in Windows-Features.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Weitere Informationen zum Unternehmensmodus](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Weitere Informationen zum Unternehmensmodus](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
