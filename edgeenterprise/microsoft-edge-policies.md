@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 03/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
+ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442475"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "11448432"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -25,7 +25,6 @@ Die neueste Version von Microsoft Edge umfasst die folgenden Richtlinien. Sie k�
 Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wie und wann Microsoft Edge aktualisiert wird, finden Sie unter [Microsoft Edge Updaterichtlinien-Referenz](microsoft-edge-update-policies.md).
 
 Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) für die empfohlenen grundlegenden Sicherheitskonfigurations-Einstellungen für Microsoft Edge herunterladen. Weitere Informationen finden Sie unter [Microsoft Sicherheitsbaselines-Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
-
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
@@ -36,9 +35,7 @@ In der folgenden Tabelle sind die neuen Richtlinien für dieses Update aufgefüh
 
 |Name|Untertitel|
 |--|--|
-|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Zulassen von Direktlinks auf der neuen Registerkartenseite|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Abrufen der „Keep-alive“-Dauer beim Herunterfahren|
-
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Zulassen von Microsoft News-Inhalten auf der neuen Registerkartenseite|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
@@ -237,6 +234,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[HomepageLocation](#homepagelocation)|Konfigurieren der Startseiten-URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Konfigurieren der für das neue Registerkartenseiten-Layout zulässigen Hintergrundtypen|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Firmenlogo für „Neuer Tab“-Seite festlegen (veraltet)|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Zulassen von Microsoft News-Inhalten auf der neuen Registerkartenseite|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Ausblenden der standardmäßigen Top-Websites auf der neuen Registerkartenseite|
 |[NewTabPageLocation](#newtabpagelocation)|Konfigurieren der URL der neuen Registerkartenseite|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Festlegen der Quicklinks auf der neuen Registerkartenseite|
@@ -333,7 +331,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Anzeigen eines „immer öffnen“-Kontrollkästchens im externen Protokoll-Dialog|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Zulassen, dass Benutzer den Familiensicherheits- und Kindermodus konfigurieren|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Aktivieren der Favoritenleiste|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Abrufen der „Keep-alive“-Dauer beim Herunterfahren|
+|[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Abrufen der „Keep-alive“-Dauer beim Herunterfahren|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Erzwingen von Bing SafeSearch|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Konfigurieren, ob Microsoft Edge automatisch ein Zertifikat auswählen soll, wenn mehrere Zertifikat-Übereinstimmungen für eine Website vorhanden sind, die mit „AutoSelectCertificateForUrls“ konfiguriert ist|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Verwendung von kurzlebigen Profilen zulassen|
@@ -387,7 +385,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Konfigurieren, ob ein Benutzer immer ein Standardprofil hat, das automatisch mit seinem Geschäfts- oder Schulkonto angemeldet ist|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Steuern, wo Sicherheitseinschränkungen bei unsicheren Ursprüngen angewendet werden|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Websites erlauben, nach verfügbaren Zahlungsmethoden zu fragen|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Die Personalisierung von Werbung, der Suche und von Nachrichten ermöglichen, indem der Browserverlauf an Microsoft gesendet wird|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Zulassen der Personalisierung von Microsoft-Diensten durch Senden von Browser- und browserbezogenen Daten an Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Assistent „an Taskleiste anheften“ zulassen|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Proaktive Authentifizierung aktivieren (veraltet)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Aktivieren von Promotion-Inhalten auf der gesamten Registerkarte|
@@ -436,7 +434,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Konfigurieren Sie die Liste der Typen, die von der Synchronisierung ausgeschlossen werden|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Aktivieren eines TLS 1.3-Sicherheitsfeatures für lokale Vertrauensanker (veraltet)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Angeben der zu deaktivierenden TLS-Verschlüsselungssammlungen|
-|[TabFreezingEnabled](#tabfreezingenabled)|Einfrieren von Hintergrundregisterkarten zulassen|
+|[TabFreezingEnabled](#tabfreezingenabled)|Zulassen des Einfrierens von Hintergrundregisterkarten (veraltet)|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Window.opener für Links mit dem Ziel _blank nicht setzen|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Beenden von Prozessen im Task-Manager des Browsers zulassen|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Festlegen der Speicherbegrenzung in Megabyte, die eine einzelne Microsoft Edge-Instanz verwenden kann|
@@ -506,7 +504,7 @@ Wenn Sie den Wert „fixed_servers“ als „ProxyMode“ auswählen, wird das F
 
 Wenn Sie den Wert „pac_script“ als „ProxyMode“ auswählen, wird das Feld „ProxyPacUrl“ verwendet.
 
-Weitere Informationen zum Identifizieren des Datenverkehrs in Application Guard über den Dual-Proxy finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
+Weitere Informationen zum Identifizieren des Datenverkehrs in Application Guard über den Dual-Proxy finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -846,7 +844,7 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
 Konfigurieren Sie die [SaveCookiesOnExit](#savecookiesonexit)-Richtlinie, um das Löschen von Cookies beim Beenden zu verhindern.
 
@@ -925,7 +923,7 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -1004,7 +1002,7 @@ Beachten Sie, dass für diese drei Richtlinien keine Konflikt verursachenden URL
 
 - CookiesSessionOnlyForUrls
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
 Wenn Sie die [RestoreOnStartup](#restoreonstartup) Richtlinie so festlegen, dass URLs aus vorherigen Sitzungen wiederhergestellt werden, wird diese Richtlinie ignoriert, und Cookies werden für diese Websites dauerhaft gespeichert.
 
@@ -1907,7 +1905,7 @@ Wenn Sie die Richtlinie nicht festlegen, bedeutet dies, dass [DefaultFileSystemR
 
 URL-Muster dürfen nicht mit [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -1976,7 +1974,7 @@ Wenn Sie die Richtlinie nicht festlegen, gilt [DefaultFileSystemReadGuardSetting
 
 URL-Muster dürfen nicht mit [FileSystemReadAskForUrls](#filesystemreadaskforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2045,7 +2043,7 @@ Wenn Sie die Richtlinie nicht festlegen, gilt [DefaultFileSystemWriteGuardSettin
 
 URL-Muster dürfen nicht mit [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2114,7 +2112,7 @@ Wenn Sie die Richtlinie nicht festlegen, gilt [DefaultFileSystemWriteGuardSettin
 
 URL-Muster dürfen nicht mit [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) in Konflikt stehen. Keine der Richtlinien hat Vorrang, wenn eine URL mit beiden übereinstimmt.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2181,7 +2179,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird für alle Websites der globale Standardwert aus der [DefaultImagesSetting](#defaultimagessetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2248,7 +2246,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultImagesSetting](#defaultimagessetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2315,7 +2313,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Wenn Sie diese Richtlinie nicht konfigurieren, werden blockierbare Mischinhalte blockiert und optional können blockierbare Mischinhalte auch aktualisiert werden. Benutzer können jedoch Ausnahmen festlegen, um unsichere Mischinhalte auf bestimmten Websites zuzulassen.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2382,7 +2380,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, werden blockierbare Mischinhalte blockiert und optional können blockierbare Mischinhalte auch aktualisiert werden. Benutzer können jedoch Ausnahmen festlegen, um unsichere Mischinhalte auf bestimmten Websites zuzulassen.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2716,7 +2714,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   Ermöglicht Ihnen, eine Liste von URL-Mustern zu erstellen, um Websites anzugeben, die Benachrichtigungen anzeigen dürfen.
 
-Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale Standardwert verwendet. Dieser Standardwert stammt aus der Richtlinie [DefaultNotificationsSetting](#defaultnotificationssetting), sofern diese festgelegt ist, oder aus der persönlichen Konfiguration des Benutzers. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale Standardwert verwendet. Dieser Standardwert stammt aus der Richtlinie [DefaultNotificationsSetting](#defaultnotificationssetting), sofern diese festgelegt ist, oder aus der persönlichen Konfiguration des Benutzers. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2781,7 +2779,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   Ermöglicht Ihnen, eine Liste von URL-Mustern zu erstellen, um Sites anzugeben, die keine Benachrichtigungen anzeigen dürfen.
 
-Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale Standardwert verwendet. Dieser Standardwert stammt aus der Richtlinie [DefaultNotificationsSetting](#defaultnotificationssetting), sofern diese festgelegt ist, oder aus der persönlichen Konfiguration des Benutzers. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Wenn Sie diese Richtlinie nicht festlegen, wird für alle Websites der globale Standardwert verwendet. Dieser Standardwert stammt aus der Richtlinie [DefaultNotificationsSetting](#defaultnotificationssetting), sofern diese festgelegt ist, oder aus der persönlichen Konfiguration des Benutzers. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -2850,7 +2848,7 @@ Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die d
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
 
   #### <a name="supported-features"></a>Unterstützte Features:
 
@@ -2919,7 +2917,7 @@ Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die d
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultPluginsSetting](#defaultpluginssetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Ab M85 werden jedoch Muster mit den Platzhaltern „\*“ und „[\*.]“ für diese Richtlinie nicht mehr unterstützt.
 
   #### <a name="supported-features"></a>Unterstützte Features:
 
@@ -3362,7 +3360,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit den in der [WebUsbBlockedForUrls](#webusbblockedforurls) Richtlinie konfigurierten Konflikten in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit den in der [WebUsbBlockedForUrls](#webusbblockedforurls) Richtlinie konfigurierten Konflikten in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren. Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -3429,7 +3427,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 Falls Sie diese Richtlinie nicht konfigurieren, wird der globale Standardwert aus der [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)-Richtlinie (sofern festgelegt) oder die persönliche Konfiguration des Benutzers für alle Websites verwendet.
 
-URL-Muster in dieser Richtlinie dürfen nicht mit denen in Konflikt stehen, die in der [WebUsbAskForUrls](#webusbaskforurls) Richtlinie konfiguriert sind. Sie können eine URL nicht sowohl zulassen als auch blockieren.  Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+URL-Muster in dieser Richtlinie dürfen nicht mit denen in Konflikt stehen, die in der [WebUsbAskForUrls](#webusbaskforurls) Richtlinie konfiguriert sind. Sie können eine URL nicht sowohl zulassen als auch blockieren.  Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -4414,7 +4412,7 @@ Auf macOS-Instanzen kann die Installation von Apps und Erweiterungen von außerh
 
 Der Quellcode einer beliebigen Erweiterung kann von Benutzern mit Entwicklertools geändert werden, wodurch die Erweiterung möglicherweise nicht mehr funktionsfähig ist. Wenn dies ein Problem darstellt, konfigurieren Sie die DeveloperToolsDisabled-Richtlinie.
 
-Jedes Listenelement der Richtlinie ist eine Zeichenfolge, die eine Erweiterungs-ID und optional eine durch ein Semikolon (;) abgetrennte „Update“-URL enthält. Die Erweiterungs-ID ist die Zeichenfolge mit 32 Buchstaben, die beispielsweise auf edge://extensions im Entwicklermodus gefunden wird. Wenn angegeben, sollte die „Update“-URL auf ein Update-Manifest-XML-Dokument ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ) verweisen. Standardmäßig wird die Update-URL der Microsoft Edge-Add-ons-Website verwendet. Die in dieser Richtlinie gesetzte „Update“-URL wird nur für die Erstinstallation verwendet; bei nachfolgenden Aktualisierungen der Erweiterung wird die Update-URL im Manifest der Erweiterung verwendet.
+Jedes Listenelement der Richtlinie ist eine Zeichenfolge, die eine Erweiterungs-ID und optional eine durch ein Semikolon (;) abgetrennte „Update“-URL enthält. Die Erweiterungs-ID ist die Zeichenfolge mit 32 Buchstaben, die beispielsweise auf edge://extensions im Entwicklermodus gefunden wird. Wenn angegeben, sollte die „Update“-URL auf ein Update-Manifest-XML-Dokument ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ) verweisen. Standardmäßig wird die Update-URL der Microsoft Edge-Add-ons-Website verwendet. Die in dieser Richtlinie gesetzte „Update“-URL wird nur für die Erstinstallation verwendet; bei nachfolgenden Aktualisierungen der Erweiterung wird die Update-URL im Manifest der Erweiterung verwendet.
 
 Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informieren Sie sich über Hosting-Erweiterungen (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
@@ -4483,7 +4481,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 URLs definieren, von denen Erweiterungen und Designs direkt installiert werden können, ohne dass die Pakete per Drag & Drop auf die Seite edge://extensions gezogen werden müssen.
 
-Jedes Element in dieser Liste ist ein Übereinstimmungsmuster im Erweiterungs-Stil (siehe [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Benutzer können Elemente ganz einfach von einer beliebigen URL aus installieren, die einem Element in dieser Liste entspricht. Sowohl der Speicherort der Datei "*.crx" als auch die Seite, von der der Download ausgeführt wird (mit anderen Worten, der Referrer), muss von diesen Mustern her zulässig sein. Hosten Sie die Dateien nicht an einem Ort, für den eine Authentifizierung erforderlich ist.
+Jedes Element in dieser Liste ist ein Übereinstimmungsmuster im Erweiterungs-Stil (siehe [https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)). Benutzer können Elemente ganz einfach von einer beliebigen URL aus installieren, die einem Element in dieser Liste entspricht. Sowohl der Speicherort der Datei "*.crx" als auch die Seite, von der der Download ausgeführt wird (mit anderen Worten, der Referrer), muss von diesen Mustern her zulässig sein. Hosten Sie die Dateien nicht an einem Ort, für den eine Authentifizierung erforderlich ist.
 
 Die Richtlinie [ExtensionInstallBlocklist](#extensioninstallblocklist) hat Vorrang vor dieser Richtlinie. Erweiterungen, die sich in der Blockier-Liste befinden, werden nicht installiert, auch wenn sie von einer-Website in dieser Liste stammen.
 
@@ -4548,7 +4546,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Die Einstellung dieser Richtlinie steuert die Einstellungen für die Erweiterungsverwaltung von Microsoft Edge, einschließlich aller Einstellungen, die durch vorhandene erweiterungsbezogene Richtlinien gesteuert werden. Diese Richtlinie ersetzt alle älteren Richtlinien, die möglicherweise festgelegt wurden.
 
-Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der exakten Update-URL, die im Erweiterungsmanifest angegeben ist ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der exakten Update-URL, die im Erweiterungsmanifest angegeben ist ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ).
 
 Um Erweiterungen aus einem bestimmten Drittanbieter-Store zu blockieren, müssen Sie nur die update_url für den diesen Store blockieren. Wenn Sie z. B. Erweiterungen aus dem Chrome Web Store blockieren möchten, können Sie den folgenden JSON verwenden.
 
@@ -5316,7 +5314,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können die Ben
 
 Durch Aktivieren dieser Richtlinie wird verhindert, dass Benutzer die URL in der Adressleiste ändern.
 
-Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -5380,7 +5378,7 @@ Wenn Sie diese Richtlinie aktivieren, werden Dateien, die während einer Kiosk-S
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Dateien, die während einer Kiosk-Sitzung heruntergeladen wurden, beim Schließen von Microsoft Edge nicht gelöscht.
 
-Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Ausführliche Informationen zum Konfigurieren des Kioskmodus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -6875,7 +6873,7 @@ Wenn Sie diese Richtlinie aktivieren, können Sie eine Liste mit Hosts erstellen
 
 Wenn Sie diese Richtlinie nicht konfigurieren, wird keine Liste mit Hosts erstellt, für die Microsoft Edge einen Proxy umgeht. Lassen Sie diese Richtlinie unkonfiguriert, wenn Sie eine andere Methode zum Festlegen von Proxy-Richtlinien festgelegt haben.
 
-Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -6946,7 +6944,7 @@ Bei Auswahl folgender Optionen:
   * fixed_servers = festgelegte Proxyserver verwenden. Sie können weitere Optionen mit [Proxyserver](#proxyserver) und [ProxyBypassList](#proxybypasslist) angeben.
   * pac_script = .pac-Proxyskript verwenden. Verwenden Sie [ProxyPacUrl](#proxypacurl), um die URL zu einer Proxy-.pac-Datei anzugeben.
 
-Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer ihre eigenen Proxyeinstellungen auswählen.
 
@@ -7030,7 +7028,7 @@ Wenn Sie diese Richtlinie aktivieren, können Sie die URL für eine PAC-Datei an
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird keine PAC-Datei angegeben. Lassen Sie diese Richtlinie unkonfiguriert, wenn Sie eine andere Methode zum Festlegen von Proxy-Richtlinien festgelegt haben.
 
-Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Ausführliche Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -7098,7 +7096,7 @@ Wenn Sie diese Richtlinie aktivieren, wird der durch diese Richtlinie konfigurie
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können die Benutzer ihre eigenen Proxyeinstellungen auswählen, während sie sich in diesem Proxymodus befinden. Lassen Sie diese Richtlinie unkonfiguriert, wenn Sie eine andere Methode zum Festlegen von Proxy-Richtlinien festgelegt haben.
 
-Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Weitere Optionen und detaillierte Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -7182,7 +7180,7 @@ Bei Auswahl der folgenden Werte für „ProxyMode“:
   * fixed_servers: Die Felder „ProxyServer“ und „ProxyBypassList“ werden verwendet.
   * pac_script: Die Felder „ProxyPacUrl“ und „ProxyBypassList“ werden verwendet.
 
-Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -8173,6 +8171,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="newtabpagecontentenabled"></a>NewTabPageContentEnabled
+
+  #### <a name="allow-microsoft-news-content-on-the-new-tab-page"></a>Zulassen von Microsoft News-Inhalten auf der neuen Registerkartenseite
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 91 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, zeigt Microsoft Edge Microsoft News-Inhalte auf der neuen Registerkartenseite an. Der Benutzer kann verschiedene Anzeigeoptionen für den Inhalt auswählen, einschließlich, aber nicht beschränkt auf "Inhalt aus", "Inhalt sichtbar beim Bildlauf", "Nur Überschriften" und "Inhalt sichtbar". Wenn Sie diese Richtlinie aktivieren, wird das Anzeigen von Inhalten nicht erzwungen – der Benutzer kann weiterhin seine eigene bevorzugte Inhaltsposition festlegen.
+
+Wenn Sie diese Richtlinie deaktivieren, zeigt Microsoft Edge keine Microsoft News-Inhalte auf der neuen Registerkartenseite an, das Inhaltssteuerelement im Flyout "NTP-Einstellungen" ist deaktiviert und auf "Inhalt aus" festgelegt.
+
+Diese Richtlinie gilt nur für lokale Microsoft Edge-Benutzerprofile, mit einem Microsoft-Konto angemeldete Profile und mit Active Directory angemeldete Profile. Verwenden Sie das M365-Verwaltungsportal, um die Enterprise-Seite „Neue Registerkarte” für Profile zu konfigurieren, die mit Azure Active Directory angemeldet sind.
+
+Verwandte Richtlinien: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: NewTabPageContentEnabled
+  - GP-Name: Zulassen von Microsoft News-Inhalten auf der neuen Registerkartenseite
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Start, Startseite und neue Registerkarte
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): N/A
+  - Wertname: NewTabPageContentEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
+  
+  - Name des Einstellungsschlüssels: NewTabPageContentEnabled
+  - Beispielwert:
+``` xml
+<false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="newtabpagehidedefaulttopsites"></a>NewTabPageHideDefaultTopSites
 
   #### <a name="hide-the-default-top-sites-from-the-new-tab-page"></a>Ausblenden der standardmäßigen Top-Websites auf der neuen Registerkartenseite
@@ -8484,7 +8546,7 @@ Wenn Sie diese Richtlinie deaktivieren, blendet Microsoft Edge Direktlinks auf d
 
 Diese Richtlinie gilt nur für lokale Microsoft Edge-Benutzerprofile, mit einem Microsoft-Konto angemeldete Profile und mit Active Directory angemeldete Profile. Verwenden Sie das M365-Verwaltungsportal, um die Enterprise-Seite „Neue Registerkarte” für Profile zu konfigurieren, die mit Azure Active Directory angemeldet sind.
 
-Verwandte Richtlinie: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+Verwandte Richtlinien: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageContentEnabled](#newtabpagecontentenabled)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -10053,7 +10115,7 @@ Wenn eine der Bedingungen falsch ist, wird die Eingabeaufforderung für den exte
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können keine Protokolle ohne Eingabeaufforderung gestartet werden. Benutzer können die Eingabeaufforderungen auf Protokoll-/Website Basis deaktivieren, es sei denn, die Richtlinie [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) ist deaktiviert. Diese Richtlinie wirkt sich nicht auf die von Benutzern festgelegten Ausnahmen pro Protokoll/Website aus.
 
-Bei den Mustern für den Ursprung entsprechen dieselben Formate wie für die [URLBlocklist-](#urlblocklist) Richtlinie, die bei[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)dokumentiert sind.
+Bei den Mustern für den Ursprung entsprechen dieselben Formate wie für die [URLBlocklist-](#urlblocklist) Richtlinie, die bei[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)dokumentiert sind.
 
 Allerdings können die Ursprungs Übereinstimmungsmuster für diese Richtlinie keine "/Path"-oder "@Query"-Elemente enthalten. Jedes Muster, das das Element "/Path" oder "@Query" enthält, wird ignoriert.
 
@@ -10175,7 +10237,7 @@ Wenn Sie URLs in dieser Richtlinie festlegen, werden Dateien nur nach Richtlinie
 
 Wenn Sie diese Richtlinie nicht festlegen, werden alle Downloads, bei denen der Dateityp in [AutoOpenFileTypes](#autoopenfiletypes) ist, automatisch geöffnet.
 
-Ein URL-Muster muss gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)formatiert sein.
+Ein URL-Muster muss gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)formatiert sein.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -10637,7 +10699,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden in den Suchergebnissen auf
 
 Diese Richtlinie steht nur für K-12-SKUs zur Verfügung, die von Microsoft als EDU-Mandanten anerkannt werden.
 
-Wenn Sie weitere Informationen zu dieser Richtlinie erhalten möchten oder die folgenden Szenarien auf Sie zutreffen, lesen Sie bitte [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711):
+Wenn Sie weitere Informationen zu dieser Richtlinie erhalten möchten oder die folgenden Szenarien auf Sie zutreffen, lesen Sie bitte [https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge):
 
 * Sie verfügen über einen EDU-Mandanten, aber die Richtlinie funktioniert nicht.
 
@@ -11383,7 +11445,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 Mit dieser Richtlinie können Sie Zertifikate für die Hostnamen in den angegebenen URLs nicht über die Zertifikattransparenz offenlegen. Auf diese Weise können Sie Zertifikate verwenden, die sonst nicht als vertrauenswürdig eingestuft würden, da sie nicht ordnungsgemäß öffentlich offen gelegt wurden, aber es erschwert das erkennen falsch ausgegebener Zertifikate für diese Hosts.
 
-Erstellen Sie Ihr URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Da Zertifikate für einen angegebenen Hostnamen gültig sind, unabhängig vom Schema, Port oder Pfad, wird nur der Hostname der URLs berücksichtigt. Platzhalter-Hosts werden nicht unterstützt.
+Erstellen Sie Ihr URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Da Zertifikate für einen angegebenen Hostnamen gültig sind, unabhängig vom Schema, Port oder Pfad, wird nur der Hostname der URLs berücksichtigt. Platzhalter-Hosts werden nicht unterstützt.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, wird jedes Zertifikat, das über die Zertifikattransparenz offengelegt werden sollte, als nicht vertrauenswürdig behandelt, wenn es nicht offengelegt wurde.
 
@@ -11590,7 +11652,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer mit Microsoft Ed
 
 Durch das Deaktivieren von ClickOnce wird ggf. verhindert, dass ClickOnce-Anwendungen (.application-Dateien) ordnungsgemäß gestartet werden.
 
-Weitere Informationen zu ClickOnce finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) und [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+Weitere Informationen zu ClickOnce finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) und [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -11989,7 +12051,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### <a name="description"></a>Beschreibung
 
-  Aktiviert die Verwendung von Active Directory-Konten für die automatische Anmeldung, wenn die Computer Ihrer Benutzer domänenverbunden sind und Ihre Umgebung nicht hybridverbunden ist. Wenn Sie möchten, dass Benutzer stattdessen automatisch mit ihren Azure Active Directory-Konten angemeldet werden, stellen Sie Ihre Umgebung bitte auf Azure AD-Anmeldung (Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197)) oder Hybridverbindung (Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) Weitere Informationen) um.
+  Aktiviert die Verwendung von Active Directory-Konten für die automatische Anmeldung, wenn die Computer Ihrer Benutzer domänenverbunden sind und Ihre Umgebung nicht hybridverbunden ist. Wenn Sie möchten, dass Benutzer stattdessen automatisch mit ihren Azure Active Directory-Konten angemeldet werden, stellen Sie Ihre Umgebung bitte auf Azure AD-Anmeldung (Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan)) oder Hybridverbindung (Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) Weitere Informationen) um.
 
 Bei jedem Start versucht Microsoft Edge, sich mit dieser Richtlinie zu anmelden, solange das erste gestartete Profil nicht angemeldet ist oder noch keine automatische Anmeldung geschehen ist.
 
@@ -12317,7 +12379,7 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen, wird Microsoft Edge gestoppt, 
 
 Wenn Sie diese Richtlinie nicht festlegen, können die Benutzer von Microsoft Edge steuern, ob es sich um die Standardeinstellung handelt und, falls nicht, ob Benutzer Benachrichtigungen angezeigt werden sollen.
 
-Hinweis für Windows-Administratoren: Diese Richtlinie funktioniert nur für PCs unter Windows 7. In späteren Versionen von Windows müssen Sie eine "Standard-Anwendungszuordnungen"-Datei bereitstellen, die Microsoft Edge als Handler für die HTTPS- und HTTP-Protokolle (und optional das FTP-Protokoll und Dateiformate wie .html, htm, .pdf, .svg, .webp) festlegt. Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932).
+Hinweis für Windows-Administratoren: Diese Richtlinie funktioniert nur für PCs unter Windows 7. In späteren Versionen von Windows müssen Sie eine "Standard-Anwendungszuordnungen"-Datei bereitstellen, die Microsoft Edge als Handler für die HTTPS- und HTTP-Protokolle (und optional das FTP-Protokoll und Dateiformate wie .html, htm, .pdf, .svg, .webp) festlegt. Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -12849,7 +12911,7 @@ Erforderliche Diagnosedaten werden gesammelt, um Microsoft Edge sicher, aktuell 
 
 Zu den optionalen Diagnosedaten gehören Daten zur Verwendung des Browsers, von Ihnen besuchte Websites und Absturzberichte an Microsoft zur Verbesserung von Produkten und Diensten.
 
-Diese Richtlinie wird auf Windows 10-Geräten nicht unterstützt. Um diese Datenerfassung unter Windows 10 zu steuern, müssen IT-Administratoren die Windows-Diagnosedaten-Gruppenrichtlinie verwenden. Diese Richtlinie lautet je nach Windows-Version entweder "Telemetrie zulassen" oder "Diagnosedaten zulassen". Weitere Informationen zur Windows 10-Diagnosedatenerfassung:[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Diese Richtlinie wird auf Windows 10-Geräten nicht unterstützt. Um diese Datenerfassung unter Windows 10 zu steuern, müssen IT-Administratoren die Windows-Diagnosedaten-Gruppenrichtlinie verwenden. Diese Richtlinie lautet je nach Windows-Version entweder "Telemetrie zulassen" oder "Diagnosedaten zulassen". Weitere Informationen zur Windows 10-Diagnosedatenerfassung:[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Verwenden Sie eine der folgenden Einstellungen, um diese Richtlinie zu konfigurieren:
 
@@ -12937,7 +12999,7 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer keine Dateien mithilfe 
 
 Hinweis: durch das Deaktivieren von DirectInvoke können bestimmte Microsoft SharePoint Online-Features nicht erwartungsgemäß funktionieren.
 
-Weitere Informationen zu DirectInvoke finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) und [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
+Weitere Informationen zu DirectInvoke finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) und [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85)).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -14114,7 +14176,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, zeigen Dateityp
 
 Wenn Sie diese Richtlinie aktivieren:
 
-* Das URL-Muster sollte gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)formatiert sein.
+* Das URL-Muster sollte gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)formatiert sein.
 * Die eingegebene Dateierweiterung muss sich im kleingeschriebenen ASCII-Format befinden. Das führende Trennzeichen sollte nicht einbezogen werden, wenn die Dateinamenerweiterung aufgelistet wird. Deshalb sollte die Liste "JNLP" anstelle von ". jnlp" verwendet werden.
 
 Beispiel:
@@ -14452,7 +14514,7 @@ Wenn diese Richtlinie nicht konfiguriert ist, kann der Benutzer entscheiden, die
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+  ### <a name="fetchkeepalivedurationsecondsonshutdown"></a>FetchKeepaliveDurationSecondsOnShutdown
 
   #### <a name="fetch-keepalive-duration-on-shutdown"></a>Abrufen der „Keep-alive“-Dauer beim Herunterfahren
 
@@ -14484,7 +14546,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Standa
 
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
-  - GP eindeutiger Name: FetchKeepaliveDurationOnShutdown
+  - GP eindeutiger Name: FetchKeepaliveDurationSecondsOnShutdown
   - GP-Name: Abrufen der „Keep-alive“-Dauer beim Herunterfahren
   - GP-Pfad (verpflichtend): Administrative Vorlagen/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
@@ -14494,7 +14556,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Standa
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
   - Pfad (empfohlen): N/A
-  - Wertname: FetchKeepaliveDurationOnShutdown
+  - Wertname: FetchKeepaliveDurationSecondsOnShutdown
   - Werttyp: REG_DWORD
 
   ##### <a name="example-value"></a>Beispielwert:
@@ -14505,7 +14567,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Standa
 
   #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
   
-  - Einstellung Schlüsselname: FetchKeepaliveDurationOnShutdown
+  - Name des Einstellungsschlüssels: FetchKeepaliveDurationSecondsOnShutdown
   - Beispielwert:
 ``` xml
 <integer>1</integer>
@@ -16529,7 +16591,7 @@ Wenn Sie diese Richtlinie auf „Enabled“ setzen oder Sie nicht konfigurieren,
 
 Wenn Sie diese Richtlinie auf „Disabled“ setzen, ist die Option „erweiterte Anwendungsstillstand-Erkennung“ deaktiviert, und die Benutzer erhalten die normale Anwendungsstillstand-Erkennung des Internet Explorers.
 
-Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Zuordnung von Richtlinienoptionen:
 
@@ -16588,7 +16650,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### <a name="description"></a>Beschreibung
 
-  Informationen zum Konfigurieren der optimalen Benutzeroberfläche für den Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Informationen zum Konfigurieren der optimalen Benutzeroberfläche für den Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Zuordnung von Richtlinienoptionen:
 
@@ -16657,7 +16719,7 @@ Wenn Sie diese Richtlinie auf „true“ festlegen oder nicht konfigurieren, dar
 
 Wenn Sie diese Richtlinie auf „false“ festlegen, darf der Benutzer das Befehlszeilenargument „--ie-mode-file-url“ nicht zum Starten lokaler Dateien im Internet Explorer-Modus verwenden.
 
-Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -16716,7 +16778,7 @@ Bei der Anforderung, eine file://-URL im Internet Explorer-Modus zu starten, mus
 
 Wenn Sie diese Richtlinie auf den speziellen Wert „*“ festlegen oder sie nicht konfigurieren, sind alle Dateierweiterungen erlaubt.
 
-Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -16778,7 +16840,7 @@ Wenn Sie diese Richtlinie auf „true“ festlegen, ist das Kontextmenüelement 
 
 Wenn Sie diese Richtlinie auf „false“ festlegen oder nicht konfigurieren, wird das Kontextmenüelement nicht hinzugefügt.
 
-Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -16829,7 +16891,7 @@ Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.m
 
   #### <a name="description"></a>Beschreibung
 
-  Informationen zum Konfigurieren der optimalen Benutzeroberfläche für den Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Informationen zum Konfigurieren der optimalen Benutzeroberfläche für den Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -16894,7 +16956,7 @@ Wenn Sie diese Richtlinie auf „AutomaticNavigationsOnly“ setzen, erhalten Si
 
 Wenn Sie diese Richtlinie auf „AllInPageNavigations“ setzen, werden alle Navigationen von Seiten zu nicht-konfigurierten Seiten, die im IE-Modus geladen wurden im Internet Explorer-Modus beibehalten (am wenigsten empfohlen).
 
-Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)
 
 Zuordnung von Richtlinienoptionen:
 
@@ -16962,8 +17024,6 @@ Dies ist über das Menü "Weitere Tools" durch Auswahl der Option "Websites im I
 Darüber hinaus können Benutzer ihre Anwendungen in einem modernen Browser testen, ohne Anwendungen aus der Websiteliste zu entfernen, indem sie die Option "Websites im Edge-Modus öffnen" verwenden.
 
 Diese Einstellung kann verwendet werden in Verbindung mit: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), festgelegt auf „IEMode“.
-   
-                                                                                                                         
 
 Wenn Sie diese Richtlinie aktivieren, wird die Option „Websites im Internet Explorer-Modus öffnen" unter „Weitere Tools" angezeigt. Benutzer können ihre Websites im Internet Explorer-Modus in diesem Tab anzeigen. Die Option "Websites im Edge-Modus öffnen" wird auch unter "Weitere Tools" angezeigt, um das Testen von Websites in einem modernen Browser zu ermöglichen, ohne sie aus der Websiteliste zu entfernen.
 
@@ -17748,13 +17808,13 @@ Wenn die Richtlinie [EnableMediaRouter](#enablemediarouter) deaktiviert ist, hat
 
   #### <a name="description"></a>Beschreibung
 
-  Diese Richtlinie wird nicht mehr unterstützt. Sie wird durch [DiagnosticData](#diagnosticdata) (für Windows 7, Windows 8 und macOS) und „Telemetrie zulassen“ unter Windows 10 ersetzt ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Diese Richtlinie wird nicht mehr unterstützt. Sie wird durch [DiagnosticData](#diagnosticdata) (für Windows 7, Windows 8 und macOS) und „Telemetrie zulassen“ unter Windows 10 ersetzt ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
 
 Diese Richtlinie ermöglicht die Erstellung von Berichten zu Nutzungs- und Absturzdaten für Microsoft Edge an Microsoft.
 
 Aktivieren Sie diese Richtlinie, um Berichte zu Nutzungs- und Absturzdaten an Microsoft zu senden. Deaktivieren Sie diese Richtlinie, wenn Sie die Daten nicht an Microsoft senden möchten. In beiden Fällen können Benutzer die Einstellung weder ändern noch außer Kraft setzen.
 
-Wenn Sie diese Richtlinie unter Windows 10 nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Windows-Diagnosedateneinstellung. Wenn diese Richtlinie aktiviert ist, sendet Microsoft Edge nur dann Nutzungsdaten, wenn die Einstellung für Windows-Diagnosedaten auf Erweitert oder Vollständig festgelegt ist. Wenn diese Richtlinie deaktiviert ist, werden von Microsoft Edge keine Nutzungsdaten gesendet. Absturzdaten werden basierend auf der Einstellung für Windows-Diagnosedaten gesendet. Weitere Informationen zu den Einstellungen für Windows-Diagnosedaten finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Wenn Sie diese Richtlinie unter Windows 10 nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Windows-Diagnosedateneinstellung. Wenn diese Richtlinie aktiviert ist, sendet Microsoft Edge nur dann Nutzungsdaten, wenn die Einstellung für Windows-Diagnosedaten auf Erweitert oder Vollständig festgelegt ist. Wenn diese Richtlinie deaktiviert ist, werden von Microsoft Edge keine Nutzungsdaten gesendet. Absturzdaten werden basierend auf der Einstellung für Windows-Diagnosedaten gesendet. Weitere Informationen zu den Einstellungen für Windows-Diagnosedaten finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Unter Windows 7, Windows 8 und macOS steuert diese Richtlinie das Senden von Nutzungs- und Absturzdaten. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Präferenz des Benutzers.
 
@@ -18190,7 +18250,7 @@ Wenn Sie diese Richtlinie aktivieren oder diese Richtlinie nicht festlegen, kön
 
   ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### <a name="allow-personalization-of-ads-search-and-news-by-sending-browsing-history-to-microsoft"></a>Die Personalisierung von Werbung, der Suche und von Nachrichten ermöglichen, indem der Browserverlauf an Microsoft gesendet wird
+  #### <a name="allow-personalization-of-microsoft-services-by-sending-browsing-and-browser-related-data-to-microsoft"></a>Zulassen der Personalisierung von Microsoft-Diensten durch Senden von Browser- und browserbezogenen Daten an Microsoft
 
   
   
@@ -18200,9 +18260,9 @@ Wenn Sie diese Richtlinie aktivieren oder diese Richtlinie nicht festlegen, kön
 
   #### <a name="description"></a>Beschreibung
 
-  Diese Richtlinie hindert Microsoft am Sammeln des Microsoft Edge-Browserverlaufs eines Benutzers zum Personalisieren von Werbung, Suche, Nachrichten und anderen Microsoft-Diensten.
+  Diese Richtlinie verhindert, dass Microsoft den Microsoft Edge-Browserverlauf eines Benutzers, Favoriten & Sammlungen, Browser-Nutzungsdaten und Eingaben wie in der Adressleiste sammelt, um sie für die Personalisierung von Werbung, Suche, Nachrichten, Microsoft Edge und anderen Microsoft-Diensten zu verwenden.
 
-Diese Einstellung ist nur für Benutzer mit einem Microsoft-Konto verfügbar. Diese Einstellung ist für Kinder- oder Enterprise-Konten nicht verfügbar.
+Diese Einstellung ist für Kinder- oder Enterprise-Konten nicht verfügbar.
 
 Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Einstellung nicht ändern oder außer Kraft setzen. Wenn diese Richtlinie aktiviert oder nicht konfiguriert ist, wird von Microsoft Edge standardmäßig die Benutzereinstellung verwendet.
 
@@ -18221,8 +18281,8 @@ Wenn Sie diese Richtlinie deaktivieren, können die Benutzer die Einstellung nic
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: PersonalizationReportingEnabled
-  - GP-Name: Die Personalisierung von Werbung, der Suche und von Nachrichten ermöglichen, indem der Browserverlauf an Microsoft gesendet wird
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP-Name: Zulassen der Personalisierung von Microsoft-Diensten durch Senden von Browser- und browserbezogenen Daten an Microsoft
+  - GP-Pfad (verpflichtend): Administrative Vorlagen/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -18643,7 +18703,7 @@ Wenn diese Richtlinie nicht konfiguriert oder deaktiviert ist, wird das BHO inst
 
 Das BHO ist erforderlich, damit eine Umleitung für inkompatible Websites gemacht wird, ob aber die Umleitung stattfindet oder nicht, wird auch durch [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode) gesteuert.
 
-Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18704,7 +18764,7 @@ Wenn Microsoft Edge zum Laden einer Website aus dem Internet Explorer gestartet 
 
 Wenn Sie diese Richtlinie deaktivieren, leitet Internet Explorer keinen Datenverkehr zu Microsoft Edge um.
 
-Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
 Zuordnung von Richtlinienoptionen:
 
@@ -19198,7 +19258,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden nur die 
 
 [SyncDisabled](#syncdisabled) deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf diese Richtlinie.
 
-Weitere Informationen zur Verwendung von Roaming-Benutzerprofilen finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058).
+Weitere Informationen zur Verwendung von Roaming-Benutzerprofilen finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -19383,7 +19443,7 @@ Wenn Sie die Richtlinie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) deak
 
 Wenn Sie diese Richtlinie nicht konfigurieren, gilt die Richtlinie [SSLErrorOverrideAllowed](#sslerroroverrideallowed) für alle Websites.
 
-Ausführliche Informationen zu gültigen Ursprungsmustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * ist kein akzeptierter Wert für diese Richtlinie. Diese Richtlinie stimmt nur mit dem Ursprung überein, sodass alle Pfade oder Abfragen im URL-Muster ignoriert werden.
+Ausführliche Informationen zu gültigen Ursprungsmustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * ist kein akzeptierter Wert für diese Richtlinie. Diese Richtlinie stimmt nur mit dem Ursprung überein, sodass alle Pfade oder Abfragen im URL-Muster ignoriert werden.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -19902,7 +19962,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Beschreibung
 
-  Informationen zum Konfigurieren der optimalen Benutzeroberfläche für den Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Informationen zum Konfigurieren der optimalen Benutzeroberfläche für den Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -19953,13 +20013,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Beschreibung
 
-  Diese Richtlinie wird nicht mehr unterstützt. Sie wird durch [DiagnosticData](#diagnosticdata) (für Windows 7, Windows 8 und macOS) und „Telemetrie zulassen“ unter Windows 10 ersetzt ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Diese Richtlinie wird nicht mehr unterstützt. Sie wird durch [DiagnosticData](#diagnosticdata) (für Windows 7, Windows 8 und macOS) und „Telemetrie zulassen“ unter Windows 10 ersetzt ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
 
 Diese Richtlinie ermöglicht das Senden von Informationen über die in Microsoft Edge besuchten Websites an Microsoft, um Dienste wie die Suche zu verbessern.
 
 Aktivieren Sie diese Richtlinie, um Infos zu den Websites, die in Microsoft Edge besucht wurden, an Microsoft zu senden. Deaktivieren Sie diese Richtlinie, um keine Infos zu den Websites, die in Microsoft Edge besucht wurden, an Microsoft zu senden. In beiden Fällen können Benutzer die Einstellung weder ändern noch außer Kraft setzen.
 
-Wenn Sie diese Richtlinie unter Windows 10 nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Windows-Diagnosedateneinstellung. Wenn diese Richtlinie aktiviert ist, sendet Microsoft Edge nur Informationen zu Websites, die in Microsoft Edge besucht wurden, wenn die Windows-Diagnosedaten Einstellung auf "voll" festgelegt ist. Wenn diese Richtlinie deaktiviert ist, werden von Microsoft Edge keine Informationen zu besuchten Websites gesendet. Weitere Informationen zu den Einstellungen für Windows-Diagnosedaten finden Sie unter: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Wenn Sie diese Richtlinie unter Windows 10 nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Windows-Diagnosedateneinstellung. Wenn diese Richtlinie aktiviert ist, sendet Microsoft Edge nur Informationen zu Websites, die in Microsoft Edge besucht wurden, wenn die Windows-Diagnosedaten Einstellung auf "voll" festgelegt ist. Wenn diese Richtlinie deaktiviert ist, werden von Microsoft Edge keine Informationen zu besuchten Websites gesendet. Weitere Informationen zu den Einstellungen für Windows-Diagnosedaten finden Sie unter: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Unter Windows 7, Windows 8 und MacOS steuert diese Richtlinie das Senden von Informationen zu besuchten Websites. Wenn Sie diese Richtlinie nicht konfigurieren, verwendet Microsoft Edge standardmäßig die Präferenz des Benutzers.
 
@@ -20029,7 +20089,7 @@ Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prio
 
 Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit jenen in der [SensorsBlockedForUrls](#sensorsblockedforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -20100,7 +20160,7 @@ Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prio
 
 Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit jenen in der [SensorsAllowedForUrls](#sensorsallowedforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -20171,7 +20231,7 @@ Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prio
 
 Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit jenen in der [SerialBlockedForUrls](#serialblockedforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -20242,7 +20302,7 @@ Bei URL-Mustern, die dieser Richtlinie nicht entsprechen, wird die folgende Prio
 
 Die URL-Muster in dieser Richtlinie dürfen nicht mit jenen in der [SerialAskForUrls](#serialaskforurls)-Richtlinie angegebenen in Konflikt stehen. Sie können eine URL nicht sowohl zulassen als auch blockieren.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -21333,17 +21393,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   ### <a name="tabfreezingenabled"></a>TabFreezingEnabled
 
-  #### <a name="allow-freezing-of-background-tabs"></a>Einfrieren von Hintergrundregisterkarten zulassen
+  #### <a name="allow-freezing-of-background-tabs-obsolete"></a>Zulassen des Einfrierens von Hintergrundregisterkarten (veraltet)
 
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach der Microsoft Edge-Version 86 nicht mehr.
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
-  - Auf Windows und macOS ab 79 oder höher
+  - Unter Windows und macOS ab 79, bis 86
 
   #### <a name="description"></a>Beschreibung
 
-  Steuert, ob Microsoft Edge Registerkarten einfrieren kann, die sich für mindestens 5 Minuten im Hintergrund befinden.
+  Diese Richtlinie funktioniert nicht, verwenden Sie stattdessen [SleepingTabsEnabled](#sleepingtabsenabled).
+
+Steuert, ob Microsoft Edge Registerkarten einfrieren kann, die sich für mindestens 5 Minuten im Hintergrund befinden.
 
 Das Einfrieren von Registerkarten reduziert die CPU-, Akku- und Speichernutzung. Microsoft Edge verwendet Heuristiken, um zu verhindern, dass Registerkarten mit nützlichen Arbeiten im Hintergrund fixiert werden, z.B. solche, die Benachrichtigungen anzeigen, Sound abspielen und Video streamen.
 
@@ -21366,8 +21428,8 @@ Wenn Sie diese Richtlinie deaktivieren, werden keine Registerkarten eingefroren.
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: TabFreezingEnabled
-  - GP-Name: Einfrieren von Hintergrundregisterkarten zulassen
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP-Name: Zulassen des Einfrierens von Hintergrundregisterkarten (veraltet)
+  - GP-Pfad (verpflichtend): Administrative Vorlagen/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
 
@@ -21727,7 +21789,7 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 
   Das Aktivieren der Richtlinie ermöglicht den Zugriff auf die aufgelisteten URLs, als Ausnahmen zur [URLBlocklist](#urlblocklist).
 
-Formatieren Sie das URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Formatieren Sie das URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Mithilfe dieser Richtlinie können Sie Ausnahmen für restriktive Sperrlisten formulieren. Sie können z.B. „\“ in die Sperrliste einschließen, um alle Anforderungen zu blockieren, und dann diese Richtlinie verwenden, um den Zugriff auf eine beschränkte Liste von URLs zuzulassen. Mithilfe dieser Richtlinie können Sie Ausnahmen für bestimmte Schemas, Unterdomänen anderer Domänen, Ports oder bestimmte Pfade einrichten.
 
@@ -21808,7 +21870,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   Sie können eine Liste an Websites, basierend auf URL-Mustern, definieren, die blockiert werden (Ihre Benutzer können sie nicht aufrufen).
 
-Formatieren Sie das URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Formatieren Sie das URL-Muster gemäß [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Sie können in der Richtlinie [URLAllowlist](#urlallowlist) Ausnahmen festlegen. Diese Richtlinien sind auf 1.000-Einträge beschränkt, weitere Einträge werden ignoriert.
 
