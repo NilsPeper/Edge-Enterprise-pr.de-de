@@ -1,21 +1,21 @@
 ---
 title: Konfigurieren von Richtlinien für den IE-Modus
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 03/25/2020
+ms.author: collw
+author: dan-wesley
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren von Richtlinien für den IE-Modus
-ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447359"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470163"
 ---
 # <a name="configure-ie-mode-policies"></a>Konfigurieren von Richtlinien für den IE-Modus
 
@@ -29,6 +29,9 @@ Zum Konfigurieren des IE-Modus sind drei Schritte erforderlich:
 1. [Konfigurieren der Internet Explorer-Integration](#configure-internet-explorer-integration)
 2. [Umleiten von Websites von Microsoft Edge in den IE-Modus](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Optional) [Umleiten von Websites von Internet Explorer zu Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
+
+    1. Wenn Sie die IE11-App deaktivieren möchten, folgen Sie den Schritten unter [Deaktivieren von Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
+    2. Folgen Sie andernfalls die restlichen Schritte unter [Umleiten von Websites von Internet Explorer zu Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > Richtlinien zum Aktivieren des IE-Modus können über Intune konfiguriert werden. Weitere Informationen finden Sie unter [Microsoft Edge zu Microsoft Intune hinzufügen](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) und [Microsoft Edge-Richtlinien mit Microsoft Intune konfigurieren](./configure-edge-with-intune.md).

@@ -1,40 +1,40 @@
 ---
-title: Konfigurieren von Websites in der Enterprise Mode Site List
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/28/2020
+title: Konfigurationsstrategie für Unternehmensstandorte
+ms.author: shisub
+author: shisub
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Konfigurieren der Enterprise Site List
-ms.openlocfilehash: 9b1943e4d50dcc770b4a634b99ecbd001d1ffbcc
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Eine schrittweise Anleitung zum Konfigurieren der Enterprise Mode Site List für den Internet Explorer-Modus.
+ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447649"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470153"
 ---
-# <a name="configure-sites-on-the-enterprise-mode-site-list"></a>Konfigurieren von Websites in der Enterprise Mode Site List
+# <a name="enterprise-site-configuration-strategy"></a>Konfigurationsstrategie für Unternehmensstandorte
 
-In diesem Artikel werden die Änderungen an der Enterprise Mode Site List beschrieben, die das Konfigurieren des IE-Modus für die Microsoft Edge-Version 77 und höher unterstützen.
+In diesem Artikel werden Änderungen an der Enterprise Mode Site List beschrieben, um den Internet Explorer-Modus für Microsoft Edge, Version 77 und höher, zu unterstützen.
 
-Weitere Informationen zum Schema der XML-Datei der Enterprise Mode Site List finden Sie unter [Anleitungen für Enterprise Mode-Schema v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+Weitere Informationen zum Schema der XML-Datei der Enterprise Mode Site List finden Sie unter [Anleitungen für Enterprise Mode-Schema Version 2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle **Stable**, **Beta** und **Dev**, Version 77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+<!--
+## Updated schema elements
 
-## <a name="updated-schema-elements"></a>Aktualisierte Schemaelemente
+The following table describes the \<open-in app\> element added to the v.2 of the Enterprise Mode schema:
 
-In der folgenden Tabelle wird das \<open-in app\>-Element beschrieben, das dem Unternehmensmodus-Schema V.2 hinzugefügt wurde:
-
-| **Element** | **Beschreibung** |
+| **Element** | **Description** |
 | --- | --- |
-| \<open-in app="**true**"\> | Ein untergeordnetes Element, das steuert, welcher Browser für Websites verwendet wird. Dieses Element ist für Websites erforderlich, die **in IE11 geöffnet** werden müssen.|
+| \<open-in app="**true**"\> | A child element that controls what browser is used for sites. This element is required for sites that need to **open in IE11**.|
 
-**Beispiel:**
+**Example:**
 
 ``` xml
 <site url="contoso.com">
@@ -44,22 +44,41 @@ In der folgenden Tabelle wird das \<open-in app\>-Element beschrieben, das dem U
 </site>
 ```
 
-In der folgenden Tabelle sind die möglichen Werte des \<open-in\>-Elements aufgeführt:
+The following table shows the possible values of the \<open-in\> element:
 
-| **Wert** | **Beschreibung** |
+| **Value** | **Description** |
 | --- | --- |
-| **\<open-in\>IE11\</open-in\>** | Öffnet die Website im IE-Modus oder in einem vollständigen IE11-Fenster. Informationen zum Aktivieren des IE-Modus finden Sie unter [Konfigurieren von Richtlinien für den IE-Modus](./edge-ie-mode-policies.md)|
-| **\<open-in app="**true**"\>IE11\</open-in\>** | Öffnet die Website im IE-Modus oder in einem vollständigen IE11-Fenster |
-| **\<open-in\>MSEdge\</open-in\>** | Öffnet die Website in Microsoft Edge |
-| **\<open-in\>Keine oder nicht angegeben\</open-in\>** | Öffnet die Website im Standardbrowser oder in dem Browser, in dem der Benutzer zu der Website navigiert. |
-|**\<open-in\>Konfigurierbar\</open-in\>** | Ermöglicht der Website die Teilnahme an der Bestimmung der IE-Modus-Engine. Weitere Informationen hierzu finden Sie unter [Informationen zu konfigurierbaren Sites im IE-Modus](edge-learnmore-configurable-sites-ie-mode.md).  |
+| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](./edge-ie-mode-policies.md)|
+| **\<open-in app="**true**"\>IE11\</open-in\>** | Opens the site in a full IE11 window |
+| **\<open-in\>MSEdge\</open-in\>** | Opens the site in Microsoft Edge |
+| **\<open-in\>None or not specified\</open-in\>** | Opens the site in the default browser or in the browser where the user navigated to the site. |
+|**\<open-in\>Configurable\</open-in\>** | Allows the site to participate in IE mode engine determination. To learn more, see [Learn about Configurable sites in IE mode](edge-learnmore-configurable-sites-ie-mode.md).  |
 
 >[!NOTE]
-> Das Attribut app=**„true”** wird nur erkannt, wenn es mit _'open-in' IE11_ verknüpft ist. Durch das Hinzufügen zu den anderen 'open-in'-Elementen wird das Browserverhalten nicht geändert.   
+> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   -->
+
+## <a name="configuration-strategy"></a>Konfigurationsstrategie
+
+Die folgenden Schritte sind Teil einer Websitekonfigurationsstrategie für den IE-Modus:
+1. Vorbereiten der Websiteliste
+2. Konfigurieren von neutralen Websites
+3. (Optional) Verwenden der Cookiefreigabe bei Bedarf
+
+<!--
+Step 1.  – if you don’t have one use Site Discovery Step-by-Step
+Step 2 – Neutral sites + sticky mode
+        Use more examples and explain sticky mode better
+Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
+
+## <a name="prepare-your-site-list"></a>Vorbereiten der Websiteliste
+
+Wenn Sie bereits über eine Enterprise Mode Site List für IE11 oder die Vorgängerversion von Microsoft Edge verfügen, können Sie sie wiederverwenden, um den IE-Modus zu konfigurieren.
+
+Wenn Sie jedoch keine Websiteliste haben, können Sie das [Enterprise Site Discovery-Tool](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery) verwenden, um Ihre Websiteliste aufzufüllen.
 
 ## <a name="configure-neutral-sites"></a>Konfigurieren von neutralen Websites
 
-Damit der IE-Modus ordnungsgemäß funktioniert, müssen Authentifizierungs- bzw. Single Sign-On-Server explizit als neutrale Websites konfiguriert werden. Andernfalls versuchen die Seiten des IE-Modus, zu Microsoft Edge umzuleiten, und die Authentifizierung wird fehlschlagen.
+Damit der IE-Modus ordnungsgemäß funktioniert, müssen Authentifizierungs-/Einmaliges Anmelden (Single Sign-On, SSO)-Server explizit als neutrale Standorte konfiguriert werden. Andernfalls versuchen die Seiten des IE-Modus, zu Microsoft Edge umzuleiten, und die Authentifizierung wird fehlschlagen.
 
 Eine neutrale Website verwendet den Browser, in dem die Navigation begonnen wurde – entweder Microsoft Edge oder IE-Modus. Außerdem wird durch das Konfigurieren neutraler Websites sichergestellt, dass alle Anwendungen, die diese Authentifizierungsserver verwenden – sowohl moderne als auch ältere – weiterhin funktionsfähig sind.
 
@@ -73,10 +92,14 @@ Sie können neutrale Websites konfigurieren, indem Sie im Enterprise Mode Site L
 </site>
 ```
 
-Wenn Sie Authentifizierungsserver identifizieren möchten, überprüfen Sie den Netzwerkdatenverkehr einer Anwendung mithilfe der IE 11 Developer Tools. Wenn Sie mehr Zeit zum Identifizieren Ihrer Authentifizierungsserver benötigen, können Sie eine Richtlinie konfigurieren, um alle seiteninternen Navigationen im IE-Modus zu halten. Um die Verwendung des IE-Modus zu minimieren, deaktivieren Sie diese Einstellung, sobald Sie Ihre Authentifizierungsserver identifiziert und der Siteliste hinzugefügt haben. Weitere Informationen hierzu finden Sie unter [Konfigurieren Sie die seiteninterne Navigation so, dass sie im IE-Modus bleibt](./microsoft-edge-policies.md#internetexplorerintegrationsiteredirect).
+Wenn Sie Authentifizierungsserver identifizieren möchten, überprüfen Sie den Netzwerkdatenverkehr einer Anwendung mithilfe der IE 11-Entwicklungstools. Wenn Sie mehr Zeit benötigen, um Ihre Authentifizierungsserver zu identifizieren, können Sie eine Richtlinie so konfigurieren, dass alle Seitennavigationen im IE-Modus bleiben, damit Ihre Benutzer ihre Workflows ohne Unterbrechungen fortsetzen können. Deaktivieren Sie diese Einstellung, sobald Sie ihre Authentifizierungsserver identifiziert und der Websiteliste hinzugefügt haben, um die Verwendung des IE-Modus zu minimieren. Weitere Informationen finden Sie unter [Keep in-page navigation in IE mode](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
-   >Das Unternehmensmodusschema V.1 wird für die Integration des IE-Modus nicht unterstützt. Wenn Sie derzeit SchemaV.1 mit Internet Explorer11 verwenden, müssen Sie ein Upgrade auf SchemaV.2 durchführen. Weitere Informationen finden Sie unter [Unternehmensmodusschema V.2-Richtlinien](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >Das Enterprise Mode-Schema Version 1 wird für die Integration des IE-Modus nicht unterstützt. Wenn Sie derzeit SchemaV.1 mit Internet Explorer11 verwenden, müssen Sie ein Upgrade auf SchemaV.2 durchführen. Weitere Informationen finden Sie unter [Enterprise Mode-Schema Version 2-Richtlinien](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+
+## <a name="optional-use-cookie-sharing-if-necessary"></a>(Optional) Verwenden der Cookiefreigabe bei Bedarf
+
+Standardmäßig teilen die Microsoft Edge- und Internet Explorer-Prozesse keine Sitzungscookies, und diese mangelnde Freigabe kann während des IE-Modus in einigen Fällen unpraktisch sein. Wenn sich ein Benutzer z. B. im IE-Modus erneut authentifizieren muss, wenn er dies gewohnt ist oder wenn er sich von einer Microsoft Edge-Sitzung abmeldet, wird die Internet Explorer-Modussitzung für kritische Transaktionen nicht abgemeldet. In diesen Szenarien können Sie bestimmte von SSO festgelegte Cookies so konfigurieren, dass sie von Microsoft Edge an Internet Explorer gesendet werden, damit die Authentifizierungserfahrung verbessert wird, indem keine erneute Authentifizierung erforderlich ist. Weitere Informationen finden Sie unter [Cookie sharing from Microsoft Edge to Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ## <a name="see-also"></a>Weitere Informationen
 

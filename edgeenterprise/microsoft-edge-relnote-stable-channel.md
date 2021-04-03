@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447989"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470273"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -28,6 +28,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077463-march-25"></a>Version 89.0.774.63: 25. März
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-89077457-march-18"></a>Version 89.0.774.57: 18. März
 
@@ -83,7 +87,7 @@ Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnot
 
 #### <a name="new-policies"></a>Neue Richtlinien
 
-Es wurden sieben neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden sieben neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) – Durchsuchen der Einstellungen für die Lebensdauer von Daten
 - [MAMEnabled](./microsoft-edge-policies.md#mamenabled) – Mobile App Management aktiviert
@@ -107,7 +111,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-88070574-february-17"></a>Version 88.0.705.74: 17. Februar
 
-Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnotes-security.md#February-17-2021)
+Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnotes-security.md#february-17-2021)
 
 ## <a name="version-88070568-february-11"></a>Version 88.0.705.68: 11. Februar
 
@@ -118,11 +122,11 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 > [!IMPORTANT]
 > Dieses Update enthält [CVE-2021-21148,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) für das laut Chromium-Team ein Exploit im Umlauf ist.
 
-Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnotes-security.md#February-5-2021)
+Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnotes-security.md#february-5-2021)
 
 ## <a name="version-88070562-february-4"></a>Version 88.0.705.62: 4. Februar
 
-Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnotes-security.md#February-4-2021)
+Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnotes-security.md#february-4-2021)
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
@@ -295,7 +299,7 @@ Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnot
 
 #### <a name="new-policies"></a>Neue Richtlinien
 
-Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [ConfigureFriendlyURLFormat](./microsoft-edge-policies.md#configurefriendlyurlformat) – Zum Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen.
 - [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) – Shopping in MicrosoftEdge aktiviert.

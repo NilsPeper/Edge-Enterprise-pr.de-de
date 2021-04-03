@@ -1,28 +1,28 @@
 ---
-title: Informationen zum IE-Modus
+title: Was ist der Internet Explorer-Modus?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/25/2020
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Hier erfahren Sie, wie Sie Microsoft Edge im IE-Modus verwenden.
-ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Erfahren Sie, wie der Internet Explorer-Modus in Microsoft Edge Zugriff auf Websites bietet, die Internet Explorer 11 benötigen, sowie Zugriff auf moderne Websites.
+ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447339"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470223"
 ---
-# <a name="about-ie-mode"></a>Informationen zum IE-Modus
+# <a name="what-is-internet-explorer-ie-mode"></a>Was ist der Internet Explorer (IE)-Modus?
 
-In diesem Artikel finden Sie eine Übersicht und Voraussetzungen für die Verwendung von Microsoft Edge mit dem IE-Modus.
+Wir haben den Internet Explorer (IE)-Modus in Microsoft Edge für Organisationen erstellt, die Internet Explorer 11 zur Abwärtskompatibilität mit vorhandenen Websites benötigen, aber auch einen modernen Browser benötigen. Dieses Feature erleichtert Organisationen die Verwendung eines Browsers, für Vorgänger-Web/-Apps oder für ein modernes Web/eine moderne App. Dieser Artikel enthält eine Einführung in die Verwendung von Microsoft Edge mit dem IE-Modus.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle **Stable**, **Beta** und **Dev**, Version 77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
 
 ## <a name="what-is-ie-mode"></a>Was ist der IE-Modus?
 

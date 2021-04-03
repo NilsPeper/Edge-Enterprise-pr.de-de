@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/22/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 9d9bec56a3629f18f7a9f64553858558a2864100
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 60294cc247e7c5af85d6fa28b9d3f201755109c6
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447569"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470263"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Wir haben die Versionshinweise zur Microsoft Edge Beta [Version 89.0.774.18 vom 3. Februar](#version-89077418-february-3) aktualisiert, um auf die neuen Features hinzuweisen.
+
+## <a name="version-90081822-march-29"></a>Version 90.0.818.22: 29. März
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-90081814-march-22"></a>Version 90.0.818.14: 22. März
 
