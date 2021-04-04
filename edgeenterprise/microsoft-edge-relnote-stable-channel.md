@@ -3,23 +3,25 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/25/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 31aaad801f4632985d7fc9d043155f2eb82ed046
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470273"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470903"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Stable Channel enthalten sind.
+
+
 
 - Alle Sicherheitsupdates werden [hier](microsoft-edge-relnotes-security.md) aufgelistet.
 - Archivierte Versionshinweise für Microsoft Edge Stable Channel finden Sie [hier.](microsoft-edge-relnote-archive-stable-channel.md)
@@ -29,7 +31,11 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > [!NOTE]
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 
-## <a name="version-89077463-march-25"></a>Version 89.0.774.63: 25. März
+## <a name="version-89077468-april-1"></a>Version 89.0.774.68 vom 1. April
+
+Sicherheitsupdates im Stabilen Kanal sind [hier](./microsoft-edge-relnotes-security.md#april-1-2021) aufgeführt.
+
+## <a name="version-89077463-march-25"></a>Version 89.0.774.63 vom 25. März
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
