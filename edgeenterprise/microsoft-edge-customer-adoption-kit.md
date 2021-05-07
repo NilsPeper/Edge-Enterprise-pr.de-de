@@ -65,7 +65,7 @@ Verwenden Sie die folgenden Digital Signage-Elemente, um Benutzer über Microsof
 - Microsoft Search in Bing
 - Sicherheit
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text=""Neuer Tab"-Seite":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Neuer Tab-Seite":::
 
 ### <a name="banners"></a>Banner
 

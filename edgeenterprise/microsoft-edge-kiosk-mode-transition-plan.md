@@ -74,7 +74,7 @@ Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks i
 
 4. Klicken Sie auf der Seite **Einen Kiosk einrichten**  auf **Erste Schritte**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Seite "Kiosk" – erste Schritte":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Seite Kiosk – erste Schritte":::
 
 5. Geben Sie einen Namen ein, um ein neues Kioskkonto zu erstellen, oder wählen Sie ein vorhandenes Konto aus der Dropdownliste aus, und klicken Sie dann auf  **Weiter**.
 
