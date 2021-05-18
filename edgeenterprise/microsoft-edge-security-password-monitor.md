@@ -50,7 +50,7 @@ Nachdem die Kennwortmonitor-Richtlinie aktiviert wurde, gibt es unterschiedliche
 
 - Automatische Aktivierung. Für Benutzer, die mit ihrem Geschäftskonto (Active Directory oder Azure Active Directory) angemeldet sind und ihre Kennwörter synchronisieren, wird dieses Funktion automatisch aktiviert. Die Benachrichtigung im nächsten Screenshot wird angezeigt, in der sie darüber informiert werden, dass das Feature aktiviert ist.
 
-  :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Hinweis "Kennwortmonitor aktiviert"":::
+  :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Hinweis Kennwortmonitor aktiviert":::
 
 -  Einholen der ausdrücklichen Zustimmung. Benutzer, für die die Kennwortsynchronisierung nicht aktiviert ist, werden um die Berechtigung zum Aktivieren des Kennwortmonitors gebeten. Sie werden dazu aufgefordert, wenn die folgenden Aktionen auftreten:
    - Wenn ein Benutzer ein neues Kennwort speichert.
