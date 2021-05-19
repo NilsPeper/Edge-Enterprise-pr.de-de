@@ -50,7 +50,7 @@ So rufen Sie das Richtlinienmanifest ab
 - Klicken Sie auf GET POLICY FILES (Richtliniendateien abrufen), um Ihr Richtlinienvorlagenpaket herunterzuladen.
 
   > [!NOTE]
-  > Derzeit ist das Richtlinienvorlagenpaket als CAB-Datei signiert. Sie müssen ein Drittanbietertool verwenden, z.B. The Unarchiver, um die Datei unter macOS zu öffnen.
+  > Derzeit ist das Richtlinienvorlagenpaket als CAB-Datei signiert. Sie müssen ein Drittanbietertool verwenden, z. B. The Unarchiver, um die Datei unter macOS zu öffnen.
 
 Nachdem Sie die CAB-Datei entpackt haben, entpacken Sie die ZIP-Datei, und navigieren Sie zum Verzeichnis "Mac" auf der obersten Ebene. Das Manifest namens "policy_manifest.json" befindet sich in diesem Verzeichnis.
 

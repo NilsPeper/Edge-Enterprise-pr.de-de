@@ -1,9 +1,9 @@
 ---
 title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
-author: dan-wesley
+author: brianalt-msft
 manager: tahills
-ms.date: 11/12/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,15 +11,14 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
-ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
+ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "11167307"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105569"
 ---
 # Microsoft Edge – Update-Richtlinien
-
 Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.
 
 Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)
@@ -225,9 +224,9 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 #### Beschreibung
 Mit dieser Richtlinie können Benutzer Microsoft Edge (Edge-HTML) und Microsoft Edge (Chromium-basiert) nebeneinander ausführen.
 
-Wenn diese Richtlinie auf „Nicht konfiguriert” festgelegt ist, ersetzt Microsoft Edge (Chromium-basiert) Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten), und die Sicherheitsupdates vom November2019 werden installiert.  Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Deaktiviert“.
+Wenn diese Richtlinie auf „Nicht konfiguriert” festgelegt ist, ersetzt Microsoft Edge (Chromium-basiert) Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten), und die Sicherheitsupdates vom November 2019 werden installiert.  Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Deaktiviert“.
 
-Die Einstellung „Deaktiviert” blockiert eine Seite-an-Seite-Umgebung, und Microsoft Edge (Chromium-basiert) ersetzt Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten). Außerdem werden die Sicherheitsupdates vom November2019 installiert.  Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Nicht konfiguriert“.
+Die Einstellung „Deaktiviert” blockiert eine Seite-an-Seite-Umgebung, und Microsoft Edge (Chromium-basiert) ersetzt Microsoft Edge (Edge-HTML) nach dem stabilen Kanal von Microsoft Edge (Chromium-basierten). Außerdem werden die Sicherheitsupdates vom November 2019 installiert.  Hierbei handelt es sich um das gleiche Verhalten wie bei der Einstellung „Nicht konfiguriert“.
 
 Wenn diese Richtlinie aktiviert ist, können Microsoft Edge (Chromium-basiert) und Microsoft Edge (Edge-HTML) nach der Installation von Microsoft Edge (Chromium-basiert) nebeneinander ausgeführt werden.
 
@@ -436,7 +435,7 @@ Wenn diese Richtlinie aktiviert ist, können Sie einen Wert für die Mindestanza
 >Microsoft Edge Update 1.3.33.5 und höher
 
 #### Beschreibung
-Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab Stunde:Minute für einen Zeitraum der Dauer (in Minuten) unterdrückt. Die Dauer ist von der Sommerzeit nicht betroffen. Wenn die Startzeit z.B. 22:00 lautet und die Dauer 480Minuten beträgt, werden Updates genau 8 Stunden lang unterdrückt, unabhängig davon, ob die Sommerzeit in diesem Zeitraum beginnt oder endet.
+Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab Stunde:Minute für einen Zeitraum der Dauer (in Minuten) unterdrückt. Die Dauer ist von der Sommerzeit nicht betroffen. Wenn die Startzeit z. B. 22:00 lautet und die Dauer 480 Minuten beträgt, werden Updates genau 8 Stunden lang unterdrückt, unabhängig davon, ob die Sommerzeit in diesem Zeitraum beginnt oder endet.
 
   Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Updateprüfungen während eines bestimmten Zeitraums nicht unterdrückt.
 #### Windows-Informationen und -Einstellungen

@@ -22,7 +22,7 @@ ms.locfileid: "11470287"
 In diesem Artikel wird die Plattformunterstützung für Microsoft Edge-Features zusammengefasst.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="feature-matrix-for-platforms"></a>Featurematrix für Plattformen
 

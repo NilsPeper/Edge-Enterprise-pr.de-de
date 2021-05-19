@@ -294,7 +294,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Aktivieren von Sicherheitswarnungen für Befehlszeilen Kennzeichnungen|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Aktivieren von Komponentenupdates in Microsoft Edge|
 |[ConfigureDoNotTrack](#configuredonottrack)|DNT konfigurieren|
-|[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen|
+|[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Konfigurieren des Standardformats für das Einfügen von URLs, die aus Microsoft Edge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen|
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Konfiguration der automatischen Anmeldung mit einem Active Directory-Domänenkonto, wenn kein Azure AD-Domänenkonto vorhanden ist|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Konfiguration von Text-zu-Sprache Online|
 |[ConfigureShare](#configureshare)|Konfiguration der Freigabeoberfläche|
@@ -394,7 +394,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[QuicAllowed](#quicallowed)|QUIC-Protokoll zulassen|
 |[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Verwalten der Funktion zur Schnellansicht von Office-Dateien in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Verhindern der Installation des BHO zum Umleiten von inkompatiblen Websites von Internet Explorer zu Microsoft Edge|
-|[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Umleiten von inkompatiblen Websites von Internet Explorer zu MicrosoftEdge|
+|[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Umleiten von inkompatiblen Websites von Internet Explorer zu Microsoft Edge|
 |[RelaunchNotification](#relaunchnotification)|Einen Benutzer informieren, dass für ausstehende Updates ein Browser-Neustart empfohlen oder erforderlich ist|
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Festlegen des Zeitraums für Aktualisierungsbenachrichtigungen|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Aktivieren der Codeintegrität des Renderers|
@@ -453,7 +453,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Websites, die auf Video-Aufnahmegeräte zugreifen können, ohne eine Berechtigung anfordern zu müssen|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|WPAD-Optimierung einrichten|
 |[WebAppInstallForceList](#webappinstallforcelist)|Konfigurieren der Liste der erzwungen installierten Web-Apps|
-|[WebCaptureEnabled](#webcaptureenabled)|Aktivieren des Features „Websammlung“ in MicrosoftEdge.|
+|[WebCaptureEnabled](#webcaptureenabled)|Aktivieren des Features „Websammlung“ in Microsoft Edge.|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Erneut aktivieren der Web Components v0 API bis M84 (veraltet)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Zulassen, dass WebDriver inkompatible Richtlinien außer Kraft setzt (veraltet)|
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Zulassen des Legacy-TLS/DTLS-Downgrades in WebRTC (veraltet)|
@@ -7451,7 +7451,7 @@ Wenn Sie diese Einstellung nicht konfigurieren, können Benutzer wählen, ob sie
 
   #### <a name="description"></a>Beschreibung
 
-  Mit dieser Richtlinieneinstellung können Sie die Zeitüberschreitung in Sekunden konfigurieren, nach der inaktive Hintergrund-Registerkarten automatisch in den Ruhezustand versetzt werden, wenn „Schlafende Registerkarten“ aktiviert ist. Standardmäßig beträgt diese Zeitüberschreitung 7 200Sekunden (2Stunden).
+  Mit dieser Richtlinieneinstellung können Sie die Zeitüberschreitung in Sekunden konfigurieren, nach der inaktive Hintergrund-Registerkarten automatisch in den Ruhezustand versetzt werden, wenn „Schlafende Registerkarten“ aktiviert ist. Standardmäßig beträgt diese Zeitüberschreitung 7 200 Sekunden (2 Stunden).
 
 Tabs werden nur dann automatisch in den Ruhezustand versetzt, wenn die Richtlinie [SleepingTabsEnabled](#sleepingtabsenabled) aktiviert ist, oder nicht konfiguriert ist und der Benutzer die Einstellung „Schlafende Registerkarten“ aktiviert hat.
 
@@ -7459,21 +7459,21 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer den Wert für di
 
 Zuordnung von Richtlinienoptionen:
 
-* 5Minuten (300) = 5Minuten Inaktivität
+* 5 Minuten (300) = 5 Minuten Inaktivität
 
-* 15Minuten (900) = 15Minuten Inaktivität
+* 15 Minuten (900) = 15 Minuten Inaktivität
 
-* 30Minuten (1.800) = 30Minuten Inaktivität
+* 30 Minuten (1.800) = 30 Minuten Inaktivität
 
-* 1Stunde (3.600) = 1Stunde Inaktivität
+* 1 Stunde (3.600) = 1 Stunde Inaktivität
 
-* 2Stunden (7.200) = 2Stunden Inaktivität
+* 2 Stunden (7.200) = 2 Stunden Inaktivität
 
-* 3Stunden (10.800) = 3Stunden Inaktivität
+* 3 Stunden (10.800) = 3 Stunden Inaktivität
 
-* 6Stunden (21.600) = 6Stunden Inaktivität
+* 6 Stunden (21.600) = 6 Stunden Inaktivität
 
-* 12Stunden (43.200) = 12Stunden Inaktivität
+* 12 Stunden (43.200) = 12 Stunden Inaktivität
 
 Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
 
@@ -12012,7 +12012,7 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
 
   ### <a name="configurefriendlyurlformat"></a>ConfigureFriendlyURLFormat
 
-  #### <a name="configure-the-default-paste-format-of-urls-copied-from-microsoft-edge-and-determine-if-additional-formats-will-be-available-to-users"></a>Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen
+  #### <a name="configure-the-default-paste-format-of-urls-copied-from-microsoft-edge-and-determine-if-additional-formats-will-be-available-to-users"></a>Konfigurieren des Standardformats für das Einfügen von URLs, die aus Microsoft Edge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen
 
   
   
@@ -12064,7 +12064,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: ConfigureFriendlyURLFormat
-  - GP-Name: Konfigurieren des Standardformats für das Einfügen von URLs, die aus MicrosoftEdge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen
+  - GP-Name: Konfigurieren des Standardformats für das Einfügen von URLs, die aus Microsoft Edge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -18439,7 +18439,7 @@ Sie können konfigurieren, ob die proaktive Authentifizierung in Microsoft Edge 
 
 Wenn Sie diese Richtlinie aktivieren, versucht Microsoft Edge, sich nahtlos bei Websites und Diensten mit dem Konto zu authentifizieren, das sich beim Browser angemeldet hat.
 
-Wenn Sie diese Richtlinie deaktivieren, versucht Microsoft Edge nicht, sich bei Websites oder Diensten über Single Sign-on (SSO) zu authentifizieren. Authentifizierte Benutzererfahrungen, wie Enterprise New Tab Page, funktionieren nicht (z.B. neuere und empfohlene Office-Dokumente sind nicht verfügbar).
+Wenn Sie diese Richtlinie deaktivieren, versucht Microsoft Edge nicht, sich bei Websites oder Diensten über Single Sign-on (SSO) zu authentifizieren. Authentifizierte Benutzererfahrungen, wie Enterprise New Tab Page, funktionieren nicht (z. B. neuere und empfohlene Office-Dokumente sind nicht verfügbar).
 
 Wenn Sie diese Richtlinie nicht konfigurieren, ist die proaktive Authentifizierung aktiviert.
 
@@ -18798,7 +18798,7 @@ Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsof
 
   ### <a name="redirectsitesfrominternetexplorerredirectmode"></a>RedirectSitesFromInternetExplorerRedirectMode
 
-  #### <a name="redirect-incompatible-sites-from-internet-explorer-to-microsoft-edge"></a>Umleiten von inkompatiblen Websites von Internet Explorer zu MicrosoftEdge
+  #### <a name="redirect-incompatible-sites-from-internet-explorer-to-microsoft-edge"></a>Umleiten von inkompatiblen Websites von Internet Explorer zu Microsoft Edge
 
   
   
@@ -18843,7 +18843,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: RedirectSitesFromInternetExplorerRedirectMode
-  - GP-Name: Umleiten von inkompatiblen Websites aus Internet Explorer zu MicrosoftEdge
+  - GP-Name: Umleiten von inkompatiblen Websites aus Internet Explorer zu Microsoft Edge
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
   - GP ADMX Dateiname: MSEdge.admx
@@ -22666,7 +22666,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### <a name="webcaptureenabled"></a>WebCaptureEnabled
 
-  #### <a name="enable-web-capture-feature-in-microsoft-edge"></a>Aktivieren des Features „Websammlung“ in MicrosoftEdge.
+  #### <a name="enable-web-capture-feature-in-microsoft-edge"></a>Aktivieren des Features „Websammlung“ in Microsoft Edge.
 
   
   
@@ -22695,7 +22695,7 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer nicht auf das Feature �
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: WebCaptureEnabled
-  - GP-Name: Aktivieren des Features „Websammlung“ in MicrosoftEdge
+  - GP-Name: Aktivieren des Features „Websammlung“ in Microsoft Edge
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx

@@ -24,7 +24,7 @@ In diesem Artikel werden Änderungen an der Enterprise Mode Site List beschriebe
 Weitere Informationen zum Schema der XML-Datei der Enterprise Mode Site List finden Sie unter [Anleitungen für Enterprise Mode-Schema Version 2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 <!--
 ## Updated schema elements
 
@@ -95,7 +95,7 @@ Sie können neutrale Websites konfigurieren, indem Sie im Enterprise Mode Site L
 Wenn Sie Authentifizierungsserver identifizieren möchten, überprüfen Sie den Netzwerkdatenverkehr einer Anwendung mithilfe der IE 11-Entwicklungstools. Wenn Sie mehr Zeit benötigen, um Ihre Authentifizierungsserver zu identifizieren, können Sie eine Richtlinie so konfigurieren, dass alle Seitennavigationen im IE-Modus bleiben, damit Ihre Benutzer ihre Workflows ohne Unterbrechungen fortsetzen können. Deaktivieren Sie diese Einstellung, sobald Sie ihre Authentifizierungsserver identifiziert und der Websiteliste hinzugefügt haben, um die Verwendung des IE-Modus zu minimieren. Weitere Informationen finden Sie unter [Keep in-page navigation in IE mode](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
-   >Das Enterprise Mode-Schema Version 1 wird für die Integration des IE-Modus nicht unterstützt. Wenn Sie derzeit SchemaV.1 mit Internet Explorer11 verwenden, müssen Sie ein Upgrade auf SchemaV.2 durchführen. Weitere Informationen finden Sie unter [Enterprise Mode-Schema Version 2-Richtlinien](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >Das Enterprise Mode-Schema Version 1 wird für die Integration des IE-Modus nicht unterstützt. Wenn Sie derzeit Schema V.1 mit Internet Explorer 11 verwenden, müssen Sie ein Upgrade auf Schema V.2 durchführen. Weitere Informationen finden Sie unter [Enterprise Mode-Schema Version 2-Richtlinien](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ## <a name="optional-use-cookie-sharing-if-necessary"></a>(Optional) Verwenden der Cookiefreigabe bei Bedarf
 

@@ -115,7 +115,7 @@ Der IE-Modus kann so konfiguriert werden, dass er für alle Websites in der loka
 
 >[!NOTE]
 >
-> Die lokale Intranetzone enthält explizit hinzugefügte Websites, weist dieser Zone aber auch Websites mit Hilfe von Heuristiken zu. Dazu können Hostnamen ohne Punkt gehören (z.B. **https**:**//payroll**) und Websites, die vom Proxykonfigurationsskript konfiguriert werden, um den Proxy zu umgehen. Wenn eine externe Partei den DNS oder Proxy steuert, kann sie potenziell erzwingen, dass Websites den IE-Modus verwenden.
+> Die lokale Intranetzone enthält explizit hinzugefügte Websites, weist dieser Zone aber auch Websites mit Hilfe von Heuristiken zu. Dazu können Hostnamen ohne Punkt gehören (z. B. **https**:**//payroll**) und Websites, die vom Proxykonfigurationsskript konfiguriert werden, um den Proxy zu umgehen. Wenn eine externe Partei den DNS oder Proxy steuert, kann sie potenziell erzwingen, dass Websites den IE-Modus verwenden.
 
 1. Öffnen Sie den lokalen Gruppenrichtlinien-Editor.
 2. Klicken Sie auf **Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.

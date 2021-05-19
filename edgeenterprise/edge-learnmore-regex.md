@@ -61,13 +61,13 @@ Außerdem finden Sie Syntax, die von PCRE, PERL und VIM akzeptiert wird.
 | x\* | null oder mehr x (mehr bevorzugen) |
 | x+ | ein oder mehrere x, mehrere bevorzugen |
 | x? | null oder ein x, ein x bevorzugen |
-| x{n,m} | n oder n+1 oder… m x, mehrere bevorzugen |
+| x{n,m} | n oder n+1 oder … m x, mehrere bevorzugen |
 | x{n,} | n oder mehrere x, mehrere bevorzugen |
 | x{n} | genau n x |
 | x\*? | null oder mehr x, (weniger bevorzugen) |
 | x+? | ein oder mehr x, weniger bevorzugen |
 | x?? | null oder ein x, null bevorzugen |
-| x{n,m}? | n oder n+1 oder… m x, weniger bevorzugen |
+| x{n,m}? | n oder n+1 oder … m x, weniger bevorzugen |
 | x{n,}? | no der mehr x, weniger bevorzugen |
 | x{n}? | genau n x |
 | x{} | (≡ x\*) (NICHT UNTERSTÜTZT) VIM |
@@ -82,7 +82,7 @@ Implementierungseinschränkung: die Zählformen x{n,m}, x{n,} und x{n} weisen Fo
 | x\*+ | null oder mehre x, possessiv (NICHT UNTERSTÜTZT) |
 | x++ | ein oder mehre x, possessiv (NICHT UNTERSTÜTZT) |
 | x?+ | null oder ein x, possessiv (NICHT UNTERSTÜTZT) |
-| x {n, m} + | n oder… oder m x, possessiv (NICHT UNTERSTÜTZT) |
+| x {n, m} + | n oder … oder m x, possessiv (NICHT UNTERSTÜTZT) |
 | x {n,} + | n oder mehre x, possessiv (NICHT UNTERSTÜTZT) |
 | x{n}+ | genau n x, possessiv (NICHT UNTERSTÜTZT) |
 
@@ -232,7 +232,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | [[:word:]] | Wortzeichen (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | Hexadezimalziffer (≡ [0-9A-Fa-f]) |
 
-| | Unicode-Zeichenklassennamen– allgemeine Kategorie |
+| | Unicode-Zeichenklassennamen – allgemeine Kategorie |
 | --- | --- |
 | C | andere |
 | Cc | control |
@@ -274,7 +274,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | Zp | Absatztrennzeichen |
 | Zs | Leerzeichentrennzeichen |
 
-| Unicode-Zeichenklassennamen– Skripte |
+| Unicode-Zeichenklassennamen – Skripte |
 | --- |
 | Adlam |
 | Ahom |

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von MicrosoftEdge für Windows
+title: Konfigurieren von Microsoft Edge für Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi

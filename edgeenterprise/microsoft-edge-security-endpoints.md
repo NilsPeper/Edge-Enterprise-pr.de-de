@@ -3,53 +3,53 @@ title: Zulassungsliste für Microsoft Edge-Endpunkte
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 11/25/2020
+ms.date: 06/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Zulassungsliste für Microsoft Edge-Endpunkte
-ms.openlocfilehash: b8f793edcc23798199fe5de1bfae912a63468464
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 76186524a708861432199d5da7eec7573ebecb96
+ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448199"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10980083"
 ---
-# <a name="allow-list-for-microsoft-edge-endpoints"></a>Zulassungsliste für Microsoft Edge-Endpunkte
+# Zulassungsliste für Microsoft Edge-Endpunkte
 
 Microsoft Edge erfordert zur Unterstützung der zugehörigen Features eine Internetverbindung. In diesem Artikel werden die Domänen-URLs aufgeführt, die Sie der Zulassungsliste hinzufügen müssen, um die Kommunikation über Firewalls und andere Sicherheitsmechanismen sicherzustellen.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-## <a name="domain-urls-to-allow"></a>Domänen-URLs für Zulassungsliste
+## Domänen-URLs für Zulassungsliste
 
 Lassen Sie die folgenden Domänen-URLs für Microsoft Edge zu.
 
-### <a name="update-service"></a>Updatedienst
+### Updatedienst
 
 Der Dienst, der Microsoft Edge verwendet, um nach neuen Updates zu suchen.
 
 - `https://msedge.api.cdp.microsoft.com`
 
-### <a name="experimentation-and-configuration-service"></a>Experimentier- und Konfigurationsservice
+### Experimentier- und Konfigurationsservice
 
-- `https://config.edge.skype.com`
+- `https://config.ecs.skype.com`
 
-### <a name="download-locations-for-microsoft-edge"></a>Speicherorte für den Download von Microsoft Edge
+### Speicherorte für den Download von Microsoft Edge
 
 Speicherorte, von denen Microsoft Edge während einer Erstinstallation oder bei einem Update heruntergeladen werden kann. Der Downloadort wird vom Update Dienst festgelegt.
 
-#### <a name="http"></a>HTTP
+#### HTTP
 
 - `http://msedge.f.tlu.dl.delivery.mp.microsoft.com`
 - `http://msedge.f.dl.delivery.mp.microsoft.com`
 - `http://msedge.b.tlu.dl.delivery.mp.microsoft.com`
 - `http://msedge.b.dl.delivery.mp.microsoft.com`
 
-#### <a name="https"></a>HTTPS
+#### HTTPS
 
 - `https://msedge.sf.tlu.dl.delivery.mp.microsoft.com`
 - `https://msedge.sf.dl.delivery.mp.microsoft.com`
@@ -59,18 +59,18 @@ Speicherorte, von denen Microsoft Edge während einer Erstinstallation oder bei 
   > [!TIP]
   > Zur Vereinfachung der Zulassungsliste für Downloadorte kann eine Wildcard verwendet werden: `*.dl.delivery.mp.microsoft.com`
 
-### <a name="download-locations-for-microsoft-edge-extensions"></a>Speicherorte für den Download von Erweiterungen für Microsoft Edge
+### Speicherorte für den Download von Erweiterungen für Microsoft Edge
 
 Speicherorte, von denen Microsoft Edge-Erweiterungen während einer Erstinstallation oder bei einem Update heruntergeladen werden können. Der Downloadort wird vom Update Dienst festgelegt.
 
-#### <a name="http"></a>HTTP
+#### HTTP
 
 - `http://msedgeextensions.f.tlu.dl.delivery.mp.microsoft.com`
 - `http://msedgeextensions.f.dl.delivery.mp.microsoft.com`
 - `http://msedgeextensions.b.tlu.dl.delivery.mp.microsoft.com`
 - `http://msedgeextensions.b.dl.delivery.mp.microsoft.com`
 
-#### <a name="https"></a>HTTPS
+#### HTTPS
 
 - `https://msedgeextensions.sf.tlu.dl.delivery.mp.microsoft.com`
 - `https://msedgeextensions.sf.dl.delivery.mp.microsoft.com`
@@ -80,20 +80,20 @@ Speicherorte, von denen Microsoft Edge-Erweiterungen während einer Erstinstalla
   > [!TIP]
   > Zur Vereinfachung der Zulassungsliste für Downloadorte kann eine Wildcard verwendet werden: `*.dl.delivery.mp.microsoft.com`
 
-### <a name="optionally-for-download-delivery-optimization"></a>Optional für die Download-Übermittlungsoptimierung
+### Optional für die Download-Übermittlungsoptimierung
 
-Weitere Informationen zur Übermittlungsoptimierung finden Sie unter [Übermittlungsoptimierung für Windows 10-Updates](/windows/deployment/update/waas-delivery-optimization).
+Weitere Informationen zur Übermittlungsoptimierung finden Sie unter [Übermittlungsoptimierung für Windows 10-Updates](https://aka.ms/waas-do).
 
 - Kommunikation Client-zu-Dienst: `*.do.dsp.mp.microsoft.com` : (HTTP Port 80, HTTPS Port 443)
 - Kommunikation Client-zu-Client: TCP-Port 7680 muss für eingehenden Datenverkehr geöffnet sein
 
-### <a name="sync"></a>Sync
+### Sync
 
 Diese Endpunkte verwalten das Lesen und Schreiben von synchronisierten Daten, die Rechteverwaltung für sichere Daten und die Benachrichtigung des Browsers, wenn neue Synchronisierungsdaten verfügbar sind.
 
 - Edge-Synchronisierungsdienst-Endpunkte:
 
-  - `https://edge-enterprise.activity.windows.com`
+  - `https://enterprise.edge.activity.windows.com`
   - `https://edge.activity.windows.com`
 
 - Azure Information Protection-Endpunkte:
@@ -102,17 +102,17 @@ Diese Endpunkte verwalten das Lesen und Schreiben von synchronisierten Daten, di
   - `https://api.aadrm.de` (für Mandanten in Deutschland)
   - `https://api.aadrm.cn` (für Mandanten in China)
 
-- [Windows-Benachrichtigungsdienst-Endpunkte](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+- [Windows-Benachrichtigungsdienst-Endpunkte](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 
-## <a name="other-browser-support-services"></a>Andere Dienste zur Browserunterstützung
+## Andere Dienste zur Browserunterstützung
 
-Stellen Sie Metadaten für Browser Features bereit, z.B. Tracking-Schutz, Zertifikatsperrlisten und Updates für Browserkomponenten. Stellen Sie herunterladbare Rechtschreibwörterbücher und Listen zur Blockierung von Werbung bereit. Stellen Sie Dienste bereit, um Browserfeatures wie Sammlungen, AutoFill und Erweiterungsspeicher zu unterstützen.
+Stellen Sie Metadaten für Browser Features bereit, z. B. Tracking-Schutz, Zertifikatsperrlisten und Updates für Browserkomponenten. Stellen Sie herunterladbare Rechtschreibwörterbücher und Listen zur Blockierung von Werbung bereit. Stellen Sie Dienste bereit, um Browserfeatures wie Sammlungen, AutoFill und Erweiterungsspeicher zu unterstützen.
 
 - `http://edge.microsoft.com/`
 - `https://edge.microsoft.com/`
 
-## <a name="see-also"></a>Weitere Informationen
+## Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Angebotsseite der Microsoft Edge-Dokumentation](./index.yml)
-- [Verwalten von Verbindungsendpunkten für Windows 10 Enterprise, Version 1903](/windows/privacy/manage-windows-1903-endpoints)
+- [Angebotsseite der Microsoft Edge-Dokumentation](https://docs.microsoft.com/DeployEdge/)
+- [Verwalten von Verbindungsendpunkten für Windows 10 Enterprise, Version 1903](https://docs.microsoft.com/windows/privacy/manage-windows-1903-endpoints)

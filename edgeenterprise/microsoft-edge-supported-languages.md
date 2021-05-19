@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge unterstützt die Anzeigesprache für Windows und macOS.
-ms.openlocfilehash: 37073213fcdacac6b8182dcbef93901c82110756
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447099"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406160"
 ---
 # <a name="microsoft-edge-language-support"></a>Sprachunterstützung für Microsoft Edge
 
@@ -26,7 +26,7 @@ In diesem Artikel wird gezeigt, wie Sie Microsoft Edge-Einstellungen verwenden k
 
 ## <a name="add-a-supported-language-to-microsoft-edge"></a>Hinzufügen einer unterstützten Sprache zu Microsoft Edge
 
-Führen Sie die folgenden Schritteaus, um die Liste der unterstützten Sprachen anzuzeigen, und fügen Sie dann Microsoft Edge eine Sprache hinzu.
+Führen Sie die folgenden Schritte aus, um die Liste der unterstützten Sprachen anzuzeigen, und fügen Sie dann Microsoft Edge eine Sprache hinzu.
 
 1. Klicken Sie auf der Menüleiste des Browsers auf das Symbol **Einstellungen und mehr** (**...**) oder geben Sie **ALT + F** ein, um das Menü „Einstellungen und mehr” zu öffnen.
 2. Klicken Sie unter **Einstellungen** auf **Sprachen**.
@@ -156,5 +156,5 @@ In der folgenden Tabelle sind die Anzeigesprachen aufgeführt, die von Microsoft
 
 ## <a name="see-also"></a>Weitere Informationen:
 
-- [Dokumentation für Microsoft Edge](./index.yml)
+- [Dokumentation für Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

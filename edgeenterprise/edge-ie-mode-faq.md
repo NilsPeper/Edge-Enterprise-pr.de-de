@@ -22,7 +22,7 @@ ms.locfileid: "11470203"
 Dieser Artikel enthält Tipps zur Fehlerbehebung und häufig gestellte Fragen zu Microsoft Edge Version 77 oder höher.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 
 ## <a name="troubleshoot-ie-mode"></a>Problembehandlung für IE-Modus
@@ -47,12 +47,12 @@ Diese Fehlermeldung wird möglicherweise angezeigt, wenn alle erforderlichen Win
 
 - Sie verwenden den Canary Channel, der standardmäßig auf der Benutzerebene installiert wird.
 - Sie verwenden den Stable-, Beta- oder Dev-Kanal, aber bei der Aufforderung zur Rechteerweiterung während der Installation wurde die Rechteerweiterung abgebrochen. Wenn Sie die Eingabeaufforderung für erhöhte Rechte abbrechen, wird die Installation auf Benutzerebene fortgesetzt.
-- Internet Explorer11 wurde in Windows-Features deaktiviert.
+- Internet Explorer 11 wurde in Windows-Features deaktiviert.
 
 Mögliche Lösungen:
 
 - Führen Sie das Installationsprogramm für einen beliebigen Kanal auf Systemebene aus: `installer.exe --system-level`
-- Aktivieren Sie Internet Explorer11 in Windows-Features.
+- Aktivieren Sie Internet Explorer 11 in Windows-Features.
 
 Um zu überprüfen, ob Microsoft Edge auf Systemebene installiert ist, geben Sie "edge://version" in die Adressleiste von Microsoft Edge ein. Der Pfad für die ausführbare Datei beginnt mit *C:\Programmdateien* und weist auf eine Systeminstallation hin. Wenn der Pfad der ausführbaren Datei mit *C:\Users\*, beginnt, deinstallieren Sie Microsoft Edge, und installieren Sie ihn mit Administratorrechten neu.
 
@@ -70,7 +70,7 @@ Möglicherweise wird dieser Fehler auf der *edge://compat/enterprise* Seite ange
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
-### <a name="will-ie-mode-replace-internet-explorer-11"></a>Wird der IE-Modus Internet Explorer11 ersetzen?
+### <a name="will-ie-mode-replace-internet-explorer-11"></a>Wird der IE-Modus Internet Explorer 11 ersetzen?
 
 Wir bemühen uns, Internet Explorer als unterstützten, zuverlässigen und sicheren Browser zu erhalten. Internet Explorer ist weiterhin eine Komponente des Windows-Betriebssystems, und verfügt daher über denselben Supportlebenszyklus wie das Betriebssystem, auf dem er installiert ist. Weitere Details finden Sie unter [Häufig gestellte Fragen zum Lebenszyklus – Internet Explorer](https://support.microsoft.com/help/17454/). Zwar unterstützt und aktualisiert Microsoft Internet Explorer weiterhin, die neuesten Features und Plattformupdates sind jedoch nur in Microsoft Edge verfügbar.
 
