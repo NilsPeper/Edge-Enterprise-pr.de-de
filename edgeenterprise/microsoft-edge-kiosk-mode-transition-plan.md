@@ -25,7 +25,7 @@ Dieser Artikel enthält Anleitungen zur Umstellung Ihres Kiosks der Vorgängerve
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle Stable, Beta und Dev, Version 87 oder höher.
 
 > [!IMPORTANT]
-> Wenn die Unterstützung für die Vorgängerversion von Microsoft Edge am 9.März 2021 endet, wird es entfernt und im Rahmen von Windows Update von April durch Microsoft Edge (Chromium-basiert) ersetzt. Weitere Informationen finden Sie [in diesem Blogbeitrag](https://aka.ms/EdgeLegacyEOS). Damit Sie ihre browserbasierten Kioskszenarien weiterhin verwenden können, müssen Sie Microsoft Edge (Chromium-basiert) installieren und den Kioskmodus vor der Windows Update-Freigabe von April auf Ihrem Gerät einrichten.
+> Wenn die Unterstützung für die Vorgängerversion von Microsoft Edge am 9. März 2021 endet, wird es entfernt und im Rahmen von Windows Update von April durch Microsoft Edge (Chromium-basiert) ersetzt. Weitere Informationen finden Sie [in diesem Blogbeitrag](https://aka.ms/EdgeLegacyEOS). Damit Sie ihre browserbasierten Kioskszenarien weiterhin verwenden können, müssen Sie Microsoft Edge (Chromium-basiert) installieren und den Kioskmodus vor der Windows Update-Freigabe von April auf Ihrem Gerät einrichten.
 
 ## <a name="kiosk-setup-steps"></a>Schritte zum Einrichten des Kiosks
 

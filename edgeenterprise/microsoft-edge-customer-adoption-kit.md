@@ -75,9 +75,9 @@ Verwenden Sie diese Banner auf Ihren internen Websites, um Ihre Mitarbeiter auf 
 
 ### <a name="one-pagers"></a>Onepager
 
-Senden oder posten Sie diese Onepager, um Ihre Mitarbeiter über MicrosoftEdge zu informieren und den Browser für die Verwendung am Arbeitsplatz einzurichten.
+Senden oder posten Sie diese Onepager, um Ihre Mitarbeiter über Microsoft Edge zu informieren und den Browser für die Verwendung am Arbeitsplatz einzurichten.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="Onepager für Informationen zu MicrosoftEdge":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="Onepager für Informationen zu Microsoft Edge":::
 
 ## <a name="other-learning-resources"></a>Andere Lernressourcen
 

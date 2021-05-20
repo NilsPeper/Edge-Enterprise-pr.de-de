@@ -20,7 +20,7 @@ ms.locfileid: "11470238"
 | 22.03.2021 | [Inhaltsaktualisierungen für Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Aktualisieren der Liste der Inhaltsupdates mit Anmerkungen. | wurde geändert |
 | 23.03.2021 | [Konfigurieren der Microsoft Edge-Richtlinieneinstellungen für Windows mit Microsoft Intune](/DeployEdge/configure-edge-with-intune) | wurde geändert |
 | 23.03.2021 | [Konfigurieren von Microsoft Edge mithilfe von Tools für die mobile Geräteverwaltung](/DeployEdge/configure-edge-with-mdm) | wurde geändert |
-| 23.03.2021 | [Konfigurieren von MicrosoftEdge für MacOS mithilfe einer Präferenzliste (.plist)](/DeployEdge/configure-microsoft-edge-on-mac) | wurde geändert |
+| 23.03.2021 | [Konfigurieren von Microsoft Edge für MacOS mithilfe einer Präferenzliste (.plist)](/DeployEdge/configure-microsoft-edge-on-mac) | wurde geändert |
 | 23.03.2021 | [Praktisches Bereitstellungslabor für Microsoft Edge](/DeployEdge/deploy-edge-hands-on-lab) | wurde geändert |
 | 23.03.2021 | [Automatisieren von Microsoft Edge für die MacOS-Bereitstellung mit Jamf](/DeployEdge/deploy-edge-mac-jamf) | wurde geändert |
 | 23.03.2021 | [Planen Ihrer Bereitstellung von Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment) | wurde geändert |
