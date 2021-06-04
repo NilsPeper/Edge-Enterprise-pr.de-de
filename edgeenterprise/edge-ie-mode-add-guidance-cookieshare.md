@@ -24,7 +24,7 @@ In diesem Artikel wird erläutert, wie Sie die Weitergabe von Sitzungscookies vo
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.
 
-## Voraussetzungen
+##  <a name="prerequisites"></a>Voraussetzungen
 
 - Windows-Updates
 
@@ -37,7 +37,7 @@ In diesem Artikel wird erläutert, wie Sie die Weitergabe von Sitzungscookies vo
 - Microsoft Edge, Version 87 oder höher
 - [IE-Modus](https://aka.ms/iemodeonedge)  konfiguriert mit Enterprise Mode Site List
 
-## Übersicht
+##  <a name="overview"></a>Übersicht
 
 Eine in großen Unternehmen häufige Konfiguration besteht darin, eine Anwendung, die in einem modernen Browser funktioniert, mit einer anderen Anwendung zu verknüpfen, welche für das Öffnen im Internet Explorer-Modus mit aktiviertem einmaligem Anmelden (SSO) als Teil des Workflows konfiguriert sein könnte.
 
@@ -46,13 +46,13 @@ Die Microsoft Edge- und Internet Explorer-Prozesse verwenden standardmäßig kei
 > [!NOTE]
 > Sitzungscookies können nur von Microsoft Edge an Internet Explorer weitergegeben werden. Die Weitergabe von Sitzungscookies von Internet Explorer an Microsoft Edge ist nicht möglich.
 
-## Funktionsweise der Cookie-Weitergabe
+##  <a name="how-cookie-sharing-works"></a>Funktionsweise der Cookie-Weitergabe
 
 Die Enterprise Mode Site List-XML-Datei wurde erweitert, damit zusätzliche Elemente Cookies angeben können, die von einer Microsoft Edge-Sitzung an Internet Explorer weitergegeben werden müssen.  
 
 Wenn während einer Microsoft Edge-Sitzung zum ersten Mal ein Internet Explorer-Modus-Tab erstellt wird, werden alle übereinstimmenden Cookies an die Internet Explorer-Sitzung weitergegeben. Anschließend wird jedes Mal, wenn ein Cookie, das einer Regel entspricht, hinzugefügt, gelöscht oder geändert wird, dieses als Update an die Internet Explorer-Sitzung weitergegeben. Wenn die Websiteliste aktualisiert wird, werden die weitergegebenen Cookies ebenfalls neu ausgewertet.
 
-### Aktualisierte Schemaelemente
+###  <a name="updated-schema-elements"></a>Aktualisierte Schemaelemente
 
 In der folgenden Tabelle wird das \<shared-cookie\>-Element beschrieben, das zur Unterstützung der Cookie-Weitergabe hinzugefügt wurde.
 
@@ -71,7 +71,7 @@ In der folgenden Tabelle wird das \<shared-cookie\>-Element beschrieben, das zur
 </site-list>
 ```
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Informationen zum IE-Modus](https://docs.microsoft.com/deployedge/edge-ie-mode)
 - [Informationen zu konfigurierbaren Websites](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)

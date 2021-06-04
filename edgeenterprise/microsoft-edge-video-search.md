@@ -26,11 +26,11 @@ In diesem Video wird gezeigt, wie Microsoft Edge die Kompatibilität mit Microso
 > [!NOTE]
 > Gefilmt wurde es bei Microsoft Ignite 2019, Sitzung THR2279: Microsoft Edge und Microsoft Search: Umfassende Tour für IT-Administratoren und Benutzer.
 
-## Über das Video
+##  <a name="about-the-video"></a>Über das Video
 
 Microsoft Search fügt maßgeschneiderte und integrierte Intranet-Suchergebnisse für Websites, Personen, Dateien und mehr in Edge auf dem PC, Mac und Mobilgerät hinzu. Abschließend wird gezeigt, wie Microsoft Search als Teil von Microsoft 365 konfiguriert wird, und wie Microsoft Edge aus dem System Center Konfigurations-Manager und aus Microsoft Intune plattformübergreifend bereitgestellt wird.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge YouTube-Wiedergabeliste](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

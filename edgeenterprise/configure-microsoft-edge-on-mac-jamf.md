@@ -24,7 +24,7 @@ In diesem Artikel wird beschrieben, wie Sie Richtlinieneinstellungen unter macOS
 Sie können Microsoft Edge-Richtlinieneinstellungen auf macOS auch mithilfe einer Eigenschaftslistendatei (.plist) konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren für macOS mithilfe einer Eigenschaftsliste (.plist)](configure-microsoft-edge-on-mac.md)
 
 
-## Voraussetzungen
+##  <a name="prerequisites"></a>Voraussetzungen
 
 Die folgende Software ist erforderlich:
 
@@ -32,7 +32,7 @@ Die folgende Software ist erforderlich:
 - Richtlinienvorlagendatei, Version 81.0.416.3
 - Jamf Pro, Version 10.19
 
-## Informationen zum Jamf Pro-Menü der Anwendungseinstellungen und benutzerdefinierten Einstellungen
+##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Informationen zum Jamf Pro-Menü der Anwendungseinstellungen und benutzerdefinierten Einstellungen
 
 Vor Jamf Pro 10.18 musste zur Verwaltung von Office 365 manuell eine Eigenschaftslistendatei (.plist) erstellt werden. Dieser Workflow war zeitaufwändig und erforderte einen starken technischen Hintergrund. Mit Jamf Pro 10.18 wurden diese Barrieren durch Optimierung des Konfigurationsprozesses eliminiert. IT-Administratoren konnten diese neue Benutzeroberfläche jedoch nur für bestimmte, von Jamf angegebene Anwendungen und bevorzugten Domänen verwenden.
 
@@ -40,7 +40,7 @@ In Jamf Pro 10.19 kann ein Benutzer ein JSON-Manifest als "benutzerdefiniertes S
 
 Weitere Informationen finden Sie im Jamf Pro-Administratorhandbuch unter [Computer Configuration Profiles](https://jamf.it/computer-configuration-profiles) (Computerkonfigurationsprofile).
 
-## Abrufen des Richtlinienmanifests für eine bestimmte Version von Microsoft Edge
+##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Abrufen des Richtlinienmanifests für eine bestimmte Version von Microsoft Edge
 
 So rufen Sie das Richtlinienmanifest ab
 
@@ -56,7 +56,7 @@ Nachdem Sie die CAB-Datei entpackt haben, entpacken Sie die ZIP-Datei, und navig
 
 Dieses Manifest wird ab Build 81.0.416.3 in jedem Richtlinienpaket veröffentlicht. Wenn Sie Richtlinien im Dev Channel testen möchten, können Sie das den einzelnen Entwicklerreleases zugeordnete Manifest verwenden und in Jamf Pro testen.  
 
-## Verwenden des Richtlinienmanifests in Jamf Pro
+##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Verwenden des Richtlinienmanifests in Jamf Pro
 
 Führen Sie die folgenden Schritte aus, um das Richtlinienmanifest in Jamf Pro hochzuladen, und erstellen Sie dann ein Richtlinienprofil für macOS.
 
@@ -105,7 +105,7 @@ Führen Sie die folgenden Schritte aus, um das Richtlinienmanifest in Jamf Pro h
 
 Nachdem Sie das neue Konfigurationsprofil erstellt haben, müssen Sie noch den **Scope** (Geltungsbereich) für das Profil konfigurieren.
 
-### So konfigurieren Sie den Geltungsbereich
+###  <a name="to-configure-the-scope"></a>So konfigurieren Sie den Geltungsbereich
 
 1. Stellen Sie für **Targets** (Ziele) die folgenden Minimaleinstellungen bereit:
 
@@ -115,7 +115,7 @@ Nachdem Sie das neue Konfigurationsprofil erstellt haben, müssen Sie noch den *
 2. Behalten Sie für **Limitations** (Beschränkungen) die Standardeinstellung bei: "None" (Keine). Klicken Sie auf **Abbrechen**.
 3. Behalten Sie für **Exclusions** (Ausschlüsse) die Standardeinstellung bei: "None" (Keine). Klicken Sie auf **Abbrechen**.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Konfigurieren für macOS mit Intune](configure-microsoft-edge-on-mac.md)

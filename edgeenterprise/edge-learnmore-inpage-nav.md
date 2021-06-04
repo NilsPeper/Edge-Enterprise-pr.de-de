@@ -26,7 +26,7 @@ Eine seiteninterne Navigation wird über einen Link, ein Skript oder ein Formula
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version81 oder höher.
 
-## Voraussetzungen
+##  <a name="prerequisites"></a>Voraussetzungen
 
 Die folgenden Windows-Updates sind für diese Richtlinie erforderlich:
 
@@ -36,13 +36,13 @@ Die folgenden Windows-Updates sind für diese Richtlinie erforderlich:
 - Windows 10 Version 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
 
 
-## Informationen zu dieser Richtlinie
+##  <a name="about-this-policy"></a>Informationen zu dieser Richtlinie
 
 Diese Richtlinie gibt Ihnen Zeit, alle Authentifizierungsserver, die von Ihren Websites im IE-Modus verwendet werden, zu identifizieren und zu konfigurieren. Diese Richtlinie kann jedoch zu einer inkonsistenten Browsererfahrung führen, weil einige Websites im IE-Modus und zu anderen Zeiten im Microsoft Edge-Modus gerendert werden. Diese Erfahrung hängt davon ab, ob die Navigation zur Website von einer Seite im IE-Modus aus begann. Jede Website, die nicht ausdrücklich so konfiguriert ist, dass sie in einer bestimmten Rendering-Engine geöffnet wird, unterliegt dieser Inkonsistenz.
 
 Wenn Sie diese Richtlinie aktivieren, empfehlen wir Ihnen, sie zu deaktivieren, nachdem Sie alle Authentifizierungsserver identifiziert und der Websiteliste als neutral hinzugefügt haben. Diese Aktion stellt sicher, dass Ihre modernen Websites niemals versehentlich im IE-Modus gerendert werden.
 
-## Beibehaltung der seiteninternen Navigation im IE-Modus
+##  <a name="keep-in-page-navigation-in-ie-mode"></a>Beibehaltung der seiteninternen Navigation im IE-Modus
 
 Um automatische oder alle seiteninternen Navigationen im Internet Explorer-Modus beizubehalten, folgen Sie diesen Schritten:
 
@@ -64,6 +64,6 @@ Um automatische oder alle seiteninternen Navigationen im Internet Explorer-Modus
 
 6. Klicken Sie auf **OK** oder **Übernehmen**, um diese Richtlinieneinstellung zu speichern.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

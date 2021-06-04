@@ -24,7 +24,7 @@ Einer der Vorteile der nächsten Microsoft Edge-Version besteht darin, dass Micr
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
 
-## Kanalübersicht
+##  <a name="channel-overview"></a>Kanalübersicht
 
 |Kanal|Hauptzweck|Wie oft mit neuen Features aktualisiert|Unterstützt?|
 |:---:|---|:---:|:---:|
@@ -35,23 +35,23 @@ Einer der Vorteile der nächsten Microsoft Edge-Version besteht darin, dass Micr
 
 Welchen Update-Kanal Sie Ihren Benutzern zur Verfügung stellen wollen, hängt von mehreren Faktoren ab, z.B. davon, wie viele Branchenanwendungen der Benutzer nutzt und dass Sie jedes Mal testen müssen, ob er eine aktualisierte Version von Microsoft Edge besitzt. Um Ihnen diese Entscheidung zu erleichtern, hier einige Informationen über die vier Updatekanäle, die für Microsoft Edge verfügbar sind.
 
-### Stable-Kanal
+###  <a name="stable-channel"></a>Stable-Kanal
 
 Der Stable-Kanal ist für den breiten Einsatz in Ihrem Unternehmen gedacht. Diesen Kanal sollten die meisten Benutzer verwenden. Er ist der stabilste der Kanäle und das Ergebnis der Stabilisierung des in der vorherigen Beta-Kanal-Veröffentlichung enthaltenen Featuresets. Neue Features werden alle 6 Wochen ausgeliefert. Sicherheits- und Qualitätsupdates werden nach Bedarf ausgeliefert. Eine Version des Stable-Kanals wird solange unterstützt, bis die nächste Version des Kanals verfügbar ist.
 
-### Beta-Kanal
+###  <a name="beta-channel"></a>Beta-Kanal
 
 Der Beta-Kanal ist für den Produktionseinsatz in Ihrem Unternehmen für eine repräsentative Auswahl von Benutzern vorgesehen. Es handelt sich um eine unterstützte Version. Jede Beta-Version wird solange unterstützt, bis die nächste Version dieses Kanals verfügbar ist. Dies ist eine gute Gelegenheit, um zu überprüfen, ob alles in Ihrer Umgebung wie erwartet funktioniert. Wenn ein Problem auftritt, kann es vor der Veröffentlichung im Stable-Kanal behoben werden. Neue Features werden alle 6 Wochen ausgeliefert. Sicherheits- und Qualitätsupdates werden nach Bedarf ausgeliefert.
 
-### Dev-Kanal
+###  <a name="dev-channel"></a>Dev-Kanal
 
 Der Dev-Kanal soll Sie bei der Planung und Entwicklung mit den neuesten Funktionen von Microsoft Edge unterstützen, jedoch mit einer höheren Qualität als im Canary-Kanal. Dies ist Ihre Gelegenheit, sich einen ersten Überblick über die nächsten Schrittezu verschaffen und sich auf die nächste Beta-Version vorzubereiten.
 
-### Canary-Kanal
+###  <a name="canary-channel"></a>Canary-Kanal
 
 Der Canary-Kanal wird täglich ausgeliefert und ist der aktuellste aller Kanäle. Wenn Sie Zugriff auf die neuesten Investitionen wünschen, finden Sie diese hier. Wegen der Veröffentlichungshäufigkeit werden sicherlich Probleme auftreten, so dass Sie möglicherweise parallel einen weiteren Kanal installieren müssen, wenn Sie die Canary-Veröffentlichungen nutzen.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Kanal-Downloads](https://aka.ms/EdgeEnterprise)

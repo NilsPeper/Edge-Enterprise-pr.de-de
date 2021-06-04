@@ -29,7 +29,7 @@ Verwenden Sie zur Unterstützung bei der Erstbereitstellung die folgenden Richtl
 > - [Referenz für Browserrichtlinien](microsoft-edge-policies.md)
 > - [Referenz für Updaterichtlinien](microsoft-edge-update-policies.md)
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 - [Konfigurieren von Microsoft Edge unter Windows](configure-microsoft-edge.md)
 - [Konfigurieren von Microsoft Edge unter macOS](configure-microsoft-edge-on-mac.md)
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

@@ -26,7 +26,7 @@ Weitere Informationen finden Sie unter [Informationen zu Eigenschaftslistendatei
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
-## Konfigurieren der Microsoft Edge-Richtlinien unter macOS
+##  <a name="configure-microsoft-edge-policies-on-macos"></a>Konfigurieren der Microsoft Edge-Richtlinien unter macOS
 
 Der erste Schritt besteht darin, eine *Übermittlung zu erstellen. Sie können die plist-Datei mit einem beliebigen Text-Editor erstellen oder Sie können das [Konfigurationsprofil mithilfe von Terminal erstellen](#create-a-configuration-profile-using-terminal). Es ist jedoch einfacher, eine plist-Datei mit einem Tool zu erstellen und zu bearbeiten, das den XML-Code für Sie formatiert. *Xcode* ist eine ﻿kostenlose integrierte Entwicklungsumgebung, die Sie von einem der folgenden Speicherorte abrufen können:
 
@@ -42,7 +42,7 @@ Der nächste Schritt, nachdem Sie den Inhalt Ihrer plist-Datei erstellt haben, b
 
 Der letzte Schritt besteht darin, Ihre Eigenschaftsliste auf den Mac-Geräten Ihrer Benutzer mit Ihrem bevorzugten MDM-Anbieter bereitzustellen, z. B. Microsoft Intune. Anweisungen finden Sie unter [Bereitstellen Ihrer plist](#deploy-your-plist)..
 
-### Erstellen eines Konfigurationsprofils mithilfe von Terminal
+###  <a name="create-a-configuration-profile-using-terminal"></a>Erstellen eines Konfigurationsprofils mithilfe von Terminal
 
 1. Verwenden Sie in Terminal den folgenden Befehl, um eine plist für Microsoft Edge auf Ihrem Desktop mit den bevorzugten Einstellungen zu erstellen:
 
@@ -61,13 +61,13 @@ Stellen Sie nach dem Konvertieren der Datei sicher, dass die Richtliniendaten ko
 > [!NOTE]
 > Im Inhalt der plist- oder xml-Datei dürfen nur Schlüssel-Werte-Paare enthalten sein. Entfernen Sie vor dem Hochladen Ihrer Datei in Intune alle \<plist>- und \<dict>-Werte und XML-Header aus der Datei. Die Datei darf nur Schlüssel-Wert Paare enthalten.
 
-## Bereitstellen Ihrer plist
+##  <a name="deploy-your-plist"></a>Bereitstellen Ihrer plist
 
 Erstellen Sie für Microsoft Intune ein neues Gerätekonfigurationsprofil, das auf die macOS-Plattform ausgerichtet ist, und wählen Sie den Profiltyp *Einstellungsdatei* aus. Richten Sie **com.microsoft.Edge** als bevorzugten Domänennamen ein und laden Sie Ihre Eigenschaftsliste hoch. Weitere Informationen finden Sie unter [Hinzufügen einer Eigenschaftslistendatei zu macOS-Geräten mithilfe von Microsoft Intune](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos).
 
 Laden Sie für Jamf die Eigenschaftslistendatei als Nutzlast für *Benutzerdefinierte Einstellungen* hoch.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Konfigurieren für macOS mit Jamf](configure-microsoft-edge-on-mac-jamf.md)

@@ -21,7 +21,7 @@ ms.locfileid: "11005493"
 
 Microsoft verpflichtet sich, Unternehmen die Informationen und Steuerelemente bereitzustellen, die für die Auswahl der Datensammlung in Microsoft Edge erforderlich sind.
 
-## Übersicht
+##  <a name="overview"></a>Übersicht
 
 Bei der Bereitstellung von Microsoft Edge unter Windows 10 werden Diagnosedaten standardmäßig basierend auf der [Einstellung für Windows-Diagnosedaten](https://go.microsoft.com/fwlink/?linkid=2099569) der Benutzer gesendet.
 
@@ -32,11 +32,11 @@ Wenn Microsoft Edge auf Nicht-Windows-Plattformen bereitgestellt wird, werden di
 
 Die vorhergehenden veralteten Richtlinien werden ersetzt durch [Telemetrie zulassen](https://go.microsoft.com/fwlink/?linkid=2099569) unter Windows 10 sowie die [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata)-Richtlinie für alle anderen Plattformen.  
 
-## Konfigurieren von Richtlinieneinstellungen
+##  <a name="configure-policy-settings"></a>Konfigurieren von Richtlinieneinstellungen
 
 Laden Sie zunächst die aktuelle Microsoft Edge-Richtlinienvorlage herunter, und verwenden Sie diese (weitere Informationen finden Sie unter [Konfigurieren von Microsoft Edge](configure-microsoft-edge.md)).
 
-### Senden erforderlicher und optionaler Diagnosedaten zur Browsernutzung
+###  <a name="send-required-and-optional-diagnostic-data-about-browser-usage"></a>Senden erforderlicher und optionaler Diagnosedaten zur Browsernutzung
 
 Wenn die [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata)-Richtlinie konfiguriert ist, hat Sie Vorrang vor [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) und [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices).
 
@@ -59,7 +59,7 @@ Unter Windows 7, Windows 8/8.1 und macOS steuert diese Richtlinie das Senden der
 
 Wenn Sie diese Richtlinie nicht konfigurieren oder deaktivieren, verwendet Microsoft Edge standardmäßig die Einstellungen des Benutzers.
 
-### (VERALTET) Aktivieren der Berichterstellung für Nutzung und Absturz.
+###  <a name="(deprecated)-enable-usage-and-crash-related-data-reporting"></a>(VERALTET) Aktivieren der Berichterstellung für Nutzung und Absturz.
 
 Die Richtlinie **MetricsReportingEnabled** ermöglicht die Erstellung von Berichten zu Nutzungs- und Absturzdaten über Microsoft Edge an Microsoft.
 
@@ -79,7 +79,7 @@ Wenn Microsoft Edge unter Windows 7, 8 und macOS ausgeführt wird:
 - Wenn diese Richtlinie nicht konfiguriert ist, wird für Microsoft Edge standardmäßig die Benutzereinstellung verwendet.
 -  Wenn diese Richtlinie aktiviert ist, sendet Microsoft Edge nur Verwendungsdaten, wenn [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) ebenfalls aktiviert ist.
 
-### (VERALTET) Senden von Websiteinformationen, um die Microsoft-Dienste zu verbessern.
+###  <a name="(deprecated)-send-site-information-to-improve-microsoft-services"></a>(VERALTET) Senden von Websiteinformationen, um die Microsoft-Dienste zu verbessern.
 
 Die Richtlinie **SendSiteInformationToImproveServices** ermöglicht das Senden von Informationen über besuchte Websites in Microsoft Edge an Microsoft, um Produkte und Dienste von Microsoft wie z. B. die Suche zu verbessern.
 
@@ -97,7 +97,7 @@ Wenn Microsoft Edge unter Windows 7, 8 und macOS ausgeführt wird:
 - Wenn diese Richtlinie aktiviert ist, sendet Microsoft Edge nur Verwendungsdaten, wenn [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) ebenfalls aktiviert ist.
 - Wenn diese Richtlinie nicht konfiguriert ist, wird für Microsoft Edge standardmäßig die Benutzereinstellung verwendet.
 
-## Einzelheiten zur Implementierung
+##  <a name="implementation-details"></a>Einzelheiten zur Implementierung
 
 Für Nicht-Windows 10-Geräte: 
 - Wenn die Richtlinie [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) konfiguriert ist, hat Sie Vorrang vor [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) und [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices). 
@@ -115,7 +115,7 @@ Damit Windows 10 unsere Implementierung mit der Abhängigkeit von der Einstellun
 > [!IMPORTANT]
 > Microsoft Edge unterstützt **MetricsReportingEnabled** und **SendSiteInfoToImproveServices** für Microsoft Edge-Versionen 86 bis inklusive 88. In der Microsoft Edge-Version 89 werden **MetricsReportingEnabled** und **SendSiteInfoToImproveServices** nicht mehr unterstützt, und auf Nicht-Windows 10-Plattformen standardmäßig auf **DiagnosticData** oder die Richtlinie **Telemetrie zulassen** für Windows 10 gesetzt.
 
-## Zusätzliche Datenschutzrichtlinien-Optionen
+##  <a name="additional-privacy-policy-options"></a>Zusätzliche Datenschutzrichtlinien-Optionen
 
 Möglicherweise möchten Sie die folgenden Gruppenrichtlinien im Zusammenhang mit dem Datenschutz berücksichtigen:
 
@@ -124,7 +124,7 @@ Möglicherweise möchten Sie die folgenden Gruppenrichtlinien im Zusammenhang mi
 - DNT konfigurieren
 - Deaktivieren des InPrivate-Modus
 
-## Weitere Informationen:
+##  <a name="see-also"></a>Weitere Informationen:
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge-Richtlinien](microsoft-edge-policies.md)

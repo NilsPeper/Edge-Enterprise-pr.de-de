@@ -23,7 +23,7 @@ In diesem Video erfahren Sie, wie Microsoft Edge Sicherheit, Kompatibilität und
 
 [![Microsoft Edge: Sicherheit, Kompatibilität und Verwaltbarkeit](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-## Über das Video
+##  <a name="about-the-video"></a>Über das Video
 
 Erfahren Sie anhand dieser interaktiven Übersicht mehr über die Sicherheits-, Kompatibilitäts- und Verwaltungsfunktionen von Microsoft Edge. Microsoft Edge basiert auf Chromium und ist der optimale Browser für Unternehmen. Unser Gastgeber, Jeremy Chapman zeigt Ihnen, was Microsoft Edge von anderen Browsern unterscheidet. Dieser ausführliche Einblick umfasst:
 
@@ -31,7 +31,7 @@ Erfahren Sie anhand dieser interaktiven Übersicht mehr über die Sicherheits-, 
 - Kompatibilität. Microsoft Edge ist sowohl mit dem modernen als auch dem Legacy-Web kompatibel.
 - Verwaltbarkeit. Bedenken Sie Ihre Aktualisierungsverwaltung oder Wartungsoptionen für Microsoft Edge.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge-Sicherheit für Ihr Unternehmen](ms-edge-security-for-business.md)

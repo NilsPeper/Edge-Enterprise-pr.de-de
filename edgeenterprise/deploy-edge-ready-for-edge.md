@@ -21,11 +21,11 @@ ms.locfileid: "11157688"
 
 Dieser Artikel enthält Informationen für den IT-Administrator, der eine Microsoft Edge-Bereitstellung plant und Informationen über Anwendungskompatibilität und -unterstützung benötigt.
 
-## Webanwendungskompatibilität und -unterstützung
+##  <a name="web-application-compatibility-and-support"></a>Webanwendungskompatibilität und -unterstützung
 
 Um Sie bei der Planung Ihrer Bereitstellung von Microsoft Edge zu unterstützen, haben wir eine Liste der Webanwendungen zusammengestellt, die möglicherweise in Ihrer Organisation verwendet werden. Anhand dieser Liste können Sie feststellen, ob die Webanwendung für Microsoft Edge bereit ist, wie in der öffentlichen Unterstützungserklärung des Webanwendungsanbieters dokumentiert.
 
-### Zur Anwendungsliste hinzufügen
+###  <a name="add-to-the-application-list"></a>Zur Anwendungsliste hinzufügen
 
 Die Liste wird regelmäßig aktualisiert, wenn Unterstützungserklärungen aus Feedback zur Kundenbindung identifiziert werden.
 
@@ -36,7 +36,7 @@ Wenn Sie Web-Apps anbieten und Ihre Unterstützungserklärung als Kundenreferenz
 - Anbietername
 - URL der öffentlichen Unterstützungserklärung
 
-### Anwendungsliste
+###  <a name="application-list"></a>Anwendungsliste
 
 Diese Anwendungen werden von Microsoft nicht für Microsoft Edge getestet oder zertifiziert. Die Liste wurde basierend auf öffentlich verfügbaren Ressourcen zusammengestellt. Ziehen Sie immer die aktuelle Unterstützungserklärung des Anbieters zurate. Für einige Anwendungen ist möglicherweise die Verwendung des IE-Modus erforderlich, wie in der Unterstützungserklärung angegeben.
 
@@ -143,7 +143,7 @@ In der folgenden Tabelle sind die Unterstützungserklärungen der Anbieter für 
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Planen Ihrer Bereitstellung von Microsoft Edge](deploy-edge-plan-deployment.md)

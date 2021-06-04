@@ -24,15 +24,15 @@ Beginnend mit Microsoft Edge, Version 83 werden wir schrittweise Rollouts der wi
 > [!NOTE]
 > Dieser Artikel bezieht sich auf den Microsoft Edge Stable-Kanal (Version 83 oder höher).
 
-## Warum sind progressive Rollouts erforderlich?
+##  <a name="why-do-we-need-progressive-rollout"></a>Warum sind progressive Rollouts erforderlich?
 
 Durch eine genaue Überwachung des Status unserer Updates und das Rollout derselben über einen Zeitraum von mehreren Tagen können wir die Auswirkungen von Problemen begrenzen, die evtl. im Zusammenhang mit einem neuen Update auftreten. Ab Microsoft Edge, Version 83 werden progressive Rollouts für alle Windows 7-, Windows 8- und 8.1- sowie Windows 10-Versionen von Microsoft Edge aktiviert. Sobald verfügbar wird auch Microsoft Edge auf dem Mac unterstützt.
 
-## Wie erfolgen die Updates?
+##  <a name="how-will-the-updates-work"></a>Wie erfolgen die Updates?
 
 Jeder Installation von Microsoft Edge wird ein Upgradewert zugewiesen. Nachdem mit dem inkrementellen Rollout begonnen wurde, wird das Update angezeigt, wenn der Wert auf Ihrem Gerät innerhalb des Wertebereiches für das Upgrade liegt. Im Laufe des Rollouts (also innerhalb weniger Tage) erhalten alle Benutzer das Update. Das Rollout von Browser-Updates mit kritischen Sicherheitsfixes erfolgt schneller als das von Updates, die keine kritischen Sicherheitsfixes umfassen. Dies geschieht, um sofortigen Schutz vor Sicherheitsrisiken zu gewährleisten.
 
-## Wie wirkt sich dies auf Unternehmen aus?
+##  <a name="how-does-this-affect-enterprises"></a>Wie wirkt sich dies auf Unternehmen aus?
 
 Microsoft Edge-Produkte werden über verschiedene Mechanismen wie Microsoft Intune, Windows Server Update Service (WSUS) und Configuration Manager an Unternehmen verteilt. Diese Bereitstellungstools verhalten sich im Hinblick auf das progressive Rollout unterschiedlich:
 
@@ -41,6 +41,6 @@ Microsoft Edge-Produkte werden über verschiedene Mechanismen wie Microsoft Intu
 
 Wenn Sie irgendwelche Anliegen oder Fragen haben, teilen Sie Ihr wertvolles Feedback mit uns über die Feedback-Schaltfläche (UserVoice) innerhalb der Anwendung, oder unten in den Kommentaren.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)

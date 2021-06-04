@@ -24,7 +24,7 @@ In diesem Artikel wird das Filterformat beschrieben, das für die Microsoft Edge
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
-## Das Filterformat
+##  <a name="the-filter-format"></a>Das Filterformat
 
 Das Filterformat ist:
 
@@ -42,7 +42,7 @@ Die Felder im Filterformat sind:
 | **Pfad** (*optional*) | Sie können eine beliebige Zeichenfolge im Pfad verwenden. |
 | **Abfrage** (*optional*) | Bei der **Abfrage** handelt es sich entweder um einen Schlüsselwert oder ein Nur-Schlüssel-Token, die durch ein kaufmännisches Und-Zeichen("&") getrennt sind. Trennen Sie Schlüsselwert-Token mit einem Gleichheitszeichen ("="). Um eine Präfixübereinstimmung anzugeben, können Sie am Ende der **Abfrage** ein Sternchen ("\*") verwenden. |
 
-## Vergleichen des Filterformats mit dem URL-Format
+##  <a name="comparing-the-filter-format-to-the-url-format"></a>Vergleichen des Filterformats mit dem URL-Format
 
 Das Filterformat ähnelt dem URL-Format mit Ausnahme der folgenden Unterschiede:
 
@@ -51,7 +51,7 @@ Das Filterformat ähnelt dem URL-Format mit Ausnahme der folgenden Unterschiede:
 - Sie können einen Platzhalter ("*") als **Host** verwenden und ihm einen Punkt (".") voranstellen.
 - Sie können einen Schrägstrich (/") oder einen Punkt (".") als Suffix für den **Host** verwenden. In diesem Fall wird das Suffix ignoriert.
 
-## Kriterien für die Filterauswahl
+##  <a name="filter-selection-criteria"></a>Kriterien für die Filterauswahl
 
 Der für eine URL ausgewählte Filter ist die spezifischste Übereinstimmung, die nach Verarbeitung der folgenden Filterauswahlregeln gefunden wurde:
 
@@ -65,7 +65,7 @@ Der für eine URL ausgewählte Filter ist die spezifischste Übereinstimmung, di
    >[!NOTE]
    >Das Standardverhalten besteht darin, die URL-Anforderung zuzulassen, wenn keine Übereinstimmung mit einem Filter vorliegt.
 
-## Beispiel für Kriterien für die Filterauswahl
+##  <a name="example-filter-selection-criteria"></a>Beispiel für Kriterien für die Filterauswahl
 
 In diesem Beispiel führt die Filterauswahl bei der Suche nach einer Übereinstimmung mit "https://sub.contoso.com/docs" Folgendes aus:
 
@@ -75,7 +75,7 @@ In diesem Beispiel führt die Filterauswahl bei der Suche nach einer Übereinsti
 4. Aus den übrigen Filtern werden alle, die nicht „/docs” als Präfix des **Pfads** haben, entfernt.
 5. Aus den verbleibenden Filtern wird der Filter mit dem längsten Pfadpräfix ausgewählt und angewendet. Wird kein Filter gefunden, beginnt der Auswahlprozess erneut bei Schritt 1. Der Prozess wird mit der nächsten Unterdomäne wiederholt.
 
-### Zusätzliche Filterinformationen
+###  <a name="additional-filter-information"></a>Zusätzliche Filterinformationen
 
 Wenn ein Filter einen Punkt (".") enthält, der dem **Host** vorangestellt ist, werden nur exakte **Host-Übereinstimmungen** gefiltert. Zum Beispiel:
 
@@ -99,13 +99,13 @@ Bei **Pfad** und **Abfrage** wird die Groß-/Kleinschreibung beachtet. Zum Beisp
 
 - Der Filter "http://contoso.com/path?query=A" stimmt weder mit "http://contoso.com/Path?query=A" noch mit "http://contoso.com/path?Query=A" überein. Er stimmt mit "http://contoso.COM/path?query=A" überein.
 
-## Lizenz für Inhalte
+##  <a name="content-license"></a>Lizenz für Inhalte
 
 > [!NOTE]
 > Teile dieser Seite sind Änderungen, die auf von Chromium.org erstellten und freigegebenen Werken basieren und gemäß den in der [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) beschriebenen Begriffen verwendet werden. Die Originalseite von [Chromium finden Sie hier](https://www.chromium.org/administrators/url-blacklist-filter-format).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Diese Arbeit unterliegt einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

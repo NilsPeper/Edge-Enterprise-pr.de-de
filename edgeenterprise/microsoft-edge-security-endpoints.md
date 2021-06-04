@@ -24,21 +24,21 @@ Microsoft Edge erfordert zur Unterstützung der zugehörigen Features eine Inter
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-## Domänen-URLs für Zulassungsliste
+##  <a name="domain-urls-to-allow"></a>Domänen-URLs für Zulassungsliste
 
 Lassen Sie die folgenden Domänen-URLs für Microsoft Edge zu.
 
-### Updatedienst
+###  <a name="update-service"></a>Updatedienst
 
 Der Dienst, der Microsoft Edge verwendet, um nach neuen Updates zu suchen.
 
 - `https://msedge.api.cdp.microsoft.com`
 
-### Experimentier- und Konfigurationsservice
+###  <a name="experimentation-and-configuration-service"></a>Experimentier- und Konfigurationsservice
 
 - `https://config.ecs.skype.com`
 
-### Speicherorte für den Download von Microsoft Edge
+###  <a name="download-locations-for-microsoft-edge"></a>Speicherorte für den Download von Microsoft Edge
 
 Speicherorte, von denen Microsoft Edge während einer Erstinstallation oder bei einem Update heruntergeladen werden kann. Der Downloadort wird vom Update Dienst festgelegt.
 
@@ -59,7 +59,7 @@ Speicherorte, von denen Microsoft Edge während einer Erstinstallation oder bei 
   > [!TIP]
   > Zur Vereinfachung der Zulassungsliste für Downloadorte kann eine Wildcard verwendet werden: `*.dl.delivery.mp.microsoft.com`
 
-### Speicherorte für den Download von Erweiterungen für Microsoft Edge
+###  <a name="download-locations-for-microsoft-edge-extensions"></a>Speicherorte für den Download von Erweiterungen für Microsoft Edge
 
 Speicherorte, von denen Microsoft Edge-Erweiterungen während einer Erstinstallation oder bei einem Update heruntergeladen werden können. Der Downloadort wird vom Update Dienst festgelegt.
 
@@ -80,14 +80,14 @@ Speicherorte, von denen Microsoft Edge-Erweiterungen während einer Erstinstalla
   > [!TIP]
   > Zur Vereinfachung der Zulassungsliste für Downloadorte kann eine Wildcard verwendet werden: `*.dl.delivery.mp.microsoft.com`
 
-### Optional für die Download-Übermittlungsoptimierung
+###  <a name="optionally-for-download-delivery-optimization"></a>Optional für die Download-Übermittlungsoptimierung
 
 Weitere Informationen zur Übermittlungsoptimierung finden Sie unter [Übermittlungsoptimierung für Windows 10-Updates](https://aka.ms/waas-do).
 
 - Kommunikation Client-zu-Dienst: `*.do.dsp.mp.microsoft.com` : (HTTP Port 80, HTTPS Port 443)
 - Kommunikation Client-zu-Client: TCP-Port 7680 muss für eingehenden Datenverkehr geöffnet sein
 
-### Sync
+###  <a name="sync"></a>Sync
 
 Diese Endpunkte verwalten das Lesen und Schreiben von synchronisierten Daten, die Rechteverwaltung für sichere Daten und die Benachrichtigung des Browsers, wenn neue Synchronisierungsdaten verfügbar sind.
 
@@ -104,14 +104,14 @@ Diese Endpunkte verwalten das Lesen und Schreiben von synchronisierten Daten, di
 
 - [Windows-Benachrichtigungsdienst-Endpunkte](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 
-## Andere Dienste zur Browserunterstützung
+##  <a name="other-browser-support-services"></a>Andere Dienste zur Browserunterstützung
 
 Stellen Sie Metadaten für Browser Features bereit, z. B. Tracking-Schutz, Zertifikatsperrlisten und Updates für Browserkomponenten. Stellen Sie herunterladbare Rechtschreibwörterbücher und Listen zur Blockierung von Werbung bereit. Stellen Sie Dienste bereit, um Browserfeatures wie Sammlungen, AutoFill und Erweiterungsspeicher zu unterstützen.
 
 - `http://edge.microsoft.com/`
 - `https://edge.microsoft.com/`
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Angebotsseite der Microsoft Edge-Dokumentation](https://docs.microsoft.com/DeployEdge/)

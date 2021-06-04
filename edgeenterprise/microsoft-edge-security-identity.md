@@ -24,7 +24,7 @@ In diesem Artikel wird beschrieben, wie Microsoft Edge die Identität verwendet,
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 
-## Browser-Anmelde- und Authentifizierungsfeatures
+##  <a name="browser-sign-in-and-authenticated-features"></a>Browser-Anmelde- und Authentifizierungsfeatures
 
 Microsoft Edge unterstützt die Anmeldung bei einem Browserprofil mit einem Azure AD-, MSA- oder Domänenkonto. Der für die Anmeldung verwendete Kontotyp bestimmt, welche authentifizierten Features für den Benutzer in Microsoft Edge verfügbar sind. In der folgenden Tabelle wird die Funktionsunterstützung für die einzelnen Kontotypen zusammengefasst.
 
@@ -37,9 +37,9 @@ Microsoft Edge unterstützt die Anmeldung bei einem Browserprofil mit einem Azur
 | Enterprise-Seite „Neue Registerkarte” | Erfordert O365 |   Erfordert O365 | Nein | n. a. |
 | Microsoft Search | Erfordert O365 | Erfordert O365 | Nein | n. a. |
 
-## Wie Benutzer sich bei Microsoft Edge anmelden können
+##  <a name="how-users-can-sign-into-microsoft-edge"></a>Wie Benutzer sich bei Microsoft Edge anmelden können
 
-### Automatische Anmeldung
+###  <a name="automatic-sign-in"></a>Automatische Anmeldung
 
 Microsoft Edge verwendet für die automatische Anmeldung beim Browser das BS-Standardkonto. Je nachdem, wie ein Gerät konfiguriert ist, können die Benutzer mit einer der folgenden Vorgehensweisen automatisch bei Microsoft Edge angemeldet werden.
 
@@ -49,11 +49,11 @@ Der Benutzer wird automatisch mit seinem Azure AD-Konto angemeldet.
 Standardmäßig wird der Benutzer nicht automatisch angemeldet. Wenn Benutzer automatisch mit Domänenkonten angemeldet werden sollen, verwenden Sie die [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureonpremisesaccountautosignin)-Richtlinie. Wenn Benutzer automatisch mit ihren Azure AD-Konten angemeldet werden sollen, sollten Sie für Ihre Geräte eine Hybridverbindung in Erwägung ziehen.
 - **BS-Standardkonto ist MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) und höher. Dieses Szenario ist auf Unternehmensgeräten unwahrscheinlich. Wenn aber das BS-Standardkonto MSA ist, meldet sich Microsoft Edge automatisch mit dem MSA-Konto an.
 
-### Manuelle Anmeldung
+###  <a name="manual-sign-in"></a>Manuelle Anmeldung
 
 Wenn der Benutzer nicht automatisch bei Microsoft Edge angemeldet wird, kann er sich bei der ersten Ausführung, in den Browsereinstellungen oder im Identitäts-Flyout manuell bei Microsoft Edge anmelden.
 
-### Verwalten der Browser-Anmeldung
+###  <a name="managing-browser-sign-in"></a>Verwalten der Browser-Anmeldung
 
 Zur Verwaltung der Browser-Anmeldung können Sie die folgenden Richtlinien verwenden:
 
@@ -61,23 +61,23 @@ Zur Verwaltung der Browser-Anmeldung können Sie die folgenden Richtlinien verwe
 - Beschränken Sie die Anmeldung auf eine Gruppe vertrauenswürdiger Konten. [Siehe RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern)
 - Deaktivieren oder Erzwingen der Browser-Anmeldung. [Siehe BrowserSignin](https://docs.microsoft.com/deployedge/microsoft-edge-policies#browsersignin)
 
-## Browser für einmaliges Anmelden (SSO) im Web
+##  <a name="browser-to-web-single-sign-on-(sso)"></a>Browser für einmaliges Anmelden (SSO) im Web
 
 Auf einigen Plattformen können Sie Microsoft Edge so konfigurieren, dass die Benutzer automatisch bei Websites angemeldet werden. Mit dieser Option müssen sie die Anmeldeinformationen für den Zugriff auf ihre Arbeits-Websites nicht jedes Mal erneut eingeben, was zur Steigerung der Produktivität beiträgt.
 
-### SSO mit Primärem Aktualisierungstoken (PRT)
+###  <a name="sso-with-primary-refresh-token-(prt)"></a>SSO mit Primärem Aktualisierungstoken (PRT)
 
 Microsoft Edge bietet native Unterstützung für PRT-basiertes SSO, es wird auch keine Erweiterung benötigt. Unter Windows 10 RS3 und höher erhalten Benutzer, die in ihrem Browserprofil angemeldet sind, SSO mit dem PRT-Mechanismus für Websites, die PRT-basiertes SSO unterstützen.
 
 Bei einem primären Aktualisierungstoken (PRT) handelt es sich um einen Azure AD-Schlüssel, der für die Authentifizierung auf Windows 10-, iOS- und Android-Geräten verwendet wird. Es ermöglicht das Einmalige Anmelden (Single Sign-On, SSO) bei den Anwendungen, die auf diesen Geräten verwendet werden. Weitere Informationen finden Sie unter [Was ist ein Primäres Aktualisierungstoken?](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token).
 
-### Nahtlose SSO
+###  <a name="seamless-sso"></a>Nahtlose SSO
 
 Ähnlich wie für PRT SSO bietet Microsoft Edge native Unterstützung für nahtlose SSO, ohne dass eine Erweiterung erforderlich ist. Unter Windows 10 RS3 und höher erhalten Benutzer, die in ihrem Browserprofil angemeldet sind, SSO mit dem PRT-Mechanismus für Websites, die PRT-basiertes SSO unterstützen.
 
 Bei der nahtlosen einmaligen Anmeldung werden Benutzer automatisch angemeldet, wenn sie Unternehmensgeräte verwenden, die mit einem Unternehmensnetzwerk verbunden sind. Wenn diese Option aktiviert ist, müssen die Benutzer ihre Kennwörter nicht eingeben, um sich bei Azure AD anzumelden. Normalerweise müssen sie nicht einmal ihre Benutzernamen eingeben. Weitere Informationen finden Sie unter [Active Directory – nahtlose Einmalige Anmeldung](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).
 
-### Integrierte Windows-Authentifizierung (WIA)
+###  <a name="windows-integrated-authentication-(wia)"></a>Integrierte Windows-Authentifizierung (WIA)
 
 Microsoft Edge unterstützt auch die integrierte Windows-Authentifizierung für Authentifizierungsanforderungen im internen Netzwerk einer Organisation für alle Anwendungen, die einen Browser für die Authentifizierung verwenden. Dies wird in allen Versionen von Windows 10 und niedrigeren Windows-Versionen unterstützt. Standardmäßig verwendet Microsoft Edge die Intranetzone als Zulassungsliste für die WIA. Alternativ können Sie die Liste der Server, die für die integrierte Authentifizierung aktiviert sind, mithilfe der [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist)-Richtlinie anpassen. Unter MacOS ist diese Richtlinie erforderlich, um die integrierte Authentifizierung zu ermöglichen.
 
@@ -87,21 +87,21 @@ Das folgende Beispiel einer UA-Zeichenfolge bezieht sich auf den zum Zeitpunkt d
 
 Für Dienste, die das Delegieren von „Anmeldeinformationen aushandeln“ erfordern, unterstützt Microsoft Edge die beschränkte Delegierung mithilfe der [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist)-Richtlinie.
 
-## Zusätzliche Authentifizierungskonzepte
+##  <a name="additional-authentication-concepts"></a>Zusätzliche Authentifizierungskonzepte
 
-### Proaktive Authentifizierung
+###  <a name="proactive-authentication"></a>Proaktive Authentifizierung
 
 Proaktive Authentifizierung ist eine Optimierung gegenüber einer Browser-zu-Website-SSO, bei der die Authentifizierung für bestimmte Erstanbieterwebsites per Frontlader geladen wird. Dadurch wird die Leistung der Adressleiste verbessert, wenn der Benutzer Bing als Suchmaschine verwendet. Auf diese Weise erhalten Benutzer personalisierte MSB-Suchergebnisse (Microsoft Search for Business). Außerdem ermöglicht es das Zulassen der Authentifizierung bei wichtigen Diensten wie etwa "Neue Tabseite" in Office. Sie können dies mithilfe der [ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled)-Richtlinie steuern.
 
-### Windows Hello CredUI für die NTLM-Authentifizierung
+###  <a name="windows-hello-credui-for-ntlm-authentication"></a>Windows Hello CredUI für die NTLM-Authentifizierung
 
 Wenn eine Website versucht, Benutzer mit den NTLM- oder Negotiate-Mechanismen anzumelden und SSO nicht verfügbar ist, bieten wir den Benutzern eine Möglichkeit, ihre BS-Anmeldeinformationen für die Website freizugeben, um die Authentifizierungsaufforderung mithilfe von Windows Hello CredUI zu erfüllen. Dieser Anmeldevorgang wird nur für Benutzer unter Windows 10 angezeigt, denen während einer NTLM- oder Negotiate-Aufforderung keine SSO-Option angeboten wird.
 
-### Automatische Anmeldung mit gespeicherten Kennwörtern
+###  <a name="sign-in-automatically-using-saved-passwords"></a>Automatische Anmeldung mit gespeicherten Kennwörtern
 
 Wenn ein Benutzer Kennwörter in Microsoft Edge speichert, kann er eine Funktion aktivieren, die ihn automatisch bei Websites anmeldet, auf denen sie Anmeldeinformationen gespeichert haben. Benutzer können diese Funktion unter *edge://settings/passwords* ein- bzw. ausschalten. Wenn Sie diese Funktion konfigurieren möchten, können Sie hierfür die [Kennwort-Manager](https://docs.microsoft.com/deployedge/microsoft-edge-policies#password-manager-and-protection)-Richtlinien verwenden.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Video: Microsoft Edge und Identität](microsoft-edge-video-identity.md)

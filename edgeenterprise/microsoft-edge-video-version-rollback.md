@@ -23,11 +23,11 @@ In diesem Video wird gezeigt, wie Microsoft Edge das Rollback von Versionen unte
 
 [![Rollback der Microsoft Edge-Version](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-## Über das Video
+##  <a name="about-the-video"></a>Über das Video
 
 Durch ein Rollback können Sie Ihre Microsoft Edge-Browserversion auf eine frühere Version zurücksetzen. Erfahren Sie, wie ein Rollback in Microsoft Edge Ihrem Unternehmen ein Sicherheitsnetz bieten kann, um potenzielle Auswirkungen während der Problembehandlung in Microsoft Edge zu verringern.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Zurücksetzen von Microsoft Edge auf eine vorherige Version](edge-learnmore-rollback.md)

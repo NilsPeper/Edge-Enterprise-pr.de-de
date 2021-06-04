@@ -23,11 +23,11 @@ Dieses Video zeigt den PDF-Reader für Unternehmen in Microsoft Edge. Klicken Si
 
 [![PDF-Reader für Unternehmen](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## Über das Video
+##  <a name="about-the-video"></a>Über das Video
 
 In diesem Video werden die Features des in Microsoft Edge integrierten PDF-Readers hervorgehoben. Sehen Sie, wie Benutzer PDFs einfärben und hervorheben, geschützte Dokumente öffnen und zertifikatsbasierte digitale Signaturen anzeigen und validieren können.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Der PDF-Reader in Microsoft Edge](microsoft-edge-pdf.md)

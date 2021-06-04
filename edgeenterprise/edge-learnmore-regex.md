@@ -35,7 +35,7 @@ Auf dieser Seite wird die Syntax regulärer Ausdrücke aufgelistet, die von RE2 
 
 Außerdem finden Sie Syntax, die von PCRE, PERL und VIM akzeptiert wird.
 
-## Syntaxtabellen
+##  <a name="syntax-tables"></a>Syntaxtabellen
 
 | Arten von Ausdrücken, die aus einem einzelnen Zeichen bestehen | Beispiele |
 | --- | --- |
@@ -500,13 +500,13 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | (\*BSR\_ANYCRLF) | Festlegen der \R-Konvention (nicht unterstützt) PCRE |
 | (\*BSR\_UNICODE) | (NICHT UNTERSTÜTZT) PCRE |
 
-## Lizenz für Inhalte
+##  <a name="content-license"></a>Lizenz für Inhalte
 
 > [!NOTE]
 > Teile dieser Seite sind Änderungen, die auf von Chromium.org erstellten und freigegebenen Werken basieren und gemäß den in der [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) beschriebenen Begriffen verwendet werden. Die Originalseite von Chromium finden Sie [hier](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Diese Arbeit unterliegt einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)

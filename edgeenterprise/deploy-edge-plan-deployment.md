@@ -37,7 +37,7 @@ Die folgenden Abschnitte enthalten spezifische Anleitungen für die Planung Ihre
 - [Auswerten des Pilotprojekts](#validate-your-deployment)
 - [Bereitstellen von Microsoft Edge im gesamten Unternehmen](#broad-deployment-of-microsoft-edge)
 
-## Bewerten der vorhandenen Browserumgebung und der Browseranforderungen
+##  <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Bewerten der vorhandenen Browserumgebung und der Browseranforderungen
 
 Nehmen Sie sich Zeit, um den aktuellen Browserstatus und das Ziel Ihres Projekts zu verstehen und sicherzustellen, dass alle Projektbeteiligten auf dem gleichen Stand sind und auf dasselbe Ergebnis hinarbeiten.
 
@@ -68,27 +68,27 @@ Sie sollten auch die **Voraussetzungen** für die Features kennen, die Sie inter
 Wenn Sie diese Fragen beantwortet haben, sind Sie bereit, Ihre Microsoft Edge-Bereitstellung zu planen.
 <!--bookmark -->
 
-## Stellen Sie sicher, dass Ihre Windows 10-Geräte bereit sind
+##  <a name="make-sure-your-windows-10-devices-are-ready"></a>Stellen Sie sicher, dass Ihre Windows 10-Geräte bereit sind
 
 Für den Edge Stable-Kanal ist das neueste kumulative Update (Latest Cumulative Update, LCU) von Oktober 2019 (oder höher) erforderlich. Wenn Sie versuchen, die Installation auf einem Windows 10-Gerät mit einem älteren LCU durchzuführen, schlägt die Installation fehl. Weitere Details zum minimalen LCU, die vor der Bereitstellung von Edge angewendet werden müssen, finden Sie unter [Windows-Updates zur Unterstützung der nächsten Version von Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
 
-## Ermitteln der Bereitstellungsmethode
+##  <a name="determine-your-deployment-methodology"></a>Ermitteln der Bereitstellungsmethode
 
 Wenn Sie den gewünschten Endzustand kennen, können Sie mit der Planung beginnen. Die zwei wesentlichen Möglichkeiten für die Bereitstellung von Microsoft Edge sind die Bereitstellung nach Rolle und die Bereitstellung nach Site.
 
-### Bereitstellung für Endbenutzer nach Rolle
+###  <a name="deploy-to-end-users-by-role"></a>Bereitstellung für Endbenutzer nach Rolle
 
 Wenn für Sie die Anwendungskompatibilität am wichtigsten ist, und Sie nicht genau wissen, welche Anwendungen getestet werden sollten, erwägen Sie die Bereitstellung für Endbenutzer nach Rolle. So stehen in jedem Abschnitt einer phasenweisen Bereitstellung Feedback und Einblicke zu Anwendungen zur Verfügung, deren Konfiguration möglicherweise geändert werden muss, um Kompatibilitätsprobleme zu beheben.
 
-### Bereitstellung für Endbenutzer nach Site
+###  <a name="deploy-to-end-users-by-site"></a>Bereitstellung für Endbenutzer nach Site
 
 Wenn die Bandbreite Ihr Hauptanliegen darstellt, sollten Sie Anwendungskompatibilitätstests im Voraus durchführen. Nachdem Sie die Tests abgeschlossen haben, stellen Sie die Anwendungen für Endbenutzer nach Site bereit, damit Sie andere Optimierungen der Softwarebereitstellung puffern können.
 
-## Site-Discovery
+##  <a name="do-site-discovery"></a>Site-Discovery
 
 Wenn Sie von älteren Webanwendungen abhängig sind und vorhaben, den Internet Explorer-Modus zu verwenden (was die meisten Kunden tun), müssen Sie wahrscheinlich eine zusätzliche Site-Discovery durchführen.
 
-### Wenn Sie die Vorgängerversion von Microsoft Edge bereits bereitgestellt und konfiguriert haben
+###  <a name="if-you've-already-deployed-and-configured-the-legacy-version-of-microsoft-edge"></a>Wenn Sie die Vorgängerversion von Microsoft Edge bereits bereitgestellt und konfiguriert haben
 
 Wenn Sie die Enterprise-Siteliste bereits so konfiguriert haben, dass sie für die Vorgängerversion von Microsoft Edge funktioniert, sind Sie fast schon fertig! Das einzige, was Sie hinzufügen müssen, sind neutrale Sites.
 
@@ -96,14 +96,14 @@ Neutrale Sites sind in der Regel Sites, die einmaliges Anmelden (Single Sign-On,
 
 Identifizieren Sie alle SSO-Sites (oder andere neutrale Sites), die Sie verwenden, und fügen Sie diese Ihrer Enterprise-Siteliste hinzu.
 
-### Wenn Sie Internet Explorer als Standardbrowser konfiguriert haben
+###  <a name="if-you've-configured-internet-explorer-as-your-default-browser"></a>Wenn Sie Internet Explorer als Standardbrowser konfiguriert haben
 
 Wenn Sie aktuell nur Internet Explorer verwenden, wissen Sie möglicherweise nicht, welche Sites auf moderne Webstandards aktualisiert wurden und für welche weiterhin Internet Explorer erforderlich ist. Sie können diese Sites suchen und sie der Enterprise-Siteliste hinzufügen. So können Sie den Internet Explorer-Modus nur auf Sites verwenden, die ihn benötigen.
 
 > [!TIP]
 > Verwenden Sie die Tools von [Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery?redirectedfrom=MSDN), um die Sites zu ermitteln, die möglicherweise den Internet Explorer-Modus benötigen. Sie können Daten auf Computern, auf denen Windows Internet Explorer 8 bis 11 ausgeführt wird, unter Windows 10, Windows 8.1 oder Windows 7 sammeln.
 
-### Analysieren der durch Site-Discovery ermittelten Daten
+###  <a name="analyze-site-discovery-data"></a>Analysieren der durch Site-Discovery ermittelten Daten
 
 Nachdem Sie die Sitedaten gesammelt haben, empfehlen wir den folgenden vierstufigen Prozess zum Analysieren der Daten:
 
@@ -115,7 +115,7 @@ Nachdem Sie die Sitedaten gesammelt haben, empfehlen wir den folgenden vierstufi
    > [!NOTE]
    > Als bewährte Methode sollten Sie alle Sites gruppieren, aus denen eine Anwendung besteht. Wenn alle Sites zur Ausführung einer Aufgabe verwendet werden müssen und in der Regel zusammen aktualisiert werden, ist dies ein guter Hinweis darauf, dass sie gruppiert werden sollten. So ist es beim Upgrade einer Anwendung einfacher, die gesamte Site aus dem Internet Explorer-Modus zu entfernen und einen modernen Browser für diese Anwendung zu verwenden.
 
-## Festlegen Ihrer Kanalstrategie
+##  <a name="determine-your-channel-strategy"></a>Festlegen Ihrer Kanalstrategie
 
 Microsoft Edge wird in [mehreren Kanälen](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels) veröffentlicht.
 
@@ -124,7 +124,7 @@ Microsoft Edge wird in [mehreren Kanälen](https://docs.microsoft.com/DeployEdge
 
 Sie möchten auf den meisten Geräten den stabilen Kanal bereitstellen. Sie sollten sich jedoch eine Bereitstellungsstrategie überlegen, die mehrere Geräte und mehrere Kanäle umfasst.
 
-### Mehrere Geräte und Kanäle
+###  <a name="multiple-devices-and-channels"></a>Mehrere Geräte und Kanäle
 
 Es wird empfohlen, eine repräsentative Teilmenge von Geräten für die Verwendung des Beta-Kanals zu konfigurieren. So können Sie bevorstehende Änderungen am Browser in einer Vorschau anzeigen. Sie können sehen, ob sich diese Änderungen auf Ihre Endbenutzer oder Anwendungen auswirken.
 
@@ -135,7 +135,7 @@ Da es möglich ist, auf einem Gerät mehrere Kanäle zu installieren, können Si
 > [!NOTE]
 > Wenn der Benutzer die Synchronisierung aktiviert hat, wird seine Konfiguration über mehrere Kanäle synchronisiert, was den Wechsel zwischen Kanälen noch einfacher macht.
 
-## Definieren und Konfigurieren von Richtlinien
+##  <a name="define-and-configure-policies"></a>Definieren und Konfigurieren von Richtlinien
 
 Nach der Erstellung der Enterprise-Siteliste wird empfohlen, die Richtlinien zu ermitteln und zu konfigurieren, die Sie mit Microsoft Edge bereitstellen möchten. So wird sichergestellt, dass diese Richtlinien beim Ausführen der Tests angewendet werden.
 
@@ -145,7 +145,7 @@ Für Sicherheitsrichtlinien empfiehlt es sich, mit der Microsoft Edge-Sicherheit
 
 Für andere Richtlinien sollten Sie sich die Richtlinienkonfigurationen für [Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies) und [Microsoft Edge Updates](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies) anschauen.
 
-### Definieren der Updatestrategie und -richtlinien
+###  <a name="define-your-update-strategy-and-policies"></a>Definieren der Updatestrategie und -richtlinien
 
 Sie können außerdem festlegen, wie Updates nach der Bereitstellung von Microsoft Edge ausgeführt werden sollen:
 
@@ -161,7 +161,7 @@ Unabhängig von Ihrer Updatestrategie wird empfohlen, eine mit Ringen versehene 
 >[!NOTE]
 >Microsoft Edge-Support ist nur für die neueste Version von Microsoft Edge in jedem Kanal verfügbar.
 
-## Testen der Anwendungskompatibilität
+##  <a name="do-app-compatibility-testing"></a>Testen der Anwendungskompatibilität
 
 Die Anwendungskompatibilität für Microsoft Edge ist extrem hoch – so hoch, dass Microsoft die folgenden Kompatibilitätszusagen macht:
 
@@ -171,7 +171,7 @@ Die Anwendungskompatibilität für Microsoft Edge ist extrem hoch – so hoch, d
 
 Wenn Sie eine Anwendung haben, bei der wir unsere Kompatibilitätszusage nicht erfüllen, stehen wir hinter dem Versprechen, es mit [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure) zu beheben.
 
-### Interne Branchen-App-Tests
+###  <a name="internal-line-of-business-app-testing"></a>Interne Branchen-App-Tests
 
 Ungeachtet unserer Kompatibilitätszusage wissen wir, dass viele Organisationen Anwendungen aus Gründen der Konformität oder des Risikomanagements überprüfen müssen. Auch wenn wir davon ausgehen, dass das Verfahren sehr unkompliziert ist, ist es wichtig, dass Sie Anwendungstests auf organisierte Weise und strikt durchführen.
 
@@ -182,11 +182,11 @@ Es gibt zwei Möglichkeiten zum Testen der Anwendungskompatibilität:
 
 Wählen Sie die Methode aus, die für jede Anwendung am besten geeignet ist. So können Sie die Risiken minimieren, ohne zu viel in Kompatibilitätstests zu investieren.
 
-### Unterstützung von Drittanbieter-Apps
+###  <a name="third-party-app-support"></a>Unterstützung von Drittanbieter-Apps
 
 Zusätzlich zu den eigenen Branchen-Apps verwenden viele Organisationen Apps, die von externen Quellen bereitgestellt werden. Der Artikel [Bereit für Microsoft Edge](deploy-edge-ready-for-edge.md) enthält eine Liste der Webanwendungen, die möglicherweise in Ihrer Organisation verwendet werden. Diese Liste enthält Links zu Unterstützungserklärungen der Anbieter für ihre Produkte bei Verwendung mit Microsoft Edge.
 
-## Bereitstellen von Microsoft Edge für eine Pilotgruppe
+##  <a name="deploy-microsoft-edge-to-a-pilot-group"></a>Bereitstellen von Microsoft Edge für eine Pilotgruppe
 
 Nachdem Sie Ihre Richtlinien definiert und die ersten Anwendungskompatibilitätstests abgeschlossen haben, können Sie die Bereitstellung für Ihre Pilotgruppe durchführen. Stellen Sie Ihre Pilotgruppe mithilfe eines der folgenden Tools bereit:
 
@@ -194,7 +194,7 @@ Nachdem Sie Ihre Richtlinien definiert und die ersten Anwendungskompatibilitäts
 - [Konfigurations-Manager](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager).
 - Weiteres Verwaltungstool: Laden Sie die [MSI-Datei für Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise) herunter, und stellen Sie sie bereit.
 
-## Überprüfen Ihrer Bereitstellung
+##  <a name="validate-your-deployment"></a>Überprüfen Ihrer Bereitstellung
 
 Nachdem Sie das Pilotprojekt bereitgestellt haben, können Sie das gesamte Feedback Ihrer Benutzer erfassen.
 
@@ -202,11 +202,11 @@ Nachdem Sie das Pilotprojekt bereitgestellt haben, können Sie das gesamte Feedb
 - Erfassen Sie Feedback zur Richtlinienkonfiguration. Stellen Sie sicher, dass Benutzer wichtige Features verwenden und ihre Arbeit erledigen können, während die Sicherheitsrichtlinien befolgt werden.
 - Erfassen Sie Feedback zur Benutzerfreundlichkeit und zu neuen Features. Identifizieren Sie alle Bereiche, in denen Schulungen basierend auf Benutzerfragen entwickelt und bereitgestellt werden sollten.
 
-## Allgemeine Bereitstellung von Microsoft Edge
+##  <a name="broad-deployment-of-microsoft-edge"></a>Allgemeine Bereitstellung von Microsoft Edge
 
 Nachdem Sie das Pilotprojekt abgeschlossen und den Bereitstellungsplan mit den Erkenntnissen aus dem Pilotprojekt aktualisiert haben, können Sie Microsoft Edge allen Benutzern vollständig bereitstellen.  Herzlichen Glückwunsch!
 
-## Weitere Informationen:
+##  <a name="see-also"></a>Weitere Informationen:
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Video – Bereitstellen von Microsoft Edge](microsoft-edge-video-deploy.md)

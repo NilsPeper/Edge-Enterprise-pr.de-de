@@ -23,11 +23,11 @@ In diesem Video wird gezeigt, wie Microsoft Edge die Identität von Unternehmens
 
 [![Identität in Microsoft Edge](media/microsoft-edge-video-identity/0.png)](http://www.youtube.com/watch?v=8lRUKhR7ipA "Identity in Microsoft Edge")
 
-## Über das Video
+##  <a name="about-the-video"></a>Über das Video
 
 In diesem Video wird beschrieben, wie Sie ein authentifiziertes und personalisiertes Erlebnis für Ihre Benutzer konfigurieren. Zu den Themen gehören das Konfigurieren der Anmeldung, des Single Sign-On und mehrerer Profile.
 
-## Weitere Informationen
+##  <a name="additional-information"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Unterstützung und Konfiguration der Identität in Microsoft Edge](microsoft-edge-security-identity.md)
