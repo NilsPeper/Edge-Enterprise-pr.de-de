@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "11105569"
 ---
-# Microsoft Edge – Update-Richtlinien
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge – Update-Richtlinien
 Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.
 
 Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)
