@@ -32,7 +32,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Anwendungen](#applications)|[Voreinstellungen](#preferences)|
 |[Proxyserver](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
-### [Anwendungen](#applications-policies)
+### <a name="applications"></a>[Anwendungen](#applications-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
 |[InstallDefault](#installdefault)|Standardinstallation zulassen|
@@ -45,20 +45,20 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Zurücksetzung auf Zielversion (pro Kanal)|
 |[TargetVersionPrefix](#targetversionprefix)|Außerkraftsetzung der Zielversion (pro Kanal)|
 
-### [Voreinstellungen](#preferences-policies)
+### <a name="preferences"></a>[Voreinstellungen](#preferences-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Überschreibung des Überprüfungszeitraums für automatische Updates|
 |[UpdatesSuppressed](#updatessuppressed)|Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates|
 
-### [Proxyserver](#proxy-server-policies)
+### <a name="proxy-server"></a>[Proxyserver](#proxy-server-policies)
 |Richtlinienname|Untertitel für Hörgeschädigte|
 |-|-|
 |[ProxyMode](#proxymode)|Möglichkeit zur Angabe der Proxyservereinstellungen wählen|
 |[ProxyPacUrl](#proxypacurl)|URL zu einer PAC-Proxydatei|
 |[ProxyServer](#proxyserver)|Adresse oder URL des Proxyservers|
 
-### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
 |[Installieren](#install-webview)|Installation zulassen|

@@ -389,7 +389,7 @@ Gehen Sie wie folgt vor, um zu bestätigen, dass die Microsoft Edge-Richtlinie d
 2. Überprüfen Sie auf der Seite **Richtlinien**, ob die im Profil festgelegte Richtlinie aufgelistet ist.
 3. Wenn Ihre Richtlinie nicht angezeigt wird, finden Sie unter [Diagnostizieren von MDM-Fehlern in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) oder [Problembehandlung bei einer Richtlinieneinstellung](#troubleshoot-a-policy-setting) weitere Informationen.
 
-#### Problembehandlung bei einer Richtlinieneinstellung
+#### <a name="troubleshoot-a-policy-setting"></a>Problembehandlung bei einer Richtlinieneinstellung
 
 Wenn eine Microsoft Edge-Richtlinie nicht wirksam wird, führen Sie die folgenden Schritte aus:
 
