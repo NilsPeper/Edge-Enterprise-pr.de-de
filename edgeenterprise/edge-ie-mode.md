@@ -22,7 +22,7 @@ ms.locfileid: "11470223"
 Wir haben den Internet Explorer (IE)-Modus in Microsoft Edge für Organisationen erstellt, die Internet Explorer 11 zur Abwärtskompatibilität mit vorhandenen Websites benötigen, aber auch einen modernen Browser benötigen. Dieses Feature erleichtert Organisationen die Verwendung eines Browsers, für Vorgänger-Web/-Apps oder für ein modernes Web/eine moderne App. Dieser Artikel enthält eine Einführung in die Verwendung von Microsoft Edge mit dem IE-Modus.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
 
 ## <a name="what-is-ie-mode"></a>Was ist der IE-Modus?
 
@@ -41,7 +41,7 @@ Nur die Websites, die Sie speziell (über eine Richtlinie) konfigurieren, verwen
   > Es wird nur eine Enterprise Mode Site List verarbeitet. Die Microsoft Edge-Websitelistenrichtlinie hat Vorrang vor der Internet Explorer-Websitelistenrichtlinie.
 - Alle Intranetwebsites, wenn die Gruppenrichtlinie **Alle Intranetwebsites an Internet Explorer senden** aktiviert ist (Microsoft Edge 77 oder höher)
 
-### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Der IE-Modus unterstützt die folgenden Funktionen von Internet Explorer
+### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Im IE-Modus werden folgende Funktionen von Internet Explorer unterstützt
 
 - Alle Dokumentmodi und Unternehmensmodi
 - ActiveX-Steuerelemente (wie Java oder Silverlight)
@@ -50,11 +50,11 @@ Nur die Websites, die Sie speziell (über eine Richtlinie) konfigurieren, verwen
 - Die F12-Entwicklertools für IE, wenn der Start mit [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10) erfolgt
 - Microsoft Edge-Erweiterungen (Erweiterungen, die direkt mit dem IE-Seiteninhalt interagieren, werden nicht unterstützt.)
 
-### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Der IE-Modus unterstützt die folgenden Funktionen von Internet Explorer nicht
+### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Im IE-Modus werden folgende Funktionen von Internet Explorer unterstützt nicht
 
 - Internet Explorer-Symbolleisten
-- Internet Explorer-Einstellungen und Gruppenrichtlinien, die sich auf das Navigationsmenü auswirken (z. B. Suchmaschinen und Startseiten)
-- IE11 oder Entwicklungstools von Microsoft Edge F12
+- Internet Explorer-Einstellungen und Gruppenrichtlinien, die sich auf das Navigationsmenü auswirken (z.B. Suchmaschinen und Startseiten)
+- IE11- oder Microsoft Edge F12-Entwicklungstools
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -82,13 +82,13 @@ Die folgenden Voraussetzungen gelten für die Verwendung von Microsoft Edge im I
  | Windows Server   | 2012 R2       | [KB4507463](https://support.microsoft.com/help/4507463/july-16-2019-kb4507463-os-build-preview-of-monthly-rollup) oder höher bzw. [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) oder höher |
  | Windows 8  | Eingebettet            | Installieren Sie [KB4492872](https://support.microsoft.com/help/4492872/update-for-internet-explorer-april-16-2019)zum Aktualisieren auf den Internet Explorer 11; installieren Sie danach [KB4507447](https://support.microsoft.com/help/4507447/windows-server-2012-update-kb4507447) oder höher bzw. [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) oder höher |
  | Windows Server   | 2012           | Installieren Sie [KB4492872](https://support.microsoft.com/help/4492872/update-for-internet-explorer-april-16-2019)zum Aktualisieren auf den Internet Explorer 11; installieren Sie danach [KB4507447](https://support.microsoft.com/help/4507447/windows-server-2012-update-kb4507447) oder höher bzw. [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) oder höher |
- | Windows 7        |  SP1**        | [KB4507437](https://support.microsoft.com/help/4507437/windows-7-update-kb4507437) oder höher bzw. [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) oder höher |
+ | Windows7        |  SP1**        | [KB4507437](https://support.microsoft.com/help/4507437/windows-7-update-kb4507437) oder höher bzw. [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) oder höher |
  | Windows Server   |  2008 R2**    | [KB4507437](https://support.microsoft.com/help/4507437/windows-7-update-kb4507437) oder höher bzw. [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) oder höher |
   > [!IMPORTANT]
-  > ** Windows 7 und Windows Server 2008 R2 unterstützen Microsoft Edge weiterhin, nachdem der Support für diese Betriebssysteme abgelaufen ist. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Es wird empfohlen, so bald wie möglich ein Upgrade auf ein unterstütztes Betriebssystem durchzuführen, um geschützt zu bleiben. Der Support für Microsoft Edge mit den erweiterten Sicherheitsupdates sollte als eine vorübergehende Überbrückung bis zum Erreichen eines unterstützten Betriebssystemstatus betrachtet werden.
+  > ** Windows7 und Windows Server2008 R2 unterstützen Microsoft Edge weiterhin, nachdem der Support für diese Betriebssysteme abgelaufen ist. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Es wird empfohlen, so bald wie möglich ein Upgrade auf ein unterstütztes Betriebssystem durchzuführen, um geschützt zu bleiben. Der Support für Microsoft Edge mit den erweiterten Sicherheitsupdates sollte als eine vorübergehende Überbrückung bis zum Erreichen eines unterstützten Betriebssystemstatus betrachtet werden.
 
 2. Die administrative Vorlage von Microsoft Edge. Weitere Informationen finden Sie unter [Konfigurieren von Microsoft Edge](./configure-microsoft-edge.md).
-3. Aktivieren von Internet Explorer 11 in Windows-Features.
+3. Aktivieren von Internet Explorer11 in Windows-Features.
 
 ## <a name="see-also"></a>Weitere Informationen
 
