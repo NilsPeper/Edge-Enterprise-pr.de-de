@@ -1,0 +1,126 @@
+### YamlMime:FAQ
+metadata:
+  title: Problembehandlung im IE-Modus und häufig gestellte Fragen (FAQ)
+  ms.author: shisub
+  author: dan-wesley
+  manager: srugh
+  ms.date: 05/19/2021
+  audience: ITPro
+  ms.topic: conceptual
+  ms.prod: microsoft-edge
+  ms.localizationpriority: high
+  ms.collection: M365-modern-desktop
+  description: Problembehandlung und häufig gestellte Fragen zum Microsoft Edge Internet Explorer-Modus
+  ms.openlocfilehash: d21fdf47fb1774bc69ae3b2478ff3397c3106f04
+  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.translationtype: MT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 06/25/2021
+  ms.locfileid: "11618119"
+title: Problembehandlung im IE-Modus und häufig gestellte Fragen (FAQ)
+summary: >
+  >[!Note]
+
+  > Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs [finden Sie in den häufig gestellten Fragen).](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) Die gleichen IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+
+
+  Dieser Artikel enthält Tipps zur Fehlerbehebung und häufig gestellte Fragen zu Microsoft Edge Version 77 oder höher.
+
+
+  > [!NOTE]
+
+  > Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+
+
+  ## <a name="troubleshoot-ie-mode"></a>Problembehandlung für IE-Modus
+
+
+  Verwenden Sie die Informationen in diesem Abschnitt, um Probleme mit dem IE-Modus zu diagnostizieren und zu beheben.
+sections:
+- name: Allgemein
+  questions:
+  - question: >
+      Diagnoseinformationen zum Internet Explorer-Modus
+    answer: >
+      Sie können Diagnoseinformationen für den Internet Explorer-Modus auf der Registerkarte zur Microsoft Edge-Kompatibilität abrufen. Wechseln Sie zu *edge://compat/iediagnostic*, um diese Registerkarte zu öffnen. Auf dieser Seite werden möglicherweise Diagnosemeldungen angezeigt. Auf dieser Seite finden Sie auch Konfigurationsinformationen zu den folgenden Kategorien:
+
+
+      - **Überprüfung des Registrierungsschlüssels**: (Wird nur angezeigt, wenn die Überprüfung fehlschlägt.) Überprüft, ob die Internet Explorer-Integration in der Registrierung ordnungsgemäß eingerichtet wurde. Wenn nicht, kann der Benutzer auf **Beheben** klicken, um das Problem zu beheben.
+
+      - **Internet Explorer-Modus**: Zeigt die verwendete API-Version an, die auf der Konfiguration und dem Betriebssystem basiert. Wenn ein Problem vorliegt, wird der Benutzer möglicherweise aufgefordert, ein **Windows Update** zu installieren.
+
+      - **Einstellung für Internet Explorer-Modus**: Zeigt an, ob und wie der Internet Explorer-Modus konfiguriert ist.
+
+      - **Befehlszeile**: Zeigt die Befehlszeilenzeichenfolge und die Schalter an, die zum Starten von Microsoft Edge verwendet werden.
+
+      - **Gruppenrichtlinieneinstellungen**: Zeigt an, ob der IE-Modus mithilfe von Gruppenrichtlinien und den angewendeten Richtlinien konfiguriert ist.
+  - question: >
+      Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge mit Administratorrechten neu zu installieren."
+    answer: >
+      Diese Fehlermeldung wird möglicherweise angezeigt, wenn nicht alle erforderlichen Windows-Updates vorhanden sind. Siehe die unter [Info zum IE-Modus](./edge-ie-mode.md) aufgeführten Voraussetzungen für die erforderlichen Versionen von Windows und Microsoft Edge.
+
+
+      Diese Fehlermeldung wird möglicherweise angezeigt, wenn alle erforderlichen Windows-Updates installiert sind:
+
+
+      - Sie verwenden den Canary Channel, der standardmäßig auf der Benutzerebene installiert wird.
+
+      - Sie verwenden den Stable-, Beta- oder Dev-Kanal, aber bei der Aufforderung zur Rechteerweiterung während der Installation wurde die Rechteerweiterung abgebrochen. Wenn Sie die Eingabeaufforderung für erhöhte Rechte abbrechen, wird die Installation auf Benutzerebene fortgesetzt.
+
+      - Internet Explorer 11 wurde in Windows-Features deaktiviert.
+
+
+      Mögliche Lösungen:
+
+
+      - Führen Sie das Installationsprogramm für einen beliebigen Kanal auf Systemebene aus: `installer.exe --system-level`
+
+      - Aktivieren Sie Internet Explorer 11 in Windows-Features.
+
+
+      Um zu überprüfen, ob Microsoft Edge auf Systemebene installiert ist, geben Sie "edge://version" in die Adressleiste von Microsoft Edge ein. Der Pfad für die ausführbare Datei beginnt mit *C:\Programmdateien* und weist auf eine Systeminstallation hin. Wenn der Pfad der ausführbaren Datei mit *C:\Users\*, beginnt, deinstallieren Sie Microsoft Edge, und installieren Sie ihn mit Administratorrechten neu.
+  - question: >
+      Fehlermeldung: "Zum Öffnen dieser Seite im IE-Modus versuchen Sie, Microsoft Edge neu zu starten."
+    answer: >
+      Dieser Fehler wird möglicherweise angezeigt, wenn in Internet Explorer ein unerwarteter Fehler aufgetreten ist. Beim Neustart von Microsoft Edge wird dieser Fehler in der Regel behoben.
+  - question: >
+      Fehlermeldung: "Deaktivieren Sie das Remotedebuggen, um diese Website im IE-Modus zu öffnen, da es sonst möglicherweise nicht wie erwartet funktioniert."
+    answer: >
+      Diese Fehlermeldung wird möglicherweise angezeigt, wenn Sie Remotedebuggen durchführen und zu einer Webseite navigieren, die für die Ausführung im IE-Modus konfiguriert ist. Sie können den Vorgang fortsetzen, aber die Seite wird mit Microsoft Edge gerendert.
+  - question: >
+      Fehlermeldung: "Fehler: EMIE-Site-Liste konnte nicht abgerufen werden."
+    answer: >
+      Möglicherweise wird dieser Fehler auf der *edge://compat/enterprise* Seite angezeigt, der darauf hinweist, dass der Download der Site-Liste fehlgeschlagen ist. Ab Microsoft Edge Version 87 ist die HTTP-Authentifizierung ebenfalls nicht zulässig, wenn Cookies mithilfe der [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies)-Richtlinie für Anforderungen von Drittanbietern blockiert werden. Sie können Cookies für die bestimmte Domain zulassen, in der sich Ihre Site-Liste im Unternehmensmodus befindet, indem Sie die [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls)-Richtlinie verwenden, um sicherzustellen, dass das Herunterladen der Site-Liste erfolgreich ist.
+- name: Häufig gestellte Fragen
+  questions:
+  - question: >
+      Wird der IE-Modus Internet Explorer 11 ersetzen?
+    answer: >
+      Ja, die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (für eine Liste des Umfangs, [Häufig gestellte Fragen zum Lebenszyklus – Internet Explorer.](https://support.microsoft.com/help/17454/) Die gleichen IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+  - question: >
+      Kann ich "Mit Explorer öffnen" oder "Im Datei-Explorer anzeigen" in SharePoint mit dem IE-Modus verwenden?
+    answer: >
+      Ja, wenn dies im eigenständigen Internet Explorer 11 funktioniert, funktioniert es auch im IE-Modus. Anstatt aber die Option „Öffnen mit Explorer“ zu verwenden, besteht der empfohlene Ansatz zum Verwalten von Dateien und Ordnern außerhalb von SharePoint darin, [Ihre SharePoint-Dateien zu synchronisieren](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) oder [Dateien in SharePoint zu verschieben oder zu kopieren](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
+  - question: >
+      Unterstützt der IE-Modus auf Microsoft Edge die Option "nomerge", die in Internet Explorer 11 unterstützt wurde?
+    answer: >
+      In Microsoft Edge gibt es keine explizite Befehlszeile, die der Option *nomerge* entspricht, aber es gibt eine Reihe von Alternativen, die wir empfehlen, um diese Funktionalität bereitzustellen.
+
+
+      1. Verwenden Sie Profile in Microsoft Edge: Jedes Profil wird einer anderen IE-Sitzung für IE-Modus-Seiten zugeordnet. Dieses Verhalten ist also identisch mit der Option *nomerge*.
+
+      2. Verwenden Sie die Befehlszeile `--user-data-dir=<path>`, aber für jede Sitzung mit einem anderen Pfad. Bei Bedarf können Sie ein Hilfsprogramm für den Benutzer erstellen, mit dem Microsoft Edge gestartet und der Pfad für die Sitzung geändert wird.
+
+
+      Wenn keine der oben genannten Optionen für Ihr Szenario funktioniert, setzen Sie sich über einen unserer Feedbackkanäle mit uns in Verbindung: Microsoft-Support oder [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+  - question: >
+      Kann ich Links im Internet Explorer-Modus als Webseiten speichern?
+    answer: "Ja, Sie können die Option „Ziel speichern unter“ im Kontextmenü für den Internet Explorer-Modus in Microsoft Edge aktivieren. Konfigurieren Sie dazu die Gruppenrichtlinie *„‘Ziel speichern als‘ im Internet Explorer-Modus zulassen“* unter *Computer-Konfiguration > Administrative Vorlagen > Windows-Komponenten > Internet Explorer*.\nDer Speichermechanismus funktioniert gleich wie in Internet Explorer, und wenn das Ziel als HTML-Datei gespeichert wird, rendert die Datei beim erneuten Öffnen die Seite in Microsoft Edge.\n \nBeachten Sie, dass für diese Funktion die folgenden minimalen Updates für das Betriebssystem erforderlich sind:\n- Windows 10, Version 2004, Windows Server, Version 2004, Windows 10, Version 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10 Version 1903, Windows 10, Version 1909, Windows Server, Version 1903 ([KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386))\n- Windows 10 Version 1809, Windows Server Version 1809, Windows Server 2019 ([KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390))\n- Windows 10, Version 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, Version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, Version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n"
+  - question: >
+      Kann ich eine Website im IE-Modus ohne Enterprise-Modus-Websiteliste öffnen?
+    answer: >
+      Ja, zu Testzwecken kann der IE-Modus für eine bestimmte Browserinstanz umgeschaltet werden.
+
+
+      Führen Sie Microsoft Edge mit der `--ie-mode-test` Befehlszeilenkennzeichnung aus, z. B. `msedge.exe --ie-mode-test`, wählen Sie dann ... -> Weitere Tools -> "Websites im Internet Explorer-Modus öffnen" aus.
+additionalContent: "\n## <a name=\"see-also\"></a>Weitere Informationen\n\n- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)\n- [Informationen zum IE-Modus](./edge-ie-mode.md)\n- [Weitere Informationen zum Unternehmensmodus](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"

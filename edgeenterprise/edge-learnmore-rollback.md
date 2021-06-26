@@ -1,6 +1,6 @@
 ---
 title: Microsoft Edge-Rollback für Unternehmen
-ms.author: v-danwes
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 02/04/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Zurücksetzen von Microsoft Edge auf eine vorherige Version
-ms.openlocfilehash: 58323071fcbe4704f29819684bb5359d92c030b6
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 38954f4b293470758b5484591779a3af52c6992c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448159"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617375"
 ---
 # <a name="how-to-roll-back-microsoft-edge-to-a-previous-version"></a><span data-ttu-id="949fd-103">Zurücksetzen von Microsoft Edge auf eine vorherige Version</span><span class="sxs-lookup"><span data-stu-id="949fd-103">How to roll back Microsoft Edge to a previous version</span></span>
 
