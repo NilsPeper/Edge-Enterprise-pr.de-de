@@ -3,35 +3,35 @@ title: Automatisieren von Microsoft Edge für die macOS-Bereitstellung mit Jamf
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: So automatisieren Sie Microsoft Edge für die macOS-Bereitstellung mit Jamf.
-ms.openlocfilehash: 3065e4f02dbfed70b887a60b1cf076335dbff19a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e56ed4c2a9c0ebb4a4341830cd09ca040e80a657
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979879"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617525"
 ---
-# Bereitstellen unter macOS mit JAMF
+# <a name="deploy-to-macos-with-jamf"></a>Bereitstellen unter macOS mit JAMF
 
 In diesem Artikel wird beschrieben, wie Microsoft Edge für macOS mithilfe von Jamf bereitgestellt wird.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
-##  <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie vor der Bereitstellung von Microsoft Edge sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 - Die Microsoft Edge-Installationsdatei **MicrosoftEdgeDev-\<version\>.pkg** befindet sich an einem zugänglichen Speicherort in Ihrem Netzwerk. Sie können die Installationsdateien für Microsoft Edge Enterprise von der [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise) herunterladen.
 - Sie verfügen über ein JAMF-Cloud-Konto mit der Zugriffsebene und den erforderlichen Berechtigungen zum Erstellen und Bereitstellen von Installationsdateien auf Computern.
 
-##  <a name="to-deploy-microsoft-edge-using-jamf"></a>So stellen Sie Microsoft Edge mithilfe von Jamf bereit:
+## <a name="to-deploy-microsoft-edge-using-jamf"></a>So stellen Sie Microsoft Edge mithilfe von Jamf bereit:
 
 1. Melden Sie sich bei Jamf an und wechseln Sie zu **Alle Einstellungen**.
 
@@ -93,8 +93,8 @@ Stellen Sie vor der Bereitstellung von Microsoft Edge sicher, dass die folgenden
 
 Herzlichen Glückwunsch! Sie haben soeben die Konfiguration von Jamf für die Bereitstellung von Microsoft Edge für macOS abgeschlossen. Wenn die von Ihnen definierte auslösende Bedingung „true” ist, wird das Paket auf den von Ihnen angegebenen Computern bereitgestellt.
 
-##  <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Jamf in Microsoft Intune integrieren](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Jamf in Microsoft Intune integrieren](/intune/conditional-access-integrate-jamf)

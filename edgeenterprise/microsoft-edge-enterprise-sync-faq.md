@@ -1,6 +1,6 @@
 ---
 title: FAQ zur Microsoft Edge Enterprise-Synchronisierung
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Häufig gestellte Fragen zur Microsoft Edge Enterprise-Synchronisierung.
-ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 4bb41c8d7ded64fcc0b4fd4843ef2b7ec0adec23
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447869"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617765"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>FAQ zur Microsoft Edge Enterprise-Synchronisierung
 
@@ -59,7 +59,7 @@ Die Unternehmenssynchronisierung ist von [Azure Information Protection](https://
 
 ### <a name="is-microsoft-edge-sync-based-on-enterprise-state-roaming"></a>Basiert die Microsoft Edge-Synchronisierung auf Enterprise State Roaming (ESR)?
 
-Nein. ESR kann verwendet werden, um die Synchronisierung zu aktivieren, aber Microsoft Edge-Synchronisierung ist nicht Teil von ESR. Weitere Informationen finden sie unter [Microsoft Edge-Synchronisierung](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync) sowie [Microsoft Edge und Enterprise State Roaming](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-state-roaming).
+Nein. ESR kann verwendet werden, um die Synchronisierung zu aktivieren, aber Microsoft Edge-Synchronisierung ist nicht Teil von ESR. Weitere Informationen finden sie unter [Microsoft Edge-Synchronisierung](/DeployEdge/microsoft-edge-enterprise-sync) sowie [Microsoft Edge und Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Wird Microsoft Edge jemals die Synchronisierung zwischen Microsoft Edge und IE unterstützen?
 

@@ -1,6 +1,6 @@
 ---
 title: Diagnostizieren und Beheben von Microsoft Edge-Synchronisierungsproblemen
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Anleitungen und Tools für Microsoft Edge-Administratoren zur Problembehandlung und Korrektur häufiger Synchronisierungsprobleme im Unternehmen
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: d934e1ad73500fcb7f15bcd7dd29cb0f905577c5
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400191"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617905"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnostizieren und Beheben von Microsoft Edge-Synchronisierungsproblemen
 
@@ -49,10 +49,10 @@ Wenn dieser Fehler für ein Azure Active Directory-Konto auftritt oder wenn DISA
 > [!NOTE]
 > Da die Ursache dieses Fehlers in der Regel eine Konfigurationsänderung in einem Azure Active Directory-Mandanten erfordert, können diese Schritte zur Problembehandlung nur von einem Mandantenadministrator und nicht von Endbenutzern ausgeführt werden.
 
-1. Stellen Sie sicher, dass der Unternehmensmandant über ein unterstütztes M365-Abonnement verfügt. Die aktuelle Liste der verfügbaren Abonnementtypen werden [hier bereitgestellt](https://docs.microsoft.com/azure/information-protection/activate-office365). Wenn der Mandant kein unterstütztes Abonnement hat, kann er Azure Information Protection entweder separat erwerben oder auf eines der unterstützten Abonnements aktualisieren.
-2. Wenn ein unterstütztes Abonnement verfügbar ist, stellen Sie sicher, dass für den Mandanten Azure Information Protection (AIP) verfügbar ist. Die Anweisungen zur Überprüfung des AIP-Status und, falls erforderlich, zum Aktivieren von AIP finden Sie [hier](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. Wenn in Schritt 2 gezeigt wird, dass AIP aktiv ist, die Synchronisierung aber immer noch nicht funktioniert, dann aktivieren Sie Enterprise State Roaming (ESR). Die Anweisungen zum Aktivieren von ESR finden Sie [hier](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Beachten Sie, dass ESR nicht aktiviert bleiben muss. Sie können ESR deaktivieren, wenn dieser Schritt das Problem behebt.
-4. Vergewissern Sie sich, dass Azure Information Protection nicht über eine Onboarding-Richtlinie eingegrenzt ist. Sie können das PowerShell-Applet [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) verwenden, um zu sehen, ob eine Bereichsdefinition aktiviert ist. Die nächsten beiden Beispiele zeigen eine Konfiguration ohne Bereichseingrenzung und eine Konfiguration, die auf eine bestimmte Sicherheitsgruppe eingegrenzt ist.
+1. Stellen Sie sicher, dass der Unternehmensmandant über ein unterstütztes M365-Abonnement verfügt. Die aktuelle Liste der verfügbaren Abonnementtypen werden [hier bereitgestellt](/azure/information-protection/activate-office365). Wenn der Mandant kein unterstütztes Abonnement hat, kann er Azure Information Protection entweder separat erwerben oder auf eines der unterstützten Abonnements aktualisieren.
+2. Wenn ein unterstütztes Abonnement verfügbar ist, stellen Sie sicher, dass für den Mandanten Azure Information Protection (AIP) verfügbar ist. Die Anweisungen zur Überprüfung des AIP-Status und, falls erforderlich, zum Aktivieren von AIP finden Sie [hier](/azure/information-protection/activate-office365).
+3. Wenn in Schritt 2 gezeigt wird, dass AIP aktiv ist, die Synchronisierung aber immer noch nicht funktioniert, dann aktivieren Sie Enterprise State Roaming (ESR). Die Anweisungen zum Aktivieren von ESR finden Sie [hier](/azure/active-directory/devices/enterprise-state-roaming-enable). Beachten Sie, dass ESR nicht aktiviert bleiben muss. Sie können ESR deaktivieren, wenn dieser Schritt das Problem behebt.
+4. Vergewissern Sie sich, dass Azure Information Protection nicht über eine Onboarding-Richtlinie eingegrenzt ist. Sie können das PowerShell-Applet [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) verwenden, um zu sehen, ob eine Bereichsdefinition aktiviert ist. Die nächsten beiden Beispiele zeigen eine Konfiguration ohne Bereichseingrenzung und eine Konfiguration, die auf eine bestimmte Sicherheitsgruppe eingegrenzt ist.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ Wenn dieser Fehler für ein Azure Active Directory-Konto auftritt oder wenn DISA
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Wenn eine Bereichsdefinition aktiviert ist, sollte der betroffene Benutzer entweder der Sicherheitsgruppe für den Bereich hinzugefügt oder der Bereich entfernt werden. Im folgenden Beispiel hat Onboarding den AIP für die angegebene Sicherheitsgruppe eingegrenzt, und die Bereichsdefinition sollte mit dem PowerShell-Applet [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) entfernt werden.
+   Wenn eine Bereichsdefinition aktiviert ist, sollte der betroffene Benutzer entweder der Sicherheitsgruppe für den Bereich hinzugefügt oder der Bereich entfernt werden. Im folgenden Beispiel hat Onboarding den AIP für die angegebene Sicherheitsgruppe eingegrenzt, und die Bereichsdefinition sollte mit dem PowerShell-Applet [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) entfernt werden.
 
-5. Vergewissern Sie sich, dass „IPCv3Service“ im Mandanten aktiviert ist. Das PowerShell-Applet [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  zeigt den Status des Diensts an.
+5. Vergewissern Sie sich, dass „IPCv3Service“ im Mandanten aktiviert ist. Das PowerShell-Applet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  zeigt den Status des Diensts an.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Überprüfen Sie, ob „IPCv3Service“ aktiviert ist.":::
 
@@ -99,7 +99,7 @@ Wenn dieser Fehler für ein Azure Active Directory-Konto auftritt oder wenn DISA
       - [https://api.aadrm.com](https://api.aadrm.com) (für die meisten Mandanten)
       - [https://api.aadrm.de](https://api.aadrm.de) (für Mandanten in Deutschland)
       - [https://api.aadrm.cn](https://api.aadrm.cn) (für Mandanten in China)
-   - [Endpunkte des Windows-Benachrichtigungsdiensts](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Endpunkte des Windows-Benachrichtigungsdiensts](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. Wenn das Problem weiterhin besteht, wenden Sie sich an den [Microsoft Edge-Support](https://www.microsoftedgeinsider.com/support).
 
@@ -116,7 +116,7 @@ Dieser Fehler wird unter **Typeninformation** in *edge://sync-internals* angezei
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>Problem: „Die Synchronisierung wurde von Ihrem Administrator deaktiviert.“
 
-Stellen Sie sicher, dass die [Richtlinie „SyncDisabled“](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled) nicht festgelegt ist.
+Stellen Sie sicher, dass die [Richtlinie „SyncDisabled“](./microsoft-edge-policies.md#syncdisabled) nicht festgelegt ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 

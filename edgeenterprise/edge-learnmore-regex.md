@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Regulärer Ausdruck 2 Syntax
-ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979978"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617315"
 ---
-# Regulärer Ausdruck 2 (re2.h), Syntax
+# <a name="regular-expression-2-re2h-syntax"></a>Regulärer Ausdruck 2 (re2.h), Syntax
 
 Reguläre Ausdrücke sind eine Notation zur Beschreibung von Gruppen von Zeichenfolgen. Wenn sich eine Zeichenfolge in der durch einen regulären Ausdruck beschriebenen Gruppe befindet, wird häufig davon gesprochen, dass der reguläre Ausdruck der Zeichenfolge entspricht.
 
@@ -35,7 +35,7 @@ Auf dieser Seite wird die Syntax regulärer Ausdrücke aufgelistet, die von RE2 
 
 Außerdem finden Sie Syntax, die von PCRE, PERL und VIM akzeptiert wird.
 
-##  <a name="syntax-tables"></a>Syntaxtabellen
+## <a name="syntax-tables"></a>Syntaxtabellen
 
 | Arten von Ausdrücken, die aus einem einzelnen Zeichen bestehen | Beispiele |
 | --- | --- |
@@ -51,12 +51,12 @@ Außerdem finden Sie Syntax, die von PCRE, PERL und VIM akzeptiert wird.
 | negierte Unicode-Zeichenklasse (einbuchstabiger Name) | \PN |
 | negierte Unicode-Zeichenklasse | \P{Greek} |
 
-| | Composites |
+|&nbsp;| Composites |
 | --- | --- |
 | xy | x, gefolgt von y |
 | x\|y | x oder y (x bevorzugen) |
 
-| | Wiederholungen |
+|&nbsp;| Wiederholungen |
 | --- | --- |
 | x\* | null oder mehr x (mehr bevorzugen) |
 | x+ | ein oder mehrere x, mehrere bevorzugen |
@@ -77,7 +77,7 @@ Außerdem finden Sie Syntax, die von PCRE, PERL und VIM akzeptiert wird.
 
 Implementierungseinschränkung: die Zählformen x{n,m}, x{n,} und x{n} weisen Formen zurück, die eine minimale oder maximale Wiederholungszahl über 1.000 erzeugen. Unbegrenzte Wiederholungen unterliegen dieser Einschränkung nicht.
 
-| | Possessive Wiederholungen |
+|&nbsp;| Possessive Wiederholungen |
 | --- | --- |
 | x\*+ | null oder mehre x, possessiv (NICHT UNTERSTÜTZT) |
 | x++ | ein oder mehre x, possessiv (NICHT UNTERSTÜTZT) |
@@ -86,7 +86,7 @@ Implementierungseinschränkung: die Zählformen x{n,m}, x{n,} und x{n} weisen Fo
 | x {n,} + | n oder mehre x, possessiv (NICHT UNTERSTÜTZT) |
 | x{n}+ | genau n x, possessiv (NICHT UNTERSTÜTZT) |
 
-| | Gruppierung |
+|&nbsp;| Gruppierung |
 | --- | --- |
 | (re) | nummerierte Erfassungsgruppe (Teilübereinstimmung) |
 | (? P&lt;name&gt;re) | benannte &amp; nummerierte Erfassungsgruppe (Teilübereinstimmung) |
@@ -101,7 +101,7 @@ Implementierungseinschränkung: die Zählformen x{n,m}, x{n,} und x{n} weisen Fo
 | re@&gt; | possessive Übereinstimmung von re (NICHT UNTERSTÜTZT) VIM |
 | %(re) | nicht erfassende Gruppe (NICHT UNTERSTÜTZT) VIM |
 
-| | Flags |
+|&nbsp;| Flags |
 | --- | --- |
 | i | Groß-/Kleinschreibung wird nicht beachtet (Standard: falsch) |
 | m | Mehrzeilenmodus: ^ und $ stimmen zusätzlich zum Anfang- und Endtext mit der Anfangs- und Endzeile überein (Standard: falsch) |
@@ -110,7 +110,7 @@ Implementierungseinschränkung: die Zählformen x{n,m}, x{n,} und x{n} weisen Fo
 
 Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festlegen, z löschen).
 
-|  | Leere Zeichenfolgen |
+|&nbsp;| Leere Zeichenfolgen |
 | --- | --- |
 | ^ | am Text- oder Zeilenanfang (m = wahr) |
 | $ | am Textende (z. B. \z nicht \Z) oder Zeilenende (m = wahr) |
@@ -141,7 +141,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | \%23c | in Spalte 23 (NICHT UNTERSTÜTZT) VIM |
 | \%23v | in virtueller Spalte 23 (NICHT UNTERSTÜTZT) VIM |
 
-|  | Escapesequenzen |
+|&nbsp;| Escapesequenzen |
 | --- | --- |
 | \a | Bell (≡ \007) |
 | \f | Seitenvorschub (≡ \014) |
@@ -182,7 +182,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | \%u1234 | Unicode-Zeichen 0x1234 (NICHT UNTERSTÜTZT) VIM |
 | \%U12345678 | Unicode-Zeichen 0x12345678 (NICHT UNTERSTÜTZT) VIM |
 
-|  | Zeichenklassenelemente |
+|&nbsp;| Zeichenklassenelemente |
 | --- | --- |
 | x | einzelnes Zeichen |
 | A-Z | Zeichenbereich (einschließlich) |
@@ -191,7 +191,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | \p{Foo} | Unicode-Zeichenklasse Foo |
 | \pF | Unicode-Zeichenklasse F (einbuchstabiger Name) |
 
-|  | Benannte Zeichenklassen als Zeichenklassenelemente |
+|&nbsp;| Benannte Zeichenklassen als Zeichenklassenelemente |
 | --- | --- |
 | [\d] | Ziffern (≡ \d) |
 | [^\d] | keine Ziffern (≡ \D) |
@@ -232,7 +232,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | [[:word:]] | Wortzeichen (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | Hexadezimalziffer (≡ [0-9A-Fa-f]) |
 
-| | Unicode-Zeichenklassennamen – allgemeine Kategorie |
+|&nbsp;| Unicode-Zeichenklassennamen – allgemeine Kategorie |
 | --- | --- |
 | C | andere |
 | Cc | control |
@@ -433,7 +433,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | Yi |
 | Zanabazar\_Square |
 
-|  | VIM-Zeichenklasse |
+|&nbsp;| VIM-Zeichenklasse |
 | --- | --- |
 | \i | Kennungszeichen (NICHT UNTERSTÜTZT) VIM |
 | \I | \i mit Ausnahme von Ziffern (NICHT UNTERSTÜTZT) VIM |
@@ -470,7 +470,7 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | \V | verynomagic (NICHT UNTERSTÜTZT) VIM |
 | \Z | Unterschiede bei Unicode-Zeichenkombinationen ignorieren (NICHT UNTERSTÜTZT) VIM |
 
-|  | Magic |
+| &nbsp; | Magic |
 | --- | --- |
 | (?{code}) | beliebiger Perl-Code (NICHT UNTERSTÜTZT) PERL |
 | (??{code}) | zurückgestellter, beliebiger Perl-Code (NICHT UNTERSTÜTZT) PERL |
@@ -500,13 +500,13 @@ Die Flag-Syntax lautet xyz (festlegen) oder-xyz (löschen) oder xy-z (xy festleg
 | (\*BSR\_ANYCRLF) | Festlegen der \R-Konvention (nicht unterstützt) PCRE |
 | (\*BSR\_UNICODE) | (NICHT UNTERSTÜTZT) PCRE |
 
-##  <a name="content-license"></a>Lizenz für Inhalte
+## <a name="content-license"></a>Lizenz für Inhalte
 
 > [!NOTE]
 > Teile dieser Seite sind Änderungen, die auf von Chromium.org erstellten und freigegebenen Werken basieren und gemäß den in der [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/) beschriebenen Begriffen verwendet werden. Die Originalseite von Chromium finden Sie [hier](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Diese Arbeit unterliegt einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
-- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

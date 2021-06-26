@@ -3,28 +3,28 @@ title: Richtlinien von Google Chrome zu Microsoft Edge migrieren
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Richtlinien von Google Chrome zu Microsoft Edge migrieren
-ms.openlocfilehash: 10253d8d18864fedf5cfaf7d064766ad641675d4
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448039"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617865"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Richtlinien von Google Chrome zu Microsoft Edge migrieren
 
-In diesem Artikel werden die Google Chrome-Richtlinien den in Version 80 unterstützten relevanten Microsoft Edge-Richtlinien zugeordnet. Informationen zu Microsoft Edge Legacy-Richtlinien finden Sie im Artikel [Richtlinienzuordnung zwischen Microsoft Edge Legacy und Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md).
+In diesem Artikel werden die Google Chrome-Richtlinien den in Version 80 unterstützten relevanten Microsoft Edge-Richtlinien zugeordnet. Informationen zu Microsoft Edge Legacy-Richtlinien finden Sie im Artikel [Richtlinienzuordnung zwischen Microsoft Edge Legacy und Microsoft Edge](/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master).
 
 > [!NOTE]
 > Die nachstehende Zuordnung ist als Hilfe für die erste Bereitstellung von Microsoft Edge Version 80 gedacht. Eine endgültige Liste der neuesten Richtlinien finden Sie unter:
-> - [Referenz für Browserrichtlinien](microsoft-edge-policies.md)
-> - [Referenz für Updaterichtlinien](microsoft-edge-update-policies.md)
+> - [Referenz für Browserrichtlinien](/deployedge/microsoft-edge-policies)
+> - [Referenz für Updaterichtlinien](/deployedge/microsoft-edge-update-policies)
 
 ## <a name="google-chrome-to-microsoft-edge-policy-map"></a>Richtlinienzuordnung zwischen Google Chrome und Microsoft Edge
 
@@ -94,8 +94,8 @@ In diesem Artikel werden die Google Chrome-Richtlinien den in Version 80 unterst
 |[CloudPrintProxyEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintProxyEnabled)|Nicht verfügbar|
 |[CloudPrintSubmitEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintSubmitEnabled)|Nicht verfügbar|
 |[CloudReportingEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudReportingEnabled)|Nicht verfügbar|
-|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)|[CoalesceH2ConnectionsWithClientCertificatesForHosts](./microsoft-edge-policies.md#coalesceh2connectionswithclientcertificatesforhosts)|
-|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)|[CommandLineFlagSecurityWarningsEnabled](./microsoft-edge-policies.md#commandlineflagsecuritywarningsenabled)|
+|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)
+|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)
 |[ComponentUpdatesEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ComponentUpdatesEnabled)|[ComponentUpdatesEnabled](./microsoft-edge-policies.md#componentupdatesenabled)|
 |[CookiesAllowedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesAllowedForUrls)|[CookiesAllowedForUrls](./microsoft-edge-policies.md#cookiesallowedforurls)|
 |[CookiesBlockedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesBlockedForUrls)|[CookiesBlockedForUrls](./microsoft-edge-policies.md#cookiesblockedforurls)|
