@@ -10,26 +10,25 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Richtlinienzuordnung – Übersicht
-ms.openlocfilehash: 12967a90ab920bb25473902f2dd2c08fd003f934
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 724dba17d6f129abff4be52eda175c611cc9544f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980028"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617825"
 ---
-# Microsoft Edge-Richtlinienzuordnung – Übersicht
+# <a name="microsoft-edge-policy-mapping-overview"></a>Microsoft Edge-Richtlinienzuordnung – Übersicht
 
-Verwenden Sie zur Unterstützung bei der Erstbereitstellung die folgenden Richtlinienzuordnungen, um Ihre Richtlinienkonfiguration für ältere Microsoft Edge-Versionen (Version 45 und früher) oder Google Chrome (Version 80) zu Microsoft Edge (Version 80) zu migrieren.
+Verwenden Sie die folgenden Richtlinienzuordnungen als Unterstützung bei Ihrer ersten Bereitstellung, um Ihre Google Chrome-Richtlinienkonfiguration (Version 80) zu Microsoft Edge (Version 80) zu migrieren.
 
-- [Richtlinien von älteren Microsoft Edge-Versionen zu Microsoft Edge migrieren](microsoft-edge-policy-map-legacy-to-newedge.md)
-- [Richtlinien von Google Chrome zu Microsoft Edge migrieren](microsoft-edge-policy-map-chrome-to-newedge.md)
+- [Richtlinienzuordnung von Google Chrome zu Microsoft Edge](microsoft-edge-policy-map-chrome-to-newedge.md)
 
 > [!NOTE]
 > Eine endgültige Liste der neuesten Richtlinien finden Sie unter:
 > - [Referenz für Browserrichtlinien](microsoft-edge-policies.md)
 > - [Referenz für Updaterichtlinien](microsoft-edge-update-policies.md)
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 - [Konfigurieren von Microsoft Edge unter Windows](configure-microsoft-edge.md)
 - [Konfigurieren von Microsoft Edge unter macOS](configure-microsoft-edge-on-mac.md)
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

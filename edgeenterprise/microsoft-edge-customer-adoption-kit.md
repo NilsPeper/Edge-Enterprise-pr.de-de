@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge – Material für die Einführung bei Kunden
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge – Material für die Einführung bei Kunden
-ms.openlocfilehash: 4752b0b5221d0134c68a50153679979449d893ca
-ms.sourcegitcommit: 81383d92dba379d5e6073066c4cdcc2761390f8f
+ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385386"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617839"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Microsoft Edge – Material für die Einführung bei Kunden
 
@@ -26,17 +26,28 @@ Schauen Sie regelmäßig vorbei, es werden immer wieder neue Materialien bereitg
 ## <a name="customer-adoption-kit"></a>Paket für die Einführung bei Kunden
 
 Das Paket für die Einführung bei Kunden enthält das folgende Material:
-
-- IT-Bereitstellungshandbuch
-- Benutzerhandbuch – Erste Schritte
-- E-Mail-Vorlagen für die Einführung
-- Banner
-- Digitale Anmeldung
-- Onepager
-- Demovideo und GIFs
-- Links zu Webressourcen
+- Paket für die Deaktivierung von Internet Explorer **(Verfügbar in Englisch, Deutsch, Spanisch, Französisch, Japanisch, Koreanisch, Chinesisch (vereinfacht))**
+    - E-Mails zur Einführung
+    - Flyer
+    - Infografik
+    - Websitesammlungsformular
+- Allgemeines Einführungspaket
+    - IT-Bereitstellungshandbuch
+    - Benutzerhandbuch – Erste Schritte
+    - E-Mail-Vorlagen für die Einführung
+    - Banner
+    - Digitale Anmeldung
+    - Onepager
+    - Demovideo und GIFs
+    - Links zu Webressourcen
 
 Das Einführungspaket ist neben Englisch in mehreren anderen Sprachen verfügbar, einschließlich Französisch, Deutsch und Japanisch. Wählen Sie im [Download Center für das Paket für die Einführung von Microsoft Edge bei Kunden](https://www.microsoft.com/download/details.aspx?id=102119) Ihre bevorzugte Sprache aus.
+
+### <a name="internet-explorer-ie-retirement-resources"></a>Ressourcen zur Deaktivierung von Internet Explorer (IE)
+
+Finden Sie wertvolle Ressourcen und Anleitungen von Experten, um Ihre Organisation beim sicheren und schnellen Wechsel von IE zu Microsoft Edge zu unterstützen.
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Deaktivierung von Internet Explorer":::
 
 ### <a name="it-deployment-guide"></a>IT-Bereitstellungshandbuch
 

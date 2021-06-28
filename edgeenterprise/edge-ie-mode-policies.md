@@ -1,25 +1,28 @@
 ---
 title: Konfigurieren von Richtlinien für den IE-Modus
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Konfigurieren von Richtlinien für den IE-Modus
-ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: d73a9649619a746fd1ef382f0911ad7e45255f06
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470163"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617435"
 ---
 # <a name="configure-ie-mode-policies"></a>Konfigurieren von Richtlinien für den IE-Modus
 
-In diesem Artikel wird erläutert, wie Sie Richtlinien für den IE-Modus konfiguriert werden.
+>[!Note]
+> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
+In diesem Artikel wird erläutert, wie Sie Richtlinien für den IE-Modus konfigurieren.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Kanäle **Stable**, **Beta** und **Dev**, Version 77 oder höher.
@@ -30,8 +33,8 @@ Zum Konfigurieren des IE-Modus sind drei Schritte erforderlich:
 2. [Umleiten von Websites von Microsoft Edge in den IE-Modus](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Optional) [Umleiten von Websites von Internet Explorer zu Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
 
-    1. Wenn Sie die IE11-App deaktivieren möchten, folgen Sie den Schritten unter [Deaktivieren von Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
-    2. Folgen Sie andernfalls die restlichen Schritte unter [Umleiten von Websites von Internet Explorer zu Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
+    1. Wenn Sie die IE11-App deaktivieren möchten, folgen Sie den Schritten unter [Deaktivieren von Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
+    2. Folgen Sie andernfalls die restlichen Schritte unter [Umleiten von Websites von Internet Explorer zu Microsoft Edge](/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > Richtlinien zum Aktivieren des IE-Modus können über Intune konfiguriert werden. Weitere Informationen finden Sie unter [Microsoft Edge zu Microsoft Intune hinzufügen](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) und [Microsoft Edge-Richtlinien mit Microsoft Intune konfigurieren](./configure-edge-with-intune.md).
@@ -44,7 +47,7 @@ Sie können Internet Explorer so konfigurieren, dass er direkt in Microsoft Edge
 
 1. Laden Sie die aktuelle [Microsoft Edge-Richtlinienvorlage](https://www.microsoft.com/en-us/edge/business/download) herunter, und verwenden Sie sie.
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
-3. Klicken Sie auf **Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.
+3. Klicken Sie auf **Benutzerkonfiguration/Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.
 4. Doppelklicken Sie auf **Internet Explorer-Integration konfigurieren**.
 5. Wählen Sie **Aktiviert** aus.
 6. Setzen Sie unter **Optionen**den Dropdown-Wert auf 
@@ -84,7 +87,7 @@ Der IE-Modus kann die bestehende Richtlinie zur Konfiguration der Enterprise Sit
 1. Erstellen oder erneutes Verwenden einer Site List im XML-Format
     1. Alle Websites mit dem Element _\<open-in\>IE11\</open-in\>_ werden jetzt im IE-Modus geöffnet.
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
-3. Klicken Sie auf **Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Internet Explorer**
+3. Klicken Sie auf **Benutzerkonfiguration/Computerkonfiguration** > **Administrative Vorlagen** > **Windows-Komponenten** > **Internet Explorer**.
 4. Doppelklicken Sie auf **Die Websiteliste für den Unternehmensmodus-IE verwenden**.
 5. Wählen Sie **Aktiviert** aus.
 6. Geben Sie unter **Optionen** den Speicherort der Websiteliste ein. Sie können einen der folgenden Speicherorte verwenden:
@@ -100,8 +103,8 @@ Sie können den IE-Modus auch mit einer separaten Richtlinie für Microsoft Edge
 1. Erstellen oder erneutes Verwenden einer Site List im XML-Format
     1. Alle Websites mit dem Element _\<open-in\>IE11\</open-in\>_ werden jetzt im IE-Modus geöffnet.
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
-3. Klicken Sie auf **Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.
-4. Doppelklicken Sie auf **Enterprise Mode-Siteliste konfigurieren**.
+3. Klicken Sie auf **Benutzerkonfiguration/Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.
+4. Doppelklicken Sie auf **Enterprise Mode Site List konfigurieren**.
 5. Wählen Sie **Aktiviert** aus.
 6. Geben Sie unter **Optionen** den Speicherort der Websiteliste ein. Sie können einen der folgenden Speicherorte verwenden:
     - (Empfohlen) HTTPS-Speicherort: **https**:**//iemode/sites.xml** <!--Trying to keep this from being an active link in MD -->
@@ -118,7 +121,7 @@ Der IE-Modus kann so konfiguriert werden, dass er für alle Websites in der loka
 > Die lokale Intranetzone enthält explizit hinzugefügte Websites, weist dieser Zone aber auch Websites mit Hilfe von Heuristiken zu. Dazu können Hostnamen ohne Punkt gehören (z. B. **https**:**//payroll**) und Websites, die vom Proxykonfigurationsskript konfiguriert werden, um den Proxy zu umgehen. Wenn eine externe Partei den DNS oder Proxy steuert, kann sie potenziell erzwingen, dass Websites den IE-Modus verwenden.
 
 1. Öffnen Sie den lokalen Gruppenrichtlinien-Editor.
-2. Klicken Sie auf **Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.
+2. Klicken Sie auf **Benutzerkonfiguration/Computerkonfiguration** > **Administrative Vorlagen** > **Microsoft Edge**.
 3. Doppelklicken Sie auf **Alle Intranetsites an Internet Explorer senden**.
 4. Wählen Sie **Aktiviert** aus, und klicken Sie dann auf **OK** oder **Übernehmen**, um die Richtlinieneinstellungen zu speichern.
 
@@ -127,8 +130,8 @@ Der IE-Modus kann so konfiguriert werden, dass er für alle Websites in der loka
 Sie können verhindern, dass Ihre Benutzer Internet Explorer für Websites verwenden, die ihn nicht benötigen. Internet Explorer kann Websites, die sich nicht in Ihrer Websiteliste befinden, automatisch zu Microsoft Edge umleiten.
 
 1. Öffnen Sie den Gruppenrichtlinien-Editor.
-2. Klicken Sie auf **Computerkonfiguration** > **Administrative Tools** > **Windows-Komponenten** > **Internet Explorer**.
-3. Doppelklicken Sie auf **Senden aller nicht in der Websiteliste für den Unternehmensmodus enthaltenen Websites an Microsoft Edge**.
+2. Klicken Sie auf **Benutzerkonfiguration/Computerkonfiguration** > **Administrative Tools** > **Windows-Komponenten** > **Internet Explorer**.
+3. Doppelklicken Sie auf **Senden aller nicht in Enterprise Mode Site List enthaltenen Websites an Microsoft Edge**.
 4. Wählen Sie **Aktiviert** aus.
 5. Klicken Sie auf **OK** oder **Übernehmen**, um die Einstellungen zu speichern.
 6. Doppelklicken Sie auf **Konfigurieren, welcher Microsoft Edge-Kanal zum Öffnen von umgeleiteten Websites verwendet wird**.

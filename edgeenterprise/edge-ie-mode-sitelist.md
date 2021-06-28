@@ -3,28 +3,31 @@ title: Konfigurationsstrategie für Unternehmensstandorte
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Eine schrittweise Anleitung zum Konfigurieren der Enterprise Mode Site List für den Internet Explorer-Modus.
-ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 7369e4e14f33fc37c6ded0ebc7df57d64a34df50
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470153"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617395"
 ---
 # <a name="enterprise-site-configuration-strategy"></a>Konfigurationsstrategie für Unternehmensstandorte
 
-In diesem Artikel werden Änderungen an der Enterprise Mode Site List beschrieben, um den Internet Explorer-Modus für Microsoft Edge, Version 77 und höher, zu unterstützen.
+>[!Note]
+> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
+In diesem Artikel werden Änderungen an der Enterprise Mode Site List beschrieben, um den Internet Explorer-Modus für Microsoft Edge Version77 und höher zu unterstützen.
 
 Weitere Informationen zum Schema der XML-Datei der Enterprise Mode Site List finden Sie unter [Anleitungen für Enterprise Mode-Schema Version 2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
 <!--
 ## Updated schema elements
 
@@ -74,7 +77,7 @@ Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
 
 Wenn Sie bereits über eine Enterprise Mode Site List für IE11 oder die Vorgängerversion von Microsoft Edge verfügen, können Sie sie wiederverwenden, um den IE-Modus zu konfigurieren.
 
-Wenn Sie jedoch keine Websiteliste haben, können Sie das [Enterprise Site Discovery-Tool](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery) verwenden, um Ihre Websiteliste aufzufüllen.
+Wenn Sie jedoch keine Websiteliste haben, können Sie das [Enterprise Site Discovery-Tool](/deployedge/edge-ie-mode-site-discovery) verwenden, um Ihre Websiteliste aufzufüllen.
 
 ## <a name="configure-neutral-sites"></a>Konfigurieren von neutralen Websites
 
@@ -92,14 +95,14 @@ Sie können neutrale Websites konfigurieren, indem Sie im Enterprise Mode Site L
 </site>
 ```
 
-Wenn Sie Authentifizierungsserver identifizieren möchten, überprüfen Sie den Netzwerkdatenverkehr einer Anwendung mithilfe der IE 11-Entwicklungstools. Wenn Sie mehr Zeit benötigen, um Ihre Authentifizierungsserver zu identifizieren, können Sie eine Richtlinie so konfigurieren, dass alle Seitennavigationen im IE-Modus bleiben, damit Ihre Benutzer ihre Workflows ohne Unterbrechungen fortsetzen können. Deaktivieren Sie diese Einstellung, sobald Sie ihre Authentifizierungsserver identifiziert und der Websiteliste hinzugefügt haben, um die Verwendung des IE-Modus zu minimieren. Weitere Informationen finden Sie unter [Keep in-page navigation in IE mode](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
+Wenn Sie Authentifizierungsserver identifizieren möchten, überprüfen Sie den Netzwerkdatenverkehr einer Anwendung mithilfe der IE 11-Entwicklungstools. Wenn Sie mehr Zeit benötigen, um Ihre Authentifizierungsserver zu identifizieren, können Sie eine Richtlinie so konfigurieren, dass alle Seitennavigationen im IE-Modus bleiben, damit Ihre Benutzer ihre Workflows ohne Unterbrechungen fortsetzen können. Deaktivieren Sie diese Einstellung, sobald Sie ihre Authentifizierungsserver identifiziert und der Websiteliste hinzugefügt haben, um die Verwendung des IE-Modus zu minimieren. Weitere Informationen finden Sie unter [Keep in-page navigation in IE mode](/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
    >Das Enterprise Mode-Schema Version 1 wird für die Integration des IE-Modus nicht unterstützt. Wenn Sie derzeit Schema V.1 mit Internet Explorer 11 verwenden, müssen Sie ein Upgrade auf Schema V.2 durchführen. Weitere Informationen finden Sie unter [Enterprise Mode-Schema Version 2-Richtlinien](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ## <a name="optional-use-cookie-sharing-if-necessary"></a>(Optional) Verwenden der Cookiefreigabe bei Bedarf
 
-Standardmäßig teilen die Microsoft Edge- und Internet Explorer-Prozesse keine Sitzungscookies, und diese mangelnde Freigabe kann während des IE-Modus in einigen Fällen unpraktisch sein. Wenn sich ein Benutzer z. B. im IE-Modus erneut authentifizieren muss, wenn er dies gewohnt ist oder wenn er sich von einer Microsoft Edge-Sitzung abmeldet, wird die Internet Explorer-Modussitzung für kritische Transaktionen nicht abgemeldet. In diesen Szenarien können Sie bestimmte von SSO festgelegte Cookies so konfigurieren, dass sie von Microsoft Edge an Internet Explorer gesendet werden, damit die Authentifizierungserfahrung verbessert wird, indem keine erneute Authentifizierung erforderlich ist. Weitere Informationen finden Sie unter [Cookie sharing from Microsoft Edge to Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare).
+Standardmäßig teilen die Microsoft Edge- und Internet Explorer-Prozesse keine Sitzungscookies, und diese mangelnde Freigabe kann während des IE-Modus in einigen Fällen unpraktisch sein. Wenn sich ein Benutzer z. B. im IE-Modus erneut authentifizieren muss, wenn er dies gewohnt ist oder wenn er sich von einer Microsoft Edge-Sitzung abmeldet, wird die Internet Explorer-Modussitzung für kritische Transaktionen nicht abgemeldet. In diesen Szenarien können Sie bestimmte von SSO festgelegte Cookies so konfigurieren, dass sie von Microsoft Edge an Internet Explorer gesendet werden, damit die Authentifizierungserfahrung verbessert wird, indem keine erneute Authentifizierung erforderlich ist. Weitere Informationen finden Sie unter [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ## <a name="see-also"></a>Weitere Informationen
 
