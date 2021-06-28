@@ -3,19 +3,19 @@ title: Planen der Kioskmodusumstellung
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planen der Kioskmodusumstellung
-ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447849"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617739"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planen der Kioskmodusumstellung
 
@@ -47,23 +47,29 @@ Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks i
 |[Schaltfläche „Start“ anzeigen](./microsoft-edge-policies.md#showhomebutton) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
 |[Favoriten verwalten](./microsoft-edge-policies.md#managedfavorites) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
 |[Drucker aktivieren](./microsoft-edge-policies.md#printingenabled) (Richtlinie)|J|„Y“ zugeordnet ist|89|J|
-|[Konfigurieren der URL der neuen Registerkartenseite](./microsoft-edge-policies.md#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist||J|
+|[Konfigurieren der URL der neuen Registerkartenseite](./microsoft-edge-policies.md#newtabpagelocation) (Richtlinie)|N|„Y“ zugeordnet ist|89|J|
 |Sitzung beenden | N| „Y“ zugeordnet ist| 89|J|
 |Alle internen Microsoft Edge-URLs werden blockiert, mit Ausnahme von *edge://downloads* und *edge://print* |N|„Y“ zugeordnet ist|89|„Y“ zugeordnet ist|
 | STRG+N blockiert (neues Fenster öffnen) | „Y“ zugeordnet ist | „Y“ zugeordnet ist | 89 |J|
 | STRG+T blockiert (neue Registerkarte öffnen) |J | „Y“ zugeordnet ist | 89 |J|
 |Einstellungen und mehr (...) zeigt nur die erforderlichen Optionen an.  |„Y“ zugeordnet ist |„Y“ zugeordnet ist |89 |„Y“ zugeordnet ist|
-|Start anderer Anwendungen über den Browser einschränken|J|„Y“ zugeordnet ist|90/91|J|
-|Sperrung der Benutzeroberflächen-Druckeinstellungen|J|„Y“ zugeordnet ist|90/91|J|
-|[Neue Registerkartenseite als Startseite festlegen](./microsoft-edge-policies.md#homepageisnewtabpage) (Richtlinie)|-|-|TBD|J|
+|Start anderer Anwendungen über den Browser einschränken|J|J|90|J|
+|Sperrung der Benutzeroberflächen-Druckeinstellungen|J|J|90|J|
+|[Neue Registerkartenseite als Startseite festlegen](./microsoft-edge-policies.md#homepageisnewtabpage) (Richtlinie)|N|J|90|J|
 
 > [!NOTE]
 > Informationen zum Veröffentlichungszeitplan für Microsoft Edge finden Sie unter [Microsoft Edge-Veröffentlichungszeitplan](microsoft-edge-release-schedule.md).
 
 **Schritt 2: Testen des neuen Kiosk in Microsoft Edge.** Es wird empfohlen, das Einrichten des Kioskmodus in Microsoft Edge zu testen. Eine schnelle und einfache Möglichkeit zum Testen des Kioskmodus ist das Konfigurieren einer Einzel-App mit zugewiesenen Zugriff mithilfe der Windows-Einstellungen, wie im Folgenden beschrieben.
 
-1. Installieren Sie die neueste Windows 10 Insider Preview-Version (20215 oder höher). Folgen Sie den Anweisungen unter [Erste Schritte mit Windows 10 Insider Preview-Builds](/windows-insider/get-started).
-2. Installieren Sie die neueste Version des [Microsoft Edge Stable-Kanals,](https://www.microsoft.com/edge)Version 87 oder höher.  Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, herunterladen.
+1. Die Mindestsystemaktualisierungen für die Betriebssysteme, die in der nächsten Tabelle aufgelistet sind.
+
+|Betriebssystem|Version|Updates|
+|--|--|--|
+|Windows10 | 2004 oder höher|[KB4601382 oder höher](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows10| 1909| [KB4601380 oder höher](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Stable-Kanal](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, herunterladen.
 
    > [!IMPORTANT]
    > Da eine Installation auf Geräteebene erforderlich ist, wird der Canary-Kanal nicht unterstützt.
@@ -82,13 +88,13 @@ Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks i
 
 6. Wählen Sie auf der Seite **Kiosk-App auswählen**  die Option **Microsoft Edge** aus, und klicken Sie dann auf  **Weiter**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kioskmodus – App auswählen":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Auswählen eines Kiosks – digitale Anmeldung im Vollbildmodus":::
 
 7. Wählen Sie eine der folgenden Optionen für die Darstellung von Microsoft Edge aus, wenn es im Kioskmodus ausgeführt wird:
 
    - Digitale/interaktive Beschilderung: Zeigt eine bestimmte Website im Vollbildmodus an, dabei wird Microsoft Edge ausgeführt.
    - Öffentliches Surfen: Führt eine eingeschränkte Version von Microsoft Edge mit mehreren Tabs aus.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kioskmodus – digitale Beschilderung im Vollbildmodus":::
 
 8. Wählen Sie ** Weiter** aus.

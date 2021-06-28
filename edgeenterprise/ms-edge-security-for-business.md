@@ -1,21 +1,21 @@
 ---
 title: Sicherheit in Microsoft Edge für Ihr Unternehmen
-ms.author: seanlynd
+ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 02/10/2021
+ms.date: 04/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sicherheit in Microsoft Edge für Ihr Unternehmen
-ms.openlocfilehash: 674fad396bed62058c3187e00f4938d99cc57868
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 59de0c5ddfa6b34b3d091e4832e2a8fe42dffd42
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447069"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617065"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a>Sicherheit in Microsoft Edge für Ihr Unternehmen
 
@@ -27,9 +27,9 @@ Wir beginnen die Vertiefung mit **externen Bedrohungen**, und gehen dann zu **in
 
 ### <a name="highest-rated-protection-against-phishing-and-malware"></a>Hoch bewerteter Schutz vor Phishing und Schadsoftware
 
-In Microsoft Edge integriert, blockiert SmartScreen laut einer unabhängigen Studie von NSS Labs mehr [Phishing](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf)- und [Malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf)-Versuche als das sichere Browsen von Google Chrome. SmartScreen überprüft die Zuverlässigkeit von Websites und Downloads in Echtzeit, wenn Benutzer online arbeiten, und ist Teil von [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), das Signale und Erkenntnisse aufzeichnet, die von Microsofts großem Netzwerk aus globalen Ressourcen, Forschern und Partnern generiert werden. Durch die Überprüfung anhand dynamischer, Cloud-basierter Listen gefährlicher Websites und Downloads hilft Ihnen Microsoft Edge beim Erkennen und Blockieren von selbst kurzlebigen Bedrohungen, die schnell wieder verschwinden.  
+In Microsoft Edge integriert, blockiert SmartScreen laut einer unabhängigen Studie von NSS Labs mehr [Phishing](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1)- und [Malware](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW)-Versuche als das sichere Browsen von Google Chrome. SmartScreen überprüft die Zuverlässigkeit von Websites und Downloads in Echtzeit, wenn Benutzer online arbeiten, und ist Teil von [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), das Signale und Erkenntnisse aufzeichnet, die von Microsofts großem Netzwerk aus globalen Ressourcen, Forschern und Partnern generiert werden. Durch die Überprüfung anhand dynamischer, Cloud-basierter Listen gefährlicher Websites und Downloads hilft Ihnen Microsoft Edge beim Erkennen und Blockieren von selbst kurzlebigen Bedrohungen, die schnell wieder verschwinden.  
 
-[Microsoft Edge mit SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen) hat 95,5 % der Phishing-Versuche während des [NSS Labs-Phishing-Schutztests](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) und 98,5 % der Schadsoftwareversuche während dem [NSS Labs-Tests zum Schutz vor Schadsoftware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf)blockiert, im Vergleich zu den „Sicheres Browsen“-Zahlen von Chrome von 86,9 % bzw. 86,0 %.
+[Microsoft Edge SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen) hat 95,5% der Phishing-Versuche während des [NSS Labs-Phishing-Schutztests](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) und 98,5% der Schadsoftwareversuche während dem [NSS Labs-Tests zum Schutz vor Schadsoftware](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW)blockiert, im Vergleich zu den „Sicheres Browsen“-Zahlen von Chrome von 86,9% bzw. 86,0%.
 
 ### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>Der einzige Browser unter Windows 10, der die Hardwareisolierung nativ unterstützt
 

@@ -3,21 +3,24 @@ title: Deaktivieren von Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/09/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Internet Explorer 11 deaktivieren und den Internet Explorer-Modus in Microsoft Edge verwenden können.
-ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447389"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617485"
 ---
 # <a name="disable-internet-explorer-11"></a>Deaktivieren von Internet Explorer 11
+
+>[!Note]
+> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 In diesem Artikel wird beschrieben, wie Sie Internet Explorer 11 als eigenständigen Browser in Ihrer Umgebung deaktivieren können.
 
@@ -61,7 +64,7 @@ Während des Festlegens der Richtlinie für diese Benutzererfahrung können Sie 
 
 Wenn Ihre Websiteliste für den Unternehmensmodus Anwendungen enthält, die für das Öffnen in der IE11-App konfiguriert sind und Sie IE11 mit dieser Richtlinie deaktivieren, werden die Anwendungen in Microsoft Edge im IE-Modus geöffnet.
 > [!NOTE]
-> Es gibt ein bekanntes Problem mit dem Benutzerablauf, das auftritt, wenn eine Website für das Öffnen in IE11 konfiguriert ist und die Richtlinie zum Deaktivieren von IE11 aktiv ist. Das Problem wird derzeit untersucht.
+> Es gab ein bekanntes Problem mit dem Benutzerablauf, das auftritt, wenn eine Website für das Öffnen in der IE11-Anwendung konfiguriert ist und die Richtlinie zum Deaktivieren von IE11 aktiv ist. Das Problem wurde in Microsoft Edge, Version 91.0.840.0 oder höher, behoben.
 
 ## <a name="disable-internet-explorer-11-as-a-standalone-browser"></a>Deaktivieren von Internet Explorer 11 als eigenständiger Browser
 
