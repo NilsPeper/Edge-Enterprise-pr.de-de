@@ -35,7 +35,7 @@ Bevor Sie eine Erweiterung veröffentlichen, muss sie in eine CRX-Datei (Chrome-
 2. Klicken Sie unter **Installierte Erweiterungen** auf **Erweiterung verpacken**, um die CRX-Datei zu erstellen.
 3. Verwenden Sie das Dialogfeld **Erweiterung verpacken**, um das Verzeichnis zu finden, das die Quelle für die Erweiterung enthält. Wählen Sie das Verzeichnis aus und klicken Sie dann auf **Erweiterung verpacken**.  Dadurch wird Ihre CRX-Datei zusammen mit einer PEM-Datei erstellt. Speichern Sie die PEM-Datei, denn sie wird für Versionsupdates der Erweiterung benötigt. Der nächste Screenshot zeigt das Dialogfeld **Erweiterung verpacken** zum Auffinden des Stammverzeichnisses der Erweiterung.
 
-   :::image type="content" source="media/microsoft-edge-manage-extensions-webstore/manage-extensions-pack-dialog.png" alt-text="Dialogfeld "Erweiterung verpacken", zum Auffinden des Quellcodes einer Erweiterung.":::
+   :::image type="content" source="media/microsoft-edge-manage-extensions-webstore/manage-extensions-pack-dialog.png" alt-text="Dialogfeld Erweiterung verpacken, zum Auffinden des Quellcodes einer Erweiterung.":::
 
    > [!IMPORTANT]
    > Speichern Sie die PEM-Datei an einem sicheren Ort, da sie der Schlüssel für die Erweiterung ist und für zukünftige Updates benötigt wird.
