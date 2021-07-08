@@ -39,9 +39,9 @@ Wenn ein Benutzer zu einer Website wechselt, die mit Internet Explorer nicht kom
 ## <a name="prerequisites"></a>Voraussetzungen
 - Microsoft Edge Stabile Version 87 oder höher
 - Windows Versionen
-    - Windows10 Version 1709 oder höher
-    - Windows8.1
-    - Windows7
+    - Windows 10 Version 1709 oder höher
+    - Windows 8.1
+    - Windows 7
 
 
 

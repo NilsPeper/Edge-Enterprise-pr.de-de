@@ -43,7 +43,7 @@ Berücksichtigen Sie beim Entwickeln Ihrer VDI-Umgebung sorgfältig die Workflow
 Edge empfiehlt die folgenden Mindestanforderungen für die Bereitstellung von Edge in VDI-Umgebungen:
 
 - vCPU – 2-4 Kerne pro Benutzer
-- RAM – 1GB pro Benutzer
+- RAM – 1 GB pro Benutzer
 
 Bitte beachten Sie, dass große komplexe Webanwendungen und Erweiterungen mehr Arbeitsspeicher benötigen und bei der Konfiguration Ihrer Umgebung berücksichtigt werden müssen.
 
@@ -121,16 +121,16 @@ Dieses Problem sollte in neueren Versionen behoben werden. Wenn dieses Problem j
 
 ### <a name="degraded-performance-when-rendering-pages-with-exceptionally-large-html-tables"></a>Beeinträchtigte Leistung beim Rendering von Seiten mit ungewöhnlich großen HTML-Tabellen
 
-Die folgenden Citrix-Richtlinien sind dafür bekannt, dass HTML-Seiten mit sehr großen Tabellen (mehr als 30000 Zeilen) langsam gerendert werden.
+Die folgenden Citrix-Richtlinien sind dafür bekannt, dass HTML-Seiten mit sehr großen Tabellen (mehr als 30 000 Zeilen) langsam gerendert werden.
 
 - Automatische Tastaturanzeige
 - Remotezugriff auf das Kombinationsfeld
 
 Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die mobile Benutzeroberfläche (citrix.com)](https://docs.citrix.com/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/mobile-experience-policy-settings.html). Durch das Deaktivieren dieser Richtlinien sollte das Problem behoben werden.
 
-### <a name="windows-account-manager-authorization-scenarios-ie--azure-sync-fail-in-edge-when-run-as-a-citrix-seamless-application"></a>Windows-Kontomnager-Autorisierungsszenarien (d.h.  Azure-Synchronisierung) schlägt in Edge fehl, wenn es als nahtlose Citrix-Anwendung ausgeführt wird
+### <a name="windows-account-manager-authorization-scenarios-ie--azure-sync-fail-in-edge-when-run-as-a-citrix-seamless-application"></a>Windows-Kontomnager-Autorisierungsszenarien (d. h.  Azure-Synchronisierung) schlägt in Edge fehl, wenn es als nahtlose Citrix-Anwendung ausgeführt wird
 
-Dies ist ein bekanntes Problem in Edge und anderen Anwendungen, die WAM (d.h. Office) verwenden, da Windows-Komponenten, die für solche Szenarien erforderlich sind, nicht initialisiert werden, wenn sie im "nahtlosen" Modus ausgeführt werden. Problemumgehung:
+Dies ist ein bekanntes Problem in Edge und anderen Anwendungen, die WAM (d. h. Office) verwenden, da Windows-Komponenten, die für solche Szenarien erforderlich sind, nicht initialisiert werden, wenn sie im "nahtlosen" Modus ausgeführt werden. Problemumgehung:
 
 - Verwenden Sie Edge über einen Remotedesktop zum Citrix-Host anstatt als nahtlose Remoteanwendung.
 - Verwenden Sie stattdessen Azure Virtual Desktop-Remote-Apps, die über Abhilfemaßnahmen für dieses Problem verfügen.

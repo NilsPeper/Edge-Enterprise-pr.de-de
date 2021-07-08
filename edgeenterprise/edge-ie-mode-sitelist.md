@@ -22,12 +22,12 @@ ms.locfileid: "11617395"
 >[!Note]
 > Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-In diesem Artikel werden Änderungen an der Enterprise Mode Site List beschrieben, um den Internet Explorer-Modus für Microsoft Edge Version77 und höher zu unterstützen.
+In diesem Artikel werden Änderungen an der Enterprise Mode Site List beschrieben, um den Internet Explorer-Modus für Microsoft Edge Version 77 und höher zu unterstützen.
 
 Weitere Informationen zum Schema der XML-Datei der Enterprise Mode Site List finden Sie unter [Anleitungen für Enterprise Mode-Schema Version 2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 <!--
 ## Updated schema elements
 

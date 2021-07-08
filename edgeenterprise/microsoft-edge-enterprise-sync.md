@@ -22,7 +22,7 @@ ms.locfileid: "11617755"
 In diesem Artikel wird erläutert, wie Administratoren Microsoft Edge konfigurieren können, um Benutzerfavoriten, Kennwörter und andere Browserdaten auf allen angemeldeten Geräten zu synchronisieren. Wenn Sie kein Administrator sind, schauen Sie sich diesen Artikel an, um zu erfahren, wie Sie sich anmelden und Microsoft Edge geräteübergreifend synchronisieren. [Melden Sie sich an, um Microsoft Edge geräteübergreifend zu synchronisieren](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
-> Gilt für Microsoft Edge Version77 oder höher, sofern nicht anderes angegeben.
+> Gilt für Microsoft Edge Version 77 oder höher, sofern nicht anderes angegeben.
 
 ## <a name="overview"></a>Übersicht
 

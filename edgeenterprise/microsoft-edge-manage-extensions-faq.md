@@ -22,7 +22,7 @@ ms.locfileid: "11618132"
 Dieser Artikel enthält häufig gestellte Fragen (FAQ) zu Microsoft Edge-Erweiterungen.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="what-is-the-update-url-for-the-microsoft-edge-add-ons-store"></a>Wie lautet die Update-URL für den Microsoft Edge Add-Ons-Store?
 

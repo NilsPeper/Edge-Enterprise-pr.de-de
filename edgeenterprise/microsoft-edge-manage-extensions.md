@@ -22,7 +22,7 @@ ms.locfileid: "11618125"
 Dieser Artikel enthält Leitlinien für bewährte Methoden für Administratoren, die Microsoft Edge-Erweiterungen in ihren Organisationen verwalten. Anhand der Informationen in diesem Artikel können Sie eine Strategie für die Verwaltung von Erweiterungen in Ihrer Organisation entwickeln.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="introduction"></a>Einführung
 
@@ -85,7 +85,7 @@ Die meisten Organisationen sollten Erweiterungen anhand ihrer Berechtigungen und
 - Blockierte/zulässige Berechtigungen – Ermöglichen Ihnen, Erweiterungen anhand der benötigten Berechtigungen zu steuern.
 - Laufzeitblockhosts – Ermöglichen Ihnen zu steuern, auf welche Websites diese Erweiterungen zugreifen können.
 
-Diese Vorgehensweise spart Zeit, da Sie diese nur einmal festlegen müssen. Und mit der Laufzeithostrichtlinie werden Ihre wichtigsten Websites geschützt. Es gibt auch andere Optionen, z.B.:
+Diese Vorgehensweise spart Zeit, da Sie diese nur einmal festlegen müssen. Und mit der Laufzeithostrichtlinie werden Ihre wichtigsten Websites geschützt. Es gibt auch andere Optionen, z. B.:
 
 -   Installation von Erweiterungen erzwingen – Ermöglicht die automatische Installation von Erweiterungen.
 -   Zulassungsliste/Blockliste (falls erforderlich) – Entscheiden Sie, welche Erweiterungen installiert werden dürfen.

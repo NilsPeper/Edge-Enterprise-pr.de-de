@@ -22,7 +22,7 @@ ms.locfileid: "11618140"
 Die häufig gestellten Fragen in diesem Artikel beschreiben, wie der integrierte Kennwort-Manager von Microsoft Edge Sicherheit für Benutzerkennwörter bietet.
 
 > [!Note]
->Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+>Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="how-are-passwords-stored-in-microsoft-edge-and-how-safe-is-this-approach"></a>Wie werden Kennwörter in Microsoft Edge gespeichert und wie sicher ist dieser Ansatz?
 

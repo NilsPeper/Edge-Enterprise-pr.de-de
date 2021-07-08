@@ -202,7 +202,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 <!-- begin major 87 -->
-## <a name="version-87066412-october-20"></a>Version 87.0.664.12: 20.Oktober
+## <a name="version-87066412-october-20"></a>Version 87.0.664.12: 20. Oktober
 
 ### <a name="feature-updates"></a>Funktionsupdates
 

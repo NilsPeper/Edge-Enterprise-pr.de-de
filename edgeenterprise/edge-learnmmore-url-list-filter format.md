@@ -69,7 +69,7 @@ Der für eine URL ausgewählte Filter ist die spezifischste Übereinstimmung, di
 
 In diesem Beispiel führt die Filterauswahl bei der Suche nach einer Übereinstimmung mit "https://sub.contoso.com/docs" Folgendes aus:
 
-1. Suchen nach einem Filter für „sub.contoso.com”. Wenn ein Filter gefunden wird, wird die Suche mit Schritt2 fortgesetzt. Wenn ein Filter nicht gefunden wird, wird die Suche erneut mit "contoso.com", "com" und schließlich "" versucht.
+1. Suchen nach einem Filter für „sub.contoso.com”. Wenn ein Filter gefunden wird, wird die Suche mit Schritt 2 fortgesetzt. Wenn ein Filter nicht gefunden wird, wird die Suche erneut mit "contoso.com", "com" und schließlich "" versucht.
 2. Aus den ausgewählten Filtern werden alle, die im **Schema** nicht über "http" verfügen, entfernt.
 3. Aus den verbleibenden Filtern werden alle, die über eine genaue Portnummer verfügen, die nicht "80" ist, entfernt.
 4. Aus den übrigen Filtern werden alle, die nicht „/docs” als Präfix des **Pfads** haben, entfernt.

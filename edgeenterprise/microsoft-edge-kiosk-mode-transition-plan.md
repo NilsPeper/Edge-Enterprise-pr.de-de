@@ -66,8 +66,8 @@ Verwenden Sie die folgenden Schritte als Leitfaden zum Einrichten eines Kiosks i
 
 |Betriebssystem|Version|Updates|
 |--|--|--|
-|Windows10 | 2004 oder höher|[KB4601382 oder höher](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
-|Windows10| 1909| [KB4601380 oder höher](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+|Windows 10 | 2004 oder höher|[KB4601382 oder höher](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 oder höher](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
 2. Um die neuesten Features zu testen, können Sie den neuesten [Microsoft Edge Stable-Kanal](https://www.microsoftedgeinsider.com/download), Version 89 oder höher, herunterladen.
 

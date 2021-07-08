@@ -34,19 +34,19 @@ Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforder
 - **MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
 
 - **Zahlungsinstrumente werden jetzt geräteübergreifend synchronisiert**. Ab Microsoft Edge Version 92 haben Sie die Möglichkeit, Ihre Zahlungsinformationen auf ihren angemeldeten Geräten zu synchronisieren.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 50%. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 50 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Die Warnung "Entwicklermoduserweiterungen deaktivieren" kann dauerhaft verworfen werden**. Ab Microsoft Edge, Version 92, können Sie die Warnung "Entwicklermoduserweiterungen deaktivieren" deaktivieren, indem Sie auf die Option "Diese Option nicht erneut anzeigen" klicken.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25%. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Verwalten Sie Ihre Erweiterungen direkt über die Symbolleiste**. Mit dem Menü "Ganz neue Erweiterungen" auf der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25%. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Automatisches HTTPS**. Benutzer haben die Möglichkeit, die Navigation von HTTP auf HTTPS in Domänen zu aktualisieren, die wahrscheinlich dieses sicherere Protokoll unterstützen. Diese Unterstützung kann auch so konfiguriert werden, dass die Übermittlung über HTTPS für alle Domänen versucht wird.
 Bitte beachten Sie: Wir experimentieren mit diesem Feature, und dieses Verhalten wird nicht angezeigt, wenn Sie sich von Experimenten abgemeldet haben.
 
 - **Verbesserungen beim Rendern von Schriftarten**. Das Rendering von Text wurde verbessert, um die Übersichtlichkeit zu verbessern und die Unschärfe zu verringern.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25%. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 ### <a name="policy-updates"></a>Richtlinienupdates
 
@@ -195,7 +195,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
   - **Vorschläge zum automatischen Ausfüllen werden um den Inhalt von Adressfeldern aus der Zwischenablage erweitert.** Der Inhalt der Zwischenablage wird analysiert, wenn Sie auf ein Profil-/Adressfeld (z. B. Telefon, E-Mail, Postleitzahl, Stadt, Bundesland usw.) klicken, um es als Vorschläge zum automatischen Ausfüllen anzuzeigen.
 
-  - **Benutzer können nach Vorschlägen zum automatischen Ausfüllen suchen, auch wenn ein Formular oder Feld nicht erkannt wird**. Wenn Sie Ihre Informationen heute in Microsoft Edge gespeichert haben, werden automatisch Vorschläge zum automatischen Ausfüllen angezeigt, mit denen Sie beim Ausfüllen von Formularen Zeit sparen können. In Fällen, in denen beim automatischen Ausfüllen ein Formular fehlt oder wenn Sie Daten in Formularen abrufen möchten, die normalerweise nicht automatisch ausgefüllt sind (z.B. temporäre Formulare), können Sie mithilfe des automatischen Ausfüllens nach Ihren Informationen suchen.
+  - **Benutzer können nach Vorschlägen zum automatischen Ausfüllen suchen, auch wenn ein Formular oder Feld nicht erkannt wird**. Wenn Sie Ihre Informationen heute in Microsoft Edge gespeichert haben, werden automatisch Vorschläge zum automatischen Ausfüllen angezeigt, mit denen Sie beim Ausfüllen von Formularen Zeit sparen können. In Fällen, in denen beim automatischen Ausfüllen ein Formular fehlt oder wenn Sie Daten in Formularen abrufen möchten, die normalerweise nicht automatisch ausgefüllt sind (z. B. temporäre Formulare), können Sie mithilfe des automatischen Ausfüllens nach Ihren Informationen suchen.
 
 - **Greifen Sie über ein Flyout in der Menüleiste auf Downloads zu**. Downloads werden in der oberen rechten Ecke mit allen aktiven Downloads an einem Ort angezeigt. Dieses Menü ist leicht zu schließen, sodass Benutzer ununterbrochen weiter surfen und den gesamten Download-Fortschritt direkt über die Symbolleiste überwachen können. [Weitere Informationen](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
 

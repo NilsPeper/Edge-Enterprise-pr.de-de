@@ -24,7 +24,7 @@ In diesem Artikel werden die Optionen und Schritte zum Verwalten von Erweiterung
 - [Verwalten von Microsoft Edge-Erweiterungen im Unternehmen](/deployedge/microsoft-edge-manage-extensions)
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="block-extensions-based-on-their-permissions"></a>Blockieren von Erweiterungen basierend auf ihren Berechtigungen
 
@@ -162,7 +162,7 @@ Verwenden Sie die [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policie
 Die Erweiterung wird im Hintergrund und ohne Benutzerinteraktion installiert. Der Benutzer kann die Erweiterung auch nicht deinstallieren oder deaktivieren. Diese Einstellung überschreibt alle aktivierten Blockierungslistenrichtlinien.
 
 > [!NOTE]
-> Verwenden Sie für im Chrome Web Store gehostete Erweiterungen eine Zeichenfolge wie z.B. `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
+> Verwenden Sie für im Chrome Web Store gehostete Erweiterungen eine Zeichenfolge wie z. B. `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
 
 ## <a name="block-extensions-from-a-specific-store-or-update-url"></a>Blockieren von Erweiterungen aus einem bestimmten Store oder von einer bestimmten Update-URL
 

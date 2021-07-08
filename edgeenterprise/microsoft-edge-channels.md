@@ -24,7 +24,7 @@ Einer der Vorteile der nächsten Microsoft Edge-Version besteht darin, dass Micr
 Weitere Informationen zur Unterstützung für jeden Kanal finden Sie unter:[ Microsoft Edge Lifecycle](/deployedge/microsoft-edge-support-lifecycle)
   
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="channel-overview"></a>Kanalübersicht
 
@@ -35,7 +35,7 @@ Weitere Informationen zur Unterstützung für jeden Kanal finden Sie unter:[ Mic
 |[Dev](#dev-channel)|Planung und Entwicklung|Wöchentlich|Nein|
 |[Canary](#canary-channel)|Neuster Inhalt|Täglich|Nein|
 
-Welchen Update-Kanal Sie Ihren Benutzern zur Verfügung stellen wollen, hängt von mehreren Faktoren ab, z.B. davon, wie viele Branchenanwendungen der Benutzer nutzt und dass Sie jedes Mal testen müssen, ob er eine aktualisierte Version von Microsoft Edge besitzt. Um Ihnen diese Entscheidung zu erleichtern, hier einige Informationen über die vier Updatekanäle, die für Microsoft Edge verfügbar sind.
+Welchen Update-Kanal Sie Ihren Benutzern zur Verfügung stellen wollen, hängt von mehreren Faktoren ab, z. B. davon, wie viele Branchenanwendungen der Benutzer nutzt und dass Sie jedes Mal testen müssen, ob er eine aktualisierte Version von Microsoft Edge besitzt. Um Ihnen diese Entscheidung zu erleichtern, hier einige Informationen über die vier Updatekanäle, die für Microsoft Edge verfügbar sind.
 
 ### <a name="stable-channel"></a>Stable-Kanal
 
@@ -47,7 +47,7 @@ Der Beta-Kanal ist für den Produktionseinsatz in Ihrem Unternehmen für eine re
 
 ### <a name="dev-channel"></a>Dev-Kanal
 
-Der Dev-Kanal soll Sie bei der Planung und Entwicklung mit den neuesten Funktionen von Microsoft Edge unterstützen, jedoch mit einer höheren Qualität als im Canary-Kanal. Dies ist Ihre Gelegenheit, sich einen ersten Überblick über die nächsten Schrittezu verschaffen und sich auf die nächste Beta-Version vorzubereiten.
+Der Dev-Kanal soll Sie bei der Planung und Entwicklung mit den neuesten Funktionen von Microsoft Edge unterstützen, jedoch mit einer höheren Qualität als im Canary-Kanal. Dies ist Ihre Gelegenheit, sich einen ersten Überblick über die nächsten Schritte zu verschaffen und sich auf die nächste Beta-Version vorzubereiten.
 
 ### <a name="canary-channel"></a>Canary-Kanal
 
