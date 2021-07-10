@@ -3,19 +3,19 @@ title: Häufig gestellte Fragen (FAQ) zu Microsoft Edge-Erweiterungen
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/29/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Häufig gestellte Fragen (FAQ) zu Microsoft Edge-Erweiterungen
-ms.openlocfilehash: eb33b6783033830d8ed317c647d4c0ec3437b64b
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 5dd2dd147e1a599e13539158cf291028497a0b29
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618132"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642431"
 ---
 # <a name="faq-for-microsoft-edge-extensions"></a>Häufig gestellte Fragen (FAQ) zu Microsoft Edge-Erweiterungen
 
@@ -35,7 +35,7 @@ Die Update-URL für Erweiterungen, die im Chrome Webstore gehostet werden, laute
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Verwalten von Microsoft Edge-Erweiterungen im Unternehmen](microsoft-edge-manage-extensions.md)
-- [Verwenden von Gruppenrichtlinien zur Verwaltung von Microsoft Edge Erweiterungen](microsoft-edge-manage-extensions-policies.md)
-- [Erstellen eines Webspeichers zum Hosten von Microsoft Edge Erweiterungen](microsoft-edge-manage-extensions-webstore.md)
+- [Verwenden von Gruppenrichtlinien zum Verwalten von Microsoft Edge-Erweiterungen](microsoft-edge-manage-extensions-policies.md)
+- [Erstellen eines Webspeichers zum Hosten von Microsoft Edge-Erweiterungen](microsoft-edge-manage-extensions-webstore.md)
 - [Referenzhandbuch für die „ExtensionSettings“-Richtlinie](microsoft-edge-manage-extensions-ref-guide.md)
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

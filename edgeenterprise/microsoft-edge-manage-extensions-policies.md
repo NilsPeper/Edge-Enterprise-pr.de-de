@@ -3,19 +3,19 @@ title: Verwenden von Gruppenrichtlinien zur Verwaltung von Microsoft Edge Erweit
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 06/09/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Verwenden von Gruppenrichtlinien zur Verwaltung von Microsoft Edge Erweiterungen im Unternehmen
-ms.openlocfilehash: a633b036c1733716dfb257b4711bca57bd6721f0
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618131"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641371"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Verwenden von Gruppenrichtlinien zur Verwaltung von Microsoft Edge Erweiterungen
 
@@ -140,7 +140,7 @@ Sie können die [ExtensionInstallBlocklist](/DeployEdge/microsoft-edge-policies#
 2. Wählen Sie **Aktiviert** aus.
 3. Klicken Sie auf **Anzeigen**.
 4. Geben Sie die App-ID der Erweiterungen ein, die Sie blockieren möchten. Verwenden Sie beim Hinzufügen mehrerer App-IDs eine separate Zeile für jede ID.
-5. Zum Blockieren aller Erweiterungen geben Sie **\*** in die Richtlinie ein, um zu verhindern, dass Erweiterungen installiert werden. Sie können dies in Verbindung mit der Richtlinie „Installation bestimmter Erweiterungen zulassen“ verwenden, um nur die Installation bestimmter Erweiterungen zuzulassen. Der nächste Screenshot zeigt eine Erweiterung, die basierend auf der angegebenen App-ID blockiert wird.
+5. Um alle Erweiterungen zu blockieren, geben Sie * *\** _ in die Richtlinie ein, um zu verhindern, dass Erweiterungen installiert werden. Sie können dies in Verbindung mit der Richtlinie „Installation bestimmter Erweiterungen zulassen“ verwenden, um nur die Installation bestimmter Erweiterungen zuzulassen. Der nächste Screenshot zeigt eine Erweiterung, die basierend auf der angegebenen App-ID blockiert wird.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Verwenden Sie die App-ID, um eine Erweiterung zu blockieren.":::
 
@@ -154,7 +154,7 @@ Sie können die [ExtensionInstallBlocklist](/DeployEdge/microsoft-edge-policies#
 
 Verwenden Sie die [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policies#extensioninstallforcelist)-Richtlinie, um zu steuern, welche Erweiterungen blockiert oder zugelassen werden. Nutzen Sie die folgenden Schritte als Anleitung, um die Installation einer Erweiterung zu erzwingen.
 
-1. Öffnen Sie den Gruppenrichtlinien-Editor, wechseln Sie zu **Administrative Vorlagen > Microsoft Edge > Erweiterungen**, und wählen Sie dann **Steuern, welche Erweiterungen im Hintergrund installiert werden** aus.
+1. Wechseln Sie im Gruppenrichtlinien-Editor zu _*Administrative Vorlagen> Microsoft Edge > Erweiterungen >** und wählen Sie dann **steuern, welche Erweiterungen im Hintergrund installiert werden.**
 2. Wählen Sie **Aktiviert** aus.  
 3. Klicken Sie auf **Anzeigen**.
 4. Geben Sie die App-IDs der Erweiterungen ein, deren Installation Sie erzwingen möchten.  

@@ -3,31 +3,31 @@ title: Microsoft Edge und Verhinderung von Datenverlust
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge und Verhinderung von Datenverlust (DLP)
-ms.openlocfilehash: c054c911774acb027b83779588d197766c716a33
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 53804ac83d3ce9d26eb9410fd0ba06f3c620871f
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314718"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642721"
 ---
-# Video: Microsoft Edge und Verhinderung von Datenverlust (DLP)
+# <a name="video-microsoft-edge-and-data-loss-prevention-dlp"></a>Video: Microsoft Edge und Verhinderung von Datenverlust (DLP)
 
 In diesem Video wird gezeigt, wie Microsoft Edge den Schutz vor Datenverlust unterstützt. Klicken Sie auf den nächsten Screenshot, um das Video von Arunesh Chandra, Senior Program Manager, Microsoft Edge Security, anzusehen.
 
 [![ Microsoft Edge und Verhinderung von Datenverlust](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
-##  <a name="about-the-video"></a>Über das Video
+## <a name="about-the-video"></a>Über das Video
 
 Die Verhinderung von Datenverlust (DLP) war nie wichtiger als jetzt mit Fernarbeit. Informieren Sie sich über die nativen DLP-Funktionen in Microsoft Edge und darüber, wie DLP Ihnen hilft, Ihre Daten unter der Kontrolle des Unternehmens zu halten und konform zu bleiben.
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Verhinderung von Datenverlust (DLP) in Microsoft Edge](microsoft-edge-security-dlp.md)

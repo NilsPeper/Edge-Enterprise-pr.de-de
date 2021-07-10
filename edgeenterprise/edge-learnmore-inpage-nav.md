@@ -3,21 +3,21 @@ title: Seiteninterne Navigation im Internet Explorer-Modus beibehalten
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Seiteninterne Navigation im Internet Explorer-Modus beibehalten
-ms.openlocfilehash: 0acca9e05a0d09b02fa61d5ddd7de3f7c6cabb92
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
-ms.translationtype: HT
+ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10979992"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641361"
 ---
-# Seiteninterne Navigation im Internet Explorer-Modus beibehalten
+# <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Seiteninterne Navigation im Internet Explorer-Modus beibehalten
 
 Sie können diese Richtlinie als vorübergehende Lösung verwenden, um zu erzwingen, dass alle seiteninternen Navigationen von Websites im Internet Explorer-Modus (IE-Modus) im IE-Modus verbleiben.
 
@@ -26,7 +26,7 @@ Eine seiteninterne Navigation wird über einen Link, ein Skript oder ein Formula
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version81 oder höher.
 
-##  <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgenden Windows-Updates sind für diese Richtlinie erforderlich:
 
@@ -36,13 +36,13 @@ Die folgenden Windows-Updates sind für diese Richtlinie erforderlich:
 - Windows 10 Version 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
 
 
-##  <a name="about-this-policy"></a>Informationen zu dieser Richtlinie
+## <a name="about-this-policy"></a>Informationen zu dieser Richtlinie
 
 Diese Richtlinie gibt Ihnen Zeit, alle Authentifizierungsserver, die von Ihren Websites im IE-Modus verwendet werden, zu identifizieren und zu konfigurieren. Diese Richtlinie kann jedoch zu einer inkonsistenten Browsererfahrung führen, weil einige Websites im IE-Modus und zu anderen Zeiten im Microsoft Edge-Modus gerendert werden. Diese Erfahrung hängt davon ab, ob die Navigation zur Website von einer Seite im IE-Modus aus begann. Jede Website, die nicht ausdrücklich so konfiguriert ist, dass sie in einer bestimmten Rendering-Engine geöffnet wird, unterliegt dieser Inkonsistenz.
 
 Wenn Sie diese Richtlinie aktivieren, empfehlen wir Ihnen, sie zu deaktivieren, nachdem Sie alle Authentifizierungsserver identifiziert und der Websiteliste als neutral hinzugefügt haben. Diese Aktion stellt sicher, dass Ihre modernen Websites niemals versehentlich im IE-Modus gerendert werden.
 
-##  <a name="keep-in-page-navigation-in-ie-mode"></a>Beibehaltung der seiteninternen Navigation im IE-Modus
+## <a name="keep-in-page-navigation-in-ie-mode"></a>Beibehaltung der seiteninternen Navigation im IE-Modus
 
 Um automatische oder alle seiteninternen Navigationen im Internet Explorer-Modus beizubehalten, folgen Sie diesen Schritten:
 
@@ -60,10 +60,10 @@ Um automatische oder alle seiteninternen Navigationen im Internet Explorer-Modus
 
    - **Standard **: Nur Websites, die zum Öffnen im Internet Explorer-Modus konfiguriert sind, werden in diesem Modus geöffnet. Alle Websites, die nicht zum Öffnen im Internet Explorer-Modus konfiguriert sind, werden zurück zu Microsoft Edge umgeleitet.
    - **Nur automatische Navigationen im Internet Explorer-Modus beibehalten**: Verwenden Sie diese Option, wenn die Standardeinstellung verwendet werden soll, mit der Ausnahme, dass alle automatischen Navigationen (wie z.B. 302-Umleitungen) zu nicht konfigurierten Websites im Internet Explorer-Modus bleiben.
-   - **Alle seiteninternen Navigationen im Internet Explorer-Modus beibehalten** ***(am wenigsten empfohlen)***: Alle Navigationen von im IE-Modus geladenen Seiten zu nicht konfigurierte Websites bleiben im Internet Explorer-Modus.
+   - **Beibehalten der gesamten seiteninternen Navigation im Internet Explorer-Modus**  * *_(Am wenigsten empfohlen)_*_ – Alle Navigationen von Seiten, die im IE-Modus zu nicht konfigurierten Websites geladen wurden, werden im Internet Explorer-Modus beibehalten.
 
-6. Klicken Sie auf **OK** oder **Übernehmen**, um diese Richtlinieneinstellung zu speichern.
+6. Klicken Sie auf _*OK** oder **übernehmen,** um die Richtlinieneinstellungen zu speichern.
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

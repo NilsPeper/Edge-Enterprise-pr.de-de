@@ -4,24 +4,24 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Häufig gestellte Fragen (FAQ) zum Bereitstellen von Microsoft Edge im Unternehmen
-  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: a592a831f78c5d5e92c919112319120e0f0b3faf
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11617255"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641791"
 title: Häufig gestellte Fragen (FAQ) zu Microsoft Edge im Unternehmen
 summary: >
   > [!NOTE]
 
-  > Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+  > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 sections:
 - name: Ignoriert
   questions:
@@ -30,10 +30,10 @@ sections:
       Wählen Sie in der oberen rechten Ecke von Microsoft Edge das Ellipsensymbol (**...**) aus, und wählen Sie dann **Einstellungen**aus. Wählen Sie **Über Microsoft Edge** aus, um Ihre Version von Microsoft Edge anzuzeigen.
   - question: Was ist mit Internet Explore 11?
     answer: >
-      Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs finden Sie in den [häufig gestellten Fragen).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Die gleichen IE11-Apps und -Websites, die Sie heute verwenden, können im Internet Explorer-Modus in Microsoft Edge geöffnet werden. Weitere Informationen finden Sie [hier](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+      Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs finden Sie in den [häufig gestellten Fragen).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. Weitere Informationen finden Sie [hier](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
   - question: Unterstützt Microsoft Edge (Chromium-basiert) ActiveX-Steuerelemente oder BHOs wie Silverlight oder Java?
     answer: >
-      Nein. Microsoft Edge unterstützt keine ActiveX Steuerelemente oder Browserhilfeobjekte (BROWSER Help Objects, BHOs) wie Silverlight oder Java. Wenn Sie jedoch Web-Apps ausführen, die ActiveX-Steuerelemente, BHOs oder veraltete Dokumentmodi in Internet Explorer 11 verwenden, können Sie diese so konfigurieren, dass Sie im neuen Microsoft Edge im IE-Modus ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren des IE-Modus in Microsoft Edge](./edge-ie-mode.md).
+      Nein. Microsoft Edge unterstützt keine ActiveX Steuerelemente oder Browserhilfeobjekte (Browser Help Objects, BHOs) wie Silverlight oder Java. Wenn Sie jedoch Web-Apps ausführen, die ActiveX-Steuerelemente, BHOs oder veraltete Dokumentmodi in Internet Explorer 11 verwenden, können Sie diese so konfigurieren, dass Sie im neuen Microsoft Edge im IE-Modus ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren des IE-Modus in Microsoft Edge](./edge-ie-mode.md).
   - question: Werden Favoriten von der aktuellen Version von Microsoft Edge portiert oder muss ich sie erneut hinzufügen?
     answer: "Derzeit unterstützt Microsoft Edge den Import aus vorhandenen Installationen von Microsoft Edge, Chrome, Internet Explorer und Firefox (auf Win10). Die folgenden Einstellungen werden für den Import unterstützt: Lesezeichen, Verlauf, Kennwörter und AutoAusfüllen (Zahlungen, Adressen und generische Formulare). Sie können entweder aus der ersten Ausführung oder aus den Browsereinstellungen importieren.  \n"
   - question: Worin besteht der Unterschied zwischen den Kanälen/Builds Beta, Dev und Canary?

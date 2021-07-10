@@ -3,19 +3,19 @@ title: Deaktivieren von Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Internet Explorer 11 deaktivieren und den Internet Explorer-Modus in Microsoft Edge verwenden können.
-ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617485"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641511"
 ---
 # <a name="disable-internet-explorer-11"></a>Deaktivieren von Internet Explorer 11
 
@@ -72,8 +72,8 @@ Führen Sie die folgenden Schritte aus, um Internet Explorer 11 mithilfe von Gru
 
 1. Stellen Sie sicher, dass Sie über die erforderlichen Betriebssystemupdates verfügen. In diesem Schritt werden die ADMX-Dateien auf Ihrem Computer direkt aktualisiert (insbesondere „inetres.adml“ und „inetres.admx“). Bitte beachten Sie, dass Sie, wenn Sie Ihren Central Store aktualisieren möchten, die ADML- und ADMX-Dateien von einem Computer kopieren müssen, der über die erforderlichen Updates verfügt. Weitere Informationen finden Sie unter [Erstellen und Verwalten des Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
-3. Wechseln Sie zu ***Computerkonfiguration/Administrative Vorlagen/Windows-Komponenten/Internet Explorer***. 
-4. Doppelklicken Sie auf  ** Internet Explorer 11 als eigenständigen Browser deaktivieren**.
+3. Wechseln Sie zu **_Computerkonfiguration/Administrative Vorlagen/Windows Komponenten/Internet Explorer_*_. 
+4. Doppelklicken Sie auf _*Internet Explorer 11 als eigenständigen Browser deaktivieren**.
 5. Wählen Sie  **Aktiviert** aus.
 6. Wählen Sie unter  **Optionen** einen der folgenden Einträge aus:
 

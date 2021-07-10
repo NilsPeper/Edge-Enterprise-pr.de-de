@@ -3,19 +3,19 @@ title: Zurücksetzen von Microsoft Edge-Daten
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 04/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Wie werden Microsoft Edge-Daten in der Cloud zurückgesetzt
-ms.openlocfilehash: 6dcbf2a80705aa87a35b50d41e0dbaa266ed4384
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617325"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642041"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Zurücksetzen von Microsoft Edge-Daten in der Cloud
 

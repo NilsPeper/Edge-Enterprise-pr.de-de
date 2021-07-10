@@ -3,19 +3,19 @@ title: Bereitstellen von Microsoft Edge mithilfe vom System Center Konfiguration
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie hier, wie Sie Microsoft Edge mithilfe vom System Center Konfigurations-Manager (SCCM) bereitstellen können.
-ms.openlocfilehash: b403c8924a0f970aaadff2e1b20ebd05c0641a96
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: b0efa986c7f230f455d052f8e003616e081e324a
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617545"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641581"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Bereitstellen von Microsoft Edge mithilfe vom System Center Konfigurations-Manager
 

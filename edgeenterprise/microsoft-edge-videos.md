@@ -3,25 +3,25 @@ title: Microsoft Edge-Videos
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/20/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Videos
-ms.openlocfilehash: 2010557e7c4500fe3bcfc36dcc6a4a0f868525a0
-ms.sourcegitcommit: 71d2e7ddcec4a34a6f052f1ccdff9431928ab4db
-ms.translationtype: HT
+ms.openlocfilehash: 4303834bc872a12f553cdda4d4d33b9ad2177bf1
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2020
-ms.locfileid: "11030554"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642481"
 ---
-# Microsoft Edge-Videos
+# <a name="microsoft-edge-videos"></a>Microsoft Edge-Videos
 
 Die in diesem Artikel beschriebenen Videos behandeln viele verschiedene Aspekte der Bereitstellung, Verwendung und Wartung von Microsoft Edge für Unternehmen.
 
-##  <a name="the-microsoft-mechanics-video-series"></a>Microsoft Mechanics-Videoreihe
+## <a name="the-microsoft-mechanics-video-series"></a>Microsoft Mechanics-Videoreihe
 
 Die Microsoft Mechanics-Videoreihe, die auf der folgenden Seite des "*MSFT Edge Enterprise Deployment Guide – 2020*" gezeigt wird, ist Teil der Microsoft Edge-Videosammlung für verwandte Veranstaltungen und Ankündigungen, Lösungen und Konferenzen.
 
@@ -29,6 +29,6 @@ Die Microsoft Mechanics-Videoreihe, die auf der folgenden Seite des "*MSFT Edge 
 
 Sie können sie als Teil der [Microsoft Edge-Wiedergabeliste von Mechanics](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) oder auf dem [YouTube-Kanal von Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA) neben anderen Videos anzeigen.
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
-- [Angebotsseite für Microsoft Edge für Unternehmen](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

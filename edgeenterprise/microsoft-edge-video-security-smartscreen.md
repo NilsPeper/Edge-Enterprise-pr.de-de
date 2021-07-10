@@ -3,34 +3,34 @@ title: Sicheres Browsen auf Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sicheres Browsen auf Microsoft Edge mit Microsoft Defender SmartScreen
-ms.openlocfilehash: c70cc1d82ab5d0c5cf7847c277e16151fc3128d8
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 41f32daf407dafd3babafc1ce88ba5ee621921cf
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314698"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642971"
 ---
-# Video: Sicheres Browsen in Microsoft Edge
+# <a name="video-secure-browsing-on-microsoft-edge"></a>Video: Sicheres Browsen in Microsoft Edge
 
 In diesem Video wird gezeigt, wie Microsoft Edge das sichere Browsen mit Microsoft Defender SmartScreen unterstützt. Klicken Sie auf den nächsten Screenshot, um das Video von Eva Chen, Program Manager, anzusehen.
 
 [![Sicheres Browsen auf Microsoft Edge](media/microsoft-edge-video-security-smartscreen/0.png)](http://www.youtube.com/watch?v=s9kk88SkjLw "Secure browsing on Microsoft Edge")
 
-##  <a name="about-the-video"></a>Über das Video
+## <a name="about-the-video"></a>Über das Video
 
 Microsoft Edge verwendet Microsoft Defender SmartScreen, um Sie beim Browsen zu schützen. Erfahren Sie mehr über die aktuellen Ergebnisse von NSS Labs zum Phishing- und Malware-Schutz und darüber, wie Microsoft Defender SmartScreen die erstklassige Integration der Unternehmenssicherheit in Microsoft Edge ermöglicht.
 
 > [!TIP]
 > Aktivieren Sie die Einstellung zum Schutz vor potenziell unerwünschten Apps in *edge://settings*.
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge-Support für Microsoft Defender SmartScreen](microsoft-edge-security-smartscreen.md)

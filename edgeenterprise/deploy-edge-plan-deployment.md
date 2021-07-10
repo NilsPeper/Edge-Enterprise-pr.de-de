@@ -3,26 +3,26 @@ title: Planen Ihrer Bereitstellung von Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planen Ihrer Bereitstellung von Microsoft Edge
-ms.openlocfilehash: 3c303893706d2fc8883da2599d5319d1bfcbc98b
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617495"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641941"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Planen Ihrer Bereitstellung von Microsoft Edge
 
 In diesem Artikel werden die empfohlenen Vorgehensweisen für die Bereitstellung von Microsoft Edge in einer Unternehmensumgebung beschrieben.
 
 >[!NOTE]
->Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+>Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 Die folgenden Abschnitte enthalten spezifische Anleitungen für die Planung Ihrer Microsoft Edge-Bereitstellung.
 

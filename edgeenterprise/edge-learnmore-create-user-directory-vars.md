@@ -3,19 +3,19 @@ title: Erstellen von Microsoft Edge-Benutzerdatenverzeichnisvariablen
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Microsoft Edge-Benutzerdatenverzeichnisvariablen erstellen
-ms.openlocfilehash: 5ec78f16c7e5cd43f01845f35b8473494cd0c4bf
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618117"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641451"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Erstellen von Microsoft Edge-Benutzerdatenverzeichnisvariablen
 
@@ -62,7 +62,7 @@ Microsoft Edge unterstützt die folgenden Pfadvariablen.
 | **${global_app_data}** | Der systemweite Ordner „Anwendungsdaten”. Beispiel: *C:\AppData* |
 | **${program_files}** | Der Ordner „Programme” für den aktuellen Prozess. Dieser Ordner hängt davon ab, ob es sich um einen 32-Bit- oder 64-Bit-Prozess handelt. Beispiel für Auflösung: *C:\Program Files (x86)* |
 | **${windows}** | Der Windows-Ordner. Beispiel: *C:\Windows* |
-| **${client_name)** | Der Name des Client-PCs, der mit einer RDP- oder Citrix-Sitzung verbunden ist. Diese Variable ist leer, wenn sie aus einer lokalen Sitzung verwendet wird. Wenn sie in einem Pfad verwendet wird, stellen Sie ihr etwas voran, das garantiert nicht leer ist. Beispiel: *C:\edge_profiles\session_${client_name}* wird für Remote-Sitzungen in *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* und *C:\edge_profiles\session_&lt;SomePCname&gt;* aufgelöst. |
+| **${client_name}** | Der Name des Client-PCs, der mit einer RDP- oder Citrix-Sitzung verbunden ist. Diese Variable ist leer, wenn sie aus einer lokalen Sitzung verwendet wird. Wenn sie in einem Pfad verwendet wird, stellen Sie ihr etwas voran, das garantiert nicht leer ist. Beispiel: *C:\edge_profiles\session_${client_name}* wird für Remote-Sitzungen in *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* und *C:\edge_profiles\session_&lt;SomePCname&gt;* aufgelöst. |
 | **${session_name}** | Der Name der aktiven Sitzung. Verwenden Sie diesen Namen, um mehrere gleichzeitig verbundene Remote-Sitzungen zu unterscheiden, die ein einziges Benutzerprofil verwenden. Beispiel: *WinSta0 für lokale Desktopsitzungen* |
 
 #### <a name="macos-only"></a>Nur macOS

@@ -3,21 +3,21 @@ title: Windows Updates für Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows Updates für Microsoft Edge.
-ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313905"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642381"
 ---
-# Windows Updates zur Unterstützung der nächsten Version von Microsoft Edge
+# <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Windows Updates zur Unterstützung der nächsten Version von Microsoft Edge
 
 In diesem Artikel wird beschrieben, wie Windows aktualisiert wird, um die nächste Version von Microsoft Edge zu unterstützen.
 
@@ -27,11 +27,11 @@ In diesem Artikel wird beschrieben, wie Windows aktualisiert wird, um die nächs
 > [!NOTE]
 > Dieser Artikel bezieht sich auf den Microsoft Edge Stable-Kanal.
 
-##  <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge und der Freigabezyklus der Windows-Versionen
+## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge und der Freigabezyklus der Windows-Versionen
 
 Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Hauptversionen von Windows gebunden sind, werden Änderungen am Betriebssystem vorgenommen, um sicherzustellen, dass die nächste Version von Microsoft Edge nahtlos in Windows passt. Aus diesem Grund werden Featureupdates in einem (etwa) 6-wöchigen Zyklus veröffentlicht. Sicherheits- und Kompatibilitätsupdates werden nach Bedarf ausgeliefert.
 
-##  <a name="updates-and-the-user-experience"></a>Updates und die Benutzererfahrung
+## <a name="updates-and-the-user-experience"></a>Updates und die Benutzererfahrung
 
 Updates ändern die Benutzererfahrung erst, wenn der Stable-Kanal der nächsten Version von Microsoft Edge installiert ist. Die Installation von Microsoft Edge Beta, Dev oder Canary löst keine Änderungen in Windows aus. Diese Browserversionen werden zusammen mit vorhandenen Browsern installiert.
 
@@ -52,11 +52,11 @@ Zusammen mit den vorherigen Änderungen gibt es Änderungen, die unabhängig dav
 
 - Microsoft Edge hebt die Registrierung für Bücher und XML-Protokolle auf, die von der nächsten Version von Microsoft Edge nicht unterstützt werden. Benutzer, die versuchen, diese Protokolle zu öffnen, werden in einem Dialogfeld aufgefordert, eine Standard-App auszuwählen. Weitere Informationen zu Änderungen an Büchern finden Sie unter [Herunterladen einer ePub-App zum Lesen von E-Books](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).
 
-##  <a name="timeline"></a>Zeitachse
+## <a name="timeline"></a>Zeitachse
 
 Die Änderungen, die zur Unterstützung der beschriebenen Erfahrung erforderlich sind, werden mit drei Updates für verschiedene Versionen von Windows bereitgestellt.
 
-###  <a name="windows-versions-1903-and-1909"></a>Windows-Versionen 1903 und 1909
+### <a name="windows-versions-1903-and-1909"></a>Windows-Versionen 1903 und 1909
 
 - Erster Satz von Änderungen im optionalen Update vom Juli 2019, das mit dem Sicherheitsupdate vom August 2019 ausgeliefert wurde.
 - Zweiter Satz von Änderungen im optionalen Update vom August 2019, das mit dem Sicherheitsupdate vom September 2019 ausgeliefert wurde.
@@ -69,7 +69,7 @@ Die Änderungen, die zur Unterstützung der beschriebenen Erfahrung erforderlich
   > [!NOTE]
   > Dies ist das Update, ab dem Microsoft Edge keine E-Books mehr unterstützt.
 
-###  <a name="windows-versions-1709,-1803,-and-1809"></a>Windows Versionen 1709, 1803 und 1809
+### <a name="windows-versions-1709-1803-and-1809"></a>Windows Versionen 1709, 1803 und 1809
 
 - Erster Satz von Änderungen im optionalen Update vom August 2019, das mit dem Sicherheitsupdate vom September 2019 ausgeliefert wurde.
 - Zweiter Satz von Änderungen im optionalen Update vom September 2019, das mit dem Sicherheitsupdate vom Oktober 2019 ausgeliefert wurde.
@@ -91,7 +91,7 @@ In der folgenden Tabelle sind die Details für bestimmte Aktualisierungen in den
 | Version 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Kumulatives Update für Windows 10, Version 1809](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | Version 1903 und 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Kumulatives Update für Windows 10, Version 1903 und 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
 
-##  <a name="additional-information"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
-- [Dokumentation für Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Dokumentation für Microsoft Edge](./index.yml)
