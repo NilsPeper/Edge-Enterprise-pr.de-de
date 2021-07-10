@@ -4,24 +4,24 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Problembehandlung und häufig gestellte Fragen zum Microsoft Edge Internet Explorer-Modus
-  ms.openlocfilehash: d21fdf47fb1774bc69ae3b2478ff3397c3106f04
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11618119"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641861"
 title: Problembehandlung im IE-Modus und häufig gestellte Fragen (FAQ)
 summary: >
   >[!Note]
 
-  > Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs [finden Sie in den häufig gestellten Fragen).](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) Die gleichen IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+  > Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 
   Dieser Artikel enthält Tipps zur Fehlerbehebung und häufig gestellte Fragen zu Microsoft Edge Version 77 oder höher.
@@ -29,7 +29,7 @@ summary: >
 
   > [!NOTE]
 
-  > Dieser Artikel bezieht sich auf Microsoft Edge Version77 oder höher.
+  > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 
   ## <a name="troubleshoot-ie-mode"></a>Problembehandlung für IE-Modus
@@ -96,7 +96,7 @@ sections:
   - question: >
       Wird der IE-Modus Internet Explorer 11 ersetzen?
     answer: >
-      Ja, die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (für eine Liste des Umfangs, [Häufig gestellte Fragen zum Lebenszyklus – Internet Explorer.](https://support.microsoft.com/help/17454/) Die gleichen IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+      Ja, die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (für eine Liste des Umfangs, [Häufig gestellte Fragen zum Lebenszyklus – Internet Explorer.](https://support.microsoft.com/help/17454/) Die gleichen IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
       Kann ich "Mit Explorer öffnen" oder "Im Datei-Explorer anzeigen" in SharePoint mit dem IE-Modus verwenden?
     answer: >
@@ -117,10 +117,10 @@ sections:
       Kann ich Links im Internet Explorer-Modus als Webseiten speichern?
     answer: "Ja, Sie können die Option „Ziel speichern unter“ im Kontextmenü für den Internet Explorer-Modus in Microsoft Edge aktivieren. Konfigurieren Sie dazu die Gruppenrichtlinie *„‘Ziel speichern als‘ im Internet Explorer-Modus zulassen“* unter *Computer-Konfiguration > Administrative Vorlagen > Windows-Komponenten > Internet Explorer*.\nDer Speichermechanismus funktioniert gleich wie in Internet Explorer, und wenn das Ziel als HTML-Datei gespeichert wird, rendert die Datei beim erneuten Öffnen die Seite in Microsoft Edge.\n \nBeachten Sie, dass für diese Funktion die folgenden minimalen Updates für das Betriebssystem erforderlich sind:\n- Windows 10, Version 2004, Windows Server, Version 2004, Windows 10, Version 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10 Version 1903, Windows 10, Version 1909, Windows Server, Version 1903 ([KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386))\n- Windows 10 Version 1809, Windows Server Version 1809, Windows Server 2019 ([KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390))\n- Windows 10, Version 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, Version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, Version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n"
   - question: >
-      Kann ich eine Website im IE-Modus ohne Enterprise-Modus-Websiteliste öffnen?
+      Kann ich eine Website im IE-Modus ohne Enterprise Mode Site list öffnen?
     answer: >
       Ja, zu Testzwecken kann der IE-Modus für eine bestimmte Browserinstanz umgeschaltet werden.
 
 
       Führen Sie Microsoft Edge mit der `--ie-mode-test` Befehlszeilenkennzeichnung aus, z. B. `msedge.exe --ie-mode-test`, wählen Sie dann ... -> Weitere Tools -> "Websites im Internet Explorer-Modus öffnen" aus.
-additionalContent: "\n## <a name=\"see-also\"></a>Weitere Informationen\n\n- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)\n- [Informationen zum IE-Modus](./edge-ie-mode.md)\n- [Weitere Informationen zum Unternehmensmodus](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
+additionalContent: "\n## <a name=\"see-also\"></a>Siehe auch\n\n- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)\n- [Informationen zum IE-Modus](./edge-ie-mode.md)\n- [Weitere Informationen zum Unternehmensmodus](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
