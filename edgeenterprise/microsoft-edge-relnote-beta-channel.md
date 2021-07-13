@@ -3,30 +3,41 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 1115c8d7822fef7e3784a465d5d4ddfd7b6bd6b1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
+ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643161"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643941"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind [hier](microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
 
 > [!NOTE]
-> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter Änderungen, die sich auf die Websitekompatibilität auswirken und [Microsoft Edge werden.](/microsoft-edge/web-platform/site-impacting-changes)
+> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität, die für Microsoft Edge anstehen](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090245-july-12"></a>Version 92.0.902.45: 12. Juli
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-92090240-july-6"></a>Version 92.0.902.40: 6. Juli
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090222-june-21"></a>Version 92.0.902.22: 21. Juni
 
 ### <a name="feature-updates"></a>Funktionsupdates
+
+- **Suche in natürlicher Sprache nach Browserverlauf in der Adressleiste.** Die Suche nach dem gesuchten Artikel/der Website ist jetzt dank der Suche in natürlicher Sprache direkt über die Adressleiste einfacher. Sie finden Suchergebnisse basierend auf Seiteninhalt/Beschreibung/Timing (z. B. "Rezept aus der letzten Woche") zusätzlich zu Titeln/URL-Schlüsselwortübereinstimmungen allein.
+Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Benutzer können auf Internet Explorer-Modus auf Microsoft Edge problemlos wechseln**. Ab Microsoft Edge Version 92 können Benutzer eine Website im Internet Explorer-Modus auf Microsoft Edge neu laden, anstatt sich auf die eigenständige IE 11-Anwendung zu verlassen, während sie auf die Konfiguration einer Website in der Websiteliste für den Enterprise-Modus warten. Benutzer werden aufgefordert, die Website ihrer lokalen Websiteliste hinzuzufügen, sodass die Navigation zu derselben Seite in Microsoft Edge für die nächsten 30 Tage automatisch im IE-Modus gerendert wird. Mit der *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)*-Richtlinie können Sie diese Umgebung konfigurieren und den Zugriff auf die Einstiegspunkte des IE-Modus sowie die Möglichkeit zum Hinzufügen von Websites zur lokalen Websiteliste zulassen. Mit der *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)*-Richtlinie können Sie die Anzahl der Tage anpassen, um Websites in der lokalen Websiteliste zu speichern.
 Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforderlich ist; oder KB5003690 oder höher für Windows 10, Version 2004, Windows 10, Version 20H2 oder Windows 10, Version 21H1, für die End-to-End-Erfahrung erforderlich ist.
@@ -34,19 +45,19 @@ Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforder
 - **MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
 
 - **Zahlungsinstrumente werden jetzt geräteübergreifend synchronisiert**. Ab Microsoft Edge Version 92 haben Sie die Möglichkeit, Ihre Zahlungsinformationen auf ihren angemeldeten Geräten zu synchronisieren.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 50 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Die Warnung "Entwicklermoduserweiterungen deaktivieren" kann dauerhaft verworfen werden**. Ab Microsoft Edge, Version 92, können Sie die Warnung "Entwicklermoduserweiterungen deaktivieren" deaktivieren, indem Sie auf die Option "Diese Option nicht erneut anzeigen" klicken.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Verwalten Sie Ihre Erweiterungen direkt über die Symbolleiste**. Mit dem Menü "Ganz neue Erweiterungen" auf der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 - **Automatisches HTTPS**. Benutzer haben die Möglichkeit, die Navigation von HTTP auf HTTPS in Domänen zu aktualisieren, die wahrscheinlich dieses sicherere Protokoll unterstützen. Diese Unterstützung kann auch so konfiguriert werden, dass die Übermittlung über HTTPS für alle Domänen versucht wird.
 Bitte beachten Sie: Wir experimentieren mit diesem Feature, und dieses Verhalten wird nicht angezeigt, wenn Sie sich von Experimenten abgemeldet haben.
 
 - **Verbesserungen beim Rendern von Schriftarten**. Das Rendering von Text wurde verbessert, um die Übersichtlichkeit zu verbessern und die Unschärfe zu verringern.
-Bitte beachten Sie: Dies ist ein gesteuertes Featurerollout, und wir sind derzeit bei 25 %. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
 
 ### <a name="policy-updates"></a>Richtlinienupdates
 
@@ -66,7 +77,6 @@ Acht neue Richtlinien wurden hinzugefügt. Laden Sie die aktualisierten administ
 #### <a name="obsoleted-policy"></a>Veraltete Richtlinie
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors): Zulassen von Zertifikaten, die mit SHA-1 signiert wurden, wenn sie von lokalen Vertrauensankern ausgegeben wurden.
-
 
 ## <a name="version-9209029-june-8"></a>Version 92.0.902.9: 8. Juni
 

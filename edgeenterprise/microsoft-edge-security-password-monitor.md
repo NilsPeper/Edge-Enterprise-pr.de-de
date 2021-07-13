@@ -1,21 +1,21 @@
 ---
 title: Automatische Aktivierung des Kennwortmonitors für Benutzer
 ms.author: supalsul
-author: dan-wesley
+author: AndreLBarr
 manager: tulasim
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Automatische Aktivierung des Kennwortmonitors für Benutzer
-ms.openlocfilehash: 76fc4f0c0ce4bb59ba6b2d4d8a82b61592585918
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bd1fe390b972c66cd9b4c20ab3a9fabde76c7e03
+ms.sourcegitcommit: 65530c0bad3097a510f507503eae9c5c67db47a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643091"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643882"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a>Automatische Aktivierung des Kennwortmonitors für Benutzer
 
@@ -31,12 +31,6 @@ Der Kennwortmonitor hilft Microsoft Edge-Benutzern, ihre Onlinekonten zu schütz
 ### <a name="benefits"></a>Vorteile
 
 Angesichts der Häufigkeit und des Umfangs dieser Onlineangriffe, ist diese Art von Schutz für jeden erforderlich. Microsoft Edge verfügt über die integrierte Möglichkeit, die gespeicherten Kennwörter eines Benutzers auf sicherem Wege mit Kennwörtern abzugleichen, die als gefährdet bekannt sind, und benachrichtigt den Benutzer, wenn eine Übereinstimmung gefunden wird.  
-
-### <a name="availability"></a>Verfügbarkeit
-
-Der Kennwortmonitor ist ab 21. Januar verfügbar im Stabilen Kanal, Version 88. Das Rollout erfolgt schrittweise, und es kann einige Wochen dauern, bis die folgende Meldung und Steuerung auf der Seite **Einstellungen** > **Profil** > **Kennwort** angezeigt wird.
-
-:::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option zum Aktivieren des Kennwortmonitors":::
 
 ## <a name="configure-group-policy-for-password-monitor"></a>Konfigurieren von Gruppenrichtlinien für den Kennwortmonitor
 

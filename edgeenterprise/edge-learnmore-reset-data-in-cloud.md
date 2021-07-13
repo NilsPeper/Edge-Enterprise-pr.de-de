@@ -3,19 +3,19 @@ title: Zurücksetzen von Microsoft Edge-Daten
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Wie werden Microsoft Edge-Daten in der Cloud zurückgesetzt
-ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: dc6c0ae1b1bc31228e9b9b1de315a19e99149134
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642041"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643740"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>Zurücksetzen von Microsoft Edge-Daten in der Cloud
 
@@ -35,7 +35,7 @@ Es gibt Situationen, in denen Sie Ihre Microsoft Edge-Daten in der Cloud zurück
 
 Bevor Sie eine Zurücksetzung durchführen, empfehlen wir, dass Sie Ihre Favoriten sichern. Führen Sie die folgenden Schritte aus, um Ihre Favoriten zu sichern.
 
-1. Wählen Sie in Microsoft Edge **Einstellungen und mehr > Favoriten > Weitere Optionen > Favoriten exportieren**aus.
+1. Wählen Sie in der oberen rechten Ecke von Microsoft Edge **Einstellungen und mehr > Favoriten > Weitere Optionen > Favoriten exportieren** aus.
 2. Wählen Sie die Datei aus, in der Sie Ihre Favoriten speichern möchten. Sie können Ihren eigenen Dateinamen eingeben oder Sie können „Favoriten_Tag_Monat_Jahr.html“ verwenden, den Microsoft Edge standardmäßig als Dateinamen vorschlägt. Beispiel: „Favoriten_17_12_20.html". Wenn Sie Ihre Favoriten später wiederherstellen müssen, können Sie dies von dieser Datei tun.
 3. Klicken Sie auf **Speichern**.
 
@@ -45,15 +45,15 @@ Wenn Microsoft Edge meldet, dass Ihre Daten nicht synchronisiert werden können 
 
 Führen Sie die folgenden Schritte für eine Zurücksetzung durch.
 
-1. Stellen Sie zunächst sicher, dass Sie von Microsoft Edge auf allen ihren Geräten, einschließlich Ihrer mobilen Geräte, abgemeldet sind, mit Ausnahme des Geräts, auf dem Sie die Zurücksetzung durchführen. Wenn Sie sich bei Microsoft Edge abmelden möchten, wählen Sie **Einstellungen und mehr > Einstellungen > Abmelden** aus. Wenn Sie sich abmelden, wählen Sie nicht die Option zum Löschen von Favoriten, Einstellungen usw. auf dem lokalen Gerät aus.
-2. Nachdem Sie sich bei allen anderen Geräten abgemeldet haben, öffnen Sie Microsoft Edge auf Ihrem Desktop. **Wählen Sie Einstellungen und mehr > Synchronisierung > Synchronisierung zurücksetzen** aus. Wählen Sie im angezeigten Dialogfeld die Option „Fortsetzen der Synchronisierung nach dem Zurücksetzen von Daten“ aus, und wählen Sie dann **Zurücksetzen**aus.
+1. Stellen Sie zunächst sicher, dass Sie von Microsoft Edge auf allen ihren Geräten, einschließlich Ihrer mobilen Geräte, abgemeldet sind, mit Ausnahme des Geräts, auf dem Sie die Zurücksetzung durchführen. Wenn Sie sich von Microsoft Edge abmelden möchten, wählen Sie in der oberen rechten Ecke von Microsoft Edge **Einstellungen und mehr > Einstellungen > Abmelden** aus. Wählen Sie beim Abmelden nicht die Option zum Löschen von Favoriten, Einstellungen usw. von Ihrem lokalen Gerät aus.
+2. Nachdem Sie sich von allen anderen Geräten abgemeldet haben, öffnen Sie Microsoft Edge auf Ihrem Desktop. In der oberen rechten Ecke von Microsoft Edge **wählen Sie Einstellungen und mehr > Synchronisierung > Synchronisierung zurücksetzen** aus. Wählen Sie im angezeigten Dialogfeld die Option „Synchronisierung fortsetzen, nachdem Daten zurückgesetzt wurden“ aus, und wählen Sie dann **Zurücksetzen** aus.
 
-## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>Durchführen eines Zurücksetzens zum Entfernen Ihrer Daten aus der Microsoft-Cloud
+## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>Zurücksetzung durchführen, um Ihrer Daten aus der Microsoft-Cloud zu entfernen
 
 Wenn Sie Ihre Daten aus der Microsoft-Cloud entfernen möchten, führen Sie die folgenden Schritte aus, um eine Zurücksetzung durchzuführen.
 
-1. Beenden Sie die Synchronisierung auf Geräten mit Ausnahme des Geräts, auf dem Sie die Zurücksetzung durchführen.  Wählen Sie in Microsoft Edge **Einstellungen und mehr > Einstellungen > Synchronisierung > Synchronisierung deaktivieren** aus.  
-2. Nachdem Sie die Synchronisierung deaktiviert haben, wählen Sie **Einstellungen und mehr > Synchronisierung > Synchronisierung zurücksetzen** aus. Wählen Sie im angezeigten Dialogfeld **nicht** die Option „Fortsetzen der Synchronisierung nach dem Zurücksetzen von Daten“ aus. Wählen Sie **Zurücksetzen** aus.
+1. Beenden Sie die Synchronisierung auf Geräten mit Ausnahme des Geräts, auf dem Sie die Zurücksetzung durchführen wollen.  Wählen Sie in der oberen rechten Ecke von Microsoft Edge **Einstellungen und mehr > Einstellungen > Synchronisierung > Synchronisierung deaktivieren** aus.  
+2. Nachdem Sie die Synchronisierung beendet haben, wählen Sie in der oberen rechten Ecke von Microsoft Edge **Einstellungen und mehr > Synchronisierung > Synchronisierung zurücksetzen** aus. Wählen Sie im angezeigten Dialogfeld **nicht** die Option „Synchronisierung fortsetzen, nachdem Daten zurückgesetzt wurden“ aus. Wählen Sie **Zurücksetzen** aus.
 
 ## <a name="what-to-expect-during-and-after-a-data-reset"></a>Was während und nach einer Datenzurücksetzung zu erwarten ist
 

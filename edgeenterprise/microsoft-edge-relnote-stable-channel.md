@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: ab599e3995641290ed806acc241b00e808f7fc1b
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642531"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643770"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -31,6 +31,9 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 >
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität, die für Microsoft Edge anstehen](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-91086467-july-8"></a>Version 91.0.864.67: 8. Juli
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-91086464-july-2"></a>Version 91.0.864.64: 2. Juli
 
