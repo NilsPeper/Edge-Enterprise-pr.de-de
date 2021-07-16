@@ -260,7 +260,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[SmartScreenEnabled](#smartscreenenabled)|Konfigurieren des Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Erzwingen der Microsoft Defender-SmartScreen-Überprüfung für Downloads aus vertrauenswürdigen Quellen|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Konfigurieren von Microsoft Defender SmartScreen, sodass potenziell unerwünschte Apps blockiert werden|
-### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startup-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
 
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -8111,7 +8111,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
+  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
