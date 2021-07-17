@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: Archivierte Versionshinweise für Microsoft Edge Beta-Kanal
 ms.openlocfilehash: 065c665892edc264e2ab94375bedf3af9dbc936c
 ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/09/2021
 ms.locfileid: "11642421"
@@ -766,4 +766,4 @@ Die folgenden Richtlinien greifen in dieser Version weiterhin. Sie veralten in e
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Startseite](https://aka.ms/EdgeEnterprise)

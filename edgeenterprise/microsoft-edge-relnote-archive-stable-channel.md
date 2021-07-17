@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: Archivierte Versionshinweise für Microsoft Edge Stable Channel
 ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
 ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/09/2021
 ms.locfileid: "11642391"
@@ -829,4 +829,4 @@ Die folgende Richtlinie wurde verworfen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Startseite](https://aka.ms/EdgeEnterprise)
