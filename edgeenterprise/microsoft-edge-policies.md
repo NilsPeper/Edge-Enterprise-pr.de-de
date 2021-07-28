@@ -213,7 +213,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 
 |Richtlinienname|Beschriftung|
 |-|-|
-|[StartupBoostEnabled](#startupboostenabled)|Startbeschleunigung aktivieren|
+|[StartupBoostEnabled](#startupboostenabled)|Startup-Boost aktivieren|
 ### [*<a name="printing"></a>Drucken*](#printing-policies)
 
 |Richtlinienname|Beschriftung|
@@ -260,7 +260,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[SmartScreenEnabled](#smartscreenenabled)|Konfigurieren des Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Erzwingen der Microsoft Defender-SmartScreen-Überprüfung für Downloads aus vertrauenswürdigen Quellen|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Konfigurieren von Microsoft Defender SmartScreen, sodass potenziell unerwünschte Apps blockiert werden|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
 
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -6205,7 +6205,7 @@ Diese Richtlinie hat nur Einfluss auf die Browser-Schaltfläche „Kennwort anze
 
   ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
-  #### <a name="enable-startup-boost"></a>Startbeschleunigung aktivieren
+  #### <a name="enable-startup-boost"></a>Startup-Boost aktivieren
 
   
   
@@ -6219,13 +6219,13 @@ Diese Richtlinie hat nur Einfluss auf die Browser-Schaltfläche „Kennwort anze
 
 Wenn Microsoft Edge im Hintergrundmodus ausgeführt wird, wird der Browser u. U. nicht geschlossen, wenn das letzte Fenster geschlossen wird, und nach dem Schließen des Fensters nicht im Hintergrund neu gestartet. Informationen dazu, was nach dem Konfigurieren von Microsoft Edge für den Hintergrundmodus geschieht, finden Sie in der [BackgroundModeEnabled](#backgroundmodeenabled)-Richtlinie.
 
-Wenn Sie diese Richtlinie aktivieren, ist die Startbeschleunigung aktiviert.
+Wenn Sie diese Richtlinie aktivieren, ist die Startup-Boost aktiviert.
 
-Wenn Sie diese Richtlinie deaktivieren, ist die Startbeschleunigung deaktiviert.
+Wenn Sie diese Richtlinie deaktivieren, ist die Startup-Boost deaktiviert.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, ist die Startbeschleunigung möglicherweise anfänglich aktiviert oder deaktiviert. Der Benutzer kann das Verhalten unter edge://settings/system konfigurieren.
+Wenn Sie diese Richtlinie nicht konfigurieren, ist die Startup-Boost möglicherweise anfänglich aktiviert oder deaktiviert. Der Benutzer kann das Verhalten unter edge://settings/system konfigurieren.
 
-Weitere Informationen zur Startbeschleunigung finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018).
+Weitere Informationen zur Startup-Boost finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -6242,7 +6242,7 @@ Weitere Informationen zur Startbeschleunigung finden Sie unter [https://go.micro
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: StartupBoostEnabled
-  - GP-Name: Startbeschleunigung aktivieren
+  - GP-Name: Startup-Boost aktivieren
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Performance
   - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/Performance
   - GP ADMX Dateiname: MSEdge.admx
@@ -8111,7 +8111,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 

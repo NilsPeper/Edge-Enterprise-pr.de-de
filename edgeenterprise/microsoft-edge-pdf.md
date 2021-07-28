@@ -1,21 +1,21 @@
 ---
 title: Der PDF-Reader in Microsoft Edge
 ms.author: adigan
-author: dan-wesley
+author: AndreaLBarr
 manager: balajek
-ms.date: 06/28/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über den PDF-Reader in Microsoft Edge.
-ms.openlocfilehash: 0b1cffceb63c1829c39bdd3fa658df2e5f776584
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643181"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675982"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Der PDF-Reader in Microsoft Edge
 
@@ -35,16 +35,17 @@ Die folgende Tabelle veranschaulicht, welche Kanäle und Versionen von Microsoft
 | Anzeigen und Drucken von lokalen, Online- und eingebetteten PDF-Dateien | 79.0.309.71                |
 | Einfaches Ausfüllen von Formularen<br>(JavaScript-Formulare werden nicht unterstützt) | 79.0.309.71           |
 |Inhaltsverzeichnis| 86.0.622.38 |
-| Seitenansicht |Derzeit in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)-Kanälen verfügbar |
+| Seitenansicht | 88.0.705.50 |
 | Browsen im Caretmodus |87.0.664.41 |
 | Freihandeingaben  | 80.0.361.48            |
 | Freihand-Anpassung | 83.0.478.54  |
 | Hervorheben  | 81.0.416.53         |
-| Textnotizen | Derzeit in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)-Kanälen verfügbar |
+| Textnotizen | 88.0.705.50 |
 | Laut vorlesen | 84.0.522.63  |
-| Anzeigen von durch Microsoft Information Protection (MIP) geschützten Dateien | Windows-Unterstützung in 80.0.361.48<br>Mac-Unterstützung in 81.0.416.53 |
-|  Anzeigen von durch Information Rights Management (IRM) geschützten Dateien  | 83.0.478.37            |
-| Anzeigen und Überprüfen digitaler Signaturen | Verfügbar in Canary- und Dev-Kanälen. Es wird aktiv daran gearbeitet. |
+| Anzeigen von Microsoft Information Protection (MIP)-geschützten Dateien in demselben Geschäftsmandanten | Windows-Unterstützung in 80.0.361.48<br>Mac-Unterstützung in 81.0.416.53 |
+| Anzeigen von Microsoft Information Protection (MIP)-geschützten Dateien für alle Business-Mandanten | 91.0.864.37  |
+|  Anzeigen von Information Rights Management (IRM)-geschützten Dateien  | 83.0.478.37            |
+
 
 ### <a name="constraints"></a>Einschränkungen
 
@@ -114,7 +115,8 @@ Das laute Vorlesen für PDF erhöht den Komfort, dass Benutzer dem Inhalt der PD
 > [!IMPORTANT]
 > Für MIP ist eine Lizenz erforderlich. Weitere Informationen finden Sie in dieser [Microsoft 365-Lizenzierungsanleitung.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
 
-Diese Dateien können direkt im Browser geöffnet werden, ohne eine andere Software herunterladen oder ein Add-In installieren zu müssen. Diese Funktion integriert die von MIP bereitgestellte Sicherheit direkt in den Browser, um einen nahtlosen Workflow zu bieten.
+Diese Dateien können direkt im Browser geöffnet werden, ohne eine andere Software herunterladen oder ein Add-In installieren zu müssen. Diese Funktion integriert die von MIP bereitgestellte Sicherheit direkt in den Browser, um einen nahtlosen Workflow zu ermöglichen.
+Sie können MIP-geschützte Dateien für alle Business-Mandanten anzeigen. Das Anzeigen von Dateien mit Heimanwenderidentitäten wird derzeit nicht unterstützt.
 
 ![Geschütztes PDF-Dokument.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 

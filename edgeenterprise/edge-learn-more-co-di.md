@@ -1,25 +1,25 @@
 ---
 title: ClickOnce und DirectInvoke in Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über ClickOnce und DirectInvoke in Microsoft Edge.
-ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642051"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675972"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Grundlegendes zu den ClickOnce- und DirectInvoke-Features in Microsoft Edge
 
-ClickOnce und DirectInvoke sind Features, die in IE und Microsoft Edge (Version 45 und früher) verfügbar sind und die Verwendung eines Dateihandlers zum Herunterladen von Dateien von einer Website unterstützen. Obwohl sie unterschiedlichen Zwecken dienen, können Websites mit beiden Features angeben, dass eine zum Herunterladen angeforderte Datei an einen Dateihandler auf dem Gerät des Benutzers weitergeleitet wird. ClickOnce-Anforderungen werden vom systemeigenen Dateihandler in Windows verarbeitet. DirectInvoke-Anforderungen werden von einem registrierten Dateihandler verarbeitet, der von der Website angegeben wird, die die Datei hostet.
+ClickOnce und DirectInvoke sind features available in IE and Microsoft Edge that support the use of a file handler to download files from a website. Obwohl sie unterschiedlichen Zwecken dienen, können Websites mit beiden Features angeben, dass eine zum Herunterladen angeforderte Datei an einen Dateihandler auf dem Gerät des Benutzers weitergeleitet wird. ClickOnce-Anforderungen werden vom systemeigenen Dateihandler in Windows verarbeitet. DirectInvoke-Anforderungen werden von einem registrierten Dateihandler verarbeitet, der von der Website angegeben wird, die die Datei hostet.
 
 Weitere Informationen zu Features und Beschränkungen finden Sie in den häufig gestellten Fragen.
 

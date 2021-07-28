@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über Kioskmodus-Features und wie Sie Microsoft Edge-Kioskmodusoptionen konfigurieren können.
-ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642191"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676122"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Konfigurieren des Microsoft Edge-Kioskmodus
 
@@ -99,7 +99,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Ändern der Zeit (in Minuten) zwischen der letzten Benutzeraktivität und der Zurücksetzung der Sitzung des Benutzers durch den Microsoft Edge-Kioskmodus. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
+- **--kiosk-idle-timeout-minutes=**: Ändern Sie die Zeit (in Minuten) ab der letzten Benutzeraktivität, bevor Microsoft Edge Kioskmodus die Sitzung des Benutzers zurücksetzt, indem Sie den Browser schließen. Hinweis: Dieses Flag wird Microsoft Edge nach dem Schließen nicht neu gestartet. Eine separate Technologie, z. B. zugewiesener Zugriff oder Shell-Start, ist erforderlich, um Edge nach dem Leerlauftimeout automatisch neu zu starten. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +160,9 @@ Sie können den zugewiesenen Zugriff einzelner Apps im Kioskmodus von Microsoft 
 
 ### <a name="multi-app-kiosk"></a>Multi-App-Kiosk
 
-Microsoft Edge kann unter Windows 10 mit [zugewiesenem Multi-App-Zugriff](/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Befolgen Sie die Anweisungen zum Einrichten eines Multi-App-Kiosks, um Microsoft Edge mit zugewiesenen [Multi-App-Zugriffen zu konfigurieren.](/windows/configuration/lock-down-windows-10-to-specific-apps) (Die AUMID für den Microsoft Edge Stable Channel ist **MSEdge**.)
+Microsoft Edge kann unter Windows 10 mit [zugewiesenem Multi-App-Zugriff](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Befolgen Sie die Anweisungen zum Einrichten eines Multi-App-Kiosks, um Microsoft Edge mit zugewiesenen [Multi-App-Zugriffen zu konfigurieren.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) (Die AUMID für den Microsoft Edge Stable-Kanal ist **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+
+Wenn Sie Microsoft Edge mit zugewiesenen Zugriffen mit mehreren Apps verwenden, können Sie den Microsoft Edge Kiosk so konfigurieren, dass er die[Microsoft Edge-Browserrichtlinien](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) verwendet, um die Browsererfahrung so zu konfigurieren, dass Ihre individuellen Anforderungen erfüllt werden.
 
 ### <a name="configure-using-windows-settings"></a>Konfigurieren mithilfe der Windows-Einstellungen
 

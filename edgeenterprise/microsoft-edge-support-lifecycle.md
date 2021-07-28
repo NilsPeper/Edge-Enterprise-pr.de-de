@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge-Lebenszyklus
 ms.author: srugh
-author: srugh
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 06/29/2021
+ms.date: 07/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Lebenszyklus
-ms.openlocfilehash: 7305ed148859dc458bcc94b199edfa01db4fc613
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642511"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676087"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Microsoft Edge-Lebenszyklusrichtlinie
 
@@ -24,20 +24,40 @@ In diesem Artikel wird die Lebenszyklusrichtlinie beschrieben, die für Microsof
 > [!NOTE]
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Version 77 und höher.
 
+> [!NOTE]
+> Beginnend mit der Stable-Channel-Version 94 geht Microsoft Edge zu einem 4-wöchigen Hauptversionszyklus über. Wir wissen jedoch, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge-Updates zu planen und zu testen. Um unseren Unternehmenskunden zu helfen, die eine erweiterte Zeitachse zum Verwalten von Updates benötigen, bietet Microsoft Edge eine **erweiterte Stable-Option an, die auf einen längeren, 8-wöchigen Hauptversionszyklus ausgerichtet ist.** Diese Option ist nur für Kunden mit verwalteten Umgebungen verfügbar. [Weitere Informationen finden Sie in unserem Ankündigungsblogbeitrag.](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Übersicht über die Lifecycle-Richtlinie für Microsoft Edge
 
-Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft wird Microsoft Edge in der [Modern Lifecycle-Richtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy) enthalten sein.
+Microsoft Edge features more frequent and more flexible updating capabilities. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft folgen Microsoft Edge der [Modern-Lifecycle-Richtlinie.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) Sicherheitsupdates und Wartungsupdates sind nur für die neueste Stable-Kanalversion und die neueste Betakanalversion verfügbar. Die Verwendung älterer Versionen von Microsoft Edge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen.  Der unterstützte Support ist wie unten beschrieben verfügbar.
 
-Als Teil dieser Richtlinie werden die unterstützten Versionen von Microsoft Edge die neueste verfügbare Version aus den Beta- und Stable-Kanälen enthalten.
+## <a name="servicing-and-assisted-support-timeline-for-microsoft-edge-77-93"></a>Zeitraum für Wartung und unterstützten Support für Microsoft Edge 77-93
 
-## <a name="assisted-support-availability-for-microsoft-edge"></a>Verfügbarkeit des persönlichen Supports für Microsoft Edge
-Sicherheits- und Wartungsupdates stehen nur in den neuesten Versionen des Stable-Kanals und des Beta-Kanals zur Verfügung. Die Verwendung älterer Versionen von Microsoft Edge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen. Wenn bei Ihrer Organisation ältere Versionen verwendet werden müssen, steht persönlicher Support für die aktuellsten drei Stable-Kanalversionen und die neueste Beta-Kanalversion zur Verfügung.  Die effektive Dauer des persönlichen Supports für eine Stable-Kanalversion beträgt ca. 18 Wochen. Die effektive Supportdauer für eine Beta-Kanalversion beträgt ca. 6 Wochen; frühere Beta-Kanalversionen werden nicht unterstützt.
+Microsoft Edge verfügt über einen 6-wöchigen Hauptversionszyklus für Stable Channel Version 77 und wird bis Version 93 fortgesetzt.  Wir bieten unterstützungsunterstützten Support für die neuesten drei Stable-Kanalversionen und die neueste Betakanalversion. Die effektive Dauer des persönlichen Supports für eine Stable-Kanalversion beträgt ca. 18 Wochen. Die effektive Supportdauer für eine Betakanalversion beträgt ca. 6 Wochen; Frühere Betakanalversionen werden nicht unterstützt.  Weitere Informationen finden Sie in der folgenden Tabelle.
 
-Microsoft empfiehlt dringend, mit der aktuellsten Stable- oder Beta-Kanalversion auf dem neuesten Stand zu bleiben.
+|     Release-Option              |     Hauptversionsversion unterstützt    |     Hauptversionsversion, gewartet    |     Supportabdeckung für alle Versionen    |     Wartungsabdeckung    |
+|---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
+|     Täglich "Canary"              |     Keiner                               |     Keiner                              |     Keiner                                |     Keiner                  |
+|     Wöchentliches "Dev"                |     Keiner                               |     Keiner                              |     Keiner                                |     Keiner                  |
+|     6-wochen "Beta"               |     Aktuell                            |     Aktuell                           |     6 Wochen                             |     6 Wochen               |
+|     6-wöchiges "Stable"             |     Aktuell und 2 vorherige             |     Aktuell                           |     18 Wochen                            |     6 Wochen               |
 
 
+## <a name="servicing-and-assisted-support-timeline-changes-in-microsoft-edge-94"></a>Änderungen an der Zeitachse des Wartungs- und supportunterstützten Supports in Microsoft Edge 94
 
-## <a name="see-also"></a>Weitere Informationen
+Beginnend mit der Stable-Channel-Version 94 geht Microsoft Edge zu einem 4-wöchigen Hauptversionszyklus über. Wir werden weiterhin supportunterstützten Support für die neuesten drei Stable-Kanalversionen und die neueste Betakanalversion bereitstellen. Die effektive unterstützte Supportdauer für eine Stable-Kanalversion beträgt ca. 12 Wochen.
+
+Wir sind uns bewusst, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge Updates zu planen und zu testen. Um unseren Unternehmenskunden zu helfen, die eine erweiterte Zeitachse zum Verwalten von Updates benötigen, bietet Microsoft Edge eine **erweiterte Stable-Option an, die auf einen längeren, 8-wöchigen Hauptversionszyklus ausgerichtet**ist. Der unterstützte Support steht für die letzten beiden Extended Stable-Kanalversionen zur Verfügung. Die effektive unterstützte Supportdauer für eine erweiterte Stable-Kanalversion beträgt ca. 16 Wochen. Weitere Informationen finden Sie in der folgenden Tabelle.
+
+|     Release-Option              |     Hauptversionsversion unterstützt    |     Hauptversionsversion, gewartet    |     Supportabdeckung für alle Versionen    |     Wartungsabdeckung    |
+|---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
+|     Täglich "Canary"              |     Keiner                               |     Keiner                              |     Keiner                                |     Keiner                  |
+|     Wöchentliches "Dev"                |     Keiner                               |     Keiner                              |     Keiner                                |     Keiner                  |
+|     4-wochen "Beta"               |     Aktuell                            |     Aktuell                           |     4 Wochen                             |     4 Wochen               |
+|     4-wöchiges "Stable"             |     Aktuell und 2 vorherige             |     Aktuell                           |     12 Wochen                            |     4 Wochen               |
+|     8-wöchiger "Extended Stable"    |     Aktuell und 1 vorherige             |     Aktuell                           |     16 Wochen                            |     8 Wochen               |
+
+## <a name="see-also"></a>Siehe auch
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Dokumentation für Microsoft Edge](./index.yml)

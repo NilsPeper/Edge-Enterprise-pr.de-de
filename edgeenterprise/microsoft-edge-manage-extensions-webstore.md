@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Microsoft Edge-Erweiterungen im Unternehmen verpacken und selbst hosten.
-ms.openlocfilehash: aef4438212829006e39572fa938462f13721c580
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642871"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676112"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>Microsoft Edge-Erweiterungen zum Selbsthosten
 
@@ -82,7 +82,7 @@ Nachdem Sie die aktualisierte Erweiterung geändert und getestet haben, können 
    > [!IMPORTANT]
    > Verwenden Sie dieselbe PEM-Datei, die beim ersten Erstellen der CRX-Datei generiert und gespeichert wurde. Wenn Sie nicht dieselbe PEM-Datei verwenden, ändert sich die App-ID der Erweiterung und das Update wird als neue Erweiterung behandelt.
 
-5. Bewegen Sie die CRX-Datei in das Erweiterungsfenster und legen Sie diese dort ab, und stellen Sie sicher, dass sie geladen wird.
+5. Bewegen Sie die CRX-Datei in das Erweiterungsfenster und legen Sie diese dort ab, und stellen Sie sicher, dass sie geladen wird. Die Erweiterung wird nach diesem Vorgang deaktiviert. Zum Aktivieren fügen Sie die CRX-ID der Erweiterung der ExtensionInstallAllowList-Richtlinie hinzu. 
 6. Testen Sie die aktualisierte Erweiterung.
 7. Ersetzen Sie für die aktualisierte Erweiterung die alten CRX-und XML-Dateien durch die neuen Dateien.
 
@@ -90,7 +90,7 @@ Die Änderungen der Erweiterung werden während des nächsten Richtliniensynchro
 
 ## <a name="distribute-a-privately-hosted-extension"></a>Verteilen einer privat gehosteten Erweiterung
 
-Sie können den Link des Speicherortes teilen, an dem die CRX-Datei gehostet wird, und sobald Benutzer die URL in ihren Browser eingeben, wird die Erweiterung heruntergeladen und installiert. Benutzer können die Erweiterung über die Seite edge://extensions aktivieren. Damit Benutzer selbst gehostete Erweiterungen installieren können, müssen Sie die CRX-IDs der Erweiterungen zur [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist)-Richtlinie hinzufügen.
+Sie können den Link des Speicherortes teilen, an dem die CRX-Datei gehostet wird, und sobald Benutzer die URL in ihren Browser eingeben, wird die Erweiterung heruntergeladen und installiert. Benutzer können die Erweiterung über die Seite edge://extensions aktivieren. Damit Benutzer selbst gehostete Erweiterungen installieren können, müssen Sie die CRX-IDs der [ExtensionInstallAllowList-Richtlinie](/deployedge/microsoft-edge-policies#extensioninstallallowlist) hinzufügen und die URL des Speicherorts, an dem die CRX-Datei gehostet wird, der [ExtensionInstallSources-Richtlinie](/deployedge/microsoft-edge-policies#extensioninstallsources) hinzufügen.
 
 Alternativ können Sie die Gruppenrichtlinie [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) verwenden, um die Installation einer Erweiterung auf den Geräten Ihrer Benutzer zu erzwingen.
 

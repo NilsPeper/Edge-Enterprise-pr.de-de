@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ein detaillierter Referenzleitfaden zum Konfigurieren von Microsoft Edge-Erweiterungen mithilfe der ExtensionSettings-Richtlinie.
-ms.openlocfilehash: 3acd798be6b2b56761991d8adaf014ae614a3fd4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641321"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676102"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Detaillierter Leitfaden zur ExtensionSettings-Richtlinie
 
@@ -51,6 +51,7 @@ Diese Richtlinie kann Einstellungen wie die Update-URL steuern, von der die Erwe
 | **update_url** | Gilt nur für force_installed und normal_installed. Gibt an, von wo aus Microsoft Edge eine Erweiterung herunterladen soll. Wenn die Erweiterung in der Microsoft Edge Add-Ons-Website gehostet wird, verwenden Sie diesen Speicherort: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge verwendet die URL, die Sie für die Erstinstallation der Erweiterung angeben. Für nachfolgende Erweiterungsupdates verwendet Microsoft Edge die URL im Manifest der Erweiterung.   |
 | **runtime_allowed_hosts**| Ermöglicht Erweiterungen die Interaktion mit bestimmten Websites, auch wenn sie auch in runtime_blocked_hosts definiert sind. Sie können bis zu 100 Einträge angeben. Zusätzliche Einträge werden verworfen.<br>Das Hostmusterformat ähnelt  [Übereinstimmungsmustern](/microsoft-edge/extensions-chromium/enterprise/match-patterns) , es sei denn, Sie können den Pfad nicht definieren. Beispiel:<br>- *://*.example.com<br>- *://example.* – eTLD-Platzhalter werden unterstützt     |
 | **runtime_blocked_hosts**| Verhindern, dass Erweiterungen mit von Ihnen angegebenen Websites interagieren oder diese ändern. Änderungen umfassen das Blockieren der JavaScript-Einfügung, den Cookiezugriff und Webanforderungsänderungen.<br>Sie können bis zu 100 Einträge angeben. Zusätzliche Einträge werden verworfen.<br>Das Hostmusterformat ähnelt Übereinstimmungsmustern, es sei denn, Sie können den Pfad nicht definieren. Beispiel:<br>- *://*.example.com<br>- *://example.* – eTLD-Platzhalter werden unterstützt   |
+| **override_update_url**| Verfügbar ab Edge 93<br>Wenn dies festgelegt `true` ist, verwendet Edge die in der ExtensionSettings-Richtlinie oder in der ExtensionInstallForcelist-Richtlinie angegebene Update-URL für nachfolgende Erweiterungsupdates.<br>Wenn dies nicht festgelegt oder festgelegt `false` ist, verwendet Edge die im Manifest der Erweiterung angegebene URL für Updates.|
 
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Konfigurieren einer JSON-Zeichenfolge im Gruppenrichtlinien-Editor von Windows

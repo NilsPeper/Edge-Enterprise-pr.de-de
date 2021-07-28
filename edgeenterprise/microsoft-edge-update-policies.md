@@ -1,9 +1,9 @@
 ---
 title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: a9808981acad544042c6e0ccb59ff755a670c848
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642321"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675942"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge – Update-Richtlinien
 
@@ -41,7 +41,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[CreateDesktopShortcut](#createdesktopshortcut)|Verhindern der Erstellung von Desktopverknüpfungen bei der Installation (pro Kanal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Zurücksetzung auf Zielversion (pro Kanal)|
 |[TargetVersionPrefix](#targetversionprefix)|Außerkraftsetzung der Zielversion (pro Kanal)|
-
+|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Abrufen von Konfigurationen und Experimenten|
 ### [<a name="preferences"></a>Voreinstellungen](#preferences-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -201,7 +201,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 - Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Name des Wertes: 
+- Name des Wertes:
   - (Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -246,7 +246,6 @@ Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Insta
 0x00000001
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
-
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation
@@ -401,6 +400,38 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="retrieve-configurations-and-experiments"></a>Abrufen von Konfigurationen und Experimenten
+>Microsoft Edge Update 1.3.145.1 und höher
+
+#### <a name="description"></a>Beschreibung
+In Microsoft Edge Update wird der Experimentier- und Konfigurationsdienst zum Bereitstellen der Experimentiernutzlast verwendet.
+
+Die Experimentiernutzlast besteht aus einer Liste der frühen Entwicklungsfeatures, die Microsoft zum Testen von Feedback aktiviert.
+
+Wenn Sie diese Richtlinie aktivieren, wird die Experimentiernutzlast aus dem Experimentier- und Konfigurationsdienst heruntergeladen.
+
+Wenn Sie diese Richtlinie deaktivieren, wird die Kommunikation mit dem Experimentier- und Konfigurationsdienst vollständig beendet.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem verwalteten Gerät mit der Richtlinie "Deaktiviert" identisch.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht verwalteten Gerät mit der Richtlinie "Aktiviert" identisch.
+
+#### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+- GP eindeutiger Name: UpdateExperimentationAndConfigureationServiceControl
+- GP-Name: Kommunikation des Steuerelementupdaters mit dem Experimentier- und Konfigurationsdienst
+- GP-Pfad: Administrative Vorlagen/Microsoftt Edge Update/Microsoft Edge Update
+- Name der GP-ADMX-Datei: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Wertname: UpdaterExperimentationAndConfigurationServiceControl
+- Werttyp: REG_DWORD
+##### <a name="example-value"></a>Beispielwert:
+```
+0x00000001
+```
+[Zurück zum Anfang](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>Einstellungsrichtlinien
 
@@ -459,7 +490,6 @@ start hour : 0x00000001
 start min  : 0x00000002
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
-
 
 ## <a name="proxy-server-policies"></a>Proxyserver-Richtlinien
 
