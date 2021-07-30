@@ -3,65 +3,69 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/21/2021
+ms.date: 07/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 4bedc609fd150b77b72590f0e16c97f6fb74ed7e
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: 6816d420668673cdfefb303cc6765f9a22afce0f
+ms.sourcegitcommit: c74caed21e18d5d211a7fa6cb4f0cb3a14446f42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11675952"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "11710363"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind [hier](microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
 
 > [!NOTE]
-> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität, die für Microsoft Edge anstehen](/microsoft-edge/web-platform/site-impacting-changes).
+> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Websitekompatibilität – Auswirkungen von Änderungen an Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090262-july-29"></a>Version 92.0.902.62: 29. Juli
+
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090255-july-21"></a>Version 92.0.902.55: 21. Juli
 
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090245-july-12"></a>Version 92.0.902.45: 12. Juli
 
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090240-july-6"></a>Version 92.0.902.40: 6. Juli
 
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090222-june-21"></a>Version 92.0.902.22: 21. Juni
 
 ### <a name="feature-updates"></a>Funktionsupdates
 
 - **Suche in natürlicher Sprache nach Browserverlauf in der Adressleiste.** Die Suche nach dem gesuchten Artikel/der Website ist jetzt dank der Suche in natürlicher Sprache direkt über die Adressleiste einfacher. Sie finden Suchergebnisse basierend auf Seiteninhalt/Beschreibung/Timing (z. B. "Rezept aus der letzten Woche") zusätzlich zu Titeln/URL-Schlüsselwortübereinstimmungen allein.
-Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
 
 - **Benutzer können auf Internet Explorer-Modus auf Microsoft Edge problemlos wechseln**. Ab Microsoft Edge Version 92 können Benutzer eine Website im Internet Explorer-Modus auf Microsoft Edge neu laden, anstatt sich auf die eigenständige IE 11-Anwendung zu verlassen, während sie auf die Konfiguration einer Website in der Websiteliste für den Enterprise-Modus warten. Benutzer werden aufgefordert, die Website ihrer lokalen Websiteliste hinzuzufügen, sodass die Navigation zu derselben Seite in Microsoft Edge für die nächsten 30 Tage automatisch im IE-Modus gerendert wird. Mit der *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)*-Richtlinie können Sie diese Umgebung konfigurieren und den Zugriff auf die Einstiegspunkte des IE-Modus sowie die Möglichkeit zum Hinzufügen von Websites zur lokalen Websiteliste zulassen. Mit der *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)*-Richtlinie können Sie die Anzahl der Tage anpassen, um Websites in der lokalen Websiteliste zu speichern.
 Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforderlich ist; oder KB5003690 oder höher für Windows 10, Version 2004, Windows 10, Version 20H2 oder Windows 10, Version 21H1, für die End-to-End-Erfahrung erforderlich ist.
 
 - **MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
 
-- **Zahlungsinstrumente werden jetzt geräteübergreifend synchronisiert**. Ab Microsoft Edge Version 92 haben Sie die Möglichkeit, Ihre Zahlungsinformationen auf ihren angemeldeten Geräten zu synchronisieren.
-Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+- **Zahlungsinstrumente werden jetzt geräteübergreifend synchronisiert**. Ab Microsoft Edge Version 92 haben Sie die Möglichkeit, Ihre Zahlungsinformationen zwischen Geräten, auf denen Sie angemeldet sind, zu synchronisieren.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
 
 - **Die Warnung "Entwicklermoduserweiterungen deaktivieren" kann dauerhaft verworfen werden**. Ab Microsoft Edge, Version 92, können Sie die Warnung "Entwicklermoduserweiterungen deaktivieren" deaktivieren, indem Sie auf die Option "Diese Option nicht erneut anzeigen" klicken.
-Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
 
 - **Verwalten Sie Ihre Erweiterungen direkt über die Symbolleiste**. Mit dem Menü "Ganz neue Erweiterungen" auf der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
-Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
 
 - **Automatisches HTTPS**. Benutzer haben die Möglichkeit, die Navigation von HTTP auf HTTPS in Domänen zu aktualisieren, die wahrscheinlich dieses sicherere Protokoll unterstützen. Diese Unterstützung kann auch so konfiguriert werden, dass die Übermittlung über HTTPS für alle Domänen versucht wird.
 Bitte beachten Sie: Wir experimentieren mit diesem Feature, und dieses Verhalten wird nicht angezeigt, wenn Sie sich von Experimenten abgemeldet haben.
 
-- **Verbesserungen beim Rendern von Schriftarten**. Das Rendering von Text wurde verbessert, um die Übersichtlichkeit zu verbessern und die Unschärfe zu verringern.
-Bitte beachten Sie: Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie bitte in Kürze wieder vorbei, da wir mit dem Rollout fortfahren.
+- **Verbesserungen beim Rendern von Schriftarten**. Das Rendering von Text wurde verbessert, um die Deutlichkeit zu verbessern und die Unschärfe zu verringern.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
 
 ### <a name="policy-updates"></a>Richtlinienupdates
 
