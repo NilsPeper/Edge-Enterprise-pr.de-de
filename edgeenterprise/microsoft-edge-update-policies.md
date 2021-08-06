@@ -400,7 +400,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Abrufen von Konfigurationen und Experimenten
 >Microsoft Edge Update 1.3.145.1 und höher
 
