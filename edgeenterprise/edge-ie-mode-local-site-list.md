@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie lokale Websitelisten und einfachen Zugriff auf den IE-Modus aktivieren
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: db9246fc719648d34b5f54c7d123461b26f1c29f8268c08a1731ef8e6b516331
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676162"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724632"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lokale Websiteliste für den IE-Modus
 
@@ -41,7 +41,7 @@ In diesem Artikel wird erläutert, wie Sie den einfachen Zugriff auf den Interne
 
 Der IE-Modus wird von der Konfiguration der Enterprise Mode Site List unterstützt. Während Sie Websites in der Websiteliste für die Verwendung des IE-Modus identifizieren und konfigurieren, müssen Ihre Benutzer nicht mehr auf die eigenständige IE11-Anwendung warten oder darauf zurückgreifen.
 
-Ab Microsoft Edge Version 92 ist der *wiederholte* Zugriff auf nicht konfigurierte IE-Moduswebsites einfacher. Benutzer können Websites im IE-Modus neu laden. Sie können diese Websites ihrer lokalen Websiteliste hinzufügen, um sie für einen Zeitraum von 30 Tagen automatisch im IE-Modus zu rendern, während die Websiteliste der Organisation aktualisiert wird. Wenn [IE11](/deployedge/edge-ie-disable-ie11) in Ihrer Umgebung deaktiviert ist, sind Ihre Benutzer nicht mehr ausschließlich von der Websiteliste der Organisation abhängig.
+Ab Microsoft Edge Version 92 ist der *wiederholte* Zugriff auf nicht konfigurierte IE-Moduswebsites einfacher. Benutzer können Websites im IE-Modus erneut laden. Sie können diese Websites ihrer lokalen Websiteliste hinzufügen, um sie für einen Zeitraum von 30 Tagen automatisch im IE-Modus zu rendern, während die Websiteliste der Organisation aktualisiert wird. Wenn [IE11](/deployedge/edge-ie-disable-ie11) in Ihrer Umgebung deaktiviert ist, sind Ihre Benutzer nicht mehr ausschließlich von der Websiteliste der Organisation abhängig.
 
 Sie können diese Erfahrung über Gruppenrichtlinien für Ihre Organisation konfigurieren.
 
@@ -67,7 +67,7 @@ Das Symbol für das **Erneute Laden im Internet Explorer-Modus** kann an die Sym
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-icon-screenshot.png" alt-text="Neuladen im Internet Explorer-Modus-Symbol":::
 
 >[!Note]
->Wenn sich der Benutzer auf einer Website befindet, die sich bereits in der Enterprise Mode Site List der Organisation befindet, sind optionen zum Neuladen (oder Beenden) des Internet Explorer-Modus sichtbar, aber abgeblendet.
+>Wenn sich der Benutzer auf einer Website befindet, die sich bereits in der Enterprise Mode Site List der Organisation befindet, werden optionen zum Neuladen (oder Beenden) des Internet Explorer-Modus angezeigt, aber abgeblendet.
 
 Wenn die Option ausgewählt ist, wird die Website im IE-Modus neu geladen. Das Symbol für den IE-Modus ist links neben der Adressleiste sichtbar, und das Flyout zeigt eine Option an, mit der Benutzer beim nächsten Mal auf "Seite im Internet Explorer-Modus öffnen" umschalten können. Dadurch wird die spezifische Seite, auf der sich der Benutzer befindet, zur lokalen Websiteliste hinzugefügt und für die nächsten 30 Tage automatisch im IE-Modus geöffnet.
 
@@ -75,13 +75,13 @@ Wenn die Option ausgewählt ist, wird die Website im IE-Modus neu geladen. Das S
 
 Nachdem eine Website im "seiteninternen" IE-Modus neu geladen wurde, verbleiben die Navigationen im IE-Modus (z. B. ein Link, ein Skript oder ein Formular auf der Seite oder eine serverseitige Umleitung von einer anderen "seiteninternen" Navigation).  
 
-Im IE-Modus wird benutzern ein Banner angezeigt, das angibt, dass sie sich im IE-Modus befinden, die Option zum Verlassen des IE-Modus und zum Anheften des IE-Modussymbols an die Symbolleiste (sofern es nicht bereits angeheftet ist).
+Im IE-Modus wird Benutzern ein Banner angezeigt, das angibt, dass sie sich im IE-Modus befinden, die Option zum Verlassen des IE-Modus und zum Anheften des IE-Modussymbols an die Symbolleiste (wenn es nicht bereits angeheftet ist).
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/ie-mode-banner-screenshot.png" alt-text="Banner für den IE-Modus":::
 
-Benutzer können den IE-Modus mithilfe der Schaltfläche "Verlassen" auf dem Banner, des angehefteten IE-Modussymbols oder **Einstellungen und mehr beenden (das Ellipsensymbol ...) > Internet Explorer-Modus beenden.** Andernfalls wird Microsoft Edge automatisch aus dem IE-Modus beendet, wenn eine Navigation stattfindet, die nicht "auf der Seite" ist (z. B. mithilfe der Adressleiste, der Zurück-Schaltfläche oder eines bevorzugten Links).
+Benutzer können den IE-Modus mithilfe der Schaltfläche "Verlassen" auf dem Banner, des angehefteten IE-Modussymbols oder **Einstellungen und mehr beenden (das Ellipsensymbol ...) > Internet Explorer-Modus beenden,** andernfalls wird Microsoft Edge automatisch aus dem IE-Modus beendet, wenn eine Navigation stattfindet, die nicht "auf der Seite" ist (z. B. mithilfe der Adressleiste, der Zurück-Schaltfläche oder eines bevorzugten Links).
 
-Einträge verbleiben für einen Standardzeitraum von 30 Tagen in der lokalen Websiteliste. Es wird empfohlen, ältere Websites für Ihre Organisation in der Websiteliste für den Enterprise modus zu konfigurieren. Die lokale Websiteliste stellt sicher, dass Benutzer ihren Workflow fortsetzen können, ohne unterbrochen zu werden, während die Websiteliste der Organisation aktualisiert wird. Wenn Benutzer an Tag 31 zu der Website navigieren, wird ein Banner angezeigt, in dem erläutert wird, dass die Website nicht mehr im IE-Modus geladen wird. Benutzer können es wieder der lokalen Websiteliste hinzufügen, wenn sie dies wünschen.
+Einträge verbleiben für einen Standardzeitraum von 30 Tagen in der lokalen Websiteliste. Es wird empfohlen, Legacywebsites für Ihre Organisation in der Websiteliste für den Enterprise modus zu konfigurieren. Die lokale Websiteliste stellt sicher, dass Benutzer ihren Workflow fortsetzen können, ohne unterbrochen zu werden, während die Websiteliste der Organisation aktualisiert wird. Wenn Benutzer an Tag 31 zu der Website navigieren, wird ein Banner angezeigt, in dem erläutert wird, dass die Website nicht mehr im IE-Modus geladen wird. Benutzer können es wieder der lokalen Websiteliste hinzufügen, wenn sie dies wünschen.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/page-will-no-longer-load-in-ie-mode-screenshot.png" alt-text="Seite wird im IE-Modus nicht mehr geladen":::
 

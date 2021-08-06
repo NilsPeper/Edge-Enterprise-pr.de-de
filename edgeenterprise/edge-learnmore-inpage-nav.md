@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Seiteninterne Navigation im Internet Explorer-Modus beibehalten
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f1c40977ba07f0a85bc64aab8e609163f9a68dd2eb7487adff6b6a1fcbd110f2
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641361"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724286"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Seiteninterne Navigation im Internet Explorer-Modus beibehalten
 
@@ -60,10 +60,10 @@ Um automatische oder alle seiteninternen Navigationen im Internet Explorer-Modus
 
    - **Standard **: Nur Websites, die zum Öffnen im Internet Explorer-Modus konfiguriert sind, werden in diesem Modus geöffnet. Alle Websites, die nicht zum Öffnen im Internet Explorer-Modus konfiguriert sind, werden zurück zu Microsoft Edge umgeleitet.
    - **Nur automatische Navigationen im Internet Explorer-Modus beibehalten**: Verwenden Sie diese Option, wenn die Standardeinstellung verwendet werden soll, mit der Ausnahme, dass alle automatischen Navigationen (wie z.B. 302-Umleitungen) zu nicht konfigurierten Websites im Internet Explorer-Modus bleiben.
-   - **Beibehalten der gesamten seiteninternen Navigation im Internet Explorer-Modus**  * *_(Am wenigsten empfohlen)_*_ – Alle Navigationen von Seiten, die im IE-Modus zu nicht konfigurierten Websites geladen wurden, werden im Internet Explorer-Modus beibehalten.
+   - **Behalten Sie die gesamte Seitennavigation im Internet Explorer-Modus** **_bei (am wenigsten empfohlen):_** Alle Navigationen von Seiten, die im IE-Modus zu nicht konfigurierten Websites geladen wurden, werden im Internet Explorer-Modus beibehalten.
 
-6. Klicken Sie auf _*OK** oder **übernehmen,** um die Richtlinieneinstellungen zu speichern.
+6. Klicken Sie auf **OK** oder **Übernehmen**, um diese Richtlinieneinstellung zu speichern.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

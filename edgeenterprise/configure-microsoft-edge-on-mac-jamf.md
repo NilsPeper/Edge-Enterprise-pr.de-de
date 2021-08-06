@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Konfigurieren der Microsoft Edge-Richtlinieneinstellungen auf Mac-Geräten mit Jamf
-ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: be706795d093b9dcecf33ee1bf7071286082fad1fea98a98b34145e87a9b7393
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641631"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725312"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Konfigurieren der Microsoft Edge-Richtlinieneinstellungen unter macOS mit Jamf
 
@@ -45,8 +45,8 @@ Weitere Informationen finden Sie im Jamf Pro-Administratorhandbuch unter [Comput
 So rufen Sie das Richtlinienmanifest ab
 
 - Navigieren Sie zur [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise).
-- Wählen Sie in der Dropdownliste „Kanal/Version“ **einen beliebigen Kanal mit Version 81 oder höher aus.**_.
-- Wählen Sie in der Dropdownliste „Build“ einen beliebigen _*81 Build oder höher**_ aus.
+- Wählen Sie in der Dropdownliste „Kanal/Version“ **einen beliebigen Kanal mit der Version 81 oder höher aus.***.
+- Wählen Sie in der Dropdownliste „Build“ den Eintrag jeder ** 81 Build oder höher** aus.***.
 - Klicken Sie auf GET POLICY FILES (Richtliniendateien abrufen), um Ihr Richtlinienvorlagenpaket herunterzuladen.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ Dieses Manifest wird ab Build 81.0.416.3 in jedem Richtlinienpaket veröffentlic
 Führen Sie die folgenden Schritte aus, um das Richtlinienmanifest in Jamf Pro hochzuladen, und erstellen Sie dann ein Richtlinienprofil für macOS.
 
 1. Melden Sie sich bei Jamf an.
-2. Wählen Sie die Registerkarte _*Computer** aus.
+2. Wählen Sie die Registerkarte **Computer** aus.
 3. Wählen Sie unter **Content Management** (Inhaltsverwaltung) **Configuration Profiles** (Konfigurationsprofile) aus.
 4. Klicken Sie auf der Seite **Configuration Profiles** (Konfigurationsprofile) auf **+ New** (Neu).
 

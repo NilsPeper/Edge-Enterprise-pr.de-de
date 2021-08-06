@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Konfiguration pro Website nach Richtlinie '
-ms.openlocfilehash: 4f1bf9a421f0098ba8105e78f77ac4af62530239
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d7cc68264c9fca9e667908ff4988f512c152bfc4857fd14166519fb3eb337a5a
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641691"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725588"
 ---
 # <a name="persite-configuration-by-policy"></a>Konfiguration pro Website nach Richtlinie
 
@@ -73,7 +73,7 @@ Wenn Sie soweit voraus gedacht haben und Ihr Intranet so zu strukturiert haben, 
 
 - <div style="display: inline">`https://sharepoint.contoso-intranet.com`</div>
 
-Herzlichen Glückwunsch, Sie haben eine bewährte Methode implementiert. Sie können jede gewünschte Richtlinie mit einem **_CONTOSO-INTRANET.COM_*   Eintrag konfigurieren, und Ihr gesamtes Intranet wird aktiviert.
+Herzlichen Glückwunsch, Sie haben eine bewährte Methode implementiert. Sie können jede gewünschte Richtlinie mit einem ***.contoso-intranet.com** Eintrag konfigurieren, und Ihr gesamtes Intranet wird registriert.
 
 ## <a name="use-of-security-zones-inthe-microsoft-edge"></a>Verwendung von Sicherheitszonen in Microsoft Edge
 

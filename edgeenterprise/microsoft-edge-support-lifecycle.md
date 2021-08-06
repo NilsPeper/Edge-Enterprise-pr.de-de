@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Lebenszyklus
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676087"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726958"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Microsoft Edge-Lebenszyklusrichtlinie
 
@@ -25,11 +25,11 @@ In diesem Artikel wird die Lebenszyklusrichtlinie beschrieben, die für Microsof
 > Dieser Artikel bezieht sich auf die Microsoft Edge-Version 77 und höher.
 
 > [!NOTE]
-> Beginnend mit der Stable-Channel-Version 94 geht Microsoft Edge zu einem 4-wöchigen Hauptversionszyklus über. Wir wissen jedoch, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge-Updates zu planen und zu testen. Um unseren Unternehmenskunden zu helfen, die eine erweiterte Zeitachse zum Verwalten von Updates benötigen, bietet Microsoft Edge eine **erweiterte Stable-Option an, die auf einen längeren, 8-wöchigen Hauptversionszyklus ausgerichtet ist.** Diese Option ist nur für Kunden mit verwalteten Umgebungen verfügbar. [Weitere Informationen finden Sie in unserem Ankündigungsblogbeitrag.](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+> Beginnend mit der Stable-Channel-Version 94 geht Microsoft Edge zu einem 4-wöchigen Hauptversionszyklus über. Wir wissen jedoch, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge-Updates zu planen und zu testen. Um unseren Unternehmenskunden zu helfen, die eine erweiterte Zeitachse zum Verwalten von Updates benötigen, bietet Microsoft Edge eine **erweiterte Stable-Option an, die auf einen längeren, 8-wöchigen Hauptversionszyklus ausgerichtet ist.** Diese Option ist nur für Kunden mit verwalteten Umgebungen verfügbar. [Weitere Informationen finden Sie in unserem Ankündigungsblogbeitrag](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Übersicht über die Lifecycle-Richtlinie für Microsoft Edge
 
-Microsoft Edge features more frequent and more flexible updating capabilities. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft folgen Microsoft Edge der [Modern-Lifecycle-Richtlinie.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) Sicherheitsupdates und Wartungsupdates sind nur für die neueste Stable-Kanalversion und die neueste Betakanalversion verfügbar. Die Verwendung älterer Versionen von Microsoft Edge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen.  Der unterstützte Support ist wie unten beschrieben verfügbar.
+Microsoft Edge Features häufiger und flexibler aktualisieren. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft folgen Microsoft Edge der [Modern-Lifecycle-Richtlinie.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) Sicherheitsupdates und Wartungsupdates sind nur für die neueste Stable-Kanalversion und die neueste Betakanalversion verfügbar. Die Verwendung älterer Versionen von Microsoft Edge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen.  Der unterstützte Support ist wie unten beschrieben verfügbar.
 
 ## <a name="servicing-and-assisted-support-timeline-for-microsoft-edge-77-93"></a>Zeitraum für Wartung und unterstützten Support für Microsoft Edge 77-93
 
@@ -47,7 +47,7 @@ Microsoft Edge verfügt über einen 6-wöchigen Hauptversionszyklus für Stable 
 
 Beginnend mit der Stable-Channel-Version 94 geht Microsoft Edge zu einem 4-wöchigen Hauptversionszyklus über. Wir werden weiterhin supportunterstützten Support für die neuesten drei Stable-Kanalversionen und die neueste Betakanalversion bereitstellen. Die effektive unterstützte Supportdauer für eine Stable-Kanalversion beträgt ca. 12 Wochen.
 
-Wir sind uns bewusst, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge Updates zu planen und zu testen. Um unseren Unternehmenskunden zu helfen, die eine erweiterte Zeitachse zum Verwalten von Updates benötigen, bietet Microsoft Edge eine **erweiterte Stable-Option an, die auf einen längeren, 8-wöchigen Hauptversionszyklus ausgerichtet**ist. Der unterstützte Support steht für die letzten beiden Extended Stable-Kanalversionen zur Verfügung. Die effektive unterstützte Supportdauer für eine erweiterte Stable-Kanalversion beträgt ca. 16 Wochen. Weitere Informationen finden Sie in der folgenden Tabelle.
+Wir wissen, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zeit benötigen, um Microsoft Edge Updates zu planen und zu testen. Um unseren Unternehmenskunden zu helfen, die eine erweiterte Zeitachse zum Verwalten von Updates benötigen, bietet Microsoft Edge eine **erweiterte Stable-Option an, die auf einen längeren, 8-wöchigen Hauptversionszyklus ausgerichtet**ist. Der unterstützte Support steht für die letzten beiden Extended Stable-Kanalversionen zur Verfügung. Die effektive unterstützte Supportdauer für eine erweiterte Stable-Kanalversion beträgt ca. 16 Wochen. Weitere Informationen finden Sie in der folgenden Tabelle.
 
 |     Release-Option              |     Hauptversionsversion unterstützt    |     Hauptversionsversion, gewartet    |     Supportabdeckung für alle Versionen    |     Wartungsabdeckung    |
 |---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|

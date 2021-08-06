@@ -3,19 +3,19 @@ title: Archivierte Versionshinweise für Microsoft Edge Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Archivierte Versionshinweise für Microsoft Edge Stable Channel
-ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 662ebb40ce14714365b257a1a6127960df6baf90ecc8106cec5e49f35b9c51ea
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617955"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727438"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Archivierte Versionshinweise für Microsoft Edge Stable Channel
 
@@ -215,7 +215,7 @@ Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnot
 
 #### <a name="new-policies"></a>Neue Richtlinien
 
-Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [ConfigureFriendlyURLFormat](./microsoft-edge-policies.md#configurefriendlyurlformat) – Zum Konfigurieren des Standardformats für das Einfügen von URLs, die aus Microsoft Edge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen.
 - [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) – Shopping in Microsoft Edge aktiviert.
@@ -360,11 +360,11 @@ Es wurden dreiundzwanzig neue Richtlinien hinzugefügt. Laden Sie die aktualisie
 
 ## <a name="version-85056470-october-6"></a>Version 85.0.564.70: 6. Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-85056468-october-1"></a>Version 85.0.564.68: 1. Oktober
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-85056463-september-23"></a>Version 85.0.564.63: 23. September
 
@@ -508,7 +508,7 @@ Sicherheitsupdates werden [hier](./microsoft-edge-relnotes-security.md#july-16-2
 
 #### <a name="new-policies"></a>Neue Richtlinien
 
-Es wurden sieben neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden sieben neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://aka.ms/EdgeEnterprise) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [AppCacheForceEnabled](./microsoft-edge-policies.md#appcacheforceenabled): Ermöglicht das Wiederaktivieren des AppCache-Features, auch wenn es standardmäßig deaktiviert ist.
 - [ApplicationGuardContainerProxy](./microsoft-edge-policies.md#applicationguardcontainerproxy): Konfigurieren der Einstellungen für den Application Guard-Containerproxy.
