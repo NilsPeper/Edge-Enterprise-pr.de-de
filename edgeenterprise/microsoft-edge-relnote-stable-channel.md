@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: c1556f18520c4b7101ea7296a2a1be67ad6ae0d2
-ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
+ms.openlocfilehash: 95fc6b86846b2ee8b0e528b88aed107e1431502d1060d0dd45b22aa5304a72e7
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "11708664"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725748"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -30,6 +30,14 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Websitekompatibilität – Auswirkungen von Änderungen an Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090262-july-29"></a>Version 92.0.902.62: 29. Juli
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+### <a name="modified-policy"></a>Geänderte Richtlinie
+
+- AutoplayAllowed – Die Einstellung auf „Disabled“ setzt die automatische Medienwiedergabe jetzt auf „Limit“
 
 ## <a name="version-92090255-july-22"></a>Version 92.0.902.55: 22. Juli
 

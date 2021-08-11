@@ -3,23 +3,27 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/22/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: 45dbc31321a148418e0db65be9b1a817ecaa5d534d5578ee77d98867eadda1eb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: ad0d3c20c5ebcf79e4624e7b02721a674e39000dfb1082e630c7dfa5e366b531
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727308"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810185"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
-Diese Anmerkungen zu dieser Version enthalten Informationen zu Sicherheitsupdates, die in Updates für den Microsoft Edge Stable Channel enthalten sind.
+Diese Versionshinweise enthalten Informationen zu Sicherheitspatches, die in Updates für den Microsoft Edge Stable Channel enthalten sind.
+
+## <a name="august-5-2021"></a>5. August 2021
+
+Microsoft hat den neuesten **Microsoft Edge Stable Channel (Version 92.0.902.67)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide)
 
 ## <a name="july-22-2021"></a>22. Juli 2021
 

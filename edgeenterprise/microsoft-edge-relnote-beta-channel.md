@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/03/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 8b76fc92fc5db3433990435e78ee14dcbe306b4096a6c1a6ba919faebc074768
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
+ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725758"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "11810469"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -28,23 +28,23 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 ### <a name="feature-updates"></a>Funktionsupdates
 
-- **Anfängliche Einstellungen in Microsoft Edge.**  Die Bereitstellung von Microsoft Edge in Ihrem Unternehmen wird ab Version 93 mit den anfänglichen Einstellungen einfacher.
+- **Anfängliche Einstellungen in Microsoft Edge.**  Ab Microsoft Edge Version 93 wird die Bereitstellung von Microsoft Edge in Ihrem Unternehmen durch die Hinzufügung der anfänglichen Einstellungen einfacher.
 
-- **Der IE-Modus auf Microsoft Edge unterstützt das Verhalten "nomerge".**  Ab Edge 93 unterstützt der IE-Modus auf Microsoft Edge Nomerge. Wenn ein neues Browserfenster von einer IE-Modusanwendung aus gestartet wird, befindet sich ein Endbenutzer in einer separaten Sitzung, ähnlich wie das Nomerge-Verhalten in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe als "nomerge" verhindern müssen. Im Hintergrund wird bei jedem Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modus-Registerkarte innerhalb dieses Fensters, wenn es sich um eine der angegebenen "nomerge"-Websites handelt, dieses Fenster mindestens bis zum Schließen der letzten IE-Modus-Registerkarte in diesem Fenster in eine andere "nomerge"-IE-Sitzung von allen anderen Microsoft Edge Fenstern gesperrt. Dies folgt auf das vorherige Verhalten, bei dem Benutzer IE mit nomerge starten konnten und auch Microsoft Edge ohne OhneMerge über andere Mechanismen starten konnten.
+- **Der IE-Modus auf Microsoft Edge unterstützt das "Nomerge"-Verhalten.**  Ab Microsoft Edge Version 93 unterstützt der IE-Modus auf Microsoft Edge _nomerge_. Wenn ein neues Browserfenster von einer IE-Modusanwendung gestartet wird, befindet sich ein Endbenutzer in einer separaten Sitzung, ähnlich wie in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe verhindern müssen. Im Hintergrund wird bei jedem Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modus-Registerkarte innerhalb dieses Fensters, wenn es sich um eine der angegebenen "nomerge"-Websites handelt, dieses Fenster mindestens bis zum Schließen der letzten IE-Modus-Registerkarte in diesem Fenster in eine andere IE-Sitzung "nomerge" von allen anderen Microsoft Edge Fenstern gesperrt. Weitere Informationen finden Sie [hier](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
 
 - **Registerkartengruppen.**  Die Möglichkeit, Registerkarten in benutzerdefinierte Gruppen zu kategorisieren, hilft Ihnen, Registerkarten in mehreren Arbeitsstreams effektiver zu finden, zu wechseln und zu verwalten. Um dies zu aktivieren, aktivieren wir die Registerkartengruppierung ab Microsoft Edge Version 93.
 
 - **Blenden Sie die Titelleiste aus, während Sie vertikale Registerkarten verwenden.**  Rufen Sie die zusätzlichen Pixel zurück, indem Sie die Titelleiste des Browsers ausblenden, während Sie sich auf vertikalen Registerkarten befinden. Ab Microsoft Edge Version 93 können Sie zu edge://settings/appearance wechseln und unter dem Abschnitt Symbolleiste anpassen die Option auswählen, um die Titelleiste im vertikalen Registerkartenmodus auszublenden.
 
-- **Video picture in Picture (PiP) from hover toolbar.**  Ab Edge Version 93 wird es noch einfacher, in den Bildmodus (PiP) zu wechseln. Wenn Sie mit dem Mauszeiger auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie das Video in einem PiP-Fenster anzeigen können.  Bitte beachten Sie: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich dies in Kürze an, während wir unseren Rollout für Windows Benutzer fortsetzen.
+- **Video picture in Picture (PiP) from hover toolbar.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bildmodus (PiP) zu wechseln. Wenn Sie mit dem Mauszeiger auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie das Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unser Rollout für Windows Benutzer fortsetzen.
 
-- **Entfernen von 3DES in TLS.**  Ab Edge v93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/6678134168485888) Darüber hinaus steht in Edge v93 die [TripleDESEnabled-Richtlinie](/deployedge/microsoft-edge-policies#tripledesenabled) zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert in Edge v95 nicht mehr. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
+- **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/6678134168485888) Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled-Richtlinie](/deployedge/microsoft-edge-policies#tripledesenabled) zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert in Microsoft Edge Version 95 nicht mehr. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
 
 ### <a name="new-policies"></a>Neue Richtlinien
 
-- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Zulassen der automatischen Wiedergabe von Medien auf bestimmten Websites
+- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Zulassen der automatischen Medienwiedergabe auf bestimmten Websites
 - [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) CECPQ2-Nach-Quantum-Schlüsselvereinbarung für TLS aktiviert
-- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Konfigurieren des Features "Ansicht im Datei-Explorer" für SharePoint Seiten in Microsoft Edge
+- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Konfigurieren der Ansicht im Datei-Explorer-Feature für SharePoint Seiten in Microsoft Edge
 - [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Steuern der Verwendung von JavaScript-JIT
 - [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Zulassen, dass Benachrichtigungen Microsoft Edge als PDF-Standardleser festlegen
 - [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Konfigurieren der Benutzerfunktion zum Überschreiben von Featureflags
@@ -106,19 +106,19 @@ Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforder
 - **MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
 
 - **Zahlungsinstrumente werden jetzt geräteübergreifend synchronisiert**. Ab Microsoft Edge Version 92 haben Sie die Möglichkeit, Ihre Zahlungsinformationen zwischen Geräten, auf denen Sie angemeldet sind, zu synchronisieren.
-Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Wenn dieses Feature nicht angezeigt wird, checken Sie sich kurz zurück, während wir unseren Rollout fortsetzen.
 
 - **Die Warnung "Entwicklermoduserweiterungen deaktivieren" kann dauerhaft verworfen werden**. Ab Microsoft Edge, Version 92, können Sie die Warnung "Entwicklermoduserweiterungen deaktivieren" deaktivieren, indem Sie auf die Option "Diese Option nicht erneut anzeigen" klicken.
-Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Wenn dieses Feature nicht angezeigt wird, checken Sie sich kurz zurück, während wir unseren Rollout fortsetzen.
 
 - **Verwalten Sie Ihre Erweiterungen direkt über die Symbolleiste**. Mit dem Menü "Ganz neue Erweiterungen" auf der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
-Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Wenn dieses Feature nicht angezeigt wird, checken Sie sich kurz zurück, während wir unseren Rollout fortsetzen.
 
 - **Automatisches HTTPS**. Benutzer haben die Möglichkeit, die Navigation von HTTP auf HTTPS in Domänen zu aktualisieren, die wahrscheinlich dieses sicherere Protokoll unterstützen. Diese Unterstützung kann auch so konfiguriert werden, dass die Übermittlung über HTTPS für alle Domänen versucht wird.
 Bitte beachten Sie: Wir experimentieren mit diesem Feature, und dieses Verhalten wird nicht angezeigt, wenn Sie sich von Experimenten abgemeldet haben.
 
 - **Verbesserungen beim Rendern von Schriftarten**. Das Rendering von Text wurde verbessert, um die Deutlichkeit zu verbessern und die Unschärfe zu verringern.
-Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
+Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Wenn dieses Feature nicht angezeigt wird, checken Sie sich kurz zurück, während wir unseren Rollout fortsetzen.
 
 ### <a name="policy-updates"></a>Richtlinienupdates
 
