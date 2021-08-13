@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 61ea386b4a0762f6b95a0f2c1944ca35d0749ea9d75f85330f85472414988200
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9693195b466da999c7ada8f6a4453401e684326f
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724168"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882251"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -27,7 +27,7 @@ Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wi
 Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) für die empfohlenen grundlegenden Sicherheitskonfigurations-Einstellungen für Microsoft Edge herunterladen. Weitere Informationen finden Sie unter [Microsoft Sicherheitsbaselines-Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
@@ -293,7 +293,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Automatisches Ausfüllen für Kreditkartendaten aktivieren|
 |[AutomaticHttpsDefault](#automatichttpsdefault)|Automatisches HTTPS konfigurieren|
 |[AutoplayAllowed](#autoplayallowed)|Zulassen der automatischen Wiedergabe von Medien für Websites|
-|[AutoplayAllowlist](#autoplayallowlist)|Zulassen der automatischen Wiedergabe von Medien auf bestimmten Websites|
+|[AutoplayAllowlist](#autoplayallowlist)|Zulassen der automatischen Medienwiedergabe auf bestimmten Websites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Ausführung von Hintergrund-Apps zulassen, nachdem Microsoft Edge geschlossen wurde|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Aktiviert Hintergrundaktualisierungen der Liste verfügbarer Vorlagen für Kollektionen und andere Features, die Vorlagen verwenden|
 |[BingAdsSuppression](#bingadssuppression)|Blockieren aller Anzeigen in Bing-Suchergebnissen|
@@ -1574,7 +1574,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### <a name="description"></a>Beschreibung
 
-  Ermöglicht Ihnen festzulegen, ob Microsoft Edge das v8-JavaScript-Modul mit aktivierten JIT-Compilern (Just In Time) ausführen.
+  Ermöglicht Ihnen festzulegen, ob Microsoft Edge das v8-JavaScript-Modul mit aktivierter JIT-Compiler (Just In Time) ausführen.
 
 Das Deaktivieren des JavaScript-JIT bedeutet, dass Microsoft Edge Webinhalte langsamer rendern und auch Teile von JavaScript, einschließlich WebAssembly, deaktivieren können. Durch deaktivieren des JavaScript-JIT können Microsoft Edge Webinhalte in einer sichereren Konfiguration rendern.
 
@@ -2746,7 +2746,7 @@ Ausführliche Informationen zu gültigen Website-URL-Mustern finden Sie unter [h
 
 JavaScript JIT Policy Exceptions will only be enforced at a site granularity (eTLD+1). Eine Richtlinie, die nur für subdomain.contoso.com festgelegt ist, gilt nicht ordnungsgemäß für contoso.com oder subdomain.contoso.com, da beide in dieselbe eTLD+1 (contoso.com) aufgelöst werden, für die keine Richtlinie vorhanden ist. In diesem Fall muss die Richtlinie auf contoso.com festgelegt werden, damit sie sowohl für contoso.com als auch für subdomain.contoso.com ordnungsgemäß angewendet wird.
 
-Diese Richtlinie gilt frameweise und nicht basierend auf der Ursprungs-URL der obersten Ebene, d. h. wenn contoso.com in der JavaScriptJitAllowedForSites-Richtlinie aufgeführt ist, aber contoso.com einen Frame lädt, der fabrikam.com dann contoso.com JavaScript JIT aktiviert hat, fabrikam.com jedoch die Richtlinie von [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)verwenden, falls festgelegt oder JavaScript JIT standardmäßig aktiviert ist.
+Diese Richtlinie gilt frameweise und nicht basierend auf der Url des Ursprungs der obersten Ebene, d. h. wenn contoso.com in der JavaScriptJitAllowedForSites-Richtlinie aufgeführt ist, aber contoso.com einen Frame lädt, der fabrikam.com, wird contoso.com JavaScript JIT aktiviert haben, fabrikam.com jedoch die Richtlinie von [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)verwenden, falls festgelegt oder JavaScript JIT standardmäßig aktiviert ist.
 
 Wenn Sie diese Richtlinie nicht für einen Standort konfigurieren, gilt die Richtlinie von [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) für die Website, falls festgelegt, andernfalls ist Javascript JIT für die Website aktiviert.
 
@@ -2817,7 +2817,7 @@ Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://g
 
 JavaScript JIT Policy Exceptions will only be enforced at a site granularity (eTLD+1). Eine Richtlinie, die nur für subdomain.contoso.com festgelegt ist, gilt nicht ordnungsgemäß für contoso.com oder subdomain.contoso.com, da beide in dieselbe eTLD+1 (contoso.com) aufgelöst werden, für die keine Richtlinie vorhanden ist. In diesem Fall muss die Richtlinie auf contoso.com festgelegt werden, damit sie sowohl für contoso.com als auch für subdomain.contoso.com ordnungsgemäß angewendet wird.
 
-Diese Richtlinie gilt frameweise und nicht basierend auf der Ursprungs-URL der obersten Ebene, d. h. wenn contoso.com in der JavaScriptJitBlockedForSites-Richtlinie aufgeführt ist, aber contoso.com einen Frame lädt, der fabrikam.com, ist contoso.com JavaScript JIT deaktiviert, aber fabrikam.com verwendet die Richtlinie von [DefaultJavaScriptJitSetting,](#defaultjavascriptjitsetting)falls festgelegt oder JavaScript JIT standardmäßig aktiviert ist.
+Diese Richtlinie gilt frameweise und nicht basierend auf der Ursprungs-URL der obersten Ebene, d. h. wenn contoso.com in der JavaScriptJitBlockedForSites-Richtlinie aufgeführt ist, aber contoso.com einen Frame lädt, der fabrikam.com dann contoso.com JavaScript JIT deaktiviert hat, fabrikam.com jedoch die Richtlinie von [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)verwenden, falls festgelegt oder JavaScript JIT standardmäßig aktiviert ist.
 
 Wenn Sie diese Richtlinie nicht für eine Website konfigurieren, gilt die Richtlinie von [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) für die Website, sofern festgelegt, andernfalls ist JavaScript JIT für die Website aktiviert.
 
@@ -4499,7 +4499,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   Konfiguriert die Möglichkeit von Benutzern, den Status von Featureflags zu überschreiben.
 Wenn Sie diese Richtlinie auf "CommandLineOverridesEnabled" festlegen, können Benutzer den Status von Featureflags über Befehlszeilenargumente außer Kraft setzen, jedoch nicht edge://flags Seite.
 
-Wenn Sie diese Richtlinie auf "OverridesEnabled" festlegen, können Benutzer den Status von Feature-Flags mithilfe von Befehlszeilenargumenten oder edge://flags Seite überschreiben.
+Wenn Sie diese Richtlinie auf "OverridesEnabled" festlegen, können Benutzer den Status von Featureflags mithilfe von Befehlszeilenargumenten oder edge://flags Seite überschreiben.
 
 Wenn Sie diese Richtlinie auf "OverridesDisabled" festlegen, können Benutzer den Status von Featureflags nicht über Befehlszeilenargumente oder edge://flags Seite außer Kraft setzen.
 
@@ -4857,7 +4857,7 @@ Wenn Sie diese Richtlinie nicht festlegen, werden keine Apps oder Erweiterungen 
 
 Diese Richtlinie ersetzt die [ExtensionInstallBlocklist](#extensioninstallblocklist)-Richtlinie. Wenn eine App oder Erweiterung, deren Installation zuvor erzwungen wurde, aus dieser Liste entfernt wird, wird Sie von Microsoft Edge automatisch deinstalliert.
 
-Bei Windows Instanzen, die keiner Microsoft Active Directory-Domäne beigetreten sind, ist die erzwungene Installation auf Apps und Erweiterungen beschränkt, die auf der Website Microsoft Edge Add-Ons aufgeführt sind.
+Bei Windows Instanzen, die keiner Microsoft Active Directory-Domäne beigetreten sind, ist die erzwungene Installation auf Apps und Erweiterungen beschränkt, die auf der Microsoft Edge Add-Ons-Website aufgeführt sind.
 
 Auf macOS-Instanzen kann die Installation von Apps und Erweiterungen von außerhalb der Microsoft Edge-Add-ons-Website nur dann erzwungen werden, wenn die Instanz über MDM verwaltet oder über MCX mit einer Domäne verbunden wird.
 
@@ -4997,7 +4997,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Die Einstellung dieser Richtlinie steuert die Einstellungen für die Erweiterungsverwaltung von Microsoft Edge, einschließlich aller Einstellungen, die durch vorhandene erweiterungsbezogene Richtlinien gesteuert werden. Diese Richtlinie ersetzt alle älteren Richtlinien, die möglicherweise festgelegt wurden.
 
-Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der genauen Update-URL, die im Erweiterungsmanifest angegeben ist. Wenn das Flag "override_update_url" auf "true" festgelegt ist, wird die Erweiterung mithilfe der Update-URL installiert und aktualisiert, die in der [ExtensionInstallForcelist-Richtlinie](#extensioninstallforcelist) oder im Feld "update_url" in dieser Richtlinie angegeben ist. Das Kennzeichen "override_update_url" wird ignoriert, wenn das "update_url" die Update-URL der Edge-Add-Ons-Website ist. Weitere Informationen finden Sie in der detaillierten Anleitung zur ExtensionSettings-Richtlinie, die unter [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555) verfügbar ist.
+Diese Richtlinie ordnet eine Erweiterungs-ID oder eine Update-URL nur der jeweiligen Einstellung zu. Für die spezielle ID "*" kann eine Standardkonfiguration eingerichtet werden, die für alle Erweiterungen ohne benutzerdefinierte Konfiguration in dieser Richtlinie gilt. Bei einer Update-URL gilt die Konfiguration für Erweiterungen mit der genauen Update-URL, die im Erweiterungsmanifest angegeben ist. Wenn das Flag "override_update_url" auf "true" festgelegt ist, wird die Erweiterung mithilfe der Update-URL installiert und aktualisiert, die in der [ExtensionInstallForcelist-Richtlinie](#extensioninstallforcelist) oder im Feld "update_url" in dieser Richtlinie angegeben ist. Das Kennzeichen "override_update_url" wird ignoriert, wenn das "update_url" die Url für das Edge-Add-Ons-Websiteupdate ist. Weitere Informationen finden Sie in der detaillierten Anleitung zur ExtensionSettings-Richtlinie, die unter [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555) verfügbar ist.
 
 Um Erweiterungen aus einem bestimmten Drittanbieter-Store zu blockieren, müssen Sie nur die update_url für diesen Store blockieren. Wenn Sie z. B. Erweiterungen aus dem Chrome Web Store blockieren möchten, können Sie den folgenden JSON verwenden.
 
@@ -5823,7 +5823,7 @@ Wenn Sie diese Einstellung deaktivieren, wird die implizite Anmeldung deaktivier
 
   Mit dieser Richtlinie können Benutzer entscheiden, ob die OneAuth-Bibliothek zum Anmelden und Abrufen von Token in Microsoft Edge auf Windows 10 RS3 und höher verwendet werden soll.
 
-Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet der Anmeldevorgang Windows Account Manager. Microsoft Edge können Konten, bei denen Sie sich angemeldet haben, ohne Kennwort bei Windows, Microsoft Office oder anderen Microsoft-Anwendungen für die Anmeldung verwenden. Sie können auch ein gültiges Konto und Kennwort für die Anmeldung angeben, das zur zukünftigen Verwendung in Windows Account Manager gespeichert wird. Sie können alle in Windows Account Manager gespeicherten Konten über die Seite Windows Einstellungen ->-Konten -> E-Mail und Konten untersuchen.
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet der Anmeldevorgang Windows Account Manager. Microsoft Edge können Konten, bei denen Sie sich angemeldet haben, ohne Kennwort bei Windows, Microsoft Office oder anderen Microsoft-Anwendungen für die Anmeldung verwenden. Sie können auch ein gültiges Konto und Kennwort für die Anmeldung angeben, das zur zukünftigen Verwendung in Windows Account Manager gespeichert wird. Sie können alle Konten, die in Windows Account Manager gespeichert sind, über die Seite Windows Einstellungen ->-Konten -> E-Mail und Konten untersuchen.
 
 Wenn Sie diese Richtlinie aktivieren, wird der OneAuth-Authentifizierungsfluss für die Kontoanmeldung verwendet. Der OneAuth-Authentifizierungsfluss weist weniger Abhängigkeiten auf und kann ohne Windows Shell funktionieren. Das von Ihnen verwendete Konto wird nicht auf der Seite "E-Mail und Konten" gespeichert.
 
@@ -6287,7 +6287,7 @@ Wenn Sie diese Richtlinie deaktivieren, werden Benutzern auf den Seiten "Anmelde
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: PasswordGeneratorEnabled
-  - GP-Name: Zulassen, dass Benutzer bei der Erstellung eines Kontos online einen Vorschlag für ein sicheres Kennwort erhalten
+  - GP-Name: Zulassen, dass Benutzer bei der Onlineerstellung ein sicheres Kennwort erhalten
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -6739,7 +6739,7 @@ Diese Gruppenrichtlinie konfiguriert das Optionsfeldauswahlmodul, das dieses Fea
 
 Wenn Sie diese Richtlinie auf "Automatisch" festlegen, diese Richtlinie deaktivieren oder diese Richtlinie nicht konfigurieren, hat das automatische Ausfüllen keinen Authentifizierungsfluss.
 
-Wenn Sie diese Richtlinie auf "Mit Gerätekennwort" festlegen, müssen Benutzer ihr Gerätekennwort (oder den bevorzugten Authentifizierungsmodus unter Windows Hello wenn auf Windows – PIN, Gesichtserkennung oder Fingerabdruck und entsprechende Optionen auf dem Mac) eingeben, um ihre Identität nachzuweisen, und erst dann wird das Kennwort automatisch ausgefüllt. Außerdem würde die Häufigkeit für die Authentifizierungsaufforderung standardmäßig auf "Immer" festgelegt, die Benutzer können sie jedoch auch in die andere Option ändern, die "Nach jeder Browsersitzung" lautet.
+Wenn Sie diese Richtlinie auf "Mit Gerätekennwort" festlegen, müssen Die Benutzer ihr Gerätekennwort (oder den bevorzugten Authentifizierungsmodus unter Windows Hello bei Windows – PIN, Gesichtserkennung oder Fingerabdruck und entsprechende Optionen auf dem Mac) eingeben, um ihre Identität nachzuweisen, und erst dann wird ihr Kennwort automatisch ausgefüllt. Außerdem würde die Häufigkeit für die Authentifizierungsaufforderung standardmäßig auf "Immer" festgelegt, die Benutzer können sie jedoch auch in die andere Option ändern, die "Nach jeder Browsersitzung" lautet.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -11610,7 +11610,7 @@ Eine Registerkarte muss geschlossen und erneut geöffnet werden, damit diese Ric
 
   ### <a name="autoplayallowlist"></a>AutoplayAllowlist
 
-  #### <a name="allow-media-autoplay-on-specific-sites"></a>Zulassen der automatischen Wiedergabe von Medien auf bestimmten Websites
+  #### <a name="allow-media-autoplay-on-specific-sites"></a>Zulassen der automatischen Medienwiedergabe auf bestimmten Websites
 
   
   
@@ -13386,7 +13386,7 @@ Hier finden Sie weitere Informationen zu diesem Feature: SpeechSynthesis-API: [h
 
   #### <a name="description"></a>Beschreibung
 
-  Wenn Sie diese Richtlinie auf "ShareAllowed" (Standard) festlegen, können Benutzer über das Menü "Einstellungen" und "Mehr" in Microsoft Edge auf die Freigabe für andere Apps im System zugreifen.
+  Wenn Sie diese Richtlinie auf "ShareAllowed" (Standard) festlegen, können Benutzer über das Menü "Einstellungen und mehr" in Microsoft Edge auf die Freigabe für andere Apps im System zugreifen.
 
 Wenn Sie diese Richtlinie auf "ShareDisallowed" festlegen, können Benutzer nicht auf die Freigabeoberfläche zugreifen. Wenn sich die Schaltfläche "Freigeben" auf der Symbolleiste befindet, wird sie ebenfalls ausgeblendet.
 
@@ -13454,11 +13454,11 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### <a name="description"></a>Beschreibung
 
-  Mit dieser Einstellung können Sie die Funktion "Im Datei-Explorer anzeigen" für die Dateiverwaltung in SharePoint Online konfigurieren, während Sie Microsoft Edge verwenden.
+  Mit dieser Einstellung können Sie die Ansicht im Datei-Explorer-Funktion für die Dateiverwaltung in SharePoint Online konfigurieren, während Sie Microsoft Edge verwenden.
 
-Sie müssen die spezifischen Domänen auflisten, in denen dies zulässig ist, und Cookies auflisten, die für SharePoint Authentifizierung (rtFa und FedAuth) erforderlich sind.
+Sie müssen die spezifischen Domänen auflisten, in denen dies zulässig ist, und Cookies auflisten, die für SharePoint Authentifizierung benötigt werden (rtFa und FedAuth).
 
-Im Hintergrund ermöglicht die Richtlinie URLs mit dem viewinfileexplorer: -Schema, WebDAV-URLs im Windows Datei-Explorer auf Seiten zu öffnen, die mit der Liste der Domänen übereinstimmen, und verwendet die Cookies, die Sie für die WebDAV-Authentifizierung angegeben haben.
+Im Hintergrund ermöglicht die Richtlinie URLs mit dem viewinfileexplorer: Schema, WebDAV-URLs im Windows Datei-Explorer auf Seiten zu öffnen, die mit der Liste der Domänen übereinstimmen, und verwendet die Cookies, die Sie für die WebDAV-Authentifizierung angegeben haben.
 
 Wenn Sie diese Richtlinie aktivieren, können Sie das Feature "Im Datei-Explorer anzeigen" in den SharePoint aufgeführten Dokumentbibliotheken verwenden. Sie müssen die SharePoint Domäne und Authentifizierungscookies angeben. Siehe Beispielwert unten.
 
@@ -15620,7 +15620,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### <a name="description"></a>Beschreibung
 
-  Es gibt eine Liste der in Microsoft Edge integrierten eingeschränkten Ports. Verbindungen mit diesen Ports schlagen fehl. Diese Richtlinie ermöglicht das Umgehen dieser Liste. Diese sind als durch Kommas getrennte Liste von Ports definiert, über die ausgehende Verbindungen zulässig sein sollen.
+  Es gibt eine Liste der eingeschränkten Ports, die in Microsoft Edge integriert sind. Verbindungen mit diesen Ports schlagen fehl. Diese Richtlinie ermöglicht das Umgehen dieser Liste. Diese sind als durch Kommas getrennte Liste von Ports definiert, über die ausgehende Verbindungen zulässig sein sollen.
 
 Die Ports sind eingeschränkt, um zu verhindern, dass Microsoft Edge als Vektor verwendet wird, um verschiedene Netzwerkschwachstellen auszunutzen. Wenn Sie diese Richtlinie festlegen, wird Ihr Netzwerk möglicherweise Angriffen ausgesetzt. Diese Richtlinie ist als temporäre Problemumgehung für den Fehlercode "ERR_UNSAFE_PORT" gedacht, während ein Dienst, der auf einem blockierten Port ausgeführt wird, auf einen Standardport umgestellt wird (z. B. Port 80 oder 443).
 
@@ -18083,7 +18083,7 @@ Diese Einstellung gilt nur, wenn die [InternetExplorerIntegrationLevel-Einstellu
 
 Wenn Sie diese Richtlinie konfigurieren, verwendet Microsoft Edge die angegebene Websiteliste. Wenn diese Option aktiviert ist, können Sie den Bezeichner der Websiteliste eingeben, die Sie in der Cloud im M365 Admin Center erstellt und veröffentlicht haben.
 
-Diese Einstellung hat Vorrang vor der [InternetExplorerIntegrationSiteList-Richtlinie](#internetexplorerintegrationsitelist) Microsoft Edge sowie der Websitelisteneinstellung von Internet Explorer (Verwenden der IE-Websiteliste Enterprise Modus). Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet Microsoft Edge stattdessen die [InternetExplorerIntegrationSiteList-Richtlinie.](#internetexplorerintegrationsitelist)
+Diese Einstellung hat Vorrang vor der [InternetExplorerIntegrationSiteList-Richtlinie](#internetexplorerintegrationsitelist) Microsoft Edge sowie der Websitelisteneinstellung von Internet Explorer (Verwenden der IE-Websiteliste für den Enterprise Modus). Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet Microsoft Edge stattdessen die [InternetExplorerIntegrationSiteList-Richtlinie.](#internetexplorerintegrationsitelist)
 
 Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707).
 
@@ -19089,9 +19089,9 @@ Zur Anwendung dieser Richtlinie ist ein Browser-Neustart erforderlich.
 
   Mit dieser Richtlinie können Sie den Updater konfigurieren, der Microsoft Edge verwendet.
 
-Wenn Sie diese Richtlinie aktivieren, wird Microsoft Edge nur von Microsoft AutoUpdate aktualisiert.
+Wenn Sie diese Richtlinie aktivieren, werden Microsoft Edge nur von Microsoft AutoUpdate aktualisiert.
 
-Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden Microsoft Edge von Microsoft Edge Update aktualisiert.
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird Microsoft Edge von Microsoft Edge Update aktualisiert.
 
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
@@ -20932,7 +20932,7 @@ Wenn diese Option nicht festgelegt ist, wird der Standardzeitraum von 604800000 
 
 Benutzer werden über die Notwendigkeit eines Browserneustarts oder Geräteneustarts basierend auf den Richtlinieneinstellungen [RelaunchNotification](#relaunchnotification) und [RelaunchNotificationPeriod](#relaunchnotificationperiod) benachrichtigt. Browser und Geräte werden am Ende des Benachrichtigungszeitraums erzwungen neu gestartet, wenn die [RelaunchNotification-Richtlinie](#relaunchnotification) auf "Erforderlich" festgelegt ist. Diese RelaunchWindow-Richtlinie kann verwendet werden, um das Ende des Benachrichtigungszeitraums zurückstellen, sodass sie innerhalb eines bestimmten Zeitfensters liegt.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, liegt das Standardmäßige Zielzeitfenster für Microsoft Edge zwischen 2 Uhr und 4 Uhr. Das Standardmäßige Zielzeitfenster für Microsoft Edge ist der ganze Tag (d. h. das Ende des Benachrichtigungszeitraums wird nie zurückgestellt).
+Wenn Sie diese Richtlinie nicht konfigurieren, liegt das Standardzeitfenster für Microsoft Edge zwischen 2 Uhr und 4 Uhr. Das Standardmäßige Zielzeitfenster für Microsoft Edge ist der ganze Tag (d. h., das Ende des Benachrichtigungszeitraums wird nie zurückgestellt).
 
 Hinweis: Obwohl die Richtlinie mehrere Elemente in Einträgen akzeptieren kann, werden bis auf das erste Element alle ignoriert.
 Warnung: Das Festlegen dieser Richtlinie kann die Anwendung von Softwareupdates verzögern.
@@ -21028,7 +21028,7 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
   Steuert, ob Benutzer Remotedebugging verwenden dürfen.
 
-Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer Remotedebugging verwenden, indem sie Befehlszeilenoptionen "--remote-debug-port" und "-remote-debugging-pipe" angeben.
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer Remotedebugging verwenden, indem sie Befehlszeilenoptionen für "-remote-debug-port" und "-remote-debugging-pipe" angeben.
 
 Wenn Sie diese Richtlinie deaktivieren, dürfen Benutzer das Remotedebugging nicht verwenden.
 
@@ -21635,7 +21635,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Beschreibung
 
-  Die Unterstützung für das Unterdrücken der TLS 1.0/1.1-Warnung wurde von Microsoft Edge ab Version 91 entfernt, und diese Richtlinie funktionierte dann nicht mehr.
+  Die Unterstützung für das Unterdrücken der TLS 1.0/1.1-Warnung wurde aus Microsoft Edge ab Version 91 entfernt, und diese Richtlinie funktionierte dann nicht mehr.
 
 Bestimmt die mindestens unterstützte Version von TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
 

@@ -1,5 +1,5 @@
 ---
-title: Anfängliche Einstellungsunterstützung für Microsoft Edge Browser
+title: Unterstützung anfänglicher Einstellungen für Microsoft Edge Browser
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Unterstützung anfänglicher Einstellungen für Microsoft Edge Browser.
-ms.openlocfilehash: 4ac5e69ad1efa61752097348324f917d9155d4f823d520895296c8ab01d7065c
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810229"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882261"
 ---
-# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Konfigurieren Microsoft Edge mithilfe der Einstellungen für die anfänglichen Einstellungen für die erstausführung
+# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Konfigurieren von Microsoft Edge mithilfe der anfänglichen Einstellungen für die Erstausführung
 
 Verwenden Sie die folgenden Informationen, um Microsoft Edge Einstellungen für die anfänglichen Einstellungen auf Ihren Windows Geräten zu konfigurieren.
 
@@ -28,7 +28,7 @@ Verwenden Sie die folgenden Informationen, um Microsoft Edge Einstellungen für 
 
 Ab Microsoft Edge Version 93 unterstützt Microsoft eine begrenzte Anzahl von Anfänglichen Einstellungen, die früher als "Mastereinstellungen" bezeichnet wurden, um Administratoren bei der Konfiguration von Browsern für die erste Ausführung zu unterstützen. sehen Sie sich die Liste der unterstützten Einstellungen unten an.  
 
-Bei der Bereitstellung dienen die anfänglichen Einstellungen als Standardbrowsereinstellungen auf verwalteten Geräten. Hierbei handelt es sich um die Einstellungen, die von Administratoren bevorzugt werden, die standardmäßig verwendet werden, aber von Benutzern geändert werden können oder für einige Geräte nicht verfügbar sind, da sie keiner Active Directory®Domäne angehören.
+Bei der Bereitstellung dienen die anfänglichen Einstellungen als Standardbrowsereinstellungen auf verwalteten Geräten. Dies sind die Einstellungen, die von Administratoren bevorzugt werden, um als Standard verwendet zu werden, aber von Benutzern geändert werden können oder für einige Geräte nicht verfügbar sind, da sie keiner Active Directory®domäne angehören.
 
 Einige Beispiele für Intialeinstellungen sind die anfängliche Konfiguration einer Standardstartseite oder Registerkarten mit bestimmten URLs.
 
@@ -60,7 +60,7 @@ Passen Sie die Einstellungseinstellungen in der heruntergeladenen *initial_prefe
 
 ## <a name="3-deploy-preferences-to-users-computer"></a>3: Bereitstellen von Einstellungen auf dem Computer der Benutzer
 
-Stellen Sie die *initial_preferences* Datei auf den Geräten der Benutzer zur gleichen Zeit bereit, wie Microsoft Edge Browser bereitgestellt wird, und platzieren Sie die Datei am folgenden Speicherort auf dem Gerät.
+Stellen Sie die *initial_preferences* Datei gleichzeitig mit der Bereitstellung Microsoft Edge Browsers auf den Geräten der Benutzer bereit, und platzieren Sie die Datei am folgenden Speicherort auf dem Gerät.
 
 ### <a name="windows-amd64-and-arm64"></a>Windows (AMD64 und ARM64)
 
@@ -71,7 +71,7 @@ Stellen Sie die *initial_preferences* Datei auf den Geräten der Benutzer zur gl
 |Canary | `"%LOCALAPPDATA%\Microsoft\Edge SxS\Application"` |
 | Dev | `"C:\Program Files (x86)\Microsoft\Edge Dev\Application"` |
 
-**Hinweis:** Die *initial_preferences-Datei* muss im selben Ordner wie die msedge.exe-Datei auf den Computern der Benutzer Windows bereitgestellt werden.  
+**Hinweis:** Die *initial_preferences* Datei muss im selben Ordner wie die msedge.exe-Datei auf den Computern der Benutzer Windows bereitgestellt werden.  
 
 ### <a name="macos"></a>macOS
 
@@ -86,6 +86,6 @@ Stellen Sie die *initial_preferences* Datei auf den Geräten der Benutzer zur gl
 
 Die anfänglichen Einstellungen werden nur wirksam, wenn die initial_preferences-Datei bereitgestellt wird, bevor der Browser von den Endbenutzern zum ersten Mal ausgeführt wird.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Die *initial_prefrences* Beispielvorlagendatei](https://www.microsoft.com/edge/business/download)

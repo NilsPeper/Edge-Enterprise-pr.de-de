@@ -1,33 +1,33 @@
 ---
 title: Regulärer Ausdruck 2 Syntax
 ms.author: comanea
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 08/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Regulärer Ausdruck 2 Syntax
-ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725998"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882141"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Regulärer Ausdruck 2 (re2.h), Syntax
 
 Reguläre Ausdrücke sind eine Notation zur Beschreibung von Gruppen von Zeichenfolgen. Wenn sich eine Zeichenfolge in der durch einen regulären Ausdruck beschriebenen Gruppe befindet, wird häufig davon gesprochen, dass der reguläre Ausdruck der Zeichenfolge entspricht.
 
-Der einfachste reguläre Ausdruck ist ein einzelnes Literalzeichen. Außer bei Metazeichen wie *\ * +? ()|* entsprechen die Zeichen einander. Um einem Metazeichen zu entsprechen, können Sie es mit einem umgekehrten Schrägstrich ausgleichen: \+ entspricht einem Literal-Pluszeichen.
+Der einfachste reguläre Ausdruck ist ein einzelnes Literalzeichen. Außer bei Metazeichen wie `\*+?()|` entsprechen die Zeichen einander. Um einen Metazeichen zuzuordnen, escapen Sie ihn mit einem umgekehrten Schrägstrich: `\+` entspricht einem Literal plus Zeichen.
 
 Zwei reguläre Ausdrücke können geändert oder verkettet werden, um einen neuen regulären Ausdruck zu erstellen: Wenn e1 mit s und e2 mit t übereinstimmt, stimmt e1e2 mit s oder t überein und *e<sub>1</sub>* *e<sub>2</sub>* mit _st_.
 
-Die Metazeichen _\*_ , _+_ und _?_ sind Wiederholungsoperatoren: *e<sub>1</sub>* _\*_ stimmt mit einer Sequenz von null oder mehreren (möglicherweise unterschiedlichen) Zeichenfolgen überein, die jeweils mit *e<sub>1</sub>* übereinstimmen; *e<sub>1</sub>* _+_ stimmen mit einer oder mehreren überein; *e<sub>1</sub>* _?_ stimmt mit null oder einer überein.
+Die Metazeichen _`\`_ , _+_ und _?_ sind Wiederholungsoperatoren: *e<sub>1</sub>* _`\`_ stimmt mit einer Sequenz von null oder mehreren (möglicherweise unterschiedlichen) Zeichenfolgen überein, die jeweils mit *e<sub>1</sub>* übereinstimmen; *e<sub>1</sub>* _+_ stimmen mit einer oder mehreren überein; *e<sub>1</sub>* _?_ stimmt mit null oder einer überein.
 
-Die Rangfolge des Operators von der schwächsten zur stärksten Bindung, lautet zuerst Alternierung, dann Verkettung und schließlich Wiederholungsoperatoren. Explizite Klammern können, genau wie in arithmetischen Ausdrücken, verwendet werden, um unterschiedliche Bedeutungen zu erzwingen. Einige Beispiele: ab|cd entspricht (ab)|(cd); _ab\*_ entspricht _a(b\*)_ .
+Die Rangfolge des Operators von der schwächsten zur stärksten Bindung, lautet zuerst Alternierung, dann Verkettung und schließlich Wiederholungsoperatoren. Explizite Klammern können, genau wie in arithmetischen Ausdrücken, verwendet werden, um unterschiedliche Bedeutungen zu erzwingen. Einige Beispiele: _ab|cd_ entspricht _(ab)|( cd)_ ; _`ab\`_ entspricht _`a(b\)`_ .
 
 Die bisher beschriebene Syntax entspricht zum größten Teil der herkömmlichen _egrep_-Syntax regulärer Ausdrücke in UNIX. Diese Teilmenge reicht aus, um alle regulären Sprachen zu beschreiben: vereinfacht gesagt ist eine reguläre Sprache eine Reihe von Zeichenfolgen, die in einem einzigen Durchlaufen des Texts mit nur einer festen Menge an Speicher abgeglichen werden können. Neuere Einrichtungen für reguläre Ausdrücke (insbesondere Perl und solche, die diese kopiert haben) haben viele neue Operatoren und Escapesequenzen hinzugefügt, wodurch die regulären Ausdrücke präziser und manchmal kryptischer, aber in der Regel nicht mächtiger werden.
 

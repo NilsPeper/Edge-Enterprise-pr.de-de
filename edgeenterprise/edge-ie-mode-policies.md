@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Konfigurieren von Richtlinien für den IE-Modus
-ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726108"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882131"
 ---
 # <a name="configure-ie-mode-policies"></a>Konfigurieren von Richtlinien für den IE-Modus
 
@@ -75,10 +75,8 @@ Mithilfe der folgenden Gruppenrichtlinien können Sie bestimmte Websites so konf
     > [!NOTE]
     > Die Konfiguration der Microsoft Edge-Richtlinie ist nicht zwingend erforderlich. Viele Organisationen verwenden dies als Überschreibung, sodass sie mit der IE-Richtlinie die aktuelle Websiteliste auf alle Benutzer ausrichten können und eine aktualisierte Version leichter auf Pilotverwendungen mit der Microsoft Edge-Richtlinie ausrichten können.
 
-Weitere Informationen zu Enterprise Mode-Siteliste finden Sie unter:
+Weitere Informationen zu Enterprise Mode Site Lists finden Sie unter [Use the Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager).
 
-- [Verwenden des Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Hinzufügen mehrerer Websites zur Websiteliste für den Unternehmensmodus unter Verwendung einer Datei und von Enterprise Mode Site List Manager (Schema V.2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Konfigurieren mithilfe der Richtlinie "Die Websiteliste für den Unternehmensmodus-IE verwenden":
 
