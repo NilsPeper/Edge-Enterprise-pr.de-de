@@ -3,19 +3,19 @@ title: Was ist der Internet Explorer-Modus?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie der Internet Explorer-Modus in Microsoft Edge Zugriff auf Websites bietet, die Internet Explorer 11 benötigen, sowie Zugriff auf moderne Websites.
-ms.openlocfilehash: 7d1d9d201abee9cd9f0d648f2757e3276945d2f4dcf635ea0cd17a64e684aec4
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: cf2271f8b95c97a63695abf471ae67e693798ff2
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726062"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882281"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Was ist der Internet Explorer (IE)-Modus?
 
@@ -47,16 +47,16 @@ Nur die Websites, die Sie speziell (über eine Richtlinie) konfigurieren, verwen
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Im IE-Modus werden folgende Funktionen von Internet Explorer unterstützt
 
 - Alle Dokumentmodi und Unternehmensmodi
-- ActiveX-Steuerelemente (wie Java oder Silverlight)
+- ActiveX-Steuerelemente (wie Java oder Silverlight). **Hinweis**: Silverlight erreicht das [Ende des Supports](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) am 12. Oktober 2021. 
 - Browserhilfsobjekte 
 - Internet Explorer-Einstellungen und Gruppenrichtlinien, die sich auf die Sicherheitszoneneinstellungen und den geschützten Modus auswirken
-- Die F12-Entwicklertools für IE, wenn der Start mit [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10) erfolgt
+- F12-Entwicklertools für IE, wenn der Start mit [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-) erfolgt
 - Microsoft Edge-Erweiterungen (Erweiterungen, die direkt mit dem IE-Seiteninhalt interagieren, werden nicht unterstützt.)
 
 ### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Im IE-Modus werden folgende Funktionen von Internet Explorer unterstützt nicht
 
 - Internet Explorer-Symbolleisten
-- Internet Explorer-Einstellungen und Gruppenrichtlinien, die sich auf das Navigationsmenü auswirken (z. B. Suchmaschinen und Startseiten)
+- Internet Explorer-Einstellungen und Gruppenrichtlinien, die das Navigationsmenü steuern.
 - IE11- oder Microsoft Edge F12-Entwicklungstools
 
 ## <a name="prerequisites"></a>Voraussetzungen
