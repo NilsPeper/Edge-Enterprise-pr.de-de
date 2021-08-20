@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Konfigurieren Sie die Microsoft Edge-Richtlinieneinstellungen für Windows mit Microsoft Intune.
-ms.openlocfilehash: cd11c8c92d67197d9cf1a24691615b0a56dd727626b9741b5664a5d1080ba950
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
+ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725480"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "11907259"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Konfigurieren der Microsoft Edge-Richtlinieneinstellungen mit Microsoft Intune
 
@@ -53,7 +53,8 @@ Dieses Verfahren nutzt administrative Vorlagen (die Sie möglicherweise aus der 
 3. Wählen Sie nach**Geräte** | **Übersicht** aus, und gehen Sie dann auf **Konfigurationsprofile** (unter der Überschrift Richtlinien) aus.
 4. Wählen Sie in der oberen Befehlsleiste **Profil erstellen** aus.
 5. Wählen Sie in der Dropdownliste unterhalb **Plattform****Windows 10 und höher**aus.
-6. Wählen Sie in der Dropdownliste unterhalb **Profil****Administrative Vorlagen** aus, und klicken Sie dann auf die Schaltfläche **Erstellen**. Der nächste Screenshot zeigt die Dropdownlisten, in denen Plattform und Art des Profil ausgewählt werden können.
+6. Wählen Sie in der Dropdownliste unter **"Profiltyp"** die Option **"Vorlagen"** aus.
+7. Wählen Sie unter **"Vorlagenname"** die Option **"Administrative Vorlagen"** aus, und klicken Sie dann auf die Schaltfläche **"Erstellen".** Der nächste Screenshot zeigt die Dropdownlisten, in denen Plattform und Art des Profil ausgewählt werden können.
 
     ![Wählen Sie die Plattform und Art des Profils aus](./media/configure-edge-with-intune/create-profile-platform.png)
 
