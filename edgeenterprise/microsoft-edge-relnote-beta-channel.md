@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/05/2021
+ms.date: 08/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: a03e6c8d88d8e5959b267492bceaceba4b766c37
-ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
+ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
+ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "11907269"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "11909910"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Websitekompatibilität – Auswirkungen von Änderungen an Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096127-august-20"></a>Version 93.0.961.27: 20. August
+
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-93096124-august-18"></a>Version 93.0.961.24: 18. August
 
@@ -46,7 +50,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ### <a name="new-policies"></a>Neue Richtlinien
 
-- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Zulassen der automatischen Wiedergabe von Medien auf bestimmten Websites
+- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Zulassen der automatischen Medienwiedergabe auf bestimmten Websites
 - [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) CECPQ2-Nach-Quantum-Schlüsselvereinbarung für TLS aktiviert
 - [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Konfigurieren der Ansicht im Datei-Explorer-Feature für SharePoint Seiten in Microsoft Edge
 - [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Steuern der Verwendung von JavaScript-JIT

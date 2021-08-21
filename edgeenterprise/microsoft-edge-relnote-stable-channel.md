@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/06/2021
+ms.date: 08/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: ab373397b49405ec608e27e8f51309489715d940
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
+ms.openlocfilehash: 66d70216da337b5052a7e5b86446db50c30a6f66
+ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882121"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "11909900"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -29,7 +29,11 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > [!NOTE]
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
-> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Websitekompatibilität – Auswirkungen von Änderungen an Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität für Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090278-august-19"></a>Version 92.0.902.78: 19. August
+
+Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnotes-security#august-19-2021) aufgeführt.
 
 ## <a name="version-92090267-august-5"></a>Version 92.0.902.67: 5. August
 
@@ -341,7 +345,7 @@ Stabile Kanalsicherheitsupdates sind [hier aufgeführt.](./microsoft-edge-relnot
 
 #### <a name="new-policies"></a>Neue Richtlinien
 
-Es wurden sieben neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden sieben neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) – Durchsuchen der Einstellungen für die Lebensdauer von Daten
 - [MAMEnabled](./microsoft-edge-policies.md#mamenabled) – Mobile App Management aktiviert
