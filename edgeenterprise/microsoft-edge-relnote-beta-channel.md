@@ -3,26 +3,26 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/20/2021
+ms.date: 08/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
+ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909910"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925322"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind [hier](microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
 
 > [!NOTE]
-> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Websitekompatibilität – Auswirkungen von Änderungen an Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität für Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
 ## <a name="version-93096127-august-20"></a>Version 93.0.961.27: 20. August
 
@@ -47,6 +47,14 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 - **Video picture in Picture (PiP) from hover toolbar.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bildmodus (PiP) zu wechseln. Wenn Sie mit dem Mauszeiger auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie das Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unseren Rollout für Windows Benutzer fortsetzen.
 
 - **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/6678134168485888) Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled-Richtlinie](/deployedge/microsoft-edge-policies#tripledesenabled) zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern aufrechterhalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert in Microsoft Edge Version 95 nicht mehr. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
+
+- **Richtlinien zum Umgehen ClickOnce und DirectInvoke-Eingabeaufforderungen.**  Wir haben unsere Richtlinien aktualisiert, um das Umgehen ClickOnce Eingabeaufforderungen und der DirectInvoke-App für angegebene Dateitypen aus bestimmten Domänen zu ermöglichen. Dazu müssen Sie Folgendes tun:
+
+  - Aktivieren [von ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) oder [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Aktivieren der [AutoOpenFileTypes-Richtlinie](/deployedge/microsoft-edge-policies#autoopenfiletypes) und Festlegen der Liste bestimmter Dateitypen, für die ClickOnce und DirectInvoke deaktiviert werden sollen
+  - Aktivieren Sie die [AutoOpenAllowedForURLs-Richtlinie,](/deployedge/microsoft-edge-policies#autoopenallowedforurls) und legen Sie die Liste der bestimmten Domänen fest, für die ClickOnce und DirectInvoke deaktiviert wird
+
+  Hinweis: AutoOpenAllowedForURLs ist eine Supporterrichtlinie für AutoOpenFileTypes. Wenn AutoOpenAllowedForURLs nicht festgelegt ist und AutoOpenFileTypes festgelegt ist, werden aufgelistete Dateitypen automatisch von allen URLs geöffnet.
 
 ### <a name="new-policies"></a>Neue Richtlinien
 
