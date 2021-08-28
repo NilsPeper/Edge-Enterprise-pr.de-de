@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
-ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
+ms.openlocfilehash: dc2eebb2faabd4c04e0db4a5be4ffaaaff8aebcf
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "11925322"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926001"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität für Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096133-august-27"></a>Version 93.0.961.33: 27. August
+
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-93096127-august-20"></a>Version 93.0.961.27: 20. August
 
@@ -38,7 +42,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 - **Anfängliche Einstellungen in Microsoft Edge.**  Ab Microsoft Edge Version 93 wird die Bereitstellung von Microsoft Edge in Ihrem Unternehmen durch die Hinzufügung der anfänglichen Einstellungen einfacher.
 
-- **Der IE-Modus auf Microsoft Edge unterstützt das "nomerge"-Verhalten.**  Ab Microsoft Edge Version 93 unterstützt der IE-Modus auf Microsoft Edge _nomerge_. Wenn ein neues Browserfenster von einer IE-Modusanwendung gestartet wird, befindet sich ein Endbenutzer in einer separaten Sitzung, ähnlich wie in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe verhindern müssen. Im Hintergrund wird bei jedem Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modus-Registerkarte innerhalb dieses Fensters, wenn es sich um eine der angegebenen "nomerge"-Websites handelt, dieses Fenster mindestens bis zum Schließen der letzten IE-Modus-Registerkarte in diesem Fenster in eine andere "nomerge"-IE-Sitzung von allen anderen Microsoft Edge Fenstern gesperrt. Weitere Informationen finden Sie [hier](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
+- **Der IE-Modus auf Microsoft Edge unterstützt das Verhalten "nomerge".**  Ab Microsoft Edge Version 93 unterstützt der IE-Modus auf Microsoft Edge _nomerge_. Wenn ein neues Browserfenster von einer IE-Modusanwendung gestartet wird, befindet sich ein Endbenutzer in einer separaten Sitzung, ähnlich wie in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe verhindern müssen. Im Hintergrund wird bei jedem Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modus-Registerkarte innerhalb dieses Fensters, wenn es sich um eine der angegebenen "nomerge"-Websites handelt, dieses Fenster mindestens bis zum Schließen der letzten IE-Modus-Registerkarte in diesem Fenster in eine andere IE-Sitzung "nomerge" von allen anderen Microsoft Edge Fenstern gesperrt. Weitere Informationen finden Sie [hier](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
 
 - **Registerkartengruppen.**  Die Möglichkeit, Registerkarten in benutzerdefinierte Gruppen zu kategorisieren, hilft Ihnen, Registerkarten in mehreren Arbeitsstreams effektiver zu finden, zu wechseln und zu verwalten. Um dies zu aktivieren, aktivieren wir die Registerkartengruppierung ab Microsoft Edge Version 93.
 
@@ -46,7 +50,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 - **Video picture in Picture (PiP) from hover toolbar.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bildmodus (PiP) zu wechseln. Wenn Sie mit dem Mauszeiger auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie das Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unseren Rollout für Windows Benutzer fortsetzen.
 
-- **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/6678134168485888) Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled-Richtlinie](/deployedge/microsoft-edge-policies#tripledesenabled) zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern aufrechterhalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert in Microsoft Edge Version 95 nicht mehr. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
+- **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/6678134168485888) Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled-Richtlinie](/deployedge/microsoft-edge-policies#tripledesenabled) zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert in Microsoft Edge Version 95 nicht mehr. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
 
 - **Richtlinien zum Umgehen ClickOnce und DirectInvoke-Eingabeaufforderungen.**  Wir haben unsere Richtlinien aktualisiert, um das Umgehen ClickOnce Eingabeaufforderungen und der DirectInvoke-App für angegebene Dateitypen aus bestimmten Domänen zu ermöglichen. Dazu müssen Sie Folgendes tun:
 
@@ -66,7 +70,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 - [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Konfigurieren der Benutzerfunktion zum Überschreiben von Featureflags
 - [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Aktivieren der impliziten Anmeldung
 - [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Konfigurieren der Enterprise Mode Cloud Site List
-- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Konfigurieren, wie häufig die websiteliste für den Enterprise modus aktualisiert wird
+- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Konfigurieren, wie häufig die Enterprise Mode Site List aktualisiert wird
 - [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) JavaScript die Verwendung von JIT auf diesen Websites gestatten
 - [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Blockieren der Verwendung von JIT in JavaScript auf diesen Websites
 - [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Aktivieren Windows zum Durchsuchen lokaler Microsoft Edge Browserdaten
