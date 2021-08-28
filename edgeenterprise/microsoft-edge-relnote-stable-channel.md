@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 6a4c65d253a88384da7393ab846777093dc86e86
-ms.sourcegitcommit: 584a6a9877ae0c3fcb9acc0b8c158e280b0360ff
+ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2021
-ms.locfileid: "11912060"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926011"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität für Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090284-august-26"></a>Version 92.0.902.84: 26. August
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090278-august-19"></a>Version 92.0.902.78: 19. August
 
