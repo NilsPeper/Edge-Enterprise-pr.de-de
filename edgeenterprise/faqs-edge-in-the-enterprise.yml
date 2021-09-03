@@ -11,24 +11,24 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Häufig gestellte Fragen (FAQ) zur Bereitstellung von Microsoft Edge im Unternehmen
-  ms.openlocfilehash: edf0ec730ece83126619519cdd45d20f3271dd99845f4786f29dde32befec2b6
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
+  ms.sourcegitcommit: 0b23434b719dbeb302edf200a47550ee7b62a86a
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11725958"
+  ms.lasthandoff: 09/03/2021
+  ms.locfileid: "11938832"
 title: Häufig gestellte Fragen (FAQ) zu Microsoft Edge im Unternehmen
 summary: >
   > [!NOTE]
 
-  > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
+  > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 sections:
 - name: Ignoriert
   questions:
   - question: Woher weiß ich, welche Version von Microsoft Edge ich habe?
     answer: >
       Wählen Sie in der oberen rechten Ecke von Microsoft Edge das Ellipsensymbol (**...**) aus, und wählen Sie dann **Einstellungen**aus. Wählen Sie **Über Microsoft Edge** aus, um Ihre Version von Microsoft Edge anzuzeigen.
-  - question: Was ist mit Internet Explore 11?
+  - question: Was ist mit Internet Explorer 11?
     answer: >
       Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs finden Sie in den [häufig gestellten Fragen).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. Weitere Informationen finden Sie [hier](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
   - question: Unterstützt Microsoft Edge (Chromium-basiert) ActiveX-Steuerelemente oder BHOs wie Silverlight oder Java?
