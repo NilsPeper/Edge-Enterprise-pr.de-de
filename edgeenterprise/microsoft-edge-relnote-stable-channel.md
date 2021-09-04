@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/19/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
+ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926011"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938207"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -30,6 +30,34 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität für Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096138-september-02"></a>Version 93.0.961.38: September 02
+
+Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnotes-security#september-02-2021) aufgeführt.
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Voreinstellungen in Microsoft Edge.**  Microsoft Edge unterstützt jetzt eine begrenzte Anzahl von Voreinstellungen (ehemals Mastereinstellungen). IT-Administratoren können diese Einstellungen standardmäßig bereitstellen, bevor der Browser zum ersten Mal von seinen Benutzern ausgeführt wird. Weitere Informationen finden Sie hier: [Konfigurieren sie Microsoft Edge mithilfe der Einstellungen für die Voreinstellungen für die erste Ausführung.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
+
+- **Der IE-Modus auf Microsoft Edge unterstützt das "no-merge" Verhalten.**  Wenn ein Endbenutzer ein neues Browserfenster von einer IE-Modusanwendung aus startet, befindet es sich in einer separaten Sitzung, ähnlich dem "no-merge" Verhalten in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe als "no-merge" verhindern müssen. Im Hintergrund wird für jedes Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modusregisterkarte in diesem Fenster, wenn es sich um eine der vorgesehenen "no-merge"-Websites handelt, dieses Fenster in eine andere "no-merge" IE-Sitzung von allen anderen Microsoft Edge-Fenstern gesperrt, mindestens bis die letzte Registerkarte für den IE-Modus in diesem Fenster geschlossen wird. Dies folgt dem vorherigen Verhalten, bei dem Benutzer IE ohne Zusammenführung starten und auch Microsoft Edge ohne Zusammenführung über andere Mechanismen starten konnten.  Weitere Informationen finden Sie hier: [Problembehandlung im IE-Modus und häufig gestellte Fragen | Microsoft-Dokumentation](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
+
+- **Neue Richtlinie zum Beenden der impliziten Anmeldung.**  Mit der [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled)-Richtlinie können Systemadministratoren die implizite Anmeldung bei Microsoft Edge Browsern deaktivieren.
+
+- **Richtlinien zum Umgehen von ClickOnce- und DirectInvoke-Eingabeaufforderungen.** Wir haben unsere Richtlinien aktualisiert, um die Umgehung von ClickOnce-Eingabeaufforderungen und der DirectInvoke-App für angegebene Dateitypen aus angegebenen Domänen zu ermöglichen. Dazu müssen Sie folgende Schritte ausführen:
+
+  - Aktivieren von [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) oder [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Aktivieren Sie die [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes)-Richtlinie und legen Sie die Liste der spezifischen Dateitypen fest, für die ClickOnce und DirectInvoke deaktiviert werden sollen.
+  - Aktivieren Sie die [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls)-Richtlinie und legen Sie die Liste bestimmter Domänen fest, für die ClickOnce und DirectInvoke deaktiviert werden.
+
+  Hinweis: AutoOpenAllowedForURLs ist eine Supporterrichtlinie für AutoOpenFileTypes. Wenn AutoOpenAllowedForURLs nicht festgelegt und AutoOpenFileTypes festgelegt ist, werden die aufgelisteten Dateitypen automatisch über alle URLs geöffnet.
+
+- **Registerkartengruppen.**  Wir aktivieren die Registerkartengruppierung, die die Möglichkeit bietet, Registerkarten in benutzerdefinierte Gruppen zu kategorisieren, und Ihnen dabei hilft, Registerkarten effektiver in mehreren Arbeitsstreams zu finden, zwischen ihnen zu wechseln und sie zu verwalten.  
+
+- **Blenden Sie die Titelleiste aus, während Sie vertikale Registerkarten verwenden.**  Holen Sie sich die zusätzlichen Pixel zurück, indem Sie die Titelleiste des Browsers ausblenden, während Sie sich auf vertikalen Registerkarten befinden. Jetzt können Sie zu edge://settings/appearance wechseln und unter dem Abschnitt Symbolleiste anpassen die Option auswählen, um die Titelleiste im modus "Vertikale Registerkarte" auszublenden.
+
+- **Videobild in Bild (PiP) auf der Symbolleiste mit dem Mauszeiger.**  Wenn Sie auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie dieses Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  
+
+- **Entfernen von 3DES in TLS. Die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssammlung wird entfernt.** Diese Änderung erfolgt im Chromium-Projekt, auf dem Microsoft Edge basiert. Weitere Informationen finden Sie im [Chrome-Plattformstatuseintrag](https://chromestatus.com/feature/6678134168485888). Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled)-Richtlinie zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert nicht mehr in Microsoft Edge Version 95. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
 
 ## <a name="version-92090284-august-26"></a>Version 92.0.902.84: 26. August
 

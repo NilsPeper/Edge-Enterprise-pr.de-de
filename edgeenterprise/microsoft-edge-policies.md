@@ -1,9 +1,9 @@
 ---
 title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
-author: AndreaLBarr
+author: dan-wesley
 manager: tahills
-ms.date: 08/31/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
-ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
+ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934574"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11936563"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -254,7 +254,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[SmartScreenEnabled](#smartscreenenabled)|Konfigurieren des Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Erzwingen der Microsoft Defender-SmartScreen-Überprüfung für Downloads aus vertrauenswürdigen Quellen|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Konfigurieren von Microsoft Defender SmartScreen, sodass potenziell unerwünschte Apps blockiert werden|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
 
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -6283,7 +6283,7 @@ Wenn Sie diese Richtlinie deaktivieren, kommuniziert Microsoft Edge nicht mit In
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: MAMEnabled
   - Werttyp: REG_DWORD
 
@@ -9041,7 +9041,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
@@ -12442,7 +12442,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: BrowserSignin
   - Werttyp: REG_DWORD
 
@@ -18491,7 +18491,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationEnhancedHangDetection
   - Werttyp: REG_DWORD
 
@@ -18552,7 +18552,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationLevel
   - Werttyp: REG_DWORD
 
@@ -19045,7 +19045,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: InternetExplorerIntegrationSiteRedirect
   - Werttyp: REG_DWORD
 
@@ -19177,7 +19177,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: IntranetRedirectBehavior
   - Werttyp: REG_DWORD
 
@@ -21244,7 +21244,7 @@ Wenn diese Option nicht festgelegt ist, wird der Standardzeitraum von 604800000 
 
 Die Benutzer werden über die Notwendigkeit eines Browserneustarts oder Geräteneustarts basierend auf den Richtlinieneinstellungen [RelaunchNotification](#relaunchnotification) und [RelaunchNotificationPeriod](#relaunchnotificationperiod) benachrichtigt. Browser und Geräte werden am Ende des Benachrichtigungszeitraums zwingend neu gestartet, wenn die [RelaunchNotification](#relaunchnotification)-Richtlinie auf "Erforderlich" festgelegt ist. Diese RelaunchWindow-Richtlinie kann verwendet werden, um das Ende des Benachrichtigungszeitraums zurückzustellen, sodass es innerhalb eines bestimmten Zeitfensters liegt.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, liegt das Standardzeitfenster für Microsoft Edge zwischen 2:00 Uhr und 4:00 Uhr. Das standardmäßige Zielzeitfenster für Microsoft Edge ist der ganze Tag (d. h. das Ende des Benachrichtigungszeitraums wird nie zurückgestellt).
+Wenn Sie diese Richtlinie nicht konfigurieren, ist das standardmäßige Zielzeitfenster der ganze Tag (d. h. das Ende des Benachrichtigungszeitraums wird nie zurückgestellt).
 
 Hinweis: Obwohl die Richtlinie mehrere Elemente in Einträgen akzeptieren kann, werden bis auf das erste Element alle ignoriert.
 Warnung: Das Festlegen dieser Richtlinie kann die Anwendung von Softwareupdates verzögern.
@@ -23805,7 +23805,7 @@ Diese Richtlinie hat keine Auswirkungen auf QUIC-basierte Verbindungen. QUIC kan
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: 1, 2, 3, ...
   - Werttyp: REG_SZ-Liste
 
@@ -23940,7 +23940,7 @@ Diese Richtlinie wird in der Microsoft Edge-Version 95 veraltet werden.
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: TargetBlankImpliesNoOpener
   - Werttyp: REG_DWORD
 
@@ -25277,7 +25277,7 @@ Wenn Sie diese Richtlinie auf "falsch" festlegen oder diese Richtlinie nicht fes
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
+  - Pfad (Empfohlen): n.a.
   - Wertname: WebComponentsV0Enabled
   - Werttyp: REG_DWORD
 
