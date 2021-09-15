@@ -3,19 +3,19 @@ title: Lokale Websiteliste für den IE-Modus
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/20/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie lokale Websitelisten und einfachen Zugriff auf den IE-Modus aktivieren
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979172"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016564"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lokale Websiteliste für den IE-Modus
 
@@ -53,9 +53,10 @@ Um die lokale Websitelistenumgebung zu aktivieren, können Benutzer die URL *edg
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Internet Explorer-Kompatibilität":::
 
->[! Hinweis:]  
-
->1. Wenn Sie IE-Modustests über die *InternetExplorerIntegrationTestingAllowed-Richtlinie* aktiviert haben, wird diese Einstellung angezeigt, sie wird jedoch abgeblendet, es sei denn, Sie aktivieren explizit die *InternetExplorerIntegrationReloadInIEModeAllowed-Richtlinie.*  
+>[!Note]  
+>
+>1. Wenn Sie IE-Modustests über die *InternetExplorerIntegrationTestingAllowed-Richtlinie* aktiviert haben, wird diese Einstellung angezeigt, sie wird jedoch abgeblendet, es sei denn, Sie aktivieren explizit die *InternetExplorerIntegrationReloadInIEModeAllowed-Richtlinie.*
+>
 >2. Wenn **"Neuladen von Websites im Internet Explorer-Modus zulassen"** auf **"Standard"** festgelegt ist, können Benutzer möglicherweise Websites im IE-Modus neu laden, wenn sie über eine vorhandene Internet Explorer 11-Verwendung verfügen.  
 
 Wenn diese Einstellung aktiviert ist, können Benutzer eine Website im IE-Modus erneut laden, indem **sie Einstellungen und mehr auswählen (das Ellipsensymbol ...) > im Internet Explorer-Modus neu laden.** Benutzer können auch **die Registerkarte "Neu laden" im Internet Explorer-Modus** auswählen, wenn sie mit der rechten Maustaste auf eine Registerkarte klicken, oder auf der **neuen Registerkarte "Internet Explorer-Modus öffnen"** klicken, wenn sie mit der rechten Maustaste auf einen Link klicken.
