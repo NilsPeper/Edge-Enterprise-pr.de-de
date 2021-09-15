@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie lokale Websitelisten und einfachen Zugriff auf den IE-Modus aktivieren
-ms.openlocfilehash: db9246fc719648d34b5f54c7d123461b26f1c29f8268c08a1731ef8e6b516331
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724632"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979172"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lokale Websiteliste für den IE-Modus
 
@@ -31,7 +31,7 @@ In diesem Artikel wird erläutert, wie Sie den einfachen Zugriff auf den Interne
 
 1. Windows-Updates
 
-- Windows 10, Version 1909 – [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) oder höher  
+- Windows 10, Version 1909 [– KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) oder höher  
 
 - Windows 10, Version 2004; Windows 10, Version 20H2 und Windows 10, Version 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) oder höher
 
@@ -49,7 +49,7 @@ Hinweis: Eine *nicht konfigurierte* Website ist eine Website, die den IE-Modus e
 
 ## <a name="local-site-list-experience"></a>Lokale Websitelistenoberfläche
 
-Um die lokale Websitelistenumgebung zu aktivieren, können Benutzer zur URL *edge://settings/defaultBrowser* wechseln und festlegen, dass **Websites im Internet Explorer-Modus neu geladen werden** können, auf **"Zulassen".**
+Um die lokale Websitelistenumgebung zu aktivieren, können Benutzer die URL *edge://settings/defaultBrowser* aufrufen und festlegen, **dass Websites im Internet Explorer-Modus neu geladen werden** können, auf **"Zulassen".**
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Internet Explorer-Kompatibilität":::
 
@@ -58,16 +58,16 @@ Um die lokale Websitelistenumgebung zu aktivieren, können Benutzer zur URL *edg
 >1. Wenn Sie IE-Modustests über die *InternetExplorerIntegrationTestingAllowed-Richtlinie* aktiviert haben, wird diese Einstellung angezeigt, sie wird jedoch abgeblendet, es sei denn, Sie aktivieren explizit die *InternetExplorerIntegrationReloadInIEModeAllowed-Richtlinie.*  
 >2. Wenn **"Neuladen von Websites im Internet Explorer-Modus zulassen"** auf **"Standard"** festgelegt ist, können Benutzer möglicherweise Websites im IE-Modus neu laden, wenn sie über eine vorhandene Internet Explorer 11-Verwendung verfügen.  
 
-Wenn diese Einstellung aktiviert ist, können Benutzer eine Website im IE-Modus neu laden, indem **sie Einstellungen und mehr auswählen (das Ellipsensymbol ...) > Im Internet Explorer-Modus neu laden.** Benutzer können auch **die Registerkarte "Neu laden" im Internet Explorer-Modus** auswählen, wenn sie mit der rechten Maustaste auf eine Registerkarte klicken, oder auf der **neuen Registerkarte "Internet Explorer-Modus öffnen"** klicken, wenn sie mit der rechten Maustaste auf einen Link klicken.
+Wenn diese Einstellung aktiviert ist, können Benutzer eine Website im IE-Modus erneut laden, indem **sie Einstellungen und mehr auswählen (das Ellipsensymbol ...) > im Internet Explorer-Modus neu laden.** Benutzer können auch **die Registerkarte "Neu laden" im Internet Explorer-Modus** auswählen, wenn sie mit der rechten Maustaste auf eine Registerkarte klicken, oder auf der **neuen Registerkarte "Internet Explorer-Modus öffnen"** klicken, wenn sie mit der rechten Maustaste auf einen Link klicken.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-screenshot.png" alt-text="Neuladen im Internet Explorer-Modus":::
 
-Das Symbol für das **Erneute Laden im Internet Explorer-Modus** kann an die Symbolleiste angeheftet werden. Mit der Symbolleistenschaltfläche können Benutzer problemlos in den IE-Modus wechseln und diesen beenden und über die *edge://settings/appearance-URL* verwaltet werden.
+Das Symbol für das **Erneute Laden im Internet Explorer-Modus** kann an die Symbolleiste angeheftet werden. Die Symbolleistenschaltfläche ermöglicht Benutzern den einfachen Zugriff auf den IE-Modus und kann über die *edge://settings/appearance-URL* verwaltet werden.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-icon-screenshot.png" alt-text="Neuladen im Internet Explorer-Modus-Symbol":::
 
 >[!Note]
->Wenn sich der Benutzer auf einer Website befindet, die sich bereits in der Enterprise Mode Site List der Organisation befindet, werden optionen zum Neuladen (oder Beenden) des Internet Explorer-Modus angezeigt, aber abgeblendet.
+>Wenn sich der Benutzer auf einer Website befindet, die sich bereits in der Enterprise Mode Site List der Organisation befindet, sind optionen zum Neuladen (oder Beenden) des Internet Explorer-Modus sichtbar, aber abgeblendet.
 
 Wenn die Option ausgewählt ist, wird die Website im IE-Modus neu geladen. Das Symbol für den IE-Modus ist links neben der Adressleiste sichtbar, und das Flyout zeigt eine Option an, mit der Benutzer beim nächsten Mal auf "Seite im Internet Explorer-Modus öffnen" umschalten können. Dadurch wird die spezifische Seite, auf der sich der Benutzer befindet, zur lokalen Websiteliste hinzugefügt und für die nächsten 30 Tage automatisch im IE-Modus geöffnet.
 
@@ -79,9 +79,9 @@ Im IE-Modus wird Benutzern ein Banner angezeigt, das angibt, dass sie sich im IE
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/ie-mode-banner-screenshot.png" alt-text="Banner für den IE-Modus":::
 
-Benutzer können den IE-Modus mithilfe der Schaltfläche "Verlassen" auf dem Banner, des angehefteten IE-Modussymbols oder **Einstellungen und mehr beenden (das Ellipsensymbol ...) > Internet Explorer-Modus beenden,** andernfalls wird Microsoft Edge automatisch aus dem IE-Modus beendet, wenn eine Navigation stattfindet, die nicht "auf der Seite" ist (z. B. mithilfe der Adressleiste, der Zurück-Schaltfläche oder eines bevorzugten Links).
+Benutzer können den IE-Modus mithilfe der Schaltfläche "Verlassen" auf dem Banner, des angehefteten IE-Modussymbols oder **Einstellungen und mehr beenden (das Ellipsensymbol ...) > Internet Explorer-Modus beenden.** Andernfalls wird Microsoft Edge automatisch aus dem IE-Modus beendet, wenn eine Navigation stattfindet, die nicht "auf der Seite" ist (z. B. mithilfe der Adressleiste, der Zurück-Schaltfläche oder eines bevorzugten Links).
 
-Einträge verbleiben für einen Standardzeitraum von 30 Tagen in der lokalen Websiteliste. Es wird empfohlen, Legacywebsites für Ihre Organisation in der Websiteliste für den Enterprise modus zu konfigurieren. Die lokale Websiteliste stellt sicher, dass Benutzer ihren Workflow fortsetzen können, ohne unterbrochen zu werden, während die Websiteliste der Organisation aktualisiert wird. Wenn Benutzer an Tag 31 zu der Website navigieren, wird ein Banner angezeigt, in dem erläutert wird, dass die Website nicht mehr im IE-Modus geladen wird. Benutzer können es wieder der lokalen Websiteliste hinzufügen, wenn sie dies wünschen.
+Einträge verbleiben für einen Standardzeitraum von 30 Tagen in der lokalen Websiteliste. Es wird empfohlen, ältere Websites für Ihre Organisation in der Websiteliste für den Enterprise modus zu konfigurieren. Die lokale Websiteliste stellt sicher, dass Benutzer ihren Workflow fortsetzen können, ohne unterbrochen zu werden, während die Websiteliste der Organisation aktualisiert wird. Wenn Benutzer an Tag 31 zu der Website navigieren, wird ein Banner angezeigt, in dem erläutert wird, dass die Website nicht mehr im IE-Modus geladen wird. Benutzer können es wieder der lokalen Websiteliste hinzufügen, wenn sie dies wünschen.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/page-will-no-longer-load-in-ie-mode-screenshot.png" alt-text="Seite wird im IE-Modus nicht mehr geladen":::
 
@@ -93,7 +93,7 @@ Zwei Gruppenrichtlinien stehen zur Verfügung, um die lokale Websitelistenoberfl
 
 Diese Richtlinie entspricht der Microsoft Edge Einstellung "Zulassen, dass Websites im Internet Explorer-Modus neu geladen werden". Sie können auf diese Einstellung zugreifen, indem Sie zur URL *edge://settings/defaultbrowser* wechseln.
 
-- Wenn Sie diese Richtlinie aktivieren, können Benutzer eine Website im IE-Modus neu laden, indem **sie Einstellungen und mehr auswählen (das Ellipsensymbol ... > Im Internet Explorer-Modus neu laden.** Benutzer können auch **die Registerkarte "Neu laden" im Internet Explorer-Modus** auswählen, wenn sie mit der rechten Maustaste auf eine Registerkarte klicken, oder wenn sie mit der rechten Maustaste auf einen Link klicken, wählen Sie **"Link im neuen Internet Explorer-Modus öffnen"** aus.
+- Wenn Sie diese Richtlinie aktivieren, können Benutzer eine Website im IE-Modus erneut laden, indem **sie Einstellungen und mehr auswählen (das Ellipsensymbol ... > Im Internet Explorer-Modus neu laden.** Benutzer können auch **die Registerkarte "Neu laden" im Internet Explorer-Modus** auswählen, wenn sie mit der rechten Maustaste auf eine Registerkarte klicken, oder wenn sie mit der rechten Maustaste auf einen Link klicken, wählen Sie **"Link im neuen Internet Explorer-Modus öffnen"** aus.
 Benutzer können optional Microsoft Edge anweisen, den IE-Modus für die Website in Zukunft zu verwenden. Diese Auswahl wird für eine Standardeinstellung von 30 Tagen gespeichert und kann mithilfe der Richtlinie *InternetExplorerIntegrationLocalSiteListExpirationDays*verwaltet werden.
 
 - Wenn Sie diese Richtlinie deaktivieren, können Benutzer eine nicht konfigurierte Website im IE-Modus nicht erneut laden.
