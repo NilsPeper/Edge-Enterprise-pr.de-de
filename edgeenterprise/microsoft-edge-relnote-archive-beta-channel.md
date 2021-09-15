@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Archivierte Versionshinweise für Microsoft Edge Beta-Kanal
-ms.openlocfilehash: 60ef45f2b0db38233e06faa6aa3104ac1f9930c66b342cf9eb8d53f936c52256
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 065c665892edc264e2ab94375bedf3af9dbc936c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727618"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979072"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Archivierte Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -225,7 +225,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 #### <a name="new-policies"></a>Neue Richtlinien
 
-Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
+Es wurden zehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt.
 
 - [ConfigureFriendlyURLFormat](./microsoft-edge-policies.md#configurefriendlyurlformat) – Zum Konfigurieren des Standardformats für das Einfügen von URLs, die aus Microsoft Edge kopiert wurden, und zum Ermitteln, ob Benutzern weitere Formate zur Verfügung stehen.
 - [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) – Shopping in Microsoft Edge aktiviert.
@@ -262,7 +262,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-86062228-september-28"></a>Version 86.0.622.28: 28. September
 
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-86062215-september-14"></a>Version 86.0.622.15: 14. September
 
@@ -435,7 +435,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-85056436-august-17"></a>Version 85.0.564.36: 17. August
 
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
+Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-85056430-august-10"></a>Version 85.0.564.30: 10. August
 

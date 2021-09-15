@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Lebenszyklus
-ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726958"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979296"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Microsoft Edge-Lebenszyklusrichtlinie
 
@@ -29,7 +29,7 @@ In diesem Artikel wird die Lebenszyklusrichtlinie beschrieben, die für Microsof
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Übersicht über die Lifecycle-Richtlinie für Microsoft Edge
 
-Microsoft Edge Features häufiger und flexibler aktualisieren. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft folgen Microsoft Edge der [Modern-Lifecycle-Richtlinie.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) Sicherheitsupdates und Wartungsupdates sind nur für die neueste Stable-Kanalversion und die neueste Betakanalversion verfügbar. Die Verwendung älterer Versionen von Microsoft Edge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen.  Der unterstützte Support ist wie unten beschrieben verfügbar.
+Microsoft Edge features more frequent and more flexible updating capabilities. Da Browserversionen nicht an die Windows-Hauptversionen gebunden sind, muss die Richtlinie für den Lebenszyklus entsprechend aktualisiert werden. In Zukunft folgen Microsoft Edge der [Modern-Lifecycle-Richtlinie.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) Sicherheitsupdates und Wartungsupdates sind nur für die neueste Stable-Kanalversion und die neueste Betakanalversion verfügbar. Die Verwendung älterer Versionen von Microsoft Edge bedeutet wahrscheinlich, dass Ihnen die neuesten Qualitäts- und Sicherheitsupdates fehlen. Das wird nicht empfohlen.  Der unterstützte Support ist wie unten beschrieben verfügbar.
 
 ## <a name="servicing-and-assisted-support-timeline-for-microsoft-edge-77-93"></a>Zeitraum für Wartung und unterstützten Support für Microsoft Edge 77-93
 
@@ -57,7 +57,7 @@ Wir wissen, dass Unternehmenskunden, die komplexe Umgebungen verwalten, mehr Zei
 |     4-wöchiges "Stable"             |     Aktuell und 2 vorherige             |     Aktuell                           |     12 Wochen                            |     4 Wochen               |
 |     8-wöchiger "Extended Stable"    |     Aktuell und 1 vorherige             |     Aktuell                           |     16 Wochen                            |     8 Wochen               |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
 - [Dokumentation für Microsoft Edge](./index.yml)

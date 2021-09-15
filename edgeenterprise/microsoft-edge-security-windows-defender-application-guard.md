@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Unterstützung für Microsoft Defender Application Guard
 ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11925991"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979338"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Edge-Unterstützung für Microsoft Defender Application Guard
 
@@ -53,7 +53,7 @@ Die Unterstützung von Application Guard im neuen Microsoft Edge-Browser ist fun
 
 ### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Aktivieren von Application Guard im passiven Modus und normales Durchsuchen von Edge
 
-Ab Microsoft Edge 94 haben Benutzer jetzt die Möglichkeit, den passiven Modus zu konfigurieren, was bedeutet, dass Application Guard die Konfiguration der Websitelisten ignoriert und Benutzer Edge normal durchsuchen können. Diese Unterstützung kann über Richtlinien gesteuert werden. Sie können die Edgerichtlinie [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) aktualisieren, um den passiven Modus zu aktivieren oder zu deaktivieren.
+Ab Microsoft Edge 94 haben Benutzer jetzt die Möglichkeit, den passiven Modus zu konfigurieren, was bedeutet, dass Application Guard die Konfiguration der Websiteliste ignoriert und Benutzer Edge normal durchsuchen können. Diese Unterstützung kann über Richtlinien gesteuert werden. Sie können die Edgerichtlinie [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) aktualisieren, um den passiven Modus zu aktivieren oder zu deaktivieren.
 
 > [!Note]
 > Diese Richtlinie wirkt sich NUR auf Edge aus, sodass Navigationen von anderen Browsern möglicherweise an den Application Guard-Container umgeleitet werden, wenn die entsprechenden Erweiterungen aktiviert sind.
@@ -156,7 +156,7 @@ Abhängig von den Einstellungen Ihrer Organisation können Mitarbeiter Bilder (.
 
 Abhängig von den Einstellungen Ihrer Organisation kann es sein, dass die Favoritensynchronisierung deaktiviert ist. Informationen zum Verwalten der Richtlinie finden Sie unter: Microsoft Edge und Microsoft Defender Application Guard | Microsoft Docs.
 
-### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Warum können Mitarbeiter ihre Erweiterungen nicht in der Application Guard Edge-Sitzung sehen?
+### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Warum können Mitarbeiter ihre Erweiterungen in der Application Guard Edge-Sitzung nicht sehen?
 
 Stellen Sie sicher, dass Sie die Erweiterungsrichtlinie für Ihre Application Guard-Konfiguration aktivieren.
 
@@ -164,7 +164,7 @@ Stellen Sie sicher, dass Sie die Erweiterungsrichtlinie für Ihre Application Gu
 
 Wenn die Erweiterungsrichtlinie für MDAG in der Konfiguration aktiviert ist, überprüfen Sie, ob Ihre Erweiterung systemeigene Nachrichtenbehandlungskomponenten erfordert. Diese Erweiterungen werden im Application Guard-Container nicht unterstützt.
 
-### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>Ich versuche, die Videowiedergabe mit HDR anzusehen. Warum fehlt die HDR-Option?
+### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>Ich versuche, die Videowiedergabe mit HDR anzusehen, warum fehlt die HDR-Option?
 
 Damit die HDR-Videowiedergabe im Container funktioniert, muss die vGPU-Hardwarebeschleunigung in Application Guard aktiviert werden.
 

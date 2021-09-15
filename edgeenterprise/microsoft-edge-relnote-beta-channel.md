@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
-ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
+ms.openlocfilehash: d455b2ccab734ba8792754b81994ac381b974f73
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938304"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979386"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Änderungen mit Auswirkungen auf die Websitekompatibilität für Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099214-september-7"></a>Version 94.0.992.14: 7. September
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-9409929-september-2"></a>Version 94.0.992.9: 2. September
 
@@ -34,9 +38,9 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 - **Verbesserungen beim Standardverhalten beim Öffnen von MHTML-Dateien.**  MHTML-Dateien werden weiterhin im IE-Modus geöffnet, wenn der IE-Modus aktiviert ist, es sei denn, die MHTML-Datei wurde aus Microsoft Edge gespeichert (mithilfe der Optionen "Speichern unter" oder "Seite speichern unter" in Microsoft Edge). Wenn die Datei aus Microsoft Edge gespeichert wurde, wird sie nun in Microsoft Edge geöffnet.  Diese Änderung behebt ein Renderingproblem, das beim Öffnen einer MHTML-Datei im IE-Modus beim Speichern aus Microsoft Edge festgestellt wurde.
 
-- **Beschränken Sie Private-Network-Anforderungen auf sichere Kontexte.** Der Zugriff auf Ressourcen in lokalen (Intranet-) Netzwerken von Seiten im Internet erfordert, dass diese Seiten über HTTPS bereitgestellt werden. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/5436853517811712) Zur Unterstützung von Szenarien, die die Kompatibilität mit nicht sicheren Seiten beibehalten müssen, stehen zwei Kompatibilitätsrichtlinien zur Verfügung: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) und [InsecurePrivateNetworkRequestAllowedForUrls.](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)
+- **Beschränken Sie Private-Network-Anforderungen auf sichere Kontexte.** Der Zugriff auf Ressourcen in lokalen (Intranet-) Netzwerken von Seiten im Internet erfordert, dass diese Seiten über HTTPS bereitgestellt werden. Diese Änderung erfolgt im Chromium-Projekt, auf dem Microsoft Edge basiert. Weitere Informationen finden Sie im [Chrome-Plattformstatuseintrag](https://chromestatus.com/feature/5436853517811712). Zur Unterstützung von Szenarien, die die Kompatibilität mit nicht sicheren Seiten beibehalten müssen, stehen zwei Kompatibilitätsrichtlinien zur Verfügung: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) und [InsecurePrivateNetworkRequestAllowedForUrls.](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)
 
-- **Blockieren von Downloads gemischter Inhalte.** Sichere Seiten laden nur Dateien herunter, die auf anderen sicheren Seiten gehostet werden, und Downloads, die auf nicht sicheren Seiten (nicht HTTPS) gehostet werden, werden blockiert, wenn sie von einer sicheren Seite initiiert werden. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Google Security-Blogeintrag.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+- **Blockieren von Downloads gemischter Inhalte.** Sichere Seiten laden nur Dateien herunter, die auf anderen sicheren Seiten gehostet werden, und Downloads, die auf nicht sicheren Seiten (nicht HTTPS) gehostet werden, werden blockiert, wenn sie von einer sicheren Seite initiiert werden. Diese Änderung erfolgt im Chromium-Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Google Security-Blogeintrag.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
 
 - **Aktivieren Sie die implizite Anmeldung für lokale Konten.**   Durch Aktivieren der OnlyOnPremisesImplicitSigninEnabled-Richtlinie werden nur lokale Konten für die implizite Anmeldung aktiviert.  Microsoft Edge wird keine implizite Anmeldung bei MSA- oder AAD-Konten versuchen. Das Upgrade von lokalen Konten auf AAD-Konten wird ebenfalls beendet.
 
@@ -44,11 +48,21 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 - **Aktualisieren Sie Ihre Kennwörter ganz einfach.**  Der Browser führt Sie nun direkt zur Seite zum Ändern des Kennworts für eine bestimmte Website, wodurch Sie Zeit und Klicks sparen, indem Sie vermeiden, dass Sie manuell zu der Seite navigieren müssen. Sobald Sie sich auf dieser Seite befinden, füllt der Browser auch Ihr vorhandenes Kennwort automatisch aus und schlägt ein sicheres, eindeutiges neues Kennwort vor.  Bitte beachten Sie: Dieses Feature ist derzeit auf einer begrenzten Anzahl von Websites verfügbar.  
 
-- **Seite "Neue Barrierefreiheitseinstellungen".** Wir haben barrierefreiheitsbezogene Einstellungen auf einer einzigen Seite zusammengeführt. Sie finden die neue edge://settings/accessibility Seite unter der Haupteinstellungsliste. Hier finden Sie Einstellungen, um die Webseite zu vergrößern, eine Gliederung mit hoher Sichtbarkeit um den Fokusbereich und andere Einstellungen anzuzeigen, die Ihnen helfen können, Ihre Webbrowserfahrung zu verbessern. In zukünftigen Versionen von Microsoft Edge werden wir hier weiterhin neue Einstellungen hinzufügen.
+- **Seite "Neue Barrierefreiheitseinstellungen".** Wir haben barrierefreiheitsbezogene Einstellungen auf einer einzigen Seite zusammengeführt. Sie finden die neue edge://settings/accessibility Seite unter der Haupteinstellungsliste. Hier finden Sie Einstellungen, um die Webseite zu vergrößern, eine Gliederung mit hoher Sichtbarkeit um den Fokusbereich und andere Einstellungen anzuzeigen, die Ihnen helfen können, Ihre Webbrowserfahrung zu verbessern. Wir werden in zukünftigen Versionen von Microsoft Edge weiterhin neue Einstellungen hinzufügen.
+
+***Neue Richtlinien***
+
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard-Websitelistenkonfiguration ignorieren und Edge normal durchsuchen
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Nur lokales Konto für implizite Anmeldung aktiviert
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Aktivieren der Unterstützung für Windows Routingtabellenregeln des Betriebssystems beim Herstellen von Peer-to-Peer-Verbindungen über WebRTC
+
+***Veraltete Richtlinie***
+
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Aktivieren der User-Agent Client Hints-Funktion
 
 ## <a name="version-93096133-august-27"></a>Version 93.0.961.33: 27. August
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-93096127-august-20"></a>Version 93.0.961.27: 20. August
 
@@ -56,37 +70,37 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-93096124-august-18"></a>Version 93.0.961.24: 18. August
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-93096111-august-3"></a>Version 93.0.961.11: 3. August
 
 ### <a name="feature-updates"></a>Funktionsupdates
 
-- **Anfängliche Einstellungen in Microsoft Edge.**  Ab Microsoft Edge Version 93 wird die Bereitstellung von Microsoft Edge in Ihrem Unternehmen durch die Hinzufügung der [anfänglichen Einstellungen](/deployedge/initial-preferences-support-on-microsoft-edge-browser)einfacher.
+- **Voreinstellungen in Microsoft Edge.**  Ab Microsoft Edge Version 93 wird die Bereitstellung von Microsoft Edge in Ihrem Unternehmen durch die Hinzufügung der [anfänglichen Einstellungen](/deployedge/initial-preferences-support-on-microsoft-edge-browser)einfacher.
 
-- **Der IE-Modus auf Microsoft Edge unterstützt das "No-Merge"-Verhalten.**  Ab Microsoft Edge Version 93 unterstützt der IE-Modus auf Microsoft Edge "No-Merge". Wenn ein neues Browserfenster von einer IE-Modusanwendung gestartet wird, befindet sich ein Endbenutzer in einer separaten Sitzung, ähnlich wie in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe verhindern müssen. Im Hintergrund wird bei jedem Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modus-Registerkarte innerhalb dieses Fensters, wenn es sich um eine der angegebenen "No-Merge"-Websites handelt, dieses Fenster mindestens bis zum Schließen der letzten IE-Modus-Registerkarte in diesem Fenster in eine andere "No-Merge"-IE-Sitzung von allen anderen Microsoft Edge Fenstern gesperrt. Weitere Informationen finden Sie [hier](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
+- **Der IE-Modus auf Microsoft Edge unterstützt das "no-merge" Verhalten.**  Ab Microsoft Edge Version 93 unterstützt der IE-Modus auf Microsoft Edge "No-Merge". Wenn ein neues Browserfenster von einer IE-Modusanwendung gestartet wird, befindet sich ein Endbenutzer in einer separaten Sitzung, ähnlich wie in IE11. Sie müssen Ihre Websiteliste anpassen, um Websites zu konfigurieren, die die Sitzungsfreigabe verhindern müssen. Im Hintergrund wird für jedes Fenster von Microsoft Edge beim ersten Aufrufen einer IE-Modusregisterkarte in diesem Fenster, wenn es sich um eine der vorgesehenen "no-merge"-Websites handelt, dieses Fenster in eine andere "no-merge" IE-Sitzung von allen anderen Microsoft Edge-Fenstern gesperrt, mindestens bis die letzte Registerkarte für den IE-Modus in diesem Fenster geschlossen wird. Weitere Informationen finden Sie [hier](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
 
 - **Registerkartengruppen.**  Die Möglichkeit, Registerkarten in benutzerdefinierte Gruppen zu kategorisieren, hilft Ihnen, Registerkarten in mehreren Arbeitsstreams effektiver zu finden, zu wechseln und zu verwalten. Um dies zu aktivieren, aktivieren wir die Registerkartengruppierung ab Microsoft Edge Version 93.
 
-- **Blenden Sie die Titelleiste aus, während Sie vertikale Registerkarten verwenden.**  Rufen Sie die zusätzlichen Pixel zurück, indem Sie die Titelleiste des Browsers ausblenden, während Sie sich auf vertikalen Registerkarten befinden. Ab Microsoft Edge Version 93 können Sie zu edge://settings/appearance wechseln, und wählen Sie unter dem Abschnitt Symbolleiste anpassen die Option aus, um die Titelleiste im vertikalen Registerkartenmodus auszublenden.
+- **Blenden Sie die Titelleiste aus, während Sie vertikale Registerkarten verwenden.**  Holen Sie sich die zusätzlichen Pixel zurück, indem Sie die Titelleiste des Browsers ausblenden, während Sie sich auf vertikalen Registerkarten befinden. Ab Microsoft Edge Version 93 können Sie zu edge://settings/appearance wechseln und unter dem Abschnitt Symbolleiste anpassen die Option auswählen, um die Titelleiste im vertikalen Registerkartenmodus auszublenden.
 
-- **Video picture in Picture (PiP) from hover toolbar.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bild-Modus (PiP) zu wechseln. Wenn Sie mit dem Mauszeiger auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie das Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unseren Rollout für Windows Benutzer fortsetzen.
+- **Videobild in Bild (PiP) auf der Symbolleiste mit dem Mauszeiger.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bildmodus (PiP) zu wechseln. Wenn Sie auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie dieses Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unser Rollout für Windows Benutzer fortsetzen.
 
-- **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium Projekt, auf dem Microsoft Edge basiert. Für weitere Informationen navigieren Sie zum [Chrome Platform Status-Eintrag.](https://chromestatus.com/feature/6678134168485888) Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled-Richtlinie](/deployedge/microsoft-edge-policies#tripledesenabled) zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert in Microsoft Edge Version 95 nicht mehr. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
+- **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium-Projekt, auf dem Microsoft Edge basiert. Weitere Informationen finden Sie im [Chrome-Plattformstatuseintrag](https://chromestatus.com/feature/6678134168485888). Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled)-Richtlinie zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert nicht mehr in Microsoft Edge Version 95. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
 
-- **Richtlinien zum Umgehen ClickOnce und DirectInvoke-Eingabeaufforderungen.**  Wir haben unsere Richtlinien aktualisiert, um die Umgehung ClickOnce Eingabeaufforderungen und der DirectInvoke-App für angegebene Dateitypen aus bestimmten Domänen zu ermöglichen. Dazu müssen Sie Folgendes tun:
+- **Richtlinien zum Umgehen von ClickOnce- und DirectInvoke-Eingabeaufforderungen.**  Wir haben unsere Richtlinien aktualisiert, um die Umgehung von ClickOnce-Eingabeaufforderungen und der DirectInvoke-App für angegebene Dateitypen aus angegebenen Domänen zu ermöglichen. Dazu müssen Sie folgende Schritte ausführen:
 
-  - Aktivieren [von ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) oder [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
-  - Aktivieren der [AutoOpenFileTypes-Richtlinie](/deployedge/microsoft-edge-policies#autoopenfiletypes) und Festlegen der Liste bestimmter Dateitypen, für die ClickOnce und DirectInvoke deaktiviert werden sollen
+  - Aktivieren von [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) oder [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Aktivieren Sie die [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes)-Richtlinie und legen Sie die Liste der spezifischen Dateitypen fest, für die ClickOnce und DirectInvoke deaktiviert werden sollen.
   - Aktivieren Sie die [AutoOpenAllowedForURLs-Richtlinie,](/deployedge/microsoft-edge-policies#autoopenallowedforurls) und legen Sie die Liste der bestimmten Domänen fest, für die ClickOnce und DirectInvoke deaktiviert wird
 
-  Hinweis: AutoOpenAllowedForURLs ist eine Supporterrichtlinie für AutoOpenFileTypes. Wenn AutoOpenAllowedForURLs nicht festgelegt ist und AutoOpenFileTypes festgelegt ist, werden aufgelistete Dateitypen automatisch von allen URLs geöffnet.
+  Hinweis: AutoOpenAllowedForURLs ist eine Supporterrichtlinie für AutoOpenFileTypes. Wenn AutoOpenAllowedForURLs nicht festgelegt und AutoOpenFileTypes festgelegt ist, werden die aufgelisteten Dateitypen automatisch über alle URLs geöffnet.
 
 ### <a name="new-policies"></a>Neue Richtlinien
 
 - [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Zulassen der automatischen Medienwiedergabe auf bestimmten Websites
 - [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) CECPQ2-Nach-Quantum-Schlüsselvereinbarung für TLS aktiviert
-- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Konfigurieren der Ansicht im Datei-Explorer-Feature für SharePoint Seiten in Microsoft Edge
+- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Konfigurieren des Features "Ansicht im Datei-Explorer" für SharePoint Seiten in Microsoft Edge
 - [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Steuern der Verwendung von JavaScript-JIT
 - [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Zulassen, dass Benachrichtigungen Microsoft Edge als PDF-Standardleser festlegen
 - [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Konfigurieren der Benutzerfunktion zum Überschreiben von Featureflags
@@ -95,7 +109,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 - [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Konfigurieren, wie häufig die Enterprise Mode Site List aktualisiert wird
 - [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) JavaScript die Verwendung von JIT auf diesen Websites gestatten
 - [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Blockieren der Verwendung von JIT in JavaScript auf diesen Websites
-- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Aktivieren Windows zum Durchsuchen lokaler Microsoft Edge Browserdaten
+- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Aktivieren von Windows zum Durchsuchen lokaler Microsoft Edge Browserdaten
 - [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Verwenden Sie Immer Microsoft AutoUpdate als Updater für Microsoft Edge
 - [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) Einmaliges Anmelden für Microsoft-Websites mit diesem Profil zulassen
 - [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) OneAuth-Authentifizierung Flow für anmeldung erzwungen
@@ -133,7 +147,7 @@ Verschiedene Bugs und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090245-july-12"></a>Version 92.0.902.45: 12. Juli
 
-Verschiedene Bugs und Leistungsprobleme wurden behoben.
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-92090240-july-6"></a>Version 92.0.902.40: 6. Juli
 

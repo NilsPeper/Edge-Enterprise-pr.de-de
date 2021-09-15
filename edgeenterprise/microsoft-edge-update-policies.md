@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: 7b6043ecb96cb30ee9b51fc9966f925b223e72f29ac325ad06208d743f60e18f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724868"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979300"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge – Update-Richtlinien
 
@@ -400,7 +400,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
-### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Abrufen von Konfigurationen und Experimenten
 >Microsoft Edge Update 1.3.145.1 und höher
 
@@ -418,7 +418,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem verwa
 Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht verwalteten Gerät mit der Richtlinie "Aktiviert" identisch.
 
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
-##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+##### <a name="group-policy-admx-info"></a>Gruppenrichtlinie (ADMX) – Informationen
 - GP eindeutiger Name: UpdateExperimentationAndConfigureationServiceControl
 - GP-Name: Kommunikation des Steuerelementupdaters mit dem Experimentier- und Konfigurationsdienst
 - GP-Pfad: Administrative Vorlagen/Microsoftt Edge Update/Microsoft Edge Update
