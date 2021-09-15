@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Microsoft Edge-Benutzerdatenverzeichnisvariablen erstellen
-ms.openlocfilehash: e314f23334390fa45efa58daefac0730d8b849732fde75aeacffe4a486c50762
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724268"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979217"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Erstellen von Microsoft Edge-Benutzerdatenverzeichnisvariablen
 
