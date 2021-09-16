@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 44dac3dd6bb489ac43e50433319b0a7908495df5
+ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979245"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "12017989"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -1914,7 +1914,8 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   Diese Richtlinie funktioniert nicht, da Flash nicht mehr von Microsoft Edge unterstützt wird.
 
-[PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
+
+            [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellung manuell ändern.
 
@@ -8343,10 +8344,18 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer ihre eigenen
 
 Mit dieser Richtlinie werden die folgenden einzelnen Richtlinien außer Kraft gesetzt:
 
-[ProxyMode](#proxymode)
-[ProxyPacUrl](#proxypacurl)
-[ProxyServer](#proxyserver)
-[ProxyBypassList](#proxybypasslist)
+
+            [ProxyMode](#proxymode)
+            
+
+            [ProxyPacUrl](#proxypacurl)
+            
+
+            [ProxyServer](#proxyserver)
+            
+
+            [ProxyBypassList](#proxybypasslist)
+          
 
 Beim Festlegen der [ProxySettings](#proxysettings)-Richtlinie sind die folgenden Felder zulässig:
   * „ProxyMode“, über das Sie den von Microsoft Edge verwendeten Proxyserver angeben können. Dies verhindert, dass Benutzer Proxyeinstellungen ändern.
@@ -13721,9 +13730,11 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Konfigurieren des Features "Im Datei-Explorer anzeigen" für SharePoint-Seiten in Microsoft Edge
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Die Funktion „Im Datei-Explorer anzeigen“ für SharePoint-Seiten in Microsoft Edge konfigurieren
 
-  
+> [!NOTE]
+> Derzeit kann die Richtlinie „ConfigureViewInFileExplorer“ nur auf Windows-Instanzen angewendet werden, die in eine Microsoft Active Directory-Domäne eingebunden sind, oder auf Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind.
+
   
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
@@ -16662,7 +16673,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer die Synchron
 
 Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#browsersignin)-Richtlinie nicht konfiguriert oder aktiviert sein. Wenn [BrowserSignin](#browsersignin) auf "Deaktiviert" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
 
-[SyncDisabled](#syncdisabled) darf nicht konfiguriert sein oder muss auf "False" festgelegt sein. Wenn sie auf "True" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
+
+            [SyncDisabled](#syncdisabled) darf nicht konfiguriert sein oder muss auf "False" festgelegt sein. Wenn sie auf "True" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
 
 0 = Synchronisierung nicht automatisch starten und Zustimmungsaufforderung für die Synchronisierung anzeigen (Standardeinstellung) 1 = Aktivierung der Synchronisierung für Azure AD-/Azure AD-herabgesetztes Benutzerprofil erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen
 
@@ -17188,19 +17200,40 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Erst
 
 Hinweis: die spezifischen Konfigurationsoptionen, die dem Benutzer in der Erstausführungsumgebung angezeigt werden, können auch mit anderen spezifischen Richtlinien verwaltet werden. Sie können die HideFirstRunExperience-Richtlinie in Kombination mit diesen Richtlinien verwenden, um eine bestimmte Browseroberfläche auf Ihren verwalteten Geräten zu konfigurieren. Einige dieser anderen Richtlinien sind:
 
--[AutoImportAtFirstRun](#autoimportatfirstrun)
 
--[NewTabPageLocation](#newtabpagelocation)
+            -
+            [AutoImportAtFirstRun](#autoimportatfirstrun)
+          
 
--[NewTabPageSetFeedType](#newtabpagesetfeedtype)
 
--[ForceSync](#forcesync)
+            -
+            [NewTabPageLocation](#newtabpagelocation)
+          
 
--[SyncDisabled](#syncdisabled)
 
--[BrowserSignin](#browsersignin)
+            -
+            [NewTabPageSetFeedType](#newtabpagesetfeedtype)
+          
 
--[NonRemovableProfileEnabled](#nonremovableprofileenabled)
+
+            -
+            [ForceSync](#forcesync)
+          
+
+
+            -
+            [SyncDisabled](#syncdisabled)
+          
+
+
+            -
+            [BrowserSignin](#browsersignin)
+          
+
+
+            -
+            [NonRemovableProfileEnabled](#nonremovableprofileenabled)
+          
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17325,7 +17358,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die AutoFill-Daten bei der
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die AutoFill-Daten bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **AutoFill-Daten** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus den Browsern Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus den Browsern Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17393,7 +17427,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Browsereinstellungen b
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Einstellungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Browsereinstellungen** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17459,7 +17494,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Cookies bei der ersten Aus
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge Cookies bei der ersten Ausführung importiert.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17527,7 +17563,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Browsererweiterungen b
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Erweiterungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Favoriten** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17595,7 +17632,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Favoriten bei der erst
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Favoriten bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Favoriten** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17663,7 +17701,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Browserverlauf bei der e
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge den Browserverlauf bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Browserverlauf** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17731,7 +17770,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Startseiteneinstellung
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Startseiteneinstellungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Startseite** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17799,7 +17839,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die offenen Tabs bei der e
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die offenen Tabs bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Offene Tabs** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17867,7 +17908,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Zahlungsinformationen bei 
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Zahlungsinformationen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Zahlungsinformationen** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17935,7 +17977,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die gespeicherten Passwör
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die gespeicherten Passwörter bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **gespeicherten Passwörter** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18003,7 +18046,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Suchmaschineneinstellu
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Suchmaschineneinstellungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Suchmaschineneinstellungen** aktivieren oder deaktivieren.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18069,7 +18113,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Verknüpfungen bei der ers
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge Verknüpfungen bei der ersten Ausführung importiert.
 
-**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+
+            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18137,7 +18182,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Starteinstellungen bei
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Starteinstellungen bei der ersten Ausführung importiert, die Benutzer jedoch während des manuellen Imports die Option **Browsereinstellungen** auswählen oder deaktivieren können.
 
-**Hinweis:** Diese Richtlinie verwaltet derzeit den Import aus Vorgängerversion von Microsoft Edge- und Google Chrome-Browsern (unter Windows 7, 8 und 10).
+
+            **Hinweis:** Diese Richtlinie verwaltet derzeit den Import aus Vorgängerversion von Microsoft Edge- und Google Chrome-Browsern (unter Windows 7, 8 und 10).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -19138,7 +19184,8 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Opti
 
 Wenn diese Richtlinie nicht konfiguriert ist, verwendet der Browser das Standardverhalten von DNS-Interception-Prüfungen und Intranetumleitungsvorschlägen. In M88 sind sie standardmäßig aktiviert, werden aber im zukünftigen Release standardmäßig deaktiviert sein.
 
-[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ist eine verwandte Richtlinie, die DNS-Interception-Prüfungen möglicherweise auch deaktiviert. Diese Richtlinie ist jedoch eine flexiblere Version, die Infoleiste für Intranetumleitungen separat steuern kann und in Zukunft erweitert werden kann.
+
+            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ist eine verwandte Richtlinie, die DNS-Interception-Prüfungen möglicherweise auch deaktiviert. Diese Richtlinie ist jedoch eine flexiblere Version, die Infoleiste für Intranetumleitungen separat steuern kann und in Zukunft erweitert werden kann.
 Wenn entweder [DNSInterceptionChecksChecksEnabled](#dnsinterceptionchecksenabled) oder diese Richtlinie die Deaktivierung von Interception-Prüfungen anfordert, werden die Prüfungen deaktiviert.
 Wenn DNS-Interception-Prüfungen durch diese Richtlinie deaktiviert werden, [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) jedoch aktiviert ist, führen Einzelwortabfragen immer noch zu Intranetnavigationen.
 
@@ -21513,7 +21560,8 @@ Wenn Sie diese Richtlinie aktivieren, wird ein Webdienst für Netzwerkverbindung
 
 Wenn Sie diese Richtlinie deaktivieren, verwendet Microsoft Edge systemeigene APIs, um zu versuchen, Netzwerkkonnektivitäts- und Navigationsprobleme zu lösen.
 
-**Hinweis**: außer unter Windows 8 und neueren Versionen von Windows verwendet Microsoft Edge *immer* systemeigene APIs, um Verbindungsprobleme zu lösen.
+
+            **Hinweis**: außer unter Windows 8 und neueren Versionen von Windows verwendet Microsoft Edge *immer* systemeigene APIs, um Verbindungsprobleme zu lösen.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, respektiert Microsoft Edge die Benutzereinstellungen, die unter Dienste unter Edge://Settings/Privacy festgelegt sind.
 Insbesondere gibt es ein Wahlfeld **Verwenden eines Webdiensts zum Beheben von Navigationsfehlern**, das der Benutzer ein- oder ausschalten kann. Wenn Sie diese Richtlinie (ResolveNavigationErrorsUseWebService) aktiviert haben, sollten Sie wissen, dass die Einstellung **Verwenden eines Webdiensts zum Beheben von Navigationsfehlern** aktiviert ist, der Benutzer die Einstellung jedoch nicht mithilfe der Umschaltfläche ändern kann. Wenn Sie diese Richtlinie deaktiviert haben, ist die Einstellung **Verwenden eines Webdiensts zum Beheben von Navigationsfehlern** deaktiviert und der Benutzer kann die Einstellung nicht mithilfe der Umschaltfläche ändern.
@@ -21697,7 +21745,8 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Standardpfad für den Se
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden nur die normalen lokalen Profile verwendet.
 
-[SyncDisabled](#syncdisabled) deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf diese Richtlinie.
+
+            [SyncDisabled](#syncdisabled) deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf diese Richtlinie.
 
 Weitere Informationen zur Verwendung von Roaming-Benutzerprofilen finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058).
 
