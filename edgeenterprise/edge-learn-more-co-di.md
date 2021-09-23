@@ -3,23 +3,25 @@ title: ClickOnce und DirectInvoke in Microsoft Edge
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über ClickOnce und DirectInvoke in Microsoft Edge.
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979066"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034434"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Grundlegendes zu den ClickOnce- und DirectInvoke-Features in Microsoft Edge
 
 ClickOnce und DirectInvoke sind features available in IE and Microsoft Edge that support the use of a file handler to download files from a website. Obwohl sie unterschiedlichen Zwecken dienen, können Websites mit beiden Features angeben, dass eine zum Herunterladen angeforderte Datei an einen Dateihandler auf dem Gerät des Benutzers weitergeleitet wird. ClickOnce-Anforderungen werden vom systemeigenen Dateihandler in Windows verarbeitet. DirectInvoke-Anforderungen werden von einem registrierten Dateihandler verarbeitet, der von der Website angegeben wird, die die Datei hostet.
+
+Nach dem Einrichten von ClickOnce oder DirectInvoke können die ClickOnce- oder DirectInvoke-Eingabeaufforderungen umgangen werden, indem zusätzliche Unternehmensrichtlinien eingerichtet werden. Diese Richtlinien können entweder das Umgehen der ClickOnce oder directInvoke-Eingabeaufforderungen für angegebene Dateitypen für alle Domänen oder für angegebene Dateitypen aus angegebenen Domänen unterstützen.
 
 Weitere Informationen zu Features und Beschränkungen finden Sie in den häufig gestellten Fragen.
 
@@ -88,6 +90,10 @@ Das zweite Popup wird nur angezeigt, wenn:
 ## <a name="clickonce-and-directinvoke-policies"></a>ClickOnce- und DirectInvoke-Richtlinien
 
 Es gibt zwei Gruppenrichtlinien, mit denen Sie ClickOnce und DirectInvoke für Unternehmensbenutzer aktivieren oder deaktivieren können. Diese beiden Richtlinien sind [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) und [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Diese beiden Richtlinien sind im Gruppenrichtlinien-Editor mit "Zulassen, das Benutzer Dateien mit dem ClickOnce-Protokoll öffnen" und "Zulassen, dass Benutzer Dateien mit dem DirectInvoke-Protokoll öffnen" bezeichnet.
+
+Um Dateitypen anzugeben, für die die ClickOnce- oder DirectInvoke-Aufforderungen umgangen werden sollen, verwenden Sie die im Gruppenrichtlinien-Editor bezeichnete Richtlinie als "Liste der Dateitypen, die beim Download automatisch geöffnet werden sollen". Dadurch können bestimmte Dateitypen nach dem Download für alle Domänen automatisch geöffnet werden.  
+
+Um die ClickOnce- oder DirectInvoke-Aufforderungen für bestimmte Dateitypen für bestimmte Domänen zu umgehen, indem Sie zwei zusätzliche Richtlinien einrichten, die im Gruppenrichtlinien-Editor als "Liste der Dateitypen, die beim Download automatisch geöffnet werden sollen" und "URLs, auf die AutoOpen-FileTypes angewendet werden können" gekennzeichnet sind. Bitte beachten Sie, dass die Richtlinie "URLs, auf die AutoOpen- FileTypes angewendet werden kann" eine Supporterrichtlinie für "Liste der Dateitypen, die beim Download automatisch geöffnet werden sollen" ist und keine eigene Aktion ausführt.  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>ClickOnce- und DirectInvoke-Verhalten
 
