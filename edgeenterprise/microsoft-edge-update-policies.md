@@ -1,9 +1,9 @@
 ---
 title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979300"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037215"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge – Update-Richtlinien
 
@@ -41,6 +41,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[CreateDesktopShortcut](#createdesktopshortcut)|Verhindern der Erstellung von Desktopverknüpfungen bei der Installation (pro Kanal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Zurücksetzung auf Zielversion (pro Kanal)|
 |[TargetVersionPrefix](#targetversionprefix)|Außerkraftsetzung der Zielversion (pro Kanal)|
+|[TargetChannelOverride](#targetchanneloverride)|Außerkraftsetzung des Zielkanals (nur Stable)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Abrufen von Konfigurationen und Experimenten|
 ### [<a name="preferences"></a>Voreinstellungen](#preferences-policies)
 |Richtlinienname|Beschriftung|
@@ -400,6 +401,42 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
+### <a name="targetchanneloverride"></a>TargetChannelOverride
+>Microsoft Edge Update 1.3.147.1 und höher
+
+#### <a name="description"></a>Beschreibung
+Gibt an, auf welchen Kanal Microsoft Edge aktualisiert werden soll. 
+
+Wenn Sie diesen Poicy aktivieren, wird die Microsoft Edge entsprechend der Konfiguration der folgenden Optionen auf den Kanal aktualisiert:
+
+  - Stabil: Microsoft Edge wird auf die neueste stabile Version aktualisiert.
+  - Beta: Microsoft Edge wird auf die neueste Betaversion aktualisiert.
+  - Dev: Microsoft Edge wird auf die neueste Entwicklungsversion aktualisiert.
+  - Extended Stable: Microsoft Edge wird auf die neueste erweiterte stabile Version aktualisiert, die einer längeren Versionsfrequenz als stabil folgt. Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2163508 .
+
+Wenn Sie diese Richtlinie nicht konfigurieren, wird Microsoft Edge auf die neueste Version aktualisiert, die für den Stable Channel verfügbar ist.
+
+Diese Richtlinie ist nur auf Microsoft Edge Stable verfügbar.
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
+#### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+- GP eindeutiger Name: TargetChannelOverride
+- GP-Name: Außerkraftsetzung des Zielkanals
+- GP-Pfad: 
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge
+- Name der GP-ADMX-Datei: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Name des Wertes: 
+  - (Stabil): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- Werttyp: REG_SZ
+##### <a name="example-value"></a>Beispielwert:
+```
+extended
+```
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+
 ### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Abrufen von Konfigurationen und Experimenten
 >Microsoft Edge Update 1.3.145.1 und höher
@@ -418,7 +455,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem verwa
 Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht verwalteten Gerät mit der Richtlinie "Aktiviert" identisch.
 
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
-##### <a name="group-policy-admx-info"></a>Gruppenrichtlinie (ADMX) – Informationen
+##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 - GP eindeutiger Name: UpdateExperimentationAndConfigureationServiceControl
 - GP-Name: Kommunikation des Steuerelementupdaters mit dem Experimentier- und Konfigurationsdienst
 - GP-Pfad: Administrative Vorlagen/Microsoftt Edge Update/Microsoft Edge Update
