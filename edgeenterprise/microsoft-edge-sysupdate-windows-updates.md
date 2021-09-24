@@ -1,21 +1,21 @@
 ---
 title: Windows Updates für Microsoft Edge
 ms.author: jtkim
-author: dan-wesley
+author: RyanHechtMSFT
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows Updates für Microsoft Edge.
-ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979108"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037205"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Windows Updates zur Unterstützung der nächsten Version von Microsoft Edge
 
@@ -29,7 +29,7 @@ In diesem Artikel wird beschrieben, wie Windows aktualisiert wird, um die nächs
 
 ## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge und der Freigabezyklus der Windows-Versionen
 
-Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Hauptversionen von Windows gebunden sind, werden Änderungen am Betriebssystem vorgenommen, um sicherzustellen, dass die nächste Version von Microsoft Edge nahtlos in Windows passt. Aus diesem Grund werden Featureupdates in einem (etwa) 6-wöchigen Zyklus veröffentlicht. Sicherheits- und Kompatibilitätsupdates werden nach Bedarf ausgeliefert.
+Die nächste Version von Microsoft Edge bietet häufigere und flexiblere Aktualisierungsfunktionen. Da Browserversionen nicht an die Hauptversionen von Windows gebunden sind, werden Änderungen am Betriebssystem vorgenommen, um sicherzustellen, dass die nächste Version von Microsoft Edge nahtlos in Windows passt. Daher werden Featureupdates in einem 4-Wochen-Zyklus (ungefähr) veröffentlicht. Sicherheits- und Kompatibilitätsupdates werden nach Bedarf ausgeliefert.
 
 ## <a name="updates-and-the-user-experience"></a>Updates und die Benutzererfahrung
 
