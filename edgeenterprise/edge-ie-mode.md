@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie der Internet Explorer-Modus in Microsoft Edge Zugriff auf Websites bietet, die Internet Explorer 11 benötigen, sowie Zugriff auf moderne Websites.
-ms.openlocfilehash: cf2271f8b95c97a63695abf471ae67e693798ff2
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a426d9bd9d2ac3d81682e9fc2304e9e90d3461f8
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979200"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053324"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Was ist der Internet Explorer (IE)-Modus?
 
@@ -36,14 +36,14 @@ Wenn eine Website im IE-Modus geladen wird, wird die IE-Logo-Anzeige auf der lin
 
   ![IE-Logo-Anzeige](./media/ie-mode/ie-logo-indicator1.png)
 
-Nur die Websites, die Sie speziell (über eine Richtlinie) konfigurieren, verwenden den IE-Modus. Alle anderen Websites werden als moderne Websites dargestellt. Damit eine Website den IE-Modus verwenden kann, müssen Sie folgende Aktionen ausführen:
+Nur die Websites, die Sie speziell (über eine Richtlinie) konfigurieren, verwenden den IE-Modus. Alle anderen Websites werden als moderne Websites dargestellt. Damit eine Site den IE-Modus verwenden kann, müssen Sie entweder:
 
 - Listen Sie die Website in der in einer der folgenden Richtlinien definierten Enterprise Mode Site List-XML auf:
   - Microsoft Edge 78 oder höher, „Enterprise Mode-Siteliste konfigurieren”
   - Internet Explorer. „Die Websiteliste für den Unternehmensmodus-IE verwenden”
   > [!NOTE]
   > Es wird nur eine Enterprise Mode Site List verarbeitet. Die Microsoft Edge-Websitelistenrichtlinie hat Vorrang vor der Internet Explorer-Websitelistenrichtlinie.
-- Alle Intranetwebsites, wenn die Gruppenrichtlinie **Alle Intranetwebsites an Internet Explorer senden** aktiviert ist (Microsoft Edge 77 oder höher)
+- Konfigurieren Sie die Gruppenrichtlinie **Alle Intranetsites an Internet Explorer senden** und legen Sie sie auf **Aktiviert** fest (Microsoft Edge 77 oder höher).
 
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Im IE-Modus werden folgende Funktionen von Internet Explorer unterstützt
 
