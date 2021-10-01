@@ -3,19 +3,19 @@ title: 'Microsoft Edge Kennwort-Manager-Sicherheit '
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 06/29/2021
+ms.date: 09/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Kennwort-Manager-Sicherheit
-ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 6f9dadab36c755113ad647e7e78a0bbbb2f8c965
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979521"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057348"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Microsoft Edge Kennwort-Manager-Sicherheit 
 
@@ -141,7 +141,7 @@ Wenn Browser-Kennwörter auf dem Datenträger verschlüsselt werden, ist der Ver
 Ein "Masterkennwort"-Feature (das den Benutzer authentifiziert, bevor seine Daten automatisch ausgefüllt werden) bietet einen Kompromiss zwischen Benutzerfreundlichkeit und einer umfassenden Bedrohungsminderung. Insbesondere trägt es dazu bei, das Zeitfenster der Datenexposition gegen latente Schadsoftware oder physisch lokale Angreifer zu reduzieren. Ein Masterkennwort ist jedoch keine Patentlösung, und lokale Angreifer und dedizierte Schadsoftware haben verschiedene Strategien, um den Schutz eines Master-Kennworts zu umgehen.
 
 > [!Note]
-> Microsoft ist sich bewusst, wie wertvoll die Authentifizierung von Benutzern vor dem automatischen Ausfüllen ist, und diese Funktionalität wird in einer zukünftigen Version von Microsoft Edge hinzugefügt.
+> Microsoft Edge bietet jetzt die Möglichkeit, die Authentifizierung vor dem automatischen Ausfüllen zu aktivieren. Dies bietet Benutzern eine zusätzliche Datenschutzebene und verhindert, dass ihre gespeicherten Kennwörter von jemandem außer ihnen verwendet werden. Weitere Informationen finden Sie unter ["Zusätzlicher Datenschutz für Ihre gespeicherten Kennwörter".](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e)  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>Kann sich die Verwendung eines Kennwort-Managers auf meinen Datenschutz auswirken?
 
