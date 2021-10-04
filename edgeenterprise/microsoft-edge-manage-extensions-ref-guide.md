@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ein detaillierter Referenzleitfaden zum Konfigurieren von Microsoft Edge-Erweiterungen mithilfe der ExtensionSettings-Richtlinie.
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
+ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979253"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "12061104"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Detaillierter Leitfaden zur ExtensionSettings-Richtlinie
 
@@ -52,7 +52,35 @@ Diese Richtlinie kann Einstellungen wie die Update-URL steuern, von der die Erwe
 | **runtime_allowed_hosts**| Ermöglicht Erweiterungen die Interaktion mit bestimmten Websites, auch wenn sie auch in runtime_blocked_hosts definiert sind. Sie können bis zu 100 Einträge angeben. Zusätzliche Einträge werden verworfen.<br>Das Hostmusterformat ähnelt  [Übereinstimmungsmustern](/microsoft-edge/extensions-chromium/enterprise/match-patterns) , es sei denn, Sie können den Pfad nicht definieren. Beispiel:<br>- *://*.example.com<br>- *://example.* – eTLD-Platzhalter werden unterstützt     |
 | **runtime_blocked_hosts**| Verhindern, dass Erweiterungen mit von Ihnen angegebenen Websites interagieren oder diese ändern. Änderungen umfassen das Blockieren der JavaScript-Einfügung, den Cookiezugriff und Webanforderungsänderungen.<br>Sie können bis zu 100 Einträge angeben. Zusätzliche Einträge werden verworfen.<br>Das Hostmusterformat ähnelt Übereinstimmungsmustern, es sei denn, Sie können den Pfad nicht definieren. Beispiel:<br>- *://*.example.com<br>- *://example.* – eTLD-Platzhalter werden unterstützt   |
 | **override_update_url**| Verfügbar ab Edge 93<br>Wenn dies festgelegt `true` ist, verwendet Edge die in der ExtensionSettings-Richtlinie oder in der ExtensionInstallForcelist-Richtlinie angegebene Update-URL für nachfolgende Erweiterungsupdates.<br>Wenn dies nicht festgelegt oder festgelegt `false` ist, verwendet Edge die im Manifest der Erweiterung angegebene URL für Updates.|
+| **toolbar_state**| Verfügbar ab Edge 94<br>Mit dieser Richtlinieneinstellung können Sie erzwingen, dass eine installierte Erweiterung auf der Symbolleiste angezeigt wird. Der Standardzustand gilt `default_shown` für alle Erweiterungen. Für diese Einstellung sind die folgenden Zustände möglich:<br>-`force_shown`: Sie können das Anzeigen einer installierten Erweiterung auf der Symbolleiste erzwingen. Benutzer können das spezifische Erweiterungssymbol nicht auf der Symbolleiste ausblenden.<br>-`default_hidden`: In diesem Zustand werden Erweiterungen bei der Installation auf der Symbolleiste ausgeblendet. Benutzer können sie bei Bedarf auf der Symbolleiste anzeigen.<br>-`default_shown`: Dies ist die gehörlose Einstellung aller installierten Erweiterungen im Browser.
 
+Dies sind die Schlüssel, die im globalen Bereich zulässig sind (*): 
+
+- blocked_permissions
+- installation_mode – nur "blockiert", "zulässig" oder "entfernt" sind die gültigen Werte in diesem Bereich.
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+Dies sind die Schlüssel, die in einem einzelnen Erweiterungsbereich zulässig sind: 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state (ab Edge 94 verfügbar)
+- installation_mode - `"blocked"` , `"allowed"` , , , und sind `"removed"` die `"force_installed"` möglichen `"normal_installed"` Werte.
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+Dies sind die Schlüssel, die in einem Update-URL-Bereich zulässig sind: 
+
+- blocked_permissions
+- installation_mode – nur `"blocked"` `"allowed"` oder `"removed"` sind die gültigen Werte in diesem Bereich.
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Konfigurieren einer JSON-Zeichenfolge im Gruppenrichtlinien-Editor von Windows
 
