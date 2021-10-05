@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ein detaillierter Referenzleitfaden zum Konfigurieren von Microsoft Edge-Erweiterungen mithilfe der ExtensionSettings-Richtlinie.
-ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
-ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
+ms.openlocfilehash: 7dceff78172626d70863883e0762be2f4cb7e51c
+ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "12061104"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "12069011"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Detaillierter Leitfaden zur ExtensionSettings-Richtlinie
 
@@ -57,7 +57,7 @@ Diese Richtlinie kann Einstellungen wie die Update-URL steuern, von der die Erwe
 Dies sind die Schlüssel, die im globalen Bereich zulässig sind (*): 
 
 - blocked_permissions
-- installation_mode – nur "blockiert", "zulässig" oder "entfernt" sind die gültigen Werte in diesem Bereich.
+- installation_mode – nur `"blocked"` `"allowed"` oder `"removed"` sind die gültigen Werte in diesem Bereich.
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
@@ -69,8 +69,7 @@ Dies sind die Schlüssel, die in einem einzelnen Erweiterungsbereich zulässig s
 - blocked_permissions
 - minimum_version_required
 - blocked_install_message
-- toolbar_state (ab Edge 94 verfügbar)
-- installation_mode - `"blocked"` , `"allowed"` , , , und sind `"removed"` die `"force_installed"` möglichen `"normal_installed"` Werte.
+- installation_mode - `"blocked"` `"allowed"` , , , und sind die möglichen `"removed"` `"force_installed"` `"normal_installed"` Werte.
 - runtime_allowed_hosts
 - update_url
 - override_update_url

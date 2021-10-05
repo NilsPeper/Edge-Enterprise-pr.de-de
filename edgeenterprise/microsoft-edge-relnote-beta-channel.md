@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/28/2021
+ms.date: 10/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: c62d540b014a47f1240d542c68ee52822719239f
-ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
+ms.openlocfilehash: a2957d3c52d18fe75cb52719896438e6becf6dbd
+ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2021
-ms.locfileid: "12053314"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "12069001"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -24,17 +24,21 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > [!NOTE]
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-950102014-october-5"></a>Version 95.0.1020.14: 5. Oktober
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
 ## <a name="version-95010209-september-28"></a>Version 95.0.1020.9: 28. September
 
-### <a name="feature-updates"></a>Funktionsupdate
+### <a name="feature-updates"></a>Funktionsupdates
 
-- **Anzeigen im Datei-Explorer-Support für SharePoint Onlinebibliotheken in Microsoft Edge.**  Jetzt können Sie die Funktion "Im Datei-Explorer anzeigen" in SharePoint modernen Onlinedokumentbibliotheken aktivieren. Damit diese Erfahrung für Ihre Benutzer sichtbar und funktionsfähig ist, müssen Sie die Microsoft Edge Richtlinie ["Konfigurieren des Features "Ansicht im Datei-Explorer für SharePoint Seiten in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) aktivieren und Ihre SharePoint Onlinemandantenkonfiguration aktualisieren. Weitere Informationen: [Anzeigen SharePoint Dateien mit dem Datei-Explorer in Microsoft Edge – SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+- **Anzeigen der Datei-Explorer-Unterstützung für SharePoint Onlinebibliotheken in Microsoft Edge.**  Jetzt können Sie die Funktion "Im Datei-Explorer anzeigen" in SharePoint modernen Onlinedokumentbibliotheken aktivieren. Damit diese Erfahrung für Ihre Benutzer sichtbar und funktionsfähig ist, müssen Sie die Microsoft Edge Richtlinie ["Konfigurieren des Features "Ansicht im Datei-Explorer für SharePoint Seiten in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) aktivieren und Ihre SharePoint Onlinemandantenkonfiguration aktualisieren. Weitere Informationen: [Anzeigen SharePoint Dateien mit dem Datei-Explorer in Microsoft Edge – SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
-- **Url-Links der Intranetzone werden im Windows Datei-Explorer geöffnet.**  Sie können zulassen, dass Datei-URL-Links zu Intranetzonendateien, die von HTTPS-Websites der Intranetzone stammen, Windows Datei-Explorer für diese Datei oder dieses Verzeichnis geöffnet werden. Sie können diese Funktion mithilfe der [IntranetFileLinksEnabled-Richtlinie](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) aktivieren.
+- **Url-Links zu Intranetzone-Dateien werden im Datei-Explorer Windows geöffnet.**  Sie können zulassen, dass Datei-URL-Links zu Intranetzonendateien, die von HTTPS-Websites der Intranetzone stammen, Windows Datei-Explorer für diese Datei oder dieses Verzeichnis geöffnet werden. Sie können diese Funktion mithilfe der [IntranetFileLinksEnabled-Richtlinie](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) aktivieren.
 
 - **Verbesserungen an der Downloads-Erfahrung.**  Die Unterstützung für die Downloadbenutzeroberfläche wird auf progressive Webanwendungen PWAs und WebView erweitert. Wir werden auch beginnen, Drag & Drop im Datei-Explorer und Desktop zu unterstützen.
 
-- **An der Stelle, an der Sie pdf-Dokumente aufgehört haben.**  Sie können nun den Lesezugriff fortsetzen, von wo Aus Sie Ihr PDF-Dokument zuletzt geschlossen haben.
+- **An der Stelle, an der Sie pdf-Dokumente verlassen haben.**  Sie können nun den Lesezugriff fortsetzen, von wo Aus Sie Ihr PDF-Dokument zuletzt geschlossen haben.
 
 - **Der Effizienzmodus verlängert die Akkulaufzeit, wenn Ihr Laptop in den Stromsparmodus wechselt.**  Der Effizienzmodus wird aktiv, wenn Ihr Laptop in den Stromsparmodus wechselt, damit der Browser die Ressourcennutzung verwalten kann, um die Akkulaufzeit Ihres Computers zu verlängern. Sie haben vier Optionen für den Zeitpunkt, an dem der Effizienzmodus aktiv wird: Unplugged und low battery, Unplugged, Always und Never. Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Auf Geräten mit Akku sollte das Feature aktiviert sein.
 
@@ -68,7 +72,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-9409929-september-2"></a>Version 94.0.992.9: 2. September
 
-### <a name="feature-updates"></a>Funktionsupdate
+### <a name="feature-updates"></a>Funktionsupdates
 
 - **Microsoft Edge zu einem vierwöchigen Rhythmus für Updates in Beta- und Stable-Kanälen wechseln.**  Wir werden einen neuen 4-wöchigen Veröffentlichungszyklus für Hauptversionen einführen. Weitere Informationen zur Entscheidung finden Sie hier: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
@@ -122,7 +126,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 - **Blenden Sie die Titelleiste aus, während Sie vertikale Registerkarten verwenden.**  Holen Sie sich die zusätzlichen Pixel zurück, indem Sie die Titelleiste des Browsers ausblenden, während Sie sich auf vertikalen Registerkarten befinden. Ab Microsoft Edge Version 93 können Sie zu edge://settings/appearance wechseln, und wählen Sie unter dem Abschnitt Symbolleiste anpassen die Option aus, um die Titelleiste im vertikalen Registerkartenmodus auszublenden.
 
-- **Videobild in Bild (PiP) auf der Symbolleiste mit dem Mauszeiger.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bildmodus (PiP) zu wechseln. Wenn Sie auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie dieses Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unser Rollout für Windows Benutzer fortsetzen.
+- **Videobild in Bild (PiP) auf der Symbolleiste mit dem Mauszeiger.**  Ab Microsoft Edge Version 93 wird es noch einfacher, in den Bild-Modus (PiP) zu wechseln. Wenn Sie auf ein unterstütztes Video zeigen, wird eine Symbolleiste angezeigt, mit der Sie dieses Video in einem PiP-Fenster anzeigen können.  Hinweis: Dies ist derzeit für Microsoft Edge Benutzer unter macOS verfügbar.  Schauen Sie sich kurz zurück, während wir unseren Rollout für Windows Benutzer fortsetzen.
 
 - **Entfernen von 3DES in TLS.**  Ab Microsoft Edge Version 93 wird die Unterstützung für die TLS_RSA_WITH_3DES_EDE_CBC_SHA Verschlüsselungssuite entfernt. Diese Änderung erfolgt im Chromium-Projekt, auf dem Microsoft Edge basiert. Weitere Informationen finden Sie im [Chrome-Plattformstatuseintrag](https://chromestatus.com/feature/6678134168485888). Darüber hinaus steht in Microsoft Edge Version 93 die [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled)-Richtlinie zur Unterstützung von Szenarien zur Verfügung, die die Kompatibilität mit veralteten Servern beibehalten müssen. Diese Kompatibilitätsrichtlinie wird veraltet und funktioniert nicht mehr in Microsoft Edge Version 95. Stellen Sie sicher, dass Sie betroffene Server vorher aktualisieren.
 
