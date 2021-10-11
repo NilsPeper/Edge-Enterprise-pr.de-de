@@ -3,19 +3,19 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/05/2021
+ms.date: 10/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: a2957d3c52d18fe75cb52719896438e6becf6dbd
-ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
+ms.openlocfilehash: 433c042069a25029944b709baf7ac2ae659887be
+ms.sourcegitcommit: 7f17872561952bfd238562ef273e495765d2a6c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "12069001"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "12087623"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
@@ -23,6 +23,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 
 > [!NOTE]
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-950102020-october-11"></a>Version 95.0.1020.20: 11. Oktober
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-950102014-october-5"></a>Version 95.0.1020.14: 5. Oktober
 
@@ -34,7 +38,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 - **Anzeigen der Datei-Explorer-Unterstützung für SharePoint Onlinebibliotheken in Microsoft Edge.**  Jetzt können Sie die Funktion "Im Datei-Explorer anzeigen" in SharePoint modernen Onlinedokumentbibliotheken aktivieren. Damit diese Erfahrung für Ihre Benutzer sichtbar und funktionsfähig ist, müssen Sie die Microsoft Edge Richtlinie ["Konfigurieren des Features "Ansicht im Datei-Explorer für SharePoint Seiten in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) aktivieren und Ihre SharePoint Onlinemandantenkonfiguration aktualisieren. Weitere Informationen: [Anzeigen SharePoint Dateien mit dem Datei-Explorer in Microsoft Edge – SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
-- **Url-Links zu Intranetzone-Dateien werden im Datei-Explorer Windows geöffnet.**  Sie können zulassen, dass Datei-URL-Links zu Intranetzonendateien, die von HTTPS-Websites der Intranetzone stammen, Windows Datei-Explorer für diese Datei oder dieses Verzeichnis geöffnet werden. Sie können diese Funktion mithilfe der [IntranetFileLinksEnabled-Richtlinie](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) aktivieren.
+- **Url-Links zu Intranetzone-Dateien werden im Windows Datei-Explorer geöffnet.**  Sie können zulassen, dass Datei-URL-Links zu Intranetzonendateien, die von HTTPS-Websites der Intranetzone stammen, Windows Datei-Explorer für diese Datei oder dieses Verzeichnis geöffnet werden. Sie können diese Funktion mithilfe der [IntranetFileLinksEnabled-Richtlinie](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) aktivieren.
 
 - **Verbesserungen an der Downloads-Erfahrung.**  Die Unterstützung für die Downloadbenutzeroberfläche wird auf progressive Webanwendungen PWAs und WebView erweitert. Wir werden auch beginnen, Drag & Drop im Datei-Explorer und Desktop zu unterstützen.
 
@@ -49,7 +53,7 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 - [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Gibt an, ob die Berechtigungsrichtlinie für die Anzeigeerfassung überprüft oder übersprungen wird.
 - [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Konfigurieren der Pixelanpassung zwischen window.open-Höhen, die von IE-Modusseiten im Vergleich zu Edgemodusseiten stammen
 - [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Konfigurieren der Pixelanpassung zwischen window.open-Breiten, die von IE-Modusseiten im Vergleich zu Edgemodusseiten stammen
-- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Zulassen, dass Die URL-Links der Intranetzone von Microsoft Edge im Windows Datei-Explorer geöffnet werden
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Zulassen, dass Die URL-Links der Intranetzone von Microsoft Edge im Datei-Explorer Windows geöffnet werden
 - [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Konfigurieren des ShadowStack-Absturzrollbackverhaltens
 - [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Visuelle Suche aktiviert
 
