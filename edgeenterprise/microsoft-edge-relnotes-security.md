@@ -3,27 +3,31 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/01/2021
+ms.date: 10/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: 050f9976390d9b5f279b9f0fa11d1494e9f82391
-ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
+ms.openlocfilehash: aa43929500041e1b2b7a5b292f8384d372bc429f
+ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "12057347"
+ms.lasthandoff: 10/12/2021
+ms.locfileid: "12089398"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitspatches, die in Updates für den Microsoft Edge Stable Channel enthalten sind.
 
+## <a name="october-11-2021"></a>11.Oktober2021
+
+Microsoft hat den aktuellen **Microsoft Edge Stable Channel (Version94.0.992.47)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
+
 ## <a name="october-1-2021"></a>1. Oktober 2021
 
-Microsoft hat den neuesten **Microsoft Edge Stable Channel (94.0.992.38)** veröffentlicht, der die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält einen Fix für [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) und [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), die vom Chromium-Team als Exploit gemeldet wurden. Weitere Informationen finden Sie im [Leitfaden zu Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
+Microsoft hat den aktuellen **Microsoft Edge Stable Channel (Version94.0.992.38)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält einen Fix für [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) und [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), die vom Chromium-Team als Exploit gemeldet wurden. Weitere Informationen finden Sie im [Leitfaden zu Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
 
 ## <a name="september-24-2021"></a>24. September 2021
 
