@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/11/2021
+ms.date: 10/14/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 7e9e48357eed0664b0f305eadf790689aa4ac93e
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
+ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089408"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "12094508"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -30,6 +30,10 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099250-october-14"></a>Version94.0.992.50: 14.Oktober
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-94099247-october-11"></a>Version94.0.992.47: 11.Oktober
 
