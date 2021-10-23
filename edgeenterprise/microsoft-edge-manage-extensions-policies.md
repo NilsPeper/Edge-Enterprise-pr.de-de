@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Verwenden von Gruppenrichtlinien zur Verwaltung von Microsoft Edge Erweiterungen im Unternehmen
-ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a244fd0fc3c8743b9f677d2a6fc1fee835aab822
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979392"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107510"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Verwenden von Gruppenrichtlinien zur Verwaltung von Microsoft Edge Erweiterungen
 
@@ -163,6 +163,7 @@ Die Erweiterung wird im Hintergrund und ohne Benutzerinteraktion installiert. De
 
 > [!NOTE]
 > Verwenden Sie für im Chrome Web Store gehostete Erweiterungen eine Zeichenfolge wie z. B. `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
+> Verwenden Sie für selbst gehostete Erweiterungen das Muster extension_id;update_url, wobei update_url auf den Speicherort der XML-Datei des Updatemanifests verweist. Beispiel: `mfjlfjaknfckffgjgmdfeheeealceoak;https://file_location.azurewebsites.net/picture_of_the_day.xml`.
 
 ## <a name="block-extensions-from-a-specific-store-or-update-url"></a>Blockieren von Erweiterungen aus einem bestimmten Store oder von einer bestimmten Update-URL
 

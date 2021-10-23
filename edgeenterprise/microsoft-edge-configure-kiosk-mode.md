@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über Kioskmodus-Features und wie Sie Microsoft Edge-Kioskmodusoptionen konfigurieren können.
-ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 38d9b143a910c1e475e5fc8413ef657de395a659
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979407"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107560"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Konfigurieren des Microsoft Edge-Kioskmodus
 
@@ -87,6 +87,13 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
 
+### <a name="kiosk-mode-download-files-on-exit"></a>Kioskmodus Dateien beim Beenden herunterladen
+
+Um Edge so einzurichten, dass heruntergeladene Dateien entfernt werden, wenn eine Kioskinstanz geschlossen wird, müssen die folgenden 2 Gruppenrichtlinien eingerichtet werden:
+- [Downloads beim Beenden löschen](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = aktiviert
+- [Downloadverzeichnis festlegen](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+
+
 ### <a name="additional-command-line-options"></a>Zusätzliche Befehlszeilenoptionen
 
 - **--no-first-run**: Deaktivieren der Umgebung der ersten Microsoft Edge-Ausführung.
@@ -99,7 +106,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Die Zeit (in Minuten) der letzten Benutzeraktivität ändern, bevor Microsoft Edge Kioskmodus die Sitzung des Benutzers zurücksetzt, indem der Browser geschlossen wird. Hinweis: Dieses Flag wird Microsoft Edge nach dem Schließen nicht neu gestartet. Eine separate Technologie, z. B. zugewiesener Zugriff oder Shell-Start, ist erforderlich, um Edge nach dem Leerlauftimeout automatisch neu zu starten. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
+- **--kiosk-idle-timeout-minutes=**: Ändern Sie die Zeit (in Minuten) der letzten Benutzeraktivität, bevor Microsoft Edge Kioskmodus die Sitzung des Benutzers zurücksetzt, indem Sie den Browser schließen. Hinweis: Dieses Flag wird Microsoft Edge nach dem Schließen nicht neu gestartet. Eine separate Technologie, z. B. zugewiesener Zugriff oder Shell-Start, ist erforderlich, um Edge nach dem Leerlauftimeout automatisch neu zu starten. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
 
    ```
    --kiosk-idle-timeout-minutes=value

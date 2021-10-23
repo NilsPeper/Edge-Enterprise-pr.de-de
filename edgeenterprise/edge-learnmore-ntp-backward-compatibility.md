@@ -3,19 +3,19 @@ title: Abwärtskompatibilität für Enterprise-Seite „Neue Registerkarte”
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 06/29/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Abwärtskompatibilität für Enterprise-Seite „Neue Registerkarte”
-ms.openlocfilehash: e2534f9df82aa81843d7cd292ada99a4c7574a3c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: eb8e7a69da876e844a576c20f0194d14c92eaeee
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979169"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107520"
 ---
 # <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a>Abwärtskompatibilität für Enterprise-Seite „Neue Registerkarte”
 
@@ -31,7 +31,7 @@ Die neue Version der Enterprise-Seite „Neue Registerkarte“ kombiniert konfor
 > [!NOTE]
 > Office 365-Inhalte wurden ursprünglich mithilfe der Domäne [Office.com](https://www.office.com) bereitgestellt.
 
-Wenn der Zugriff auf die MSN.com-Domäne für Ihre Organisation eingeschränkt ist, empfehlen wir dringend, den Benutzern den Zugriff auf diese [URL](https://ntp.msn.com).
+Wenn der Zugriff auf die MSN.com-Domäne für Ihre Organisation eingeschränkt ist, wird dringend empfohlen, Benutzern Zugriff darauf zu [https://ntp.msn.com](https://ntp.msn.com) gewähren.
 
 Wenn Sie mehr Zeit benötigen, um den Zugriff auf die MSN-Domäne zu ermöglichen, empfehlen wir die Verwendung von [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype), mit dem Sie für die Seite „Neue Registerkarte“ entweder die Microsoft News- oder die Office 365-Feed-Erfahrung wählen können.
 
