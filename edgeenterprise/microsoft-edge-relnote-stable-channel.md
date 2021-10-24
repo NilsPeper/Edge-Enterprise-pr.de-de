@@ -1,21 +1,21 @@
 ---
 title: Versionshinweise von Microsoft Edge für Stable Channel
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/14/2021
+ms.date: 10/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
-ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
+ms.openlocfilehash: e416f04adfdd96f7d14cb662ce2a1fd052951d26
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "12094508"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107450"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -29,7 +29,51 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > [!NOTE]
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
-> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+> Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-950102030-october-21"></a>Version95.0.1020.30: 21.Oktober
+
+Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnotes-security#october-21-2021) aufgeführt.
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Support für „Im Datei-Explorer anzeigen“ für Microsoft Office SharePoint Online-Bibliotheken in Microsoft Edge.**  Jetzt können Sie die Funktion „Im Datei-Explorer anzeigen“ in modernen Microsoft Office SharePoint Online-Dokumentbibliotheken aktivieren. Damit diese Erfahrung für Ihre Benutzer sichtbar und funktionsfähig ist, müssen Sie die Microsoft Edge-Richtlinie [Konfigurieren des Features „Im Datei-Explorer anzeigen“ für Microsoft Office SharePoint Online-Seiten in Microsoft Edge](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) aktivieren und Ihre Microsoft Office SharePoint Online-Mandantenkonfiguration aktualisieren. Weitere Informationen: [Anzeigen von Microsoft Office SharePoint Online-Dateien mit dem Datei-Explorer in Microsoft Edge](/SharePoint/sharepoint-view-in-edge).
+
+- **Datei-URL-Links für Intranetzonen werden im Windows-Datei-Explorer geöffnet.**  Sie können zulassen, dass Datei-URL-Links zu Intranetzonen-Dateien, die von Intranetzonen-HTTPS-Websites stammen, den Windows-Datei-Explorer für diese Datei oder dieses Verzeichnis öffnen. Sie können diese Erfahrung mithilfe der Richtlinie [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) aktivieren.
+
+- **Verbesserungen an der Downloaderfahrung.** Die Unterstützung für das Herunterladen der Benutzererfahrung wurde auf progressive Webanwendungen (PWAs) und WebView erweitert. Wir beginnen auch mit der Unterstützung von Drag & Drop zum Datei-Explorer und zum Desktop.
+
+- **Machen Sie dort weiter, wo Sie in PDF-Dokumenten aufgehört haben.**  Sie können jetzt den Lesevorgang dort fortsetzen, wo Sie Ihr PDF-Dokument zuletzt geschlossen haben.
+
+- **Der Effizienzmodus verlängert die Akkulaufzeit, wenn Ihr Laptop in den Stromsparmodus wechselt.**  Der Effizienzmodus wird aktiv, wenn Ihr Laptop in Stromsparmodus wechselt, um dem Browser die Verwaltung der Ressourcennutzung zur Verlängerung der Akkulaufzeit Ihres Computers zu ermöglichen. Sie haben vier Optionen, wenn der Effizienzmodus aktiv wird: „Nicht eingesteckt und niedriger Akkustand“, „Nicht eingesteckt“, „Immer“ und „Nie“. Hinweis: Hierbei handelt es sich um ein Feature für den kontrollierten Rollout. Wenn Sie dieses Feature nicht sehen, schauen Sie in Kürze wieder vorbei, während wir mit dem Rollout fortfahren.
+
+- **Freiformtextfelder, die PDF-Dokumenten hinzugefügt werden.** Wir unterstützen jetzt das Hinzufügen von Freiformtextfeldern zu PDF-Dokumenten. Sie können diese Felder verwenden, um Formulare auszufüllen und sichtbare Notizen hinzuzufügen.
+
+- **Die Unterstützung für Zitate wurde „Sammlungen“ hinzugefügt.**  Wir haben die Erfahrung „Sammlungen“ verbessert, insbesondere für Schüler/Studenten und Forscher. „Sammlungen“ unterstützt jetzt Zitate und Leselisten.
+
+- **Aktualisieren Sie Ihre Kennwörter schneller und mit weniger Klicks.** Der Browser führt Sie jetzt direkt zur Seite „Kennwort ändern“ für eine bestimmte Website. Durch diese Aktion sparen Sie Zeit und Klicks, da Sie nicht mehr manuell zur Seite navigieren müssen. Nachdem Sie sich auf dieser Seite befinden, füllt der Browser ihr vorhandenes Kennwort ebenfalls automatisch aus und schlägt ein starkes, eindeutiges neues Kennwort vor.  Hinweis: Dieses Feature ist derzeit nur auf einer begrenzten Anzahl von Websites verfügbar.
+
+- **Automatische Kontoerstellung.** Wir bieten jetzt zusätzlichen Support auf Registrierungsseiten, indem wir Ihnen das Erstellen eines Onlinekontos mit nur einem Klick ermöglichen. Wählen Sie dazu die Dropdownliste „Vorschlag“ aus, wenn Sie im Registrierungsformular auf ein beliebiges Formularfeld klicken. Auf diese Weise werden nicht nur Informationen angezeigt, die für das Registrierungsformular relevant sind, sondern auch ein Vorschlag für ein starkes neues Kennwort. Nach der Auswahl werden alle relevanten Informationen in den entsprechenden Feldern aufgefüllt, und das vorgeschlagene Kennwort wird bei der Übermittlung an die Website automatisch gespeichert. Hinweis: Dieses Feature ist derzeit nur auf einer begrenzten Anzahl von Websites verfügbar.
+
+### <a name="policy-updates"></a>Richtlinienupdates
+
+#### <a name="new-policies"></a>Neue Richtlinien
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Blockierung von Legacy-Browsererweiterungspunkten aktivieren
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Gibt an, ob WebAssembly-Module ursprungsübergreifend gesendet werden können.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Gibt an, ob die Berechtigungsrichtlinie für die Anzeigeerfassung aktiviert oder übersprungen wird.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Konfigurieren der Pixelanpassung zwischen window.open-Höhen, die von Seiten im IE-Modus stammen, im Vergleich zu Seiten im Microsoft Edge-Modus.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Konfigurieren der Pixelanpassung zwischen window.open-Breiten, die von Seiten im IE-Modus stammen, im Vergleich zu Seiten im Microsoft Edge-Modus.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Zulassen, dass Datei-URL-Links von Intranetzonen von Microsoft Edge im Windows-Datei-Explorer geöffnet werden
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Neue SmartScreen-Bibliothek aktivieren
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Konfigurieren des ShadowStack-Absturzrollbackverhaltens
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Visuelle Suche aktiviert
+
+#### <a name="obsoleted-policies"></a>Abgeschaffte Richtlinien
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed): Zulassen von Internet Explorer-Modustests
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Aktivieren der Standardeinstellung für das Verhalten von Legacy-SameSite-Cookies
+
 
 ## <a name="version-94099250-october-14"></a>Version94.0.992.50: 14.Oktober
 
@@ -200,7 +244,7 @@ Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnote
 
 **Benutzer können auf Internet Explorer-Modus auf Microsoft Edge problemlos wechseln**. Ab Microsoft Edge Version 92 können Benutzer eine Website im Internet Explorer-Modus auf Microsoft Edge neu laden, anstatt sich auf die eigenständige IE 11-Anwendung zu verlassen, während sie auf die Konfiguration einer Website in der Websiteliste für den Enterprise-Modus warten. Benutzer werden aufgefordert, die Website ihrer lokalen Websiteliste hinzuzufügen, sodass die Navigation zu derselben Seite in Microsoft Edge für die nächsten 30 Tage automatisch im IE-Modus gerendert wird. Mit der [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)-Richtlinie können Sie diese Umgebung konfigurieren und den Zugriff auf die Einstiegspunkte des IE-Modus sowie die Möglichkeit zum Hinzufügen von Websites zur lokalen Websiteliste zulassen. Mit der [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)-Richtlinie können Sie die Anzahl der Tage anpassen, die Websites in der lokalen Websiteliste gespeichert werden sollen. Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforderlich ist; oder KB5003690 oder höher für Windows 10, Version 2004, Windows 10, Version 20H2 oder Windows 10, Version 21H1, für die End-to-End-Erfahrung erforderlich ist. Weitere Informationen finden Sie unter [Lokale Websiteliste für den IE-Modus.](/deployedge/edge-ie-mode-local-site-list)
 
-**MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
+**MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
 
 **Die Warnung „Entwicklermoduserweiterungen deaktivieren“ kann zwei Wochen lang geschlossen werden.** Ab Microsoft Edge Version 92 können Sie die Warnung „Entwicklermoduserweiterungen deaktivieren“ 2 Wochen lang erneut anzeigen, indem Sie die Option im Dropdownmenü des Warnungsdialogfelds auswählen.
 

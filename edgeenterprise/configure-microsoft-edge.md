@@ -3,19 +3,19 @@ title: Konfigurieren von Microsoft Edge für Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 10/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Konfigurieren der Microsoft Edge-Richtlinieneinstellungen auf Windows-Geräten
-ms.openlocfilehash: a5db4352e723539843a5ad80a7b067e670bced5c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Erfahren Sie, wie Sie Microsoft Edge-Richtlinieneinstellungen auf Windows-Geräten konfigurieren
+ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979164"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107460"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Konfigurieren der Microsoft Edge-Richtlinieneinstellungen unter Windows
 
@@ -35,10 +35,10 @@ Microsoft Edge unterstützt sowohl die _obligatorischen_ als auch die _empfohlen
 >[!TIP]
 > Sie können Microsoft Intune zum Konfigurieren der Microsoft Edge-Richtlinieneinstellungen verwenden. Weitere Informationen finden Sie unter [Konfigurieren von Microsoft Edge mit Microsoft Intune](configure-edge-with-intune.md).
 
-Es gibt zwei administrative Vorlagen für Microsoft Edge, die entweder auf Computer- oder auf Active Directory-Domänenebene angewendet werden können:
+Es gibt zwei administrative Vorlagen für Microsoft Edge. Beide können mit gängigen Verwaltungstools für Gruppenrichtlinien wie dem Editor für lokale Gruppenrichtlinien für die Anwendung auf einem einzelnen Computer oder mit der Verwaltungskonsole für Gruppenrichtlinien für Microsoft Windows-Domänennetzwerke angewendet werden. Diese Vorlagen sind:
 
-- *msedge.admx* zum [Konfigurieren von Microsoft Edge-Einstellungen](microsoft-edge-policies.md)
-- *msedgeupdate.admx* zum [Verwalten von Microsoft Edge-Updates](microsoft-edge-update-policies.md).
+- *msedge.admx* zum [Konfigurieren von Microsoft Edge-Einstellungen](./microsoft-edge-policies.md)
+- *msedgeupdate.admx* zum [Verwalten von Microsoft Edge-Updates](./microsoft-edge-update-policies.md)
 
 Laden sie zunächst die Microsoft Edge administrative Vorlage herunter, und installieren Sie sie.
 
