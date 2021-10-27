@@ -1,25 +1,29 @@
 ---
 title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/08/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: aa43929500041e1b2b7a5b292f8384d372bc429f
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 2e49fcae65239c726b9f6452a0f4dfc227ad9394
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089398"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107470"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitspatches, die in Updates für den Microsoft Edge Stable Channel enthalten sind.
+
+## <a name="october-21-2021"></a>21. Oktober 2021
+
+Microsoft hat den neuesten  **Microsoft Edge Stable Channel (Version 95.0.1020.30)** veröffentlicht, welcher die neuesten Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide)
 
 ## <a name="october-11-2021"></a>11.Oktober2021
 

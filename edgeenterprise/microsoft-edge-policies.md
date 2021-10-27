@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 09/26/2021
+ms.date: 10/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 5e4deb6e75ab44c1706e17fe57232c703f2374dc
-ms.sourcegitcommit: 884bdb6ef9484ed3b080b4c5ab091f5f29ba2928
+ms.openlocfilehash: 934dd2b8430184914ab080f0138a10601caa6a04
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "12056731"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107550"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -27,7 +27,23 @@ Informationen zu einer zusätzlichen Richtlinie, mit der Sie steuern können, wi
 Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) für die empfohlenen grundlegenden Sicherheitskonfigurations-Einstellungen für Microsoft Edge herunterladen. Weitere Informationen finden Sie unter [Microsoft Sicherheitsbaselines-Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
+
+## <a name="new-policies"></a>Neue Richtlinien
+
+Die folgenden Richtlinien wurden diesem Dokumentationsupdate hinzugefügt.
+
+|Richtlinienname|Beschriftung|
+|-|-|
+[Einstellungen für TyposquattingChecker](#typosquattingchecker-settings)|Stellen Sie Warnmeldungen bereit, um Ihre Benutzer vor potenziellen Typosquatting-Websites zu schützen.|
+|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Verhindert, dass Dateien in Application Guard hochgeladen werden|
+|[EfficiencyMode](#efficiencymode)|Konfigurieren, wann der Effizienzmodus aktiv werden soll|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Neue SmartScreen-Bibliothek aktivieren|
+|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|„AutoLaunch Protocols“-Komponente aktiviert|
+|[ForceSyncTypes](#forcesynctypes)|Konfigurieren Sie die Liste der Typen, die in die Synchronisierung eingeschlossen sind|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Hiermit wird konfiguriert, ob Formulardaten und HTTP-Header gesendet werden, wenn der Internet Explorer Modus gestartet oder beendet wird.|
+|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Renderer im App-Container aktivieren|
+|[SharedLinksEnabled](#sharedlinksenabled)|Anzeigen von Links, die von Microsoft 365 Apps im Verlauf freigegeben wurden|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
@@ -53,6 +69,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 - [Einstellungen für „Schlafende Registerkarten“](#sleeping-tabs-settings)
 - [SmartScreen-Einstellungen](#smartscreen-settings)
 - [Start, Startseite und neue Registerkarte](#startup-home-page-and-new-tab-page)
+- [Einstellungen für TyposquattingChecker](#typosquattingchecker-settings)
 - [Sonstiges](#additional)
 
 
@@ -69,6 +86,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard-Favoritensynchronisierung aktiviert|
 |[ApplicationGuardPassiveModeEnabled](#applicationguardpassivemodeenabled)|Application Guard-Websitelistenkonfiguration ignorieren und Edge normal nutzen|
 |[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard-Netzwerkdatenverkehrsidentifikation|
+|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Verhindert, dass Dateien in Application Guard hochgeladen werden|
 ### [*<a name="cast"></a>Cast*](#cast-policies)
 
 |Richtlinienname|Beschriftung|
@@ -207,6 +225,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 
 |Richtlinienname|Beschriftung|
 |-|-|
+|[EfficiencyMode](#efficiencymode)|Konfigurieren, wann der Effizienzmodus aktiv werden soll|
 |[StartupBoostEnabled](#startupboostenabled)|Startup-Boost aktivieren|
 ### [*<a name="printing"></a>Drucken*](#printing-policies)
 
@@ -251,13 +270,14 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 
 |Richtlinienname|Beschriftung|
 |-|-|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Neue SmartScreen-Bibliothek aktivieren|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Umgehung der Microsoft Defender SmartScreen-Aufforderungen für Websites verhindern|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Verhindern der Umgehung von Microsoft Defender-SmartScreen-Warnungen zu Downloads|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Konfigurieren der Liste der Domänen, für die Microsoft Defender-SmartScreen keine Warnungen auslöst|
 |[SmartScreenEnabled](#smartscreenenabled)|Konfigurieren des Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Erzwingen der Microsoft Defender-SmartScreen-Überprüfung für Downloads aus vertrauenswürdigen Quellen|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Konfigurieren von Microsoft Defender SmartScreen, sodass potenziell unerwünschte Apps blockiert werden|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
 
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -275,6 +295,11 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[RestoreOnStartup](#restoreonstartup)|Auszuführende Aktion beim Start|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Websites, die beim Start des Browsers geöffnet werden sollen|
 |[ShowHomeButton](#showhomebutton)|Schaltfläche „Start“ auf der Symbolleiste anzeigen|
+### [*<a name="typosquattingchecker-settings"></a>Einstellungen für TyposquattingChecker*](#typosquattingchecker-settings-policies)
+
+|Richtlinienname|Beschriftung|
+|-|-|
+|[TyposquattingCheckerEnabled](#typosquattingcheckerenabled)|Edge TyposquattingChecker konfigurieren|
 ### [*<a name="additional"></a>Sonstiges*](#additional-policies)
 
 |Richtlinienname|Beschriftung|
@@ -299,6 +324,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[AudioProcessHighPriorityEnabled](#audioprocesshighpriorityenabled)|Zulassen, dass der Audioprozess unter Windows mit einer Priorität ausgeführt wird, die über dem Normalen liegt|
 |[AudioSandboxEnabled](#audiosandboxenabled)|Audio-Sandkasten ausführen lassen|
 |[AutoImportAtFirstRun](#autoimportatfirstrun)|Automatisches Importieren der Daten und Einstellungen eines anderen Browsers bei der ersten Ausführung|
+|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|„AutoLaunch Protocols“-Komponente aktiviert|
 |[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|Eine Liste der Protokolle definieren, mit denen eine externe Anwendung von den aufgeführten Ursprüngen aus gestartet werden kann, ohne den Benutzer aufzufordern|
 |[AutoOpenAllowedForURLs](#autoopenallowedforurls)|URLs, auf die AutoOpenFileTypes angewendet werden können|
 |[AutoOpenFileTypes](#autoopenfiletypes)|Liste der Dateitypen, die beim Download automatisch geöffnet werden sollen|
@@ -380,6 +406,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Verwenden Sie eine Standard-Referrer-Richtlinie „no-referrer-when-downgrade“ (veraltet).|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Erzwingen der Ausführung des Netzwerkcodes im Browserprozess (veraltet)|
 |[ForceSync](#forcesync)|Synchronisierung von Browserdaten erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen|
+|[ForceSyncTypes](#forcesynctypes)|Konfigurieren Sie die Liste der Typen, die in die Synchronisierung eingeschlossen sind|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Erzwingen des minimal eingeschränkten Modus für YouTube|
 |[FullscreenAllowed](#fullscreenallowed)|Vollbild-Modus zulassen|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Aktivieren von globalem HTTP-Authentifizierungscache|
@@ -406,6 +433,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Aktivieren von Warnungen für unsichere Formulare|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Steuern des IntensiveWakeUpThrottling-Features|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Konfigurieren der Enterprise Mode Cloud-Siteliste|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Hiermit wird konfiguriert, ob Formulardaten und HTTP-Header gesendet werden, wenn der Internet Explorer Modus gestartet oder beendet wird.|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Konfigurieren der Ermittlung von Anwendungsstillständen für Internet Explorer-Modus|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Konfigurieren der Internet Explorer-Integration|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Zulassen, dass lokale Dateien im Internet Explorer-Modus gestartet werden|
@@ -451,6 +479,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Festlegen des Zeitraums für Aktualisierungsbenachrichtigungen|
 |[RelaunchWindow](#relaunchwindow)|Festlegen des Zeitintervalls für den Neustart|
 |[RemoteDebuggingAllowed](#remotedebuggingallowed)|Remotedebugging zulassen|
+|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Renderer im App-Container aktivieren|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Aktivieren der Codeintegrität des Renderers|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Angeben, ob Online-OCSP-/-CRL-Prüfungen für lokale Vertrauensanker erforderlich sind|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Aktivieren der Auflösung von Navigationsfehlern mithilfe eines Webdiensts|
@@ -474,6 +503,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[SerialBlockedForUrls](#serialblockedforurls)|Die Serial-API auf bestimmten Websites blockieren|
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Konfigurieren des ShadowStack-Absturzrollbackverhaltens|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Gibt an, ob SharedArrayBuffers in einem nicht ursprungsübergreifenden isolierten Kontext verwendet werden können.|
+|[SharedLinksEnabled](#sharedlinksenabled)|Anzeigen von Links, die von Microsoft 365 Apps im Verlauf freigegeben wurden|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards-Erfahrungen anzeigen|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung auf der Favoritenleiste anzeigen (veraltet)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Empfehlungen und Werbebenachrichtigungen von Microsoft Edge zulassen|
@@ -831,6 +861,62 @@ Wenn Sie diese Richtlinie deaktivieren, wird der zusätzliche Header nicht zum N
   - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
   - Pfad (empfohlen): N/A
   - Wertname: ApplicationGuardTrafficIdentificationEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="applicationguarduploadblockingenabled"></a>ApplicationGuardUploadBlockingEnabled
+
+  #### <a name="prevents-files-from-being-uploaded-while-in-application-guard"></a>Verhindert, dass Dateien in Application Guard hochgeladen werden
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Legt fest, ob Dateien in Application Guard hochgeladen werden können.
+
+Wenn Sie diese Richtlinie aktivieren, können Benutzer keine Dateien in Application Guard hochladen.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können Benutzer Dateien in Application Guard hochladen.
+
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: ApplicationGuardUploadBlockingEnabled
+  - GP-Name: Verhindert, dass Dateien hochgeladen werden, während Sie sich in Application Guard befinden
+  - GP-Pfad (verpflichtend): Administrative Vorlagen/Microsoft Edge/Application Guard-Einstellungen
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: ApplicationGuardUploadBlockingEnabled
   - Werttyp: REG_DWORD
 
   ##### <a name="example-value"></a>Beispielwert:
@@ -1925,8 +2011,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   Diese Richtlinie funktioniert nicht, da Flash nicht mehr von Microsoft Edge unterstützt wird.
 
-
-            [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
+[PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) werden zuerst überprüft, dann diese Richtlinie. Die Optionen lauten "ClickToPlay" und "BlockPlugins". Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird dieses Plugin für alle Websites abgelehnt. Mit "ClickToPlay" kann das Flash-Plugin ausgeführt werden, die Benutzer klicken aber auf den Platzhalter, um es zu starten.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer diese Einstellung manuell ändern.
 
@@ -4780,7 +4865,7 @@ Wenn Sie diese Einstellung aktivieren, wird die Installation externer Erweiterun
 
 Wenn Sie diese Einstellung deaktivieren oder nicht festlegen, können externe Erweiterungen installiert werden.
 
-Externe Erweiterungen und ihre Installation sind unter https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options dokumentiert.
+Externe Erweiterungen und deren Installation sind unter [Alternative Erweiterungsverteilungsmethoden](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options) dokumentiert.
 
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
@@ -5064,7 +5149,7 @@ Der Quellcode einer beliebigen Erweiterung kann von Benutzern mit Entwicklertool
 
 Jedes Listenelement der Richtlinie ist eine Zeichenfolge, die eine Erweiterungs-ID und optional eine durch ein Semikolon (;) abgetrennte „Update“-URL enthält. Die Erweiterungs-ID ist die Zeichenfolge mit 32 Buchstaben, die beispielsweise auf edge://extensions im Entwicklermodus gefunden wird. Wenn angegeben, sollte die „Update“-URL auf ein Update-Manifest-XML-Dokument ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ) verweisen. Standardmäßig wird die Update-URL der Microsoft Edge-Add-ons-Website verwendet. Die in dieser Richtlinie gesetzte „Update“-URL wird nur für die Erstinstallation verwendet; bei nachfolgenden Aktualisierungen der Erweiterung wird die Update-URL im Manifest der Erweiterung verwendet.
 
-Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informieren Sie sich über Hosting-Erweiterungen (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informationen zum Hosten von Erweiterungen finden Sie unter [Erweiterungen auf der Microsoft Edge Add-on-Website veröffentlichen und aktualisieren.](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -7124,6 +7209,88 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="efficiencymode"></a>EfficiencyMode
+
+  #### <a name="configure-when-efficiency-mode-should-become-active"></a>Konfigurieren, wann der Effizienzmodus aktiv werden soll
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinieneinstellung können Sie konfigurieren, wann der Effizienzmodus aktiviert wird. Standardmäßig ist der Effizienzmodus aktiv, wenn das Gerät nicht angeschlossen ist und der Akku schwach ist. Auf Geräten ohne Akku wird der Effizienzmodus standardmäßig nie aktiviert.
+
+Legen Sie diese Richtlinie auf „AlwaysActive“ fest, und der Effizienzmodus wird immer aktiv sein.
+
+Legen Sie diese Richtlinie auf "NeverActive“ fest, und der Effizienzmodus wird nie aktiv.
+
+Legen Sie diese Richtlinie auf „ActiveWhenUnplugged“ fest, und der Effizienzmodus wird aktiv, wenn das Gerät nicht von der Stromversorgung getrennt wird. Wenn das Gerät nicht über einen Akku verfügt, wird der Effizienzmodus nie aktiviert.
+
+Legen Sie diese Richtlinie auf „ActiveWhenUnpluggedBatteryLow“ fest, und der Effizienzmodus wird aktiviert, wenn das Gerät nicht angeschlossen wird und der Akku schwach ist. Wenn das Gerät nicht über einen Akku verfügt, wird der Effizienzmodus nie aktiviert.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer die Effizienzmodusoption in edge://settings/system auswählen.
+
+Weitere Informationen zum Effizienzmodus finden Sie hier: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
+
+Zuordnung von Richtlinienoptionen:
+
+* AlwaysActive (0) = der Effizienzmodus ist immer aktiv
+
+* NeverActive (1) = der Effizienzmodus ist nie aktiv
+
+* ActiveWhenUnplugged (2) = der Effizienzmodus ist aktiv, wenn das Gerät nicht angeschlossen ist
+
+* ActiveWhenUnpluggedBatteryLow (3) = der Effizienzmodus ist aktiv, wenn das Gerät nicht angeschlossen ist und der Akku schwach ist
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Ganze Zahl
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EfficiencyMode
+  - GP-Name: Konfigurieren, wann der Effizienzmodus aktiviert werden soll
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Performance
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/Performance
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: EfficiencyMode
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000003
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Name des Einstellungsschlüssels: EfficiencyMode
+  - Beispielwert:
+``` xml
+<integer>3</integer>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
   #### <a name="enable-startup-boost"></a>Startup-Boost aktivieren
@@ -7327,7 +7494,7 @@ Wenn Sie diese Richtlinie aktivieren, drucken Benutzer immer Kopf- und Fußzeile
   
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
-  - Unter Windows ab 95 oder höher
+  - Unter Windows ab 96 oder höher
 
   #### <a name="description"></a>Beschreibung
 
@@ -7521,7 +7688,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
-  - Unter Windows und macOS seit 95 oder höher
+  - Unter Windows und MacOS ab 96 oder höher
 
   #### <a name="description"></a>Beschreibung
 
@@ -8172,7 +8339,7 @@ Für Ursprünge, die nicht von den hier angegebenen Mustern abgedeckt werden, wi
 
 Beachten Sie, dass diese Richtlinie nur unsichere Ursprünge betrifft, sichere Ursprünge (z. B. https://example.com)) in dieser Liste werden also ignoriert.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [Filterformat für URL-listenbasierte Richtlinien](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -8538,18 +8705,10 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer ihre eigenen
 
 Mit dieser Richtlinie werden die folgenden einzelnen Richtlinien außer Kraft gesetzt:
 
-
-            [ProxyMode](#proxymode)
-            
-
-            [ProxyPacUrl](#proxypacurl)
-            
-
-            [ProxyServer](#proxyserver)
-            
-
-            [ProxyBypassList](#proxybypasslist)
-          
+[ProxyMode](#proxymode)
+[ProxyPacUrl](#proxypacurl)
+[ProxyServer](#proxyserver)
+[ProxyBypassList](#proxybypasslist)
 
 Beim Festlegen der [ProxySettings](#proxysettings)-Richtlinie sind die folgenden Felder zulässig:
   * „ProxyMode“, über das Sie den von Microsoft Edge verwendeten Proxyserver angeben können. Dies verhindert, dass Benutzer Proxyeinstellungen ändern.
@@ -8853,6 +9012,72 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   [Zurück zum Anfang](#microsoft-edge---policies)
 
   ## <a name="smartscreen-settings-policies"></a>SmartScreen-Einstellungs-Richtlinien
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="newsmartscreenlibraryenabled"></a>NewSmartScreenLibraryEnabled
+
+  #### <a name="enable-new-smartscreen-library"></a>Neue SmartScreen-Bibliothek aktivieren
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und macOS seit 95 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Ermöglicht dem Microsoft Edge Browser das Laden einer neuen SmartScreen-Bibliothek (libSmartScreenN) für alle SmartScreen-Überprüfungen von Website-URLs oder Anwendungsdownloads.
+
+Wenn Sie diese Richtlinie aktivieren, verwendet Microsoft Edge die SmartScreen-Implementierung aus der neuen Bibliothek (libSmartScreenN).
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet Microsoft Edge weiterhin die SmartScreen-Implementierung aus der alten Bibliothek (libSmartScreen).
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Microsoft Active Directory-Domäne verknüpft sind, Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, oder MacOS-Instanzen, die über MDM verwaltet oder über MCX einer Domäne beigetreten sind.
+
+Diese temporäre Richtlinie wurde erstellt, um das Update eines neuen SmartScreen-Clients zu unterstützen. Diese Richtlinie ist veraltet und wird zusammen mit dem Legacyclient entfernt.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: NewSmartScreenLibraryEnabled
+  - GP-Name: Neue SmartScreen-Bibliothek aktivieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/SmartScreen settings
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: NewSmartScreenLibraryEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Name des Einstellungsschlüssels: NewSmartScreenLibraryEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
@@ -9244,7 +9469,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
@@ -9478,7 +9703,7 @@ Wenn Sie diese Richtlinie aktivieren, downloadet Microsoft Edge das angegebene L
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, zeigt Microsoft Edge auf der neuen Registerkartenseite kein Firmenlogo oder ein Microsoft-Logo an.
 
-Hilfe zur Ermittlung des SHA-256-Hashs finden Sie unter https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Hilfe zur Ermittlung des SHA-256-Hashs finden Sie unter [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -10258,6 +10483,74 @@ Wenn Sie die Richtlinie nicht konfigurieren, können die Benutzer auswählen, ob
   #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: ShowHomeButton
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ## <a name="typosquattingchecker-settings-policies"></a>Einstellungsrichtlinien für TyposquattingChecker
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="typosquattingcheckerenabled"></a>TyposquattingCheckerEnabled
+
+  #### <a name="configure-edge-typosquattingchecker"></a>Edge TyposquattingChecker konfigurieren
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinieneinstellung können Sie konfigurieren, ob die „Schlafende Registerkarten“ aktiviert werden sollen. Der Edge TyposquattingChecker stellt Warnmeldungen bereit, um Ihre Benutzer vor potenziellen Tippfehlerwebsites zu schützen. Standardmäßig ist der Edge TyposquattingChecker aktiviert.
+
+Wenn Sie diese Richtlinie aktivieren, ist der Edge TyposquattingChecker aktiviert.
+
+Wenn Sie diese Richtlinie deaktivieren, ist der Edge TyposquattingChecker deaktiviert.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, ist der Edge TyposquattingChecker aktiviert, die Benutzer können jedoch auswählen, ob der Edge TyposquattingChecker auch verwendet werden soll.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: TyposquattingCheckerEnabled
+  - GP-Name: Edge TyposquattingChecker konfigurieren
+  - GP-Pfad (obligatorisch): Administrative Vorlagen/Microsoft Edge/TyposquattingChecker-Einstellungen
+  - GP-Pfad (Empfohlen): Administrative Vorlagen/Microsoft Edge – Standardeinstellungen (Benutzer können diese umgehen)/TyposquattingChecker-Einstellungen
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: TyposquattingCheckerEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Name des Einstellungsschlüssels: TyposquattingCheckerEnabled
   - Beispielwert:
 ``` xml
 <true/>
@@ -11589,6 +11882,68 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Beispielwert:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="autolaunchprotocolscomponentenabled"></a>AutoLaunchProtocolsComponentEnabled
+
+  #### <a name="autolaunch-protocols-component-enabled"></a>„AutoLaunch Protocols“-Komponente aktiviert
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Gibt an, ob die AutoLaunch-Protokollkomponente aktiviert werden soll. Mit dieser Komponente kann Microsoft eine Liste bereitstellen, die der Richtlinie [AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins) ähnelt, sodass bestimmte externe Protokolle ohne Eingabeaufforderung gestartet oder blockiert werden können (bei angegebenen Ursprüngen). In der Standardeinstellung ist diese Komponente aktiviert.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, ist die Funktion AutoLaunch Protocols aktiviert.
+
+Wenn Sie diese Richtlinie deaktivieren, ist die Komponente AutoLaunch Protocols deaktiviert.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: AutoLaunchProtocolsComponentEnabled
+  - GP-Name: Komponente AutoLaunch-Protocols aktiviert
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: AutoLaunchProtocolsComponentEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Name des Einstellungsschlüssels: AutoLaunchProtocolsComponentEnabled
+  - Beispielwert:
+``` xml
+<true/>
 ```
   
 
@@ -14041,11 +14396,9 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Die Funktion „Im Datei-Explorer anzeigen“ für SharePoint-Seiten in Microsoft Edge konfigurieren
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Konfigurieren des Features "Im Datei-Explorer anzeigen" für SharePoint-Seiten in Microsoft Edge
 
-> [!NOTE]
-> Derzeit kann die Richtlinie „ConfigureViewInFileExplorer“ nur auf Windows-Instanzen angewendet werden, die in eine Microsoft Active Directory-Domäne eingebunden sind, oder auf Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind.
-
+  
   
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
@@ -17110,8 +17463,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, können die Benutzer die Synchron
 
 Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#browsersignin)-Richtlinie nicht konfiguriert oder aktiviert sein. Wenn [BrowserSignin](#browsersignin) auf "Deaktiviert" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
 
-
-            [SyncDisabled](#syncdisabled) darf nicht konfiguriert sein oder muss auf "False" festgelegt sein. Wenn sie auf "True" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam.
+[SyncDisabled](#syncdisabled) darf nicht konfiguriert sein oder muss auf "False" festgelegt sein. Wenn sie auf "True" festgelegt ist, ist [ForceSync](#forcesync) nicht wirksam. Wenn Sie sicherstellen möchten, dass bestimmte Datentypen synchronisiert oder nicht synchronisiert werden, verwenden Sie die Richtlinie [ForceSyncTypes](#forcesynctypes) und die Richtlinie [SyncTypesListDisabled](#synctypeslistdisabled).
 
 0 = Synchronisierung nicht automatisch starten und Zustimmungsaufforderung für die Synchronisierung anzeigen (Standardeinstellung) 1 = Aktivierung der Synchronisierung für Azure AD-/Azure AD-herabgesetztes Benutzerprofil erzwingen und Zustimmungsaufforderung für die Synchronisierung nicht anzeigen
 
@@ -17154,6 +17506,71 @@ Damit diese Richtlinie ordnungsgemäß funktioniert, darf die [BrowserSignin](#b
   - Beispielwert:
 ``` xml
 <true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="forcesynctypes"></a>ForceSyncTypes
+
+  #### <a name="configure-the-list-of-types-that-are-included-for-synchronization"></a>Konfigurieren Sie die Liste der Typen, die in die Synchronisierung eingeschlossen sind
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren, werden alle angegebenen Datentypen zur Synchronisierung für Azure AD/Azure AD-Degraded-Benutzerprofile eingeschlossen. Diese Richtlinie kann verwendet werden, um die Datenypen einzuschränken, die in den Microsoft Edge-Synchronisierungsdienst hochgeladen werden.
+
+Sie können einen der folgenden Datentypen für diese Richtlinie angeben: "Favoriten", "Einstellungen", "Kennwörter", "Adressen und mehr", "Erweiterungen", "Verlauf", "openTabs" und "Sammlungen". Beachten Sie, dass bei diesen Datentypnamen die Groß-/Kleinschreibung beachtet wird.
+
+Benutzer sind nicht dazu in der Lage, die Deaktivierung von Datentypen außer Kraft zu setzen.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: ForceSyncTypes
+  - GP-Name: Konfigurieren der Liste der Typen, die in die Synchronisierung eingeschlossen sind
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\ForceSyncTypes
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ForceSyncTypes\1 = "favorites"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Name des Einstellungsschlüssels: ForceSyncTypes
+  - Beispielwert:
+``` xml
+<array>
+  <string>favorites</string>
+</array>
 ```
   
 
@@ -17637,40 +18054,19 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Erst
 
 Hinweis: die spezifischen Konfigurationsoptionen, die dem Benutzer in der Erstausführungsumgebung angezeigt werden, können auch mit anderen spezifischen Richtlinien verwaltet werden. Sie können die HideFirstRunExperience-Richtlinie in Kombination mit diesen Richtlinien verwenden, um eine bestimmte Browseroberfläche auf Ihren verwalteten Geräten zu konfigurieren. Einige dieser anderen Richtlinien sind:
 
+-[AutoImportAtFirstRun](#autoimportatfirstrun)
 
-            -
-            [AutoImportAtFirstRun](#autoimportatfirstrun)
-          
+-[NewTabPageLocation](#newtabpagelocation)
 
+-[NewTabPageSetFeedType](#newtabpagesetfeedtype)
 
-            -
-            [NewTabPageLocation](#newtabpagelocation)
-          
+-[ForceSync](#forcesync)
 
+-[SyncDisabled](#syncdisabled)
 
-            -
-            [NewTabPageSetFeedType](#newtabpagesetfeedtype)
-          
+-[BrowserSignin](#browsersignin)
 
-
-            -
-            [ForceSync](#forcesync)
-          
-
-
-            -
-            [SyncDisabled](#syncdisabled)
-          
-
-
-            -
-            [BrowserSignin](#browsersignin)
-          
-
-
-            -
-            [NonRemovableProfileEnabled](#nonremovableprofileenabled)
-          
+-[NonRemovableProfileEnabled](#nonremovableprofileenabled)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17795,8 +18191,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die AutoFill-Daten bei der
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die AutoFill-Daten bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **AutoFill-Daten** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus den Browsern Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus den Browsern Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17864,8 +18259,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Browsereinstellungen b
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Einstellungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Browsereinstellungen** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -17931,8 +18325,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Cookies bei der ersten Aus
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge Cookies bei der ersten Ausführung importiert.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18000,8 +18393,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Browsererweiterungen b
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Erweiterungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Favoriten** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18069,8 +18461,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Favoriten bei der erst
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Favoriten bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Favoriten** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18138,8 +18529,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Browserverlauf bei der e
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge den Browserverlauf bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Browserverlauf** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS), Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS) und Apple Safari-Browsern (macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18207,8 +18597,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Startseiteneinstellung
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Startseiteneinstellungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Startseite** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18276,8 +18665,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die offenen Tabs bei der e
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die offenen Tabs bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Offene Tabs** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie unterstützt zurzeit lediglich das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18345,8 +18733,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Zahlungsinformationen bei 
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Zahlungsinformationen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Zahlungsinformationen** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18414,8 +18801,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die gespeicherten Passwör
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die gespeicherten Passwörter bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **gespeicherten Passwörter** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10), Google Chrome (unter Windows 7, 8 und 10 und unter macOS) und Mozilla Firefox (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18483,8 +18869,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Suchmaschineneinstellu
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Suchmaschineneinstellungen bei der ersten Ausführung importiert, aber die Benutzer können während des manuellen Imports die Option **Suchmaschineneinstellungen** aktivieren oder deaktivieren.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit den Import aus Internet Explorer (unter Windows 7, 8 und 10).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18550,8 +18935,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden Verknüpfungen bei der ers
 
 Sie können diese Richtlinie auch als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge Verknüpfungen bei der ersten Ausführung importiert.
 
-
-            **Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
+**Hinweis**: Diese Richtlinie verwaltet zurzeit das Importieren aus Google Chrome (unter Windows 7, 8 und 10 sowie unter macOS).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18619,8 +19003,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, werden die Starteinstellungen bei
 
 Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Microsoft Edge die Starteinstellungen bei der ersten Ausführung importiert, die Benutzer jedoch während des manuellen Imports die Option **Browsereinstellungen** auswählen oder deaktivieren können.
 
-
-            **Hinweis:** Diese Richtlinie verwaltet derzeit den Import aus Vorgängerversion von Microsoft Edge- und Google Chrome-Browsern (unter Windows 7, 8 und 10).
+**Hinweis:** Diese Richtlinie verwaltet derzeit den Import aus Vorgängerversion von Microsoft Edge- und Google Chrome-Browsern (unter Windows 7, 8 und 10).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -18913,6 +19296,75 @@ Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.m
 
 ```
 "aba95e58-070f-4784-8dcd-e5fd46c2c6d6"
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationcomplexnavdatatypes"></a>InternetExplorerIntegrationComplexNavDataTypes
+
+  #### <a name="configure-whether-form-data-and-http-headers-will-be-sent-when-entering-or-exiting-internet-explorer-mode"></a>Hiermit wird konfiguriert, ob Formulardaten und HTTP-Header gesendet werden, wenn der Internet Explorer Modus gestartet oder beendet wird.
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Ab Microsoft Edge Version 96 enthalten Navigationen, die zwischen Internet Explorer-Modus und Microsoft Edge wechseln, Formulardaten und zusätzliche HTTP-Header.
+
+Wenn Sie diese Richtlinie aktivieren, können Sie angeben, welche Datentypen in Navigationen zwischen Microsoft Edge und dem Internet Explorer-Modus eingeschlossen werden sollen.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet Microsoft Edge das neue Verhalten des Einschließens von Formulardaten und zusätzlichen Kopfzeilen in Navigationen, die Modi ändern.
+
+Weitere Informationen dazu finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+Zuordnung von Richtlinienoptionen:
+
+* IncludeNone (0) = Keine Formulardaten oder Kopfzeilen senden
+
+* IncludeFormDataOnly (1) = Nur Formulardaten senden
+
+* IncludeHeadersOnly (2) = Nur zusätzliche Header senden
+
+* IncludeFormDataAndHeaders (3) = Formulardaten und zusätzliche Kopfzeilen senden
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Ganze Zahl
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InternetExplorerIntegrationComplexNavDataTypes
+  - GP-Name: Hiermit wird konfiguriert, ob Formulardaten und HTTP-Header gesendet werden, wenn der Internet Explorer Modus gestartet oder beendet wird.
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: InternetExplorerIntegrationComplexNavDataTypes
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000003
 ```
 
   
@@ -19731,8 +20183,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, behandelt Micro
 
 Wenn diese Richtlinie nicht konfiguriert ist, verwendet der Browser das Standardverhalten von DNS-Interception-Prüfungen und Intranetumleitungsvorschlägen. In M88 sind sie standardmäßig aktiviert, werden aber im zukünftigen Release standardmäßig deaktiviert sein.
 
-
-            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ist eine verwandte Richtlinie, die DNS-Interception-Prüfungen möglicherweise auch deaktiviert. Diese Richtlinie ist jedoch eine flexiblere Version, die Infoleiste für Intranetumleitungen separat steuern kann und in Zukunft erweitert werden kann.
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) ist eine verwandte Richtlinie, die DNS-Interception-Prüfungen möglicherweise auch deaktiviert. Diese Richtlinie ist jedoch eine flexiblere Version, die Infoleiste für Intranetumleitungen separat steuern kann und in Zukunft erweitert werden kann.
 Wenn entweder [DNSInterceptionChecksChecksEnabled](#dnsinterceptionchecksenabled) oder diese Richtlinie die Deaktivierung von Interception-Prüfungen anfordert, werden die Prüfungen deaktiviert.
 Wenn DNS-Interception-Prüfungen durch diese Richtlinie deaktiviert werden, [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) jedoch aktiviert ist, führen Einzelwortabfragen immer noch zu Intranetnavigationen.
 
@@ -21982,6 +22433,65 @@ Wenn Sie diese Richtlinie deaktivieren, dürfen Benutzer kein Remotedebugging ve
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="rendererappcontainerenabled"></a>RendererAppContainerEnabled
+
+  #### <a name="enable-renderer-in-app-container"></a>Renderer im App-Container aktivieren
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Startet Rendererprozesse in einem App-Container, um zusätzliche Sicherheitsvorteile zu bieten.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, startet Microsoft Edge den Rendererprozess in einem App-Container in einem künftigen Update.
+
+Wenn Sie diese Richtlinie aktivieren, startet Microsoft Edge den Rendererprozess in einem App-Container.
+
+Wenn Sie diese Richtlinie deaktivieren, startet Microsoft Edge den Rendererprozess nicht in einem App-Container.
+
+Deaktivieren Sie die Richtlinie nur, wenn Kompatibilitätsprobleme mit Software von Drittanbietern auftreten, die innerhalb der Renderer-Prozesse von Microsoft Edge ausgeführt werden müssen.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: RendererAppContainerEnabled
+  - GP-Name: Renderer im App-Container aktivieren
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: RendererAppContainerEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000000
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="renderercodeintegrityenabled"></a>RendererCodeIntegrityEnabled
 
   #### <a name="enable-renderer-code-integrity"></a>Aktivieren der Codeintegrität des Renderers
@@ -22107,8 +22617,7 @@ Wenn Sie diese Richtlinie aktivieren, wird ein Webdienst für Netzwerkverbindung
 
 Wenn Sie diese Richtlinie deaktivieren, verwendet Microsoft Edge systemeigene APIs, um zu versuchen, Netzwerkkonnektivitäts- und Navigationsprobleme zu lösen.
 
-
-            **Hinweis**: außer unter Windows 8 und neueren Versionen von Windows verwendet Microsoft Edge *immer* systemeigene APIs, um Verbindungsprobleme zu lösen.
+**Hinweis**: außer unter Windows 8 und neueren Versionen von Windows verwendet Microsoft Edge *immer* systemeigene APIs, um Verbindungsprobleme zu lösen.
 
 Wenn Sie diese Richtlinie nicht konfigurieren, respektiert Microsoft Edge die Benutzereinstellungen, die unter Dienste unter Edge://Settings/Privacy festgelegt sind.
 Insbesondere gibt es ein Wahlfeld **Verwenden eines Webdiensts zum Beheben von Navigationsfehlern**, das der Benutzer ein- oder ausschalten kann. Wenn Sie diese Richtlinie (ResolveNavigationErrorsUseWebService) aktiviert haben, sollten Sie wissen, dass die Einstellung **Verwenden eines Webdiensts zum Beheben von Navigationsfehlern** aktiviert ist, der Benutzer die Einstellung jedoch nicht mithilfe der Umschaltfläche ändern kann. Wenn Sie diese Richtlinie deaktiviert haben, ist die Einstellung **Verwenden eines Webdiensts zum Beheben von Navigationsfehlern** deaktiviert und der Benutzer kann die Einstellung nicht mithilfe der Umschaltfläche ändern.
@@ -22292,8 +22801,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren, wird der Standardpfad für den Se
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden nur die normalen lokalen Profile verwendet.
 
-
-            [SyncDisabled](#syncdisabled) deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf diese Richtlinie.
+[SyncDisabled](#syncdisabled) deaktiviert nur die Cloud-Synchronisierung und hat keine Auswirkungen auf diese Richtlinie.
 
 Weitere Informationen zur Verwendung von Roaming-Benutzerprofilen finden Sie unter[https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058).
 
@@ -23456,6 +23964,70 @@ Microsoft Edge erfordert ab Version 91 eine ursprungsübergreifende Isolierung, 
   #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: SharedArrayBufferUnrestrictedAccessAllowed
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="sharedlinksenabled"></a>SharedLinksEnabled
+
+  #### <a name="show-links-shared-from-microsoft-365-apps-in-history"></a>Anzeigen von Links, die von Microsoft 365 Apps im Verlauf freigegeben wurden
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Ermöglicht Microsoft Edge, Links anzuzeigen, die kürzlich von Microsoft 365 Apps im Verlauf vom oder für den Benutzer freigegeben wurden.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, zeigt Microsoft Edge Links an, die kürzlich vom oder für den Benutzer aus Microsoft 365 Apps im Verlauf freigegeben wurden.
+
+Wenn Sie diese Richtlinie deaktivieren, zeigt Microsoft Edge keine Links an, die kürzlich aus Microsoft 365-Apps im Verlauf durch bzw. für den Benutzer freigegeben wurden. Das Steuerelement ist in den Microsoft Edge Einstellungen deaktiviert und auf „Aus“ festgelegt.
+
+Diese Richtlinie gilt nur für lokale Microsoft Edge-Benutzerprofile und Profile, die unter Verwendung von Azure Active Directory angemeldet sind.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SharedLinksEnabled
+  - GP-Name: Anzeigen von Links, die von Microsoft 365 Apps im Verlauf freigegeben wurden
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: SharedLinksEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Name des Einstellungsschlüssels: SharedLinksEnabled
   - Beispielwert:
 ``` xml
 <true/>
