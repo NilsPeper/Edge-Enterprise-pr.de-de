@@ -1,4 +1,4 @@
-# last revised 09/09/2021 
+# last revised 10/26/2021 
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -161,6 +161,8 @@
   items:
     - name: Sicherheit für Ihr Unternehmen
       href: ms-edge-security-for-business.md
+    - name: Moderner Sicherheitsschutz für anfällige Legacy-Apps
+      href: microsoft-edge-security-iemode-safer-than-ie.md
     - name: Unterbrechen des Downloads von potenziell gefährlichen Dateien
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Zulassungsliste für Microsoft Edge-Endpunkte
