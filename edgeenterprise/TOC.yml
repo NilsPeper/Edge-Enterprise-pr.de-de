@@ -1,4 +1,4 @@
-# last revised 10/26/2021 
+# last revised 11/02/2021 
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -43,12 +43,6 @@
       href: microsoft-edge-release-schedule.md
     - name: Sicherheitsupdates
       href: microsoft-edge-relnotes-security.md
-    - name: Microsoft Edge-Richtlinienzuordnung
-      items:
-        - name: Richtlinienzuordnung – Übersicht
-          href: microsoft-edge-policy-map-overview.md
-        - name: Richtlinienzuordnung von Google Chrome zu Microsoft Edge
-          href: microsoft-edge-policy-map-chrome-to-newedge.md
     - name: Unterstützte Betriebssysteme
       href: microsoft-edge-supported-operating-systems.md
     - name: Lifecycle-Richtlinie
