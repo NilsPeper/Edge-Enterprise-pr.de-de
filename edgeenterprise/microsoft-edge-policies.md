@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/20/2021
+ms.date: 10/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 934dd2b8430184914ab080f0138a10601caa6a04
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 4c50682333cfb21d9b0026c5ebb11f5169c3aa5c
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107550"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154592"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -33,17 +33,9 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 Die folgenden Richtlinien wurden diesem Dokumentationsupdate hinzugefügt.
 
-|Richtlinienname|Beschriftung|
-|-|-|
-[Einstellungen für TyposquattingChecker](#typosquattingchecker-settings)|Stellen Sie Warnmeldungen bereit, um Ihre Benutzer vor potenziellen Typosquatting-Websites zu schützen.|
-|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Verhindert, dass Dateien in Application Guard hochgeladen werden|
-|[EfficiencyMode](#efficiencymode)|Konfigurieren, wann der Effizienzmodus aktiv werden soll|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Neue SmartScreen-Bibliothek aktivieren|
-|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|„AutoLaunch Protocols“-Komponente aktiviert|
-|[ForceSyncTypes](#forcesynctypes)|Konfigurieren Sie die Liste der Typen, die in die Synchronisierung eingeschlossen sind|
-|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Hiermit wird konfiguriert, ob Formulardaten und HTTP-Header gesendet werden, wenn der Internet Explorer Modus gestartet oder beendet wird.|
-|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Renderer im App-Container aktivieren|
-|[SharedLinksEnabled](#sharedlinksenabled)|Anzeigen von Links, die von Microsoft 365 Apps im Verlauf freigegeben wurden|
+| Richtlinienname | Beschriftung |
+|--|--|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Schaltfläche "Neu laden" im Internet Explorer Modus in der Symbolleiste anzeigen|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
@@ -447,12 +439,13 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Testen des Internet Explorer-Modus zulassen (veraltet)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Konfigurieren der Pixelanpassung zwischen window.open-Höhen, die von Seiten im IE-Modus stammen, im Vergleich zu Edgemodusseiten|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Konfigurieren der Pixelanpassung zwischen window.open-Breiten, die von Seiten im IE-Modus stammen, im Vergleich zu Edgemodusseiten|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Schaltfläche "Neu laden" im Internet Explorer Modus in der Symbolleiste anzeigen|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Verhalten der Intranetumleitung|
 |[IsolateOrigins](#isolateorigins)|Aktivieren der Website-Isolation für bestimmte Ursprünge|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Windows das Durchsuchen lokaler Microsoft Edge-Browserdaten ermöglichen|
 |[LocalProvidersEnabled](#localprovidersenabled)|Vorschläge von lokalen Anbietern zulassen|
 |[MAUEnabled](#mauenabled)|Immer Microsoft AutoUpdate als Updater für Microsoft Edge verwenden|
-|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Einmaliges Anmelden für Microsoft-Websites mit diesem Profil zulassen|
+|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Einmaliges Anmelden für persönliche Microsoft-Websites mit diesem Profil zulassen|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Legt verwaltete Konfigurationswerte für Websites auf bestimmte Ursprünge fest|
 |[ManagedFavorites](#managedfavorites)|Favoriten konfigurieren|
 |[ManagedSearchEngines](#managedsearchengines)|Verwalten von Suchmaschinen|
@@ -549,8 +542,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Aktivieren der Unterstützung für Windows-BS-Routingtabellenregeln beim Herstellen von Peer-to-Peer-Verbindungen über WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
-|[WebWidgetAllowed](#webwidgetallowed)|Webwidget aktivieren|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Web-Widget beim Windows-Start zulassen|
+|[WebWidgetAllowed](#webwidgetallowed)|Edge-Leiste aktivieren|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Edge-Leiste beim Windows-Start zulassen|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Aktivieren der Erkennung verdeckter Fenster|
 
@@ -4865,7 +4858,7 @@ Wenn Sie diese Einstellung aktivieren, wird die Installation externer Erweiterun
 
 Wenn Sie diese Einstellung deaktivieren oder nicht festlegen, können externe Erweiterungen installiert werden.
 
-Externe Erweiterungen und deren Installation sind unter [Alternative Erweiterungsverteilungsmethoden](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options) dokumentiert.
+Externe Erweiterungen und ihre Installation sind unter https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options dokumentiert.
 
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
@@ -5149,7 +5142,7 @@ Der Quellcode einer beliebigen Erweiterung kann von Benutzern mit Entwicklertool
 
 Jedes Listenelement der Richtlinie ist eine Zeichenfolge, die eine Erweiterungs-ID und optional eine durch ein Semikolon (;) abgetrennte „Update“-URL enthält. Die Erweiterungs-ID ist die Zeichenfolge mit 32 Buchstaben, die beispielsweise auf edge://extensions im Entwicklermodus gefunden wird. Wenn angegeben, sollte die „Update“-URL auf ein Update-Manifest-XML-Dokument ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ) verweisen. Standardmäßig wird die Update-URL der Microsoft Edge-Add-ons-Website verwendet. Die in dieser Richtlinie gesetzte „Update“-URL wird nur für die Erstinstallation verwendet; bei nachfolgenden Aktualisierungen der Erweiterung wird die Update-URL im Manifest der Erweiterung verwendet.
 
-Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informationen zum Hosten von Erweiterungen finden Sie unter [Erweiterungen auf der Microsoft Edge Add-on-Website veröffentlichen und aktualisieren.](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)
+Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informieren Sie sich über Hosting-Erweiterungen (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -8339,7 +8332,7 @@ Für Ursprünge, die nicht von den hier angegebenen Mustern abgedeckt werden, wi
 
 Beachten Sie, dass diese Richtlinie nur unsichere Ursprünge betrifft, sichere Ursprünge (z. B. https://example.com)) in dieser Liste werden also ignoriert.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [Filterformat für URL-listenbasierte Richtlinien](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -9703,7 +9696,7 @@ Wenn Sie diese Richtlinie aktivieren, downloadet Microsoft Edge das angegebene L
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, zeigt Microsoft Edge auf der neuen Registerkartenseite kein Firmenlogo oder ein Microsoft-Logo an.
 
-Hilfe zur Ermittlung des SHA-256-Hashs finden Sie unter [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
+Hilfe zur Ermittlung des SHA-256-Hashs finden Sie unter https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -16561,7 +16554,7 @@ Beachten Sie, dass, während im vorstehenden Beispiel die Unterdrückung von Dow
 
   #### <a name="data-type"></a>Datentyp:
 
-  - Dictionary
+  - Liste von Zeichenfolgen
 
   #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 
@@ -16575,62 +16568,27 @@ Beachten Sie, dass, während im vorstehenden Beispiel die Unterdrückung von Dow
 
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
-  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (empfohlen): n.a.
-  - Wertname: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - Werttyp: REG_SZ
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
 
   ##### <a name="example-value"></a>Beispielwert:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
-  {
-    "domains": [
-      "https://contoso.com",
-      "contoso2.com"
-    ],
-    "file_extension": "jnlp"
-  },
-  {
-    "domains": [
-      "*"
-    ],
-    "file_extension": "swf"
-  }
-]
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
+
 ```
-
-  ##### <a name="compact-example-value"></a>Kompakter Beispielwert:
-
-  ```
-  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
-  ```
-  
 
   #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
   
   - Name des Einstellungsschlüssels: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Beispielwert:
 ``` xml
-<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>https://contoso.com</string>
-      <string>contoso2.com</string>
-    </array>
-    <key>file_extension</key>
-    <string>jnlp</string>
-  </dict>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>*</string>
-    </array>
-    <key>file_extension</key>
-    <string>swf</string>
-  </dict>
+  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
+  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
 </array>
 ```
   
@@ -20167,6 +20125,61 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, behandelt Micro
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="internetexplorermodetoolbarbuttonenabled"></a>InternetExplorerModeToolbarButtonEnabled
+
+  #### <a name="show-the-reload-in-internet-explorer-mode-button-in-the-toolbar"></a>Schaltfläche "Neu laden" im Internet Explorer Modus in der Symbolleiste anzeigen
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows ab 96 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Legen Sie diese Richtlinie fest, um die Schaltfläche „Neu laden“ im Internet Explorer-Modus in der Symbolleiste anzuzeigen. Benutzer können die Schaltfläche in der Symbolleiste über edge://settings/appearance ausblenden.  Die Schaltfläche wird nur in der Symbolleiste angezeigt, wenn die Richtlinie [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) aktiviert ist oder wenn der Benutzer "Neuladen von Websites im Internet Explorer-Modus zulassen" aktiviert hat.
+
+Wenn Sie diese Richtlinie aktivieren, wird die Schaltfläche "Im Internetmodus neu laden" an die Symbolleiste angeheftet.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird die Schaltfläche „Im Internet Explorer-Modus neu laden“ standardmäßig nicht in der Symbolleiste angezeigt. Benutzer können die Schaltfläche "Internet Explorer Modus anzeigen" in edge://settings/appearance umschalten.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InternetExplorerModeToolbarButtonEnabled
+  - GP-Name: Schaltfläche Neu laden im Internet Explorer-Modus in der Symbolleiste anzeigen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: InternetExplorerModeToolbarButtonEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="intranetredirectbehavior"></a>IntranetRedirectBehavior
 
   #### <a name="intranet-redirection-behavior"></a>Verhalten der Intranetumleitung
@@ -20476,7 +20489,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird Microsoft 
 
   ### <a name="msawebsitessousingthisprofileallowed"></a>MSAWebSiteSSOUsingThisProfileAllowed
 
-  #### <a name="allow-single-sign-on-for-microsoft-sites-using-this-profile"></a>Einmaliges Anmelden für Microsoft-Websites mit diesem Profil zulassen
+  #### <a name="allow-single-sign-on-for-microsoft-personal-sites-using-this-profile"></a>Einmaliges Anmelden für persönliche Microsoft-Websites mit diesem Profil zulassen
 
   
   
@@ -20486,7 +20499,7 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird Microsoft 
 
   #### <a name="description"></a>Beschreibung
 
-  Die Option "Einmaliges Anmelden für Microsoft-Websites mit diesem Profil zulassen" ermöglicht Nicht-MSA-Profilen die Verwendung von einmaligem Anmelden für Microsoft-Websites mit den auf dem Computer vorhandenen MSA-Anmeldeinformationen. Diese Option wird Endbenutzern als Umschalter unter Einstellungen -> Profile -> Profileinstellungen nur für Nicht-MSA-Profile angezeigt.
+  Die Option 'Einmaliges Anmelden für persönliche Microsoft-Sites mit diesem Profil zulassen' ermöglicht Nicht-MSA-Profilen, einmaliges Anmelden für Microsoft-Sites mit auf dem Computer vorhandenen MSA-Anmeldeinformationen zu verwenden. Diese Option wird Endbenutzern als Umschalter unter Einstellungen -> Profile -> Profileinstellungen nur für Nicht-MSA-Profile angezeigt.
 
 Wenn Sie diese Richtlinie deaktivieren, können Nicht-MSA-Profile für Microsoft-Websites einmaliges Anmelden mit MSA-Anmeldeinformationen, die auf dem Computer vorhanden sind, nicht verwenden.
 
@@ -20507,7 +20520,7 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer 
   ##### <a name="group-policy-admx-info"></a>Gruppenrichtlinie (ADMX) – Informationen
 
   - Eindeutiger GP-Name: MSAWebSiteSSOUsingThisProfileAllowed
-  - GP-Name: Einmaliges Anmelden für Microsoft-Websites mit diesem Profil zulassen
+  - GP-Name: Einmaliges Anmelden für persönliche Microsoft-Sites mit diesem Profil zulassen
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
   - GP ADMX Dateiname: MSEdge.admx
@@ -23851,15 +23864,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Beschreibung
 
-  Gibt an, ob Microsoft Edge das von der Hardware erzwungene Stapelschutz-Sicherheitsfeature nach dem Absturz aktivieren soll, der durch dieses Feature ausgelöst wurde.
+  Microsoft Edge enthält eine durch Hardware erzwungene Stackschutz-Sicherheitsfunktion. Diese Funktion kann in Fällen, die keinen Versuch darstellen, die Sicherheit des Browsers zu gefährden, zu einem unerwarteten Absturz des Browsers führen.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, wird Microsoft Edge die Einstellung verwalten, um einen sicheren Rollout des von der Hardware erzwungenen Stapelschutzes durchzuführen, wobei das Feature schließlich für alle Benutzer aktiviert wird.
+Mit dieser Richtlinie können Sie das Verhalten der Hardware-erzwungenen Stack-Schutzfunktion steuern, nachdem ein durch diese Funktion ausgelöster Absturz aufgetreten ist.
 
-Legen Sie diese Richtlinie auf "Deaktivieren" fest, um den von der Hardware erzwungenen Stapelschutz nach einem von diesem Feature ausgelösten Absturz immer zu deaktivieren.
+Setzen Sie diese Richtlinie auf "Deaktivieren", um die Funktion zu deaktivieren.
 
-Legen Sie diese Richtlinie auf "DisableUntilUpdate" fest, um den von der Hardware erzwungenen Stapelschutz nach einem von diesem Feature ausgelösten Absturz zu deaktivieren, ihn aber nachdem das Problem möglicherweise von Microsoft Edge behoben wurde zu aktivieren.
+Legen Sie diese Richtlinie auf „DisableUntilUpdate“ fest, um die Funktion bis zum nächsten Update von Microsoft Edge zu deaktivieren.
 
-Legen Sie diese Richtlinie auf "Aktivieren" fest, um den von der Hardware erzwungenen Stapelschutz nach einem von diesem Feature ausgelösten Absturz immer zu aktivieren.
+Setzen Sie diese Richtlinie auf "Aktivieren", um die Funktion aktiviert zu lassen.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -27022,7 +27035,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 
   ### <a name="webwidgetallowed"></a>WebWidgetAllowed
 
-  #### <a name="enable-the-web-widget"></a>Webwidget aktivieren
+  #### <a name="enable-the-edge-bar"></a>Edge-Leiste aktivieren
 
   
   
@@ -27032,20 +27045,20 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
 
   #### <a name="description"></a>Beschreibung
 
-  Aktiviert das Webwidget. Wenn diese Option aktiviert ist, können Benutzer das Widget verwenden, um im Internet vom Desktop aus oder über eine Anwendung zu suchen. Das Widget bietet ein Suchfeld, im dem Webvorschläge angezeigt werden, und öffnet alle Websuchen in Microsoft Edge. Im Suchfeld werden Vorschläge für die Suche (auf Bing gestützt) und für URLs angezeigt. Das Widget umfasst außerdem Feed-Kacheln, die angeklickt werden können, um weitere Informationen auf msn.com in einem neuen Tab oder im Fenster des Microsoft Edge-Browsers anzuzeigen. Die Feed-Kacheln könnten Werbeanzeigen enthalten. Das Widget kann über die Microsoft Edge-Einstellungen oder über das Menü "Weitere Tools" in Microsoft Edge gestartet werden.
+  Aktiviert die Edge-Leiste. Wenn diese Option aktiviert ist, können Benutzer die Edge-Leiste verwenden, um das Web von ihrem Desktop oder einer Anwendung aus zu durchsuchen. Die Edge-Leiste bietet ein Suchfeld, das Webvorschläge anzeigt und alle Websuchen in Microsoft Edge öffnet. Im Suchfeld werden Vorschläge für die Suche (auf Bing gestützt) und für URLs angezeigt. Die Edge-Leiste enthält auch Feed-Kacheln, auf die Benutzer klicken können, um weitere Informationen zu msn.com in einer neuen Microsoft Edge-Browserregisterkarte oder einem neuen Fenster anzuzeigen. Die Feed-Kacheln könnten Werbeanzeigen enthalten. Die Edge-Leiste kann über die Microsoft Edge-Einstellungen oder über das Menü "Weitere Tools" in Microsoft Edge gestartet werden.
 
-Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, ist das Web-Widget automatisch für alle Profile aktiviert.
-In den Microsoft Edge-Einstellungen wird die Option zum Starten des Widgets angezeigt.
-In den Microsoft Edge-Einstellungen wird das Menüelement zum Ausführen des Widgets beim Windows-Start (automatischer Start) angezeigt.
-Wenn die Richtlinie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) aktiviert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Ein“ gesetzt.
-Wenn die Richtlinie [WebWidgetIsEnabledOnStartup-](#webwidgetisenabledonstartup) deaktiviert oder nicht konfiguriert ist, ist die Option zum Aktivieren des Widgets beim Start auf „Aus“ gesetzt.
-Benutzer sehen das Menüelement, um das Widget über das Microsoft Edge-Menü "Weitere Tools" zu starten. Benutzer können das Widget über das Menü "Weitere Tools" starten.
-Das Widget kann durch die Option "Beenden" in der Statusleiste oder durch Schließen des Widgets über die Taskleiste deaktiviert werden. Wenn die Autostart-Option ausgewählt wurde, wird das Widget beim Neustart des Systems neu gestartet.
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren: Die Edge-Leiste wird automatisch für alle Profile aktiviert.
+In den Microsoft Edge-Einstellungen sehen Benutzer die Option zum Starten der Edge-Leiste.
+In den Microsoft Edge-Einstellungen sehen Benutzer den Menüpunkt zum Ausführen der Edge-Leiste beim Windows-Start (Autostart).
+Die Option zum Aktivieren der Edge-Leiste beim Start wird aktiviert, wenn die Richtlinie [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) aktiviert ist.
+Wenn [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) deaktiviert oder nicht konfiguriert ist, wird die Option zum Aktivieren der Edge-Leiste beim Start deaktiviert.
+Benutzer sehen den Menüpunkt zum Starten der Edge-Leiste aus dem Microsoft Edge-Menü "Weitere Tools". Benutzer können die Edge-Leiste über "Weitere Tools" starten.
+Die Edge-Leiste kann über die Option "Beenden" in der Taskleiste oder durch Schließen der Edge-Leiste über die Taskleiste deaktiviert werden. Die Edge-Leiste wird beim Neustart des Systems neu gestartet, wenn der automatische Start aktiviert ist.
 
-Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget für alle Profile deaktiviert.
-Die Option zum Starten des Widgets über die Microsoft Edge-Einstellungen wird deaktiviert.
-Die Option zum Starten des Widget beim Windows-Start (automatischer Start) wird deaktiviert.
-Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools" wird deaktiviert.
+Wenn Sie diese Richtlinie deaktivieren: Die Edge-Leiste wird für alle Profile deaktiviert.
+Die Option zum Starten der Edge-Leiste über die Microsoft Edge-Einstellungen wird deaktiviert.
+Die Option zum Starten der Edge-Leiste beim Windows-Start (Autostart) wird deaktiviert.
+Die Option zum Starten der Edge-Leiste über das Microsoft Edge-Menü "Weitere Tools" wird deaktiviert.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -27062,7 +27075,7 @@ Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: WebWidgetAllowed
-  - GP-Name: Webwidget aktivieren
+  - GP-Name: Aktivieren der Edge-Leiste
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -27086,7 +27099,7 @@ Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools
 
   ### <a name="webwidgetisenabledonstartup"></a>WebWidgetIsEnabledOnStartup
 
-  #### <a name="allow-the-web-widget-at-windows-startup"></a>Web-Widget beim Windows-Start zulassen
+  #### <a name="allow-the-edge-bar-at-windows-startup"></a>Edge-Leiste beim Windows-Start zulassen
 
   
   
@@ -27096,16 +27109,16 @@ Die Option zum Starten des Widgets über das Microsoft Edge-Menü "Weitere Tools
 
   #### <a name="description"></a>Beschreibung
 
-  Gestattet dem Web-Widget beim Start von Windows zu starten.
+  Ermöglicht die Ausführung der Edge-Leiste beim Windows-Start.
 
-Ist diese Option aktiviert, wird das Web-Widget standardmäßig beim Windows-Start ausgeführt.
-Wenn das Widget über die Richtlinie [WebWidgetAllowed](#webwidgetallowed) deaktiviert wurde, startet diese Richtlinie das Widget nicht beim Windows-Start.
+Wenn Sie dies aktivieren: Die Edge-Leiste wird standardmäßig beim Start von Windows ausgeführt.
+Wenn die Edge-Leiste über die [WebWidgetAllowed](#webwidgetallowed)-Richtlinie deaktiviert ist, startet diese Richtlinie die Edge-Leiste beim Start von Windows nicht.
 
-Wenn Sie diese Richtlinie deaktivieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
-Die Option zum Starten des Widgets beim Windows-Start wird deaktiviert und in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
+Wenn Sie diese Richtlinie deaktivieren: Die Edge-Leiste wird nicht für alle Profile beim Windows-Start gestartet.
+Die Option zum Starten der Edge-Leiste beim Start von Windows wird deaktiviert und in den Microsoft Edge-Einstellungen deaktiviert.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, wird das Web-Widget beim Windows-Start für keines der Profile automatisch gestartet.
-Die Option zum Starten des Widgets beim Windows-Start wird in den Microsoft Edge-Einstellungen auf „Aus“ gesetzt.
+Wenn Sie die Richtlinie nicht konfigurieren: Die Edge-Leiste wird nicht für alle Profile beim Windows-Start gestartet.
+Die Option zum Starten der Edge-Leiste beim Windows-Start wird in den Microsoft Edge-Einstellungen deaktiviert.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -27122,7 +27135,7 @@ Die Option zum Starten des Widgets beim Windows-Start wird in den Microsoft Edge
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: WebWidgetIsEnabledOnStartup
-  - GP-Name: Web-Widget beim Windows-Start zulassen
+  - GP-Name: Edge-Leiste beim Windows-Start zulassen
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
