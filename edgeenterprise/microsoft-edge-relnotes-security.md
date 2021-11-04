@@ -3,23 +3,27 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2021
+ms.date: 10/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: 2e49fcae65239c726b9f6452a0f4dfc227ad9394
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: bfdc084cdd944cb43cfa6089deb0a77b9c9ebe01
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107470"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154487"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitspatches, die in Updates für den Microsoft Edge Stable Channel enthalten sind.
+
+## <a name="october-29-2021"></a>29. Oktober 2021
+
+Microsoft hat den aktuellen  **Microsoft Edge Stable Channel (Version95.0.1020.40)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält einen Fix für [CVE-2021-38000](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38000) und [CVE-2021-38003](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38003), die vom Chromium-Team als Exploit gemeldet wurden. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://msrc.microsoft.com/update-guide).
 
 ## <a name="october-21-2021"></a>21. Oktober 2021
 
@@ -317,4 +321,4 @@ Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://portal
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Startseite](https://aka.ms/EdgeEnterprise)
