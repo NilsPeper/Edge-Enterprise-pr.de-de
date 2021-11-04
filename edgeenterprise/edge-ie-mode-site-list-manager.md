@@ -3,35 +3,35 @@ title: 'Enterprise Site List Manager in Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: 'Aktivieren und Verwenden des Enterprise Site List Managers in Microsoft Edge '
-ms.openlocfilehash: add635a17d05cb4be94e710fd99ab480b992a579
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Aktivieren und Verwenden des Enterprise Site List Managers in Microsoft Edge
+ms.openlocfilehash: 51377d9818f7cf82653c3582ef78c8245b2c7704
+ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979233"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155052"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Enterprise Site List Manager in Microsoft Edge
 
 >[!Note]
 > Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-In diesem Artikel wird erläutert, wie Sie den Zugriff auf und die Verwendung des Enterprise Site List Managers in Microsoft Edge zum Erstellen, Bearbeiten und Exportieren Ihrer Websiteliste für den Unternehmensmodus für Internet Explorer-Modus aktivieren.
+In diesem Artikel wird erläutert, wie Sie den Zugriff auf den Enterprise Site List Manager in Microsoft Edge aktivieren und verwenden, um Ihre Enterprise Mode Site List für den Internet Explorer (IE)-Modus zu erstellen, zu bearbeiten und zu exportieren.
 
 > [!NOTE]
-> Dieser Artikel bezieht sich auf Microsoft Edge Version 89 oder höher. 
+> Dieser Artikel bezieht sich auf Microsoft Edge Version 89 oder höher.
 
 ## <a name="overview"></a>Übersicht
 
-Der Enterprise Site List Manager ist eine Browserversion des [eigenständigen Enterprise Mode Site List Manager-Tools](https://www.microsoft.com/download/details.aspx?id=49974), mit dem Sie die Websiteliste Ihres Unternehmens erstellen, bearbeiten und exportieren können.
+Der Enterprise Site List Manager ist eine Browserversion des eigenständigen Enterprise Mode Site List Manager-Tools, mit dem Sie die Websiteliste Ihres Unternehmens erstellen, bearbeiten und exportieren können. Sie können auf den browserinternen Enterprise Site List Manager unter *edge://compat/SiteListManager*zugreifen.
 
-Zukünftige Verbesserungen am Tool für den Internet Explorer-Modus werden über den Enterprise Site List Manager in Microsoft Edge verfügbar sein. Das eigenständige Tool ist weiterhin im Download-Center verfügbar, es wird jedoch keine weiteren Feature-Updates erhalten.
+Zukünftige Verbesserungen am Tool für den Internet Explorer-Modus werden über Enterprise Site List Manager (*edge://compat/SiteListManager*) in Microsoft Edge verfügbar sein. Das eigenständige Tool ist weiterhin im Download-Center verfügbar, es wird jedoch keine weiteren Feature-Updates erhalten.
 
 ## <a name="enabling-access-to-enterprise-site-list-manager"></a>Aktivieren des Zugriffs auf den Enterprise Site List Manager
 
@@ -51,7 +51,7 @@ Verwenden Sie die folgenden Schritte, um Ihrer Websiteliste einzelne Websites hi
 > Sie können nur bestimmte URLs, jedoch keine Internet- oder Intranetzonen hinzufügen.
 
 1. Klicken Sie im Enterprise Site List Manager auf **Website hinzufügen**.
-2. Geben Sie die URL für die Website, die Sie hinzufügen möchten, in das URL-Feld ein, z. B.:  <domain>.com oder <domain>.com/<path> .
+2. Geben Sie die URL für die Website, die Sie hinzufügen möchten, in das URL-Feld ein, z. B.:  \<domain\>.com oder \<domain\>.com/\<path\> .
 3. Wählen Sie eine der folgenden Optionen in der **Öffnen mit** -Liste aus:
 
    - **IE11**. Öffnet die Website in der IE11-Anwendung.

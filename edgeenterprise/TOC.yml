@@ -150,7 +150,7 @@
         - name: Verknüpfen von Dateierweiterungen mit dem Internet Explorer-Modus
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: Problembehandlung und häufig gestellte Fragen (FAQ) zum IE-Modus
-          href: edge-ie-mode-faq.yml
+          href: edge-ie-mode-faq.md
 - name: Sicherheit in Microsoft Edge
   items:
     - name: Sicherheit für Ihr Unternehmen
