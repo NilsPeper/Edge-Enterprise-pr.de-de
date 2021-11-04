@@ -3,19 +3,19 @@ title: Zulassungsliste für Microsoft Edge-Endpunkte
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Zulassungsliste für Microsoft Edge-Endpunkte
-ms.openlocfilehash: 735e18e63095405dad4fdd51d51654956b564ca7
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 9e6a87290f2f73ba11bc98eecd3aa693c35b5ace
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979524"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155210"
 ---
 # <a name="allow-list-for-microsoft-edge-endpoints"></a>Zulassungsliste für Microsoft Edge-Endpunkte
 
@@ -91,7 +91,7 @@ Weitere Informationen zur Übermittlungsoptimierung finden Sie unter [Übermittl
 
 Diese Endpunkte verwalten das Lesen und Schreiben von synchronisierten Daten, die Rechteverwaltung für sichere Daten und die Benachrichtigung des Browsers, wenn neue Synchronisierungsdaten verfügbar sind.
 
-- Edge-Synchronisierungsdienst-Endpunkte:
+- Endpunkte des Microsoft Edge-Synchronisierungsdiensts:
 
   - `https://edge-enterprise.activity.windows.com`
   - `https://edge.activity.windows.com`
@@ -103,6 +103,12 @@ Diese Endpunkte verwalten das Lesen und Schreiben von synchronisierten Daten, di
   - `https://api.aadrm.cn` (für Mandanten in China)
 
 - [Windows-Benachrichtigungsdienst-Endpunkte](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+
+### <a name="cloud-site-list-management"></a>Verwaltung von Cloudwebsitelisten
+
+Der Dienst, der Microsoft Edge zum Herunterladen der in der Cloud gehosteten Websiteliste für den Internet Explorer (IE)-Modus verwendet. Weitere Informationen finden Sie unter [Cloud Site List Management](https://aka.ms/CloudSiteList)
+
+- `https://edge.microsoft.com/`
 
 ## <a name="other-browser-support-services"></a>Andere Dienste zur Browserunterstützung
 
