@@ -3,19 +3,19 @@ title: Versionshinweise von Microsoft Edge für Stable Channel
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/22/2021
+ms.date: 11/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise von Microsoft Edge für Stable Channel
-ms.openlocfilehash: e416f04adfdd96f7d14cb662ce2a1fd052951d26
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 5c8a893254d9c9be0ccf22c76a3f873f31a58756
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107450"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154496"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Versionshinweise für Microsoft Edge Stable Channel
 
@@ -30,6 +30,25 @@ Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sic
 > Für den Stable Channel erfolgt das Rollout von Updates progressiv über einen oder mehrere Tage. Weitere Informationen hierzu finden Sie unter [Progressive Rollouts für Microsoft Edge-Updates](microsoft-edge-update-progressive-rollout.md).
 >
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099258-october-30"></a>Version 94.0.992.58: 30. Oktober
+
+Verschiedene Fehler und Leistungsprobleme für das Release „Stabil (Erweitert) wurden behoben.
+
+## <a name="version-950102040-october-29"></a>Version 95.0.1020.40: 29. Oktober
+
+> [!IMPORTANT]
+> Dieses Update enthält einen Fix für [CVE-2021-38000](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38000) und [CVE-2021-38003](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38003), die vom Chromium-Team als Exploit gemeldet wurden. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide)
+
+Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#october-29-2021) aufgeführt.
+
+## <a name="version-950102038-october-28"></a>Version 95.0.1020.38: 28. Oktober
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-94099257-october-27"></a>Version 94.0.992.57: 27. Oktober
+
+Verschiedene Fehler und Leistungsprobleme für das Release „Stabil (Erweitert) wurden behoben.
 
 ## <a name="version-950102030-october-21"></a>Version95.0.1020.30: 21.Oktober
 
@@ -73,7 +92,6 @@ Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnote
 
 - [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed): Zulassen von Internet Explorer-Modustests
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Aktivieren der Standardeinstellung für das Verhalten von Legacy-SameSite-Cookies
-
 
 ## <a name="version-94099250-october-14"></a>Version94.0.992.50: 14.Oktober
 
@@ -235,135 +253,8 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 ### <a name="modified-policy"></a>Geänderte Richtlinie
 
 - AutoplayAllowed – Die Einstellung auf „Disabled“ setzt die automatische Medienwiedergabe jetzt auf „Limit“
-
-## <a name="version-92090255-july-22"></a>Version 92.0.902.55: 22. Juli
-
-Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnotes-security#july-22-2021) aufgeführt.
-
-### <a name="feature-updates"></a>Funktionsupdates
-
-**Benutzer können auf Internet Explorer-Modus auf Microsoft Edge problemlos wechseln**. Ab Microsoft Edge Version 92 können Benutzer eine Website im Internet Explorer-Modus auf Microsoft Edge neu laden, anstatt sich auf die eigenständige IE 11-Anwendung zu verlassen, während sie auf die Konfiguration einer Website in der Websiteliste für den Enterprise-Modus warten. Benutzer werden aufgefordert, die Website ihrer lokalen Websiteliste hinzuzufügen, sodass die Navigation zu derselben Seite in Microsoft Edge für die nächsten 30 Tage automatisch im IE-Modus gerendert wird. Mit der [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)-Richtlinie können Sie diese Umgebung konfigurieren und den Zugriff auf die Einstiegspunkte des IE-Modus sowie die Möglichkeit zum Hinzufügen von Websites zur lokalen Websiteliste zulassen. Mit der [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)-Richtlinie können Sie die Anzahl der Tage anpassen, die Websites in der lokalen Websiteliste gespeichert werden sollen. Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforderlich ist; oder KB5003690 oder höher für Windows 10, Version 2004, Windows 10, Version 20H2 oder Windows 10, Version 21H1, für die End-to-End-Erfahrung erforderlich ist. Weitere Informationen finden Sie unter [Lokale Websiteliste für den IE-Modus.](/deployedge/edge-ie-mode-local-site-list)
-
-**MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
-
-**Die Warnung „Entwicklermoduserweiterungen deaktivieren“ kann zwei Wochen lang geschlossen werden.** Ab Microsoft Edge Version 92 können Sie die Warnung „Entwicklermoduserweiterungen deaktivieren“ 2 Wochen lang erneut anzeigen, indem Sie die Option im Dropdownmenü des Warnungsdialogfelds auswählen.
-
-**Verwalten Sie Ihre Erweiterungen direkt über die Symbolleiste**. Mit dem Menü "Ganz neue Erweiterungen" auf der Symbolleiste können Sie Erweiterungen einfach ausblenden/anheften. Die Quicklinks zum Verwalten von Erweiterungen und zum Suchen neuer Erweiterungen erleichtern Ihnen das Auffinden neuer Erweiterungen und das Verwalten Ihrer vorhandenen Erweiterungen.
-
-**Der Standardwert für die automatische Wiedergabe wird auf „Beschränken“ festgelegt**.  Um Ihnen zu helfen, online konzentriert zu bleiben, haben wir ab Microsoft Edge Version 92 die Standardeinstellung für die automatische Wiedergabe von Medien von "Zulassen" zu "Beschränkt" geändert.
-
-**Zahlungsmethoden werden jetzt geräteübergreifend synchronisiert**. Ab Microsoft Edge Version 92 haben Sie die Möglichkeit, Ihre Zahlungsinformationen zwischen Geräten, auf denen Sie angemeldet sind, zu synchronisieren. Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
-Dieses Feature ist derzeit nur in den USA und nur für MSA-Benutzer (nicht AAD) verfügbar.
-
-**Verbesserungen am Rendering von Schriftarten**. Das Rendering von Text wurde verbessert, um die Deutlichkeit zu verbessern und die Unschärfe zu verringern. Bitte beachten Sie: Hierbei handelt es sich um ein gesteuertes Feature-Rollout. Sollte das Feature nicht angezeigt werden, sehen Sie bitte in Kürze wieder nach, da das Rollout noch läuft.
-
-**Schaltflächenfeatures der Symbolleiste wie Favoriten und Sammlungen "merken“ sich, dass der Benutzer sie an die Seite des Fensters angeheftet hat.** Wenn der Benutzer eine Symbolleistenschaltfläche anheftet, ist jetzt standardmäßig aktiviert, dass sie so lange im angehefteten Zustand geöffnet wird, bis er die Anheftung wieder aufhebt.
-
-**Benutzer können jetzt die Option "Einmaliges Anmelden für Geschäfts-, Schul- oder Uniwebsites mit diesem Profil zulassen" über Gruppenrichtlinien verwalten.**  Die Option "Einmaliges Anmelden für Geschäfts-, Uni- oder Schulwebsites mit diesem Profil zulassen" ermöglicht Nicht-AAD-Profilen die Verwendung von einmaligem Anmelden für Geschäfts-, Uni- oder Schulwebsites mit den auf dem Computer vorhandenen Geschäfts-, Uni- oder Schulanmeldeinformationen. Diese Option wird Endbenutzern als Umschalter unter Einstellungen -> Profile -> Profileinstellungen nur für Nicht-AAD-Profile angezeigt.  Mithilfe der [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)-Richtlinie können Sie das Verhalten konfigurieren.  
-
-**Kennwortintegrität**: Es ist wichtig, sichere, eindeutige Kennwörter für verschiedene Konten zu verwenden, um online sicher zu bleiben. Dies ist jedoch einfacher gesagt als getan, und die meisten Benutzer weisen schlechte Kennwortgewohnheiten auf wie die Verwendung schwacher Kennwörter, die leicht erraten werden können, oder die Verwendung der selben sicheren Kennwörter für alle Konten.
-
-Mit dieser neuesten Version von Microsoft Edge wird Ihre Aufgabe, sichere und eindeutige Kennwörter zu verwenden, etwas einfacher! Microsoft Edge informiert Sie nun darüber, ob gespeicherte Kennwörter sicher genug sind, und gibt außerdem an, ob sie auf mehreren Websites verwendet wurden, was Ihnen hilft, online sicherer zu bleiben. Die Informationen zum Status Ihrer Kennwörter finden Sie in der Liste der gespeicherten Kennwörter auf der Seite edge://settings/passwords.
-  
-**Datenschutz für Ihre gespeicherten Kennwörter hinzugefügt**: Wenn Sie ein Gerät verwenden, das auch von anderen Personen benutzt wird, oder Ihr Computer aus irgendeinem Grund entsperrt geblieben ist, können Sie sich jetzt für eine zweite Überprüfung mit Ihrem Gerätekennwort entscheiden, um zu verhindern, dass andere Zugriff auf Ihre Websitekennwörter erhalten. Einfach!
-
-**Outlook Erweiterung**:  Bleiben Sie über Microsoft Outlook-Posteingang, Kalender, Aufgaben und mehr auf dem Laufenden, ohne ein neues Browserfenster öffnen zu müssen.  Sie können die neue Outlook-Erweiterung hier beziehen: [Microsoft Outlook – Microsoft Edge-Add-Ons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
-
-**In Übereinstimmung mit dem Chromium-Open-Source-Projekt aktualisiert Microsoft Edge die Art und Weise, wie Tabellen auf Webseiten gerendert werden.** Diese Änderung behebt bekannte Probleme und bringt Microsoft Edge näher an die angegebene Art und Weise, wie Tabellen im Web/in anderen Browsern gerendert werden sollen. Es wird empfohlen, dass Sie wichtige Workflows in Ihrer Umgebung auf unerwartete Probleme testen. Eine vollständige Erläuterung finden Sie [hier.](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit)
-
-### <a name="new-policies"></a>Neue Richtlinien
-
-- [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled): Einmaliges Anmelden mit diesem Profil für Arbeits-, Schul- oder Uniwebsites aktiviert
-- [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault): Automatisches HTTPS konfigurieren
-- [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled): Steuern der Verwendung des Headless-Modus
-- [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Gibt an, ob unsichere Websites Anforderungen an privatere Netzwerkendpunkte stellen dürfen.
-- [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls): Zulassen, dass die aufgeführten Websites Anforderungen an privatere Netzwerkendpunkte aus unsicheren Kontexten stellen
-- [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays): Angeben der Anzahl der Tage, die eine Website in der lokalen Websiteliste für den IE-Modus verbleibt
-- [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed): Zulassen, dass nicht konfigurierte Websites im Internet Explorer-Modus neu geladen werden
-- [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed): Gibt an, ob SharedArrayBuffers in einem nicht ursprungsübergreifenden isolierten Kontext verwendet werden können.
-
-### <a name="deprecated-policy"></a>Veraltete Richtlinie
-
-- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed): Zulassen von Internet Explorer-Modustests
-
-### <a name="obsoleted-policy"></a>Veraltete Richtlinie
-
-- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors): Zulassen von Zertifikaten, die mit SHA-1 signiert wurden, wenn sie von lokalen Vertrauensanker ausgestellt wurden.
-
-## <a name="version-91086471-july-19"></a>Version 91.0.864.71: 19. Juli
-
-> [!Important]
->Dieses Update enthält einen Fix für [CVE-2021-30563,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) der vom Chromium-Team als Exploit gemeldet wurde. Weitere Informationen finden Sie im [Leitfaden zu Sicherheitsupdates](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
-
-Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnotes-security#july-19-2021) aufgeführt.
-
-## <a name="version-91086467-july-8"></a>Version 91.0.864.67: 8. Juli
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-91086464-july-2"></a>Version 91.0.864.64: 2. Juli
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-91086459-june-24"></a>Version 91.0.864.59: 24. Juni
-
-Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#june-24-2021) aufgeführt.
-
-## <a name="version-91086454-june-18"></a>Version 91.0.864.54: 18. Juni
-
-> [!Important]
-> Dieses Update enthält einen Fix für [CVE-2021-30554,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554) der vom Chromium-Team als Exploit gemeldet wurde. Weitere Informationen finden Sie im [Leitfaden zu Sicherheitsupdates](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
-
-Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#june-18-2021) aufgeführt.
-
-## <a name="version-91086448-june-11"></a>Version 91.0.864.48: 11. Juni
-
-> [!Important]
->Dieses Update enthält einen Fix für [CVE-2021-30551,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) der vom Chromium-Team als Exploit gemeldet wurde. Weitere Informationen finden Sie im [Leitfaden zu Sicherheitsupdates](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
-
-Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#june-11-2021) aufgeführt.
-
-## <a name="version-91086441-june-3"></a>Version 91.0.864.41: 3. Juni
-
-Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#june-3-2021) aufgeführt.
-
-## <a name="version-91086437-may-27"></a>Version 91.0.864.37: 27. Mai
-
-Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#may-27-2021) aufgeführt.
-
-### <a name="feature-updates"></a>Funktionsupdates
-
-- **Identifizieren Sie den Netzwerkdatenverkehr von Microsoft Defender Application Guard-Containern auf Proxyebene**. Ab Microsoft Edge Version 91 gibt es integrierte Unterstützung zum Markieren von Netzwerkdatenverkehr von Application Guard-Containern, sodass Unternehmen diese identifizieren und bestimmte Richtlinien anwenden können.
-
-- **Unterstützungsoption, um die Synchronisierung von Favoriten vom Host mit dem Microsoft Edge Application Guard-Container zuzulassen**. Ab Microsoft Edge Version 91 haben Benutzer die Möglichkeit, Application Guard so zu konfigurieren, dass ihre Favoriten vom Host mit dem Container synchronisiert werden. Dadurch wird sichergestellt, dass auch neue Favoriten im Container angezeigt werden.
-
-- **Ab Microsoft Edge Version 91 wird der Download von Typen, die Ihrem Computer schaden könnten, vom Browser automatisch unterbrochen, wenn diese Downloads ohne Benutzerinteraktion gestartet werden und von der Überprüfung der SmartScreen-Anwendungszuverlässigkeit nicht unterstützt werden.** Benutzer können den Download überschreiben und fortsetzen, indem sie mit der rechten Maustaste auf das Downloadelement klicken und „Beibehalten“ auswählen. Unternehmensadministratoren können dieses Verhalten deaktivieren, indem sie die folgende Richtlinie konfigurieren:
-  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md): Deaktivieren von auf Dateierweiterungen basierenden Download-Warnungen für bestimmte Dateitypen in Domänen.
-
-    Weitere Informationen finden Sie unter [Unterbrechung von Microsoft Edge-Sicherheitsdownloads](microsoft-edge-security-downloads-interruptions.md).
-
-- **Unterstützung für Spracherkennungs-APIs**. Ab Microsoft Edge Version 91 wird die API-Unterstützung für Spracherkennungsbefehle auf Google.com und ähnlichen Websites hinzugefügt. Diese Funktion ist auf eine zufällig ausgewählte Gruppe von Benutzern beschränkt, die das Experimentieren aktiviert haben. Diese Benutzer geben dem Feature-Team Feedback.
-
-- **Personalisieren Sie Ihren Browser mit neuen Designfarben.**. Personalisieren Sie Ihr Microsoft Edge mit einer der 14 neuen Designfarben auf der Seite „Einstellungen“ > „Darstellung“. Sie können auch benutzerdefinierte Designs von der Microsoft Edge-Add-On-Website installieren. [Weitere Informationen](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
-
-### <a name="policy-updates"></a>Richtlinienupdates
-
-#### <a name="new-policies"></a>Neue Richtlinien
-
-Sechs neue Richtlinien wurden hinzugefügt. Laden Sie die aktualisierten administrativen Vorlagen von der [Microsoft Edge Enterprise-Angebotsseite](https://www.microsoft.com/edge/business/download) herunter. Die folgenden neuen Richtlinien wurden hinzugefügt:
-
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) – Application Guard-Netzwerkdatenverkehrsidentifikation
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) – Explizit zugelassene Netzwerkports
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) – Import von Startseiteneinstellungen zulassen
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) – Benutzer können ein mathematisches Problem mit einer schrittweisen Erläuterung in Microsoft Edge lösen
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) – Microsoft News-Inhalt auf der neuen Registerkartenseite zulassen
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) – Quicklinks auf der neuen Registerkartenseite zulassen
-
-#### <a name="obsoleted-policy"></a>Veraltete Richtlinie
-
-- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) – Proaktive Authentifizierung aktivieren
-<!-- end major 91 -->
-
+<!-- end major 92 -->
+<!-- Archive from Version 92.0.902.55: July 22 to Version 91.0.864.37: May 27 -->
 <!-- Archive from 89.0.774.45: March 4 to 90.0.818.66: May 20 ->
 <!-- Archive from 86.0.622.43: October 15 to beta 88.0.705.81: February 25  ->
 <!-- Archive from 86.0.622.38-october-9 to beta 86.0.62.215-september-14  ->
@@ -371,4 +262,4 @@ Sechs neue Richtlinien wurden hinzugefügt. Laden Sie die aktualisierten adminis
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise-Startseite](https://aka.ms/EdgeEnterprise)
