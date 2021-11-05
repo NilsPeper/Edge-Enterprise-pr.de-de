@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/28/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: 4c50682333cfb21d9b0026c5ebb11f5169c3aa5c
-ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
+ms.openlocfilehash: dfffb6935c8452ff1e9c9d4767d7ccbbd1c63af3
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "12154592"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155239"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -35,7 +35,8 @@ Die folgenden Richtlinien wurden diesem Dokumentationsupdate hinzugefügt.
 
 | Richtlinienname | Beschriftung |
 |--|--|
-|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Schaltfläche "Neu laden" im Internet Explorer Modus in der Symbolleiste anzeigen|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Abrufen von Bildbeschreibungen von Microsoft Enabled|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Bilder verbessern aktiviert|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
@@ -297,6 +298,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |Richtlinienname|Beschriftung|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Einmaliges Anmelden für Geschäfts-, Uni- oder Schulwebsites, auf denen dieses Profil aktiviert ist|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Abrufen von Bildbeschreibungen von Microsoft Enabled|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Aktivieren von Microsoft Search in Bing-Vorschlägen in der Adressleiste|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Anzeigeneinstellung für Websites mit aufdringlichen Anzeigen|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Löschen des Browser- und Downloadverlaufs aktivieren|
@@ -376,6 +378,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Download Directory](#downloaddirectory)|Downloadverzeichnis festlegen|
 |[DownloadRestrictions](#downloadrestrictions)|Downloadbeschränkungen zulassen|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Aktivieren des Features „Sammlungen“|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Bilder verbessern aktiviert|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Einkaufen in Microsoft Edge aktiviert|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Ermöglicht Benutzern das Bearbeiten von Favoriten|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
@@ -4858,7 +4861,7 @@ Wenn Sie diese Einstellung aktivieren, wird die Installation externer Erweiterun
 
 Wenn Sie diese Einstellung deaktivieren oder nicht festlegen, können externe Erweiterungen installiert werden.
 
-Externe Erweiterungen und ihre Installation sind unter https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options dokumentiert.
+Externe Erweiterungen und deren Installation sind unter [Alternative Erweiterungsverteilungsmethoden](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options) dokumentiert.
 
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
@@ -5142,7 +5145,7 @@ Der Quellcode einer beliebigen Erweiterung kann von Benutzern mit Entwicklertool
 
 Jedes Listenelement der Richtlinie ist eine Zeichenfolge, die eine Erweiterungs-ID und optional eine durch ein Semikolon (;) abgetrennte „Update“-URL enthält. Die Erweiterungs-ID ist die Zeichenfolge mit 32 Buchstaben, die beispielsweise auf edge://extensions im Entwicklermodus gefunden wird. Wenn angegeben, sollte die „Update“-URL auf ein Update-Manifest-XML-Dokument ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ) verweisen. Standardmäßig wird die Update-URL der Microsoft Edge-Add-ons-Website verwendet. Die in dieser Richtlinie gesetzte „Update“-URL wird nur für die Erstinstallation verwendet; bei nachfolgenden Aktualisierungen der Erweiterung wird die Update-URL im Manifest der Erweiterung verwendet.
 
-Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informieren Sie sich über Hosting-Erweiterungen (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Hinweis: Diese Richtlinie gilt nicht für den InPrivate-Modus. Informationen zum Hosten von Erweiterungen finden Sie unter [Erweiterungen auf der Microsoft Edge Add-on-Website veröffentlichen und aktualisieren.](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -8332,7 +8335,7 @@ Für Ursprünge, die nicht von den hier angegebenen Mustern abgedeckt werden, wi
 
 Beachten Sie, dass diese Richtlinie nur unsichere Ursprünge betrifft, sichere Ursprünge (z. B. https://example.com)) in dieser Liste werden also ignoriert.
 
-Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [Filterformat für URL-listenbasierte Richtlinien](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -9696,7 +9699,7 @@ Wenn Sie diese Richtlinie aktivieren, downloadet Microsoft Edge das angegebene L
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, zeigt Microsoft Edge auf der neuen Registerkartenseite kein Firmenlogo oder ein Microsoft-Logo an.
 
-Hilfe zur Ermittlung des SHA-256-Hashs finden Sie unter https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Hilfe zur Ermittlung des SHA-256-Hashs finden Sie unter [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -10610,6 +10613,72 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Nicht-AAD
   #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: AADWebSiteSSOUsingThisProfileEnabled
+  - Beispielwert:
+``` xml
+<false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="accessibilityimagelabelsenabled"></a>AccessibilityImageLabelsEnabled
+
+  #### <a name="get-image-descriptions-from-microsoft-enabled"></a>Abrufen von Bildbeschreibungen von Microsoft Enabled
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Ermöglicht Benutzern der Sprachausgabe das Abrufen von Beschreibungen nicht gekennzeichneter Bilder im Web.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, haben Benutzer die Möglichkeit, einen anonymen Microsoft-Dienst zu verwenden. Dieser Dienst stellt automatische Beschreibungen für nicht bezeichnete Bilder bereit, die Benutzern im Web angezeigt werden, wenn sie eine Sprachausgabe verwenden.
+
+Wenn Sie diese Richtlinie deaktivieren, können Benutzer das Feature "Bildbeschreibungen von Microsoft abrufen" nicht aktivieren.
+
+Wenn dieses Feature aktiviert ist, wird der Inhalt von Bildern, die eine generierte Beschreibung benötigen, an Microsoft-Server gesendet, um eine Beschreibung zu generieren.
+
+Es werden keine Cookies oder andere Benutzerdaten an Microsoft gesendet, und Microsoft speichert oder protokolliert keine Bildinhalte.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: AccessibilityImageLabelsEnabled
+  - GP-Name: Abrufen von Bildbeschreibungen von Microsoft Enabled
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: AccessibilityImageLabelsEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: AccessibilityImageLabelsEnabled
   - Beispielwert:
 ``` xml
 <false/>
@@ -15995,6 +16064,68 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer nicht auf Sammlungen in
   #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
   
   - Einstellung Schlüsselname: EdgeCollectionsEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="edgeenhanceimagesenabled"></a>EdgeEnhanceImagesEnabled
+
+  #### <a name="enhance-images-enabled"></a>Bilder verbessern aktiviert
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Legen Sie fest, ob Microsoft Edge Bilder automatisch verbessern kann, um Ihnen schärfere Bilder mit besserer Farbe, Beleuchtung und Kontrast anzuzeigen.
+
+Wenn Sie diese Richtlinie aktivieren oder die Richtlinie nicht konfigurieren, verbessert Microsoft Edge automatisch Bilder in bestimmten Webanwendungen.
+
+Wenn Sie diese Richtlinie deaktivieren, verbessert Microsoft Edge keine Bilder.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EdgeEnhanceImagesEnabled
+  - GP-Name: Verbessern von Bildern aktiviert
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: EdgeEnhanceImagesEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
+  
+  - Einstellung Schlüsselname: EdgeEnhanceImagesEnabled
   - Beispielwert:
 ``` xml
 <true/>
