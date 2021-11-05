@@ -3,19 +3,19 @@ title: Verwaltung von Cloudwebsitelisten für Internet Explorer (IE)-Modus (Öff
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie die Verwaltung von Cloudwebsitelisten für den IE-Modus mithilfe des Microsoft 365 Admin Center konfigurieren und verwenden.
-ms.openlocfilehash: 765b263df9425af5bdc9b694789a67cea59af779
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 29984aa559c0afda5be0457fcbe618dc264a3e68
+ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12108763"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155042"
 ---
 # <a name="cloud-site-list-management-for-ie-mode-public-preview"></a>Verwaltung von Cloudwebsitelisten für den IE-Modus (Öffentliche Vorschau)
 
@@ -25,7 +25,10 @@ In diesem Artikel wird erläutert, wie Sie die Verwaltung von Cloudwebsitelisten
 
 Während Sie Ihre Workflows und Anwendungen von IE11 in den IE-Modus überführen, können Sie die **Verwaltung von Cloudwebsitelisten** verwenden, um Ihre Websitelisten für den IE-Modus in der Cloud zu verwalten. Sie können mithilfe der **Microsoft Edge-Websitelisten**-Erfahrung im **Microsoft 365 Admin Center** mit Websitelisten arbeiten.
 
-**Diese Erfahrung befindet sich jetzt in der öffentlichen Vorschau.**
+Weitere Informationen finden Sie im Video [Verwaltung von Cloudwebsitelisten für Internet Explorer (IE)-Modus](https://www.youtube.com/watch?v=9-GovDcryXQ).
+
+> [!NOTE]
+> Diese Erfahrung befindet sich jetzt in der öffentlichen Vorschau.
 
 In der Vorschauerfahrung können Sie die Websiteliste Ihrer Organisation an einem konformen Cloudspeicherort speichern, anstatt eine lokale Infrastruktur zum Hosten Ihrer Websiteliste zu benötigen. Sie können Websitelisten erstellen, importieren, exportieren und Änderungen an Websitelisteneinträgen über das Microsoft 365 Admin Center überwachen. Sie können mehrere Websitelisten in der Cloud veröffentlichen und Gruppenrichtlinien verwenden, um verschiedenen Gruppen von Geräten die Verwendung unterschiedlicher Listen zuzuweisen.
 
@@ -34,9 +37,8 @@ In der Vorschauerfahrung können Sie die Websiteliste Ihrer Organisation an eine
 Die folgenden Voraussetzungen gelten für diese öffentliche Vorschau.
 
 1. Kunden müssen über einen Azure AD-Mandanten verfügen.
-2. Das Mandantenabonnement muss Exchange-Dienste enthalten. Weitere Informationen finden Sie in den [FAQ](#faq).
-3. Administratoren müssen Microsoft Edge Version 93 oder höher und die neueste Version der [Richtliniendateien](https://aka.ms/edgeenterprise) installiert haben.
-4. Administratoren müssen ein [Microsoft Edge-Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) oder ein [Globaler Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) für den Mandanten sein, um auf die Microsoft Edge-Websitelistenerfahrung zugreifen zu können.
+2. Administratoren müssen Microsoft Edge Version 93 oder höher und die neueste Version der [Richtliniendateien](https://aka.ms/edgeenterprise) installiert haben.
+3. Administratoren müssen ein [Microsoft Edge-Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) oder ein [Globaler Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) für den Mandanten sein, um auf die Microsoft Edge-Websitelistenerfahrung zugreifen zu können.
    - Um die öffentliche Vorschau zu abonnieren, muss ein globaler Administrator den Mandanten für den „gezielten Release“ registrieren. Weitere Informationen finden Sie unter [Abonnieren der öffentlichen Vorschau](#opt-in-to-public-preview).
 
 ## <a name="the-preview-experience"></a>Die Vorschauerfahrung
@@ -161,9 +163,9 @@ Es gibt Szenarien, in denen Sie eine Websiteliste exportieren möchten. Beispiel
 
 ## <a name="faq"></a>FAQ
 
-### <a name="why-is-my-tenant-required-to-have-an-exchange-service-subscription-for-this-feature"></a>Warum muss mein Mandant über ein Exchange-Dienstabonnement für dieses Feature verfügen?
+### <a name="when-i-select-microsoft-edge-site-lists-and-try-to-create-a-new-list-i-get-this-error---request-failed-with-status-code-500-why-is-that"></a>Wenn ich „Microsoft Edge-Websitelisten“ auswähle und versuche, eine neue Liste zu erstellen, erhalte ich diesen Fehler: „Anforderung mit Statuscode 500 fehlgeschlagen“. Weshalb?
 
-Dieses Abonnement stellt sicher, dass die richtige Back-End-Zuordnung mit Ihrem Mandanten sofort erfolgt. Dies geschieht, wenn Sie Microsoft Edge-Websitelisten zum ersten Mal auswählen. Wenn Exchange-Dienste nicht Teil Ihres Abonnements sind, schlägt die Zuordnungsanforderung aus dem Microsoft 365 Admin Center fehl. Eine Benachrichtigung wird an das Bereitstellungssystem gesendet, um das Problem zu adressieren.  Dies führt zu einer Verzögerung von drei Tagen, bis Sie die Benutzeroberfläche verwenden können.
+„Microsoft Edge-Websitelisten“ speichert ihre Daten und Konfiguration in einer Dienstinfrastruktur, die mit Unternehmensclouddiensten wie Exchange Online, SharePoint Online, Teams und Azure Active Directory gemeinsam genutzt wird. In seltenen Fällen kann die Bereitstellung einige Zeit in Anspruch nehmen, wenn Microsoft Edge-Websitelisten das erste Feature ist, das diese Infrastruktur verwendet. In diesen Fällen schlägt die anfängliche Anforderung aus dem Microsoft 365 Admin Center fehl. Wenn die Anforderung fehlschlägt, wird eine Warnung an das Bereitstellungssystem gesendet, um das Problem zu beheben. Die Bereitstellung wird in der Regel in drei Tagen abgeschlossen. Wenn dieser Fehler angezeigt wird, versuchen Sie es in einigen Tagen erneut, und erstellen Sie eine neue Liste. Wenn Sie immer noch keine neue Liste erstellen können oder dringende Unterstützung benötigen, wenden Sie sich an den Microsoft-Support.
 
 ### <a name="can-users-who-havent-signed-in-to-microsoft-edge-download-the-site-list"></a>Können Benutzer, die nicht bei Microsoft Edge angemeldet sind, die Websiteliste herunterladen?
 
