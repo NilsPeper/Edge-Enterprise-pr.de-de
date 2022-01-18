@@ -1,34 +1,41 @@
 ---
 title: Dokumentation für die Microsoft Edge Update-Richtlinie
 ms.author: stmoody
-author: RyanHechtMSFT
+author: dan-wesley
 manager: tahills
-ms.date: 09/23/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Dokumentation für alle vom Microsoft Edge Updater unterstützten Richtlinien
-ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
-ms.translationtype: MT
+ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037215"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297613"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge – Update-Richtlinien
 
 Die neueste Version von Microsoft Edge enthält die folgenden Richtlinien, mit denen Sie steuern können, wie und wann Microsoft Edge aktualisiert wird.
 
-Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](microsoft-edge-policies.md)
+Weitere Informationen zu anderen in Microsoft Edge verfügbaren Richtlinien finden Sie in der [Microsoft Edge Referenz für Browserrichtlinien](./microsoft-edge-policies.md)
+
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
-## <a name="available-policies"></a>Verfügbare Richtlinien
-In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Update-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
 
-|&nbsp;|&nbsp;| |**-**|-| |**[Anwendungen](#applications)**|[Einstellungen](#preferences)| |**[Proxyserver](#proxy-server)**|[Microsoft Edge WebView](#microsoft-edge-webview)|
+## <a name="available-policies"></a>Verfügbare Richtlinien
+In diesen Tabellen sind sämtliche in dieser Version von Microsoft Edge verfügbaren Update-bezogenen Gruppenrichtlinien aufgelistet. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
+
+|||
+|-|-|
+|[Anwendungen](#applications)|[Voreinstellungen](#preferences)|
+|[Proxyserver](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
+|[Microsoft Edge WebView](#microsoft-edge-webview)||
+
 ### [<a name="applications"></a>Anwendungen](#applications-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -41,20 +48,25 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[CreateDesktopShortcut](#createdesktopshortcut)|Verhindern der Erstellung von Desktopverknüpfungen bei der Installation (pro Kanal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Zurücksetzung auf Zielversion (pro Kanal)|
 |[TargetVersionPrefix](#targetversionprefix)|Außerkraftsetzung der Zielversion (pro Kanal)|
-|[TargetChannelOverride](#targetchanneloverride)|Außerkraftsetzung des Zielkanals (nur Stable)|
-|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Abrufen von Konfigurationen und Experimenten|
+|[TargetChannel](#targetchannel)|Zielkanalüberschreibung (pro Kanal)|
+
 ### [<a name="preferences"></a>Voreinstellungen](#preferences-policies)
 |Richtlinienname|Beschriftung|
 |-|-|
-|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Überschreibung des Überprüfungszeitraums für automatische Updates|
-|[UpdatesSuppressed](#updatessuppressed)|Zeitraum in jedem Tag zum Unterdrücken der automatischen Überprüfung auf Updates|
+|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Außerkraftsetzung des Microsoft AutoUpdate-Überprüfungszeitraums|
+|[UpdatesSuppressed](#updatessuppressed)|Zeitraum in jedem Tag zur Unterdrückung der Microsoft AutoUpdate-Überprüfung|
 
 ### [<a name="proxy-server"></a>Proxyserver](#proxy-server-policies)
 |Richtlinienname|Untertitel für Hörgeschädigte|
 |-|-|
-|[ProxyMode](#proxymode)|Möglichkeit zur Angabe der Proxyservereinstellungen wählen|
-|[ProxyPacUrl](#proxypacurl)|URL zu einer PAC-Proxydatei|
-|[ProxyServer](#proxyserver)|Adresse oder URL des Proxyservers|
+|[ProxyMode](#proxymode)|Auswählen, wie Proxyservereinstellungen angegeben werden sollen|
+|[ProxyPacUrl](#proxypacurl)|URL zur Proxy-PAC-Datei|
+|[ProxyServer](#proxyserver)|Adresse oder URL eines Proxyservers|
+
+### [<a name="microsoft-edge-update"></a>Microsoft Edge Update](#microsoft-edge-update-policies)
+|Richtlinienname|Beschriftung|
+|-|-|
+|[UpdaterExperimentationAndConfigurationServiceControl](#updaterexperimentationandconfigurationservicecontrol)|Steuern der Kommunikation des Updaters mit dem Experimentier- und Konfigurationsdienst|
 
 ### [<a name="microsoft-edge-webview"></a>Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |Richtlinienname|Beschriftung|
@@ -72,9 +84,9 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 #### <a name="description"></a>Beschreibung
 Sie können das Standardverhalten aller Kanäle festlegen, damit Microsoft Edge für in die Domäne eingebundene Geräte. zugelassen oder blockiert wird.
 
-Sie können diese Richtlinie für einzelne Kanäle außer Kraft setzen, indem Sie die Richtlinie '[Installation zulassen](#install)' für bestimmte Kanäle aktivieren.
+Sie können diese Richtlinie für einzelne Kanäle außer Kraft setzen, indem Sie die Richtlinie '[Installation zulassen](#install-webview)' für bestimmte Kanäle aktivieren.
 
-Wenn Sie diese Richtlinie deaktivieren, wird die Installation von Microsoft Edge blockiert. Dies wirkt sich nur auf die Installation der Microsoft Edge-Software aus, wenn die Richtlinie "[Installation zulassen](#install)" auf "nicht konfiguriert festgelegt ist.
+Wenn Sie diese Richtlinie deaktivieren, wird die Installation von Microsoft Edge blockiert. Dies wirkt sich nur auf die Installation der Microsoft Edge-Software aus, wenn die Richtlinie "[Installation zulassen](#install-webview)" auf "nicht konfiguriert festgelegt ist.
 
 Diese Richtlinie verhindert nicht, dass Microsoft Edge Update ausgeführt wird, oder dass Benutzer die Microsoft Edge-Software auf andere Weise installieren.
 
@@ -202,7 +214,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 - Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Name des Wertes:
+- Name des Wertes: 
   - (Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -210,10 +222,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 - Werttyp: REG_DWORD
 ##### <a name="example-value"></a>Beispielwert:
 ```
-always allow updates 0x00000001
-Automatic silent updates only 0x00000003
-manual updates only 0x00000002
-updates disabled 0x00000000
+0x00000001
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
@@ -231,7 +240,9 @@ Die Einstellung „Deaktiviert” blockiert eine Seite-an-Seite-Umgebung, und Mi
 
 Wenn diese Richtlinie aktiviert ist, können Microsoft Edge (Chromium-basiert) und Microsoft Edge (Edge-HTML) nach der Installation von Microsoft Edge (Chromium-basiert) nebeneinander ausgeführt werden.
 
-Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Installation von Microsoft Edge (Chromium-basiert) von Windows Update konfiguriert werden. Hinweis: Ein Benutzer kann das automatische Update von Microsoft Edge (Chromium-basiert) mit dem Microsoft Edge (Chromium-basiert) Blocker Toolkit blockieren.
+Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Installation von Microsoft Edge (Chromium-basiert) durch Windows Update konfiguriert werden. Hinweis: Ein Benutzer kann das automatische Update von Microsoft Edge (Chromium-basiert) mit dem Microsoft Edge (Chromium-basiert) Blocker Toolkit blockieren.
+
+Ab Windows 10 Version 20H2 werden Vorgängerversion von Microsoft Edge und die Nebeneinander-Browsererfahrung nicht mehr unterstützt.
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: Allowsxs
@@ -247,6 +258,7 @@ Damit diese Gruppenrichtlinie wirksam wird, muss sie vor der automatischen Insta
 0x00000001
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
+
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Standardeinstellung für das Verhindern der Erstellung von Desktopverknüpfungen bei der Installation
@@ -401,74 +413,48 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsof
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
-### <a name="targetchanneloverride"></a>TargetChannelOverride
+
+### <a name="targetchannel"></a>TargetChannel
+#### <a name="target-channel-override"></a>Zielkanal-Außerkraftsetzung
 >Microsoft Edge Update 1.3.147.1 und höher
 
 #### <a name="description"></a>Beschreibung
-Gibt an, auf welchen Kanal Microsoft Edge aktualisiert werden soll. 
+Gibt an, auf welchem Kanal Microsoft Edge aktualisiert werden soll.
 
-Wenn Sie diesen Poicy aktivieren, wird die Microsoft Edge entsprechend der Konfiguration der folgenden Optionen auf den Kanal aktualisiert:
+Wenn Sie diese Richtlinie aktivieren, wird Microsoft Edge entsprechend der Konfiguration der folgenden Optionen auf den Kanal aktualisiert:
 
-  - Stabil: Microsoft Edge wird auf die neueste stabile Version aktualisiert.
+  - Stable: Microsoft Edge wird auf die neueste stabile Version aktualisiert.
   - Beta: Microsoft Edge wird auf die neueste Betaversion aktualisiert.
   - Dev: Microsoft Edge wird auf die neueste Entwicklungsversion aktualisiert.
-  - Extended Stable: Microsoft Edge wird auf die neueste erweiterte stabile Version aktualisiert, die einer längeren Versionsfrequenz als stabil folgt. Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2163508 .
+  - Extended Stable: Microsoft Edge wird auf die neueste erweiterte stabile Version aktualisiert, die einer längeren Releasekadenz folgt als Stable. Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2163508](https://go.microsoft.com/fwlink/?linkid=2163508).
 
-Wenn Sie diese Richtlinie nicht konfigurieren, wird Microsoft Edge auf die neueste Version aktualisiert, die für den Stable Channel verfügbar ist.
-
-Diese Richtlinie ist nur auf Microsoft Edge Stable verfügbar.
+Wenn Sie diese Richtlinie nicht konfigurieren, wird Microsoft Edge auf die neueste Version aktualisiert, die für den Standardkanal verfügbar ist.
 
 Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die in eine Microsoft® Active Directory®-Domäne eingebunden werden.
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
-- GP eindeutiger Name: TargetChannelOverride
-- GP-Name: Außerkraftsetzung des Zielkanals
+- GP eindeutiger Name: TargetChannel
+- GP-Name: Zielkanal-Außerkraftsetzung
 - GP-Pfad: 
   - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Beta
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Canary
+  - Administrative Vorlagen/Microsoft Edge Update/Anwendungen/Microsoft Edge Dev
 - Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 - Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Name des Wertes: 
-  - (Stabil): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta): TargetChannel{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary): TargetChannel{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev): TargetChannel{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Werttyp: REG_SZ
 ##### <a name="example-value"></a>Beispielwert:
 ```
-extended
+dev
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
-#### <a name="retrieve-configurations-and-experiments"></a>Abrufen von Konfigurationen und Experimenten
->Microsoft Edge Update 1.3.145.1 und höher
-
-#### <a name="description"></a>Beschreibung
-In Microsoft Edge Update wird der Experimentier- und Konfigurationsdienst zum Bereitstellen der Experimentiernutzlast verwendet.
-
-Die Experimentiernutzlast besteht aus einer Liste der frühen Entwicklungsfeatures, die Microsoft zum Testen von Feedback aktiviert.
-
-Wenn Sie diese Richtlinie aktivieren, wird die Experimentiernutzlast aus dem Experimentier- und Konfigurationsdienst heruntergeladen.
-
-Wenn Sie diese Richtlinie deaktivieren, wird die Kommunikation mit dem Experimentier- und Konfigurationsdienst vollständig beendet.
-
-Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem verwalteten Gerät mit der Richtlinie "Deaktiviert" identisch.
-
-Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht verwalteten Gerät mit der Richtlinie "Aktiviert" identisch.
-
-#### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
-##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
-- GP eindeutiger Name: UpdateExperimentationAndConfigureationServiceControl
-- GP-Name: Kommunikation des Steuerelementupdaters mit dem Experimentier- und Konfigurationsdienst
-- GP-Pfad: Administrative Vorlagen/Microsoftt Edge Update/Microsoft Edge Update
-- Name der GP-ADMX-Datei: msedgeupdate.admx
-##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
-- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Wertname: UpdaterExperimentationAndConfigurationServiceControl
-- Werttyp: REG_DWORD
-##### <a name="example-value"></a>Beispielwert:
-```
-0x00000001
-```
-[Zurück zum Anfang](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>Einstellungsrichtlinien
 
@@ -478,9 +464,11 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht
 >Microsoft Edge Update 1.2.145.5 und höher
 
 #### <a name="description"></a>Beschreibung
-Wenn diese Richtlinie aktiviert ist, können Sie einen Wert für die Mindestanzahl von Minuten zwischen automatischen Updateprüfungen festlegen. Andernfalls sucht die automatische Updateprüfung standardmäßig alle 10 Stunden nach Updates.
+Mindestanzahl von Minuten zwischen automatischen Updateprüfungen.
 
-  Wenn Sie alle automatischen Updateprüfungen deaktivieren möchten, setzen Sie den Wert auf 0 (nicht empfohlen).
+Legen Sie diese Richtlinie auf den Wert 0 fest, um den gesamten periodischen Netzwerkdatenverkehr durch Microsoft Edge Update zu deaktivieren. Dies wird nicht empfohlen, da dadurch verhindert wird, dass Microsoft Edge Update selbst Stabilitäts- und Sicherheitsupdates erhält.
+
+Die Einstellungen „Standard für Außerkraftsetzung der Updaterichtlinie“ und „Außerkraftsetzung der Updaterichtlinie“ sollten anstelle dieser Einstellung zum Verwalten von Anwendungsupdates verwendet werden.
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: AutoUpdateCheckPeriodMinutes
@@ -503,7 +491,7 @@ Wenn diese Richtlinie aktiviert ist, können Sie einen Wert für die Mindestanza
 >Microsoft Edge Update 1.3.33.5 und höher
 
 #### <a name="description"></a>Beschreibung
-Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab Stunde:Minute für einen Zeitraum der Dauer (in Minuten) unterdrückt. Die Dauer ist von der Sommerzeit nicht betroffen. Wenn die Startzeit z. B. 22:00 lautet und die Dauer 480 Minuten beträgt, werden Updates genau 8 Stunden lang unterdrückt, unabhängig davon, ob die Sommerzeit in diesem Zeitraum beginnt oder endet.
+Wenn Sie diese Richtlinie aktivieren, werden die Updateprüfungen jeden Tag ab Stunde:Minute für die Dauer (in Minuten) unterdrückt. Die Dauer ist von der Sommerzeit nicht betroffen. Wenn die Startzeit z. B. 22:00 lautet und die Dauer 480 Minuten beträgt, werden Updates genau 8 Stunden lang unterdrückt, unabhängig davon, ob die Sommerzeit in diesem Zeitraum beginnt oder endet.
 
   Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, werden die Updateprüfungen während eines bestimmten Zeitraums nicht unterdrückt.
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
@@ -528,11 +516,12 @@ start min  : 0x00000002
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
+
 ## <a name="proxy-server-policies"></a>Proxyserver-Richtlinien
 
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 ### <a name="proxymode"></a>ProxyMode
-#### <a name="choose-how-to-specify-proxy-server-settings"></a>Möglichkeit zur Angabe der Proxyservereinstellungen wählen
+#### <a name="choose-how-to-specify-a-proxy-server-setting"></a>Auswählen, wie eine Proxyservereinstellung angegeben werden soll
 >Microsoft Edge Update 1.3.21.81 und höher
 
 #### <a name="description"></a>Beschreibung
@@ -540,9 +529,9 @@ Mit dieser Option können Sie die Proxyserver-Einstellungen angeben, die von Mic
 
   Wenn Sie diese Richtlinie aktivieren, können Sie zwischen den folgenden Proxyserveroptionen wählen:
    - Wenn Sie niemals einen Proxyserver verwenden und immer eine direkte Verbindung herstellen, werden alle anderen Optionen ignoriert.
-   - Wenn Sie die System-Proxyeinstellungen verwenden oder den Proxyserver automatisch erkennen möchten, werden alle anderen Optionen ignoriert.
-   - Wenn Sie den Proxymodus für feste Server auswählen, können Sie unter '[Adresse oder URL des Proxyservers](#proxyserver)' weitere Optionen angeben.
-   - Wenn Sie ein PAC-Proxyskript verwenden, müssen Sie die URL für das Skript unter '[URL zu einer PAC-Proxydatei](#proxypacurl)' angeben.
+   - Wenn Sie die Systemproxyeinstellungen verwenden oder den Proxyserver automatisch erkennen möchten, werden alle anderen Optionen ignoriert.
+   - Wenn Sie den Proxymodus für feste Server auswählen, können Sie in der Richtlinie „[Adresse oder URL des Proxyservers](#proxyserver)“ weitere Optionen angeben.
+   - Wenn Sie ein PAC-Proxyskript verwenden, müssen Sie die URL für das Skript in der Richtlinie „[URL zu einer Proxy-PAC-Datei](#proxypacurl)“ angeben.
 
   Wenn Sie diese Richtlinie aktivieren, können Benutzer in Ihrer Organisation die Proxyeinstellungen in Microsoft Edge Update nicht ändern.
 
@@ -550,7 +539,7 @@ Mit dieser Option können Sie die Proxyserver-Einstellungen angeben, die von Mic
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: ProxyMode
-- GP-Name: Möglichkeit zur Angabe der Proxyservereinstellungen wählen
+- GP-Name: Auswählen, wie eine Proxyservereinstellung angegeben werden soll
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver
 - Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
@@ -565,7 +554,7 @@ fixed_servers
 
 
 ### <a name="proxypacurl"></a>ProxyPacUrl
-#### <a name="url-to-a-proxy-pac-file"></a>URL zu einer PAC-Proxydatei
+#### <a name="url-to-proxy-pac-file"></a>URL zur Proxy-PAC-Datei
 >Microsoft Edge Update 1.3.21.81 und höher
 
 #### <a name="description"></a>Beschreibung
@@ -573,13 +562,13 @@ Ermöglicht die Angabe einer URL für eine PAC-Datei (Proxy Auto-Config).
 
   Wenn Sie diese Richtlinie aktivieren, können Sie eine URL für eine PAC-Datei angeben, um zu automatisieren, wie Microsoft Edge Update den geeigneten Proxyserver zum Abrufen einer bestimmten Website auswählt.
 
-  Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' manuelle Proxyeinstellungen festgelegt haben.
+  Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie „[Auswählen, wie eine Proxyservereinstellung angegeben werden soll](#proxymode)“ manuelle Proxyeinstellungen festgelegt haben.
 
-  Konfigurieren Sie diese Richtlinie nicht, wenn Sie eine andere Proxy-Einstellung als manuell in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' ausgewählt haben.
+  Konfigurieren Sie diese Richtlinie nicht, wenn Sie in der Richtlinie „[Auswählen, wie eine Proxyservereinstellung angegeben werden soll](#proxymode)“ eine andere Proxyeinstellung als manuell ausgewählt haben.
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: ProxyPacUrl
-- GP-Name: URL zu einer PAC-Proxydatei
+- GP-Name: URL zur Proxy-PAC-Datei
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver
 - Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
@@ -594,7 +583,7 @@ https://www.microsoft.com
 
 
 ### <a name="proxyserver"></a>ProxyServer
-#### <a name="address-or-url-of-proxy-server"></a>Adresse oder URL des Proxyservers
+#### <a name="address-or-url-of-a-proxy-server"></a>Adresse oder URL eines Proxyservers
 >Microsoft Edge Update 1.3.21.81 und höher
 
 #### <a name="description"></a>Beschreibung
@@ -602,13 +591,13 @@ Hier können Sie die URL des Proxy-Servers angeben, den Microsoft Edge Update ve
 
   Wenn Sie diese Richtlinie aktivieren, können Sie die Proxyserver-URL festlegen, die von Microsoft Edge Update in Ihrer Organisation verwendet wird.
 
-  Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' manuelle Proxyeinstellungen ausgewählt haben.
+  Diese Richtlinie wird nur angewendet, wenn Sie in der Richtlinie „[Auswählen, wie eine Proxyservereinstellung angegeben werden soll](#proxymode)“ manuelle Proxyeinstellungen ausgewählt haben.
 
-  Konfigurieren Sie diese Richtlinie nicht, wenn Sie eine andere Proxy-Einstellung als manuell in der Richtlinie '[Möglichkeit zur Angabe der Proxyservereinstellungen wählen](#proxymode)' ausgewählt haben.
+  Konfigurieren Sie diese Richtlinie nicht, wenn Sie in der Richtlinie „[Auswählen, wie eine Proxyservereinstellung angegeben werden soll](#proxymode)“ eine andere Proxyeinstellung als manuell ausgewählt haben.
 #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
 ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 - Eindeutiger Name der GP: ProxyServer
-- GP-Name: Adresse oder URL des Proxyservers
+- GP-Name: Adresse oder URL eines Proxyservers
 - GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Proxyserver
 - Name der GP-ADMX-Datei: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
@@ -618,6 +607,42 @@ Hier können Sie die URL des Proxy-Servers angeben, den Microsoft Edge Update ve
 ##### <a name="example-value"></a>Beispielwert:
 ```
 https://www.microsoft.com
+```
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+
+
+## <a name="microsoft-edge-update-policies"></a>Microsoft Edge Update-Richtlinien
+
+[Zurück zum Anfang](#microsoft-edge---update-policies)
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="control-updaters-communication-with-the-experimentation-and-configuration-service"></a>Steuern der Kommunikation des Updaters mit dem Experimentier- und Konfigurationsdienst
+>Microsoft Edge Update 1.3.145.1 und höher
+
+#### <a name="description"></a>Beschreibung
+In Microsoft Edge Update wird der Experimentier- und Konfigurationsdienst verwendet, um Experimentiernutzlasten bereitzustellen.
+
+Die Experimentier-Nutzlast besteht aus einer Liste von Funktionen in Frühstadien der Entwicklung, die Microsoft zu Test- und Feedbackzwecken aktiviert.
+
+Wenn Sie diese Richtlinie aktivieren, wird die Experimentiernutzlast aus dem Experimentier- und Konfigurationsdienst heruntergeladen.
+
+Wenn Sie diese Richtlinie deaktivieren, wird die Kommunikation mit dem Experimentier- und Konfigurationsdienst vollständig beendet.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem verwalteten Gerät identisch mit der Richtlinie „deaktiviert“.
+
+Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht verwalteten Gerät identisch mit der Richtlinie „aktiviert“.
+#### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+- GP eindeutiger Name: UpdaterExperimentationAndConfigurationServiceControl
+- GP-Name: Steuern der Kommunikation des Updaters mit dem Experimentier- und Konfigurationsdienst
+- GP-Pfad: Administrative Vorlagen/Microsoft Edge Update/Microsoft Edge Update
+- Name der GP-ADMX-Datei: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+- Pfad: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Wertname: UpdaterExperimentationAndConfigurationServiceControl
+- Werttyp: REG_DWORD
+##### <a name="example-value"></a>Beispielwert:
+```
+0x00000001
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
@@ -683,7 +708,6 @@ Sie können angeben, ob automatische Updates für Microsoft Edge WebView aktivie
 ```
 [Zurück zum Anfang](#microsoft-edge---update-policies)
 
-
 ## <a name="see-also"></a>Weitere Informationen
-  - [Konfigurieren von Microsoft Edge](configure-microsoft-edge.md)
+  - [Konfigurieren von Microsoft Edge](./configure-microsoft-edge.md)
   - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)
