@@ -3,19 +3,19 @@ title: Unterstützte Betriebssysteme für Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 09/23/2021
+ms.date: 11/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Unterstützte Betriebssysteme für Microsoft Edge
-ms.openlocfilehash: 7d8381e81fc3b74c1849d02a117943f3cb8bf389
-ms.sourcegitcommit: 0d71862fe4f6550f7910618872a174b95695df4b
+ms.openlocfilehash: 2cc3f4151a025e01c5af16b11f079aa7431e33c1
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "12044473"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297893"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Unterstützte Betriebssysteme für Microsoft Edge
 
@@ -54,7 +54,7 @@ Microsoft Edge folgt der Modern Lifecycle-Richtlinie und wird unter den folgende
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** Microsoft Edge wird unter Windows 7 und Windows Server 2008 R2 bis zum 15. Januar 2022 weiterhin unterstützt. Diese Betriebssysteme werden nicht mehr unterstützt, und Microsoft empfiehlt Ihnen den Umstieg auf ein unterstütztes Betriebssystem, wie z. B. Windows 10. Auch wenn Microsoft Edge dazu beiträgt, Ihre Sicherheit im Internet zu erhöhen, kann Ihr PC dennoch anfällig für Sicherheitsrisiken sein. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Ohne die erweiterten Sicherheitsupdates für Windows 7 ist die Funktionalität von Internet Explorer anfällig für Sicherheitsrisiken. Darüber hinaus kann die Funktionalität des IE-Modus ohne die fortgesetzte Wartung durch die erweiterten Sicherheitsupdates nicht mehr funktionieren.  
+> ** Wir werden Microsoft Edge unter Windows 7 und auf Windows Server 2008 R2 bis zum 15. Januar 2023 weiterhin unterstützen. Diese Betriebssysteme werden nicht mehr unterstützt, und Microsoft empfiehlt Ihnen den Umstieg auf ein unterstütztes Betriebssystem, wie z. B. Windows 10. Auch wenn Microsoft Edge dazu beiträgt, Ihre Sicherheit im Internet zu erhöhen, kann Ihr PC dennoch anfällig für Sicherheitsrisiken sein. Damit der IE-Modus unter diesen Betriebssystemen unterstützt wird, müssen die Geräte über die [Erweiterten Sicherheitsupdates für Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)verfügen. Ohne die erweiterten Sicherheitsupdates für Windows 7 ist die Funktionalität von Internet Explorer anfällig für Sicherheitsrisiken. Darüber hinaus kann die Funktionalität des IE-Modus ohne die fortgesetzte Wartung durch die erweiterten Sicherheitsupdates nicht mehr funktionieren. Microsoft Edge unter Windows 7 kann mithilfe des integrierten Moduls für automatische Updates oder mithilfe von Konfigurations-Manager und WSUS aktualisiert werden.
 >
 > *** Auf die gleiche Weise wie oben beschrieben wird für Windows 10 SAC-Versionen, die Microsoft Edge weiterhin unterstützen, nachdem der Support abgelaufen ist, empfohlen, so bald wie möglich auf eine unterstützte Win10 SAC-Version zu aktualisieren, um geschützt zu bleiben. Microsoft Edge, das in diesem Zustand unterstützt wird, sollte als eine temporäre Überbrückung bis zum Erreichen eines unterstützten Betriebssystemzustands betrachtet werden.
 >
@@ -86,10 +86,9 @@ Microsoft Edge unterstützt keine Chromebooks.
 
 ## <a name="recent-changes"></a>Letzte Änderungen
 
-- 
-            **17.12.2020** – Microsoft Edge-Unterstützung für Windows 7 und Windows Server 2008 R2 verlängert bis 15. Januar 2022.
-- 
-            **28.01.2021** – Microsoft Edge-Unterstützung für Apple Silicon Macs.
+- **17.12.2020** – Microsoft Edge-Unterstützung für Windows 7 und Windows Server 2008 R2 verlängert bis 15. Januar 2022.
+- **28.01.2021** – Microsoft Edge-Unterstützung für Apple Silicon Macs.
+- **5.11.2021** – Microsoft Edge-Support für Windows 7 und Windows Server 2008 R2 wurde bis zum 15. Januar 2023 für wichtige Sicherheits- und Stabilitätsupdates verlängert.
 
 ## <a name="see-also"></a>Weitere Informationen
 

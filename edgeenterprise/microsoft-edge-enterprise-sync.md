@@ -3,23 +3,25 @@ title: Konfigurieren der Microsoft Edge Enterprise-Synchronisierung
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 10/26/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Administrator- und Benutzeroptionen zum Konfigurieren von Microsoft Edge zum Synchronisieren von Favoriten, Kennwörtern und anderen Browserdaten.
-ms.openlocfilehash: 2f9ca20bbfeec619f0cc4d2846a527586a49f5ef
-ms.sourcegitcommit: 9c4d3803ee060d83f2081482e7f2cb4ab6b86f7c
+ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "12117086"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298183"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Konfigurieren der Microsoft Edge Enterprise-Synchronisierung
 
-In diesem Artikel wird erläutert, wie Administratoren Microsoft Edge konfigurieren können, um Benutzerfavoriten, Kennwörter und andere Browserdaten auf allen angemeldeten Geräten zu synchronisieren. Wenn Sie kein Administrator sind, schauen Sie sich diesen Artikel an, um zu erfahren, wie Sie sich anmelden und Microsoft Edge geräteübergreifend synchronisieren. [Melden Sie sich an, um Microsoft Edge geräteübergreifend zu synchronisieren](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+In diesem Artikel wird erläutert, wie Administratoren Microsoft Edge konfigurieren können, um Favoriten, Kennwörter und andere Browserdaten von Benutzern über alle angemeldeten Geräte hinweg zu synchronisieren.
+
+Wenn Sie kein Administrator sind, verwenden Sie den folgenden Artikel als Leitfaden, um zu erfahren, wie Sie sich anmelden und Microsoft Edge geräteübergreifend synchronisieren: [Anmelden, um Microsoft Edge geräteübergreifend zu synchronisieren](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Gilt für Microsoft Edge Version 77 oder höher, sofern nicht anderes angegeben.
@@ -37,24 +39,27 @@ Dank der Microsoft Edge-Synchronisierung können Benutzer auf ihre Browserdaten 
 - Geöffnete Registerkarten (verfügbar in Microsoft Edge, Version 88)
 - Verlauf (verfügbar in Microsoft Edge, Version 88)
 
-Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und Benutzer können die Synchronisierung für die beiden oben aufgeführten Datentypen aktivieren oder deaktivieren. Wenn ein Benutzer ein Synchronisierungsproblem hat, muss er möglicherweise die Synchronisierung unter **Einstellungen** > **Profile** > **Synchronisierung zurücksetzen** zurücksetzen.
+Die Synchronisierungsfunktion wird nach Zustimmung des Benutzers aktiviert, und Benutzer können die Synchronisierung für die beiden oben aufgeführten Datentypen aktivieren oder deaktivieren. Wenn bei einem Benutzer ein Synchronisierungsproblem auftritt, muss er möglicherweise die Synchronisierung zurücksetzen unter **Einstellungen** > **Profile** > **Synchronisierung zurücksetzen**.
 
 > [!NOTE]
-> Zusätzliche Geräteverbindungs- und Konfigurationsdaten (wie Gerätename, Marke und Modell) werden hochgeladen, um die Synchronisationsfunktionalität zu unterstützen.
+> Zusätzliche Geräteverbindungs- und Konfigurationsdaten (wie Gerätename, Gerätemarke und Gerätemodell) werden hochgeladen, um die Synchronisationsfunktionalität zu unterstützen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Die Synchronisierung von Microsoft Edge für Azure Active Directory (Azure AD)-Konten ist für jedes der folgenden Abonnements verfügbar:
 
 - Azure AD Premium (P1 oder P2)
-- M365 Business Premium, Business Standard oder **Business Basic \***
+  
+  - Für Kunden, die nur über Azure AD P1 oder P2 verfügen, ist es erforderlich, das Azure AD-Enterprise State Roaming-Feature für die Verwendung der Microsoft Edge Enterprise-Synchronisierung zu aktivieren. Weitere Informationen finden Sie im Artikel [Enterprise State Roaming in Azure Active Directory aktivieren](/azure/active-directory/devices/enterprise-state-roaming-enable).
+
+- Microsoft 365 Business Premium, Business Standard oder **Business Basic \***
 
    > [!IMPORTANT]
    > **\**_ Es wurde ein Problem mit _* Business Basic** zur Synchronisierung gefunden und es wird an einer Lösung gearbeitet. In der Zwischenzeit funktioniert dies nicht wie vorgesehen.
 
 - Office 365 E1 und höher
 - Azure Information Protection (AIP) (P1 oder P2)
-- Alle EDU-Abonnements (Microsoft Apps für Studenten oder Dozenten, Exchange Online für Studenten oder Dozenten, O365 A1 oder höher, M365 A1 oder höher oder Azure Information Protection P1 oder P2 für Studenten oder Dozenten)
+- Alle EDU-Abonnements (Microsoft Apps für Studenten oder Dozenten, Exchange Online für Studenten oder Dozenten, O365 A1 oder höher, Microsoft 365 A1 oder höher oder Azure Information Protection P1 oder P2 für Studenten oder Dozenten)
 
 ## <a name="sync-group-policies"></a>Synchronisieren von Gruppenrichtlinien
 

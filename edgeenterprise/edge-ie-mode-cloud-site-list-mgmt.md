@@ -1,97 +1,86 @@
 ---
-title: Verwaltung von Cloudwebsitelisten für Internet Explorer (IE)-Modus (Öffentliche Vorschau)“
+title: Cloudwebsitelistenverwaltung für den Internet Explorer (IE)-Modus“
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 12/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie die Verwaltung von Cloudwebsitelisten für den IE-Modus mithilfe des Microsoft 365 Admin Center konfigurieren und verwenden.
-ms.openlocfilehash: 29984aa559c0afda5be0457fcbe618dc264a3e68
-ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
+ms.openlocfilehash: 4c37c2b3ec98252f430bf635456c6849def0a0e3
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155042"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298107"
 ---
-# <a name="cloud-site-list-management-for-ie-mode-public-preview"></a>Verwaltung von Cloudwebsitelisten für den IE-Modus (Öffentliche Vorschau)
+# <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Cloudwebsite-Listenverwaltung für den Internet Explorer (IE)-Modus
 
 In diesem Artikel wird erläutert, wie Sie die Verwaltung von Cloudwebsitelisten für den Internet Explorer (IE)-Modus über das Microsoft 365 Admin Center konfigurieren und verwenden.
+
+> [!NOTE]
+> Diese Erfahrung ist derzeit nur für weltweite Cloudinstanzen verfügbar.
 
 ## <a name="overview"></a>Übersicht
 
 Während Sie Ihre Workflows und Anwendungen von IE11 in den IE-Modus überführen, können Sie die **Verwaltung von Cloudwebsitelisten** verwenden, um Ihre Websitelisten für den IE-Modus in der Cloud zu verwalten. Sie können mithilfe der **Microsoft Edge-Websitelisten**-Erfahrung im **Microsoft 365 Admin Center** mit Websitelisten arbeiten.
 
-Weitere Informationen finden Sie im Video [Verwaltung von Cloudwebsitelisten für Internet Explorer (IE)-Modus](https://www.youtube.com/watch?v=9-GovDcryXQ).
+Weitere Informationen finden Sie im nächsten Video.
+
+[![Neue Cloudwebsitelistenverwaltung für den IE-Modus](media/edge-ie-mode-cloud-site-list-mgmt/0.png)](https://www.youtube.com/watch?v=p3FyGvsNKC8 "|::ref1::|").
 
 > [!NOTE]
-> Diese Erfahrung befindet sich jetzt in der öffentlichen Vorschau.
+> Diese Erfahrung wird derzeit für alle Benutzer ausgerollt und soll bis Mitte Dezember abgeschlossen sein.
 
-In der Vorschauerfahrung können Sie die Websiteliste Ihrer Organisation an einem konformen Cloudspeicherort speichern, anstatt eine lokale Infrastruktur zum Hosten Ihrer Websiteliste zu benötigen. Sie können Websitelisten erstellen, importieren, exportieren und Änderungen an Websitelisteneinträgen über das Microsoft 365 Admin Center überwachen. Sie können mehrere Websitelisten in der Cloud veröffentlichen und Gruppenrichtlinien verwenden, um verschiedenen Gruppen von Geräten die Verwendung unterschiedlicher Listen zuzuweisen.
+Mit dieser Erfahrung können Sie die Websiteliste Ihrer Organisation an einem konformen Cloudspeicherort speichern, anstatt eine lokale Infrastruktur zum Hosten Ihrer Websiteliste zu benötigen. Sie können Websitelisten erstellen, importieren, exportieren und Änderungen an Websitelisteneinträgen über das Microsoft 365 Admin Center überwachen. Sie können mehrere Websitelisten in der Cloud veröffentlichen und Gruppenrichtlinien verwenden, um verschiedenen Gruppen von Geräten die Verwendung unterschiedlicher Listen zuzuweisen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Die folgenden Voraussetzungen gelten für diese öffentliche Vorschau.
+Für dieses Feature gelten die folgenden Voraussetzungen.
 
 1. Kunden müssen über einen Azure AD-Mandanten verfügen.
 2. Administratoren müssen Microsoft Edge Version 93 oder höher und die neueste Version der [Richtliniendateien](https://aka.ms/edgeenterprise) installiert haben.
 3. Administratoren müssen ein [Microsoft Edge-Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) oder ein [Globaler Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) für den Mandanten sein, um auf die Microsoft Edge-Websitelistenerfahrung zugreifen zu können.
-   - Um die öffentliche Vorschau zu abonnieren, muss ein globaler Administrator den Mandanten für den „gezielten Release“ registrieren. Weitere Informationen finden Sie unter [Abonnieren der öffentlichen Vorschau](#opt-in-to-public-preview).
 
-## <a name="the-preview-experience"></a>Die Vorschauerfahrung
+## <a name="cloud-site-list-management-experience"></a>Verwaltungserfahrung für Cloudwebsitelisten
 
-Die Vorschauerfahrung umfasst drei Aspekte.
+Diese Erfahrung hat drei Aspekte.
 
 ### <a name="publish-enterprise-site-list-to-the-cloud"></a>Veröffentlichen der Unternehmenswebsiteliste in der Cloud
 
-Administratoren können eine oder mehrere Websitelisten für einen authentifizierten Endpunkt veröffentlichen, welche Microsoft Edge-Clients in ihrem Mandanten für die IE-Modus-Erfahrung herunterladen können. Administratoren können die vorhandene XML-Datei der Unternehmenswebsiteliste in die Microsoft Edge-Websitelisten im Microsoft 365 Admin Center importieren und dann am Cloudspeicherort veröffentlichen. 
+Administratoren können eine oder mehrere Websitelisten für einen authentifizierten Endpunkt veröffentlichen, welche Microsoft Edge-Clients in ihrem Mandanten für die IE-Modus-Erfahrung herunterladen können. Administratoren können die vorhandene XML-Datei der Unternehmenswebsiteliste in die Microsoft Edge-Websitelisten im Microsoft 365 Admin Center importieren und dann am Cloudspeicherort veröffentlichen.
 
 ### <a name="associate-the-cloud-hosted-site-list-with-microsoft-edge"></a>Zuordnen der in der Cloud gehosteten Websiteliste zu Microsoft Edge
 
-Mit Microsoft Edge Version 93 können Administratoren die Einstellung [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) verwenden, um eine der in der Cloud gehosteten Websitelisten zu konfigurieren, die Microsoft Edge für den IE-Modus nutzen kann. Benutzer müssen bei Microsoft Edge angemeldet sein, damit der Client die Websiteliste aus der Cloud nutzen kann.
+Mit Microsoft Edge Version 93 können Administratoren die Einstellung [InternetExplorerIntegrationCloudSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) verwenden, um eine der in der Cloud gehosteten Websitelisten zu konfigurieren, die Microsoft Edge für den IE-Modus nutzen kann. Benutzer müssen bei Microsoft Edge angemeldet sein, damit der Client die Websiteliste aus der Cloud nutzen kann.
 
 > [!IMPORTANT]
-> Wenn diese Richtlinie konfiguriert ist, überschreibt sie die ursprüngliche Richtlinie [InternetExplorerIntegrationSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist).
+> Wenn diese Richtlinie konfiguriert ist, überschreibt sie die ursprüngliche Richtlinie [InternetExplorerIntegrationSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist).
 
 ### <a name="manage-site-list-contents-on-the-microsoft-365-admin-center"></a>Websitelisteninhalte im Microsoft 365 Admin Center verwalten
 
 Administratoren können eine neue Liste erstellen oder eine vorhandene Websiteliste in die Microsoft Edge-Websitelistenerfahrung importieren. Sie können Websitelisteninhalte hinzufügen, bearbeiten, löschen und den Kommentarverlauf anzeigen, um Änderungen an einzelnen Einträgen nachzuverfolgen. Im nächsten Abschnitt wird erläutert, wie Sie die öffentliche Vorschau abonnieren und auf die Microsoft Edge-Websitelistenerfahrung im Microsoft 365 Admin Center zugreifen.
 
-## <a name="opt-in-to-public-preview"></a>Öffentliche Vorschau abonnieren
-
-In der öffentlichen Vorschau müssen Sie die Anzeige der Vorschauerfahrung im Microsoft 365 Admin Center abonnieren. Sie müssen ein globaler Administrator in Microsoft 365 sein, um dies abonnieren zu können.
-
-Verwenden Sie die folgenden Schritte, um zu ändern, wie Ihre Organisation Microsoft 365-Updates erhält.
-
-> [!NOTE]
-> Es kann bis zu 24 Stunden dauern, bis die folgenden Konfigurationsänderungen in Microsoft 365 wirksam werden. Wenn Sie das Abonnement für ein gezieltes Release nach der Aktivierung kündigen, verlieren Ihre Benutzer möglicherweise den Zugriff auf Features, die den geplante Release noch nicht erreicht haben.
-
-1. Melden Sie sich beim [Microsoft 365 Admin Center](https://admin.microsoft.com) an, und wechseln Sie dann zu  **Einstellungen > Organisationseinstellung**. Wählen Sie unter der Registerkarte  **Organisationsprofil** die Option **Release-Voreinstellungen** aus.
-2. Um das gezielte Release zu deaktivieren, wählen Sie  **Standardrelease** und dann  **Änderungen speichern** aus.
-3. Um das gezielte Release für alle Benutzer in Ihrer Organisation zu aktivieren, wählen Sie **Gezieltes Release für alle Benutzer** aus, und wählen Sie dann **Änderungen speichern** aus.
-4. Um das gezielte Release für einige Personen in Ihrer Organisation zu aktivieren, wählen Sie **Gezieltes Release für ausgewählte Benutzer** und dann  **Änderungen speichern** aus.
-5. Wählen Sie **Benutzer auswählen** aus, um Benutzer einzeln hinzufügen, oder  **Benutzer hochladen** , um sie in großen Mengen hinzuzufügen.
-6. Wenn Sie mit dem Hinzufügen von Benutzern fertig sind, wählen Sie  **Änderungen speichern** aus.
-
-Weitere Informationen finden Sie unter [Einrichten der Standard- oder gezielten Releaseoptionen – Microsoft 365 Admin](/microsoft-365/admin/manage/release-options-in-office-365)
-
 ## <a name="publish-enterprise-site-list-to-the-cloud"></a>Veröffentlichen der Unternehmenswebsiteliste in der Cloud
 
-Verwenden Sie die folgenden Schritte als Leitlinie, um eine Websiteliste zu erstellen, eine Websiteliste zu importieren und die Websiteliste zu veröffentlichen. Bevor Sie diese Schritte durchführen können, melden Sie sich beim Microsoft 365 Admin Center an.
+Verwenden Sie die folgenden Schritte als Leitlinie, um eine Websiteliste zu erstellen, eine Websiteliste zu importieren und ein Websiteliste zu veröffentlichen. Bevor Sie diese Schritte durchführen können, melden Sie sich beim Microsoft 365 Admin Center an.
 
 1. Melden Sie sich beim [Microsoft 365 Admin Center](https://admin.microsoft.com) mit Ihren Administratoranmeldeinformationen an.
-2. Wählen Sie im linken Navigationsbereich **Einstellungen > Organisationseinstellungen**.
-3. Sie werden die Option **Microsoft Edge-Websitelisten (Vorschau)** sehen.
+2. Wählen Sie im linken Navigationsbereich **Einstellungen > Organisationseinstellungen** aus.
+3. Sie werden die Option **Microsoft Edge-Websitelisten** sehen.
+
+   > [!NOTE]
+   > Wenn Sie diese Option auf der Seite „Organisationseinstellungen“ nicht sehen, während wir alle Produktionsinstanzen ausrollen, müssen Sie sich für **Gezieltes Release** entscheiden. Wenn Sie die Option **Microsoft Edge-Websitelisten** nicht sehen, finden Sie weitere Informationen in dieser häufig gestellten Frage: [Ich sehe im Microsoft 365 Admin Center auf der Seite „Organisationseinstellungen“ die Option „Microsoft Edge-Websitelisten“ nicht. Warum ist dies der Fall?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that)
 
 ### <a name="steps-to-create-a-site-list"></a>Schritte zum Erstellen einer Websiteliste
 
-1. Wählen Sie auf der Seite „Organisationseinstellungen“ die Option **Microsoft Edge-Websitelisten (Vorschau)** aus.
+1. Wählen Sie auf der Seite „Organisationseinstellungen“ die Option **Microsoft Edge-Websitelisten** aus.
 2. Wählen Sie auf der resultierenden Seite die Option **Erstellen einer neuen Liste** aus.
 3. Geben Sie einen **Websitelistennamen** und eine **Beschreibung** ein, und wählen Sie dann **Erstellen** aus.
-4. Nachdem Sie die Bestätigung erhalten haben, wählen Sie **Bereich schließen** aus. 
+4. Nachdem Sie die Bestätigung erhalten haben, wählen Sie **Bereich schließen** aus.
 
 ### <a name="steps-to-import-a-site-list"></a>Schritte zum Importieren einer Websiteliste
 
@@ -107,14 +96,14 @@ Verwenden Sie die folgenden Schritte als Leitlinie, um eine Websiteliste zu erst
 1. Um eine Websiteliste zu veröffentlichen, wechseln Sie zurück zur Seite „Microsoft Edge-Websitelisten“. Wählen Sie den Breadcrumb über dem Namen der Websiteliste aus, um eine Ebene nach oben zu wechseln.
 2. Wählen Sie auf der Seite „Microsoft Edge-Websitelisten“ die Websiteliste aus, die Sie in der Cloud veröffentlichen möchten, und wählen Sie dann **Websiteliste veröffentlichen** aus.
 3. Aktualisieren Sie im rechten Bereich die **Versionsnummer**, und wählen Sie unten im Bereich **Veröffentlichen** aus.
-4. Wählen Sie nach der Bestätigung **Bereich schließen** aus. 
+4. Wählen Sie nach der Bestätigung **Bereich schließen** aus.
 5. Die Spalten **Status der Veröffentlichung**, **Zuletzt veröffentlicht** und **Zuletzt veröffentlicht durch** werden alle aktualisiert.
 
 ## <a name="associate-the-cloud-hosted-site-list-with-microsoft-edge"></a>Zuordnen der in der Cloud gehosteten Websiteliste zu Microsoft Edge
 
 Verwenden Sie die folgenden Schritte, um die in der Cloud gehostete Websiteliste an Microsoft Edge zuzuordnen.
 
-1. Um Geräte für die Verwendung einer veröffentlichten Websiteliste zu konfigurieren, klicken Sie auf die Websiteliste, die Sie Geräten zuweisen möchten.
+1. Um Geräte für die Verwendung einer veröffentlichten Websiteliste zu konfigurieren, wählen Sie die Websiteliste aus, die Sie Geräten zuweisen wollen.
 2. Kopieren Sie auf der resultierenden Seite die **Websitelisten-ID**.
 3. Wählen Sie für die von Ihnen ausgewählte Gerätegruppe **Aktiviert** aus, und geben Sie die **Websitelisten-ID** in die Richtlinie [Konfiguration der Unternehmensmodus-Cloudwebsiteliste](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) ein.
 4. Sie können **gpupdate/force** über die Eingabeaufforderung ausführen, um das Gerät mit der Richtlinie zu aktualisieren, oder warten, bis die Gruppenrichtlinie wirksam wird. Nachdem die Richtlinie aktualisiert wurde, können Sie überprüfen, ob Microsoft Edge die Cloudwebsiteliste liest, indem Sie zu [edge://compat/enterprise](edge://compat/enterprise) wechseln. Sie müssen bei Microsoft Edge angemeldet sein.
@@ -136,11 +125,13 @@ Sie können jeder Websiteliste einzelne Websites hinzufügen. Nach dem Hinzufüg
 3. Geben Sie die Websiteadresse ein, und wählen Sie das Modul aus, das zum Öffnen der Website verwendet werden soll. Fügen Sie bei Bedarf Kommentare hinzu, und wählen Sie **Speichern** aus.
 
    > [!NOTE]
-   > In der Spalte **Status** für alle Einträge, die einer Liste veröffentlichter Websites hinzugefügt werden, wird **Hinzufügen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** _(neben dem Suchfeld)_ verwenden, um „Hinzufügen ausstehend“ auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung ausstehen.
+   > In der Spalte **Status** für alle Einträge, die einer Liste veröffentlichter Websites hinzugefügt werden, wird **Hinzufügen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
 
 ### <a name="view-the-change-history-for-site-entries"></a>Anzeigen des Änderungsverlaufs für Websiteeinträge
 
-1. Wählen Sie den Websiteeintrag aus, für den Sie den Änderungsverlauf anzeigen möchten, und wählen Sie dann **Kommentare anzeigen** aus.
+So zeigen Sie den Änderungsverlauf für Websiteeinträge an:
+
+- Wählen Sie den Websiteeintrag aus, für den Sie den Änderungsverlauf sehen möchten, und wählen Sie dann **Kommentare anzeigen** aus.
 
 ### <a name="delete-a-site-from-the-site-list"></a>Löschen einer Website aus der Websiteliste
 
@@ -151,7 +142,19 @@ Verwenden Sie die folgenden Schritte, um einen Websiteeintrag zu löschen.
 3. Nachdem Sie die Bestätigung erhalten haben, dass ein Websiteeintrag gelöscht wurde, bleibt er in der Liste, bis die Websiteliste am Cloudspeicherort veröffentlicht wird. Sie können die Liste der gelöschten Websites vor der Veröffentlichung anzeigen, indem Sie die Schaltfläche „Filter“ auswählen und nach Websites mit Status **Löschen ausstehend** filtern.
 
    > [!NOTE]
-   > In der Spalte **Status** für alle Einträge, die aus einer Liste veröffentlichter Websites gelöscht wurden, wird **Löschen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** _(neben dem Suchfeld)_ verwenden, um „Löschen ausstehend“ auszuwählen, um alle gelöschten Einträge anzuzeigen, deren Veröffentlichung aussteht.
+   > In der Spalte **Status** für alle Einträge, die aus einer Liste veröffentlichter Websites gelöscht wurden, wird **Löschen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Löschen ausstehend** auszuwählen, um alle gelöschten Einträge zu sehen, deren Veröffentlichung aussteht.
+
+### <a name="copy-a-site-to-other-site-lists"></a>Kopieren einer Website in andere Websitelisten
+
+Verwenden Sie die folgenden Schritte, um einen Websiteeintrag aus einer Websiteliste in eine oder mehrere Websitelisten zu kopieren.
+
+1. Wählen Sie einen Websiteeintrag aus, den Sie in eine andere Liste kopieren möchten. Wählen Sie **Zu weiteren Listen kopieren** aus.
+2. Wählen Sie in der Dropdownliste eine oder mehrere Websitelisten aus, in die Sie kopieren möchten.
+3. Wählen Sie **Website kopieren** am unteren Rand des Bereichs aus.
+4. Nachdem Sie die Bestätigung erhalten haben, dass ein Websiteeintrag kopiert wurde, verbleibt er in der Websiteliste, aus der Sie ihn kopiert haben. Er wird auch in den Websitelisten angezeigt, in die Sie ihn kopiert haben.
+
+   > [!NOTE]
+   > In der Spalte **Status** wird für alle Einträge, die in eine Liste veröffentlichter Websites kopiert werden, der Wert **Hinzufügung ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte „Status der Veröffentlichung“der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
 
 ### <a name="export-a-site-list"></a>Exportieren einer Websiteliste
 
@@ -163,28 +166,43 @@ Es gibt Szenarien, in denen Sie eine Websiteliste exportieren möchten. Beispiel
 
 ## <a name="faq"></a>FAQ
 
+### <a name="i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that"></a>Ich sehe im Microsoft 365 Admin Center auf der Seite „Organisationseinstellungen“ die Option „Microsoft Edge-Websitelisten“ nicht.  Weshalb?
+
+Die Erfahrung wird verfügbar sein, wenn der Rollout Mitte Dezember abgeschlossen ist. Während dem Ausrollen der Erfahrung müssen Sie sich dafür registrieren, um diese Erfahrung im Microsoft 365 Admin Center anzuzeigen. Sie müssen ein globaler Administrator in Microsoft 365 sein, um dies abonnieren zu können.
+
+Sie können die folgenden Schritte ausführen, um sich zu registrieren:
+
+1. Melden Sie sich beim [Microsoft 365 Admin Center](https://admin.microsoft.com) an, und wechseln Sie dann zu  **Einstellungen > Organisationseinstellungen**. Wählen Sie unter der Registerkarte  **Organisationsprofil** die Option **Release-Voreinstellungen** aus.
+2. Um das gezielte Release zu deaktivieren, wählen Sie  **Standardrelease** und dann  **Änderungen speichern** aus.
+3. Um das gezielte Release für alle Benutzer in Ihrer Organisation zu aktivieren, wählen Sie **Gezieltes Release für alle Benutzer** aus, und wählen Sie dann **Änderungen speichern** aus.
+4. Um das gezielte Release für einige Personen in Ihrer Organisation zu aktivieren, wählen Sie **Gezieltes Release für ausgewählte Benutzer** und dann  **Änderungen speichern** aus.
+5. Wählen Sie **Benutzer auswählen** aus, um Benutzer einzeln hinzufügen, oder  **Benutzer hochladen** , um sie in großen Mengen hinzuzufügen.
+6. Wenn Sie mit dem Hinzufügen von Benutzern fertig sind, wählen Sie  **Änderungen speichern** aus.
+
+Weitere Informationen finden Sie unter [Einrichten der Standard- oder gezielten Releaseoptionen – Microsoft 365 Admin](/microsoft-365/admin/manage/release-options-in-office-365)
+
 ### <a name="when-i-select-microsoft-edge-site-lists-and-try-to-create-a-new-list-i-get-this-error---request-failed-with-status-code-500-why-is-that"></a>Wenn ich „Microsoft Edge-Websitelisten“ auswähle und versuche, eine neue Liste zu erstellen, erhalte ich diesen Fehler: „Anforderung mit Statuscode 500 fehlgeschlagen“. Weshalb?
 
 „Microsoft Edge-Websitelisten“ speichert ihre Daten und Konfiguration in einer Dienstinfrastruktur, die mit Unternehmensclouddiensten wie Exchange Online, SharePoint Online, Teams und Azure Active Directory gemeinsam genutzt wird. In seltenen Fällen kann die Bereitstellung einige Zeit in Anspruch nehmen, wenn Microsoft Edge-Websitelisten das erste Feature ist, das diese Infrastruktur verwendet. In diesen Fällen schlägt die anfängliche Anforderung aus dem Microsoft 365 Admin Center fehl. Wenn die Anforderung fehlschlägt, wird eine Warnung an das Bereitstellungssystem gesendet, um das Problem zu beheben. Die Bereitstellung wird in der Regel in drei Tagen abgeschlossen. Wenn dieser Fehler angezeigt wird, versuchen Sie es in einigen Tagen erneut, und erstellen Sie eine neue Liste. Wenn Sie immer noch keine neue Liste erstellen können oder dringende Unterstützung benötigen, wenden Sie sich an den Microsoft-Support.
 
 ### <a name="can-users-who-havent-signed-in-to-microsoft-edge-download-the-site-list"></a>Können Benutzer, die nicht bei Microsoft Edge angemeldet sind, die Websiteliste herunterladen?
 
-Nein, Benutzer müssen sich beim Browser anmelden, um die Liste der in der Cloud gehosteten Websites herunterzuladen. Sie können eine Richtlinie so konfigurieren, dass die implizite Anmeldung zugelassen wird, um eine Unterbrechung der Benutzererfahrung zu verhindern. Weitere Informationen finden Sie unter [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
+Nein, Benutzer müssen sich beim Browser anmelden, um die Liste der in der Cloud gehosteten Websites herunterzuladen. Sie können eine Richtlinie so konfigurieren, dass die implizite Anmeldung zugelassen wird, um eine Unterbrechung der Benutzererfahrung zu verhindern. Weitere Informationen finden Sie unter [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
 
 ### <a name="what-is-the-default-refresh-interval-after-updates-are-made-to-site-list-contents"></a>Was ist das Standardaktualisierungsintervall, nachdem Aktualisierungen an Websitelisteninhalten vorgenommen wurden?
 
-Die Websiteliste wird alle zwei Stunden in Microsoft Edge aktualisiert. Sie können dieses Intervall über die Richtlinie [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) ändern. Das minimale Aktualisierungsintervall beträgt 30 Minuten.
+Die Websiteliste wird alle zwei Stunden in Microsoft Edge aktualisiert. Sie können dieses Intervall in der Richtlinie [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) ändern. Das minimale Aktualisierungsintervall beträgt 30 Minuten.
 
 ### <a name="what-happens-if-users-log-out-of-microsoft-edge"></a>Was geschieht, wenn sich Benutzer bei Microsoft Edge abmelden?
 
 Für den Zugriff auf die Websiteliste ist eine explizite Browseranmeldung für den ersten Download erforderlich. In einem Szenario, in dem sich der Benutzer nach der Anmeldung wieder abmeldet, wird die Websiteliste in Microsoft Edge zwischengespeichert. Die Liste bleibt auch dann zwischengespeichert, wenn sich der Benutzer von Microsoft Edge aus dem Azure Active Directory (Azure AD)-Konto abmeldet. Microsoft Edge wird nicht versuchen, auf den Nicht-Cloud-Downloadspeicherort zurückzugreifen, solange die Richtlinie für die Cloudwebsiteliste konfiguriert ist. Microsoft Edge versucht, die zwischengespeicherte Websiteliste zu den folgenden Zeiten zu aktualisieren (beachten Sie, dass alle Versuche fehlschlagen, wenn der Benutzer nicht bei Microsoft Edge angemeldet ist):
 
-- 60 Sekunden nach dem Neustart des Browsers. Wenn die Startverzögerung von 60 Sekunden kürzer sein muss, können Sie die Richtlinie [NavigationDelayForInitialSiteListDownloadTimeout](/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) verwenden, um die Verzögerung zu ändern.
+- 60 Sekunden nach dem Neustart des Browsers. Wenn die Startverzögerung von 60 Sekunden kürzer sein muss, können Sie die Richtlinie [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) verwenden, um die Verzögerung zu ändern.
 - Alle zwei Stunden, wenn Microsoft Edge ausgeführt wird.
 
 ## <a name="support-and-feedback"></a>Support und Feedback
 
-Während der öffentlichen Vorschau wird die Verwaltungserfahrung für Cloudwebsitelisten durch Ihren vorhandenen [Microsoft Premier-Support](https://www.microsoft.com/en-us/unifiedsupport/premier)-Vertrag abgedeckt. Sie können sich an den Microsoft-Support wenden, um Probleme oder Feedback zu melden. Feedback können Sie auch in unserem [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) hinterlassen.
+Der Support für die Verwaltungserfahrung für Cloudwebsitelisten wird durch Ihren vorhandenen [Microsoft Premier-Support](https://www.microsoft.com/unifiedsupport/premier)-Vertrag abgedeckt. Sie können sich an den Microsoft-Support wenden, um Probleme oder Feedback zu melden. Feedback können Sie auch in unserem [TechCommunity-Forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) hinterlassen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
