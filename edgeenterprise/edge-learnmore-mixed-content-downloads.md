@@ -1,25 +1,25 @@
 ---
-title: Microsoft Edge und Downloads gemischter Inhalte
+title: Erfahren Sie, wie Microsoft Edge Downloads gemischter Inhalte handhabt
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge und Downloads gemischter Inhalte
-ms.openlocfilehash: 4871b23145d365e814c5cf1cac7699044f3da35e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
-ms.translationtype: MT
+description: Erfahren Sie mehr über Downloads gemischter Inhalte und wie Microsoft Edge diese handhabt.
+ms.openlocfilehash: c199a8b763e456daac34bd1ba07e64ced50358f5
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979212"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298283"
 ---
-# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Informationen zu Microsoft Edge und Downloads gemischter Inhalte
+# <a name="learn-how-microsoft-edge-handles-mixed-content-downloads"></a>Erfahren Sie, wie Microsoft Edge Downloads gemischter Inhalte handhabt
 
-In diesem Artikel werden Downloads gemischter Inhalte erläutert und wie Microsoft Edge mit diesen umgeht.
+In diesem Artikel werden Downloads gemischter Inhalte definiert und erläutert, wie Microsoft Edge diese handhabt.
 
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version 85 oder neuer.
@@ -31,7 +31,7 @@ Zu einem Download gemischter Inhalte kommt es, wenn Sie einen Download von einer
 - Mindestens eine der Umleitungen des Downloadspeicherorts wurde über eine unsichere HTTP-Verbindung geladen.
 - Der endgültige Downloadspeicherort wurde über eine unsichere HTTP-Verbindung geladen.
 
-Bei beiden Szenario handelt es sich um gemischten Inhalt, da die Anforderung mit sicherem HTTPS gestellt wurde und sowohl HTTP- als auch HTTPS-Inhalt beim Erreichen des endgültigen Downloadziels beteiligt sind. In modernen Browsern werden Warnungen zu diesem Typ von Inhalt angezeigt, um den Benutzer darauf hinzuweisen, dass dieser Download möglicherweise ungesichert übertragen wird, auch wenn die Seite des ursprünglichen Zugriffs sicher war.
+Eines der vorherigen Szenarien ist ein Download gemischter Inhalte, da die Anforderung über sicheres HTTPS erfolgt ist und sowohl HTTP- als auch HTTPS-Verbindungen verwendet werden, um das endgültige Ziel zu erreichen. Moderne Browser zeigen Warnungen zu diesem Inhaltstyp an, um anzugeben, dass dieser Download möglicherweise unsicher übertragen wird, obwohl auf die ursprüngliche Seite sicher zugegriffen wurde.
 
 ## <a name="download-warnings-and-user-options"></a>Downloadwarnungen und Benutzeroptionen
 
