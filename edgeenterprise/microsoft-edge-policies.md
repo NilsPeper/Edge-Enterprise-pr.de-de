@@ -3,7 +3,7 @@ title: Dokumentation für die Microsoft Edge Browserrichtlinie
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2021
+ms.date: 01/12/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Windows- und Mac-Dokumentation für alle vom Microsoft Edge Browser unterstützten Richtlinien
-ms.openlocfilehash: dfffb6935c8452ff1e9c9d4767d7ccbbd1c63af3
-ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
+ms.openlocfilehash: b07ee963705e94d0d19b0694ff3452b0489df9e2
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155239"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297694"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge-Richtlinien
 
@@ -31,18 +31,19 @@ Sie können das [Microsoft Security Compliance Toolkit](https://www.microsoft.co
 
 ## <a name="new-policies"></a>Neue Richtlinien
 
-Die folgenden Richtlinien wurden diesem Dokumentationsupdate hinzugefügt.
+Die folgenden neuen Richtlinien sind in diesem Dokumentationsupdate enthalten.
 
 | Richtlinienname | Beschriftung |
-|--|--|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Abrufen von Bildbeschreibungen von Microsoft Enabled|
-|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Bilder verbessern aktiviert|
+|----|----|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Konfigurieren der Adressleistenbearbeitung|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Verbessern des Sicherheitsstatus in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Konfigurieren der Liste der Domänen, für die der erweiterte Sicherheitsmodus nicht erzwungen wird|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Konfigurieren der Liste der Domänen, für die der Modus Sicherheitsverbesserung immer erzwungen wird|
 
 ## <a name="available-policies"></a>Verfügbare Richtlinien
 
-In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Browser-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
+In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügbaren Browser-bezogenen Gruppenrichtlinien aufgeführt. Über die Links in der folgenden Tabelle erhalten Sie weitere Einzelheiten zu bestimmten Richtlinien.
 
-- [Bildschirmaufnahme zulassen oder verweigern](#allow-or-deny-screen-capture)
 - [Application Guard-Einstellungen](#application-guard-settings)
 - [Cast](#cast)
 - [Einstellungen für den Inhalt](#content-settings)
@@ -56,6 +57,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 - [Systemeigenes Messaging](#native-messaging)
 - [Kennwort-Manager und Schutz](#password-manager-and-protection)
 - [Leistung](#performance)
+- [Zulassen oder Verweigern der Bildschirmaufnahme](#permit-or-deny-screen-capture)
 - [Drucken](#printing)
 - [Anforderungseinstellungen für private Netzwerke](#private-network-request-settings)
 - [Proxyserver](#proxy-server)
@@ -66,11 +68,6 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 - [Sonstiges](#additional)
 
 
-### [*<a name="allow-or-deny-screen-capture"></a>Bildschirmaufnahme zulassen oder verweigern*](#allow-or-deny-screen-capture-policies)
-
-|Richtlinienname|Beschriftung|
-|-|-|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Bildschirmaufnahme zulassen oder verweigern|
 ### [*<a name="application-guard-settings"></a>Application Guard-Einstellungen*](#application-guard-settings-policies)
 
 |Richtlinienname|Beschriftung|
@@ -129,6 +126,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Popupfenster auf bestimmten Websites zulassen|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Popupfenster auf bestimmten Websites blockieren|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrieren von Protokollhandlern|
+|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Websites die Berechtigung zum Verbinden aller seriellen Anschlüsse automatisch erteilen|
+|[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Websites die Berechtigung zum Herstellen einer Verbindung mit seriellen USB-Geräten automatisch erteilen|
 |[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Zulassen von Benachrichtigungen zum Festlegen von Microsoft Edge als standardmäßigen PDF-Reader|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Auswählen, ob Benutzer angepasste Hintergrundbilder und Text, Vorschläge, Benachrichtigungen und Tipps für Microsoft-Dienste erhalten können|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Bestimmten Websites die Herstellung einer Verbindung zu bestimmten USB-Geräten gewähren.|
@@ -220,6 +219,14 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |-|-|
 |[EfficiencyMode](#efficiencymode)|Konfigurieren, wann der Effizienzmodus aktiv werden soll|
 |[StartupBoostEnabled](#startupboostenabled)|Startup-Boost aktivieren|
+### [*<a name="permit-or-deny-screen-capture"></a>Zulassen oder Verweigern der Bildschirmaufnahme*](#permit-or-deny-screen-capture-policies)
+
+|Richtlinienname|Beschriftung|
+|-|-|
+|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Zulassen der Registerkartenerfassung „Gleicher Ursprung“ durch diese Ursprünge|
+|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Zulassen der Desktop-, Fenster- und Registerkartenerfassung durch diese Ursprünge|
+|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Zulassen der Registerkartenerfassung durch diese Ursprünge|
+|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Zulassen der Fenster- und Registerkartenerfassung durch diese Ursprünge|
 ### [*<a name="printing"></a>Drucken*](#printing-policies)
 
 |Richtlinienname|Beschriftung|
@@ -230,6 +237,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Standarddrucker des Systems als Standarddrucker festlegen|
 |[PrintRasterizationMode](#printrasterizationmode)|Druckrastermodus|
 |[PrintRasterizePdfDpi](#printrasterizepdfdpi)|PDF-DPI in Rasterung drucken|
+|[PrintStickySettings](#printstickysettings)|Seitenansicht Einrastfunktionseinstellungen|
 |[PrinterTypeDenyList](#printertypedenylist)|Deaktivieren von Druckertypen in der Verweigerungsliste|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Einschränken des Druckmodus für Hintergrundgrafiken|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Standarddruckmodus für Hintergrundgrafiken|
@@ -267,10 +275,11 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Umgehung der Microsoft Defender SmartScreen-Aufforderungen für Websites verhindern|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Verhindern der Umgehung von Microsoft Defender-SmartScreen-Warnungen zu Downloads|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Konfigurieren der Liste der Domänen, für die Microsoft Defender-SmartScreen keine Warnungen auslöst|
+|[SmartScreenDnsRequestsEnabled](#smartscreendnsrequestsenabled)|Aktivieren von Microsoft Defender SmartScreen DNS-Anforderungen|
 |[SmartScreenEnabled](#smartscreenenabled)|Konfigurieren des Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Erzwingen der Microsoft Defender-SmartScreen-Überprüfung für Downloads aus vertrauenswürdigen Quellen|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Konfigurieren von Microsoft Defender SmartScreen, sodass potenziell unerwünschte Apps blockiert werden|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Start&comma; Startseite und neue Registerkarte*](#startup-home-page-and-new-tab-page-policies)
 
 |Richtlinienname|Beschriftung|
 |-|-|
@@ -298,7 +307,8 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |Richtlinienname|Beschriftung|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Einmaliges Anmelden für Geschäfts-, Uni- oder Schulwebsites, auf denen dieses Profil aktiviert ist|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Abrufen von Bildbeschreibungen von Microsoft Enabled|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Abrufen von Bildbeschreibungen aus Microsoft|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Konfigurieren der Adressleistenbearbeitung|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Aktivieren von Microsoft Search in Bing-Vorschlägen in der Adressleiste|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Anzeigeneinstellung für Websites mit aufdringlichen Anzeigen|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Löschen des Browser- und Downloadverlaufs aktivieren|
@@ -340,6 +350,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Verwenden des integrierten DNS-Clients|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Bestimmt, ob die integrierte Zertifikatprüfung zum Überprüfen von Serverzertifikaten verwendet wird (veraltet).|
 |[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 Post Quantum Key Agreement für TLS aktiviert|
+|[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS-Unterstützung für Nicht-Platzhalter-Anforderungsheader aktiviert (veraltet)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Deaktivieren der Erzwingung der Zertifikattransparenz für eine Liste mit subjectPublicKeyInfo-Hashwerten|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Deaktivieren der Erzwingung der Zertifikattransparenz für eine Liste mit Legacy-Zertifizierungsstellen|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Deaktivieren der Erzwingung der Zertifikattransparenz für bestimmte URLs|
@@ -378,13 +389,18 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[Download Directory](#downloaddirectory)|Downloadverzeichnis festlegen|
 |[DownloadRestrictions](#downloadrestrictions)|Downloadbeschränkungen zulassen|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Aktivieren des Features „Sammlungen“|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Das Feature „Entdecken“ in Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Bilder verbessern aktiviert|
+|[EdgeFollowEnabled](#edgefollowenabled)|Aktivieren des „Folgen“-Diensts in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Einkaufen in Microsoft Edge aktiviert|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Ermöglicht Benutzern das Bearbeiten von Favoriten|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Herunterladen aktivieren von Domänenaktionen von Microsoft (veraltet)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Aktivieren von Online-OCSP-/CRL-Prüfungen|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Zulassen von Zertifikaten, die mit SHA-1 signiert wurden, wenn sie von lokalen Vertrauensankern ausgestellt wurden (veraltet)|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Verbessern des Sicherheitsstatus in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Konfigurieren der Liste der Domänen, für die der erweiterte Sicherheitsmodus nicht erzwungen wird|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Konfigurieren der Liste der Domänen, für die der Modus Sicherheitsverbesserung immer erzwungen wird|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Zulassen der Verwendung der Enterprise-Hardware Plattform-API für verwaltete Erweiterungen|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Zugriff auf das Enterprise Mode Site List Manager-Tool ulassen|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Herunterladen deaktivieren von Warnungen basierend auf Dateierweiterungen für bestimmte Dateitypen in Domänen|
@@ -424,6 +440,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[ImportSearchEngine](#importsearchengine)|Import von Suchmaschinen-Einstellungen zulassen|
 |[ImportShortcuts](#importshortcuts)|Das Importieren von Verknüpfungen zulassen|
 |[ImportStartupPageSettings](#importstartuppagesettings)|Importieren von Startseiteneinstellungen zulassen|
+|[InAppSupportEnabled](#inappsupportenabled)|In-App-Unterstützung aktiviert|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Konfigurieren der InPrivate-Modus-Verfügbarkeit|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Aktivieren von Warnungen für unsichere Formulare|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Steuern des IntensiveWakeUpThrottling-Features|
@@ -442,6 +459,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Testen des Internet Explorer-Modus zulassen (veraltet)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Konfigurieren der Pixelanpassung zwischen window.open-Höhen, die von Seiten im IE-Modus stammen, im Vergleich zu Edgemodusseiten|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Konfigurieren der Pixelanpassung zwischen window.open-Breiten, die von Seiten im IE-Modus stammen, im Vergleich zu Edgemodusseiten|
+|[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Zulassen des Öffnen von Websites, die für den Internet Explorer Modus konfiguriert sind, in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Schaltfläche "Neu laden" im Internet Explorer Modus in der Symbolleiste anzeigen|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Verhalten der Intranetumleitung|
 |[IsolateOrigins](#isolateorigins)|Aktivieren der Website-Isolation für bestimmte Ursprünge|
@@ -456,6 +474,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximale Anzahl gleichzeitiger Verbindungen mit dem Proxyserver|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Zulassen, dass Google Cast eine Verbindung mit den Cast-Geräten aller IP-Adressen herstellt|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Aktivieren der Berichterstellung für Nutzungs- und Absturzdaten (veraltet)|
+|[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider-Promotion aktiviert|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Systemeigene Fenster-Okklusion aktivieren (veraltet)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Festlegen eines Zeitlimits für die Verzögerung der Registerkartennavigation für die Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Aktivieren der Netzwerkvorhersage|
@@ -479,15 +498,17 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Aktivieren der Codeintegrität des Renderers|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Angeben, ob Online-OCSP-/-CRL-Prüfungen für lokale Vertrauensanker erforderlich sind|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Aktivieren der Auflösung von Navigationsfehlern mithilfe eines Webdiensts|
-|[RestrictSigninToPattern](#restrictsignintopattern)|Einschränken, welche Konten als primäre Microsoft Edge-Konten verwendet werden können|
+|[RestrictSigninToPattern](#restrictsignintopattern)|Einschränken, welche Konten zum Anmelden bei Microsoft Edge verwendet werden können|
 |[RoamingProfileLocation](#roamingprofilelocation)|Festlegen des Server gespeicherten Profilverzeichnisses|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Aktivieren der Verwendung von Roaming-Kopien für Microsoft Edge-Profildaten|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Erweitern der Einstellung für Adobe Flash-Inhalte auf alle Inhalte (veraltet)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Zulassen, dass Benutzer ab der HTTPS-Warnseite fortfahren können|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Zulassen, dass Benutzer von der HTTPS-Warnseite für bestimmte Ursprünge fortfahren können|
-|[SSLVersionMin](#sslversionmin)|Minimale TLS-Version aktiviert (veraltet)|
+|[SSLVersionMin](#sslversionmin)|Mindestens aktivierte TLS-Version|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Zulassen, dass Microsoft Edge Navigationen zu externen Protokollen in einem Sandkasten-iFrame blockiert|
 |[SaveCookiesOnExit](#savecookiesonexit)|Speichern von Cookies, wenn Microsoft Edge geschlossen wird|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Speichern des Browserverlaufs deaktivieren|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Bildschirmaufnahme zulassen oder verweigern|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Aktivieren des Scrollens zu Text, der in URL-Fragmenten angegeben ist|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Suchvorschläge zulassen|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites oder Domänen, für die keine Berechtigung zur Verwendung der direkten Sicherheitsschlüssel-Bestätigung erforderlich ist|
@@ -524,6 +545,7 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[TranslateEnabled](#translateenabled)|Übersetzen aktivieren|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Aktivieren der Reiseunterstützung|
 |[TripleDESEnabled](#tripledesenabled)|Aktivieren von 3DES-Verschlüsselungssammlungen in TLS|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Verwendung der veralteten U2F-Sicherheitsschlüssel-API zulassen (veraltet)|
 |[URLAllowlist](#urlallowlist)|Definieren einer Liste zulässiger URLs|
 |[URLBlocklist](#urlblocklist)|Blockieren des Zugriffs auf eine Liste von URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Legt fest, wie Microsoft Edge Update verfügbare Updates von Microsoft Edge verarbeitet|
@@ -545,76 +567,14 @@ In dieser Tabelle sind sämtliche, in dieser Version von Microsoft Edge verfügb
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Einschränken der Gefährdung lokaler IP-Adresse durch WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Aktivieren der Unterstützung für Windows-BS-Routingtabellenregeln beim Herstellen von Peer-to-Peer-Verbindungen über WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Einschränken des von WebRTC verwendeten lokalen Bereichs an UDP-Ports|
+|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Erzwingen der erneuten Aktivierung von WebSQL in Drittanbieterkontexten (veraltet)|
 |[WebWidgetAllowed](#webwidgetallowed)|Edge-Leiste aktivieren|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Edge-Leiste beim Windows-Start zulassen|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Verwenden von Windows-Proxy Konfliktlöser (verworfen)|
-|[WindowOcclusionEnabled](#windowocclusionenabled)|Aktivieren der Erkennung verdeckter Fenster|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Aktivieren der Fenster-Okklusion|
 
 
 
-
-  ## <a name="allow-or-deny-screen-capture-policies"></a>Richtlinien zum Zulassen oder Verweigern von Bildschirmaufnahmen
-
-  [Zurück zum Anfang](#microsoft-edge---policies)
-
-  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
-
-  #### <a name="allow-or-deny-screen-capture"></a>Bildschirmaufnahme zulassen oder verweigern
-
-  
-  
-  #### <a name="supported-versions"></a>Unterstützte Versionen:
-
-  - Auf Windows und macOS ab 83 oder höher
-
-  #### <a name="description"></a>Beschreibung
-
-  Wenn Sie diese Richtlinie aktivieren oder diese Richtlinie nicht konfigurieren, kann eine Webseite Bildschirmfreigabe-APIs (z.B. getDisplayMedia() oder die API für die Desktopaufnahme-Erweiterung) für eine Bildschirmaufnahme verwenden.
-Wenn Sie diese Richtlinie deaktivieren, treten beim Aufrufen von Screen-Share-APIs Fehler auf. Wenn Sie beispielsweise eine webbasierte Onlinebesprechung verwenden, funktioniert die Video- oder Bildschirmfreigabe nicht.
-
-  #### <a name="supported-features"></a>Unterstützte Funktionen:
-
-  - Kann zwingend erforderlich sein: Ja
-  - Kann empfohlen werden: Nein
-  - Dynamische Richtlinienaktualisierung: Ja
-
-  #### <a name="data-type"></a>Datentyp:
-
-  - Boolesch
-
-  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
-
-  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
-
-  - GP eindeutiger Name: ScreenCaptureAllowed
-  - GP-Name: Bildschirmaufnahme zulassen oder verweigern
-  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Allow or deny screen capture
-  - GP-Pfad (empfohlen): n.a.
-  - GP ADMX Dateiname: MSEdge.admx
-
-  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
-
-  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): n.a.
-  - Wertname: ScreenCaptureAllowed
-  - Werttyp: REG_DWORD
-
-  ##### <a name="example-value"></a>Beispielwert:
-
-```
-0x00000000
-```
-
-  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
-  
-  - Einstellung Schlüsselname: ScreenCaptureAllowed
-  - Beispielwert:
-``` xml
-<false/>
-```
-  
-
-  [Zurück zum Anfang](#microsoft-edge---policies)
 
   ## <a name="application-guard-settings-policies"></a>Richtlinien für Application Guard-Einstellungen
 
@@ -3777,6 +3737,196 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="serialallowallportsforurls"></a>SerialAllowAllPortsForUrls
+
+  #### <a name="automatically-grant-sites-permission-to-connect-all-serial-ports"></a>Websites die Berechtigung zum Verbinden aller seriellen Anschlüsse automatisch erteilen
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Durch Festlegen der Richtlinie können Sie Websites auflisten, denen automatisch die Berechtigung für den Zugriff auf alle verfügbaren seriellen Anschlüsse gewährt wird.
+
+Die URLs müssen gültig sein, oder die Richtlinie wird ignoriert. Es wird nur der Ursprung (Schema, Host und Anschluss) der URL berücksichtigt.
+
+Diese Richtlinie setzt [DefaultSerialGuardSetting](#defaultserialguardsetting), [SerialAskForUrls](#serialaskforurls), [SerialBlockedForUrls](#serialblockedforurls) und die Benutzereinstellungen außer Kraft.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SerialAllowAllPortsForUrls
+  - GP-Name: Websites automatisch die Berechtigung erteilen, eine Verbindung zu allen seriellen Anschlüssen herzustellen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Content settings
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls\1 = "https://www.example.com"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: SerialAllowAllPortsForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="serialallowusbdevicesforurls"></a>SerialAllowUsbDevicesForUrls
+
+  #### <a name="automatically-grant-sites-permission-to-connect-to-usb-serial-devices"></a>Websites die Berechtigung zum Herstellen einer Verbindung mit seriellen USB-Geräten automatisch erteilen
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Durch Festlegen der Richtlinie können Sie Websites auflisten, denen automatisch die Berechtigung für den Zugriff auf serielle USB-Geräte mit Anbieter- und Produkt-IDs gewährt wird, welche den Feldern vendor_id und product_id entsprechen.
+
+Optional können Sie das Feld product_id weglassen. Dadurch wird der Websitezugriff auf alle Geräte des Anbieters ermöglicht.  Wenn Sie eine Produkt-ID angeben, gewähren Sie der Website Zugriff auf ein bestimmtes Gerät vom Anbieter, nicht aber auf alle Geräte.
+
+Die URLs müssen gültig sein, oder die Richtlinie wird ignoriert. Es wird nur der Ursprung (Schema, Host und Anschluss) der URL berücksichtigt.
+
+Diese Richtlinie setzt [DefaultSerialGuardSetting](#defaultserialguardsetting), [SerialAskForUrls](#serialaskforurls), [SerialBlockedForUrls](#serialblockedforurls) und die Benutzereinstellungen außer Kraft.
+
+Diese Richtlinie wirkt sich nur auf den Zugriff auf USB-Geräte über die serielle Web-API aus. Informationen zum Gewähren des Zugriffs auf USB-Geräte über die WebUSB-API finden Sie in der Richtlinie [WebUsbAllowDevicesForUrls](#webusballowdevicesforurls).
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Dictionary
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SerialAllowUsbDevicesForUrls
+  - GP-Name: Websites die Berechtigung zum Herstellen einer Verbindung mit seriellen USB-Geräten automatisch erteilen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Content settings
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: SerialAllowUsbDevicesForUrls
+  - Werttyp: REG_SZ
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://specific-device.example.com"
+    ]
+  },
+  {
+    "devices": [
+      {
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://all-vendor-devices.example.com"
+    ]
+  }
+]
+```
+
+  ##### <a name="compact-example-value"></a>Kompakter Beispielwert:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://specific-device.example.com"]}, {"devices": [{"vendor_id": 1234}], "urls": ["https://all-vendor-devices.example.com"]}]
+  ```
+  
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: SerialAllowUsbDevicesForUrls
+  - Beispielwert:
+``` xml
+<key>SerialAllowUsbDevicesForUrls</key>
+<array>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>product_id</key>
+        <integer>5678</integer>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://specific-device.example.com</string>
+    </array>
+  </dict>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://all-vendor-devices.example.com</string>
+    </array>
+  </dict>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="showpdfdefaultrecommendationsenabled"></a>ShowPDFDefaultRecommendationsEnabled
 
   #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>Zulassen von Benachrichtigungen zum Festlegen von Microsoft Edge als standardmäßigen PDF-Reader
@@ -6721,13 +6871,11 @@ Wenn Sie diese Richtlinie deaktivieren, werden Benutzern auf den Seiten "Anmelde
 
   #### <a name="description"></a>Beschreibung
 
-  Aktivieren, dass Microsoft Edge Benutzerkennwörter speichert.
+  Aktivieren, dass Microsoft Edge Benutzerkennwörter speichert. Wenn ein Benutzer das nächste Mal eine Website mit einem gespeicherten Kennwort besucht, gibt Microsoft Edge das Kennwort automatisch ein.
 
-Wenn Sie diese Richtlinie aktivieren, können die Benutzer ihre Kennwörter in Microsoft Edge speichern. Wenn Sie eine Website das nächste Mal besuchen, gibt Microsoft Edge das Kennwort automatisch ein.
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer ihre Kennwörter in Microsoft Edge speichern und hinzufügen.
 
-Wenn Sie diese Richtlinie deaktivieren, können die Benutzer keine neuen Kennwörter speichern, sie können aber weiterhin bisher gespeicherte Kennwörter verwenden.
-
-Wenn Sie diese Richtlinie aktivieren oder deaktivieren, können die Benutzer sie in Microsoft Edge nicht ändern oder außer Kraft setzen. Wenn Sie sie nicht konfigurieren, können Benutzer Kennwörter speichern und diese Funktion deaktivieren.
+Wenn Sie diese Richtlinie deaktivieren, können Benutzer keine neuen Kennwörter speichern und hinzufügen, sie können jedoch weiterhin ihre zuvor gespeicherten Kennwörter verwenden.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -7348,6 +7496,292 @@ Weitere Informationen zur Startup-Boost finden Sie unter [https://go.microsoft.c
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ## <a name="permit-or-deny-screen-capture-policies"></a>Zulassen oder Verweigern von Bildschirmaufnahmerichtlinien
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="sameorigintabcaptureallowedbyorigins"></a>SameOriginTabCaptureAllowedByOrigins
+
+  #### <a name="allow-same-origin-tab-capture-by-these-origins"></a>Zulassen der Registerkartenerfassung „Gleicher Ursprung“ durch diese Ursprünge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Durch Festlegen der Richtlinie können Sie eine Liste von URL-Mustern festlegen, die Registerkarten mit demselben Ursprung erfassen können.
+
+Wenn die Richtlinie nicht festgelegt wird, werden Websites in diesem Erfassungsbereich nicht für eine Außerkraftsetzung berücksichtigt.
+
+Wenn eine Website mit einem URL-Muster in dieser Richtlinie übereinstimmt, werden die folgenden Richtlinien nicht berücksichtigt: [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [ScreenCaptureAllowed](#screencaptureallowed).
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Diese Richtlinie stimmt nur basierend auf dem Ursprung überein, sodass alle Pfade im URL-Muster ignoriert werden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SameOriginTabCaptureAllowedByOrigins
+  - GP-Name: Erfassung der Registerkarte „Gleicher Ursprung“ durch diese Ursprünge zulassen
+  - GP-Pfad (obligatorisch): Administrative Vorlagen/Microsoft Edge/Bildschirmaufnahme zulassen oder verweigern
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: SameOriginTabCaptureAllowedByOrigins
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowedbyorigins"></a>ScreenCaptureAllowedByOrigins
+
+  #### <a name="allow-desktop-window-and-tab-capture-by-these-origins"></a>Zulassen der Desktop-, Fenster- und Registerkartenerfassung durch diese Ursprünge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Durch Festlegen der Richtlinie können Sie eine Liste von URL-Mustern festlegen, die Desktop-, Fenster- und Registerkartenerfassung verwenden können.
+
+Wenn Sie die Richtlinie nicht festlegen, werden Websites in diesem Umfang der Erfassung nicht für eine Außerkraftsetzung berücksichtigt.
+
+Diese Richtlinie wird nicht berücksichtigt, wenn eine Website einem URL-Muster in einer der folgenden Richtlinien entspricht: [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+Wenn eine Website mit einem URL-Muster in dieser Richtlinie übereinstimmt, wird [ScreenCaptureAllowed](#screencaptureallowed) nicht berücksichtigt.
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Diese Richtlinie stimmt nur basierend auf dem Ursprung überein, sodass alle Pfade im URL-Muster ignoriert werden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: ScreenCaptureAllowedByOrigins
+  - GP-Name: Zulassen der Desktop-, Fenster- und Registerkartenerfassung durch diese Ursprünge
+  - GP-Pfad (obligatorisch): Administrative Vorlagen/Microsoft Edge/Bildschirmaufnahme zulassen oder verweigern
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: ScreenCaptureAllowedByOrigins
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="tabcaptureallowedbyorigins"></a>TabCaptureAllowedByOrigins
+
+  #### <a name="allow-tab-capture-by-these-origins"></a>Zulassen der Registerkartenerfassung durch diese Ursprünge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Durch Festlegen der Richtlinie können Sie eine Liste der URL-Muster festlegen, die die Registerkartenerfassung verwenden können.
+
+Wenn die Richtlinie nicht festgelegt wird, werden Websites in diesem Erfassungsbereich nicht für eine Außerkraftsetzung berücksichtigt.
+
+Diese Richtlinie wird nicht berücksichtigt, wenn eine Website einem URL-Muster in der Richtlinie [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins) entspricht.
+
+Wenn eine Website mit einem URL-Muster in dieser Richtlinie übereinstimmt, werden die folgenden Richtlinien nicht berücksichtigt: [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [ScreenCaptureAllowed](#screencaptureallowed).
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Diese Richtlinie stimmt nur basierend auf dem Ursprung überein, sodass alle Pfade im URL-Muster ignoriert werden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: TabCaptureAllowedByOrigins
+  - GP-Name: Zulassen der Registerkartenerfassung durch diese Ursprünge
+  - GP-Pfad (obligatorisch): Administrative Vorlagen/Microsoft Edge/Bildschirmaufnahme zulassen oder verweigern
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: TabCaptureAllowedByOrigins
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="windowcaptureallowedbyorigins"></a>WindowCaptureAllowedByOrigins
+
+  #### <a name="allow-window-and-tab-capture-by-these-origins"></a>Zulassen der Fenster- und Registerkartenerfassung durch diese Ursprünge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Durch Festlegen der Richtlinie können Sie eine Liste von URL-Mustern festlegen, die die Fenster- und Registerkartenerfassung verwenden können.
+
+Wenn Sie die Richtlinie nicht festlegen, werden Websites in diesem Umfang der Erfassung nicht für eine Außerkraftsetzung berücksichtigt.
+
+Diese Richtlinie wird nicht berücksichtigt, wenn eine Website einem URL-Muster in einer der folgenden Richtlinien entspricht: [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+Wenn eine Website mit einem URL-Muster in dieser Richtlinie übereinstimmt, werden die folgenden Richtlinien nicht berücksichtigt: [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [ScreenCaptureAllowed](#screencaptureallowed).
+
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  Diese Richtlinie stimmt nur basierend auf dem Ursprung überein, sodass alle Pfade im URL-Muster ignoriert werden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WindowCaptureAllowedByOrigins
+  - GP-Name: Zulassen der Fenster- und Registerkartenerfassung durch diese Ursprünge
+  - GP-Pfad (obligatorisch): Administrative Vorlagen/Microsoft Edge/Bildschirmaufnahme zulassen oder verweigern
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: WindowCaptureAllowedByOrigins
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ## <a name="printing-policies"></a>Richtlinien zum Drucken
 
   [Zurück zum Anfang](#microsoft-edge---policies)
@@ -7735,6 +8169,86 @@ Wenn Sie diese Richtlinie auf Null festlegen oder nicht konfigurieren, wird die 
   - Beispielwert:
 ``` xml
 <integer>300</integer>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="printstickysettings"></a>PrintStickySettings
+
+  #### <a name="print-preview-sticky-settings"></a>Seitenansicht Einrastfunktionseinstellungen
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Gibt an, ob die Seitenansicht zuletzt verwendete Einstellungen für Microsoft Edge PDF und Webseiten anwenden soll.
+
+Wenn Sie diese Richtlinie auf „EnableAll“ festlegen oder sie nicht konfigurieren, wendet Microsoft Edge die zuletzt verwendeten Druckvorschaueinstellungen sowohl für PDF als auch für Webseiten an.
+
+Wenn Sie diese Richtlinie auf „DisableAll“ festlegen, wendet Microsoft Edge die zuletzt verwendeten Druckvorschaueinstellungen sowohl für PDF als auch für Webseiten nicht an.
+
+Wenn Sie diese Richtlinie auf „DisablePdf“ festlegen, wendet Microsoft Edge die zuletzt verwendeten Druckvorschaueinstellungen für das Drucken von PDF nicht an und behält sie für Webseiten bei.
+
+Wenn Sie diese Richtlinie auf „DisableWebpage“ festlegen, wendet Microsoft Edge die zuletzt verwendeten Druckvorschaueinstellungen für das Drucken von Webseiten an und behält sie für PDF bei.
+
+Diese Richtlinie ist nur verfügbar, wenn Sie die Richtlinie [PrintingEnabled](#printingenabled) aktivieren oder nicht konfigurieren.
+
+Zuordnung von Richtlinienoptionen:
+
+* EnableAll (0) = Aktivieren von Sticky-Einstellungen für PDF und Webseiten
+
+* DisableAll (1) = Deakivieren von Sticky-Einstellungen für PDF und Webseiten
+
+* DisablePdf (2) = Deaktivieren von Sticky-Einstellungen für PDF
+
+* DisableWebpage (3) = Deaktivieren von Sticky-Einstellungen für Webseiten
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Ganze Zahl
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: PrintStickySettings
+  - GP-Name: Druckvorschau-Sticky-Einstellungen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/Printing
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: PrintStickySettings
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: PrintStickySettings
+  - Beispielwert:
+``` xml
+<integer>1</integer>
 ```
   
 
@@ -8709,7 +9223,7 @@ Mit dieser Richtlinie werden die folgenden einzelnen Richtlinien außer Kraft ge
 Beim Festlegen der [ProxySettings](#proxysettings)-Richtlinie sind die folgenden Felder zulässig:
   * „ProxyMode“, über das Sie den von Microsoft Edge verwendeten Proxyserver angeben können. Dies verhindert, dass Benutzer Proxyeinstellungen ändern.
   * „ProxyPacUrl“, eine URL zu einer PAC-Proxydatei
-  * ProxyPacMandatory, das verhindert, dass der Netzwerkstapel auf direkte Verbindungen mit ungültigen oder nicht verfügbaren PAC-Skripts zurückgreift
+  * ProxyPacMandatory, ein bool‘sches Flag, das verhindert, dass der Netzwerkstapel auf direkte Verbindungen mit ungültigen oder nicht verfügbaren PAC-Skripts zurückgreift
   * „ProxyServer“, eine URL für den Proxy Server
   * „ProxyBypassList“, eine Liste von Proxy-Hosts, die von Microsoft Edge umgangen werden
 
@@ -8755,6 +9269,7 @@ Ausführlichere Beispiele finden Sie unter [https://go.microsoft.com/fwlink/?lin
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
   "ProxyMode": "pac_script",
+  "ProxyPacMandatory": false,
   "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -8763,7 +9278,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### <a name="compact-example-value"></a>Kompakter Beispielwert:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacMandatory": false, "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -8778,6 +9293,8 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
   <string>pac_script</string>
+  <key>ProxyPacMandatory</key>
+  <false/>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -9276,6 +9793,70 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="smartscreendnsrequestsenabled"></a>SmartScreenDnsRequestsEnabled
+
+  #### <a name="enable-microsoft-defender-smartscreen-dns-requests"></a>Aktivieren von Microsoft Defender SmartScreen DNS-Anforderungen
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinie können Sie konfigurieren, ob DNS-Anforderungen von Microsoft Defender SmartScreen aktiviert werden sollen. Hinweis: Das Deaktivieren von DNS-Anforderungen verhindert, dass Microsoft Defender SmartScreen IP-Adressen abrufen und sich möglicherweise auf die bereitgestellten IP-basierten Schutzmaßnahmen auswirken.
+
+Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, stellt Microsoft Defender SmartScreen DNS-Anforderungen.
+
+Wenn Sie diese Einstellung deaktivieren, stellen Microsoft Defender SmartScreen keine DNS-Anforderungen.
+
+Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Microsoft Active Directory-Domäne verknüpft sind, Windows 10 Pro- oder Enterprise-Instanzen, die für die Geräteverwaltung registriert sind, oder MacOS-Instanzen, die über MDM verwaltet oder über MCX einer Domäne beigetreten sind.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SmartScreenDnsRequestsEnabled
+  - GP-Name: Aktivieren von Microsoft Defender SmartScreen DNS-Anforderungen
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/SmartScreen settings
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: SmartScreenDnsRequestsEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: SmartScreenDnsRequestsEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="smartscreenenabled"></a>SmartScreenEnabled
 
   #### <a name="configure-microsoft-defender-smartscreen"></a>Konfigurieren des Microsoft Defender SmartScreen
@@ -9465,7 +10046,7 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Richtlinien für Start&comma; Homepage und neue Registerkarten
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
@@ -10573,9 +11154,9 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist der Edge TyposquattingChecker
 
   Die Option "Einmaliges Anmelden für Geschäfts-, Uni- oder Schulwebsites mit diesem Profil zulassen" ermöglicht Nicht-AAD-Profilen die Verwendung von einmaligem Anmelden für Geschäfts-, Uni- oder Schulwebsites mit den auf dem Computer vorhandenen Geschäfts-, Uni- oder Schulanmeldeinformationen. Diese Option wird Endbenutzern als Umschalter unter Einstellungen -> Profile -> Profileinstellungen nur für Nicht-AAD-Profile angezeigt.
 
-Wenn Sie diese Richtlinie deaktivieren, können Nicht-AAD-Profile einmaliges Anmelden nicht mit anderen Anmeldeinformationen verwenden, die auf dem Computer vorhanden sind. Dadurch wird auch sichergestellt, dass die "intelligente Aktivierung von einmaligem Anmelden (Single Sign-On, SSO) für alle Windows Azure Active Directory (Azure AD)-Konten für Benutzer mit einem einzigen Nicht-Azure AD-Microsoft Edge-Profil" deaktiviert ist.
+Wenn Sie diese Richtlinie aktivieren oder deaktivieren, wird „Intelligente Aktivierung von einmaligem Anmelden (Single Sign-On, SSO) für alle Windows Azure Active Directory (Azure AD)-Konten für Benutzer mit einem einzigen Nicht-Azure AD-Microsoft Edge-Profil“ deaktiviert.
 
-Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Nicht-AAD-Profile SSO mit anderen Anmeldeinformationen verwenden, die auf dem Computer vorhanden sind, und "intelligente Aktivierung von einmaligem Anmelden (Single Sign-On, SSO) für alle Windows Azure Active Directory (Azure AD)-Konten für Benutzer mit einem einzigen Nicht-Azure AD-Microsoft Edge-Profil" funktioniert weiterhin.
+Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer steuern, ob SSO mit anderen Anmeldeinformationen verwendet werden soll, die auf dem Computer in edge://settings/profiles/multiProfileSettings vorhanden sind.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -10623,7 +11204,7 @@ Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Nicht-AAD
 
   ### <a name="accessibilityimagelabelsenabled"></a>AccessibilityImageLabelsEnabled
 
-  #### <a name="get-image-descriptions-from-microsoft-enabled"></a>Abrufen von Bildbeschreibungen von Microsoft Enabled
+  #### <a name="let-get-image-descriptions-from-microsoft"></a>Abrufen von Bildbeschreibungen aus Microsoft
 
   
   
@@ -10658,7 +11239,7 @@ Es werden keine Cookies oder andere Benutzerdaten an Microsoft gesendet, und Mic
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - Eindeutiger GP-Name: AccessibilityImageLabelsEnabled
-  - GP-Name: Abrufen von Bildbeschreibungen von Microsoft Enabled
+  - GP-Name: Abrufen von Bildbeschreibungen von Microsoft
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -10682,6 +11263,77 @@ Es werden keine Cookies oder andere Benutzerdaten an Microsoft gesendet, und Mic
   - Beispielwert:
 ``` xml
 <false/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="addressbareditingenabled"></a>AddressBarEditingEnabled
+
+  #### <a name="configure-address-bar-editing"></a>Konfigurieren der Adressleistenbearbeitung
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, können die Benutzer die URL in der Adressleiste ändern.
+
+Durch Aktivieren dieser Richtlinie wird verhindert, dass Benutzer die URL in der Adressleiste ändern.
+
+Hinweis: Diese Richtlinie verhindert nicht, dass der Browser zu einer URL navigiert. Benutzer können weiterhin zu einer beliebigen URL navigieren, indem sie die Suchoption auf der standardmäßigen Seite „Neue Registerkarte“ oder einen beliebigen Link verwenden, der zu einer Websuchmaschine führt. Um sicherzustellen, dass Benutzer nur zu erwarteten Websites wechseln können, sollten Sie zusätzlich zu dieser Richtlinie die folgenden Richtlinien konfigurieren:
+
+- [NewTabPageLocation](#newtabpagelocation)
+
+- [HomepageLocation](#homepagelocation)
+
+- [HomepageIsNewTabPage](#homepageisnewtabpage)
+
+- [URLBlocklist](#urlblocklist) und [URLAllowlist](#urlallowlist) zum Festlegen des Bereichs der Seiten, zu denen der Browser navigieren kann.
+
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: AddressBarEditingEnabled
+  - GP-Name: Konfigurieren der Bearbeitung der Adressleiste
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: AddressBarEditingEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: AddressBarEditingEnabled
+  - Beispielwert:
+``` xml
+<true/>
 ```
   
 
@@ -13468,6 +14120,72 @@ Diese Richtlinie ist eine temporäre Maßnahme und wird in zukünftigen Versione
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="corsnonwildcardrequestheaderssupport"></a>CORSNonWildcardRequestHeadersSupport
+
+  #### <a name="cors-non-wildcard-request-header-support-enabled-deprecated"></a>CORS-Unterstützung für Nicht-Platzhalter-Anforderungsheader aktiviert (veraltet)
+
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinie können Sie die Unterstützung von CORS-Anforderungsheadern konfigurieren, die keine Platzhalter sind.
+
+Microsoft Edge Version 97 bietet Unterstützung für CORS-Anforderungsheader, die keine Platzhalter sind. Wenn ein Skript eine ursprungsübergreifende Netzwerkanforderung über fetch() und XMLHttpRequest mit einem vom Skript hinzugefügten Autorisierungsheader sendet, muss der Header explizit vom Header „Access-Control-Allow-Headers“ in der CORS-Preflight-Antwort zugelassen werden. „Explizit“ bedeutet hier, dass das Platzhaltersymbol „*“ den Autorisierungsheader nicht abdeckt. Weitere Details finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2180022](https://go.microsoft.com/fwlink/?linkid=2180022).
+
+Wenn Sie die Richtlinie aktivieren oder nicht konfigurieren, unterstützt Microsoft Edge die CORS-Anforderungsheader ohne Platzhalter und verhält sich wie zuvor beschrieben.
+
+Wenn Sie diese Richtlinie deaktivieren, lassen Microsoft Edge das Platzhaltersymbol („*“) im Header „Access-Control-Allow-Header“ in der CORS-Preflight-Antwort zu, um den Autorisierungsheader abzudecken.
+
+Diese Richtlinie ist eine temporäre Problemumgehung für das neue CORS-Feature, das keine Platzhalter-Anforderungsheader ist. Sie soll nach Microsoft Edge Version 103 entfernt werden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: CORSNonWildcardRequestHeadersSupport
+  - GP-Name: Unterstützung für CORS-Anforderungsheader ohne Platzhalter aktiviert (veraltet)
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: CORSNonWildcardRequestHeadersSupport
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: CORSNonWildcardRequestHeadersSupport
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="certificatetransparencyenforcementdisabledforcas"></a>CertificateTransparencyEnforcementDisabledForCas
 
   #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-subjectpublickeyinfo-hashes"></a>Deaktivieren der Erzwingung der Zertifikattransparenz für eine Liste mit subjectPublicKeyInfo-Hashwerten
@@ -15610,6 +16328,8 @@ Wenn Sie den Wert dieser Richtlinie auf "0" festlegen, wird die Standardcachegr�
 
 Wenn Sie diese Richtlinie nicht konfigurieren, wird die Standardgröße verwendet, aber die Benutzer können sie mit dem Flag "--disk-cache-size" außer Kraft setzen.
 
+Hinweis: Der in dieser Richtlinie angegebene Wert wird als Hinweis auf verschiedene Cachesubsysteme im Browser verwendet. Die aggregierte Datenträgerverwendung aller Caches kann daher größer sein als der angegebene Wert (aber innerhalb derselben Größenordnung liegen wie dieser).
+
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
   - Kann zwingend erforderlich sein: Ja
@@ -16072,6 +16792,70 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer nicht auf Sammlungen in
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="edgediscoverenabled"></a>EdgeDiscoverEnabled
+
+  #### <a name="discover-feature-in-microsoft-edge"></a>Das Feature „Entdecken“ in Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinie können Sie das Ermittlungsfeature in Microsoft Edge konfigurieren.
+
+Bei aktivierter Hintergrundfunktion sendet dieses Feature URLs an Microsoft Bing, um nach verwandten Empfehlungen zu suchen.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Sie die Schaltfläche „Entdecken“ auf Microsoft Edge verwenden, um mit der Verwendung dieses Features zu beginnen.
+
+Wenn Sie diese Richtlinie deaktivieren, können Sie das Feature „Entdecken“ in Microsoft Edge nicht verwenden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Ja
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EdgeDiscoverEnabled
+  - GP-Name: Das Feature „Entdecken“ in Microsoft Edge
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): Administrative Templates/Microsoft Edge – Standardeinstellungen (Benutzer können diese außer Kraft setzen)/
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Wertname: EdgeDiscoverEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: EdgeDiscoverEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="edgeenhanceimagesenabled"></a>EdgeEnhanceImagesEnabled
 
   #### <a name="enhance-images-enabled"></a>Bilder verbessern aktiviert
@@ -16126,6 +16910,70 @@ Wenn Sie diese Richtlinie deaktivieren, verbessert Microsoft Edge keine Bilder.
   #### <a name="mac-information-and-settings"></a>Mac-Informationen und -Einstellungen
   
   - Einstellung Schlüsselname: EdgeEnhanceImagesEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="edgefollowenabled"></a>EdgeFollowEnabled
+
+  #### <a name="enable-follow-service-in-microsoft-edge"></a>Aktivieren des „Folgen“-Diensts in Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Ermöglicht dem Microsoft Edge Browser, den „Folgen“-Dienst zu aktivieren und ihn auf Benutzer anzuwenden.
+
+Benutzer können einem Influencer, einer WEbsite oder einem Thema in Microsoft Edge „Folgen“.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, kann „Folgen“ in Microsoft Edge angewendet werden.
+
+Wenn Sie diese Richtlinie deaktivieren, kommunizieren Microsoft Edge nicht mit dem „Folgen“-Dienst, um die folgende Funktion bereitzustellen.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EdgeFollowEnabled
+  - GP-Name: Aktivieren des „Folgen“-Diensts in Microsoft Edge
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: EdgeFollowEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: EdgeFollowEnabled
   - Beispielwert:
 ``` xml
 <true/>
@@ -16531,6 +17379,212 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="enhancesecuritymode"></a>EnhanceSecurityMode
+
+  #### <a name="enhance-the-security-state-in-microsoft-edge"></a>Verbessern des Sicherheitsstatus in Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinie können Sie den Sicherheitsstatus in Microsoft Edge verbessern.
+
+Wenn Sie diese Richtlinie auf „StandardMode“ festlegen, wird der erweiterte Sicherheitsmodus deaktiviert, und Microsoft Edge wird auf den Standardsicherheitsmodus zurückgesetzt.
+
+Wenn Sie diese Richtlinie auf „BalancedMode“ festlegen, befindet sich der Sicherheitsstatus im ausgeglichenen Modus.
+
+Wenn Sie diese Richtlinie auf „StrictMode“ festlegen, befindet sich der Sicherheitsstatus im strikten Modus.
+
+Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+Zuordnung von Richtlinienoptionen:
+
+* StandardMode (0) = Standardmodus
+
+* BalancedMode (1) = Ausgeglichener Modus
+
+* StrictMode (2) = Strikter Modus
+
+Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigurieren.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Ganze Zahl
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EnhanceSecurityMode
+  - GP-Name: Verbessern des Sicherheitsstatus in Microsoft Edge
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: EnhanceSecurityMode
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: EnhanceSecurityMode
+  - Beispielwert:
+``` xml
+<integer>0</integer>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="enhancesecuritymodebypasslistdomains"></a>EnhanceSecurityModeBypassListDomains
+
+  #### <a name="configure-the-list-of-domains-for-which-enhance-security-mode-will-not-be-enforced"></a>Konfigurieren der Liste der Domänen, für die der erweiterte Sicherheitsmodus nicht erzwungen wird
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Konfigurieren der Liste der vertrauenswürdigen Sicherheitsdomänen. Dies bedeutet, dass der Sicherheitsmodus beim Laden der Websites in vertrauenswürdigen Domänen nicht erzwungen wird.
+
+Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EnhanceSecurityModeBypassListDomains
+  - GP-Name: Konfigurieren der Liste der Domänen, für die der erweiterte Sicherheitsmodus nicht erzwungen wird
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: EnhanceSecurityModeBypassListDomains
+  - Beispielwert:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="enhancesecuritymodeenforcelistdomains"></a>EnhanceSecurityModeEnforceListDomains
+
+  #### <a name="configure-the-list-of-domains-for-which-enhance-security-mode-will-always-be-enforced"></a>Konfigurieren der Liste der Domänen, für die der Modus Sicherheitsverbesserung immer erzwungen wird
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Konfigurieren der Liste der nicht vertrauenswürdigen Domänen in Bezug für den erweiterten Sicherheitsmodus. Dies bedeutet, dass der Sicherheitsmodus beim Laden der Websites in nicht vertrauenswürdigen Domänen immer erzwungen wird.
+
+Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Liste von Zeichenfolgen
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: EnhanceSecurityModeEnforceListDomains
+  - GP-Name: Konfigurieren der Liste der Domänen, für die der erweiterte Sicherheitsmodus immer erzwungen wird
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (obligatorisch): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains
+  - Pfad (Empfohlen): n.a.
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: REG_SZ-Liste
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: EnhanceSecurityModeEnforceListDomains
+  - Beispielwert:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="enterprisehardwareplatformapienabled"></a>EnterpriseHardwarePlatformAPIEnabled
 
   #### <a name="allow-managed-extensions-to-use-the-enterprise-hardware-platform-api"></a>Zulassen der Verwendung der Enterprise-Hardware Plattform-API für verwaltete Erweiterungen
@@ -16738,23 +17792,23 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### <a name="description"></a>Beschreibung
 
-  In Microsoft Edge wird der Experimentier- und Konfigurationsservice verwendet, um Experimentier- und Konfigurationsnutzlasten bereitzustellen.
+  Der Experimentier- und Konfigurationsservice wird verwendet, um Experimentier- und Konfigurationsnutzlasten für den Client bereitzustellen.
 
 Die Experimentier-Nutzlast besteht aus einer Liste von Funktionen in Frühstadien der Entwicklung, die Microsoft zu Test- und Feedbackzwecken aktiviert.
 
-Die Konfigurationsnutzlast besteht aus einer Liste von Einstellungen, die Microsoft an Microsoft Edge bereitstellen möchte, um die Benutzererfahrung zu optimieren. So kann beispielsweise die Konfigurationsnutzlast angeben, wie oft Microsoft Edge Anforderungen an den Experimentier- und Konfigurationsservice sendet, um die neueste Nutzlast abzurufen.
+Die Konfigurationsnutzlast besteht aus einer Liste von empfohlenen Einstellungen, die Microsoft bereitstellen möchte, um die Benutzererfahrung zu optimieren.
 
-Zusätzlich kann die Konfigurationsnutzlast auch eine Liste der Aktionen enthalten, die aus Kompatibilitätsgründen für bestimmte Domänen ausgeführt werden sollen. So kann beispielsweise der Browser die Zeichenfolge des Benutzeragenten auf einer Website außer Kraft setzen, wenn diese Website aufgrund der neuen Zeichenfolge des Benutzeragenten auf Microsoft Edge unterbrochen wurde. Jede dieser Aktionen soll temporär sein, während Microsoft versucht, das Problem mit dem Websitebesitzer zu beheben.
+Die Konfigurationsnutzlast kann auch eine Liste der Aktionen enthalten, die aus Kompatibilitätsgründen für bestimmte Domänen ausgeführt werden sollen. Beispielsweise kann der Browser die Zeichenfolge des Benutzer-Agenten auf einer Website überschreiben, wenn diese Website beschädigt ist. Jede dieser Aktionen soll temporär sein, während Microsoft versucht, das Problem mit dem Websitebesitzer zu beheben.
 
 Wenn Sie diese Richtlinie auf „FullMode“ setzen, wird die vollständige Nutzlast aus dem Experimentier- und Konfigurationsservice heruntergeladen. Dies umfasst sowohl die Test- als auch die Konfigurationsnutzlast.
 
-Wenn Sie diese Richtlinie auf „ConfigurationsOnlyMode“ setzen, wird nur die Konfigurationsnutzlast bereitgestellt.
+Wenn Sie diese Richtlinie auf „ConfigurationsOnlyMode“ setzen, wird nur die Konfigurationsnutzlast heruntergeladen.
 
-Wenn Sie diese Richtlinie auf „RestrictedMode“ setzen, wird die Kommunikation mit dem Experimentier- und Konfigurationsservice vollständig gestoppt.
+Wenn Sie diese Richtlinie auf „RestrictedMode“ setzen, wird die Kommunikation mit dem Experimentier- und Konfigurationsservice vollständig gestoppt. Microsoft empfiehlt diese Einstellung nicht.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem verwalteten Gerät auf Stable- und Beta-Kanälen identisch mit dem Modus „ConfigurationsOnlyMode“.
+Wenn Sie diese Richtlinie auf einem verwalteten Gerät nicht konfigurieren, ist das Verhalten auf Beta- und Stable-Kanälen identisch mit dem „ConfigurationsOnlyMode“. In Canary- und Dev-Kanälen ist das Verhalten identisch mit dem „FullMode“.
 
-Wenn Sie diese Richtlinie nicht konfigurieren, ist das Verhalten auf einem nicht verwalteten Gerät das gleiche wie beim „FullMode“.
+Wenn Sie diese Richtlinie auf einem nicht verwalten Gerät nicht konfigurieren, ist das Verhalten identisch mit dem „FullMode“.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -19131,6 +20185,68 @@ Sie können diese Richtlinie als Empfehlung festlegen. Dies bedeutet, dass Micro
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="inappsupportenabled"></a>InAppSupportEnabled
+
+  #### <a name="in-app-support-enabled"></a>In-App-Unterstützung aktiviert
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Microsoft Edge verwendet das In-App-Supportfeature (standardmäßig aktiviert), damit Benutzer unsere Support-Agents direkt über den Browser kontaktieren können. Darüber hinaus können Benutzer das In-App-Supportfeature standardmäßig nicht deaktivieren (ausschalten).
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, können Benutzer die In-App-Unterstützung aufrufen.
+
+Wenn Sie diese Richtlinie deaktivieren, können Benutzer die In-App-Unterstützung nicht aufrufen.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InAppSupportEnabled
+  - GP-Name: In-App-Unterstützung aktiviert
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: InAppSupportEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: InAppSupportEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="inprivatemodeavailability"></a>InPrivateModeAvailability
 
   #### <a name="configure-inprivate-mode-availability"></a>Konfigurieren der InPrivate-Modus-Verfügbarkeit
@@ -19403,11 +20519,11 @@ Weitere Informationen zum Internet Explorer-Modus finden Sie unter [https://go.m
 
   #### <a name="description"></a>Beschreibung
 
-  Ab Microsoft Edge Version 96 enthalten Navigationen, die zwischen Internet Explorer-Modus und Microsoft Edge wechseln, Formulardaten und zusätzliche HTTP-Header.
+  Ab Microsoft Edge Version 96 enthalten Navigationen, die zwischen Internet Explorer-Modus und Microsoft Edge umschalten, Formulardaten.
 
 Wenn Sie diese Richtlinie aktivieren, können Sie angeben, welche Datentypen in Navigationen zwischen Microsoft Edge und dem Internet Explorer-Modus eingeschlossen werden sollen.
 
-Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet Microsoft Edge das neue Verhalten des Einschließens von Formulardaten und zusätzlichen Kopfzeilen in Navigationen, die Modi ändern.
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, verwendet Microsoft Edge das neue Verhalten des Einschließens von Formulardaten in Navigationen, die zwischen Modi umschalten.
 
 Weitere Informationen dazu finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
 
@@ -20250,6 +21366,63 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, behandelt Micro
 
 ```
 0x00000004
+```
+
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="internetexplorermodetabinedgemodeallowed"></a>InternetExplorerModeTabInEdgeModeAllowed
+
+  #### <a name="allow-sites-configured-for-internet-explorer-mode-to-open-in-microsoft-edge"></a>Zulassen des Öffnen von Websites, die für den Internet Explorer Modus konfiguriert sind, in Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Mit dieser Richtlinie können Websites, die für das Öffnen im Internet Explorer-Modus konfiguriert sind, von Microsoft Edge zum Testen in einem modernen Browser geöffnet werden, ohne sie aus der Websiteliste zu entfernen.
+
+Benutzer können diese Einstellung im Menü „Weitere Tools“" konfigurieren, indem sie „Websites in Microsoft Edge öffnen“" auswählen.
+
+Wenn Sie diese Richtlinie aktivieren, wird die Option „Websites in Microsoft Edge öffnen“ unter „Weitere Tools“ angezeigt. Benutzer verwenden diese Option, um Websites im IE-Modus in einem modernen Browser zu testen.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird Benutzern die Option „In Microsoft Edge öffnen“ im Menü „Weitere Tools“ nicht angezeigt. Benutzer können jedoch über das Flag „--ie-mode-test“ auf diese Menüoption zugreifen.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: InternetExplorerModeTabInEdgeModeAllowed
+  - GP-Name: Zulassen, dass Websites, die für den Internet Explorer-Modus konfiguriert sind, in Microsoft Edge geöffnet werden
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: InternetExplorerModeTabInEdgeModeAllowed
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000000
 ```
 
   
@@ -21334,6 +22507,68 @@ Diese Richtlinie ist nur für Windows-Instanzen verfügbar, die mit einer Micros
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="microsoftedgeinsiderpromotionenabled"></a>MicrosoftEdgeInsiderPromotionEnabled
+
+  #### <a name="microsoft-edge-insider-promotion-enabled"></a>Microsoft Edge Insider-Promotion aktiviert
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Zeigt Inhalte an, die die Microsoft Edge Insider-Kanäle auf der Einstellungsseite „Über Microsoft Edge“ promoten.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, wird der Microsoft Edge Insider-Werbungsinhalt auf der Seite „Über Microsoft Edge“ angezeigt.
+
+Wenn Sie diese Richtlinie deaktivieren, werden die Inhalte der Microsoft Edge Insider-Werbung auf der Seite „Über Microsoft Edge“ nicht angezeigt.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: MicrosoftEdgeInsiderPromotionEnabled
+  - GP-Name: Microsoft Edge Insider-Aktion aktiviert
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: MicrosoftEdgeInsiderPromotionEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: MicrosoftEdgeInsiderPromotionEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="nativewindowocclusionenabled"></a>NativeWindowOcclusionEnabled
 
   #### <a name="enable-native-window-occlusion-deprecated"></a>Systemeigene Fenster-Okklusion aktivieren (veraltet)
@@ -22226,19 +23461,19 @@ Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsof
 
   Mit dieser Einstellung können Sie angeben, ob Internet Explorer Navigationsanforderungen für Websites, die einen modernen Browser benötigen, zu Microsoft Edge umleitet.
 
-Wenn Sie diese Richtlinie nicht konfigurieren oder auf „Websiteliste“ festlegen, leitet Internet Explorer ab M87 inkompatible Websites, die einen modernen Browser benötigen, zu Microsoft Edge um.
+Wenn Sie diese Richtlinie nicht konfigurieren oder auf der „Sitelist“ festlegen („Websites basierend auf der Siteliste inkompatibler Seiten umleiten“, Wert 1), leitet Internet Explorer M87 Websites, die einen modernen Browser erfordern, zu Microsoft Edge um.
 
 Wenn eine Website von Internet Explorer zu Microsoft Edge umgeleitet wird, wird die Internet Explorer-Registerkarte, auf der die Website geladen wurde, geschlossen, wenn Sie keine vorherigen Inhalte hatte. Andernfalls wird die Registerkarte zu einer Microsoft-Hilfeseite weitergeleitet, die erklärt, warum die Website an Microsoft Edge umgeleitet wurde.
 
 Wenn Microsoft Edge zum Laden einer Website aus dem Internet Explorer gestartet wird, wird dem Benutzer eine Informationsleiste angezeigt, in der erklärt wird, dass die Website in einem modernen Browser am besten funktioniert.
 
-Wenn Sie diese Richtlinie deaktivieren, leitet Internet Explorer keinen Datenverkehr zu Microsoft Edge um.
+Wenn Sie diese Richtlinie auf „Deaktivieren“ („Umleitung verhindern“, Wert 0) festlegen, leitet Internet Explorer keinen Datenverkehr zu Microsoft Edge um.
 
 Weitere Informationen zu dieser Richtlinie finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
 Zuordnung von Richtlinienoptionen:
 
-* Disable (0) = Deaktivieren
+* Disable (0) = Umleitung verhindern
 
 * Sitelist (1) = Websites basierend auf der Liste inkompatibler Websiteliste umleiten
 
@@ -22812,7 +24047,7 @@ Insbesondere gibt es ein Wahlfeld **Verwenden eines Webdiensts zum Beheben von N
 
   ### <a name="restrictsignintopattern"></a>RestrictSigninToPattern
 
-  #### <a name="restrict-which-accounts-can-be-used-as-microsoft-edge-primary-accounts"></a>Einschränken, welche Konten als primäre Microsoft Edge-Konten verwendet werden können
+  #### <a name="restrict-which-accounts-can-be-used-to-sign-in-to-microsoft-edge"></a>Einschränken, welche Konten zum Anmelden bei Microsoft Edge verwendet werden können
 
   
   
@@ -22822,11 +24057,13 @@ Insbesondere gibt es ein Wahlfeld **Verwenden eines Webdiensts zum Beheben von N
 
   #### <a name="description"></a>Beschreibung
 
-  Bestimmt, welche Konten als primäre Browserkonten in Microsoft Edge (das Konto, das während des Synchronisierungs-Zustimmungs-Stroms ausgewählt wurde) festgelegt werden können.
+  Bestimmt, welche Konten verwendet werden können, um sich bei dem Microsoft Edge Konto anzumelden, das während des Synchronisierungs-Opt-In-Durchgangs ausgewählt wird.
 
-Wenn ein Benutzer versucht, ein primäres Browserkonto mit einem Benutzernamen zu konfigurieren, der diesem Muster nicht entspricht, wird dies blockiert und erhält die entsprechende Fehlermeldung. Sie können diese Richtlinie so konfigurieren, dass mehrere Konten mit einem regulären Ausdruck im Perl-Stil für das Muster übereinstimmen. Beachten Sie, dass bei Musterübereinstimmungen die Groß-/Kleinschreibung beachtet wird. Weitere Informationen über die Regeln für reguläre Ausdrücke, die verwendet werden, finden Sie unter https://go.microsoft.com/fwlink/p/?linkid=2133903.
+Sie können diese Richtlinie so konfigurieren, dass mehrere Konten mit einem regulären Ausdruck im Perl-Stil für das Muster übereinstimmen. Wenn ein Benutzer versucht, sich mit einem Konto beim Browser anzumelden, dessen Benutzername diesem Muster nicht entspricht, wird er blockiert und erhält die entsprechende Fehlermeldung eingeblendet. Beachten Sie, dass bei Musterübereinstimmungen die Groß-/Kleinschreibung beachtet wird. Weitere Informationen über die Regeln für reguläre Ausdrücke, die verwendet werden, finden Sie unter https://go.microsoft.com/fwlink/p/?linkid=2133903.
 
-Wenn Sie diese Richtlinie nicht konfigurieren oder sie leer lassen, können Benutzer jedes Konto als primäres Browserkonto in Microsoft Edge festlegen.
+Wenn Sie diese Richtlinie nicht konfigurieren oder leer lassen, können Benutzer ein beliebiges Konto verwenden, um sich bei Microsoft Edge anzumelden.
+
+Beachten Sie, dass angemeldete Profile mit einem Benutzernamen, der diesem Muster nicht entspricht, nach Aktivierung dieser Richtlinie abgemeldet werden.
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -22843,7 +24080,7 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder sie leer lassen, können Benu
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: RestrictSigninToPattern
-  - GP-Name: Einschränken, welche Konten als primäre Microsoft Edge-Konten verwendet werden können
+  - GP-Name: Einschränken, welche Konten zum Anmelden bei Microsoft Edge verwendet werden können
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -23185,9 +24422,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled-deprecated"></a>Minimale TLS-Version aktiviert (veraltet)
+  #### <a name="minimum-tls-version-enabled"></a>Mindestens aktivierte TLS-Version
 
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
+  
   
   #### <a name="supported-versions"></a>Unterstützte Versionen:
 
@@ -23195,11 +24432,13 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Beschreibung
 
-  Die Unterstützung für die Unterdrückung der TLS 1.0/1.1-Warnung wurde ab Version 91 aus Microsoft Edge entfernt und diese Richtlinie funktionierte anschließend nicht mehr.
+  Bestimmt die mindestens unterstützte Version von TLS.
 
-Bestimmt die mindestens unterstützte Version von TLS. Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
+Wenn Sie diese Richtlinie auf „tls1.2“ festlegen, zeigt Microsoft Edge einen Fehler für TLS 1.0 und TLS 1.1 an, und der Benutzer kann den Fehler nicht umgehen.
 
-Wenn Sie diese Richtlinie festlegen, verwendet Microsoft Edge keine SSL/TLS-Versionen, die niedriger als die angegebene Version sind. Jeder nicht erkannte Wert wird ignoriert.
+Wenn Sie diese Richtlinie nicht konfigurieren, zeigt Microsoft Edge weiterhin einen Fehler für TLS 1.0 und TLS 1.1 an, der Benutzer kann ihn jedoch umgehen.
+
+Ab Version 91 unterstützt Microsoft Edge das Unterdrücken der TLS 1.0/1.1-Warnung nicht mehr. Die Werte „tls1“ und „tls1.1“ werden nicht mehr unterstützt.
 
 Zuordnung von Richtlinienoptionen:
 
@@ -23226,7 +24465,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
 
   - GP eindeutiger Name: SSLVersionMin
-  - GP-Name: Minimale TLS-Version aktiviert (veraltet)
+  - GP-Name: Mindestens aktivierte TLS-Version
   - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
   - GP Pfad (Empfohlen): n.a.
   - GP ADMX Dateiname: MSEdge.admx
@@ -23250,6 +24489,71 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
   - Beispielwert:
 ``` xml
 <string>tls1</string>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="sandboxexternalprotocolblocked"></a>SandboxExternalProtocolBlocked
+
+  #### <a name="allow-microsoft-edge-to-block-navigations-to-external-protocols-in-a-sandboxed-iframe"></a>Zulassen, dass Microsoft Edge Navigationen zu externen Protokollen in einem Sandkasten-iFrame blockiert
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und macOS 99 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Microsoft Edge blockiert Navigationen zu externen Protokollen innerhalb eines Sandbox-iframes.
+
+Wenn Sie diese Richtlinie aktivieren oder nicht konfigurieren, blockiert Microsoft Edge diese Navigationen.
+
+Wenn Sie diese Richtlinie deaktivieren, blockiert Microsoft Edge diese Navigationen nicht.
+
+Dies kann von Administratoren verwendet werden, die mehr Zeit für die Aktualisierung ihrer internen Website, die von dieser neuen Einschränkung betroffen ist, benötigen. Diese Enterprise Richtlinie ist temporär. Sie soll nach Microsoft Edge Version 104 entfernt werden.
+
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: SandboxExternalProtocolBlocked
+  - GP-Name: Zulassen, dass Microsoft Edge Navigationen zu externen Protokollen in einem Sandbox-iframe blockiert
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: SandboxExternalProtocolBlocked
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: SandboxExternalProtocolBlocked
+  - Beispielwert:
+``` xml
+<true/>
 ```
   
 
@@ -23386,6 +24690,65 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird der Browse
   - Beispielwert:
 ``` xml
 <true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
+
+  #### <a name="allow-or-deny-screen-capture"></a>Bildschirmaufnahme zulassen oder verweigern
+
+  
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 83 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Wenn Sie diese Richtlinie aktivieren oder diese Richtlinie nicht konfigurieren, kann eine Webseite Bildschirmfreigabe-APIs (z.B. getDisplayMedia() oder die API für die Desktopaufnahme-Erweiterung) für eine Bildschirmaufnahme verwenden.
+Wenn Sie diese Richtlinie deaktivieren, treten beim Aufrufen von Screen-Share-APIs Fehler auf. Wenn Sie beispielsweise eine webbasierte Onlinebesprechung verwenden, funktioniert die Video- oder Bildschirmfreigabe nicht.  Diese Richtlinie wird jedoch nicht berücksichtigt (und eine Website kann Bildschirmfreigabe-APIs verwenden), wenn die Website einem Ursprungsmuster in einer der folgenden Richtlinien entspricht: [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - GP eindeutiger Name: ScreenCaptureAllowed
+  - GP-Name: Bildschirmaufnahme zulassen oder verweigern
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: ScreenCaptureAllowed
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellung Schlüsselname: ScreenCaptureAllowed
+  - Beispielwert:
+``` xml
+<false/>
 ```
   
 
@@ -25722,6 +27085,68 @@ Wenn die Richtlinie auf "true" festgelegt ist, werden 3DES-Verschlüsselungssamm
 
   [Zurück zum Anfang](#microsoft-edge---policies)
 
+  ### <a name="u2fsecuritykeyapienabled"></a>U2fSecurityKeyApiEnabled
+
+  #### <a name="allow-using-the-deprecated-u2f-security-key-api-deprecated"></a>Verwendung der veralteten U2F-Sicherheitsschlüssel-API zulassen (veraltet)
+
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Auf Windows und macOS ab 98 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Diese Richtlinie ist veraltet, da sie als kurzfristiger Mechanismus vorgesehen war, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu geben, wenn festgestellt wurde, dass diese mit der Änderung, bei der die U2F-Sicherheitsschlüssel-API entfernt wurde, nicht kompatibel waren. Dies funktioniert in Microsoft Edge Version 104 nicht.
+
+Wenn Sie diese Richtlinie aktivieren, kann die veraltete U2F-Sicherheitsschlüssel-API verwendet werden, und die für U2F-API-Anforderungen angezeigte Erinnerungsaufforderung zur Einstellung wird unterdrückt.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, ist die U2F-Sicherheitsschlüssel-API standardmäßig deaktiviert und kann nur von Websites verwendet werden, die sich für die U2FSecurityKeyAPI-Ursprungsversion, die mit Microsoft Edge Version 104 endet, registrieren und diese verwenden.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: U2fSecurityKeyApiEnabled
+  - GP-Name: Verwendung der veralteten U2F-Sicherheitsschlüssel-API zulassen (veraltet)
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: U2fSecurityKeyApiEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: U2fSecurityKeyApiEnabled
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
   ### <a name="urlallowlist"></a>URLAllowlist
 
   #### <a name="define-a-list-of-allowed-urls"></a>Definieren einer Liste zulässiger URLs
@@ -26524,9 +27949,9 @@ und 5 optionale Mitglieder:
 
 - fallback_app_name (Ab Microsoft Edge-Version 90 können Sie den Namen der App überschreiben, wenn es sich nicht um eine Progressive Web App (PWA) handelt, oder den App-Namen, der vorübergehend installiert wird, wenn es sich um eine PWA handelt, aber eine Authentifizierung erforderlich ist, bevor die Installation abgeschlossen werden kann. Wenn sowohl custom_name als auch fallback_app_name bereitgestellt werden, wird letzteres ignoriert.)
 
-- custom_name (Ab Microsoft Edge-Version 96 können Sie den App-Namen für alle Web-Apps und PWAs dauerhaft überschreiben.)
+- custom_name (Ermöglicht es Ihnen, den App-Namen für alle Web-Apps und PWAs dauerhaft zu überschreiben. Wird derzeit in Microsoft Edge nicht unterstützt.)
 
-- custom_icon (Ab Microsoft Edge-Version 96 können Sie das App-Symbol installierter Apps überschreiben. Die Symbole müssen quadratisch, maximal 1 MB groß und in einem der folgenden Formate vorliegen: jpeg, png, gif, webp, ico. Der Hashwert muss der SHA256-Hash der Symboldatei sein.)
+- custom_icon (Ermöglicht es Ihnen, das App-Symbol installierter Apps außer Kraft zu setzen. Die Symbole müssen quadratisch, maximal 1 MB groß und in einem der folgenden Formate vorliegen: jpeg, png, gif, webp, ico. Der Hashwert muss der SHA256-Hash der Symboldatei sein. Wird derzeit in Microsoft Edge nicht unterstützt.)
 
   #### <a name="supported-features"></a>Unterstützte Funktionen:
 
@@ -27056,7 +28481,7 @@ Verwenden Sie die vorstehenden Informationen, wenn Sie diese Richtlinie konfigur
 
   #### <a name="description"></a>Beschreibung
 
-  Steuert, ob WebRTC beim Herstellen von Peer-to-Peer-Verbindungen die Windows BS-Routingtabellenregeln berücksichtigt.
+  Steuert, ob WebRTC beim Herstellen von Peer-to-Peer-Verbindungen die Regeln der Windows BS-Routingtabellen beachtet, wodurch VPNs für geteilte Tunnel aktiviert werden.
 
 Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, berücksichtigt WebRTC die Routingtabelle nicht und stellt u. U. Peer-to-Peer-Verbindungen über ein beliebiges verfügbares Netzwerk her.
 
@@ -27159,6 +28584,70 @@ Wenn Sie diese Richtlinie nicht konfigurieren oder wenn Sie sie auf eine leere Z
   - Beispielwert:
 ``` xml
 <string>10000-11999</string>
+```
+  
+
+  [Zurück zum Anfang](#microsoft-edge---policies)
+
+  ### <a name="websqlinthirdpartycontextenabled"></a>WebSQLInThirdPartyContextEnabled
+
+  #### <a name="force-websql-in-third-party-contexts-to-be-re-enabled-deprecated"></a>Erzwingen der erneuten Aktivierung von WebSQL in Drittanbieterkontexten (veraltet)
+
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird zurzeit unterstützt, aber in einer zukünftigen Version als veraltet behandelt.
+  
+  #### <a name="supported-versions"></a>Unterstützte Versionen:
+
+  - Unter Windows und MacOS ab 97 oder höher
+
+  #### <a name="description"></a>Beschreibung
+
+  Diese Richtlinie ist veraltet, da sie als kurzfristiger Mechanismus vorgesehen war, um Unternehmen mehr Zeit zum Aktualisieren ihrer Webinhalte zu geben, wenn festgestellt wird, dass diese mit der Änderung, bei der WebSQL in Drittanbieterkontexten deaktiviert wurde, nicht kompatibel waren. Dies funktioniert in Microsoft Edge Version 101 nicht.
+
+WebSQL in Drittanbieterkontexten (z. B. websiteübergreifende iframes) ist ab Microsoft Edge Version 97 standardmäßig deaktiviert und wird in Version 101 vollständig entfernt.
+
+Wenn Sie diese Richtlinie aktivieren, wird WebSQL in Drittanbieterkontexten reaktiviert.
+
+Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, bleibt WebSQL in Drittanbieterkontexten deaktiviert.
+
+  #### <a name="supported-features"></a>Unterstützte Funktionen:
+
+  - Kann zwingend erforderlich sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Nein – erfordert Browser-Neustart
+
+  #### <a name="data-type"></a>Datentyp:
+
+  - Boolesch
+
+  #### <a name="windows-information-and-settings"></a>Windows-Informationen und -Einstellungen
+
+  ##### <a name="group-policy-admx-info"></a>Informationen zur Gruppenrichtlinie (ADMX)
+
+  - Eindeutiger GP-Name: WebSQLInThirdPartyContextEnabled
+  - GP-Name: Erzwingen der erneuten Aktivierung von WebSQL in Drittanbieterkontexten (veraltet)
+  - GP-Pfad (verpflichtend): Administrative Templates/Microsoft Edge/
+  - GP Pfad (Empfohlen): n.a.
+  - GP ADMX Dateiname: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
+
+  - Pfad (verpflichtend): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): n.a.
+  - Wertname: WebSQLInThirdPartyContextEnabled
+  - Werttyp: REG_DWORD
+
+  ##### <a name="example-value"></a>Beispielwert:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac – Informationen und Einstellungen
+  
+  - Einstellungs-Schlüsselname: WebSQLInThirdPartyContextEnabled
+  - Beispielwert:
+``` xml
+<true/>
 ```
   
 
