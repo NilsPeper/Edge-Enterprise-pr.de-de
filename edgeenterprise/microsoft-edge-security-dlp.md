@@ -1,35 +1,39 @@
 ---
-title: Verhinderung von Datenverlust in Microsoft Edge
+title: Grundlegendes zur Verhinderung von Datenverlust in Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 11/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Verhinderung von Datenverlust (DLP) in Microsoft Edge
-ms.openlocfilehash: acbc9dab14c193f4f7cb06eb61e676083bfdf6ef
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Grundlegendes zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) in Microsoft Edge
+ms.openlocfilehash: b20a9eb965256adcebd47a5eb1805fb4f0a5992b
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979359"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297903"
 ---
-# <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Verhinderung von Datenverlust (DLP) in Microsoft Edge
+# <a name="understand-data-loss-prevention-dlp-in-microsoft-edge"></a>Grundlegendes zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) in Microsoft Edge
 
-Die Verhinderung von Datenverlust (Data Loss Prevention, DLP) ist ein System von Technologien, die vertrauliche Unternehmensdaten erkennen und vor unbefugtem Zugriff schützen. Die Unternehmen müssen vertrauliche Informationen schützen und deren nicht autorisierte Offenlegung verhindern, um den Unternehmensstandards und Branchenvorschriften zu entsprechen. Zu den vertraulichen Informationen gehören unter anderem Finanzdaten oder personenbezogene Informationen (PII) wie Kreditkartennummern, Sozialversicherungsnummern oder Krankenakten.
+In diesem Artikel wird beschrieben, wie Microsoft Edge die Verhinderung von Datenverlust (Data Loss Prevention, DLP) mit Endpunkt-DLP und Windows Information Protection (WIP) unterstützt.
+
+## <a name="dlp-defined"></a>DLP definiert
+
+Die Verhinderung von Datenverlust (Data Loss Prevention, DLP) ist ein System von Technologien, die vertrauliche Unternehmensdaten erkennen und vor unbefugtem Zugriff schützen. Die Unternehmen müssen vertrauliche Informationen schützen und deren nicht autorisierte Offenlegung verhindern, um den Unternehmensstandards und Branchenvorschriften zu entsprechen. Vertrauliche Informationen umfassen Finanzdaten oder persönliche Informationen. Beispiele für persönliche Informationen sind Kreditkartennummern, Sozialversicherungsnummern und Gesundheitsdatensätze.
 
 Die Fernarbeit hat den Schwerpunkt auf die Verwendung von DLP verstärkt. Angesichts der zunehmenden Nutzung von persönlichen und geschäftlichen Aktivitäten auf Geräten sehen Unternehmen ein erhöhtes Risiko einer nicht autorisierten Freigabe von Unternehmensdaten außerhalb des Arbeitsplatzes.
 
-Diese Kombination von Benutzeraktivitäten hat sich auch auf Geräte ausgebreitet, bei denen Daten zwischen privaten und unternehmensinternen Geräten über eine Vielzahl von öffentlichen und privaten Netzwerken verschoben werden. Das Ergebnis ist ein erheblich erhöhtes Risiko, vertrauliche Daten bereitzustellen.
+Diese Vermischung von Benutzeraktivitäten hat sich auch auf Geräte ausgebreitet, bei denen Daten zwischen persönlichen und unternehmenseigenen Geräten über verschiedene öffentliche und private Netzwerke verschoben werden. Das Ergebnis ist ein erheblich erhöhtes Risiko, vertrauliche Daten bereitzustellen.
 
 Microsoft Edge unterstützt nativ zwei unterschiedliche DLP-Lösungen, Microsoft Endpoint DLP und Windows Information Protection (WIP).
 
 ## <a name="microsoft-endpoint-data-loss-prevention-endpoint-dlp"></a>Microsoft Endpoint-Verhinderung von Datenverlust (Endpunkt-DLP)
 
-Microsoft Endpoint DLP ist die nächste Generation der Verhinderung von Datenverlust unter Verwendung moderner Konzepte wie des datenzentrischen Schutzes. Sie ist in Windows 10 und Microsoft Edge integriert, sodass keine zusätzlichen Agents oder Plugins auf dem Gerät benötigt werden.
+Microsoft Endpoint DLP ist die nächste Generation der Verhinderung von Datenverlust unter Verwendung moderner Konzepte wie des datenzentrischen Schutzes. Es ist in Windows 10 und Microsoft Edge integriert, sodass keine weiteren Agents oder Plug-Ins auf dem Gerät benötigt werden.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 85 oder neuer.
@@ -40,7 +44,7 @@ Verwenden Sie die folgenden Ressourcen, um mehr über Endpunkt-DLP zu erfahren:
 - [Informationen zur Verhinderung von Microsoft 365-Endpunkt Datenverlust](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide)
 - [Erste Schritte mit der Verhinderung von Endpunkt Datenverlust](/microsoft-365/compliance/endpoint-dlp-getting-started?preserve-view=true&view=o365-worldwide)
 
-Microsoft Edge erzwingt administratorenkonfigurierte Richtlinien für vertrauliche Dateien und zeichnet Überwachungsereignisse für nicht kompatible Aktivitäten auf.
+Microsoft Edge erzwingt vom Administrator konfigurierte Richtlinien für vertrauliche Dateien und zeichnet Überwachungsereignisse für nicht konforme Aktivitäten auf.
 
 Einige der Benutzeraktivitäten, die Sie auf Geräten unter Windows 10 überwachen und verwalten können, umfassen die folgenden Aktivitäten:
 
