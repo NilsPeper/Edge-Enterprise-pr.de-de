@@ -1,21 +1,21 @@
 ---
 title: Regulärer Ausdruck 2 Syntax
 ms.author: comanea
-author: AndreaLBarr
+author: dan-wesley
 manager: seanlyn
-ms.date: 08/12/2021
+ms.date: 01/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Regulärer Ausdruck 2 Syntax
-ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: bdb49090a4d9b0611d3485570757fd86946c4ca5
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979320"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298273"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Regulärer Ausdruck 2 (re2.h), Syntax
 
@@ -27,13 +27,13 @@ Zwei reguläre Ausdrücke können geändert oder verkettet werden, um einen neue
 
 Die Metazeichen _`\`_ , _+_ und _?_ sind Wiederholungsoperatoren: *e<sub>1</sub>* _`\`_ stimmt mit einer Sequenz von null oder mehreren (möglicherweise unterschiedlichen) Zeichenfolgen überein, die jeweils mit *e<sub>1</sub>* übereinstimmen; *e<sub>1</sub>* _+_ stimmen mit einer oder mehreren überein; *e<sub>1</sub>* _?_ stimmt mit null oder einer überein.
 
-Die Rangfolge des Operators von der schwächsten zur stärksten Bindung, lautet zuerst Alternierung, dann Verkettung und schließlich Wiederholungsoperatoren. Explizite Klammern können, genau wie in arithmetischen Ausdrücken, verwendet werden, um unterschiedliche Bedeutungen zu erzwingen. Einige Beispiele: _ab|cd_ entspricht _(ab)|( cd)_ ; _`ab\`_ entspricht _`a(b\)`_ .
+Die Rangfolge des Operators von der schwächsten zur stärksten Bindung, lautet zuerst Alternierung, dann Verkettung und schließlich Wiederholungsoperatoren. Explizite Klammern können verwendet werden, um unterschiedliche Bedeutungen zu erzwingen, wie bei arithmetischen Ausdrücken. Einige Beispiele: _ab|cd_ entspricht _(ab)|( cd)_ ; _`ab\`_ entspricht _`a(b\)`_ .
 
-Die bisher beschriebene Syntax entspricht zum größten Teil der herkömmlichen _egrep_-Syntax regulärer Ausdrücke in UNIX. Diese Teilmenge reicht aus, um alle regulären Sprachen zu beschreiben: vereinfacht gesagt ist eine reguläre Sprache eine Reihe von Zeichenfolgen, die in einem einzigen Durchlaufen des Texts mit nur einer festen Menge an Speicher abgeglichen werden können. Neuere Einrichtungen für reguläre Ausdrücke (insbesondere Perl und solche, die diese kopiert haben) haben viele neue Operatoren und Escapesequenzen hinzugefügt, wodurch die regulären Ausdrücke präziser und manchmal kryptischer, aber in der Regel nicht mächtiger werden.
+Die bisher beschriebene Syntax entspricht zum größten Teil der herkömmlichen _egrep_-Syntax regulärer Ausdrücke in UNIX. Diese Teilmenge reicht aus, um alle regulären Sprachen zu beschreiben. Bei einer regulären Sprache handelt es sich um eine Gruppe von Zeichenfolgen, die in einem einzigen Durchlauf des Texts mit nur einer festen Speichermenge abgeglichen werden können. Neuere Reguläre Ausdrücke (insbesondere Perl und die Sprachen, die sie kopiert haben) haben viele neue Operatoren und Escapesequenzen hinzugefügt. Diese Änderungen machen die regulären Ausdrücke präziser und manchmal kryptischer, aber nicht leistungsfähiger.
 
 Auf dieser Seite wird die Syntax regulärer Ausdrücke aufgelistet, die von RE2 akzeptiert wird.
 
-Außerdem finden Sie Syntax, die von PCRE, PERL und VIM akzeptiert wird.
+Außerdem werden einige Syntaxen aufgelistet, die von PCRE, PERL und VIM akzeptiert werden.
 
 ## <a name="syntax-tables"></a>Syntaxtabellen
 

@@ -3,19 +3,19 @@ title: Konfigurieren des Microsoft Edge-Kioskmodus
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie mehr über Kioskmodus-Features und wie Sie Microsoft Edge-Kioskmodusoptionen konfigurieren können.
-ms.openlocfilehash: 38d9b143a910c1e475e5fc8413ef657de395a659
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: fa53f52dd9115d85da6fec6a75aefb972c9f6ece
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107560"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298303"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Konfigurieren des Microsoft Edge-Kioskmodus
 
@@ -73,7 +73,7 @@ In der folgenden Tabelle sind die Features aufgeführt, die vom Kioskmodus in Mi
 
 ## <a name="use-kiosk-mode-features"></a>Verwenden der Kioskmodus-Features
 
-Features des Microsoft Edge-Kioskmodus können mit den folgenden Windows 10-Befehlszeilenoptionen für digitale/interaktive Beschilderung und öffentliches Browsen aufgerufen werden.
+Microsoft Edge Kioskmodusfeatures können mit den folgenden Windows 10 Befehlszeilenoptionen für digitale/interaktive Beschilderung und öffentliches Browsen aufgerufen werden.
 
 ### <a name="kiosk-mode-digitalinteractive-signage"></a>Kioskmodus: digitale/interaktive Beschilderung
  
@@ -89,9 +89,9 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### <a name="kiosk-mode-download-files-on-exit"></a>Kioskmodus Dateien beim Beenden herunterladen
 
-Um Edge so einzurichten, dass heruntergeladene Dateien entfernt werden, wenn eine Kioskinstanz geschlossen wird, müssen die folgenden 2 Gruppenrichtlinien eingerichtet werden:
+Um Microsoft Edge einzurichten, um heruntergeladene Dateien zu entfernen, wenn eine Kioskinstanz geschlossen wird, müssen die folgenden beiden Gruppenrichtlinien konfiguriert werden:
 - [Downloads beim Beenden löschen](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = aktiviert
-- [Downloadverzeichnis festlegen](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+- [Downloadverzeichnis festlegen](./microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
 
 
 ### <a name="additional-command-line-options"></a>Zusätzliche Befehlszeilenoptionen
@@ -106,7 +106,7 @@ Um Edge so einzurichten, dass heruntergeladene Dateien entfernt werden, wenn ein
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Ändern Sie die Zeit (in Minuten) der letzten Benutzeraktivität, bevor Microsoft Edge Kioskmodus die Sitzung des Benutzers zurücksetzt, indem Sie den Browser schließen. Hinweis: Dieses Flag wird Microsoft Edge nach dem Schließen nicht neu gestartet. Eine separate Technologie, z. B. zugewiesener Zugriff oder Shell-Start, ist erforderlich, um Edge nach dem Leerlauftimeout automatisch neu zu starten. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
+- **--kiosk-idle-timeout-minutes=**: Ändern Sie die Zeit (in Minuten) von der letzten Benutzeraktivität, bevor Microsoft Edge Kioskmodus die Sitzung des Benutzers zurücksetzt, indem Sie den Browser schließen. Hinweis: Dieses Flag wird Microsoft Edge nach dem Schließen nicht neu gestartet. Eine separate Technologie, z. B. zugewiesener Zugriff oder Shell-Start, ist erforderlich, um Edge nach dem Leerlauftimeout automatisch neu zu starten. Ersetzen Sie „value“ im nächsten Beispiel durch die Anzahl der Minuten.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -167,9 +167,9 @@ Sie können den zugewiesenen Zugriff einzelner Apps im Kioskmodus von Microsoft 
 
 ### <a name="multi-app-kiosk"></a>Multi-App-Kiosk
 
-Microsoft Edge kann unter Windows 10 mit [zugewiesenem Multi-App-Zugriff](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Befolgen Sie die Anweisungen zum Einrichten eines Multi-App-Kiosks, um Microsoft Edge mit zugewiesenen [Multi-App-Zugriffen zu konfigurieren.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) (Die AUMID für den Microsoft Edge Stable-Kanal ist **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+Microsoft Edge kann unter Windows 10 mit [zugewiesenem Multi-App-Zugriff](/windows/configuration/lock-down-windows-10-to-specific-apps) ausgeführt werden, was dem Kioskmodustyp „Normales Browsen” von Microsoft Edge Legacy entspricht. Befolgen Sie die Anweisungen zum Einrichten eines Multi-App-Kiosks, um Microsoft Edge mit zugewiesenen [Multi-App-Zugriffen zu konfigurieren.](/windows/configuration/lock-down-windows-10-to-specific-apps) (Die AUMID für den Microsoft Edge Stable-Kanal ist **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
 
-Wenn Sie Microsoft Edge mit zugewiesenen Zugriffen mit mehreren Apps verwenden, können Sie den Microsoft Edge Kiosk so konfigurieren, dass er die[Microsoft Edge-Browserrichtlinien](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) verwendet, um die Browsererfahrung so zu konfigurieren, dass Ihre individuellen Anforderungen erfüllt werden.
+Wenn Sie Microsoft Edge mit zugewiesenem Zugriff mit mehreren Apps verwenden, können Sie Microsoft Edge Kiosk so konfigurieren, dass die [Browserrichtlinien Microsoft Edge](./microsoft-edge-policies.md) verwendet werden, um die Browserumgebung so zu konfigurieren, dass Ihre individuellen Anforderungen erfüllt werden.
 
 ### <a name="configure-using-windows-settings"></a>Konfigurieren mithilfe der Windows-Einstellungen
 
@@ -188,15 +188,15 @@ Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ei
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Einrichten eines Kiosks mit zugewiesenem Zugriff":::
 
-4. Klicken Sie auf der Seite **Einen Kiosk einrichten**  auf **Erste Schritte**.
+4. Wählen Sie auf der Seite **"Kiosk einrichten"**   die Option **"Erste Schritte" aus.**
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Seite Kiosk – erste Schritte":::
 
-5. Geben Sie einen Namen ein, um ein neues Kioskkonto zu erstellen, oder wählen Sie ein vorhandenes Konto aus der Dropdownliste aus, und klicken Sie dann auf  **Weiter**.
+5. Geben Sie einen Namen ein, um ein neues Kioskkonto zu erstellen, oder wählen Sie ein vorhandenes Konto aus der ausgefüllten Dropdownliste aus, und wählen Sie dann **"Weiter"** aus.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Kioskmodus – Konto erstellen":::
 
-6. Wählen Sie auf der Seite **Kiosk-App auswählen**  die Option **Microsoft Edge** aus, und klicken Sie dann auf  **Weiter**.
+6. Wählen Sie auf der Seite **"Kiosk-App**   **auswählen" Microsoft Edge**und dann **"Weiter"** aus.
 
    > [!NOTE]
    > Dies gilt nur für Microsoft Edge Dev, Beta und Stable Channels.
@@ -219,7 +219,7 @@ Die Windows-Einstellungen sind die einfachste Möglichkeit zum Einrichten von ei
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Kioskmodus – Leerlaufzeit eingeben":::
 
-11. Klicken Sie auf  **Weiter**.
+11. Wählen Sie ** Weiter** aus.
 12. Schließen Sie das Fenster  **Einstellungen** , um Ihre Auswahl zu speichern und anzuwenden.
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Kioskmodus – Einrichten abschließen":::

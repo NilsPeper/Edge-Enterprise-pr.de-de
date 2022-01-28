@@ -1,4 +1,4 @@
-# last revised 11/02/2021 
+# last revised 01/11/2022
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -83,7 +83,7 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Verwenden von Microsoft Edge Enterprise-Features
   items:
-    - name: Edge für Virtualisierungsdesktopinfrastruktur
+    - name: Microsoft Edge für virtuelle Desktop-Infrastruktur
       href: edge-for-virtualized-desktop-infrastructure.md
     - name: Konfigurationen und Experimente
       href: edge-configuration-and-experiments.md
@@ -157,7 +157,7 @@
       href: ms-edge-security-for-business.md
     - name: Moderner Sicherheitsschutz für anfällige Legacy-Apps
       href: microsoft-edge-security-iemode-safer-than-ie.md
-    - name: Unterbrechen des Downloads von potenziell gefährlichen Dateien
+    - name: Identifizieren und Unterbrechen von Downloads potenziell gefährlicher Dateien
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Zulassungsliste für Microsoft Edge-Endpunkte
       href: microsoft-edge-security-endpoints.md
@@ -239,5 +239,5 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Video: Sicherheit, Kompatibilität und Verwaltbarkeit'
       href: microsoft-edge-video-security-compatibility-manageability.md
-    - name: Häufig gestellte Fragen
-      href: faqs-edge-in-the-enterprise.yml
+    - name: Microsoft Edge FAQ
+      href: microsoft-edge-frequently-asked-questions.md

@@ -3,19 +3,19 @@ title: Microsoft Edge-Unterstützung für Windows Information Protection
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2029
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Unterstützung für Windows Information Protection
-ms.openlocfilehash: 53564d6089e84969501ac4802cf96dbdb1b24361
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 5f3dd297e59014cc01a1e8abd4db444b7a4176fb
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979335"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298293"
 ---
 # <a name="microsoft-edge-support-for-windows-information-protection-wip"></a>Microsoft Edge-Unterstützung für Windows Information Protection (WIP)
 

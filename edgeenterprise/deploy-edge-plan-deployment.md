@@ -3,19 +3,19 @@ title: Planen Ihrer Bereitstellung von Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Planen Ihrer Bereitstellung von Microsoft Edge
-ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 66d0999bcf80aa5bdf7232cedff36a8bbb3ef264
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979135"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298143"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Planen Ihrer Bereitstellung von Microsoft Edge
 
@@ -24,18 +24,30 @@ In diesem Artikel werden die empfohlenen Vorgehensweisen für die Bereitstellung
 >[!NOTE]
 >Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
 
+## <a name="article-content"></a>Artikelinhalt
+
 Die folgenden Abschnitte enthalten spezifische Anleitungen für die Planung Ihrer Microsoft Edge-Bereitstellung.
 
-- [Auswerten der Browserumgebung und -anforderungen](#evaluate-your-existing-browser-environment-and-browser-needs)
-- [Sicherstellen, dass Windows 10-Geräte bereit sind](#make-sure-your-windows-10-devices-are-ready)
-- [Auswählen der Bereitstellungsmethode](#determine-your-deployment-methodology)
-- [Site-Discovery](#do-site-discovery)
-- [Auswählen der Kanalstrategie](#determine-your-channel-strategy)
-- [Definieren und Konfigurieren von Richtlinien](#define-and-configure-policies)
-- [Testen der App-Kompatibilität](#do-app-compatibility-testing)
-- [Microsoft Edge-Pilotprojekt](#deploy-microsoft-edge-to-a-pilot-group)
-- [Auswerten des Pilotprojekts](#validate-your-deployment)
-- [Bereitstellen von Microsoft Edge im gesamten Unternehmen](#broad-deployment-of-microsoft-edge)
+   - [Bewerten der vorhandenen Browserumgebung und der Browseranforderungen](#evaluate-your-existing-browser-environment-and-browser-needs)
+  - [Stellen Sie sicher, dass Ihre Windows 10-Geräte bereit sind](#make-sure-your-windows-10-devices-are-ready)
+  - [Ermitteln der Bereitstellungsmethode](#determine-your-deployment-methodology)
+    - [Bereitstellung für Endbenutzer nach Rolle](#deploy-to-end-users-by-role)
+    - [Bereitstellung für Endbenutzer nach Site](#deploy-to-end-users-by-site)
+  - [Site-Discovery](#do-site-discovery)
+    - [Wenn Sie die Vorgängerversion von Microsoft Edge bereits bereitgestellt und konfiguriert haben](#if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge)
+    - [Wenn Sie Internet Explorer als Standardbrowser konfiguriert haben](#if-youve-configured-internet-explorer-as-your-default-browser)
+    - [Analysieren der durch Site-Discovery ermittelten Daten](#analyze-site-discovery-data)
+  - [Festlegen Ihrer Kanalstrategie](#determine-your-channel-strategy)
+    - [Mehrere Geräte und Kanäle](#multiple-devices-and-channels)
+  - [Definieren und Konfigurieren von Richtlinien](#define-and-configure-policies)
+    - [Definieren der Updatestrategie und -richtlinien](#define-your-update-strategy-and-policies)
+  - [Testen der Anwendungskompatibilität](#do-app-compatibility-testing)
+    - [Interne Branchen-App-Tests](#internal-line-of-business-app-testing)
+    - [Unterstützung von Drittanbieter-Apps](#third-party-app-support)
+  - [Bereitstellen von Microsoft Edge für eine Pilotgruppe](#deploy-microsoft-edge-to-a-pilot-group)
+  - [Überprüfen Ihrer Bereitstellung](#validate-your-deployment)
+  - [Allgemeine Bereitstellung von Microsoft Edge](#broad-deployment-of-microsoft-edge)
+  - [Weitere Informationen](#see-also)
 
 ## <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Bewerten der vorhandenen Browserumgebung und der Browseranforderungen
 
@@ -59,7 +71,7 @@ Nachdem Sie den aktuellen Zustand erfasst haben, können Sie die gewünschten Zi
 - Welche Features sind wichtig und sollten im Rahmen der Erstbereitstellung konfiguriert werden?
 - Wie sieht der Prozess für die Behandlung von erkannten Kompatibilitäts- oder Konfigurationsproblemen aus?
 
-Sie sollten auch die **Voraussetzungen** für die Features kennen, die Sie interessieren, z. B.:
+Sie sollten auch die **Voraussetzungen** für Features verstehen, an denen Sie interessiert sind, z. B.:
 
 - [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [Internet Explorer-Modus](./edge-ie-mode.md)
@@ -141,7 +153,7 @@ Nach der Erstellung der Enterprise-Siteliste wird empfohlen, die Richtlinien zu 
 
 Überlegen Sie zunächst, welche Erfahrung die Benutzer bei der ersten Ausführung haben sollen. Wenn Einstellungen automatisch aus dem aktuellen Browser importiert werden sollen, konfigurieren Sie die Richtlinie für [AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun).
 
-Für Sicherheitsrichtlinien empfiehlt es sich, mit der Microsoft Edge-Sicherheitsbaseline zu beginnen. Die Sicherheitsbaseline kann mithilfe der [empfohlenen Sicherheitskonfigurationsbaseline-Einstellungen](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) oder mithilfe von [Microsoft Intune](/intune/protect/security-baseline-settings-edge) angewendet werden.
+Für Sicherheitsrichtlinien empfiehlt es sich, mit der Microsoft Edge-Sicherheitsbaseline zu beginnen. Die Sicherheitsbaseline kann mithilfe des [Microsoft Security Baselines-Blogs](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) oder mit [Microsoft Intune](/intune/protect/security-baseline-settings-edge)angewendet werden.
 
 Für andere Richtlinien sollten Sie sich die Richtlinienkonfigurationen für [Microsoft Edge](./microsoft-edge-policies.md) und [Microsoft Edge Updates](./microsoft-edge-update-policies.md) anschauen.
 

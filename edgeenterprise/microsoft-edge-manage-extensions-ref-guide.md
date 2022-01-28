@@ -3,21 +3,21 @@ title: Detaillierter Leitfaden zur ExtensionSettings-Richtlinie
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 06/29/2021
+ms.date: 01/12/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ein detaillierter Referenzleitfaden zum Konfigurieren von Microsoft Edge-Erweiterungen mithilfe der ExtensionSettings-Richtlinie.
-ms.openlocfilehash: 7dceff78172626d70863883e0762be2f4cb7e51c
-ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
+ms.openlocfilehash: 429b5efeb667ec0d100e397d9c12185420dbc31c
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "12069011"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297933"
 ---
-# <a name="detailed-guide-to-the-extensionsettings-policy"></a>Detaillierter Leitfaden zur ExtensionSettings-Richtlinie
+# <a name="a-detailed-guide-to-configuring-extensions-using-the-extensionsettings-policy"></a>Eine ausführliche Anleitung zum Konfigurieren von Erweiterungen mithilfe der ExtensionSettings-Richtlinie
 
 Microsoft Edge bietet mehrere Möglichkeiten zum Verwalten von Erweiterungen. Eine gängige Methode ist das Festlegen mehrerer Richtlinien an einem Ort mit einer JSON-Zeichenfolge im Windows Gruppenrichtlinien-Editor oder in der Windows-Registrierung mithilfe der [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings)-Richtlinie.
 
@@ -26,7 +26,7 @@ Microsoft Edge bietet mehrere Möglichkeiten zum Verwalten von Erweiterungen. Ei
 
 ## <a name="before-you-begin"></a>Bevor Sie beginnen
 
-Sie entscheiden, ob Sie hier alle Erweiterungsverwaltungseinstellungen festlegen oder diese Steuerelemente über andere Richtlinien festlegen möchten.
+Entscheiden Sie, ob Sie alle Erweiterungsverwaltungseinstellungen in der ExtensionSettings-Richtlinie festlegen oder diese Steuerelemente über andere Richtlinien festlegen möchten.
   
 Die ExtensionSettings-Richtlinie kann andere Richtlinien überschreiben, die Sie an anderer Stelle in der Gruppenrichtlinie festgelegt haben, einschließlich der folgenden Richtlinien:
 
@@ -38,9 +38,9 @@ Die ExtensionSettings-Richtlinie kann andere Richtlinien überschreiben, die Sie
 
 ## <a name="extensionsettings-policy-fields"></a>ExtensionSettings-Richtlinienfelder
 
-Diese Richtlinie kann Einstellungen wie die Update-URL steuern, von der die Erweiterung für die Erstinstallation heruntergeladen wird, und blockierte Berechtigungen oder welche Berechtigungen nicht ausgeführt werden dürfen. In der folgenden Tabelle werden die verfügbaren Richtlinienfelder beschrieben.
+Diese Richtlinie kann Einstellungen wie die Update-URL steuern, von der die Erweiterung für die Erstinstallation heruntergeladen wird, und blockierte Berechtigungen. Sie können diese Richtlinie auch verwenden, um zu identifizieren, welche Berechtigungen nicht ausgeführt werden dürfen. In der folgenden Tabelle werden die verfügbaren Richtlinienfelder beschrieben.
 
-| &nbsp; | Beschreibung |
+| Richtlinienfeld | Beschreibung |
 |--|--|
 | **allowed_types** | Kann nur verwendet werden, um die Standardkonfiguration * zu konfigurieren. Gibt an, welche Arten von App- oder Erweiterungsbenutzern auf Microsoft Edge installiert werden dürfen. Der Wert ist eine Liste von Zeichenfolgen, die jeweils einen der folgenden Typen aufweisen sollten: "extension", "theme", "user_script" und "hosted_app"   |
 | **blocked_install_message**| Wenn Sie verhindern, dass Benutzer bestimmte Erweiterungen installieren, können Sie eine benutzerdefinierte Meldung angeben, die im Browser angezeigt werden soll, wenn Benutzer versuchen, sie zu installieren.<br>Fügen Sie Text an die allgemeine Fehlermeldung an, die auf der Microsoft Edge Add-Ons-Website angezeigt wird. Beispielsweise können Sie Benutzern mitteilen, wie sie ihre IT-Abteilung kontaktieren oder warum eine bestimmte Erweiterung nicht verfügbar ist. Die Meldung kann bis zu 1 000 Zeichen lang sein.   |
@@ -51,47 +51,47 @@ Diese Richtlinie kann Einstellungen wie die Update-URL steuern, von der die Erwe
 | **update_url** | Gilt nur für force_installed und normal_installed. Gibt an, von wo aus Microsoft Edge eine Erweiterung herunterladen soll. Wenn die Erweiterung in der Microsoft Edge Add-Ons-Website gehostet wird, verwenden Sie diesen Speicherort: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge verwendet die URL, die Sie für die Erstinstallation der Erweiterung angeben. Für nachfolgende Erweiterungsupdates verwendet Microsoft Edge die URL im Manifest der Erweiterung.   |
 | **runtime_allowed_hosts**| Ermöglicht Erweiterungen die Interaktion mit bestimmten Websites, auch wenn sie auch in runtime_blocked_hosts definiert sind. Sie können bis zu 100 Einträge angeben. Zusätzliche Einträge werden verworfen.<br>Das Hostmusterformat ähnelt  [Übereinstimmungsmustern](/microsoft-edge/extensions-chromium/enterprise/match-patterns) , es sei denn, Sie können den Pfad nicht definieren. Beispiel:<br>- *://*.example.com<br>- *://example.* – eTLD-Platzhalter werden unterstützt     |
 | **runtime_blocked_hosts**| Verhindern, dass Erweiterungen mit von Ihnen angegebenen Websites interagieren oder diese ändern. Änderungen umfassen das Blockieren der JavaScript-Einfügung, den Cookiezugriff und Webanforderungsänderungen.<br>Sie können bis zu 100 Einträge angeben. Zusätzliche Einträge werden verworfen.<br>Das Hostmusterformat ähnelt Übereinstimmungsmustern, es sei denn, Sie können den Pfad nicht definieren. Beispiel:<br>- *://*.example.com<br>- *://example.* – eTLD-Platzhalter werden unterstützt   |
-| **override_update_url**| Verfügbar ab Edge 93<br>Wenn dies festgelegt `true` ist, verwendet Edge die in der ExtensionSettings-Richtlinie oder in der ExtensionInstallForcelist-Richtlinie angegebene Update-URL für nachfolgende Erweiterungsupdates.<br>Wenn dies nicht festgelegt oder festgelegt `false` ist, verwendet Edge die im Manifest der Erweiterung angegebene URL für Updates.|
-| **toolbar_state**| Verfügbar ab Edge 94<br>Mit dieser Richtlinieneinstellung können Sie erzwingen, dass eine installierte Erweiterung auf der Symbolleiste angezeigt wird. Der Standardzustand gilt `default_shown` für alle Erweiterungen. Für diese Einstellung sind die folgenden Zustände möglich:<br>-`force_shown`: Sie können das Anzeigen einer installierten Erweiterung auf der Symbolleiste erzwingen. Benutzer können das spezifische Erweiterungssymbol nicht auf der Symbolleiste ausblenden.<br>-`default_hidden`: In diesem Zustand werden Erweiterungen bei der Installation auf der Symbolleiste ausgeblendet. Benutzer können sie bei Bedarf auf der Symbolleiste anzeigen.<br>-`default_shown`: Dies ist die gehörlose Einstellung aller installierten Erweiterungen im Browser.
+| **override_update_url**| Verfügbar ab Microsoft Edge 93<br>Wenn dieses Feld auf festgelegt `true` ist, verwendet Microsoft Edge die in der ExtensionSettings-Richtlinie oder in der ExtensionInstallForcelist-Richtlinie angegebene Aktualisierungs-URL für nachfolgende Erweiterungsupdates.<br>Wenn dieses Feld nicht festgelegt oder festgelegt `false` ist, verwendet Microsoft Edge die im Manifest der Erweiterung angegebene URL für Updates.|
+| **toolbar_state**| Verfügbar ab Microsoft Edge 94<br>Mit dieser Richtlinieneinstellung können Sie erzwingen, dass eine installierte Erweiterung auf der Symbolleiste angezeigt wird. Der Standardzustand gilt `default_shown` für alle Erweiterungen. Für diese Einstellung sind die folgenden Zustände möglich:<br>-`force_shown`: Sie können das Anzeigen einer installierten Erweiterung auf der Symbolleiste erzwingen. Benutzer können das angegebene Erweiterungssymbol nicht auf der Symbolleiste ausblenden.<br>-`default_hidden`: In diesem Zustand werden Erweiterungen bei der Installation auf der Symbolleiste ausgeblendet. Benutzer können sie bei Bedarf auf der Symbolleiste anzeigen.<br>-`default_shown`: Dies ist die Standardeinstellung aller installierten Erweiterungen im Browser.
 
-Dies sind die Schlüssel, die im globalen Bereich zulässig sind (*): 
+Die folgenden Schlüssel sind auf globaler Ebene zulässig (*):
 
 - blocked_permissions
-- installation_mode – nur `"blocked"` `"allowed"` oder `"removed"` sind die gültigen Werte in diesem Bereich.
+- installation_mode – nur `"blocked"` `"allowed"` , oder sind die gültigen Werte in diesem `"removed"` Bereich.
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
 - runtime_allowed_hosts
 - install_sources
 
-Dies sind die Schlüssel, die in einem einzelnen Erweiterungsbereich zulässig sind: 
+Die folgenden Schlüssel sind in einem einzelnen Erweiterungsbereich zulässig:
 
 - blocked_permissions
 - minimum_version_required
 - blocked_install_message
-- installation_mode - `"blocked"` `"allowed"` , , , und sind die möglichen `"removed"` `"force_installed"` `"normal_installed"` Werte.
+- installation_mode - `"blocked"` , `"allowed"` , , , und sind `"removed"` die `"force_installed"` möglichen `"normal_installed"` Werte.
 - runtime_allowed_hosts
 - update_url
 - override_update_url
 - runtime_blocked_hosts
 - toolbar_state
 
-Dies sind die Schlüssel, die in einem Update-URL-Bereich zulässig sind: 
+Die folgenden Schlüssel sind im Update-URL-Bereich zulässig:
 
 - blocked_permissions
-- installation_mode – nur `"blocked"` `"allowed"` oder `"removed"` sind die gültigen Werte in diesem Bereich.
+- installation_mode – nur `"blocked"` `"allowed"` , oder sind die gültigen Werte in diesem `"removed"` Bereich.
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Konfigurieren einer JSON-Zeichenfolge im Gruppenrichtlinien-Editor von Windows
 
 Bei den Schritten zur Verwendung der Erweiterungseinstellungsrichtlinie mithilfe des Gruppenrichtlinienobjekts (GPO) wird davon ausgegangen, dass Sie ADM/ADMX bereits für Microsoft Edge-Richtlinien importiert haben.
 
-1. Öffnen Sie den Gruppenrichtlinien-Editor, und wechseln Sie zu **Microsoft Edge > Erweiterungen > Einstellungsrichtlinie für die Erweiterungsverwaltung konfigurieren**.
-2. Aktivieren Sie die Richtlinie, und geben Sie die JSONN-Daten (JavaScript Object Notation) als einzelne Zeile ohne Zeilenumbrüche in das Textfeld ein.
+1. Öffnen Sie den Gruppenrichtlinien-Editor, und wechseln Sie zu **Microsoft Edge > Erweiterungen > Einstellungsrichtlinie für die Erweiterungsverwaltung konfigurieren.**
+2. Aktivieren Sie die Richtlinie, und geben Sie die kompakten JSON-Daten (JavaScript Object Notation) als einzelne Zeile ohne Zeilenumbrüche in das Textfeld ein.
 3. Um die Richtlinie zu überprüfen und in einer einzigen Zeile zu komprimieren, verwenden Sie ein JSON-Komprimierungstool.
 
 ### <a name="properly-format-json-for-the-extension-settings-policy"></a>Ordnungsgemäßes Formatieren von JSON für die Erweiterungseinstellungsrichtlinie
 
-Sie müssen die beiden Teile dieser Richtlinie verstehen – den Standardbereich und den einzelnen Bereich. Der Standardbereich ist ein Catch-All für Erweiterungen ohne eigenen Bereich. Der einzelne Bereich wird nur auf diese Erweiterung angewendet.  
+Sie müssen die beiden Teile dieser Richtlinie verstehen– den Standardbereich und den einzelnen Bereich. Der Standardbereich ist ein Catch-All für Erweiterungen ohne eigenen Bereich. Der einzelne Bereich wird nur auf diese Erweiterung angewendet.  
 
 Der Standardbereich wird durch das Sternchen (*) identifiziert. Im nächsten Beispiel werden ein Standardbereich und ein einzelner Erweiterungsbereich definiert.
 
@@ -125,7 +125,7 @@ Im nächsten JSON-Beispiel wird verhindert, dass eine Erweiterung auf `.example.
 
 #### <a name="using-installation_mode-property-to-allow-and-block-extensions"></a>Verwendung der installation_mode-Eigenschaft zum Zulassen und Blockieren von Erweiterungen
 
-- Der Benutzer kann alle Erweiterungen installieren – dies ist die Standardeinstellung. 
+- Der Benutzer kann alle Erweiterungen installieren – die Standardeinstellung
 
   `{ "*": {"installation_mode": "allowed" }}`
 - Der Benutzer kann keine Erweiterungen installieren.  
@@ -146,7 +146,7 @@ Wenn installation_mode als "force_installed" verwendet wird, wird die Erweiterun
 
    `{"nckgahadagoaajjgafhacjanaoiihapd": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
   
-Wenn Sie im obigen Beispiel anstelle von "force_installed" "normal_installed" verwenden, wird die Erweiterung automatisch ohne Benutzerinteraktion installiert, aber sie kann die Erweiterung deaktivieren.  
+Wenn Sie im vorherigen Beispiel "normal_installed" anstelle von "force_installed" verwenden, wird die Erweiterung automatisch ohne Benutzerinteraktion installiert, aber sie kann die Erweiterung deaktivieren.  
 
    > [!TIP]
    > Das richtige Formatieren einer JSON-Zeichenfolge kann schwierig sein. Verwenden Sie vor der Implementierung der Richtlinie eine JSON-Überprüfung. Oder testen Sie die frühe Version des [Generatortools für Erweiterungseinstellungen](https://microsoft.github.io/edge-extension-settings-generator/minimal)
@@ -164,11 +164,11 @@ Für Microsoft Edge werden alle Einstellungen unter diesem Schlüssel gestartet:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\`
 
-Der nächste Schlüssel, den Sie erstellen, ist entweder die Erweiterungs-ID für den einzelnen Bereich oder ein Sternchen (*) für den Standardbereich. Beispielsweise verwenden Sie den folgenden Speicherort für Einstellungen, die für Google Hangouts gelten:
+Der nächste Schlüssel, den Sie erstellen, ist entweder die Erweiterungs-ID für den einzelnen Bereich oder ein Sternchen (*) für den Standardbereich. Beispielsweise verwenden Sie den folgenden Speicherort in der Registrierung für Einstellungen, die für Google Hangouts gelten:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\nckgahadagoaajjgafhacjanaoiihapd`
 
-Verwenden Sie für Einstellungen, die für den Standardbereich gelten, folgenden Speicherort:
+Verwenden Sie für Einstellungen, die für den Standardbereich (Sternchen) gelten, den folgenden Speicherort in der Registrierung:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\*`
 

@@ -3,26 +3,26 @@ title: Cookie-Weitergabe von Microsoft Edge an Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: 'Konfigurieren der Cookie-Weitergabe von Microsoft Edge an Internet Explorer '
-ms.openlocfilehash: 8f1a38106e49f71aa9d27f32cfecbd0df44eaf9f
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Erfahren Sie, wie Sie Cookies von Microsoft Edge an Internet Explorer freigeben
+ms.openlocfilehash: ddd8cb519f2cb22cf238f96d144197a623eb18bc
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979281"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298123"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Cookie-Weitergabe von Microsoft Edge an Internet Explorer
 
 >[!Note]
-> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs [finden Sie in den häufig gestellten Fragen](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> Die Internet Explorer (IE) 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt. Informationen dazu, was beim Zurückziehen von IE 11 im Bereich und außerhalb des Bereichs liegt, finden Sie unter [Internet Explorer 11– Häufig gestellte Fragen](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)zur Einstellung der Desktop-App. Die gleichen IE 11-Apps und -Websites, die Sie heute verwenden, können im Internet Explorer-Modus in Microsoft Edge geöffnet werden. Weitere Informationen finden Sie unter [Die Zukunft von Internet Explorer auf Windows 10 befindet sich in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-In diesem Artikel wird erläutert, wie Sie die Weitergabe von Sitzungscookies von einem Microsoft Edge-Prozess an einen Internet Explorer-Prozess konfigurieren können, wenn der Internet Explorer-Modus verwendet wird.
+In diesem Artikel wird erläutert, wie Sie die Sitzungscookiefreigabe von einem Microsoft Edge-Prozess zu einem Internet Explorer-Prozess konfigurieren, während Sie den Internet Explorer-Modus verwenden.
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 87 oder neuer.
@@ -36,6 +36,12 @@ In diesem Artikel wird erläutert, wie Sie die Weitergabe von Sitzungscookies vo
   - Windows 10, Version 1903, Windows Server, Version 1903 – KB4566116 oder höher
   - Windows 10, Version 1809, Windows Server, Version 1809, und Windows Server 2019 – KB4571748 oder höher
   - Windows 10, Version 1803 – KB4577032 oder höher
+  - Windows 10 Enterprise 2016 LTSC und Windows Server 2016 – KB4580346 oder höher
+  - Windows 10 Enterprise 2015 LTSB – KB4580327 oder höher
+  - Windows 8.1 und Windows Server 2012 R2 – KB4586768 oder höher
+  - Windows 10 Enterprise 2016 LTSC und Windows Server 2016 – KB4580346 oder höher
+  - Windows 10 Enterprise 2015 LTSB – KB4580327 oder höher
+  - Windows 8.1 und Windows Server 2012 R2 – KB4586768 oder höher
 
 - Microsoft Edge, Version 87 oder höher
 - [IE-Modus](./edge-ie-mode.md)  konfiguriert mit Enterprise Mode Site List
@@ -44,16 +50,16 @@ In diesem Artikel wird erläutert, wie Sie die Weitergabe von Sitzungscookies vo
 
 Eine in großen Unternehmen häufige Konfiguration besteht darin, eine Anwendung, die in einem modernen Browser funktioniert, mit einer anderen Anwendung zu verknüpfen, welche für das Öffnen im Internet Explorer-Modus mit aktiviertem einmaligem Anmelden (SSO) als Teil des Workflows konfiguriert sein könnte.
 
-Die Microsoft Edge- und Internet Explorer-Prozesse verwenden standardmäßig keine gemeinsamen Sitzungscookies, was in manchen Fällen nachteilig sein kann. Ein Benutzer muss sich beispielsweise im Internet Explorer-Modus erneut authentifizieren, und die Abmeldung von einer Microsoft Edge-Sitzung hat nicht automatisch die Abmeldung von der Sitzung im Internet Explorer-Modus zur Folge. Für solche Szenarien können Sie bestimmte, für SSO festgelegte Cookies so konfigurieren, dass sie von Microsoft Edge an den Internet Explorer gesendet werden, um den Authentifizierungsablauf nahtloser zu gestalten, da auf diese Weise die Notwendigkeit einer erneuten Authentifizierung wegfällt.
+Standardmäßig geben die Microsoft Edge- und Internet Explorer-Prozesse keine Sitzungscookies frei, und diese fehlende Freigabe kann in einigen Fällen umständlich sein. Wenn sich ein Benutzer beispielsweise im Internet Explorer-Modus erneut authentifizieren muss oder wenn er sich von einer Microsoft Edge Sitzung abmeldet, wird die Internet Explorer-Modussitzung nicht abgemeldet. In diesen Szenarien können Sie bestimmte von SSO festgelegte Cookies so konfigurieren, dass sie von Microsoft Edge an Internet Explorer gesendet werden, damit die Authentifizierungserfahrung verbessert wird, indem keine erneute Authentifizierung erforderlich ist.
 
 > [!NOTE]
 > Sitzungscookies können nur von Microsoft Edge an Internet Explorer weitergegeben werden. Die Weitergabe von Sitzungscookies von Internet Explorer an Microsoft Edge ist nicht möglich.
 
 ## <a name="how-cookie-sharing-works"></a>Funktionsweise der Cookie-Weitergabe
 
-Die Enterprise Mode Site List-XML-Datei wurde erweitert, damit zusätzliche Elemente Cookies angeben können, die von einer Microsoft Edge-Sitzung an Internet Explorer weitergegeben werden müssen.  
+Der XML-Code Enterprise Mode-Websiteliste wurde erweitert, damit mehr Elemente Cookies angeben können, die aus einer Microsoft Edge Sitzung mit Internet Explorer freigegeben werden müssen.  
 
-Wenn während einer Microsoft Edge-Sitzung zum ersten Mal ein Internet Explorer-Modus-Tab erstellt wird, werden alle übereinstimmenden Cookies an die Internet Explorer-Sitzung weitergegeben. Anschließend wird jedes Mal, wenn ein Cookie, das einer Regel entspricht, hinzugefügt, gelöscht oder geändert wird, dieses als Update an die Internet Explorer-Sitzung weitergegeben. Wenn die Websiteliste aktualisiert wird, werden die weitergegebenen Cookies ebenfalls neu ausgewertet.
+Wenn während einer Microsoft Edge-Sitzung zum ersten Mal ein Internet Explorer-Modus-Tab erstellt wird, werden alle übereinstimmenden Cookies an die Internet Explorer-Sitzung weitergegeben. Danach wird jedes Mal, wenn ein Cookie hinzugefügt, gelöscht oder geändert wird, das einer Regel entspricht, als Update an die Internet Explorer-Sitzung gesendet. Die Gruppe der freigegebenen Cookies wird auch erneut ausgewertet, wenn die Websiteliste aktualisiert wird.
 
 ### <a name="updated-schema-elements"></a>Aktualisierte Schemaelemente
 
@@ -61,7 +67,7 @@ In der folgenden Tabelle wird das \<shared-cookie\>-Element beschrieben, das zur
 
 | Element| Beschreibung |
 |-|-|
-| \<shared-cookie **domain**=".contoso.com" **name**="cookie1"\>\</shared-cookie\><br><br>ODER<br><br>\<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2"\>\</shared-cookie\>   |**(Erforderlich)** Ein \<shared-cookie\>-Element erfordert mindestens ein *domain*-Attribut (für Domänen-Cookies) oder ein *host*-Attribut (für Nur-Host-Cookies) sowie ein *name*-Attribut.<br>Diese müssen jeweils exakt mit der Domäne bzw. mit dem Namen des Cookies übereinstimmen. **Beachten Sie**, dass es bei Unterdomänen keine Übereinstimmung gibt.<br><br>Das *domain*-Attribut wird für Domänen-Cookies verwendet (ein vorangestellter Punkt ist dabei zulässig, aber optional).<br>Das *host*-Attribut wird für Nur-Host-Cookies verwendet (ein vorangestellter Punkt ist dabei ein Fehler). Wenn Sie keine oder beide Optionen angeben, hat dies einen Fehler zur Folge.<br>* Bei einem Cookie handelt es sich um ein Domänen-Cookie, wenn in der Cookie-Zeichenfolge eine Domäne angegeben wurde (über den HTTP-Set-Cookie-Antwortheader oder die "document.cokie JS"-API). Ein Domänen-Cookie gilt für die angegebene Domäne und alle Unterdomänen. Wenn in der Cookie-Zeichenfolge keine Domäne angegeben wurde, handelt es sich bei dem Cookie um ein Nur-Host-Cookie, das nur für den Host gilt, für den es festgelegt wurde. Beachten Sie, dass einige Klassen von URLs wie etwa Einzelwort-Hostnamen (z. B. http://intranetsite) und IP-Adressen (z. B. http://10.0.0.1) ausschließlich Nur-Host-Cookies festlegen können.    |
+| \<shared-cookie **domain**=".contoso.com" **name**="cookie1"\>\</shared-cookie\><br><br>ODER<br><br>\<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2"\>\</shared-cookie\>   |**(Erforderlich)** Ein \<shared-cookie\>-Element erfordert mindestens ein *domain*-Attribut (für Domänen-Cookies) oder ein *host*-Attribut (für Nur-Host-Cookies) sowie ein *name*-Attribut.<br>Diese Attribute müssen exakt mit der Domäne und dem Namen des Cookies übereinstimmen. **Beachten Sie**, dass es bei Unterdomänen keine Übereinstimmung gibt.<br><br>Das *domain*-Attribut wird für Domänen-Cookies verwendet (ein vorangestellter Punkt ist dabei zulässig, aber optional).<br>Das *host*-Attribut wird für Nur-Host-Cookies verwendet (ein vorangestellter Punkt ist dabei ein Fehler). Wenn Sie keine oder beide Optionen angeben, hat dies einen Fehler zur Folge.<br>* Bei einem Cookie handelt es sich um ein Domänen-Cookie, wenn in der Cookie-Zeichenfolge eine Domäne angegeben wurde (über den HTTP-Set-Cookie-Antwortheader oder die "document.cokie JS"-API). Ein Domänen-Cookie gilt für die angegebene Domäne und alle Unterdomänen. Wenn eine Domäne nicht in der Cookiezeichenfolge angegeben wurde, ist das Cookie ein Nur-Host-Cookie und gilt nur für den bestimmten Host, für den es festgelegt wurde. Einige Klassen von URLs, z. B. Single-Word-Hostnamen (z. B. http://intranetsite) und IP-Adressen), http://10.0.0.1) können nur Nur-Host-Cookies festlegen.    |
 | \<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2" **path**="/a/b/c"\>\</shared-cookie\>  | **(Optional)** Es kann ein *path*-Attribut angegeben werden. Wenn kein path-Attribut angegeben wird (oder es leer ist), entsprechen alle Cookies, die mit Domain/Host und Name übereinstimmen, der Richtlinie, und das unabhängig vom Pfad (Platzhalterregel).<br><br>Bei Angabe eines Pfads muss es sich um eine exakte Übereinstimmung handeln.<br>Wenn ein Cookie einer Regel mit einem Pfad entspricht, hat dies Vorrang vor einer Regel ohne Pfad. |
 
 #### <a name="sharing-example"></a>Weitergabe-Beispiel
