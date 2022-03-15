@@ -3,19 +3,19 @@ title: Seiteninterne Navigation im Internet Explorer-Modus beibehalten
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Seiteninterne Navigation im Internet Explorer-Modus beibehalten
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 2b340f403d66f78372cc4b3a045d0c0ebb6b849b
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979213"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445859"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Seiteninterne Navigation im Internet Explorer-Modus beibehalten
 
@@ -30,11 +30,11 @@ Eine seiteninterne Navigation wird über einen Link, ein Skript oder ein Formula
 
 Die folgenden Windows-Updates sind für diese Richtlinie erforderlich:
 
+- Windows 11
 - Windows 10 Version 1909 & 1903, Windows Server Version 1909 & 1903 ([KB4532695](https://support.microsoft.com/help/4532695))
 - Windows 10 Version 1809, Windows Server Version 1809, Windows Server 2019 ([KB4534321](https://support.microsoft.com/help/4534321))
 - Windows 10 Version 1803 ([KB4534308](https://support.microsoft.com/help/4534308))
 - Windows 10 Version 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
-
 
 ## <a name="about-this-policy"></a>Informationen zu dieser Richtlinie
 

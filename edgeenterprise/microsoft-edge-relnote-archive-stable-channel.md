@@ -3,23 +3,161 @@ title: Archivierte Versionshinweise für Microsoft Edge Stable Channel
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/06/2022
+ms.date: 03/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Archivierte Versionshinweise für Microsoft Edge Stable Channel
-ms.openlocfilehash: 0e0239e6cf73cbad694613d36eb0fed5b71a3d65
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 0bbe93e8758e093738c679aea9ce769975f47116
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298203"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445849"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Archivierte Versionshinweise für Microsoft Edge Stable Channel
 
 Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Stable Channel enthalten sind. Alle Sicherheitsupdates werden [hier](microsoft-edge-relnotes-security.md) aufgelistet.
+
+## <a name="version-960105429-november-19"></a>Version 96.0.1054.29: 19. November
+
+Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#november-19-2021) aufgeführt.
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Cloud Site List Management für den IE-Modus in der öffentlichen Vorschau.** Mit cloudbasierter Websitelistenverwaltung können Sie Ihre Websitelisten für den IE-Modus in der Cloud verwalten, ohne dass eine lokale Infrastruktur zum Hosten der Websiteliste Ihrer Organisation erforderlich ist. Sie können auf das Feature für die Verwaltung von Cloudwebsitelisten über die Microsoft Edge Websitelisten im Microsoft 365 Admin Center zugreifen. Weitere Informationen finden Sie im Artikel zur [Cloud-Websitelistenverwaltung für den IE-Modus (Public Preview).](./edge-ie-mode-cloud-site-list-mgmt.md)
+  
+- **Verbesserte Übergabe zwischen dem IE-Modus und dem modernen Browser.** Ab dieser Version von Microsoft Edge enthalten die Navigationen zwischen Microsoft Edge und Internet Explorer-Modus Formulardaten und zusätzliche HTTP-Header. Referrer-Header, Post-Daten, Formulardaten und Anforderungsmethoden werden auf den beiden Oberflächen korrekt weitergeleitet. Mithilfe der InternetExplorerIntegrationComplexNavDataTypes-Richtlinie können Sie angeben, welche Datentypen einbezogen werden sollen. Weitere Informationen finden Sie in den folgenden häufig gestellten Fragen: [Meine Anwendung erfordert die Übertragung von POST-Daten zwischen dem IE-Modus und Microsoft Edge. Wird dies unterstützt?](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported)
+
+- **Aktualisieren Sie Microsoft Edge WebWiew2 mit WSUS.** IT-Administratoren, die Windows Server Update Services (WSUS) zum Aktualisieren von Microsoft Edge verwenden, können auch Microsoft Edge WebView2 mithilfe von WSUS aktualisieren. Diese Funktion ermöglicht Administratoren einen einfacheren Wartungsprozess für Offlinegeräte.
+
+- **WSUS-Updates für Server.** WSUS- und Katalogupdates für Microsoft Edge Kanäle (Stable, Beta und Dev) gelten jetzt für Windows Server-SKUs, die Microsoft Edge installiert haben, einschließlich Windows Server 2022. Weitere Informationen zum Konfigurieren von WSUS-Updates für Microsoft Edge finden Sie unter [Update Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json&toc=https://docs.microsoft.com/DeployEdge/toc.json#update-microsoft-edge).
+
+- **Microsoft Edge AutoLaunch-Protokollkomponente.** Microsoft Edge 96 führt die AutoLaunch-Protokollkomponente ein, die [](https://textslashplain.com/2019/07/16/updating-browsers-quickly-flags-respins-and-components/) Listen von Schemaursprungswörterbüchern enthält, die automatisch zugelassen oder blockiert werden sollen. Dies schützt Kunden vor gefährlichen Schemas (z. B. einem Protokollhandler mit 0 Tagen), während Aufforderungen aus bekannten sicheren Kopplungen eliminiert werden (z. B. kann die Teams Website die Teams Client-App öffnen). Wenn Sie aus irgendeinem Grund nicht möchten, dass Microsoft Edge anfällige Protokollhandler blockieren und bekannte sichere Kopplungen zulassen, die Umschaltfläche in *edge://settings/content/applicationLinks* verwenden oder die [AutoLaunchProtocolsComponentEnabled-Richtlinie](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) auf "False" festlegen.
+
+- **Starten Sie progressive Web App (PWA) direkt über Protokolllinks.** Installed PWAs handle links that use a specific protocol for a more integrated experience.
+
+- **Zeigen Sie schnell Office Dateien im Browser an.** Benutzer können jetzt Office Dateien wie Dokumente, Tabellenkalkulationen und Präsentationen anzeigen, auf die sie beim Browsen auf Microsoft Edge direkt im Browser stoßen, ohne die Datei herunterladen und dann in einer anderen Anwendung öffnen zu müssen. Die Dateiöffnungsoberfläche für Office Dateien, die auf OneDrive oder SharePoint gehostet werden, wird nicht geändert.
+  
+- **Freihandformhervorhebung auf PDFs.** Die PDF-Anzeige- und Markupoberfläche wird durch die Hinzufügung von Freihandformmarkern verbessert. Sie können Abschnitte in PDFs, auf die Sie keinen Zugriff haben, und gescannte Dokumente hervorheben.
+
+- **Hardwareerzwingte Stack Protection.** Microsoft Edge beginnen, einen noch sichereren Browsermodus zu unterstützen, der hardwareabhängigen Steuerungsfluss für Browserprozesse auf unterstützter Hardware (Intel 11. Generation) verwendet. oder AMD Zen 3). Hinweis: Da es sich um ein kontrolliertes Featurerollout handelt, bemerken Sie möglicherweise nicht, dass dieses Feature auf allen Geräten aktiviert ist. Sie können den hardwareerzwingten Stapelschutz aktivieren oder deaktivieren, indem Sie die Bilddateiausführungsoptionen (IFEO) mithilfe von Gruppenrichtlinien bearbeiten.
+
+- **Neues Warndialogfeld für Tippfehler bei Websites.** Der Browser zeigt eine Warnung auf einigen Websites mit URLs an, die anderen Websites sehr ähnlich aussehen. Diese Benutzeroberfläche verwendet clientseitige Heuristiken, um Benutzer vor Websites zu warnen, die möglicherweise häufig verwendete Websites spoofen. Weitere Informationen finden Sie unter ["Was ist Tippfehler?"](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
+  
+- **Wörterbuch zur Minisymbolleiste in Plastischer Reader hinzugefügt.**  Wir fügen der Minisymbolleiste Wörterbuchfunktionen hinzu, um Sie beim Lesen und Recherchieren zu unterstützen. Sie können die Rechtschreibung und Definitionen von Wörtern in der Plastischer Reader-Erfahrung schneller und einfacher nachschlagen.
+  
+- **Erfahren Sie, wie Sie mathematische Probleme mit Math Solver lösen.** Wir freuen uns, Ihnen mitteilen zu können, dass Sie Math Solver in Microsoft Edge verwenden können, um Hilfe bei einer Vielzahl mathematischer Konzepte zu erhalten. Diese Konzepte reichen von elementaren arithmetischen und quadratischen Formeln bis hin zu Trigonometrie und Berechnung. Mit Math Solver können Sie ein Bild eines handschriftlichen oder gedruckten mathematischen Problems erstellen und dann eine sofortige Lösung mit schrittweisen Anweisungen bereitstellen, mit denen Sie lernen können, wie Sie die Lösung ohne Hilfe erreichen. Math Solver verfügt auch über eine mathematische Tastatur, mit der Sie mathematische Probleme einfach eingeben können. Mit dieser Tastatur müssen Sie keine herkömmliche Tastatur durchsuchen, um die benötigten mathematischen Zeichen zu finden. Nach der Lösung Ihres Problems bietet Math Solver Optionen zum weiteren Lernen mit Quizfragen, Arbeitsblättern und Videolernprogrammen.
+
+- **Split-Tunnel-VPN-Unterstützung für WebRTC.** Ermöglicht Unternehmenskunden den Vorteil des geteilten VPN-Tunnels für Peer-to-Peer-Datenverkehr auf Microsoft Edge. Sie können dieses Feature mithilfe der [WebRtcRespectOsRoutingTableEnabled-Richtlinie](/deployedge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) aktivieren.
+
+### <a name="policy-updates"></a>Richtlinienupdates
+
+#### <a name="new-policies"></a>Neue Richtlinien
+
+- [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) – Verhindert, dass Dateien in Application Guard hochgeladen werden
+- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) – Zulassen, dass der Audioprozess mit einer Priorität ausgeführt wird, die auf Windows
+- [AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) – AutoLaunch-Protokollkomponente aktiviert
+- [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) – Konfigurieren, wann der Effizienzmodus aktiviert werden soll
+- [ForceSyncTypes](/DeployEdge/microsoft-edge-policies#forcesynctypes) – Konfigurieren der Liste der Typen, die für die Synchronisierung enthalten sind
+- [InternetExplorerIntegrationComplexNavDataTypes](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) – Konfigurieren, ob Formulardaten und HTTP-Header gesendet werden, wenn sie in den Internet Explorer-Modus wechseln oder ihn verlassen
+- [InternetExplorerModeToolbarButtonEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled) – Schaltfläche "Neuladen im Internet Explorer-Modus" auf der Symbolleiste anzeigen
+- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) – Druckmodus PostScript
+- [PrintRasterizePdfDpi](/DeployEdge/microsoft-edge-policies#printrasterizepdfdpi) – PDF-DPI -Druckrasterung
+- [RendererAppContainerEnabled](/DeployEdge/microsoft-edge-policies#rendererappcontainerenabled) – Renderer im App-Container aktivieren
+- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) – Anzeigen von Links, die von Microsoft 365 Apps im Verlauf freigegeben wurden
+- [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) – Konfigurieren von Edge TyposquattingChecker
+
+## <a name="version-950102053-november-12"></a>Version 95.0.1020.53: 12. November
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-950102044-november-4"></a>Version 95.0.1020.44: 4. November
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-94099258-october-30"></a>Version 94.0.992.58: 30. Oktober
+
+Verschiedene Fehler und Leistungsprobleme für das Release „Stabil (Erweitert) wurden behoben.
+
+## <a name="version-950102040-october-29"></a>Version 95.0.1020.40: 29. Oktober
+
+> [!IMPORTANT]
+> Dieses Update enthält einen Fix für [CVE-2021-38000](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38000) und [CVE-2021-38003](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38003), die vom Chromium-Team als Exploit gemeldet wurden. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide)
+
+Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#october-29-2021) aufgeführt.
+
+## <a name="version-950102038-october-28"></a>Version 95.0.1020.38: 28. Oktober
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-94099257-october-27"></a>Version 94.0.992.57: 27. Oktober
+
+Verschiedene Fehler und Leistungsprobleme für das Release „Stabil (Erweitert) wurden behoben.
+
+## <a name="version-950102030-october-21"></a>Version95.0.1020.30: 21.Oktober
+
+Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnotes-security#october-21-2021) aufgeführt.
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Support für „Im Datei-Explorer anzeigen“ für Microsoft Office SharePoint Online-Bibliotheken in Microsoft Edge.**  Jetzt können Sie die Funktion „Im Datei-Explorer anzeigen“ in modernen Microsoft Office SharePoint Online-Dokumentbibliotheken aktivieren. Damit diese Erfahrung für Ihre Benutzer sichtbar und funktionsfähig ist, müssen Sie die Microsoft Edge-Richtlinie [Konfigurieren des Features „Im Datei-Explorer anzeigen“ für Microsoft Office SharePoint Online-Seiten in Microsoft Edge](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) aktivieren und Ihre Microsoft Office SharePoint Online-Mandantenkonfiguration aktualisieren. Weitere Informationen: [Anzeigen von Microsoft Office SharePoint Online-Dateien mit dem Datei-Explorer in Microsoft Edge](/SharePoint/sharepoint-view-in-edge).
+
+- **Datei-URL-Links für Intranetzonen werden im Windows-Datei-Explorer geöffnet.**  Sie können zulassen, dass Datei-URL-Links zu Intranetzonen-Dateien, die von Intranetzonen-HTTPS-Websites stammen, den Windows-Datei-Explorer für diese Datei oder dieses Verzeichnis öffnen. Sie können diese Erfahrung mithilfe der Richtlinie [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) aktivieren.
+
+- **Verbesserungen an der Downloaderfahrung.** Die Unterstützung für das Herunterladen der Benutzererfahrung wurde auf progressive Webanwendungen (PWAs) und WebView erweitert. Wir beginnen auch mit der Unterstützung von Drag & Drop zum Datei-Explorer und zum Desktop.
+
+- **Machen Sie dort weiter, wo Sie in PDF-Dokumenten aufgehört haben.**  Sie können jetzt den Lesevorgang dort fortsetzen, wo Sie Ihr PDF-Dokument zuletzt geschlossen haben.
+
+- **Der Effizienzmodus verlängert die Akkulaufzeit, wenn Ihr Laptop in den Stromsparmodus wechselt.**  Der Effizienzmodus wird aktiv, wenn Ihr Laptop in Stromsparmodus wechselt, um dem Browser die Verwaltung der Ressourcennutzung zur Verlängerung der Akkulaufzeit Ihres Computers zu ermöglichen. Sie haben vier Optionen, wenn der Effizienzmodus aktiv wird: „Nicht eingesteckt und niedriger Akkustand“, „Nicht eingesteckt“, „Immer“ und „Nie“. Hinweis: Hierbei handelt es sich um ein Feature für den kontrollierten Rollout. Wenn Sie dieses Feature nicht sehen, schauen Sie in Kürze wieder vorbei, während wir mit dem Rollout fortfahren.
+
+- **Freiformtextfelder, die PDF-Dokumenten hinzugefügt werden.** Wir unterstützen jetzt das Hinzufügen von Freiformtextfeldern zu PDF-Dokumenten. Sie können diese Felder verwenden, um Formulare auszufüllen und sichtbare Notizen hinzuzufügen.
+
+- **Die Unterstützung für Zitate wurde „Sammlungen“ hinzugefügt.**  Wir haben die Erfahrung „Sammlungen“ verbessert, insbesondere für Schüler/Studenten und Forscher. „Sammlungen“ unterstützt jetzt Zitate und Leselisten.
+
+- **Aktualisieren Sie Ihre Kennwörter schneller und mit weniger Klicks.** Der Browser führt Sie jetzt direkt zur Seite „Kennwort ändern“ für eine bestimmte Website. Durch diese Aktion sparen Sie Zeit und Klicks, da Sie nicht mehr manuell zur Seite navigieren müssen. Nachdem Sie sich auf dieser Seite befinden, füllt der Browser ihr vorhandenes Kennwort ebenfalls automatisch aus und schlägt ein starkes, eindeutiges neues Kennwort vor.  Hinweis: Dieses Feature ist derzeit nur auf einer begrenzten Anzahl von Websites verfügbar.
+
+- **Automatische Kontoerstellung.** Wir bieten jetzt zusätzlichen Support auf Registrierungsseiten, indem wir Ihnen das Erstellen eines Onlinekontos mit nur einem Klick ermöglichen. Wählen Sie dazu die Dropdownliste „Vorschlag“ aus, wenn Sie im Registrierungsformular auf ein beliebiges Formularfeld klicken. Auf diese Weise werden nicht nur Informationen angezeigt, die für das Registrierungsformular relevant sind, sondern auch ein Vorschlag für ein starkes neues Kennwort. Nach der Auswahl werden alle relevanten Informationen in den entsprechenden Feldern aufgefüllt, und das vorgeschlagene Kennwort wird bei der Übermittlung an die Website automatisch gespeichert. Hinweis: Dieses Feature ist derzeit nur auf einer begrenzten Anzahl von Websites verfügbar.
+
+### <a name="policy-updates"></a>Richtlinienupdates
+
+#### <a name="new-policies"></a>Neue Richtlinien
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Blockierung von Legacy-Browsererweiterungspunkten aktivieren
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Gibt an, ob WebAssembly-Module ursprungsübergreifend gesendet werden können.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Gibt an, ob die Berechtigungsrichtlinie für die Anzeigeerfassung aktiviert oder übersprungen wird.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Konfigurieren der Pixelanpassung zwischen window.open-Höhen, die von Seiten im IE-Modus stammen, im Vergleich zu Seiten im Microsoft Edge-Modus.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Konfigurieren der Pixelanpassung zwischen window.open-Breiten, die von Seiten im IE-Modus stammen, im Vergleich zu Seiten im Microsoft Edge-Modus.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Zulassen, dass Datei-URL-Links von Intranetzonen von Microsoft Edge im Windows-Datei-Explorer geöffnet werden
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Neue SmartScreen-Bibliothek aktivieren
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Konfigurieren des ShadowStack-Absturzrollbackverhaltens
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Visuelle Suche aktiviert
+
+#### <a name="obsoleted-policies"></a>Abgeschaffte Richtlinien
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed): Zulassen von Internet Explorer-Modustests
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Aktivieren der Standardeinstellung für das Verhalten von Legacy-SameSite-Cookies
+
+## <a name="version-94099250-october-14"></a>Version94.0.992.50: 14.Oktober
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-94099247-october-11"></a>Version94.0.992.47: 11.Oktober
+
+Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#october-11-2021) aufgeführt.
+
+## <a name="version-94099238-october-1"></a>Version 94.0.992.38: 1. Oktober
+
+> [!Important]
+> Dieses Update enthält einen Fix für [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) und [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), die vom Chromium-Team als Exploit gemeldet wurden. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide)
+
+Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#october-01-2021) aufgeführt.
+
+## <a name="version-94099237-september-30"></a>Version 94.0.992.37: 30. September
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ## <a name="version-94099231-september-24"></a>Version 94.0.992.31: 24. September
 
@@ -171,7 +309,7 @@ Stable Channel-Sicherheitsupdates sind [hier](/deployedge/microsoft-edge-relnote
 
 **Benutzer können auf Internet Explorer-Modus auf Microsoft Edge problemlos wechseln**. Ab Microsoft Edge Version 92 können Benutzer eine Website im Internet Explorer-Modus auf Microsoft Edge neu laden, anstatt sich auf die eigenständige IE 11-Anwendung zu verlassen, während sie auf die Konfiguration einer Website in der Websiteliste für den Enterprise-Modus warten. Benutzer werden aufgefordert, die Website ihrer lokalen Websiteliste hinzuzufügen, sodass die Navigation zu derselben Seite in Microsoft Edge für die nächsten 30 Tage automatisch im IE-Modus gerendert wird. Mit der [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)-Richtlinie können Sie diese Umgebung konfigurieren und den Zugriff auf die Einstiegspunkte des IE-Modus sowie die Möglichkeit zum Hinzufügen von Websites zur lokalen Websiteliste zulassen. Mit der [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)-Richtlinie können Sie die Anzahl der Tage anpassen, die Websites in der lokalen Websiteliste gespeichert werden sollen. Beachten Sie, dass KB5003698 oder höher für Windows 10, Version 1909, erforderlich ist; oder KB5003690 oder höher für Windows 10, Version 2004, Windows 10, Version 20H2 oder Windows 10, Version 21H1, für die End-to-End-Erfahrung erforderlich ist. Weitere Informationen finden Sie unter [Lokale Websiteliste für den IE-Modus.](/deployedge/edge-ie-mode-local-site-list)
 
-**MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
+**MHTML-Dateien werden standardmäßig im Internet Explorer-Modus geöffnet**. Ab Microsoft Edge Version 92 Stable werden MHTML-Dateitypen automatisch im Internet Explorer-Modus auf Microsoft Edge anstelle der Internet Explorer-Anwendung (IE11) geöffnet. Dies wird am häufigsten beim Versuch beobachtet, Outlook-E-Mails in einem Browser anzuzeigen. Diese Änderung tritt nur auf, wenn IE11 der Standardhandler für diesen Dateityp ist. Wenn Sie dies lieber ändern möchten, können Sie dies vor der Installation des Stable Version 92-Updates mithilfe [dieser Anleitung](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) tun.
 
 **Die Warnung „Entwicklermoduserweiterungen deaktivieren“ kann zwei Wochen lang geschlossen werden.** Ab Microsoft Edge Version 92 können Sie die Warnung „Entwicklermoduserweiterungen deaktivieren“ 2 Wochen lang erneut anzeigen, indem Sie die Option im Dropdownmenü des Warnungsdialogfelds auswählen.
 
@@ -386,7 +524,7 @@ Acht neue Richtlinien wurden hinzugefügt. Laden Sie die aktualisierten administ
 ## <a name="version-89077477-april-14"></a>Version 89.0.774.77: 14. April
 
 > [!Important]
->Dieses Update enthält einen Fix für [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) und [CVE-2021-21220,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) der vom Chromium Team gemeldet wurde, dass ein Exploit in der Natur ist.  Weitere Informationen finden Sie im [Leitfaden zu Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
+>Dieses Update enthält einen Fix für [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) und [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220), der vom Chromium-Team als Exploit gemeldet wurde.  Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
 
 Sicherheitsupdates im Stabilen Kanal sind [hier](/deployedge/microsoft-edge-relnotes-security#april-14-2021) aufgeführt.
 
@@ -871,8 +1009,7 @@ Es wurden dreizehn neue Richtlinien hinzugefügt. Laden Sie die aktualisierten a
 - [AutoOpenAllowedForURLs](./microsoft-edge-policies.md#autoopenallowedforurls): URLs, auf die AutoOpenFileTypes angewendet werden kann.
 - [AutoOpenFileTypes](./microsoft-edge-policies.md#autoopenfiletypes): Liste der Dateitypen, die beim Download automatisch geöffnet werden sollen.
 - [DefaultSearchProviderContextMenuAccessAllowed](./microsoft-edge-policies.md#defaultsearchprovidercontextmenuaccessallowed): Suchzugriff auf Kontextmenü des standardmäßigen Suchdienstanbieters zulassen.
-- [EnableSha1ForLocalAnchors](./microsoft-edge-policies.md#enablesha1forlocalanchors): Zulassen von Zertifikaten, die mit SHA-1 signiert wurden, wenn sie von lokalen Vertrauensankern ausgegeben wurden.
-- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](./microsoft-edge-policies.md#exemptdomainfiletypepairsfromfiletypedownloadwarnings): Deaktivieren von auf Dateierweiterungen basierenden Download-Warnungen für bestimmte Dateitypen in Domänen.
+- [EnableSha1ForLocalAnchors](./microsoft-edge-policies.md#enablesha1forlocalanchors): Zulassen von Zertifikaten, die mit SHA-1 signiert wurden, wenn sie von lokalen Vertrauensankern ausgegeben wurden. <!--- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](./microsoft-edge-policies.md#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains. -->
 - [IntensiveWakeUpThrottlingEnabled](./microsoft-edge-policies.md#intensivewakeupthrottlingenabled): Steuern des IntensiveWakeUpThrottling-Features.
 - [NewTabPagePrerenderEnabled](./microsoft-edge-policies.md#newtabpageprerenderenabled): Aktivieren des Vorabladens der „Neuer Tab“-Seite für schnellere Darstellung.
 - [NewTabPageSearchBox](./microsoft-edge-policies.md#newtabpagesearchbox): Konfigurieren der Suchfeldfunktion der „Neuer Tab“-Seite.
@@ -1059,7 +1196,7 @@ Ein Benutzer gibt "powerbi" fälschlicherweise als "powerbbi".com ein. Der Link 
 
 - Mehrere DevTools-Updates, einschließlich neuer Unterstützung für Remote-Debugging, Verbesserungen der Benutzeroberfläche und mehr. Weitere Einzelheiten finden Sie unter [Neuigkeiten in DevTools (Microsoft Edge 83)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/03/devtools).
 
-- MCAS-Warnszenario (Microsoft Cloud Access Security) ist jetzt verfügbar. Dies ermöglicht Administratoren das Einrichten von "Warnung", einer neuen Kategorie von MCAS-Blockierungen, bei denen der Benutzer eine MCAS-Seitenblockierung außer Kraft setzen kann. MDATP E5-Blockierungen sind in Microsoft Edge in SmartScreen-Blockierungen nativ integriert und bieten eine nahtlose Benutzererfahrung. Diese Funktion ermöglicht die Anzeige eines ganzseitigen roten Blocks mit der Meldung "Diese Website wird von Ihrer Organisation blockiert" anstelle einer Popupbenachrichtigung.
+- Das Warnszenario für Microsoft Defender für Cloud-Apps ist jetzt verfügbar. Auf diese Weise können Administratoren Warnungen einrichten, eine neue Kategorie von Defender für Cloud-Apps-Blöcken, bei der der Benutzer eine Defender für Cloud Apps-Blockseite überschreiben kann. MDATP E5-Blockierungen sind in Microsoft Edge in SmartScreen-Blockierungen nativ integriert und bieten eine nahtlose Benutzererfahrung. Diese Funktion ermöglicht die Anzeige eines ganzseitigen roten Blocks mit der Meldung "Diese Website wird von Ihrer Organisation blockiert" anstelle einer Popupbenachrichtigung.
 
 - Synchrones XmlHttpRequest bei Seitenbeendigung nicht zulassen. Das Senden synchroner XmlHttpRequests während des Beendens einer Webseite wird entfernt. Durch diese Änderung wird die Leistung und Zuverlässigkeit des Browsers verbessert, sie wirkt sich jedoch möglicherweise auf Webanwendungen aus, die noch nicht aktualisiert wurden, um modernere Web-APIs wie sendBeacon und fetch zu verwenden. Die Gruppenrichtlinie zum Deaktivieren dieser Änderung und zum Zulassen von synchronem XHR während der Seitenbeendigung ist bis Microsoft Edge 88 verfügbar. Weitere Informationen finden Sie unter [Websitekompatibilität – Auswirkungen von Änderungen an Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 

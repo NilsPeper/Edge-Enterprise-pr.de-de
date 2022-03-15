@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Bereitstellen von Microsoft Edge mit Windows 10-Updates
-ms.openlocfilehash: 9102ef37c6a5329a5cba79ed976237d7fd7e2063
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 1f3a99259cb28c46e4f6f30de05fade6ac158336
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979132"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445829"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a>Bereitstellen von Microsoft Edge mit Windows 10-Updates
 
@@ -23,7 +23,14 @@ Der Artikel enthält Informationen für Benutzer, die Microsoft Edge mithilfe vo
 
 ## <a name="for-windows-10-release-20h2"></a>Für Windows 10, Release 20H2
 
-In Windows 10, Version 20H2, ist Microsoft Edge bereits als Standardbrowser installiert.
+Windows 10 20H2 und höher enthalten Microsoft Edge als Standardbrowser vorinstalliert. Version 84 von Edge, die mit Windows 10 20H2 ausgeliefert wurde, und Version 92 von Edge, die mit Windows 10 21H2 ausgeliefert wurde, sind jetzt veraltet. Während Microsoft Edge sich automatisch auf eine neuere Version aktualisieren, nachdem sich ein Benutzer angemeldet hat, da der Zeitpunkt des Updates von verschiedenen Faktoren abhängt, kann dies etwas unaufdränglich sein. Für Organisationen, die mehr Kontrolle wünschen und sicherstellen möchten, dass Edge (Stable Channel) vor der Benutzeranmeldung auf die neueste Version aktualisiert wird, kann der folgende PowerShell-Befehl verwendet werden, um ein Edgeupdate während Windows Windows-Willkommensseite zu erzwingen.
+
+`Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"`
+
+Wenn Sie Windows Autopilot verwenden, ist es möglich, dieses Skript mithilfe des [Microsoft Win32-Inhaltsvorbereitungstools](/mem/intune/apps/apps-win32-prepare) als INTUNEWIN-Datei einzuschließen. Sie kann dann bei Bedarf als erforderliche App für die Registrierungsstatusseite (Esp) festgelegt werden.
+
+> [!NOTE]
+> Wenn Sie derzeit Richtlinien wie [die Außerkraftsetzung des Zielkanals](/deployedge/microsoft-edge-update-policies#target-channel-override) oder die [Außerkraftsetzung der Zielversion](/deployedge/microsoft-edge-update-policies#targetversionprefix) nutzen, um auf einer älteren Version von Edge zu verbleiben, beachten Sie, dass das obige Skript keine Richtlinien berücksichtigt und einfach auf die neueste Version aktualisiert wird. Standardmäßig stuft Edge sich selbst nicht herunter, einschließlich, sobald diese Richtlinien später empfangen werden.
 
 ## <a name="for-windows-10-releases-rs4-through-20h1"></a>Für Windows 10, Release RS4 bis 20H1
 

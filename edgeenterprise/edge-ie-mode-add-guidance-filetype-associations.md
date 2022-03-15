@@ -3,24 +3,24 @@ title: Zuordnen von Dateierweiterungen zum Internet Explorer-Modus
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/24/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Zuordnen von Dateierweiterungen zum Internet Explorer-Modus
-ms.openlocfilehash: c7d72e94079ff35d8ffe49c068585b0c97d208cc
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 1d25baa224e4fdcdd76bd599ccedb807c9dd7061
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298253"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445750"
 ---
 # <a name="associate-file-extensions-with-internet-explorer-mode"></a>Zuordnen von Dateierweiterungen zum Internet Explorer-Modus
 
 >[!Note]
-> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt. Lesen Sie [diese häufig gestellten Fragen,](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)um eine Liste der Bereiche anzuzeigen. Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt. Lesen Sie [diese häufig gestellten Fragen](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549), um eine Liste der Bereiche anzuzeigen. Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 In diesem Artikel wird erläutert, wie Sie Microsoft Edge mit dem Internet Explorer-Modus mit Dateierweiterungen für Desktopanwendungen verknüpfen.
 
@@ -40,7 +40,7 @@ Die folgenden Anweisungen zeigen einen Eintrag, der Microsoft Edge dem IE-Modus 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 ```
 
@@ -63,7 +63,7 @@ Die folgenden Anweisungen zeigen einen Eintrag, der Microsoft Edge dem IE-Modus 
 "MSEdgeIEModeMHT"=hex(0):
 ```
 
-Nachdem Sie die im vorherigen Beispiel beschriebenen Schlüssel festgelegt haben, wird Benutzern im Menü **"Öffnen mit"** eine weitere Option zum Öffnen einer \.mht-Datei mit Microsoft Edge \<channel\> im IE-Modus angezeigt.
+Nachdem Sie die im vorherigen Beispiel beschriebenen Schlüssel festgelegt haben, wird Ihren Benutzern im Menü **"Öffnen mit**" eine weitere Option zum Öffnen einer \.mht-Datei mit Microsoft Edge \<channel\> im IE-Modus angezeigt.
 
 ## <a name="registry-example"></a>Registrierungsbeispiel
 
@@ -80,7 +80,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\DefaultIcon]
@@ -97,7 +97,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>Konfigurieren von Dateitypen zum Öffnen im Internet Explorer-Modus
 
-Ab Microsoft Edge 88 können Sie bestimmte Dateityplinks so konfigurieren, dass sie im Internet Explorer-Modus mithilfe der Richtlinie "Kontextmenü anzeigen" geöffnet werden, [um Links im Internet Explorer-Modus zu öffnen.](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed)
+Ab Microsoft Edge 88 können Sie bestimmte Dateityplinks so konfigurieren, dass sie im Internet Explorer-Modus geöffnet werden. Verwenden Sie dazu das [Kontextmenü "Richtlinie anzeigen", um Links im Internet Explorer-Modus zu öffnen](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
 
 Sie können festlegen, für welche Dateitypen diese Option gelten soll, indem Sie Dateierweiterungen in der Richtlinie [Dateierweiterungs-Zulassungsliste zum Öffnen von lokalen Dateien im Internet Explorer-Modus](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist) angeben. 
 

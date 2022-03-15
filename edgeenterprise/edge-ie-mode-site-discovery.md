@@ -3,19 +3,19 @@ title: Schrittweise Anleitung für Enterprise Site Discovery
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 06/29/2021
+ms.date: 01/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Verwenden von Enterprise Site Discovery zur Vorbereitung auf den IE-Modus
-ms.openlocfilehash: bbcf829e8c2504286ea68df673dabd9b296887c9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a93569f455e5671a2d4adf8f5f70238d3f23143d
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979236"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445599"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Schrittweise Anleitung für Enterprise Site Discovery
 
@@ -119,7 +119,7 @@ Nachdem Ihre Geräte begonnen haben, Daten zu generieren, ist es an der Zeit, di
 7. Geben Sie im Dialogfeld **WMI-Verbindung herstellen** den Namen eines Computers ein, auf dem Enterprise Site Discovery konfiguriert ist. Wenn Sie eine Verbindung mit einem anderen Computer herstellen möchten, benötigen Sie Anmeldeinformationen mit der Berechtigung für den Zugriff auf WMI.
 8. Geben Sie in das Textfeld **WMI-Namespace** Folgendes ein: **root\cimv2\IETelemetry**.
 9. Wählen Sie **Verbinden** aus.
-10. Wählen Sie im Dialogfeld **Hardwareinventurklasse hinzufügen** in der Liste **Inventurklassen** die WMI-Klassen **IESystemINfo**, **IEUrlInfo** und **IECountInfo* aus.
+10. Wählen Sie im Dialogfeld " **Hardwareinventurklasse hinzufügen** " in der Liste der **Inventarklassen** die WMI-Klassen **IESystemINfo**, **IEUrlInfo** und **IECountInfo** aus.
 11. Klicken Sie auf **OK**, um das Dialogfeld **Klassenkennzeichner** und die anderen geöffneten Dialogfelder zu schließen.
 
 Nachdem der Client die Einstellungen über den Verwaltungspunkt aktualisiert hat, werden Datenberichte beim Ausführen der nächsten Hardwareinventur (standardmäßig alle sieben Tage) erstellt.

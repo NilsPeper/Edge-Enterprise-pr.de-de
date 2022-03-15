@@ -3,19 +3,19 @@ title: Microsoft Edge – Material für die Einführung bei Kunden
 ms.author: collw
 author: AndreaLBarr
 manager: seanlynd
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge – Material für die Einführung bei Kunden
-ms.openlocfilehash: d3c3fc426cf67e054aa37cabb3ac1ca42c1ab5d9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 36e2a0495eca2e860261aaf2ac8d2bb72e582f07
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979446"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445869"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Microsoft Edge – Material für die Einführung bei Kunden
 
@@ -96,4 +96,5 @@ Wenn Sie daran interessiert sind, mehr über die Vorteile von Microsoft Edge zu 
 
 ## <a name="see-also"></a>Weitere Informationen
 
+- [Microsoft Edge Einrichtungshandbuch](https://assistants.microsoft.com/microsoftedgesetupguide)
 - [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise)

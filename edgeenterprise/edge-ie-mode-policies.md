@@ -3,24 +3,24 @@ title: Konfigurieren von Richtlinien für den IE-Modus
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/23/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Konfigurieren von Richtlinien für den IE-Modus
-ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: de1165da7e2f86a8865db396fab6c640b9c96805
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979323"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445629"
 ---
 # <a name="configure-ie-mode-policies"></a>Konfigurieren von Richtlinien für den IE-Modus
 
 >[!Note]
-> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird ab dem 15. Juni 2022 nicht mehr unterstützt (eine Liste der in diesem Bereich enthaltenen Elemente [finden Sie in den FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt. Eine Liste der Bereiche finden Sie in den [häufig gestellten Fragen zur Einstellung von Internet Explorer 11-Desktop-Apps](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Informationen zum Einrichten Microsoft Edge finden Sie im [Microsoft Edge Setuphandbuch](https://go.microsoft.com/fwlink/?linkid=2188234). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. [Weitere Informationen finden Sie hier](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 In diesem Artikel wird erläutert, wie Sie Richtlinien für den IE-Modus konfigurieren.
 
@@ -52,7 +52,7 @@ Sie können Internet Explorer so konfigurieren, dass er direkt in Microsoft Edge
 5. Wählen Sie **Aktiviert** aus.
 6. Setzen Sie unter **Optionen**den Dropdown-Wert auf
    -  **Internet Explorer-Modus**, wenn Sie möchten, dass Websites in Microsoft Edge im IE-Modus geöffnet werden.
-   -  **Internet Explorer 11,** wenn Websites in einem eigenständigen Internet Explorer 11-Fenster geöffnet werden sollen (diese Option wird nach dem 15. Juni 2022 nicht mehr unterstützt, wenn die Internet Explorer 11-Desktopanwendung eingestellt und der Support eingestellt wird.  Nach dem 15. Juni 2022, wenn IE11 nicht mehr verfügbar ist, verhält sich diese Option wie die **Internet Explorer-Modusoption.)**  
+   -  **Internet Explorer 11** , wenn Websites in einem eigenständigen Internet Explorer 11-Fenster geöffnet werden sollen (diese Option wird nach dem 15. Juni 2022 nicht mehr unterstützt, wenn die Internet Explorer 11-Desktopanwendung eingestellt und der Support eingestellt wird.  Nach dem 15. Juni 2022, wenn IE11 nicht mehr verfügbar ist, verhält sich diese Option wie die **Internet Explorer-Modusoption** .)  
    -  **Keines**, falls Sie Benutzer an der Konfiguration des Internet Explorer-Modus über "edge://flags" oder über Befehlszeilenoptionen hindern möchten.
 
    > [!NOTE]
@@ -75,7 +75,7 @@ Mithilfe der folgenden Gruppenrichtlinien können Sie bestimmte Websites so konf
     > [!NOTE]
     > Die Konfiguration der Microsoft Edge-Richtlinie ist nicht zwingend erforderlich. Viele Organisationen verwenden dies als Überschreibung, sodass sie mit der IE-Richtlinie die aktuelle Websiteliste auf alle Benutzer ausrichten können und eine aktualisierte Version leichter auf Pilotverwendungen mit der Microsoft Edge-Richtlinie ausrichten können.
 
-Weitere Informationen zu Enterprise Mode Site Lists finden Sie unter [Use the Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager).
+Weitere Informationen zu Enterprise Mode Site Lists finden [Sie unter Use the Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager).
 
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Konfigurieren mithilfe der Richtlinie "Die Websiteliste für den Unternehmensmodus-IE verwenden":
@@ -140,7 +140,10 @@ Sie können verhindern, dass Ihre Benutzer Internet Explorer für Websites verwe
    - Microsoft Edge Dev, Version 77 oder höher
    - Microsoft Edge Canary, Version 77 oder höher
    - Microsoft Edge, Version 45 oder früher
-9. Klicken Sie auf **OK** oder **Übernehmen**, um die Einstellungen zu speichern.
+9. Klicken Sie auf **OK** oder **Übernehmen**, um die Einstellungen zu speichern.  
+
+    > [!TIP]
+    > Informationen zum Suchen nach Websites, die Sie ihrer Websiteliste für den IE-Modus hinzufügen müssen, finden Sie unter [Konfigurieren des IE-Modus für Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2188235) Handbuch. Wenn Sie bereits über eine Websiteliste verfügen, helfen Ihnen die Tools in diesem Handbuch dabei, sie auf die richtigen Benutzer anzuwenden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

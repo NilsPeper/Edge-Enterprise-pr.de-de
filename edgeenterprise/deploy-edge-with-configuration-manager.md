@@ -3,19 +3,19 @@ title: Bereitstellen von Microsoft Edge mithilfe vom System Center Konfiguration
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie hier, wie Sie Microsoft Edge mithilfe vom System Center Konfigurations-Manager (SCCM) bereitstellen können.
-ms.openlocfilehash: b0efa986c7f230f455d052f8e003616e081e324a
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: aa5272ebbd05a48a5418404ab8827d0b3795b2c9
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979129"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445719"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>Bereitstellen von Microsoft Edge mithilfe vom System Center Konfigurations-Manager
 
@@ -31,6 +31,9 @@ Lesen Sie die Informationen im Artikel [Einführung in die Anwendungsverwaltung 
 Laden Sie die Microsoft Edge Enterprise-Installationsdateien (**MicrosoftEdgeDevEnterpriseX64.msi** und/oder **MicrosoftEdgeDevEnterpriseX86.msi**) von der [Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)-Angebotsseite herunter.
 
 Stellen Sie sicher, dass Sie die Microsoft Edge-Installationsdateien an einem zugänglichen Netzwerkspeicherort speichern.
+
+> [!TIP]
+> Verwenden Sie die [Microsoft Edge Einrichtungshandbuchs](https://assistants.microsoft.com/microsoftedgesetupguide), um die Konfigurations-Manager-Schritte zu automatisieren.
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 

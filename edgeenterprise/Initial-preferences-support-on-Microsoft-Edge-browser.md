@@ -1,5 +1,5 @@
 ---
-title: Anfängliche Einstellungsunterstützung für Microsoft Edge Browser
+title: Erfahren Sie, wie Sie die anfänglichen Einstellungen für Microsoft Edge konfigurieren.
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
@@ -9,32 +9,37 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Anfängliche Einstellungsunterstützung für Microsoft Edge Browser.
-ms.openlocfilehash: 7a497fd2f3305b0c027a396936ef86bacbcb5b20
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Erfahren Sie, wie Sie die anfänglichen Einstellungen für Microsoft Edge konfigurieren.
+ms.openlocfilehash: 06452996be4e2f1e2c40bfc5ba1753b9d2b7b222
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979196"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445654"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Konfigurieren von Microsoft Edge mithilfe der anfänglichen Einstellungen für die Erstausführung
 
-Verwenden Sie die folgenden Informationen, um Microsoft Edge Einstellungen für die anfänglichen Einstellungen auf Ihren Windows Geräten zu konfigurieren.
+Verwenden Sie die Informationen in diesem Artikel, um Microsoft Edge Einstellungen für die anfänglichen Einstellungen auf Ihren Windows Geräten zu konfigurieren.
 
 > [!Note]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 93 oder höher.
 
 ## <a name="configure-policy-settings-on-windows"></a>Konfigurieren von Richtlinieneinstellungen unter Windows
 
-Ab Microsoft Edge version 93 unterstützt Microsoft ab Version 93 eine begrenzte Anzahl von Anfänglichen Einstellungen, die früher als "Mastereinstellungen" bezeichnet wurden, um Administratoren bei der Konfiguration von Browsern für die erste Ausführung zu unterstützen. sehen Sie sich die Liste der unterstützten Einstellungen unten an.  
+Ab Microsoft Edge Version 93 unterstützt Microsoft ab Version 93 eine begrenzte Anzahl von Anfänglichen Einstellungen, die früher als "Mastereinstellungen" bezeichnet wurden, um Administratoren bei der Konfiguration von Browsern für die erste Ausführung zu unterstützen. Weitere Informationen finden Sie in den unterstützten Einstellungen in der folgenden [Einstellungseinstellungstabelle](#preference-settings) .
 
-Bei der Bereitstellung dienen die anfänglichen Einstellungen als Standardbrowsereinstellungen auf verwalteten Geräten. Dies sind die Einstellungen, die von Administratoren bevorzugt werden, um als Standard verwendet zu werden, aber von Benutzern geändert werden können oder für einige Geräte nicht verfügbar sind, da sie keiner Active Directory®domäne angehören.
+Bei der Bereitstellung dienen die anfänglichen Einstellungen als Standardbrowsereinstellungen auf verwalteten Geräten. Diese Einstellungen sind die von Administratoren bevorzugten Einstellungen, die als Standardbrowsereinstellungen für die erstausführung verwendet werden.
 
-Einige Beispiele für Intialeinstellungen sind die anfängliche Konfiguration einer Standardstartseite oder Registerkarten mit bestimmten URLs.
+> [!NOTE]
+> Anfängliche Einstellungen können von Benutzern geändert werden und sind für einige Geräte nicht verfügbar, da sie keiner Active Directory-Domäne® beigetreten sind.
 
-Einstellungen werden nur einmal aus initial_preferences Datei kopiert, und alle Änderungen, die nach der Konfiguration an dieser Datei vorgenommen wurden, werden nicht berücksichtigt. Wenn eine Einstellung von einer [Microsoft Edge-Richtlinie](/deployedge/microsoft-edge-policies) verwaltet und in der initial_preferences-Datei konfiguriert ist, hat die Richtlinie immer Vorrang.
+Einige Beispiele für Einstellungen für die anfänglichen Einstellungen sind die anfängliche Konfiguration einer Standardstartseite oder Registerkarten mit bestimmten URLs.
 
-Nachfolgend finden Sie eine Liste der Einstellungseinstellungen, die derzeit von Microsoft Edge unterstützt werden:
+Einstellungen werden nur einmal aus der *initial_preferences* Datei kopiert. Änderungen, die nach der Konfiguration an dieser Datei vorgenommen wurden, werden nicht berücksichtigt. Wenn eine Einstellung von einer [Microsoft Edge-Richtlinie](/deployedge/microsoft-edge-policies) verwaltet und in der *initial_preferences-Datei* konfiguriert ist, hat die Richtlinie immer Vorrang.
+
+### <a name="preference-settings"></a>Einstellungseinstellungen
+
+In der folgenden Tabelle sind die Einstellungen aufgeführt, die derzeit von Microsoft Edge unterstützt werden.
 
 | Einstellungskategorie | Einstellung |
 | - | - |
@@ -48,34 +53,37 @@ Nachfolgend finden Sie eine Liste der Einstellungseinstellungen, die derzeit von
 | Homepage | Homepage_url |
 | homepage_is_newtabpage | homepage_is_newtabpage |
 | Sitzung | restore_on_startup<br>startup_urls |
-| Erweiterungen | Erweiterungen: Einstellungen |
+| Extensions | Erweiterungen: Einstellungen |
 
-## <a name="1-download-an-example-initial_preferences-file"></a>1: Herunterladen einer Beispieldatei initial_preferences
+## <a name="1-download-an-example-initial_preferences-file"></a>1: Herunterladen eines Beispiels initial_preferences Datei
 
-To get started, download the "Policy" file from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). Extrahieren Sie die Dateien, und öffnen Sie die `initial_preferences` Datei innerhalb des `examples` Ordners.
+Laden Sie zunächst die Datei "Richtlinie" von der [Microsoft Edge Enterprise Zielseite](/edge/business/download) herunter. Extrahieren Sie die Dateien im Download, und öffnen Sie dann die *initial_preferences* Datei im *Beispielordner* . Der nächste Screenshot zeigt die Optionen der Richtliniendatei, die heruntergeladen werden können.
+
+:::image type="content" source="media/initial-preferences-support-on-microsoft-edge-browser/edge-policy-files.png" alt-text="Microsoft Edge Richtliniendateien, die heruntergeladen werden können.":::
 
 ## <a name="2-customize-and-validate-the-initial_preferences-file"></a>2: Anpassen und Überprüfen der initial_preferences Datei
 
-Passen Sie die Einstellungseinstellungen in der heruntergeladenen *initial_preferences-Datei* an, und überprüfen Sie die Änderungen, um sicherzustellen, dass im JSON-Code keine Fehler vorhanden sind. Wenn Sie Fehler finden, überprüfen Sie die Syntax und Struktur der *initial_preferences* Datei, nehmen Sie Korrekturen vor und überprüfen Sie sie erneut. Einige Beispieltools zum Überprüfen von JSON, Online [JSON Tools](https://jsonformatter.org/) oder [JSON-Bearbeitung in Visual Studio Code](https://code.visualstudio.com/docs/languages/json).
+Passen Sie die Einstellungseinstellungen in der heruntergeladenen *initial_preferences-Datei* an, und überprüfen Sie die Änderungen, um sicherzustellen, dass im JSON-Code keine Fehler vorhanden sind. Wenn Sie Fehler finden, überprüfen Sie die Syntax und Struktur der *initial_preferences* Datei, nehmen Sie Korrekturen vor, und überprüfen Sie sie erneut. Einige Beispieltools zum Überprüfen von JSON, Online [JSON Tools](https://jsonformatter.org/) oder [JSON-Bearbeitung in Visual Studio Code](https://code.visualstudio.com/docs/languages/json).
 
 ## <a name="3-deploy-preferences-to-users-computer"></a>3: Bereitstellen von Einstellungen auf dem Computer der Benutzer
 
-Stellen Sie die *initial_preferences* Datei auf den Geräten der Benutzer zur gleichen Zeit bereit, wie Microsoft Edge Browser bereitgestellt wird, und platzieren Sie die Datei am folgenden Speicherort auf dem Gerät.
+Stellen Sie die *initial_preferences* Datei auf den Geräten der Benutzer zur gleichen Zeit bereit, wie Microsoft Edge bereitgestellt wird, und platzieren Sie die Datei am folgenden Speicherort auf dem Gerät.
 
 ### <a name="windows-amd64-and-arm64"></a>Windows (AMD64 und ARM64)
 
-| Kanal | Ort |
+| Kanal | Pfad |
 | - | - |
 | Stable | `"C:\Program Files (x86)\Microsoft\Edge\Application"` |
 | Beta | `"C:\Program Files (x86)\Microsoft\Edge Beta\Application"` |
 |Canary | `"%LOCALAPPDATA%\Microsoft\Edge SxS\Application"` |
 | Dev | `"C:\Program Files (x86)\Microsoft\Edge Dev\Application"` |
 
-**Hinweis:** Die *initial_preferences* Datei muss im selben Ordner wie die msedge.exe-Datei auf den Computern der Benutzer Windows bereitgestellt werden.  
+> [!NOTE]
+> Die *initial_preferences* Datei muss im selben Ordner wie die *msedge.exe-Datei * auf den Computern der Benutzer Windows bereitgestellt werden.  
 
 ### <a name="macos"></a>macOS
 
-| Kanal | Ort |
+| Kanal | Pfad |
 | - | - |
 | Stable | `"~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"` |
 | Beta | `“~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences"` |
@@ -84,8 +92,8 @@ Stellen Sie die *initial_preferences* Datei auf den Geräten der Benutzer zur gl
 
 ## <a name="important-notes-msi--pkg-deployment-and-initial_preferences-interaction"></a>Wichtige Hinweise: MSI-/Pkg-Bereitstellung und *initial_preferences* Interaktion
 
-Die anfänglichen Einstellungen werden nur wirksam, wenn die initial_preferences-Datei bereitgestellt wird, bevor der Browser von den Endbenutzern zum ersten Mal ausgeführt wird.  
+Die anfänglichen Einstellungen werden erst wirksam, nachdem die *initial_preferences* Datei bereitgestellt wurde, bevor der Browser von den Endbenutzern zum ersten Mal ausgeführt wird.  
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Die *initial_prefrences* Beispielvorlagendatei](https://www.microsoft.com/edge/business/download)
+- [Die *initial_prefrences* Beispielvorlagendatei](/edge/business/download)

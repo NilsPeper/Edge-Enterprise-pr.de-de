@@ -3,19 +3,19 @@ title: Microsoft Edge und Microsoft Defender Application Guard
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 03/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge-Unterstützung für Microsoft Defender Application Guard
-ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fd5293dae19be2aa0939e3a14eeb118907ad375a
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979338"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445489"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Edge-Unterstützung für Microsoft Defender Application Guard
 
@@ -53,7 +53,7 @@ Die Unterstützung von Application Guard im neuen Microsoft Edge-Browser ist fun
 
 ### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Aktivieren von Application Guard im passiven Modus und normales Durchsuchen von Edge
 
-Ab Microsoft Edge 94 haben Benutzer jetzt die Möglichkeit, den passiven Modus zu konfigurieren, was bedeutet, dass Application Guard die Konfiguration der Websiteliste ignoriert und Benutzer Edge normal durchsuchen können. Diese Unterstützung kann über Richtlinien gesteuert werden. Sie können die Edgerichtlinie [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) aktualisieren, um den passiven Modus zu aktivieren oder zu deaktivieren.
+Ab Microsoft Edge 94 haben Benutzer jetzt die Möglichkeit, den passiven Modus zu konfigurieren, was bedeutet, dass Application Guard die Konfiguration der Websitelisten ignoriert und Benutzer Edge normal durchsuchen können. Diese Unterstützung kann über Richtlinien gesteuert werden. Sie können die Edgerichtlinie [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) aktualisieren, um den passiven Modus zu aktivieren oder zu deaktivieren.
 
 > [!Note]
 > Diese Richtlinie wirkt sich NUR auf Edge aus, sodass Navigationen von anderen Browsern möglicherweise an den Application Guard-Container umgeleitet werden, wenn die entsprechenden Erweiterungen aktiviert sind.
@@ -129,7 +129,7 @@ Die folgenden Artikel enthalten die Informationen, die Sie zum Installieren, Kon
 
 - [Systemanforderungen](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
 - [Microsoft Defender Application Guard installieren](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
-- [Konfigurieren der Microsoft Defender-Gruppenrichtlinieneinstellungen](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
+- [Konfigurieren von Application Guard-Gruppenrichtlinieneinstellungen](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Testen von Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen

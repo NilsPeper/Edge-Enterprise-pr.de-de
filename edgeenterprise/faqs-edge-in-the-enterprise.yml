@@ -6,34 +6,34 @@ metadata:
   manager: laurawi
   ms.date: 06/29/2021
   audience: ITPro
-  ms.topic: conceptual
+  ms.topic: faq
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Häufig gestellte Fragen (FAQ) zur Bereitstellung von Microsoft Edge im Unternehmen
-  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: 5f63f45792824e0cafc8a875aca691979780aae8
+  ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11979114"
+  ms.lasthandoff: 03/15/2022
+  ms.locfileid: "12445410"
 title: Häufig gestellte Fragen (FAQ) zu Microsoft Edge im Unternehmen
 summary: >
   > [!NOTE]
 
-  > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
+  > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder neuer.
 sections:
 - name: Ignoriert
   questions:
   - question: Woher weiß ich, welche Version von Microsoft Edge ich habe?
     answer: >
-      Wählen Sie in der oberen rechten Ecke von Microsoft Edge das Ellipsensymbol (**...**) aus, und wählen Sie dann **Einstellungen**aus. Wählen Sie **Über Microsoft Edge** aus, um Ihre Version von Microsoft Edge anzuzeigen.
+      Wählen Sie in der oberen rechten Ecke von Microsoft Edge das Ellipsensymbol (**...**) aus, und wählen Sie dann **Einstellungen** aus. Wählen Sie **Über Microsoft Edge** aus, um Ihre Version von Microsoft Edge anzuzeigen.
   - question: Was ist mit Internet Explorer 11?
     answer: >
-      Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs finden Sie in den [häufig gestellten Fragen).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. Weitere Informationen finden Sie [hier](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+      Die Internet Explorer 11-Desktopanwendung wird eingestellt und wird am 15. Juni 2022 nicht mehr unterstützt (eine Liste des Umfangs finden Sie in den [häufig gestellten Fragen](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Dieselben IE11-Apps und -Websites, die Sie heute verwenden, können in Microsoft Edge im Internet Explorer-Modus geöffnet werden. Weitere Informationen finden Sie [hier](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
   - question: Unterstützt Microsoft Edge (Chromium-basiert) ActiveX-Steuerelemente oder BHOs wie Silverlight oder Java?
     answer: >
-      Nein. Microsoft Edge unterstützt keine ActiveX Steuerelemente oder Browserhilfeobjekte (Browser Help Objects, BHOs) wie Silverlight oder Java. Wenn Sie jedoch Web-Apps ausführen, die ActiveX-Steuerelemente, BHOs oder veraltete Dokumentmodi in Internet Explorer 11 verwenden, können Sie diese so konfigurieren, dass Sie im neuen Microsoft Edge im IE-Modus ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren des IE-Modus in Microsoft Edge](./edge-ie-mode.md).
+      Nein. Microsoft Edge unterstützt keine ActiveX Steuerelemente oder Browserhilfeobjekte (BROWSER Help Objects, BHOs) wie Silverlight oder Java. Wenn Sie jedoch Web-Apps ausführen, die ActiveX-Steuerelemente, BHOs oder veraltete Dokumentmodi in Internet Explorer 11 verwenden, können Sie diese so konfigurieren, dass Sie im neuen Microsoft Edge im IE-Modus ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren des IE-Modus in Microsoft Edge](./edge-ie-mode.md).
   - question: Werden Favoriten von der aktuellen Version von Microsoft Edge portiert oder muss ich sie erneut hinzufügen?
     answer: "Derzeit unterstützt Microsoft Edge den Import aus vorhandenen Installationen von Microsoft Edge, Chrome, Internet Explorer und Firefox (auf Win10). Die folgenden Einstellungen werden für den Import unterstützt: Lesezeichen, Verlauf, Kennwörter und AutoAusfüllen (Zahlungen, Adressen und generische Formulare). Sie können entweder aus der ersten Ausführung oder aus den Browsereinstellungen importieren.  \n"
   - question: Worin besteht der Unterschied zwischen den Kanälen/Builds Beta, Dev und Canary?
