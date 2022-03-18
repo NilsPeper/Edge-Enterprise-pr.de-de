@@ -3,19 +3,19 @@ title: Konfigurieren der Microsoft Edge Enterprise-Synchronisierung
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 11/10/2021
+ms.date: 02/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Administrator- und Benutzeroptionen zum Konfigurieren von Microsoft Edge zum Synchronisieren von Favoriten, Kennwörtern und anderen Browserdaten.
-ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: abb81c28c0e4e45423dd7285e929ac82a9773657
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298183"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445619"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Konfigurieren der Microsoft Edge Enterprise-Synchronisierung
 
@@ -52,11 +52,7 @@ Die Synchronisierung von Microsoft Edge für Azure Active Directory (Azure AD)-K
   
   - Für Kunden, die nur über Azure AD P1 oder P2 verfügen, ist es erforderlich, das Azure AD-Enterprise State Roaming-Feature für die Verwendung der Microsoft Edge Enterprise-Synchronisierung zu aktivieren. Weitere Informationen finden Sie im Artikel [Enterprise State Roaming in Azure Active Directory aktivieren](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
-- Microsoft 365 Business Premium, Business Standard oder **Business Basic \***
-
-   > [!IMPORTANT]
-   > **\**_ Es wurde ein Problem mit _* Business Basic** zur Synchronisierung gefunden und es wird an einer Lösung gearbeitet. In der Zwischenzeit funktioniert dies nicht wie vorgesehen.
-
+- Microsoft 365 Business Premium, Business Standard oder Business Basic
 - Office 365 E1 und höher
 - Azure Information Protection (AIP) (P1 oder P2)
 - Alle EDU-Abonnements (Microsoft Apps für Studenten oder Dozenten, Exchange Online für Studenten oder Dozenten, O365 A1 oder höher, Microsoft 365 A1 oder höher oder Azure Information Protection P1 oder P2 für Studenten oder Dozenten)

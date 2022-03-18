@@ -3,23 +3,23 @@ title: Konfigurieren von Microsoft Edge für Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/19/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Microsoft Edge-Richtlinieneinstellungen auf Windows-Geräten konfigurieren
-ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: ed89a1d356fcfa7b6bf3681a7d75848ed2c94f31
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107460"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445329"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Konfigurieren der Microsoft Edge-Richtlinieneinstellungen unter Windows
 
-Verwenden Sie die folgenden Informationen, um die Microsoft Edge-Richtlinieneinstellungen auf Ihren Windows-Geräten zu konfigurieren.
+Verwenden Sie die folgenden Informationen, um die Microsoft Edge-Richtlinieneinstellungen auf Ihren Windows-Geräten zu konfigurieren. Wenn Sie Microsoft Edge nicht eingerichtet haben, finden Sie weitere Informationen im [Microsoft Edge Setuphandbuch](https://go.microsoft.com/fwlink/?linkid=2187484).
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf Microsoft Edge Version 77 oder höher.
@@ -48,7 +48,7 @@ Wenn Sie Microsoft Edge-Richtlinieneinstellungen in Active Directory konfigurier
 
 Wenn Sie die administrativen Vorlagendateien dem entsprechenden Speicherort hinzufügen, sind Microsoft Edge-Richtlinieneinstellungen sofort im Gruppenrichtlinien-Editor verfügbar.
 
-Wechseln Sie zur [Microsoft Edge Enterprise-Angebotsseite](https://aka.ms/EdgeEnterprise), um die Microsoft Edge-Richtlinienvorlagendatei (*MicrosoftEdgePolicyTemplates.cab*) herunterzuladen, und extrahieren Sie den Inhalt.
+Wechseln Sie zur [Startseite von Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise), um die Microsoft Edge-Richtlinienvorlagendatei herunterzuladen, und extrahieren Sie den Inhalt.
 
 #### <a name="add-the-administrative-template-to-active-directory"></a>Fügen Sie Active Directory die administrative Vorlage hinzu.
 

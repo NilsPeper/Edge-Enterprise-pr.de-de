@@ -3,23 +3,57 @@ title: Versionshinweise für Microsoft Edge-Sicherheitsupdates
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/06/2022
+ms.date: 03/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Versionshinweise für Microsoft Edge-Sicherheitsupdates
-ms.openlocfilehash: c4232127a6827e96e3c3bd72ccc7ecd903daf783
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: c62f4891e2986ccd55f1c41b8313c223567d63a1
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297603"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445309"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Versionshinweise für Microsoft Edge-Sicherheitsupdates
 
 Diese Versionshinweise enthalten Informationen zu Sicherheitspatches, die in Updates für den Microsoft Edge Stable Channel enthalten sind.
+
+## <a name="march-3-2022"></a>3. März 2022
+
+Microsoft hat den aktuellen  **Microsoft Edge Stable Channel (Version99.0.1150.30)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
+
+## <a name="february-16-2022"></a>16. Februar 2022
+
+Microsoft hat den aktuellen  **Microsoft Edge Stable Channel (Version98.0.1108.55)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Dieses Update enthält eine Korrektur für [CVE-2022-0609](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-0609), die vom Chromium-Team als eine Sicherheitslücke in freier Wildbahn gemeldet wurde. Weitere Informationen finden Sie im [Leitfaden für Sicherheitsupdates](https://msrc.microsoft.com/update-guide).
+
+## <a name="february-10-2022"></a>10. Februar 2022
+
+Microsoft hat den aktuellen  **Microsoft Edge Stable Channel (Version98.0.1108.50)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://msrc.microsoft.com/update-guide).
+
+Dieses Update enthält die folgenden, Microsoft Edge-spezifischen Updates:
+
+- [CVE-2022-23264](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23264)
+
+## <a name="february-3-2022"></a>3. Februar 2022
+
+Microsoft hat den aktuellen  **Microsoft Edge Stable Channel (Version98.0.1108.43)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://msrc.microsoft.com/update-guide).
+
+Dieses Update enthält die folgenden, Microsoft Edge-spezifischen Updates:
+
+- [CVE-2022-23261](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23261)
+- [CVE-2022-23262](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23262)
+- [CVE-2022-23263](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23263)
+
+## <a name="january-20-2022"></a>20. Januar 2022
+
+Microsoft hat den aktuellen  **Microsoft Edge Stable Channel (Version97.0.1072.69)** veröffentlicht, der die aktuellen Sicherheitsupdates des Chromium-Projekts enthält. Weitere Informationen finden Sie im [Sicherheitsupdate-Leitfaden](https://msrc.microsoft.com/update-guide).
+
+Dieses Update enthält das folgende Microsoft Edge-spezifische Update: 
+
+- [CVE-2022-23258](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23258)
 
 ## <a name="january-6-2022"></a>6. Januar 2022
 

@@ -1,4 +1,4 @@
-# last revised 01/11/2022
+# last revised 03/08/2022
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -121,6 +121,8 @@
       href: microsoft-edge-pdf.md
     - name: Festlegen von Microsoft Edge als Standardbrowser
       href: edge-default-browser.md
+    - name: Split-Tunnel-VPN-Unterstützung für WebRTC
+      href: microsoft-edge-vpn-split-tunneling.md
     - name: Verwenden von Microsoft Edge im Internet Explorer-Modus
       items:
         - name: Was ist der Internet Explorer (IE)-Modus?
@@ -143,7 +145,7 @@
               href: edge-ie-mode-site-list-manager.md
         - name: Beibehaltung seiteninterner Navigation im IE-Modus
           href: edge-learnmore-inpage-nav.md
-        - name: Cookie-Weitergabe von Microsoft Edge an Internet Explorer
+        - name: Cookie-Austausch zwischen Microsoft Edge und Internet Explorer
           href: edge-ie-mode-add-guidance-cookieshare.md
         - name: Konfigurierbare Sites im IE-Modus
           href: edge-learnmore-configurable-sites-ie-mode.md
@@ -157,6 +159,8 @@
       href: ms-edge-security-for-business.md
     - name: Moderner Sicherheitsschutz für anfällige Legacy-Apps
       href: microsoft-edge-security-iemode-safer-than-ie.md
+    - name: Sicherere Navigation mit Microsoft Edge
+      href: microsoft-edge-security-browse-safer.md
     - name: Identifizieren und Unterbrechen von Downloads potenziell gefährlicher Dateien
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Zulassungsliste für Microsoft Edge-Endpunkte
