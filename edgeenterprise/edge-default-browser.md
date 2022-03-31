@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Microsoft Edge als Standardbrowser festlegen
 ms.openlocfilehash: 191d7835a0c4aacfc2fde409c57622ff5a351926
 ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/12/2021
 ms.locfileid: "11979288"
