@@ -1,4 +1,4 @@
-# last revised 03/08/2022
+# last revised 03/16/2022
 - name: Dokumentation für Microsoft Edge Enterprise
   href: index.yml
 - name: Dokumentation für Microsoft Edge
@@ -203,6 +203,8 @@
           href: edge-learn-more-co-di.md
         - name: Befehlszeilenoptionen zum Konfigurieren von Proxyeinstellungen
           href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: Konfigurierbare Microsoft Edge-Befehle
+          href: edge-learnmore-configurable-edge-commands.md
         - name: Filterformat für listenbasierte URL-Richtlinien
           href: edge-learnmmore-url-list-filter format.md
         - name: Downloads gemischter Inhalte
