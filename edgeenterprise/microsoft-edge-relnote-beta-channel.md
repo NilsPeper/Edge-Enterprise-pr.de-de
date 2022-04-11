@@ -3,32 +3,116 @@ title: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/14/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Anmerkungen zu dieser Version von Microsoft Edge für Beta-Kanal
-ms.openlocfilehash: 8633a5f15fe737a64a0160de714c1c4e53541482
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 8c2fcd1a45d6d6417e10609dec3cf1c669576c92
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445709"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473561"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Versionshinweise für Microsoft Edge Beta-Kanal
 
-Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind in [den archivierten Versionshinweisen für Microsoft Edge Beta Channel](./microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
+Diese Versionshinweise enthalten Informationen zu neuen Funktionen und nicht sicherheitsrelevanten Updates, die im Microsoft Edge Beta-Kanal enthalten sind. Archivierte Versionen dieser Versionshinweise sind in [den archivierten Versionshinweisen für den Betakanal von Microsoft Edge](./microsoft-edge-relnote-archive-beta-channel.md) verfügbar.
 
 > [!NOTE]
 > Die Microsoft Edge-Webplattform entwickelt sich ständig weiter, um Benutzerfreundlichkeit, Sicherheit und Datenschutz zu verbessern. Weitere Informationen finden Sie unter [Kommende Änderungen in Microsoft Edge mit Auswirkungen auf die Websitekompatibilität](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-990115039-march-10"></a>Version 99.0.1150.39: 10. März
+## <a name="version-1010121010-april-8"></a>Version 101.0.1210.10: 8. April
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Möglichkeit zum Festlegen des Standardprofils.** [Mit der EdgeDefaultProfileEnabled-Richtlinie](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) können Sie ein Standardprofil festlegen, das beim Öffnen des Browsers anstelle des zuletzt verwendeten Profils verwendet werden soll. Diese Richtlinie gilt nicht, wenn der `--profile-directory` Parameter angegeben wurde.
+
+- **Client Certificate Switcher.** Dieses Feature bietet Benutzern die Möglichkeit, das gespeicherte Zertifikat zu löschen und die Zertifikatauswahl erneut zu öffnen, wenn sie eine Website besuchen, die http-Zertifikatauthentifizierung erfordert. Dies kann ohne manuelles Beenden von Microsoft Edge erfolgen.
+
+- **Starten Sie progressive Web-Apps (PWAs) über die Favoritenleiste.** Verbesserungen an der PWA-Startumgebung werden beginnend mit einem App-Symbol angezeigt, das der Symbolleiste hinzugefügt werden kann.
+
+- **Verwalten Sie die Einstellung "Erweiterungen aus anderen Stores zulassen".** Verwenden Sie die [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled-Richtlinie](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) , um den Standardstatus der Einstellung "Erweiterungen aus anderen Speichern zulassen" zu steuern.
+
+### <a name="policy-updates"></a>Richtlinienupdates
+
+#### <a name="new-policies"></a>Neue Richtlinien
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) – Konfigurieren der Liste der Befehle zum Deaktivieren von Tastenkombinationen
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) – Konfigurieren des Standardstatus von "Erweiterungen aus anderen Speichereinstellungen zulassen"
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) – Features das Herunterladen von Ressourcen aus dem Asset Delivery Service erlauben
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) – Standardprofileinstellung aktiviert
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) – Seite "Speichern" im Internet Explorer-Modus zulassen
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) – Wischgesten im Microsoft Edge-Kioskmodus aktiviert
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) – Benutzern den Zugriff auf das Menü "Microsoft Office" ermöglichen
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) – Zulassen, dass Benutzer Websitesicherheitsdienste konfigurieren
+
+#### <a name="deprecated-policy"></a>Veraltete Richtlinie
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) – Konfigurieren, ob Microsoft Edge automatisch ein Zertifikat auswählen soll, wenn mehrere Zertifikatübereinstimmungen für eine Mit "AutoSelectCertificateForUrls" konfigurierte Website vorhanden sind
+
+#### <a name="obsoleted-policy"></a>Veraltete Richtlinie
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled): Erzwingen der erneuten Aktivierung von WebSQL in Drittanbieterkontexten
+
+
+## <a name="version-1000118527-march-31"></a>Version 100.0.1185.27: 31. März
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-1000118523-march-28"></a>Version 100.0.1185.23: 28. März
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-1000118517-march-23"></a>Version 100.0.1185.17: 23. März
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
+
+## <a name="version-1000118512-march-18"></a>Version 100.0.1185.12: 18. März
+
+Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 ### <a name="feature-updates"></a>Funktionsupdate
 
-- **Verbesserungen bei der Verwaltung von Cloudwebsitelisten für den IE-Modus.** Identifizieren Sie Lücken in Ihrer Enterprise-Websiteliste, indem Sie die Berichterstattung über Websitefeedback mit den Richtlinien ["InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) " und ["InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) " konfigurieren. Sie können lokale Websitelisten-URLs von Benutzern und möglicherweise falsch konfigurierte neutrale Website-URLs im Microsoft Edge Websitelisten im Microsoft 365 Admin Center anzeigen. Weitere Informationen finden Sie unter [Anzeigen des Websitefeedbacks im Microsoft 365 Admin Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **Hinweis:** Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, checken Sie zurück, während wir unseren Rollout fortsetzen.
+- **Rationalisierung Microsoft 365 Anwendungsprotokollaktivierungen.** Microsoft 365 Anwendungsprotokollaktivierungen für vertrauenswürdige Microsoft-Cloudspeicherdienste starten jetzt bestimmte Microsoft 365 Anwendungen direkt, einschließlich SharePoint Unterdomänen und Microsoft OneDrive URLs. Sie können die Richtlinien ["AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) " und ["AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) " verwenden, um bei Bedarf die Aktivierungsaufforderungen des Anwendungsprotokolls zu aktivieren und andere Anwendungen und Dienste zu definieren, bei denen Warnungen aktiviert oder deaktiviert sind.
+
+## <a name="version-1000118510-march-17"></a>Version 100.0.1185.10: 17. März
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Verbesserungen bei der Verwaltung von Cloudwebsitelisten für den IE-Modus.** Sie können die Sitzungscookiefreigabe zwischen Microsoft Edge und Internet Explorer für den IE-Modus in Ihrer Websiteliste im Microsoft 365 Admin Center konfigurieren. **Hinweis:** Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie erneut nach, während wir unseren Rollout fortsetzen.
+
+- **Vorschau von PDF-Dateien in Microsoft Outlook und Explorer.** Benutzer können eine PDF-Datei in einer einfachen und umfangreichen schreibgeschützten Vorschau anzeigen.  Verfügbar für Outlook Desktop-PDF-Anlagen oder für lokale PDF-Dateien mit Explorer.  
+
+- **Installierte Web-App-Synchronisierung auf allen Desktopgeräten.** Websites oder progressive Web-Apps (PWAs), die als Anwendungen installiert wurden, werden auf allen Desktopgeräten synchronisiert, bei denen Sie sich angemeldet haben, und die Synchronisierung aktiviert. Sie werden als "Verfügbare Apps" angezeigt, die Sie installieren können. Eine App, die von einem Gerät entfernt wurde, synchronisiert die Entfernung auf allen Geräten.
+
+### <a name="policy-updates"></a>Richtlinienupdates
+
+#### <a name="new-policies"></a>Neue Richtlinien
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) – Konfigurieren, ob das Feature "Anzeigentransparenz" aktiviert ist
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) – Steuern der Verwendung der WebHID-API
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) – Dialogfeld zum Wiederherstellen von Seiten nach dem Browserabsturz ausblenden
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) – Sicherer Modus und zertifikatbasierte Überprüfung digitaler Signaturen im nativen PDF-Reader
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) – Auffordern des Benutzers, ein Zertifikat auszuwählen, wenn mehrere Zertifikate übereinstimmen
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) – Zulassen der WebHID-API auf diesen Websites
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) – Blockieren der WebHID-API auf diesen Websites
+
+#### <a name="deprecated-policy"></a>Veraltete Richtlinie
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) – Ermöglicht Hintergrundaktualisierungen der Liste der verfügbaren Vorlagen für Sammlungen und andere Features, die Vorlagen verwenden
+
+#### <a name="obsoleted-policy"></a>Veraltete Richtlinie
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) – Zulassen, dass Seiten synchrone XHR-Anforderungen während der Seitenentlassung senden
+
+## <a name="version-990115039-march-10"></a>Version 99.0.1150.39: 10. März
+
+### <a name="feature-updates"></a>Funktionsupdates
+
+- **Verbesserungen bei der Verwaltung von Cloudwebsitelisten für den IE-Modus.** Identifizieren Sie Lücken in Ihrer Unternehmenswebsiteliste, indem Sie die Berichterstattung über Websitefeedback mit den Richtlinien ["InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) " und ["InternetExplorerIntegrationCloudNeutralSitesReporting"](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) konfigurieren. Sie können URLs für lokale Websitelisten von Benutzern und möglicherweise falsch konfigurierte neutrale Website-URLs in der Microsoft Edge-Websitelistenoberfläche im Microsoft 365 Admin Center anzeigen. Weitere Informationen finden Sie unter ["Websitefeedback anzeigen" im Microsoft 365 Admin Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **Hinweis:** Dies ist ein kontrolliertes Featurerollout. Wenn dieses Feature nicht angezeigt wird, schauen Sie wieder nach, während wir unseren Rollout fortsetzen.
 
 ## <a name="version-990115030-march-2"></a>Version 99.0.1150.30: 2. März
 
@@ -46,116 +130,15 @@ Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
 Verschiedene Fehler und Leistungsprobleme wurden behoben.
 
-## <a name="version-990115011-february-9"></a>Version 99.0.1150.11: 9. Februar
-
-### <a name="feature-updates"></a>Funktionsupdate
-
-- **Bevorstehende dreistellige Versionsnummer in der Benutzer-Agent-Zeichenfolge.** Ab Version 100 sendet Microsoft Edge eine dreistellige Versionsnummer im User-Agent Header, z. B. "Edg/100". Ab Microsoft Edge 97 können Websitebesitzer diese anstehende Agent-Zeichenfolge testen, indem sie das Experimentkennzeichen **#force-Major-Version-zu-100** in *edge://flags* aktivieren, um sicherzustellen, dass ihre User-Agent Analyselogik stabil ist und wie erwartet funktioniert.
-
-- **Personalisieren Sie Multi-Profile-Umgebungen mit Profileinstellungen für Websites.** Benutzer können ihre Erfahrung mit mehreren Profilen personalisieren, indem sie eine angepasste Liste von Websites für den automatischen Profilwechsel in Microsoft Edge erstellen können.
-
-- **Bidirektionale Cookiefreigabe für den IE-Modus.** Dieses Feature erweitert die bereits verfügbare Cookiefreigabefunktion und ermöglicht Benutzern das Synchronisieren bestimmter Sitzungscookies aus dem Internet Explorer/IE-Modus mit Microsoft Edge. Weitere Informationen finden Sie unter [Cookie-Freigabe zwischen Microsoft Edge und Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
-
-- **Navigieren Sie in PDF-Dokumenten mit Miniaturansichten der Seite.** Sie können nun mithilfe von Miniaturansichten, die die Seiten darstellen, durch Ihr PDF-Dokument navigieren. Diese Miniaturansichten werden im Bereich auf der linken Seite des PDF-Readers angezeigt.
-
-- **Konfigurieren Sie die Liste der Domänen, für die die Benutzeroberfläche des Kennwort-Managers für "Speichern" und "Ausfüllen" deaktiviert wird.** Verwenden Sie die [PasswordManagerBlocklist-Richtlinie](/deployedge/microsoft-edge-policies#passwordmanagerblocklist), um die Liste der Domänen zu konfigurieren (nur HTTP/HTTPS-Schemas und Hostnamen), in denen Microsoft Edge den Kennwort-Manager deaktivieren sollten. Dies bedeutet, dass Save and Fill-Workflows deaktiviert werden, wodurch sichergestellt wird, dass Kennwörter für diese Websites nicht gespeichert oder automatisch in Webformulare gefüllt werden können.
-
-- **Aktualisieren Sie Erweiterungen für den Microsoft Edge-Add-Ons-Speicher mithilfe von APIs (in der öffentlichen Vorschau).** Sie können diese APIs direkt in Ihre Buildpipeline integrieren und Paketupdates auf der Microsoft Edge Add-On-Website veröffentlichen. Weitere Informationen finden Sie unter [Verwenden der Microsoft Edge-Add-Ons-API (in der privaten Vorschau)](/microsoft-edge/extensions-chromium/publish/api/using-addons-api)
-
-### <a name="policy-updates"></a>Richtlinienupdates
-
-#### <a name="new-policies"></a>Neue Richtlinien
-
-- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) – Benutzern den Zugriff auf das Spielemenü gestatten
-- [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) – Definieren einer Liste von Protokollen, die nicht im Hintergrund durch den Anti-Flood-Schutz blockiert werden können
-- [HubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#hubssidebarenabled) – Hub-Randleiste anzeigen
-- [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) – Konfigurieren der Berichterstellung potenziell falsch konfigurierter neutraler Website-URLs für die M365 Admin Center Site Lists-App
-- [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) – Konfigurieren der Berichterstellung von Benutzerlisteneinträgen für den IE-Modus für die M365 Admin Center Site Lists-App
-- [PasswordManagerBlocklist](/DeployEdge/microsoft-edge-policies#passwordmanagerblocklist) – Konfigurieren der Liste der Domänen, für die die Kennwort-Manager-Benutzeroberfläche (Speichern und Ausfüllen) deaktiviert wird
-- [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) – Konfigurieren verwandter Übereinstimmungen in "Auf Seite suchen"
-- [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) – Aktivieren des Dialogfelds "Click to action anmelden"
-- [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) – Aktivieren oder Deaktivieren der User-Agent-Reduzierung
-
-## <a name="version-980110848-february-8"></a>Version 98.0.1108.48: 8. Februar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-980110843-february-3"></a>Version 98.0.1108.43: 3. Februar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-980110842-february-2"></a>Version 98.0.1108.42: 2. Februar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-980110839-january-31"></a>Version 98.0.1108.39: 31. Januar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-980110833-january-24"></a>Version 98.0.1108.33: 24. Januar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-980110827-january-19"></a>Version 98.0.1108.27: 19. Januar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-980110823-january-14"></a>Version 98.0.1108.23: 14. Januar
-
-### <a name="feature-updates"></a>Funktionsupdate
-
-- **Verbessern Sie Ihre Sicherheit im Web.** Ein Browsermodus in Microsoft Edge, in dem die Sicherheit Ihres Browsers Vorrang hat, wodurch Sie beim Surfen im Web eine zusätzliche Schutzebene erhalten. Administratoren können die folgenden Gruppenrichtlinien auf Endbenutzerdesktops (Windows, macOS und Linux) anwenden, um sich vor Zero Days zu schützen. Diese Richtlinien sorgen außerdem dafür, dass wichtige Websites und Branchenanwendungen weiterhin wie erwartet funktionieren. Dieses Feature ist ein großer Schritt nach vorn, da es uns ermöglicht, unvorhergesehene aktive Nulltage (basierend auf historischen Trends) zu minimieren. Wenn dieses Feature aktiviert ist, bietet es hardwareerzwingten Stack Protection, Arbitrary Code Guard (ACG) und Content Flow Guard (CFG), um Sicherheitsminderungen zu unterstützen, um die Sicherheit der Benutzer im Web zu erhöhen.
-Gruppenrichtlinien:
-  - [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode)
-  - [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
-  - [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
-
-- **Benutzerdefiniertes primäres Kennwort.** Der Browser verfügt bereits über die Funktion, in der Benutzer einen Authentifizierungsschritt hinzufügen können, bevor gespeicherte Kennwörter automatisch in Webformularen ausgefüllt werden. Dadurch wird eine weitere Datenschutzebene hinzugefügt und verhindert, dass nicht autorisierte Benutzer gespeicherte Kennwörter zum Anmelden bei Websites verwenden. Ein benutzerdefiniertes primäres Kennwort ist eine Weiterentwicklung desselben Features, bei dem Benutzer jetzt eine benutzerdefinierte Zeichenfolge ihrer Wahl als primäres Kennwort verwenden können. Nachdem es aktiviert wurde, geben Benutzer dieses Kennwort ein, um sich selbst zu authentifizieren und ihre gespeicherten Kennwörter automatisch in Webformulare zu füllen.
-
-- **Zu Microsoft Edge hinzugefügte Überlagerungs-Bildlaufleisten.** Wir haben unsere Bildlaufleisten mit einem überlagerten Design aktualisiert. Benutzer können dieses Feature in *edge://flags* aktivieren.
-
-### <a name="policy-updates"></a>Richtlinienupdates
-
-#### <a name="new-policies"></a>Neue Richtlinien
-
-- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) : Konfigurieren der Bearbeitung der Adressleiste.
-- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) : Aktivieren Sie den Follow-Dienst in Microsoft Edge.
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) – Verbessern des Sicherheitsstatus in Microsoft Edge.
-- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) : Konfigurieren Sie die Liste der Domänen, für die der Sicherheitsmodus verbessert wird, nicht erzwungen wird.
-- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) : Konfigurieren Sie die Liste der Domänen, für die der Sicherheitsmodus verbessert wird, immer erzwungen wird.
-- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) – In-App-Unterstützung aktiviert.
-- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) – Microsoft Edge Insider Promotion aktiviert.
-- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) – Druckvorschau-Sticky-Einstellungen.
-- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) – Microsoft Edge erlauben, Navigationen zu externen Protokollen in einem Sandkasten-iframe zu blockieren.
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) – Verwendung der veralteten U2F-Sicherheitsschlüssel-API zulassen.
-
-## <a name="version-970107254-january-5"></a>Version 97.0.1072.54: 5. Januar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-970107252-january-3"></a>Version 97.0.1072.52: 3. Januar
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-970107241-december-20"></a>Version 97.0.1072.41: 20. Dezember
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-970107234-december-13"></a>Version 97.0.1072.34: 13. Dezember
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
-## <a name="version-970107228-december-8"></a>Version 97.0.1072.28: 8. Dezember
-
-Verschiedene Fehler und Leistungsprobleme wurden behoben.
-
+<!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
+<!-- archive from Version 98.0.1108.23: January 14 to Version 97.0.1072.28: December 8 -->
 <!--- Version 97.0.1072.21: December 1 to Version 96.0.1054.13: November 5  --->
 <!--- archive from Version 96.0.1054.8: November 1 to Version 95.0.1020.14: October 5  --->
-<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 ---->
+<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 -->
 <!-- archive from Version 94.0.992.9: September 2 to Version 92.0.902.40: July 6 -->
-<!--Archive on Oct 27 From Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
-<!--- Archived from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 ---->
-<!--- Archived from Version 87.0.664.12: October 20 to to version 86.0.622.15: September 14 ---->
+<!--Archive from Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
+<!-- Archive from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 --->
+<!-- Archive from Version 87.0.664.12: October 20 to version 86.0.622.15: September 14 -->
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 

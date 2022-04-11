@@ -3,19 +3,19 @@ title: Deaktivieren von Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/15/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie Internet Explorer 11 deaktivieren und den Internet Explorer-Modus in Microsoft Edge verwenden können.
-ms.openlocfilehash: c5452745e362ffc71842c7b5a25b84cea48816d6
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 3ddb012b48b0b9d8448cdee910ed28db85a0e044
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445809"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473621"
 ---
 # <a name="disable-internet-explorer-11"></a>Deaktivieren von Internet Explorer 11
 
@@ -30,9 +30,8 @@ Die folgenden Windows-Updates und Microsoft Edge-Software sind erforderlich:
 
 - Windows-Updates
 
-  - Windows 11
   - Windows 10, Version 21H1 oder höher
-  - Windows 10, Version 2004; Windows Server Version 2004; Windows 10, Version 20H2; Windows Server version 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) oder höher
+  - Windows 10, Version 2004; Windows Server Version 2004; Windows 10, Version 20H2; Windows Server Version 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) oder höher
   - Windows 10 Version 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) oder höher
   - Windows Server 2019; Windows 10 Enterprise 2019 LTSC: [KB4598296](https://support.microsoft.com/topic/january-21-2021-kb4598296-os-build-17763-1728-preview-4c0931ff-45b7-ff59-5e00-c03b5afb363d) oder höher
   - Windows Server 2016; Windows 10 Enterprise 2016 LTSB: [KB4601318](https://support.microsoft.com/topic/february-9-2021-kb4601318-os-build-14393-4225-c5e3de6c-e3e6-ffb5-6197-48b9ce16446e) oder höher
@@ -41,7 +40,6 @@ Die folgenden Windows-Updates und Microsoft Edge-Software sind erforderlich:
   - Windows Server 2012: [KB4601348](https://support.microsoft.com/topic/february-9-2021-kb4601348-monthly-rollup-2c338c0c-73d6-fb80-cc91-f1a86e80db0c) oder höher
   
 - Microsoft Edge Stable Channel
-
 
 ## <a name="overview"></a>Übersicht
 
@@ -56,15 +54,16 @@ Nachdem Sie den IE-Modus konfiguriert haben, können Sie mithilfe von Gruppenric
 
 Wenn Sie die Richtlinie **Internet Explorer 11 als eigenständigen Browser deaktivieren** aktivieren, werden alle IE11-Aktivitäten zu Microsoft Edge umgeleitet, und die Benutzererfahrung sieht folgendermaßen aus:
 
-- Das IE11-Symbol wird aus dem Startmenü entfernt, bleibt auf der Taskleiste jedoch erhalten.
+- IE11-Symbole im Startmenü und auf der Taskleiste werden entfernt.
 - Wenn Benutzer versuchen, Verknüpfungen oder Dateizuordnungen zu starten, die IE11 verwenden, werden sie umgeleitet, um dieselbe Datei/URL in Microsoft Edge zu öffnen.
 - Wenn Benutzer versuchen, IE11 zu starten, indem sie die iexplore.exe-Binärdatei direkt aufrufen, wird stattdessen Microsoft Edge gestartet.
 
 Während des Festlegens der Richtlinie für diese Benutzererfahrung können Sie optional eine Umleitungsnachricht für jeden Benutzer anzeigen lassen, der versucht, IE11 zu öffnen. Für diese Meldung können Sie auswählen, ob sie "Immer" oder "Einmal pro Benutzer" angezeigt wird. Die im nächsten Screenshot dargestellte Umleitungsnachricht wird standardmäßig nie angezeigt.
 
-:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg.png" alt-text="Warnung beim Versuch, IE zu öffnen, wenn die Umleitung zu Microsoft Edge aktiv ist.":::
+:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg2.png" alt-text="Warnung beim Versuch, IE zu öffnen, wenn die Umleitung zu Microsoft Edge aktiv ist.":::
 
 Wenn Ihre Websiteliste für den Unternehmensmodus Anwendungen enthält, die für das Öffnen in der IE11-App konfiguriert sind und Sie IE11 mit dieser Richtlinie deaktivieren, werden die Anwendungen in Microsoft Edge im IE-Modus geöffnet.
+
 > [!NOTE]
 > Es gab ein bekanntes Problem mit dem Benutzerablauf, das auftritt, wenn eine Website für das Öffnen in der IE11-Anwendung konfiguriert ist und die Richtlinie zum Deaktivieren von IE11 aktiv ist. Das Problem wurde in Microsoft Edge, Version 91.0.840.0 oder höher, behoben.
 
@@ -72,9 +71,9 @@ Wenn Ihre Websiteliste für den Unternehmensmodus Anwendungen enthält, die für
 
 Führen Sie die folgenden Schritte aus, um Internet Explorer 11 mithilfe von Gruppenrichtlinien zu deaktivieren:
 
-1. Stellen Sie sicher, dass Sie über die erforderlichen Betriebssystemupdates verfügen. In diesem Schritt werden die ADMX-Dateien auf Ihrem Computer direkt aktualisiert (insbesondere „inetres.adml“ und „inetres.admx“). Bitte beachten Sie, dass Sie, wenn Sie Ihren Central Store aktualisieren möchten, die ADML- und ADMX-Dateien von einem Computer kopieren müssen, der über die erforderlichen Updates verfügt. Weitere Informationen finden Sie unter [Erstellen und Verwalten des Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Stellen Sie sicher, dass Sie über die erforderlichen Betriebssystemupdates verfügen. In diesem Schritt werden die ADMX-Dateien auf Ihrem Computer direkt aktualisiert (insbesondere „inetres.adml“ und „inetres.admx“). Bitte beachten Sie, dass Sie, wenn Sie Ihren zentralen Store aktualisieren möchten, die ADML- und ADMX-Dateien von einem Computer kopieren müssen, der über die erforderlichen Updates verfügt, oder die neuesten Windows 10 Admin-Vorlagen von [hier](https://www.microsoft.com/download/details.aspx?id=103124&msclkid=eae4a72fb1fb11ecb97ca3096b36cc06) herunterladen müssen. Weitere Informationen finden Sie unter [Erstellen und Verwalten des Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Öffnen Sie den Gruppenrichtlinien-Editor.
-3. Wechseln Sie zu ***Computerkonfiguration/Administrative Vorlagen/Windows-Komponenten/Internet Explorer***. 
+3. Wechseln Sie zu ***Computerkonfiguration/Administrative Vorlagen/Windows-Komponenten/Internet Explorer***.
 4. Doppelklicken Sie auf  ** Internet Explorer 11 als eigenständigen Browser deaktivieren**.
 5. Wählen Sie  **Aktiviert** aus.
 6. Wählen Sie unter  **Optionen** einen der folgenden Einträge aus:
@@ -83,7 +82,7 @@ Führen Sie die folgenden Schritte aus, um Internet Explorer 11 mithilfe von Gru
    - **Immer** , wenn Benutzer jedes Mal benachrichtigt werden sollen, wenn sie von IE11 umgeleitet werden.
    - **Einmal pro Benutzer**  , wenn Benutzer nur beim ersten Umleiten benachrichtigt werden sollen.
 
-7. Klicken Sie auf  **OK**  oder  **Übernehmen** , um diese Richtlinieneinstellung zu speichern.
+7.  **SelectOKorApplyto**  ****  save this policy setting.
 
 ## <a name="see-also"></a>Weitere Informationen
 
