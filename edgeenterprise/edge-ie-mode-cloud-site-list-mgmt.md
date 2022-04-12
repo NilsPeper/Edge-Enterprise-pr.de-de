@@ -3,19 +3,19 @@ title: Cloudwebsitelistenverwaltung für den Internet Explorer (IE)-Modus“
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2022
+ms.date: 03/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Erfahren Sie, wie Sie die Verwaltung von Cloudwebsitelisten für den IE-Modus mithilfe des Microsoft 365 Admin Center konfigurieren und verwenden.
-ms.openlocfilehash: dd8e083b3b7919a56c013ffd0c389dcd8d94a745
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 4098c0ef769fa2bf8ec60d6697a17e225ea76bc1
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445739"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473516"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>Cloudwebsite-Listenverwaltung für den Internet Explorer (IE)-Modus
 
@@ -115,41 +115,41 @@ Verwenden Sie die folgenden Schritte, um die in der Cloud gehostete Websiteliste
 4. Sie können **gpupdate/force** über die Eingabeaufforderung ausführen, um das Gerät mit der Richtlinie zu aktualisieren, oder warten, bis die Gruppenrichtlinie wirksam wird. Nachdem die Richtlinie aktualisiert wurde, können Sie überprüfen, ob Microsoft Edge die Cloudwebsiteliste liest, indem Sie zu [edge://compat/enterprise](edge://compat/enterprise) wechseln. Sie müssen bei Microsoft Edge angemeldet sein.
 
 > [!NOTE]
-> Nachdem Sie eine Websiteliste zum ersten Mal veröffentlicht und die Gruppenrichtlinie aktualisiert haben, müssen Sie Microsoft Edge neu starten. Warten Sie 60 Sekunden, oder wählen Sie unter [edge://compat/enterprise](edge://compat/enterprise) die Schaltfläche „Aktualisierung erzwingen“ aus. Beim Veröffentlichen von Aktualisierungen für eine bereits zugeordnete Websiteliste befindet sich möglicherweise eine ältere Version der Websiteliste im Cache. Dieser Eintrag wird nach 60 Sekunden aktualisiert. Weitere Informationen finden Sie unter [Was geschieht, wenn sich Benutzer bei Microsoft Edge abmelden?](#what-happens-if-users-log-out-of-microsoft-edge)
+> Nachdem Sie eine Websiteliste zum ersten Mal veröffentlicht und die Gruppenrichtlinie aktualisiert haben, müssen Sie Microsoft Edge neu starten. Warten Sie 60 Sekunden, oder klicken Sie unter [edge://compat/enterprise](edge://compat/enterprise) auf die Schaltfläche **Aktualisierung erzwingen** aus. Beim Veröffentlichen von Aktualisierungen für eine bereits zugeordnete Websiteliste befindet sich möglicherweise eine ältere Version der Websiteliste im Cache. Dieser Eintrag wird nach 60 Sekunden aktualisiert. Weitere Informationen finden Sie unter [Was geschieht, wenn sich Benutzer bei Microsoft Edge abmelden?](#what-happens-if-users-log-out-of-microsoft-edge)
 
 ## <a name="manage-site-list-contents-on-the-microsoft-365-admin-center"></a>Websitelisteninhalte im Microsoft 365 Admin Center verwalten
 
-Sie können einzelne Websiteeinträge hinzufügen, Websiteeinträge löschen und den Änderungsverlauf für Kommentare anzeigen.
+Sie können Websitelisteninhalte hinzufügen, bearbeiten, löschen und den Kommentarverlauf anzeigen, um Änderungen an einzelnen Einträgen zu Sites und freigegebenen Cookies nachzuverfolgen.
 
 Wenn Sie hybride Szenarien haben, die erfordern, dass Ihre Websiteliste lokal gehostet werden muss, können Sie Ihre Websiteliste aus dem Microsoft 365 Admin Center exportieren. Verwenden Sie die folgenden Schritte als Leitlinie zum Verwalten von Websitelisteninhalten aus.
 
-### <a name="add-individual-sites-to-the-site-list"></a>Hinzufügen einzelner Websites zur Websiteliste
+### <a name="add-a-site-to-the-site-list"></a>Hinzufügen Ihrer Website zur Websiteliste für den Unternehmensmodus
 
-Sie können jeder Websiteliste einzelne Websites hinzufügen. Nach dem Hinzufügen von Websites zur Liste können Sie die vordefinierten Filter mithilfe der Schaltfläche **Filter** (neben dem Eingabebereich der Suche) verwenden, um Aktualisierungen der Liste anzuzeigen.
+Sie können jeder Websiteliste einzelne Websites hinzufügen. Nach dem Hinzufügen von Websites zur Liste können Sie die vordefinierten Filter mithilfe der Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um Aktualisierungen der Liste anzuzeigen.
 
 1. Wechseln Sie zur Websiteliste, in der Sie eine Website hinzufügen möchten.
 2. Wählen Sie **Website hinzufügen** aus.
-3. Geben Sie die Websiteadresse ein, und wählen Sie das Modul aus, das zum Öffnen der Website verwendet werden soll. Fügen Sie bei Bedarf Kommentare hinzu, und wählen Sie **Speichern** aus.
+3. Geben Sie die Websiteadresse ein, und wählen Sie das Modul aus, das zum Öffnen der Website verwendet werden soll. Fügen Sie bei Bedarf Kommentare hinzu, und klicken Sie dann auf **Speichern**.
 
    > [!NOTE]
-   > In der Spalte **Status** für alle Einträge, die einer Liste veröffentlichter Websites hinzugefügt werden, wird **Hinzufügen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
-
-### <a name="view-the-change-history-for-site-entries"></a>Anzeigen des Änderungsverlaufs für Websiteeinträge
-
-So zeigen Sie den Änderungsverlauf für Websiteeinträge an:
-
-- Wählen Sie den Websiteeintrag aus, für den Sie den Änderungsverlauf sehen möchten, und wählen Sie dann **Kommentare anzeigen** aus.
+   > In der Spalte **Status** für Einträge, die einer Liste veröffentlichter Websites hinzugefügt werden, wird **Hinzufügen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
 
 ### <a name="delete-a-site-from-the-site-list"></a>Löschen einer Website aus der Websiteliste
 
 Verwenden Sie die folgenden Schritte, um einen Websiteeintrag zu löschen.
 
-1. Wählen Sie den Eintrag für die Websiteliste aus, aus der Sie eine Website löschen möchten. Wählen Sie **Website löschen** aus.
-2. Wählen Sie unten im Bereich **Löschen** aus.
-3. Nachdem Sie die Bestätigung erhalten haben, dass ein Websiteeintrag gelöscht wurde, bleibt er in der Liste, bis die Websiteliste am Cloudspeicherort veröffentlicht wird. Sie können die Liste der gelöschten Websites vor der Veröffentlichung anzeigen, indem Sie die Schaltfläche „Filter“ auswählen und nach Websites mit Status **Löschen ausstehend** filtern.
+1. Wählen Sie den Websiteeintrag aus, den Sie von der Websiteliste löschen möchten. Wählen Sie **Website löschen** aus.
+2. Wählen Sie im Popupdialogfeld **Löschen** aus.
+3. Nachdem Sie die Bestätigung erhalten haben, dass ein Websiteeintrag gelöscht wurde, bleibt er in der Liste, bis die Websiteliste am Cloudspeicherort veröffentlicht wird. Sie können die Liste der gelöschten Websites vor der Veröffentlichung anzeigen, indem Sie auf die Schaltfläche **Filter** klicken und nach Websites mit Status **Löschen ausstehend** filtern.
 
    > [!NOTE]
-   > In der Spalte **Status** für alle Einträge, die aus einer Liste veröffentlichter Websites gelöscht wurden, wird **Löschen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Löschen ausstehend** auszuwählen, um alle gelöschten Einträge zu sehen, deren Veröffentlichung aussteht.
+   > In der Spalte **Status** für Einträge, die aus einer Liste veröffentlichter Websites gelöscht wurden, wird **Löschen ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) und dann **Löschung ausstehend** auswählen, um alle gelöschten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
+
+### <a name="view-the-change-history-for-site-entries"></a>Anzeigen des Änderungsverlaufs für Websiteeinträge
+
+So zeigen Sie den Änderungsverlauf für Websiteeinträge an:
+
+- Wählen Sie den Websiteeintrag aus, für den Sie den Änderungsverlauf sehen möchten, und dann **Verlauf anzeigen**.
 
 ### <a name="copy-a-site-to-other-site-lists"></a>Kopieren einer Website in andere Websitelisten
 
@@ -161,15 +161,56 @@ Verwenden Sie die folgenden Schritte, um einen Websiteeintrag aus einer Websitel
 4. Nachdem Sie die Bestätigung erhalten haben, dass ein Websiteeintrag kopiert wurde, verbleibt er in der Websiteliste, aus der Sie ihn kopiert haben. Er wird auch in den Websitelisten angezeigt, in die Sie ihn kopiert haben.
 
    > [!NOTE]
-   > In der Spalte **Status** wird für alle Einträge, die in eine Liste veröffentlichter Websites kopiert werden, der Wert **Hinzufügung ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte „Status der Veröffentlichung“der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
+   > In der Spalte **Status** wird für Einträge, die in eine Liste veröffentlichter Websites kopiert werden, **Hinzufügung ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
+
+### <a name="add-a-shared-cookie-to-the-site-list"></a>Hinzufügen eines freigegebenen Cookies zur Websiteliste
+
+Sie können jeder Websiteliste einzelne freigegebene Cookies hinzufügen. Nach dem Hinzufügen freigegebener Cookies zur Liste können Sie über die Schaltfläche **Filter** (neben dem Eingabebereich der Suche) die vordefinierten Filter verwenden, um Aktualisierungen der Liste anzuzeigen.
+
+1. Wechseln Sie zur Websiteliste, in der Sie ein freigegebenes Cookie hinzufügen möchten.
+2. Wählen Sie **Freigegebenes Cookie hinzufügen** aus.
+3. Geben Sie den Domänen- und Cookienamen ein. Fügen Sie bei Bedarf Kommentare hinzu, und klicken Sie dann auf **Speichern**.
+
+> [!NOTE]
+> In der Spalte **Status** für Einträge, die einer Liste veröffentlichter Websites hinzugefügt werden, wird **Hinzufügen ausstehend** angezeigt. Wenn Sie über **Microsoft Edge-Websitelisten** oben auf dem Bildschirm zur Liste der Websitelisten navigieren, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Zur Veröffentlichung ausstehende Änderungen** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit sie für Benutzer aktiv werden. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
+
+### <a name="delete-a-shared-cookie-from-the-site-list"></a>Löschen eines freigegebenen Cookies aus der Websiteliste
+
+Führen Sie die folgenden Schritte aus, um einen Eintrag für ein freigegebenes Cookie zu löschen.
+
+1. Wählen Sie den Eintrag aus, den Sie aus der Websiteliste löschen möchten. Wählen Sie **Freigegebenes Cookie löschen** aus.
+2. Wählen Sie im Popupdialogfeld **Löschen** aus.
+3. Nachdem Sie die Bestätigung erhalten haben, dass ein Eintrag gelöscht wurde, bleibt er in der Liste, bis die Websiteliste am Cloudspeicherort veröffentlicht wird. Sie können die Liste der gelöschten freigegebenen Cookies vor der Veröffentlichung anzeigen, indem Sie die Schaltfläche **Filter** auswählen und nach Cookies mit Status **Löschung ausstehend** filtern.
+
+> [!NOTE]
+> In der Spalte **Status** für Einträge, die aus einer Liste veröffentlichter Websites gelöscht wurden, wird **Löschen ausstehend** angezeigt. Wenn Sie über **Microsoft Edge-Websitelisten** oben auf dem Bildschirm zur Liste der Websitelisten navigieren, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Zur Veröffentlichung ausstehende Änderungen** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit sie für Benutzer aktiv werden. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) und dann **Löschung ausstehend** auswählen, um alle gelöschten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
+
+### <a name="view-the-change-history-for-shared-cookies"></a>Anzeigen des Änderungsverlaufs für freigegebene Cookies
+
+So zeigen Sie den Änderungsverlauf für freigegebene Cookies an:
+
+- Wählen Sie den Eintrag aus, für den Sie den Änderungsverlauf sehen möchten, und dann **Verlauf anzeigen**.
+
+### <a name="copy-a-shared-cookie-to-other-site-lists"></a>Kopieren eines freigegebenen Cookies in andere Websitelisten
+
+Führen Sie die folgenden Schritte aus, um den Eintrag für ein freigegebenes Cookie aus einer Websiteliste in eine oder mehrere andere Websitelisten zu kopieren.
+
+1. Wählen Sie einen Eintrag aus, den Sie in eine andere Liste kopieren möchten. Wählen Sie **Zu weiteren Listen kopieren** aus.
+2. Wählen Sie in der Dropdownliste eine oder mehrere Websitelisten aus, in die Sie kopieren möchten.
+3. Wählen Sie **Cookie kopieren** am unteren Rand des Bereichs aus.
+4. Nachdem Sie die Bestätigung erhalten haben, dass ein Websiteeintrag kopiert wurde, verbleibt er in der Websiteliste, aus der Sie ihn kopiert haben. Er wird auch in den Websitelisten angezeigt, in die Sie ihn kopiert haben.
+
+> [!NOTE]
+> In der Spalte **Status** wird für Einträge, die in eine Liste veröffentlichter Websites kopiert werden, **Hinzufügung ausstehend** angezeigt. Wenn Sie zur Liste der Websitelisten navigieren, indem Sie oben auf dem Bildschirm **Microsoft Edge-Websitelisten** auswählen, sehen Sie, dass in der Spalte **Status der Veröffentlichung** der Wert **Änderungen warten auf die Veröffentlichung** angezeigt wird, um darauf hinzuweisen, dass die neuesten Aktualisierungen der Websiteliste veröffentlicht werden müssen, damit Benutzer Sie erhalten können. Sie können die Schaltfläche **Filter** (neben dem Suchfeld) verwenden, um **Hinzufügung ausstehend** auszuwählen, um alle hinzugefügten Einträge anzuzeigen, für die eine Veröffentlichung aussteht.
 
 ### <a name="export-a-site-list"></a>Exportieren einer Websiteliste
 
 Es gibt Szenarien, in denen Sie eine Websiteliste exportieren möchten. Beispielsweise, wenn Sie Ihre Websiteliste nicht sofort in die Cloud verschieben können oder wenn Sie eine Hybridumgebung mit Websitelisten in der Cloud und lokal verwalten müssen. Sie können die Verwaltungserfahrung für Cloudwebsitelisten verwenden, um Aktualisierungen für eine Websiteliste an einem zentralen Ort zu verwalten und die Websiteliste auf den lokalen Host zu exportieren.
 
+So exportieren Sie eine Websiteliste:
+
 1. Wählen Sie auf der Seite „Microsoft Edge-Websitelisten“ die Websiteliste aus, die Sie exportieren möchten.
-2. Auf der resultierenden Seite werden die Websitelisteneinträge und die Option **Liste exportieren** angezeigt.
-3. Wählen Sie **Liste exportieren** aus, um die XML-Datei der Websiteliste herunterzuladen.
+2. Wählen Sie **Liste exportieren** aus, um die XML-Datei der Websiteliste herunterzuladen.
 
 ## <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Anzeigen von Websitefeedback im Microsoft 365 Admin Center
 
