@@ -6024,7 +6024,7 @@ Platzhalter sind für den gesamten Ursprung oder Teile des Ursprungs zulässig. 
 
   ##### <a name="windows-registry-settings"></a>Windows-Registrierungseinstellungen
 
-  - Pfad (zwingend erforderlich): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - Pfad (zwingend erforderlich): SOFTWARE\Policies\Microsoft\Edge\AllHttpAuthSchemesAllowedForOrigins
   - Pfad (Empfohlen): n.a.
   - Wertname: 1, 2, 3, ...
   - Werttyp: REG_SZ-Liste
